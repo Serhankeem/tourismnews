@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-01T01:48:02+09:00",
+  "checked_at": "2026-11-01T03:55:25+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
   "received": 590,
@@ -85,7 +85,7 @@
     "문화·트렌드": 9,
     "경제·시장": 0
   },
-  "discovered_last24h": 24,
+  "discovered_last24h": 22,
   "discovered_last7d": 1299,
   "auto_published_last24h": 0,
   "auto_published_last7d": 31,
@@ -122,7 +122,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9818181818181818,
+      "success_rate": 0.9821428571428571,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -231,7 +231,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9636363636363636,
+      "success_rate": 0.9642857142857143,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -266,7 +266,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9636363636363636,
+      "success_rate": 0.9642857142857143,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -301,7 +301,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.7454545454545455,
+      "success_rate": 0.75,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -336,7 +336,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.43636363636363634,
+      "success_rate": 0.44642857142857145,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
