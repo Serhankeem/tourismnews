@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-01T05:46:49+09:00",
-  "last_successful_fetch": "2026-11-01T05:46:49+09:00",
+  "generated_at": "2026-11-01T07:45:45+09:00",
+  "last_successful_fetch": "2026-11-01T07:45:45+09:00",
   "count": 40,
   "mode": "live_rss",
   "articles": [
@@ -2582,7 +2582,7 @@
       "date_precision": "timestamp",
       "record_type": "news",
       "korea_priority": false,
-      "is_backfill": false,
+      "is_backfill": true,
       "publication_policy": {
         "status": "approved",
         "scope": "metadata_only",

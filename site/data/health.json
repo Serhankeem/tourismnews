@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-01T05:46:49+09:00",
-  "last_successful_fetch": "2026-11-01T05:46:49+09:00",
+  "checked_at": "2026-11-01T07:45:45+09:00",
+  "last_successful_fetch": "2026-11-01T07:45:45+09:00",
   "status": "partial",
   "sources": [
     {
@@ -103,23 +103,9 @@
       "id": "seoul_environment",
       "name": "서울시 내 손안에 서울 환경",
       "url": "https://mediahub.seoul.go.kr/news/rss/05",
-      "status": "ok",
-      "rss_items": 20,
-      "matched": 0,
-      "held": 0,
-      "relevance_counts": {
-        "Direct": 0,
-        "Indirect": 0,
-        "Irrelevant": 20
-      },
-      "category_published": {
-        "관광정책": 0,
-        "인바운드": 0,
-        "여행산업": 0,
-        "항공·숙박": 0,
-        "문화·트렌드": 0,
-        "경제·시장": 0
-      }
+      "status": "error",
+      "error_kind": "transport_error",
+      "error": "OSError: <urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "id": "sec_booking",
@@ -289,7 +275,7 @@
     }
   ],
   "source_count": 18,
-  "successful_sources": 10,
+  "successful_sources": 9,
   "schema_version": 2,
   "rule_version": "0.2",
   "category_counts": {
@@ -303,12 +289,12 @@
   "review_queue_count": 1,
   "discovery": {
     "schema_version": 3,
-    "checked_at": "2026-11-01T05:46:49+09:00",
+    "checked_at": "2026-11-01T07:45:45+09:00",
     "publication_result": "partial",
     "discovery_status": "partial",
-    "received": 590,
-    "new_discoveries": 1,
-    "duplicate_observations": 390,
+    "received": 570,
+    "new_discoveries": 27,
+    "duplicate_observations": 344,
     "new_auto_published": 0,
     "total_published": 40,
     "total_archived": 40,
@@ -388,8 +374,8 @@
       "문화·트렌드": 9,
       "경제·시장": 0
     },
-    "discovered_last24h": 22,
-    "discovered_last7d": 1300,
+    "discovered_last24h": 47,
+    "discovered_last7d": 1327,
     "auto_published_last24h": 0,
     "auto_published_last7d": 31,
     "originally_published_last24h": 0,
@@ -425,7 +411,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9824561403508771,
+        "success_rate": 0.9827586206896551,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -534,7 +520,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9649122807017544,
+        "success_rate": 0.9655172413793104,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -569,7 +555,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9649122807017544,
+        "success_rate": 0.9655172413793104,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -604,7 +590,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.7543859649122807,
+        "success_rate": 0.7586206896551724,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -614,9 +600,9 @@
         "name": "서울시 내 손안에 서울 환경",
         "url": "https://mediahub.seoul.go.kr/news/rss/05",
         "group": "public",
-        "received": 20,
+        "received": 0,
         "new_discoveries": 0,
-        "duplicates": 20,
+        "duplicates": 0,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -624,7 +610,7 @@
         "classifications": {
           "Direct": 0,
           "Indirect": 0,
-          "Irrelevant": 20
+          "Irrelevant": 0
         },
         "publication_policy": {
           "status": "approved",
@@ -638,11 +624,13 @@
           "max_days": 90,
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
-        "status": "ok",
-        "success_rate": 0.45614035087719296,
+        "status": "error",
+        "error_kind": "transport_error",
+        "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+        "success_rate": 0.4482758620689655,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "no_new_candidate"
+        "outcome": "fetch_failed"
       },
       {
         "id": "sec_booking",
@@ -1160,8 +1148,8 @@
         "url": "https://www.yna.co.kr/rss/economy.xml",
         "group": "media",
         "received": 120,
-        "new_discoveries": 1,
-        "duplicates": 119,
+        "new_discoveries": 27,
+        "duplicates": 93,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
