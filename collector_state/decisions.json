@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-01T16:12:45+09:00",
+  "checked_at": "2026-11-01T17:57:17+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3033,6 +3033,78 @@
       "decision": "exclude"
     },
     {
+      "id": "e782a887194b74cbb2",
+      "title": "세종대 산업대학원 부동산AI융합학과, ‘데이터로 읽는 2027 상업용 부동산 투자 전략’ 개최",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157538",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ab801d23b7288caf88",
+      "title": "세종대 산업대학원, 한국비엘과 산학협력 협약 체결·발전기금 전달",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157539",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7cc6e959007af5c03f",
+      "title": "바이낸스 64억 달러 해킹 배후에 北 조직...온체인 증거 확보",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157537",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "02d44f1f75c93db4d6",
+      "title": "청라 로봇타워서 청소년 로봇대회 개최… 협력 배우는 청소년 미래 공학자들",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157536",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "4521ae8b275e3c584b",
       "title": "카카오뱅크, 서울경찰청·토스뱅크와 청소년 사이버도박 예방 업무협약",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157183",
@@ -3848,78 +3920,6 @@
       "id": "2cc346c0177aae6134",
       "title": "현대제철 3분기 영업익 871억원 51% 급증…수익성 방어 성공",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157310",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5fb82e1017b135feae",
-      "title": "수자원공사·농어촌공사·한수원, 새만금 조력발전 공동개발 협약 체결",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157336",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ae9447ee57eaaeb08c",
-      "title": "배틀그라운드 모바일 인도, 국제 대회 ‘BMIC 2026’ 개최…한국 5개 팀 출전",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157321",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a6f140b54d9da4b25a",
-      "title": "iM뱅크 강정훈 은행장, ‘사람 살리는 금융 릴레이 캠페인’ 참여",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157322",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0eb72fa38c30fdcfdf",
-      "title": "기아 3분기 매출 31조5974억원 달성…한·미 역대 최고 점유율 기록",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157398",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
