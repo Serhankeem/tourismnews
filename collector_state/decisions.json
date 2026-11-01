@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-01T13:59:44+09:00",
+  "checked_at": "2026-11-01T16:12:45+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3033,6 +3033,294 @@
       "decision": "exclude"
     },
     {
+      "id": "4521ae8b275e3c584b",
+      "title": "카카오뱅크, 서울경찰청·토스뱅크와 청소년 사이버도박 예방 업무협약",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157183",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "9a873d0deedd80702d",
+      "title": "골프존·스릭슨 'ZXi RKT 롱 드라이브 매치' 성료… 최형민 최종 우승",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157515",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "e2c4ac2986f5fb7b1b",
+      "title": "랭함 호스피탈리티 그룹, 서울서 브랜드 행사 개최... 160년 헤리티지·글로벌 확장 전략 소개",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3156874",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b79646debde245d13b",
+      "title": "고양특례시, 1000억원 규모 ‘같이 성장 펀드’ 출범… 민간 투자 마중물",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157456",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c72061497db28cbee6",
+      "title": "SK텔레콤, ‘AX 혁신 2.0’ 발표… 조직 업무·협업 방식 AI 중심 재설계",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157518",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5a2a54d45d0bc5f6e9",
+      "title": "NH농협은행, ‘NEO-CREW’ 연간 활동 우수직원 시상식 개최",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157524",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "9a61cbc0684976315c",
+      "title": "하나금융그룹, ‘2026 오티즘 레이스’ 참여… 자폐성 장애 인식 개선 캠페인 동참",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157465",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "e03ff022ab882a24a0",
+      "title": "2027학년도 수능 서울 응시자 11만3454명",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157523",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "eca89fb539a64fded3",
+      "title": "LG유플러스, 교육부·티오리한국과 청소년 정보보안 인재 육성 협약",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157509",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "bce03101f37e8c2370",
+      "title": "경기도교육청, ‘2026 경기 과학·수학 한마당’ 개최…75개 부스 운영",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157497",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "d180c5695e56fc34c0",
+      "title": "\"로봇 엔지니어를 해결사로\"… HD현대, 美 팔란티어 'AIP' 협력",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157531",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "787951a47e02ad678c",
+      "title": "포항시, 자매도시 중국 장자강시 방문… 미래산업·관광 교류 확대 모색",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157532",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5177718e9b07afa8ab",
+      "title": "포항시, ‘2026 대한민국 철강포럼’ 개최…저탄소·디지털 전환 논의",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157533",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f195ce0a41539482a9",
+      "title": "포항시지속가능발전협의회, ‘2026년 위원 워크숍’ 개최… 소통과 치유로 지속가능한 공동체 가치 확산",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157534",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ef8aa6ea1ec027b8c0",
+      "title": "[인터뷰] 리무산 하이난골프관광협회 회장, 녹색 카펫 위 30년 ... “하이난 골프의 새 지평을 열다”",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157467",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b60de604f638694865",
+      "title": "활력 넘치는 자유무역항 '하이난', 서울서 '2026 하이난(서울) 관광문화 홍보교류행사' 개최 ... \"관광·의료 협력 새 지평을 열다\"",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157466",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "a84c6e6ea4a082b746",
       "title": "마드리드 지방 정부·상공회의소, 부산서 관광 설명회 개최",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157436",
@@ -3632,298 +3920,6 @@
       "id": "0eb72fa38c30fdcfdf",
       "title": "기아 3분기 매출 31조5974억원 달성…한·미 역대 최고 점유율 기록",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157398",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "f3c88fd54c237d0015",
-      "title": "[인사] 세종대학교, 교원 보직 인사 단행",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157319",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d77be86027d66869ff",
-      "title": "목포시, 목포수산식품수출단지 준공…고부가가치 수산식품 산업 도약 기반 마련",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157341",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "1564f88c5b5911fd20",
-      "title": "곡성풍물단, 전남민속예술축제 일반부 대상 수상...28년 만의 쾌거",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157343",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "6ff9a576506714ecd1",
-      "title": "고창군, 민선9기 ‘공약이행평가단’ 출범...80개 공약 점검",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157345",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "3ab9c5e5cd669c4d0f",
-      "title": "영광군, 국회 찾아 2027년 국비 확보 총력전…4개 핵심사업 건의",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157344",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d1beba6cb05662af47",
-      "title": "영광군, 국방부에 ‘40조 원 해상풍력’ 군사구역 중첩 해소 및 상생 협력 건의",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157346",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "df5445ae7f7308d635",
-      "title": "담양군, 37개 기관·단체와 맞손…촘촘한 ‘자살예방 안전망’ 구축",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157348",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "efbdfae94ae085fc25",
-      "title": "담양군, 제19기 농업인대학 졸업식 개최…전문농업인 33명 배출",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157350",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "70d111ebcb45d928be",
-      "title": "“아이도 어르신도 행복하게”…장성군, 내년도 고향사랑 기금사업 4건 확정",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157351",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "e6fe147a6bb2a3f901",
-      "title": "케이뱅크, 3분기 당기순이익 421억원… 전년 동기 대비 119% 증가",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157354",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0d27b78d1260a4d1aa",
-      "title": "오산시, 제11회 오산학생 토론대회 개최",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157286",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9dc7b5b0e027874101",
-      "title": "의왕시, 생활지원사 대상 '치유농업 특강' 성료",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157285",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "020c579f1760158356",
-      "title": "안양시, 외국인 유학생 대상 '헬로 안양 팸투어' 진행",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157284",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a3ea57b751540831eb",
-      "title": "함평군, ‘제34회 함평사건 민간인 희생자 합동 추모식’ 거행",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157361",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "b55bb1745f6db2cf46",
-      "title": "진도군, 노인일자리 ‘짚공예 전승반 전시회’ 개최…전통의 멋과 가치 전해",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157382",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9ccdf7514f222c6a44",
-      "title": "“진도 청소년들, 꿈과 끼 펼치다”… ‘제17회 진도청소년어울마당’ 성료",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157393",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
