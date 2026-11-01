@@ -1,11 +1,150 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-01T19:50:44+09:00",
-  "last_successful_fetch": "2026-11-01T19:50:44+09:00",
-  "count": 40,
+  "generated_at": "2026-11-01T22:00:22+09:00",
+  "last_successful_fetch": "2026-11-01T22:00:22+09:00",
+  "count": 42,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "3e6d6f8870d11a4051",
+      "published_at": "2026-11-01T21:10:26+09:00",
+      "date": "2026.11.01",
+      "category": "인바운드",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "9월 인바운드 21.1% 아웃바운드 1.5% 성장",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72497",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "인바운드"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-01T22:00:22+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-01T22:00:22+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "id": "a5e75ec5a3de345669",
+      "published_at": "2026-11-01T21:09:15+09:00",
+      "date": "2026.11.01",
+      "category": "문화·트렌드",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "문광연, ‘지역관광개발 하반기 워크숍’ 개최",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72530",
+      "relevance": 10,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 10,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "지역관광",
+              "관광개발"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-01T22:00:22+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-01T22:00:22+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
     {
       "id": "5258ab93af5f8cec7f",
       "published_at": "2026-10-30T00:15:00+09:00",
