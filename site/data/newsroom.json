@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-01T23:48:57+09:00",
-  "last_successful_fetch": "2026-11-01T23:48:57+09:00",
-  "count": 38,
+  "generated_at": "2026-11-02T01:48:15+09:00",
+  "last_successful_fetch": "2026-11-02T01:48:15+09:00",
+  "count": 39,
   "public_fields": [
     "title",
     "source",
@@ -197,6 +197,16 @@
       "category": "문화·트렌드",
       "keywords": [
         "웰니스트래블"
+      ]
+    },
+    {
+      "title": "학생이 떠난 캠퍼스, 관광지가 될 수 있을까 [고성호의 관광 개발 이야기]",
+      "source": "여행신문",
+      "published_at": "2026-11-02T00:05:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500619",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광개발"
       ]
     },
     {
