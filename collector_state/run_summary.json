@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-02T03:55:27+09:00",
+  "checked_at": "2026-11-02T05:48:41+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
-  "received": 570,
+  "received": 590,
   "new_discoveries": 0,
-  "duplicate_observations": 374,
+  "duplicate_observations": 394,
   "new_auto_published": 0,
   "total_published": 43,
   "total_archived": 43,
@@ -85,7 +85,7 @@
     "문화·트렌드": 11,
     "경제·시장": 0
   },
-  "discovered_last24h": 127,
+  "discovered_last24h": 126,
   "discovered_last7d": 1426,
   "auto_published_last24h": 3,
   "auto_published_last7d": 34,
@@ -122,7 +122,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9855072463768116,
+      "success_rate": 0.9857142857142858,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -231,7 +231,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9710144927536232,
+      "success_rate": 0.9714285714285714,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -266,7 +266,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9710144927536232,
+      "success_rate": 0.9714285714285714,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -276,9 +276,9 @@
       "name": "서울시 내 손안에 서울 교통",
       "url": "https://mediahub.seoul.go.kr/news/rss/01",
       "group": "public",
-      "received": 0,
+      "received": 20,
       "new_discoveries": 0,
-      "duplicates": 0,
+      "duplicates": 20,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -286,7 +286,7 @@
       "classifications": {
         "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 0
+        "Irrelevant": 20
       },
       "publication_policy": {
         "status": "approved",
@@ -300,13 +300,11 @@
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
-      "status": "error",
-      "error_kind": "transport_error",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-      "success_rate": 0.7246376811594203,
+      "status": "ok",
+      "success_rate": 0.7285714285714285,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "fetch_failed"
+      "outcome": "no_new_candidate"
     },
     {
       "id": "seoul_environment",
@@ -338,7 +336,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.463768115942029,
+      "success_rate": 0.4714285714285714,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
