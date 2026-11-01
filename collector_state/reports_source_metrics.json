@@ -2,16 +2,16 @@
   "version": "0.4",
   "sources": {
     "yanolja": {
-      "attempts": 2,
-      "successes": 2,
+      "attempts": 3,
+      "successes": 3,
       "errors": 0,
-      "last_attempt_at": "2026-10-29T14:01:39+09:00"
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     "kcti": {
-      "attempts": 2,
-      "successes": 2,
+      "attempts": 3,
+      "successes": 3,
       "errors": 0,
-      "last_attempt_at": "2026-10-29T14:01:39+09:00"
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     "kto": {
       "attempts": 0,
@@ -24,10 +24,10 @@
       "errors": 0
     },
     "phocuswright": {
-      "attempts": 2,
+      "attempts": 3,
       "successes": 2,
-      "errors": 0,
-      "last_attempt_at": "2026-10-29T14:01:39+09:00"
+      "errors": 1,
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     "untourism": {
       "attempts": 0,
@@ -40,10 +40,10 @@
       "errors": 0
     },
     "etc": {
-      "attempts": 2,
-      "successes": 2,
+      "attempts": 3,
+      "successes": 3,
       "errors": 0,
-      "last_attempt_at": "2026-10-29T14:01:39+09:00"
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     "wttc": {
       "attempts": 0,
