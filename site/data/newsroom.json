@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-03T00:05:03+09:00",
-  "last_successful_fetch": "2026-11-03T00:05:03+09:00",
-  "count": 43,
+  "generated_at": "2026-11-03T02:15:48+09:00",
+  "last_successful_fetch": "2026-11-03T02:15:48+09:00",
+  "count": 44,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,16 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "후쿠시마, 한국인 여행지 될 수 있을까…한국 여행업계가 짚은 과제",
+      "source": "여행신문",
+      "published_at": "2026-11-03T00:15:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500626",
+      "category": "여행산업",
+      "keywords": [
+        "여행업"
+      ]
+    },
     {
       "title": "태국관광청, 태국 웰니스 관광 집중 조명",
       "source": "트래블데일리",

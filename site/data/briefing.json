@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-03T00:05:03+09:00",
+  "generated_at": "2026-11-03T02:15:48+09:00",
   "briefing_date": "2026-11-03",
-  "last_successful_fetch": "2026-11-03T00:05:03+09:00",
+  "last_successful_fetch": "2026-11-03T02:15:48+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 5,
-  "selected_count": 2,
+  "recent_news_count": 6,
+  "selected_count": 3,
   "collection": {
     "status": "partial",
     "successful_sources": 13,
@@ -15,6 +15,16 @@
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
   "items": [
+    {
+      "title": "후쿠시마, 한국인 여행지 될 수 있을까…한국 여행업계가 짚은 과제",
+      "source": "여행신문",
+      "published_at": "2026-11-03T00:15:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500626",
+      "category": "여행산업",
+      "keywords": [
+        "여행업"
+      ]
+    },
     {
       "title": "한국관광공사, ‘요즘, 한국관광 데이터 세미나’ 개최",
       "source": "트래블데일리",
