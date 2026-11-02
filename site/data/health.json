@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-02T14:36:17+09:00",
-  "last_successful_fetch": "2026-11-02T14:36:17+09:00",
+  "checked_at": "2026-11-02T15:09:32+09:00",
+  "last_successful_fetch": "2026-11-02T15:09:32+09:00",
   "status": "partial",
   "sources": [
     {
@@ -103,23 +103,9 @@
       "id": "seoul_environment",
       "name": "서울시 내 손안에 서울 환경",
       "url": "https://mediahub.seoul.go.kr/news/rss/05",
-      "status": "ok",
-      "rss_items": 20,
-      "matched": 0,
-      "held": 0,
-      "relevance_counts": {
-        "Direct": 0,
-        "Indirect": 0,
-        "Irrelevant": 20
-      },
-      "category_published": {
-        "관광정책": 0,
-        "인바운드": 0,
-        "여행산업": 0,
-        "항공·숙박": 0,
-        "문화·트렌드": 0,
-        "경제·시장": 0
-      }
+      "status": "error",
+      "error_kind": "transport_error",
+      "error": "OSError: <urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "id": "sec_booking",
@@ -289,7 +275,7 @@
     }
   ],
   "source_count": 18,
-  "successful_sources": 10,
+  "successful_sources": 9,
   "schema_version": 2,
   "rule_version": "0.2",
   "category_counts": {
@@ -303,12 +289,12 @@
   "review_queue_count": 1,
   "discovery": {
     "schema_version": 3,
-    "checked_at": "2026-11-02T14:36:17+09:00",
+    "checked_at": "2026-11-02T15:09:32+09:00",
     "publication_result": "partial",
     "discovery_status": "partial",
-    "received": 590,
-    "new_discoveries": 7,
-    "duplicate_observations": 386,
+    "received": 570,
+    "new_discoveries": 14,
+    "duplicate_observations": 359,
     "new_auto_published": 0,
     "total_published": 43,
     "total_archived": 43,
@@ -388,8 +374,8 @@
       "문화·트렌드": 11,
       "경제·시장": 0
     },
-    "discovered_last24h": 215,
-    "discovered_last7d": 1584,
+    "discovered_last24h": 229,
+    "discovered_last7d": 1598,
     "auto_published_last24h": 3,
     "auto_published_last7d": 34,
     "originally_published_last24h": 3,
@@ -425,7 +411,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.987012987012987,
+        "success_rate": 0.9871794871794872,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -510,8 +496,8 @@
         "url": "https://mediahub.seoul.go.kr/news/rss/06",
         "group": "public",
         "received": 20,
-        "new_discoveries": 0,
-        "duplicates": 20,
+        "new_discoveries": 1,
+        "duplicates": 19,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -534,10 +520,10 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.974025974025974,
+        "success_rate": 0.9743589743589743,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "no_new_candidate"
+        "outcome": "discovered_not_publishable"
       },
       {
         "id": "seoul_economy",
@@ -545,8 +531,8 @@
         "url": "https://mediahub.seoul.go.kr/news/rss/04",
         "group": "public",
         "received": 20,
-        "new_discoveries": 0,
-        "duplicates": 20,
+        "new_discoveries": 1,
+        "duplicates": 19,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -569,10 +555,10 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.961038961038961,
+        "success_rate": 0.9615384615384616,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "no_new_candidate"
+        "outcome": "discovered_not_publishable"
       },
       {
         "id": "seoul_transport",
@@ -604,7 +590,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.7402597402597403,
+        "success_rate": 0.7435897435897436,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -614,9 +600,9 @@
         "name": "서울시 내 손안에 서울 환경",
         "url": "https://mediahub.seoul.go.kr/news/rss/05",
         "group": "public",
-        "received": 20,
+        "received": 0,
         "new_discoveries": 0,
-        "duplicates": 20,
+        "duplicates": 0,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -624,7 +610,7 @@
         "classifications": {
           "Direct": 0,
           "Indirect": 0,
-          "Irrelevant": 20
+          "Irrelevant": 0
         },
         "publication_policy": {
           "status": "approved",
@@ -638,11 +624,13 @@
           "max_days": 90,
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
-        "status": "ok",
-        "success_rate": 0.4805194805194805,
+        "status": "error",
+        "error_kind": "transport_error",
+        "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+        "success_rate": 0.47435897435897434,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "no_new_candidate"
+        "outcome": "fetch_failed"
       },
       {
         "id": "sec_booking",
@@ -1020,14 +1008,14 @@
         "received": 10,
         "new_discoveries": 0,
         "duplicates": 10,
-        "rights_holds": 0,
+        "rights_holds": 1,
         "date_holds": 0,
         "invalid_metadata": 0,
         "outside_window": 0,
         "classifications": {
-          "Direct": 0,
+          "Direct": 1,
           "Indirect": 0,
-          "Irrelevant": 10
+          "Irrelevant": 9
         },
         "publication_policy": {
           "status": "review",
@@ -1160,8 +1148,8 @@
         "url": "https://www.yna.co.kr/rss/economy.xml",
         "group": "media",
         "received": 120,
-        "new_discoveries": 7,
-        "duplicates": 113,
+        "new_discoveries": 12,
+        "duplicates": 108,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -1318,14 +1306,14 @@
     ],
     "briefing": {
       "status": "ok",
-      "checked_at": "2026-11-02T14:36:17+09:00",
+      "checked_at": "2026-11-02T15:09:32+09:00",
       "selection_status": "candidates_ready"
     },
     "outcome": "no_new_publications_with_source_errors"
   },
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-02T14:36:17+09:00",
+    "checked_at": "2026-11-02T15:09:32+09:00",
     "selection_status": "candidates_ready"
   }
 }
