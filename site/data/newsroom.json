@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-02T22:22:32+09:00",
-  "last_successful_fetch": "2026-11-02T22:22:32+09:00",
-  "count": 41,
+  "generated_at": "2026-11-03T00:05:03+09:00",
+  "last_successful_fetch": "2026-11-03T00:05:03+09:00",
+  "count": 43,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,38 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "태국관광청, 태국 웰니스 관광 집중 조명",
+      "source": "트래블데일리",
+      "published_at": "2026-11-02T23:50:41+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72546",
+      "category": "문화·트렌드",
+      "keywords": [
+        "웰니스관광",
+        "관광청"
+      ]
+    },
+    {
+      "title": "한국관광공사, ‘요즘, 한국관광 데이터 세미나’ 개최",
+      "source": "트래블데일리",
+      "published_at": "2026-11-02T23:50:31+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72540",
+      "category": "경제·시장",
+      "keywords": [
+        "관광데이터",
+        "관광공사"
+      ]
+    },
+    {
+      "title": "‘서부산 관광 활성화 자문위원회’ 위원 위촉",
+      "source": "트래블데일리",
+      "published_at": "2026-11-02T23:50:24+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72535",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광활성화"
+      ]
+    },
     {
       "title": "담양군, ‘11월 군정 소통의 날’서 체류형 관광도시 도약 다짐",
       "source": "퍼블릭뉴스통신(TTL)",
@@ -417,14 +449,6 @@
       "source": "GOV.UK · aviation",
       "published_at": "2026-10-02T06:30:00+09:00",
       "url": "https://www.gov.uk/government/news/take-off-for-passengers-as-government-scraps-extra-charges-when-flying",
-      "category": "항공·숙박",
-      "keywords": []
-    },
-    {
-      "title": "Gatwick to open second runway as government wins legal challenge",
-      "source": "GOV.UK · aviation",
-      "published_at": "2026-08-04T23:01:00+09:00",
-      "url": "https://www.gov.uk/government/news/gatwick-to-open-second-runway-as-government-wins-legal-challenge",
       "category": "항공·숙박",
       "keywords": []
     }

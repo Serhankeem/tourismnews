@@ -1,11 +1,230 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-02T22:22:32+09:00",
-  "last_successful_fetch": "2026-11-02T22:22:32+09:00",
-  "count": 45,
+  "generated_at": "2026-11-03T00:05:03+09:00",
+  "last_successful_fetch": "2026-11-03T00:05:03+09:00",
+  "count": 48,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "201a99871a43bc150d",
+      "published_at": "2026-11-02T23:50:41+09:00",
+      "date": "2026.11.02",
+      "category": "문화·트렌드",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "태국관광청, 태국 웰니스 관광 집중 조명",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72546",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "웰니스관광"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-03T00:05:03+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T00:05:03+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "id": "c89c568c2b448ec0af",
+      "published_at": "2026-11-02T23:50:31+09:00",
+      "date": "2026.11.02",
+      "category": "경제·시장",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "한국관광공사, ‘요즘, 한국관광 데이터 세미나’ 개최",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72540",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "경제·시장",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광데이터"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-03T00:05:03+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T00:05:03+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "한국관광",
+            "rule": "explicit_korean_market"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
+    {
+      "id": "de36e518cc34415846",
+      "published_at": "2026-11-02T23:50:24+09:00",
+      "date": "2026.11.02",
+      "category": "문화·트렌드",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "‘서부산 관광 활성화 자문위원회’ 위원 위촉",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72535",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광활성화"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-03T00:05:03+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T00:05:03+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "부산 관광",
+            "rule": "explicit_korean_market"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
     {
       "id": "aedd9354f733196945",
       "published_at": "2026-11-02T17:43:59+09:00",
@@ -3016,7 +3235,9 @@
         "korea_connection": "not_established",
         "evidence": [],
         "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
-      }
+      },
+      "archived_only": true,
+      "archive_reason": "not_selected_by_current_publication_window_or_rules"
     },
     {
       "id": "a358f780e0ea4accbd",
