@@ -1,0 +1,504 @@
+{
+  "version": "0.4",
+  "checked_at": "2026-11-02T13:18:04+09:00",
+  "status": "ok",
+  "target_sources": 11,
+  "source_coverage": 11,
+  "connected_sources": 6,
+  "publishing_sources": 5,
+  "candidate_reports": 232,
+  "candidates_this_run": 80,
+  "verified_candidates_this_run": 80,
+  "verified_this_run": 80,
+  "verified_reports": 175,
+  "verified_automatic_reports": 175,
+  "verified_manual_reports": 0,
+  "excluded_this_run": 37,
+  "duplicate_reports": 0,
+  "duplicate_observations": 18,
+  "published_reports": 135,
+  "archived_reports": 135,
+  "new_reports_this_run": 25,
+  "new_automatic_reports_this_run": 25,
+  "new_manual_reports_this_run": 0,
+  "new_reports_last30d": 5,
+  "automatic_reports": 135,
+  "manual_reports": 0,
+  "by_publisher": {
+    "야놀자리서치": {
+      "published": 0,
+      "new_last30d": 0,
+      "latest_publication": null,
+      "latest_registration": null,
+      "last_collection": "2026-11-02T08:08:15+09:00",
+      "success_rate": 1.0
+    },
+    "한국문화관광연구원": {
+      "published": 37,
+      "new_last30d": 0,
+      "latest_publication": "2025",
+      "latest_registration": null,
+      "last_collection": "2026-11-02T13:18:04+09:00",
+      "success_rate": 1.0
+    },
+    "한국관광공사 / 관광데이터랩": {
+      "published": 0,
+      "new_last30d": 0,
+      "latest_publication": null,
+      "latest_registration": null,
+      "last_collection": null,
+      "success_rate": null
+    },
+    "McKinsey & Company": {
+      "published": 0,
+      "new_last30d": 0,
+      "latest_publication": null,
+      "latest_registration": null,
+      "last_collection": null,
+      "success_rate": null
+    },
+    "Phocuswright": {
+      "published": 65,
+      "new_last30d": 4,
+      "latest_publication": "2026-10-28",
+      "latest_registration": null,
+      "last_collection": "2026-11-02T08:08:15+09:00",
+      "success_rate": 0.6666666666666666
+    },
+    "UN Tourism": {
+      "published": 0,
+      "new_last30d": 0,
+      "latest_publication": null,
+      "latest_registration": null,
+      "last_collection": null,
+      "success_rate": null
+    },
+    "IATA": {
+      "published": 0,
+      "new_last30d": 0,
+      "latest_publication": null,
+      "latest_registration": null,
+      "last_collection": null,
+      "success_rate": null
+    },
+    "European Travel Commission (ETC)": {
+      "published": 27,
+      "new_last30d": 1,
+      "latest_publication": "2026-10-14",
+      "latest_registration": null,
+      "last_collection": "2026-11-02T08:08:15+09:00",
+      "success_rate": 1.0
+    },
+    "WTTC": {
+      "published": 0,
+      "new_last30d": 0,
+      "latest_publication": null,
+      "latest_registration": null,
+      "last_collection": null,
+      "success_rate": null
+    },
+    "OECD": {
+      "published": 2,
+      "new_last30d": 0,
+      "latest_publication": "2026-06-30",
+      "latest_registration": null,
+      "last_collection": "2026-11-02T13:18:04+09:00",
+      "success_rate": 1.0
+    },
+    "한국교통연구원": {
+      "published": 4,
+      "new_last30d": 0,
+      "latest_publication": "2025-11-28",
+      "latest_registration": null,
+      "last_collection": "2026-11-02T13:18:04+09:00",
+      "success_rate": 1.0
+    }
+  },
+  "category_counts": {
+    "국제관광·인바운드": 15,
+    "국내관광·관광소비": 5,
+    "숙박·호텔산업": 8,
+    "항공·교통산업": 4,
+    "OTA·여행기술": 17,
+    "관광정책·산업경제": 6,
+    "MICE·비즈니스 이벤트": 1,
+    "관광시장 전망·트렌드": 79
+  },
+  "sources": [
+    {
+      "id": "yanolja",
+      "publisher": "야놀자리서치",
+      "status": "not_due",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "not_selected_for_this_run"
+    },
+    {
+      "id": "kcti",
+      "publisher": "한국문화관광연구원",
+      "status": "ok",
+      "candidate_reports": 37,
+      "verified_reports": 37,
+      "verified_candidates": 37,
+      "catalog_entries": 37,
+      "excluded_reports": 0,
+      "duplicate_observations": 18,
+      "duplicate_editions_merged": 0,
+      "new_reports": 19,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "success_rate": 1.0
+    },
+    {
+      "id": "kto",
+      "publisher": "한국관광공사 / 관광데이터랩",
+      "status": "blocked",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "Official root redirects through a non-HTTPS route; corporate root robots unavailable. No bypass; permitted catalog/API and metadata scope unverified."
+    },
+    {
+      "id": "mckinsey",
+      "publisher": "McKinsey & Company",
+      "status": "blocked",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "Travel insights collection verified; tested terms candidate 404, applicable automatic metadata use terms unconfirmed. No guessed API integration."
+    },
+    {
+      "id": "phocuswright",
+      "publisher": "Phocuswright",
+      "status": "not_due",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "not_selected_for_this_run"
+    },
+    {
+      "id": "untourism",
+      "publisher": "UN Tourism",
+      "status": "blocked",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "robots request HTTP 403; source content not requested. Official publication/archive route and rights not verified."
+    },
+    {
+      "id": "iata",
+      "publisher": "IATA",
+      "status": "blocked",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "Economics terms explicitly say no data scraping; no automatic catalog harvesting. Manual bibliographic use requires scope/attribution clarification, not counted as automatic supply."
+    },
+    {
+      "id": "etc",
+      "publisher": "European Travel Commission (ETC)",
+      "status": "not_due",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "not_selected_for_this_run"
+    },
+    {
+      "id": "wttc",
+      "publisher": "WTTC",
+      "status": "blocked",
+      "candidate_reports": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 0,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "reason": "Site terms limit content/database use to personal noncommercial scope unless permission granted. A public professional library is not assumed to be personal use; platform metadata scope needs clarification."
+    },
+    {
+      "id": "oecd",
+      "publisher": "OECD",
+      "status": "ok",
+      "candidate_reports": 3,
+      "verified_reports": 3,
+      "verified_candidates": 3,
+      "catalog_entries": 9,
+      "excluded_reports": 1,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 2,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "deferred_candidates": 6,
+      "success_rate": 1.0
+    },
+    {
+      "id": "koti",
+      "publisher": "한국교통연구원",
+      "status": "ok",
+      "candidate_reports": 40,
+      "verified_reports": 40,
+      "verified_candidates": 40,
+      "catalog_entries": 40,
+      "excluded_reports": 36,
+      "duplicate_observations": 0,
+      "duplicate_editions_merged": 0,
+      "new_reports": 4,
+      "detail_errors": 0,
+      "date_holds": 0,
+      "rights_holds": 0,
+      "success_rate": 1.0
+    }
+  ],
+  "errors": [
+    {
+      "source_id": "oecd",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2022_a8dd3019-en.html",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=65273",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=63553",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=714",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=697",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=696",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=677",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=676",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=659",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=606",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=65272",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=660",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=616",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=582",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=561",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=542",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=38",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=61",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=89",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=62479",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=62146",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1167",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1137",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1108",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1074",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1055",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1004",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=722",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=725",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1181",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1179",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1173",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1163",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1122",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1110",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1100",
+      "error": "outside_or_uncertain_initial_date_window"
+    },
+    {
+      "source_id": "koti",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1073",
+      "error": "outside_or_uncertain_initial_date_window"
+    }
+  ]
+}

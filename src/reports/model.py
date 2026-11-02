@@ -9,13 +9,13 @@ TYPES=('종합 연구보고서','정기 시장동향','정책연구','산업·�
 CATEGORIES=('국제관광·인바운드','국내관광·관광소비','숙박·호텔산업','항공·교통산업','OTA·여행기술','관광정책·산업경제','MICE·비즈니스 이벤트','관광시장 전망·트렌드')
 ACCESS=('무료 공개','회원 접근','유료','미확인')
 TOPICS={
- 'MICE·비즈니스 이벤트':('MICE','business events','convention','국제회의','비즈니스 이벤트'),
+ 'MICE·비즈니스 이벤트':('MICE','business events','business event','international meetings','international congress','international congresses','convention industry','convention market','convention bureau','congress market','exhibition industry','국제회의','컨벤션','전시산업','비즈니스 이벤트'),
  'OTA·여행기술':('OTA','online travel','travel technology','distribution','booking','AI','인공지능','여행기술','플랫폼','특허'),
- '숙박·호텔산업':('lodging','hotel','accommodation','short-term rental','숙박','호텔'),
- '항공·교통산업':('aviation','airline','air transport','air travel','airport','rail','항공','공항','교통'),
+ '숙박·호텔산업':('lodging','hotel','hotels','accommodation','accommodations','short-term rental','short-term rentals','short term rental','short term rentals','guesthouse','guesthouses','hotel industry','객실','야영장','숙박','호텔'),
+ '항공·교통산업':('aviation','airline','airlines','air transport','air travel','airport','airports','rail','railway','railways','passenger aviation','air passenger','항공','공항','교통','여객시장'),
  '국제관광·인바운드':('international tourism','inbound','long-haul','인바운드','국제관광','방한'),
  '국내관광·관광소비':('consumer','spending','domestic travel','consumption','관광소비','국내관광','내국인'),
- '관광정책·산업경제':('economic impact','economics','employment','GDP','policy','정책','경제효과','관광산업','고용'),
+ '관광정책·산업경제':('economic impact','economics','employment','GDP','policy','policies','governance','regulation','정책','경제효과','관광산업','고용'),
  '관광시장 전망·트렌드':('outlook','forecast','trends','sentiment','market','tourism','travel','전망','동향','관광','여행'),
 }
 
@@ -25,7 +25,7 @@ def terms(title, values):
     text=unicodedata.normalize('NFKC',title).casefold();found=[]
     for term in values:
         pattern=r'\s*'.join(re.escape(v) for v in re.sub(r'\s+','',term.casefold()))
-        if term.isascii() and len(term)<=4:pattern=r'\b'+pattern+r'\b'
+        if term.isascii():pattern=r'(?<![A-Za-z0-9_])'+pattern+r'(?![A-Za-z0-9_])'
         if re.search(pattern,text):found.append(term)
     return found
 

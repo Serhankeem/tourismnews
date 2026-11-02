@@ -1,0 +1,108 @@
+{
+  "baseline_commit": "9495dbfc6735de21ebc7302ce921f6873a852dc3",
+  "baseline_count": 110,
+  "new_published": 25,
+  "final_count": 135,
+  "old_records_all_present": true,
+  "old_public_fields_unchanged": true,
+  "new_automatic_sources": [
+    "oecd",
+    "koti"
+  ],
+  "connected_sources": 6,
+  "publishing_sources_before": 3,
+  "publishing_sources_after": 5,
+  "new_manual_records": 0,
+  "new_automatic_records": 25,
+  "by_publisher_before": {
+    "Phocuswright": 65,
+    "European Travel Commission (ETC)": 27,
+    "한국문화관광연구원": 18
+  },
+  "by_publisher_after": {
+    "Phocuswright": 65,
+    "European Travel Commission (ETC)": 27,
+    "OECD": 2,
+    "한국교통연구원": 4,
+    "한국문화관광연구원": 37
+  },
+  "by_category_before": {
+    "OTA·여행기술": 16,
+    "관광시장 전망·트렌드": 71,
+    "국제관광·인바운드": 11,
+    "숙박·호텔산업": 4,
+    "국내관광·관광소비": 5,
+    "관광정책·산업경제": 3
+  },
+  "by_category_after": {
+    "OTA·여행기술": 17,
+    "관광시장 전망·트렌드": 77,
+    "국제관광·인바운드": 15,
+    "숙박·호텔산업": 8,
+    "국내관광·관광소비": 5,
+    "관광정책·산업경제": 8,
+    "항공·교통산업": 4,
+    "MICE·비즈니스 이벤트": 1
+  },
+  "access_before": {
+    "미확인": 80,
+    "유료": 11,
+    "무료 공개": 19
+  },
+  "access_after": {
+    "미확인": 80,
+    "유료": 11,
+    "무료 공개": 44
+  },
+  "date_precision_new": {
+    "day": 6,
+    "year": 19
+  },
+  "unchanged_non_research_files": true,
+  "classification_corrections": [
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "title": "OECD Tourism Trends and Policies 2026",
+      "before": {
+        "report_type": "종합 연구보고서",
+        "category": "관광시장 전망·트렌드",
+        "keywords": [
+          "trends",
+          "tourism"
+        ]
+      },
+      "after": {
+        "report_type": "종합 연구보고서",
+        "category": "관광정책·산업경제",
+        "keywords": [
+          "policies",
+          "trends",
+          "tourism"
+        ]
+      },
+      "basis": "Official title explicitly contains Policies; plural word recognized as tourism policy, not quota-based reassignment."
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "title": "OECD Tourism Trends and Policies 2024",
+      "before": {
+        "report_type": "종합 연구보고서",
+        "category": "관광시장 전망·트렌드",
+        "keywords": [
+          "trends",
+          "tourism"
+        ]
+      },
+      "after": {
+        "report_type": "종합 연구보고서",
+        "category": "관광정책·산업경제",
+        "keywords": [
+          "policies",
+          "trends",
+          "tourism"
+        ]
+      },
+      "basis": "Official title explicitly contains Policies; plural word recognized as tourism policy, not quota-based reassignment."
+    }
+  ]
+}

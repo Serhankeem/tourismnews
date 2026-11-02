@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "mode": "verified_official_metadata",
-  "generated_at": "2026-11-02T08:08:15+09:00",
-  "count": 110,
+  "generated_at": "2026-11-02T13:24:45+09:00",
+  "count": 135,
   "reports": [
     {
       "title": "AI claims processing ranks last as a booking confidence driver",
@@ -407,6 +407,20 @@
       ],
       "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-summer-autumn-2026/",
       "access_type": "미확인"
+    },
+    {
+      "title": "OECD Tourism Trends and Policies 2026",
+      "publisher": "OECD",
+      "published_at": "2026-06-30",
+      "report_type": "종합 연구보고서",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "policies",
+        "trends",
+        "tourism"
+      ],
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "access_type": "무료 공개"
     },
     {
       "title": "U.S. hotel and lodging 2026: Slow growth, a stable split and AI waiting at the door",
@@ -932,6 +946,18 @@
       "access_type": "미확인"
     },
     {
+      "title": "공항경쟁력 성과지표 개선 방안 연구",
+      "publisher": "한국교통연구원",
+      "published_at": "2025-11-28",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "공항"
+      ],
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=72143",
+      "access_type": "무료 공개"
+    },
+    {
       "title": "European Tourism 2025 – Trends & Prospects (Q3/2025)",
       "publisher": "European Travel Commission (ETC)",
       "published_at": "2025-11-13",
@@ -969,6 +995,18 @@
       ],
       "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-autumn-25-winter-2026/",
       "access_type": "미확인"
+    },
+    {
+      "title": "항공기 운항신뢰성 제고를 위한 항공운송 데이터 분석 체계 연구",
+      "publisher": "한국교통연구원",
+      "published_at": "2025-10-31",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "항공"
+      ],
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=71947",
+      "access_type": "무료 공개"
     },
     {
       "title": "Long-Haul Travel Barometer 3/2025",
@@ -1352,6 +1390,19 @@
       "access_type": "무료 공개"
     },
     {
+      "title": "교통시설 투자평가지침 공항부문 개선 방안 연구",
+      "publisher": "한국교통연구원",
+      "published_at": "2024-12-20",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "공항",
+        "교통"
+      ],
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=68643",
+      "access_type": "무료 공개"
+    },
+    {
       "title": "European Tourism 2024 – Trends & Prospects (Q3/2024)",
       "publisher": "European Travel Commission (ETC)",
       "published_at": "2024-11-07",
@@ -1363,6 +1414,269 @@
       ],
       "url": "https://etc-corporate.org/reports/european-tourism-2024-trends-prospects-q3-2024/",
       "access_type": "미확인"
+    },
+    {
+      "title": "공항개발과 운영의 효율적 추진을 위한 제도적 개편 방안",
+      "publisher": "한국교통연구원",
+      "published_at": "2024-10-31",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "공항"
+      ],
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=68211",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "OECD Tourism Trends and Policies 2024",
+      "publisher": "OECD",
+      "published_at": "2024-07-08",
+      "report_type": "종합 연구보고서",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "policies",
+        "trends",
+        "tourism"
+      ],
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "치유(웰니스)·의료관광 융복합 클러스터 중간평가 지표에 관한 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=7c300f15d98944c594be08d203b27a5d",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "야영장 기본시설의 전기 사용량 기준 개선 방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "야영장"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=483f685cab574ec4b28aaff4a85769ff",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "인구감소시대, 지역관광의 역할과 정책 대응 방향",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "정책",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5c326faca40b4b01826867e65ac362ba",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "지방시대, 방한 외래관광객 지방관광 활성화 방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "방한",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=aafe2dfd57004fbdbdf97a39c70b1d8c",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "코로나19 이후 오버투어리즘 현황 및 정책 대응 방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "정책"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=dc55e2603daf40a1bd29f8d74d1a2b89",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "외래관광객 정책 수립을 위한 데이터 활용 제고 방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "정책",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=f6d64fa2f96046c0834bdf8606d0f37e",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "지역관광사업 재원조달 다각화 방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=63aa859891484687b9c17a6f28d62558",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "유원시설업 중대한 사고 관리체계 개선방안 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e6b37acf8f374bb583322f038ff9a069",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "최근 OTA(온라인여행사) 시장 동향 분석 및 정책과제",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "OTA·여행기술",
+      "keywords": [
+        "OTA",
+        "정책",
+        "동향",
+        "여행"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=0af56c2a557f47769237411f839ca1b2",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "공모형 지역관광사업 체계 개선방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5ba66c80ac6a4912b8714e129ea13b9e",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "방한 중국 단체관광시장의 공정 환경 조성방안",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "방한",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=ad5ec490885c4f9da76c8dea8ab3f38a",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "관광객 이용 숙박시설 제도 개선방안 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "숙박",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=b86ad65832b44fc59c5e9f72215ae110",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "호텔업 종사원 자격제도 개선 방안 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "호텔"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6f2557ae5f3b43f6926f4904693ee391",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "관광 인바운드 수요예측 고도화 연구: 머신러닝 예측모형을 중심으로",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "인바운드",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6aabe0424fd74cecaa34ddda20e0f636",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "지역관광 사업의 성과평가 방법 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e5cfabf6bc014d6585c495f0a9095aa0",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "관광의 지속가능성 측정을 위한 통계 체계(SF-MST) 대응 방향 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=2ab6bb49bb0f431f9134e777224f89ea",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "관광호텔 봉사료 실태 분석 및 시사점",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "호텔",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6d3626b633ce4364bb7db6eb5f8cd065",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "국제회의시설업 업종 개편 방안 연구",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "MICE·비즈니스 이벤트",
+      "keywords": [
+        "국제회의"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=a816344d672942218bd699fab66bcac2",
+      "access_type": "무료 공개"
+    },
+    {
+      "title": "중국인 방한관광 재개의 효과 분석",
+      "publisher": "한국문화관광연구원",
+      "published_at": "2024",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "방한",
+        "관광"
+      ],
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=4b2c8ad78b5941e984a67686543b33c0",
+      "access_type": "무료 공개"
     }
   ],
   "publishers": {
@@ -1401,6 +1715,14 @@
     "WTTC": {
       "region": "해외",
       "homepage": "https://wttc.org/"
+    },
+    "OECD": {
+      "region": "해외",
+      "homepage": "https://www.oecd.org/"
+    },
+    "한국교통연구원": {
+      "region": "국내",
+      "homepage": "https://www.koti.re.kr/"
     }
   },
   "date_basis": {
@@ -1534,6 +1856,10 @@
     },
     "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-summer-autumn-2026/": {
       "kind": "official_page_first_publication",
+      "precision": "day"
+    },
+    "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html": {
+      "kind": "official_publication",
       "precision": "day"
     },
     "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/US-Hotel-and-Lodging-2026-Slow-growth-a-stable-split-and-AI-waiting-at-the-door": {
@@ -1708,6 +2034,10 @@
       "kind": "official_page_first_publication",
       "precision": "day"
     },
+    "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=72143": {
+      "kind": "official_publication",
+      "precision": "day"
+    },
     "https://etc-corporate.org/reports/european-tourism-2025-trends-prospects-q3-2025/": {
       "kind": "official_page_first_publication",
       "precision": "day"
@@ -1718,6 +2048,10 @@
     },
     "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-autumn-25-winter-2026/": {
       "kind": "official_page_first_publication",
+      "precision": "day"
+    },
+    "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=71947": {
+      "kind": "official_publication",
       "precision": "day"
     },
     "https://etc-corporate.org/reports/long-haul-travel-barometer-3-2025/": {
@@ -1840,12 +2174,108 @@
       "kind": "publication_year",
       "precision": "year"
     },
+    "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=68643": {
+      "kind": "official_publication",
+      "precision": "day"
+    },
     "https://etc-corporate.org/reports/european-tourism-2024-trends-prospects-q3-2024/": {
       "kind": "official_page_first_publication",
       "precision": "day"
+    },
+    "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=68211": {
+      "kind": "official_publication",
+      "precision": "day"
+    },
+    "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html": {
+      "kind": "official_publication",
+      "precision": "day"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=7c300f15d98944c594be08d203b27a5d": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=483f685cab574ec4b28aaff4a85769ff": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5c326faca40b4b01826867e65ac362ba": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=aafe2dfd57004fbdbdf97a39c70b1d8c": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=dc55e2603daf40a1bd29f8d74d1a2b89": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=f6d64fa2f96046c0834bdf8606d0f37e": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=63aa859891484687b9c17a6f28d62558": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e6b37acf8f374bb583322f038ff9a069": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=0af56c2a557f47769237411f839ca1b2": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5ba66c80ac6a4912b8714e129ea13b9e": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=ad5ec490885c4f9da76c8dea8ab3f38a": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=b86ad65832b44fc59c5e9f72215ae110": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6f2557ae5f3b43f6926f4904693ee391": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6aabe0424fd74cecaa34ddda20e0f636": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e5cfabf6bc014d6585c495f0a9095aa0": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=2ab6bb49bb0f431f9134e777224f89ea": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6d3626b633ce4364bb7db6eb5f8cd065": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=a816344d672942218bd699fab66bcac2": {
+      "kind": "publication_year",
+      "precision": "year"
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=4b2c8ad78b5941e984a67686543b33c0": {
+      "kind": "publication_year",
+      "precision": "year"
     }
   },
   "attributions": {
+    "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=72143": {
+      "authors": "김명현,한익현",
+      "kogl_type": 4
+    },
+    "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=71947": {
+      "authors": "김명현,강동운,손정웅,김소연",
+      "kogl_type": 4
+    },
     "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=03fdec5804b945d7aab5e9694cc1c2a2": {
       "authors": "강지수,김형종,류광훈",
       "kogl_type": 4
@@ -1916,6 +2346,90 @@
     },
     "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=85ae19fbba9b4defa60f6ded3c2ec06e": {
       "authors": "유지윤,정광민",
+      "kogl_type": 4
+    },
+    "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=68643": {
+      "authors": "백승한,안미진",
+      "kogl_type": 4
+    },
+    "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=68211": {
+      "authors": "백승한,박진서,손정웅,정수진",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=7c300f15d98944c594be08d203b27a5d": {
+      "authors": "유지윤",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=483f685cab574ec4b28aaff4a85769ff": {
+      "authors": "김윤영",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5c326faca40b4b01826867e65ac362ba": {
+      "authors": "전효재,김윤영,김유림,송재일,이영주",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=aafe2dfd57004fbdbdf97a39c70b1d8c": {
+      "authors": "김현주,윤주,이성빈",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=dc55e2603daf40a1bd29f8d74d1a2b89": {
+      "authors": "김성윤",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=f6d64fa2f96046c0834bdf8606d0f37e": {
+      "authors": "류광훈,김동현,이성빈",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=63aa859891484687b9c17a6f28d62558": {
+      "authors": "김영준,손신욱",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e6b37acf8f374bb583322f038ff9a069": {
+      "authors": "최자은,정혜진",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=0af56c2a557f47769237411f839ca1b2": {
+      "authors": "안희자,한희정",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5ba66c80ac6a4912b8714e129ea13b9e": {
+      "authors": "윤주,진보라",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=ad5ec490885c4f9da76c8dea8ab3f38a": {
+      "authors": "김현주,남승희",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=b86ad65832b44fc59c5e9f72215ae110": {
+      "authors": "류광훈,김유림,김지훈",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6f2557ae5f3b43f6926f4904693ee391": {
+      "authors": "유지윤,송수엽,권혁진,문유진",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6aabe0424fd74cecaa34ddda20e0f636": {
+      "authors": "김형종,고강혁,박상수",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e5cfabf6bc014d6585c495f0a9095aa0": {
+      "authors": "박상곤,박주영",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=2ab6bb49bb0f431f9134e777224f89ea": {
+      "authors": "이성빈,류광훈",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6d3626b633ce4364bb7db6eb5f8cd065": {
+      "authors": "한희정,송수엽",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=a816344d672942218bd699fab66bcac2": {
+      "authors": "송수엽,손신욱,김동한",
+      "kogl_type": 4
+    },
+    "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=4b2c8ad78b5941e984a67686543b33c0": {
+      "authors": "김형종,최경은",
       "kogl_type": 4
     }
   }
