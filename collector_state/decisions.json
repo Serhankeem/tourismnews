@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-02T20:11:01+09:00",
+  "checked_at": "2026-11-02T22:22:32+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -170,6 +170,24 @@
       "title": "‘케이-콘텐츠’ 지식재산, 유럽·중국에서 해외 진출 기반 넓혀",
       "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22809",
       "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "9a32476cdddeaffb33",
+      "title": "300만 넘은 '손목닥터'...운동회 개최, 체중관리 기능도",
+      "url": "https://mediahub.seoul.go.kr/archives/2019913",
+      "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -528,26 +546,6 @@
         "signals": [],
         "impact_targets": [],
         "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0226d145fedd9df88b",
-      "title": "유명 셰프부터 대표 맛집까지! '서울미식어워즈'에서 발견한 서울의 맛",
-      "url": "https://mediahub.seoul.go.kr/archives/2019875",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
       },
       "decision": "exclude"
     },

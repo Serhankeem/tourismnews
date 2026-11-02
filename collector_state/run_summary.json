@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-02T20:11:01+09:00",
+  "checked_at": "2026-11-02T22:22:32+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
   "received": 570,
-  "new_discoveries": 48,
-  "duplicate_observations": 325,
-  "new_auto_published": 1,
+  "new_discoveries": 4,
+  "duplicate_observations": 369,
+  "new_auto_published": 0,
   "total_published": 45,
   "total_archived": 45,
   "newsroom_count": 41,
   "filings_count": 0,
   "other_research_count": 3,
-  "new_newsroom_items": 1,
+  "new_newsroom_items": 0,
   "new_filings": 0,
   "newsroom_korea_direct_count": 19,
   "newsroom_korea_direct_last7d": 14,
@@ -51,7 +51,7 @@
       "count": 9,
       "originally_published_last7d": 9,
       "korea_direct": 4,
-      "new_this_run": 1
+      "new_this_run": 0
     }
   },
   "newsroom_category_counts": {
@@ -67,9 +67,9 @@
     "global_major": 0,
     "reference": 22
   },
-  "newsroom_originally_published_last24h": 5,
+  "newsroom_originally_published_last24h": 3,
   "newsroom_originally_published_last7d": 29,
-  "newsroom_newly_added_last24h": 5,
+  "newsroom_newly_added_last24h": 3,
   "new_backfilled": 0,
   "record_type_counts": {
     "news": 42,
@@ -85,11 +85,11 @@
     "문화·트렌드": 13,
     "경제·시장": 0
   },
-  "discovered_last24h": 353,
-  "discovered_last7d": 1745,
-  "auto_published_last24h": 5,
+  "discovered_last24h": 335,
+  "discovered_last7d": 1749,
+  "auto_published_last24h": 3,
   "auto_published_last7d": 36,
-  "originally_published_last24h": 5,
+  "originally_published_last24h": 3,
   "originally_published_last7d": 29,
   "sources": [
     {
@@ -122,7 +122,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9753086419753086,
+      "success_rate": 0.975609756097561,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -207,8 +207,8 @@
       "url": "https://mediahub.seoul.go.kr/news/rss/06",
       "group": "public",
       "received": 20,
-      "new_discoveries": 0,
-      "duplicates": 20,
+      "new_discoveries": 1,
+      "duplicates": 19,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -231,10 +231,10 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9753086419753086,
+      "success_rate": 0.975609756097561,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "discovered_not_publishable"
     },
     {
       "id": "seoul_economy",
@@ -266,7 +266,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9629629629629629,
+      "success_rate": 0.9634146341463414,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -301,7 +301,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.7530864197530864,
+      "success_rate": 0.7560975609756098,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -338,7 +338,7 @@
       "status": "error",
       "error_kind": "transport_error",
       "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-      "success_rate": 0.4691358024691358,
+      "success_rate": 0.4634146341463415,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "fetch_failed"
@@ -719,14 +719,14 @@
       "received": 10,
       "new_discoveries": 0,
       "duplicates": 10,
-      "rights_holds": 1,
+      "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
       "outside_window": 0,
       "classifications": {
-        "Direct": 1,
+        "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 9
+        "Irrelevant": 10
       },
       "publication_policy": {
         "status": "review",
@@ -824,8 +824,8 @@
       "url": "https://skift.com/feed/",
       "group": "media",
       "received": 10,
-      "new_discoveries": 3,
-      "duplicates": 7,
+      "new_discoveries": 2,
+      "duplicates": 8,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -859,8 +859,8 @@
       "url": "https://www.yna.co.kr/rss/economy.xml",
       "group": "media",
       "received": 120,
-      "new_discoveries": 4,
-      "duplicates": 116,
+      "new_discoveries": 1,
+      "duplicates": 119,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -978,8 +978,8 @@
       "url": "https://www.ttlnews.com/rss/allArticle.xml",
       "group": "media",
       "received": 50,
-      "new_discoveries": 41,
-      "duplicates": 9,
+      "new_discoveries": 0,
+      "duplicates": 50,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -1010,15 +1010,15 @@
       },
       "status": "ok",
       "success_rate": 1.0,
-      "new_auto_published": 1,
-      "new_newsroom_items": 1,
-      "outcome": "auto_published"
+      "new_auto_published": 0,
+      "new_newsroom_items": 0,
+      "outcome": "no_new_candidate"
     }
   ],
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-02T20:11:01+09:00",
-    "selection_status": "candidates_ready"
+    "checked_at": "2026-11-02T22:22:32+09:00",
+    "selection_status": "no_eligible_recent_articles"
   },
-  "outcome": "new_newsroom_news"
+  "outcome": "no_new_publications_with_source_errors"
 }
