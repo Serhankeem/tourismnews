@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-03T02:15:48+09:00",
+  "checked_at": "2026-11-03T04:08:25+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
-  "received": 570,
-  "new_discoveries": 6,
-  "duplicate_observations": 366,
-  "new_auto_published": 1,
+  "received": 590,
+  "new_discoveries": 3,
+  "duplicate_observations": 389,
+  "new_auto_published": 0,
   "total_published": 49,
   "total_archived": 49,
   "newsroom_count": 44,
   "filings_count": 0,
   "other_research_count": 3,
-  "new_newsroom_items": 1,
+  "new_newsroom_items": 0,
   "new_filings": 0,
   "newsroom_korea_direct_count": 22,
   "newsroom_korea_direct_last7d": 15,
@@ -45,7 +45,7 @@
       "count": 14,
       "originally_published_last7d": 8,
       "korea_direct": 6,
-      "new_this_run": 1
+      "new_this_run": 0
     },
     "ttlnews": {
       "count": 9,
@@ -85,8 +85,8 @@
     "문화·트렌드": 15,
     "경제·시장": 1
   },
-  "discovered_last24h": 347,
-  "discovered_last7d": 1773,
+  "discovered_last24h": 350,
+  "discovered_last7d": 1776,
   "auto_published_last24h": 6,
   "auto_published_last7d": 40,
   "originally_published_last24h": 6,
@@ -122,7 +122,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9761904761904762,
+      "success_rate": 0.9764705882352941,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -231,7 +231,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9761904761904762,
+      "success_rate": 0.9764705882352941,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -266,7 +266,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9642857142857143,
+      "success_rate": 0.9647058823529412,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -301,7 +301,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.75,
+      "success_rate": 0.7529411764705882,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -311,9 +311,9 @@
       "name": "서울시 내 손안에 서울 환경",
       "url": "https://mediahub.seoul.go.kr/news/rss/05",
       "group": "public",
-      "received": 0,
+      "received": 20,
       "new_discoveries": 0,
-      "duplicates": 0,
+      "duplicates": 20,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -321,7 +321,7 @@
       "classifications": {
         "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 0
+        "Irrelevant": 20
       },
       "publication_policy": {
         "status": "approved",
@@ -335,13 +335,11 @@
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
-      "status": "error",
-      "error_kind": "transport_error",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-      "success_rate": 0.4642857142857143,
+      "status": "ok",
+      "success_rate": 0.47058823529411764,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "fetch_failed"
+      "outcome": "no_new_candidate"
     },
     {
       "id": "sec_booking",
@@ -824,8 +822,8 @@
       "url": "https://skift.com/feed/",
       "group": "media",
       "received": 10,
-      "new_discoveries": 0,
-      "duplicates": 10,
+      "new_discoveries": 2,
+      "duplicates": 8,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -851,7 +849,7 @@
       "success_rate": 1.0,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "discovered_not_publishable"
     },
     {
       "id": "yonhap",
@@ -894,8 +892,8 @@
       "url": "https://www.traveltimes.co.kr/rss/allArticle.xml",
       "group": "media",
       "received": 50,
-      "new_discoveries": 5,
-      "duplicates": 28,
+      "new_discoveries": 0,
+      "duplicates": 33,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -926,9 +924,9 @@
       },
       "status": "ok",
       "success_rate": 1.0,
-      "new_auto_published": 1,
-      "new_newsroom_items": 1,
-      "outcome": "auto_published"
+      "new_auto_published": 0,
+      "new_newsroom_items": 0,
+      "outcome": "no_new_candidate"
     },
     {
       "id": "traveldaily",
@@ -1017,8 +1015,8 @@
   ],
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-03T02:15:48+09:00",
+    "checked_at": "2026-11-03T04:08:25+09:00",
     "selection_status": "candidates_ready"
   },
-  "outcome": "new_newsroom_news"
+  "outcome": "no_new_publications_with_source_errors"
 }
