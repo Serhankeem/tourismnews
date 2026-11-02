@@ -1,0 +1,67 @@
+[
+  {
+    "id": "kmice",
+    "url": "https://k-mice.visitkorea.or.kr/mice_intelligence_KR/rsrh.kto?GRP_CATEGORY=RSRH&func_name=list",
+    "status": "access_verified"
+  },
+  {
+    "id": "micekorea",
+    "url": "https://www.micekorea.or.kr/",
+    "status": "access_verified"
+  },
+  {
+    "id": "icca",
+    "url": "https://www.iccaworld.org/",
+    "status": "access_verified"
+  },
+  {
+    "id": "airport",
+    "url": "https://www.airport.kr/",
+    "status": "error",
+    "reason": "robots_disallowed"
+  },
+  {
+    "id": "oecd",
+    "url": "https://www.oecd.org/en/publications/serials/oecd-tourism-trends-and-policies_g1ghbe02.html",
+    "status": "access_verified"
+  },
+  {
+    "id": "airportal",
+    "url": "https://www.airportal.go.kr/",
+    "status": "error",
+    "reason": "robots_unverified:http_503"
+  },
+  {
+    "id": "kcti",
+    "url": "https://www.kcti.re.kr/",
+    "status": "access_verified"
+  },
+  {
+    "id": "koti",
+    "url": "https://www.koti.re.kr/",
+    "status": "ok"
+  },
+  {
+    "id": "kac",
+    "url": "https://www.airport.co.kr/",
+    "status": "error",
+    "reason": "robots_disallowed"
+  },
+  {
+    "id": "hotelkorea",
+    "url": "https://www.hotelskorea.or.kr/",
+    "status": "error",
+    "reason": "robots_unverified:http_503"
+  },
+  {
+    "id": "icca-resources",
+    "url": "https://www.iccaworld.org/resources/",
+    "status": "ok"
+  },
+  {
+    "id": "kto-copyright",
+    "url": "https://knto.or.kr/helpdeskCopyrightguide",
+    "status": "error",
+    "reason": "robots_unverified:transport_error"
+  }
+]

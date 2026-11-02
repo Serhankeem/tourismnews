@@ -1,7 +1,7 @@
 {
-  "version": "0.4",
-  "updated_at": "2026-11-02T08:08:15+09:00",
-  "count": 110,
+  "version": "0.5",
+  "updated_at": "2026-11-02T13:24:45+09:00",
+  "count": 135,
   "reports": [
     {
       "id": "7e2fc976cf1491ea660b12b5",
@@ -1463,6 +1463,71 @@
         "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-summer-autumn-2026/"
       ],
       "versions": []
+    },
+    {
+      "id": "6baa9f0d607a62870ab6d2ec",
+      "source_id": "oecd",
+      "provider_id": "3fd3cd75-en",
+      "publisher": "OECD",
+      "title": "OECD Tourism Trends and Policies 2026",
+      "published_at": "2026-06-30",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "report_type": "종합 연구보고서",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "policies",
+        "trends",
+        "tourism"
+      ],
+      "access_type": "무료 공개",
+      "region": "해외",
+      "date_kind": "official_publication",
+      "date_precision": "day",
+      "metadata_evidence": {
+        "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+        "catalog_url": "https://www.oecd.org/en/publications/serials/oecd-tourism-trends-and-policies_g1ghbe02.html",
+        "sha256": "0db1e666870736c91f2a385a0054dc70feb210e6e54e03089337950c0712ecae",
+        "kogl_type": null,
+        "authors": "OECD",
+        "doi": "https://doi.org/10.1787/3fd3cd75-en"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:24:45+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_get_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.oecd.org/en/about/terms-conditions.html",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official OECD tourism report series only. Terms sections 1/3/6 allow attributed use of OECD-owned written/data material and links; explicit citation_title/author/publisher/date/DOI and visible publication date crosschecked. Only factual bibliographic title/date/link indexing; no abstracts, chapters, PDFs or covers. Ordinary public requests allowed by robots, no automated prohibition found. No third-party content copied."
+      },
+      "aliases": [
+        "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html"
+      ],
+      "versions": [
+        {
+          "metadata": {
+            "title": "OECD Tourism Trends and Policies 2026",
+            "publisher": "OECD",
+            "published_at": "2026-06-30",
+            "report_type": "종합 연구보고서",
+            "category": "관광시장 전망·트렌드",
+            "keywords": [
+              "trends",
+              "tourism"
+            ],
+            "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+            "access_type": "무료 공개"
+          },
+          "last_verified_at": "2026-11-02T13:24:45+09:00",
+          "reason": "taxonomy_v05_official_title_plural_policies"
+        }
+      ]
     },
     {
       "id": "d520c319f3c65d4a33583043",
@@ -3364,6 +3429,50 @@
       "versions": []
     },
     {
+      "id": "31f63f0cb13caa18f08e09dd",
+      "source_id": "koti",
+      "provider_id": "72143",
+      "publisher": "한국교통연구원",
+      "title": "공항경쟁력 성과지표 개선 방안 연구",
+      "published_at": "2025-11-28",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=72143",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "공항"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "official_publication",
+      "date_precision": "day",
+      "metadata_evidence": {
+        "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=72143",
+        "catalog_url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtList.do?stype=title&skey=%EA%B3%B5%ED%95%AD",
+        "sha256": "b77322f63393deada65082233433d68eb82289fd97d60324f82ddfa130ce5947",
+        "kogl_type": 4,
+        "authors": "김명현,한익현"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:24:45+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_get_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.koti.re.kr/user/cms/homecopyrightList.do",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Public official basic/ad-hoc research reports searched by the provided title form. Require per-record KOGL and named authors; policy permits attributed noncommercial unchanged material under stated KOGL conditions. Titles and bibliographic facts only; no report text, previews, PDF or images. Airline/passenger/airport topics only, standalone cargo/general road studies excluded."
+      },
+      "aliases": [
+        "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=72143"
+      ],
+      "versions": []
+    },
+    {
       "id": "574a0ddc4487303850818850",
       "source_id": "etc",
       "provider_id": "european-tourism-2025-trends-prospects-q3-2025",
@@ -3495,6 +3604,50 @@
       },
       "aliases": [
         "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-autumn-25-winter-2026/"
+      ],
+      "versions": []
+    },
+    {
+      "id": "72af8db10ce17806927d73c6",
+      "source_id": "koti",
+      "provider_id": "71947",
+      "publisher": "한국교통연구원",
+      "title": "항공기 운항신뢰성 제고를 위한 항공운송 데이터 분석 체계 연구",
+      "published_at": "2025-10-31",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=71947",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "항공"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "official_publication",
+      "date_precision": "day",
+      "metadata_evidence": {
+        "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=71947",
+        "catalog_url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtList.do?stype=title&skey=%ED%95%AD%EA%B3%B5",
+        "sha256": "838c433386ee73f3391ac6425afe664ee93bce285d1803c2f4c5d460a486eb41",
+        "kogl_type": 4,
+        "authors": "김명현,강동운,손정웅,김소연"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:24:45+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_get_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.koti.re.kr/user/cms/homecopyrightList.do",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Public official basic/ad-hoc research reports searched by the provided title form. Require per-record KOGL and named authors; policy permits attributed noncommercial unchanged material under stated KOGL conditions. Titles and bibliographic facts only; no report text, previews, PDF or images. Airline/passenger/airport topics only, standalone cargo/general road studies excluded."
+      },
+      "aliases": [
+        "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=71947"
       ],
       "versions": []
     },
@@ -4054,12 +4207,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=03fdec5804b945d7aab5e9694cc1c2a2",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "894eab5cb9e85fde80665626813036405640310d7fae114f83c62ee313a43289",
+        "sha256": "2c654503e2eb7faad63b6c17e63fe0c697ef7bffa091a52c3e794f924465179a",
         "kogl_type": 4,
         "authors": "강지수,김형종,류광훈"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4099,12 +4252,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=cd700bedb4e344f0bad1e3e3b06e929b",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "f6d5e665f8f1be31c50b2920e2f9a09eaec024d7950feac32971d2b1bc739fa2",
+        "sha256": "d6c90181dc9e2c6ec5432d8f82257e93ac0ef7b1e2d6be50be166e9f8c2c2152",
         "kogl_type": 4,
         "authors": "오훈성"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4143,12 +4296,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=1b76f17ef0784ce8bb8297ab3d4501a8",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "e3789b5cce3fb91282c8fc2e6d9873c3e61f0d64a52815707764306480433b2d",
+        "sha256": "b7432a814ff558714905e0857f68920eec6397c1054d527e96d3a3671c834e7d",
         "kogl_type": 4,
         "authors": "전효재,송수엽,이영주"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4188,12 +4341,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=b350f1ce9c594ce488126f0e93a9e4b7",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "5b6dd5ab9b93bb2b748d75fe0d605b574a29ee8c56e3a0e289ec659cc8acb86c",
+        "sha256": "b7bda60af19454097beaaca5e90ae425344719e6e637f856c15d6e41f126db87",
         "kogl_type": 4,
         "authors": "강지수"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4233,12 +4386,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=80c9f9c5ec9a45a6a9f77702aa269126",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "e8180e37f90d0ed5a8e551051dd44e5b083beaeaeabed6e3e4528f7a6ddc0fed",
+        "sha256": "725eb424abcf630d4ff055aab233f67f552fa64458feae8fa57c5bb1f17958db",
         "kogl_type": 4,
         "authors": "김현주,조아라,장윤정"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4277,12 +4430,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e55e0627bb2e4d94af3e1e766fbd1131",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "3859b560ecac814ddec9de51ae48f2d37412b207bf9b6f64d4a645c0fe64e305",
+        "sha256": "69b4e73079ff1b2628edb4393f3e1b950649b04614761ec832e20580616f70bc",
         "kogl_type": 4,
         "authors": "김윤영,유지윤,한희정,김하니,양은정"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4323,12 +4476,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=9883a206aa4a4f65a6d275477a7acbd1",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "e2f8ca670508d1581205d9343ef5828e665550aaa9980a3ab0c6a543fc4983aa",
+        "sha256": "9fb0de8d7bf37d5337c0d01c346ee514c1427784e9283cb3c2ed9adef33f176c",
         "kogl_type": 4,
         "authors": "안희자,이성빈"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4369,12 +4522,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=28339ad0728b4954b3e94625767c6073",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "4238d80fff5855c894234ebe39d92517fcc393815a75bb4fd97bba2e0222d6d8",
+        "sha256": "9903164d1bc545ddc93cee74cefe43bb05d76bf8ee2242bf0ae8253677d6fea2",
         "kogl_type": 4,
         "authors": "류광훈,김형종"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4414,12 +4567,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=867adbbded5a46cfbde081a0175eca0c",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "3bfe14265e39fb95345389ff48a3996017dd5c8f787c8696fb2fb0227d9e56e3",
+        "sha256": "3731115fded72b00964e8c23f6f235650225758b6ebefbe9098a13a03c37f64d",
         "kogl_type": 4,
         "authors": "정광민,서예빈,변재문,이순학"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4458,12 +4611,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=fb24f6e743564a79b3fa8737458f7756",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "eab01251968aed2f0242ac50edfb780f51846152db6dec6b80fe69fb2f0eb3fc",
+        "sha256": "3ee49633c6e0a607fbde6899dda72adb1e16834dd3e5bdd245a7c7d00506b4b2",
         "kogl_type": 4,
         "authors": "강지수,류광훈,마은성"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4503,12 +4656,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=00cb48afd8cc4288822f76ce618fc96f",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "e0ecb18ce038b211219d8b2a23b43fdd00d4e4b95a8486fc84a5c21039eb09a5",
+        "sha256": "f2842b6eca43fcfdae4f028b75adb115711302a7dc3ac989228fecde9dff5d74",
         "kogl_type": 4,
         "authors": "윤주,손신욱"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4548,12 +4701,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e7989626006b4c199eea94e3572ce49c",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "ae1a0c703bbc8856a73759239b91bffd07f2427231450779c3a24573ef8977c3",
+        "sha256": "c85cf33976093a1f24bd34ce7805e85dcd310b5153f371f8d2eef520321a8ba3",
         "kogl_type": 4,
         "authors": "최경은,김형종"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4592,12 +4745,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=bc62f26dbd8a4474ae9630e263830329",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "4b26553875ca3fe0e583a0f975f30f879369c50ecc3251b93a4ef571a8db2965",
+        "sha256": "247e72cac0cc33329211849711e41656eb556a1428f54ac68814d22bb2ea888c",
         "kogl_type": 4,
         "authors": "박상곤"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4636,12 +4789,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=0d5947005c484bac8d9b8954e9af9cb4",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "8e8a781efec228dc5a34f7c8c4ac5b9f2e86d0bbcfa4e989609d35882866eda9",
+        "sha256": "1ec42b187a2edb7aeeb6981bffacab78d8eaf4cfb76d4705895d4b0a51685aec",
         "kogl_type": 4,
         "authors": "최자은,김성윤"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4680,12 +4833,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=126ba7e61050429b93456958f8e18569",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "5b9054ee64c3f3a2669c36ae471a85c2d488f06f9d68bd1c053d92d1d6dcc887",
+        "sha256": "ce4b533a44eb40028c47285eaf7c9e81f9d60ca04062463c86ca0c7b6d1b52e8",
         "kogl_type": 4,
         "authors": "진보라,김진영"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4724,12 +4877,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=9ff42c3f16dc49efbe5eecba2ce6c48d",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "2c462f217623aeae8f33b355101775dd61aca2be360d896f23050dfc8fc0f734",
+        "sha256": "b73f8198870b9f9050d4463c66d76c37552ae3761186aba2fbbd69397b2b2682",
         "kogl_type": 4,
         "authors": "김영준,송수엽"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4768,12 +4921,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5262e35ee31d4ce281e6dbdd60b3df66",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "002543d8b39047f65f54353ede1ed5c5011377ea8fd23d88da4952f9726f88c5",
+        "sha256": "12fd18d745a0e75529c0707d12848d5cbba1506bc5c2588a41d01167cf69de7a",
         "kogl_type": 4,
         "authors": "전효재,송수엽"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4815,12 +4968,12 @@
       "metadata_evidence": {
         "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=85ae19fbba9b4defa60f6ded3c2ec06e",
         "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
-        "sha256": "9e607c7ce90b0ec26cbeab42bfad067aedb73561f1ee2e888661d005f4478824",
+        "sha256": "7c23dac6b9477955e1a5138841de3b3e678b39bdf7fb96143d9bb8e88e90d2e9",
         "kogl_type": 4,
         "authors": "유지윤,정광민"
       },
       "first_discovered_at": "2026-10-29T13:51:10+09:00",
-      "last_verified_at": "2026-11-02T08:08:15+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
       "discovery_method": "automatic",
       "access_method": "official_catalog_post_then_landing_get",
       "verification_status": "verified",
@@ -4836,6 +4989,51 @@
       },
       "aliases": [
         "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=85ae19fbba9b4defa60f6ded3c2ec06e"
+      ],
+      "versions": []
+    },
+    {
+      "id": "b3312dc593240c0367ceb71e",
+      "source_id": "koti",
+      "provider_id": "68643",
+      "publisher": "한국교통연구원",
+      "title": "교통시설 투자평가지침 공항부문 개선 방안 연구",
+      "published_at": "2024-12-20",
+      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=68643",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "공항",
+        "교통"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "official_publication",
+      "date_precision": "day",
+      "metadata_evidence": {
+        "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=68643",
+        "catalog_url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtList.do?stype=title&skey=%EA%B3%B5%ED%95%AD",
+        "sha256": "16782edfaeddb491e0139d800aa2c27a940722b2163ce81b8c6d48108c9d5c9c",
+        "kogl_type": 4,
+        "authors": "백승한,안미진"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:24:45+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_get_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.koti.re.kr/user/cms/homecopyrightList.do",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Public official basic/ad-hoc research reports searched by the provided title form. Require per-record KOGL and named authors; policy permits attributed noncommercial unchanged material under stated KOGL conditions. Titles and bibliographic facts only; no report text, previews, PDF or images. Airline/passenger/airport topics only, standalone cargo/general road studies excluded."
+      },
+      "aliases": [
+        "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=68643"
       ],
       "versions": []
     },
@@ -4883,6 +5081,884 @@
         "https://etc-corporate.org/reports/european-tourism-2024-trends-prospects-q3-2024/"
       ],
       "versions": []
+    },
+    {
+      "id": "d7de428d3722fad7288c7c33",
+      "source_id": "koti",
+      "provider_id": "68211",
+      "publisher": "한국교통연구원",
+      "title": "공항개발과 운영의 효율적 추진을 위한 제도적 개편 방안",
+      "published_at": "2024-10-31",
+      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=68211",
+      "report_type": "종합 연구보고서",
+      "category": "항공·교통산업",
+      "keywords": [
+        "공항"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "official_publication",
+      "date_precision": "day",
+      "metadata_evidence": {
+        "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=68211",
+        "catalog_url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtList.do?stype=title&skey=%EA%B3%B5%ED%95%AD",
+        "sha256": "a0613d389d5e268b3f001994c5c2c1fe03c769aa72fee21a3e4a553a9346aa04",
+        "kogl_type": 4,
+        "authors": "백승한,박진서,손정웅,정수진"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:24:45+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_get_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.koti.re.kr/user/cms/homecopyrightList.do",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Public official basic/ad-hoc research reports searched by the provided title form. Require per-record KOGL and named authors; policy permits attributed noncommercial unchanged material under stated KOGL conditions. Titles and bibliographic facts only; no report text, previews, PDF or images. Airline/passenger/airport topics only, standalone cargo/general road studies excluded."
+      },
+      "aliases": [
+        "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=68211"
+      ],
+      "versions": []
+    },
+    {
+      "id": "a8b11d02888eba8b41902902",
+      "source_id": "oecd",
+      "provider_id": "80885d8b-en",
+      "publisher": "OECD",
+      "title": "OECD Tourism Trends and Policies 2024",
+      "published_at": "2024-07-08",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "report_type": "종합 연구보고서",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "policies",
+        "trends",
+        "tourism"
+      ],
+      "access_type": "무료 공개",
+      "region": "해외",
+      "date_kind": "official_publication",
+      "date_precision": "day",
+      "metadata_evidence": {
+        "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+        "catalog_url": "https://www.oecd.org/en/publications/serials/oecd-tourism-trends-and-policies_g1ghbe02.html",
+        "sha256": "9b488ae512ca20dcb925505dcb207cb7113cca1e0e745945f89f89cde60b4a1c",
+        "kogl_type": null,
+        "authors": "OECD",
+        "doi": "https://doi.org/10.1787/80885d8b-en"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:24:45+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_get_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.oecd.org/en/about/terms-conditions.html",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official OECD tourism report series only. Terms sections 1/3/6 allow attributed use of OECD-owned written/data material and links; explicit citation_title/author/publisher/date/DOI and visible publication date crosschecked. Only factual bibliographic title/date/link indexing; no abstracts, chapters, PDFs or covers. Ordinary public requests allowed by robots, no automated prohibition found. No third-party content copied."
+      },
+      "aliases": [
+        "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html"
+      ],
+      "versions": [
+        {
+          "metadata": {
+            "title": "OECD Tourism Trends and Policies 2024",
+            "publisher": "OECD",
+            "published_at": "2024-07-08",
+            "report_type": "종합 연구보고서",
+            "category": "관광시장 전망·트렌드",
+            "keywords": [
+              "trends",
+              "tourism"
+            ],
+            "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+            "access_type": "무료 공개"
+          },
+          "last_verified_at": "2026-11-02T13:24:45+09:00",
+          "reason": "taxonomy_v05_official_title_plural_policies"
+        }
+      ]
+    },
+    {
+      "id": "b2b025767ebfbffea29fbf2a",
+      "source_id": "kcti",
+      "provider_id": "7c300f15d98944c594be08d203b27a5d",
+      "publisher": "한국문화관광연구원",
+      "title": "치유(웰니스)·의료관광 융복합 클러스터 중간평가 지표에 관한 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=7c300f15d98944c594be08d203b27a5d",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=7c300f15d98944c594be08d203b27a5d",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "1cac55a38e3c8a89ec562591b89b2088d1f053f9e24739fa92e44e6daf805f60",
+        "kogl_type": 4,
+        "authors": "유지윤"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "8d4dfc4d25e5a6b693987d59",
+      "source_id": "kcti",
+      "provider_id": "483f685cab574ec4b28aaff4a85769ff",
+      "publisher": "한국문화관광연구원",
+      "title": "야영장 기본시설의 전기 사용량 기준 개선 방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=483f685cab574ec4b28aaff4a85769ff",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "야영장"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=483f685cab574ec4b28aaff4a85769ff",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "039cd904519ded0c4147f755962a22abb93c216751c0f6eca29b002f7ab8a765",
+        "kogl_type": 4,
+        "authors": "김윤영"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "1a543cd3b2f07b9f9e086938",
+      "source_id": "kcti",
+      "provider_id": "5c326faca40b4b01826867e65ac362ba",
+      "publisher": "한국문화관광연구원",
+      "title": "인구감소시대, 지역관광의 역할과 정책 대응 방향",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5c326faca40b4b01826867e65ac362ba",
+      "report_type": "정책연구",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "정책",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5c326faca40b4b01826867e65ac362ba",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "28edfd821ddf32237aec08b57792bbb5817a4984f8e517fd39dd8fb87495aa5d",
+        "kogl_type": 4,
+        "authors": "전효재,김윤영,김유림,송재일,이영주"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "92b55074fa7613c01bf7f783",
+      "source_id": "kcti",
+      "provider_id": "aafe2dfd57004fbdbdf97a39c70b1d8c",
+      "publisher": "한국문화관광연구원",
+      "title": "지방시대, 방한 외래관광객 지방관광 활성화 방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=aafe2dfd57004fbdbdf97a39c70b1d8c",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "방한",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=aafe2dfd57004fbdbdf97a39c70b1d8c",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "be5c918dc1b0132524b1948b452ab3fe347e8187356303dab77c63faa2bbbb77",
+        "kogl_type": 4,
+        "authors": "김현주,윤주,이성빈"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "56f58464f5cc1742efff9bee",
+      "source_id": "kcti",
+      "provider_id": "dc55e2603daf40a1bd29f8d74d1a2b89",
+      "publisher": "한국문화관광연구원",
+      "title": "코로나19 이후 오버투어리즘 현황 및 정책 대응 방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=dc55e2603daf40a1bd29f8d74d1a2b89",
+      "report_type": "정책연구",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "정책"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=dc55e2603daf40a1bd29f8d74d1a2b89",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "37c65f8b350d2ab269bd4fc5692097b5de3a454c490692f67471267fbc659bbd",
+        "kogl_type": 4,
+        "authors": "김성윤"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "9fd5b4b22af320acf0ee1162",
+      "source_id": "kcti",
+      "provider_id": "f6d64fa2f96046c0834bdf8606d0f37e",
+      "publisher": "한국문화관광연구원",
+      "title": "외래관광객 정책 수립을 위한 데이터 활용 제고 방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=f6d64fa2f96046c0834bdf8606d0f37e",
+      "report_type": "정책연구",
+      "category": "관광정책·산업경제",
+      "keywords": [
+        "정책",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=f6d64fa2f96046c0834bdf8606d0f37e",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "e4b32885e06d8a169d7cd69d3ca4284470d6955868543c36c235f4144e32e6ab",
+        "kogl_type": 4,
+        "authors": "류광훈,김동현,이성빈"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "9ead1e5fa6ff532d95847752",
+      "source_id": "kcti",
+      "provider_id": "63aa859891484687b9c17a6f28d62558",
+      "publisher": "한국문화관광연구원",
+      "title": "지역관광사업 재원조달 다각화 방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=63aa859891484687b9c17a6f28d62558",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=63aa859891484687b9c17a6f28d62558",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "997a9468a9d21f6aa4a4746d37c0be410202f39ec701178f83cf54072e38f9d5",
+        "kogl_type": 4,
+        "authors": "김영준,손신욱"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "eb6170e1be2105bd2f0806ee",
+      "source_id": "kcti",
+      "provider_id": "e6b37acf8f374bb583322f038ff9a069",
+      "publisher": "한국문화관광연구원",
+      "title": "유원시설업 중대한 사고 관리체계 개선방안 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e6b37acf8f374bb583322f038ff9a069",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e6b37acf8f374bb583322f038ff9a069",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "82f43da47248f8f72424d7141a971e91e8c3781fb80028ebe7d21aa18f611e4a",
+        "kogl_type": 4,
+        "authors": "최자은,정혜진"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "034d411e5f5f2251b4e0df4b",
+      "source_id": "kcti",
+      "provider_id": "0af56c2a557f47769237411f839ca1b2",
+      "publisher": "한국문화관광연구원",
+      "title": "최근 OTA(온라인여행사) 시장 동향 분석 및 정책과제",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=0af56c2a557f47769237411f839ca1b2",
+      "report_type": "정책연구",
+      "category": "OTA·여행기술",
+      "keywords": [
+        "OTA",
+        "정책",
+        "동향",
+        "여행"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=0af56c2a557f47769237411f839ca1b2",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "d665bda8dea26050fcb9a3fc720fd6e3228eb9d5530afa5e9d7b026ad5248681",
+        "kogl_type": 4,
+        "authors": "안희자,한희정"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "c41eb66f2bf62b836a39c1a7",
+      "source_id": "kcti",
+      "provider_id": "5ba66c80ac6a4912b8714e129ea13b9e",
+      "publisher": "한국문화관광연구원",
+      "title": "공모형 지역관광사업 체계 개선방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5ba66c80ac6a4912b8714e129ea13b9e",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=5ba66c80ac6a4912b8714e129ea13b9e",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "894b217509dbf5272a87f4ff2b8d8cb0f0c324ae8040d431f86c0c1ff6af8eb2",
+        "kogl_type": 4,
+        "authors": "윤주,진보라"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "74ce6839f2bedbb48bef6037",
+      "source_id": "kcti",
+      "provider_id": "ad5ec490885c4f9da76c8dea8ab3f38a",
+      "publisher": "한국문화관광연구원",
+      "title": "방한 중국 단체관광시장의 공정 환경 조성방안",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=ad5ec490885c4f9da76c8dea8ab3f38a",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "방한",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=ad5ec490885c4f9da76c8dea8ab3f38a",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "62b79c05e43f4d4c3974bca37015ce507c58f70229b7a3ff767ed8e6f8302e70",
+        "kogl_type": 4,
+        "authors": "김현주,남승희"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "5dd86df86c0b945eb9c16af8",
+      "source_id": "kcti",
+      "provider_id": "b86ad65832b44fc59c5e9f72215ae110",
+      "publisher": "한국문화관광연구원",
+      "title": "관광객 이용 숙박시설 제도 개선방안 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=b86ad65832b44fc59c5e9f72215ae110",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "숙박",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=b86ad65832b44fc59c5e9f72215ae110",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "9c95b1a6c9b71df71ead4a47de27889008becdadaa63d356c7b4c9e2ffcb328c",
+        "kogl_type": 4,
+        "authors": "류광훈,김유림,김지훈"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "a5cfe46753df3e86fbfd5cde",
+      "source_id": "kcti",
+      "provider_id": "6f2557ae5f3b43f6926f4904693ee391",
+      "publisher": "한국문화관광연구원",
+      "title": "호텔업 종사원 자격제도 개선 방안 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6f2557ae5f3b43f6926f4904693ee391",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "호텔"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6f2557ae5f3b43f6926f4904693ee391",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "eddb9a536278e15cede9f5e745b897fd0c543af0ba0b703b3434cb77fd408ece",
+        "kogl_type": 4,
+        "authors": "유지윤,송수엽,권혁진,문유진"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "2786df3d2323ea5d03e70eb3",
+      "source_id": "kcti",
+      "provider_id": "6aabe0424fd74cecaa34ddda20e0f636",
+      "publisher": "한국문화관광연구원",
+      "title": "관광 인바운드 수요예측 고도화 연구: 머신러닝 예측모형을 중심으로",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6aabe0424fd74cecaa34ddda20e0f636",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "인바운드",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6aabe0424fd74cecaa34ddda20e0f636",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "fffb46f020b5ac0057fa545de66d09e653e88d65fcb9650ccea51da3cebba7a4",
+        "kogl_type": 4,
+        "authors": "김형종,고강혁,박상수"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "5702d4ac37148e0c8eba3461",
+      "source_id": "kcti",
+      "provider_id": "e5cfabf6bc014d6585c495f0a9095aa0",
+      "publisher": "한국문화관광연구원",
+      "title": "지역관광 사업의 성과평가 방법 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e5cfabf6bc014d6585c495f0a9095aa0",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=e5cfabf6bc014d6585c495f0a9095aa0",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "bf7f1e016fe75c5f1dfbeec754466ede5531830fa72cf489cbdd2a754b984205",
+        "kogl_type": 4,
+        "authors": "박상곤,박주영"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "e9e7edfdaef67d55c01c6561",
+      "source_id": "kcti",
+      "provider_id": "2ab6bb49bb0f431f9134e777224f89ea",
+      "publisher": "한국문화관광연구원",
+      "title": "관광의 지속가능성 측정을 위한 통계 체계(SF-MST) 대응 방향 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=2ab6bb49bb0f431f9134e777224f89ea",
+      "report_type": "정책연구",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=2ab6bb49bb0f431f9134e777224f89ea",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "923ade7646658663c447188e6323edc88816789f220e560539fb750561395bbc",
+        "kogl_type": 4,
+        "authors": "이성빈,류광훈"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "bbf3c8248d5bf426b29d6078",
+      "source_id": "kcti",
+      "provider_id": "6d3626b633ce4364bb7db6eb5f8cd065",
+      "publisher": "한국문화관광연구원",
+      "title": "관광호텔 봉사료 실태 분석 및 시사점",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6d3626b633ce4364bb7db6eb5f8cd065",
+      "report_type": "정책연구",
+      "category": "숙박·호텔산업",
+      "keywords": [
+        "호텔",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=6d3626b633ce4364bb7db6eb5f8cd065",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "a6f8aefa1a9dc77f141323105d22d319b113650d8ef062a883fb7986d1967e28",
+        "kogl_type": 4,
+        "authors": "한희정,송수엽"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "e6ae62b9d2826ebcebf10b0b",
+      "source_id": "kcti",
+      "provider_id": "a816344d672942218bd699fab66bcac2",
+      "publisher": "한국문화관광연구원",
+      "title": "국제회의시설업 업종 개편 방안 연구",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=a816344d672942218bd699fab66bcac2",
+      "report_type": "정책연구",
+      "category": "MICE·비즈니스 이벤트",
+      "keywords": [
+        "국제회의"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=a816344d672942218bd699fab66bcac2",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "ce696c1834527342ff84e0801c9271ce700813394cc9a219b7bcc217ec5e550c",
+        "kogl_type": 4,
+        "authors": "송수엽,손신욱,김동한"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
+    },
+    {
+      "id": "53632b44f981e2144cd2322d",
+      "source_id": "kcti",
+      "provider_id": "4b2c8ad78b5941e984a67686543b33c0",
+      "publisher": "한국문화관광연구원",
+      "title": "중국인 방한관광 재개의 효과 분석",
+      "published_at": "2024",
+      "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=4b2c8ad78b5941e984a67686543b33c0",
+      "report_type": "정책연구",
+      "category": "국제관광·인바운드",
+      "keywords": [
+        "방한",
+        "관광"
+      ],
+      "access_type": "무료 공개",
+      "region": "국내",
+      "date_kind": "publication_year",
+      "date_precision": "year",
+      "metadata_evidence": {
+        "url": "https://www.kcti.re.kr/web/board/boardContentsView.do?board_id=2&contents_id=4b2c8ad78b5941e984a67686543b33c0",
+        "catalog_url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+        "sha256": "194def08d64d8a44ea2d973720ed4fc1da0f0b4c52de50a4a33cbf5b6816b7db",
+        "kogl_type": 4,
+        "authors": "김형종,최경은"
+      },
+      "first_discovered_at": "2026-11-02T13:18:04+09:00",
+      "last_verified_at": "2026-11-02T13:18:04+09:00",
+      "discovery_method": "automatic",
+      "access_method": "official_catalog_post_then_landing_get",
+      "verification_status": "verified",
+      "publication_status": "published",
+      "publication_policy": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.kcti.re.kr/web/intropage/intropageShow.do?page_id=4c5529fca34a42939ffef7c67de46a40",
+        "checked_on": "2026-10-29",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official public tourism research catalog; require a per-record KOGL marker, attribution and noncommercial unchanged-title scope. No PDF/content copy. Use official publication year as year precision; never replace it with the separate 작성일."
+      }
     }
   ]
 }

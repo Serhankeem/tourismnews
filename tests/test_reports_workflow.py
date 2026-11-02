@@ -56,9 +56,9 @@ class ReportsWorkflowTests(unittest.TestCase):
             self.assertTrue((reader/'site/data/reports.json').exists())
             self.assertFalse((reader/'site/collector_state').exists())
 
-    def test_nine_primary_sources_and_phase_two_not_active_or_counted(self):
+    def test_primary_sources_and_review_only_candidates_not_active_or_counted(self):
         config=json.loads((ROOT/'reports_sources.json').read_text())
-        self.assertEqual(len(config['sources']),9);self.assertEqual(len(config['phase2_candidates']),3)
+        self.assertEqual(len(config['sources']),11);self.assertEqual(len(config['phase2_candidates']),2)
         sources={s['id']:s for s in config['sources']}
         self.assertFalse(sources['iata']['enabled']);self.assertIn('no data scraping',sources['iata']['blocking_reason'])
         self.assertFalse(sources['yanolja']['allow_registered_date'])

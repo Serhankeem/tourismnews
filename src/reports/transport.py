@@ -17,14 +17,14 @@ class CatalogLoader(Loader):
                     target=urllib.parse.urljoin(request.full_url,exc.headers.get('Location',''))
                     if urllib.parse.urlsplit(target).hostname not in self.allowed_hosts:raise AccessBlocked('unapproved_report_redirect_host')
                 raise
-            if response.headers.get('Content-Type','').lower().startswith(('application/pdf','image/')):
+            if response.headers.get('Content-Type','').lower().startswith(('application/pdf','image/','application/zip','application/octet-stream','application/vnd.ms','application/vnd.openxmlformats')):
                 response.close();raise AccessBlocked('report_binary_response_prohibited')
             return response
         self.opener.open=checked_open
     def __call__(self,url,form=None):
         parts=urllib.parse.urlsplit(url)
         if parts.scheme!='https' or parts.hostname not in self.allowed_hosts or parts.username or parts.password:raise AccessBlocked('unapproved_report_endpoint')
-        if parts.path.lower().endswith(('.pdf','.jpg','.jpeg','.png','.webp','.xlsx','.zip')):raise AccessBlocked('report_binary_download_prohibited')
+        if parts.path.lower().endswith(('.pdf','.jpg','.jpeg','.png','.webp','.svg','.gif','.avif','.xls','.xlsx','.doc','.docx','.ppt','.pptx','.zip')):raise AccessBlocked('report_binary_download_prohibited')
         if form is None:
             # Loader checks each redirect's robots. A redirect cannot silently
             # switch the source identity to another domain.
@@ -42,8 +42,8 @@ class CatalogLoader(Loader):
             req=urllib.request.Request(url,data=urllib.parse.urlencode(form).encode(),headers={'User-Agent':USER_AGENT,'Content-Type':'application/x-www-form-urlencoded'})
             self.last_request[base]=time.monotonic()
             with self.opener.open(req,timeout=self.timeout) as response:
-                if response.headers.get('Content-Type','').lower().startswith(('application/pdf','image/')):raise AccessBlocked('report_binary_response_prohibited')
+                if response.headers.get('Content-Type','').lower().startswith(('application/pdf','image/','application/zip','application/octet-stream','application/vnd.ms','application/vnd.openxmlformats')):raise AccessBlocked('report_binary_response_prohibited')
                 result=response.read(2*1024*1024+1)
         if len(result)>2*1024*1024:raise ValueError('catalog_metadata_response_too_large')
-        if result.lstrip().startswith(b'%PDF'):raise AccessBlocked('report_pdf_response_prohibited')
+        if result.lstrip().startswith((b'%PDF',b'PK\x03\x04')):raise AccessBlocked('report_binary_response_prohibited')
         return result

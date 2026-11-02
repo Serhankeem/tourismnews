@@ -93,6 +93,22 @@ def discover(source, fetch):
                 if path.startswith('/Travel-Research/') and len(path.strip('/').split('/'))>=3 and target not in found:
                     found.add(target)
                     yield {'url':target,'provider_id':path.rstrip('/'),'catalog_url':url}
+        elif adapter=='oecd':
+            links=[(u,t) for u,t in dom.links(url) if urllib.parse.urlsplit(u).hostname=='www.oecd.org' and re.fullmatch(r'/en/publications/oecd-tourism-trends-and-policies-20\d{2}_[a-z0-9-]+\.html',urllib.parse.urlsplit(u).path)]
+            if not links:raise ValueError('catalog_schema_missing_or_access_challenge')
+            for target,title in dict(links).items():
+                yield {'url':target,'title':title,'provider_id':urllib.parse.urlsplit(target).path.rsplit('_',1)[-1].removesuffix('.html'),'catalog_url':url}
+        elif adapter=='koti':
+            anchors=[a for a in dom.root.all('a') if a.has('txt') and re.search(r'/(bassRsrchReprt|anytmRsrchReprt)View\.do',urllib.parse.urljoin(url,a.attrs.get('href','')))]
+            if not any(n.has('comm_pagination') for n in dom.root.all()) and not anchors:raise ValueError('catalog_schema_missing_or_access_challenge')
+            for a in anchors:
+                titles=[n.text() for n in a.all('p') if n.has('title')]
+                if len(titles)!=1:raise ValueError('catalog_report_title_structure_changed')
+                title=titles[0]
+                if not re.search(r'항공|공항|관광|여객',title) or ('화물' in title and not re.search(r'여객|관광',title)):continue
+                target=urllib.parse.urljoin(url,a.attrs['href']);parts=urllib.parse.urlsplit(target);qid=urllib.parse.parse_qs(parts.query).get('bbs_no',[])
+                if len(qid)!=1 or not qid[0].isdigit():raise ValueError('catalog_report_id_missing')
+                yield {'title':title,'url':urllib.parse.urlunsplit((parts.scheme,parts.netloc,parts.path,'bbs_no='+qid[0],'')),'provider_id':qid[0],'catalog_url':url}
         elif adapter=='kcti':
             if not any(n.has('totalcnt') for n in dom.root.all('p')) and not any(n.has('thumbnaillist_txt') for n in dom.root.all('a')):
                 raise ValueError('catalog_schema_missing_or_access_challenge')
@@ -116,7 +132,32 @@ def discover(source, fetch):
 def verify(source, candidate, payload):
     dom=DOM(payload);meta=dom.meta();schemas=json_schemas(payload);adapter=source['adapter']
     result=dict(candidate);result['access_type']='미확인'
-    if adapter=='etc':
+    if adapter=='oecd':
+        title=meta.get('citation_title');date=meta.get('citation_publication_date');doi=meta.get('citation_doi','')
+        if meta.get('template')!='report-summary-page' or not title or title!=meta.get('og:title') or not date or not re.fullmatch(r'https://doi.org/10\.1787/[a-z0-9-]+',doi):raise ValueError('oecd_bibliographic_metadata_missing')
+        if meta.get('citation_author')!='OECD' or meta.get('citation_publisher')!='OECD Publishing':raise ValueError('oecd_publisher_unverified')
+        if not any(n.attrs.get('itemprop')=='datePublished' and n.attrs.get('datetime')==date.replace('/','-') for n in dom.root.all('time')):raise ValueError('oecd_publication_date_mismatch')
+        result.update(title=title,published_at=date.replace('/','-'),date_kind='official_publication',doi=doi,authors='OECD')
+        # Publicly offered PDF link is access evidence only; never follow it.
+        if meta.get('citation_pdf_url') and any(u==meta['citation_pdf_url'] for u,t in dom.links(candidate['url'])):result['access_type']='무료 공개'
+    elif adapter=='koti':
+        panels=[n for n in dom.root.all('div') if n.has('view_detail_top')]
+        if len(panels)!=1:raise ValueError('koti_bibliographic_panel_missing')
+        panel=panels[0];headings=[n for n in panel.all('div') if n.has('view_detail_top-title')]
+        titles=[n.text() for h in headings for n in h.all('strong') if n.has('title')]
+        if titles!=[candidate['title']]:raise ValueError('report_title_mismatch')
+        fields={}
+        for li in panel.all('li'):
+            labels=[n.text() for n in li.all('em')];values=[n.text() for n in li.all('p')]
+            if len(labels)==len(values)==1:fields[labels[0]]=values[0]
+        if not fields.get('발간일') or not fields.get('저자'):raise ValueError('koti_publication_date_or_authors_missing')
+        license_panels=[n for n in dom.root.all('div') if n.has('kogl')]
+        marks=[re.search(r'/img_nuri_([1-4])\.',n.attrs.get('src','')) for panel in license_panels for n in panel.all('img')]
+        types={int(m[1]) for m in marks if m}
+        if len(types)!=1:raise ValueError('missing_per_record_KOGL_scope')
+        result.update(published_at=fields['발간일'],date_kind='official_publication',authors=fields['저자'],kogl_type=types.pop())
+        if any('commonFileDownload(' in n.attrs.get('onclick','') for n in panel.all('button')):result['access_type']='무료 공개'
+    elif adapter=='etc':
         result['title']=meta.get('og:title',candidate['title'])
         result['published_at']=meta.get('article:published_time')
         result['date_kind']='official_page_first_publication'

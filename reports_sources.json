@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.5",
   "sources": [
     {
       "id": "yanolja",
@@ -47,8 +47,8 @@
       "adapter": "kcti",
       "enabled": true,
       "interval_days": 7,
-      "lookback_months": 24,
-      "max_catalog_pages": 4,
+      "lookback_months": 36,
+      "max_catalog_pages": 10,
       "max_details": 100,
       "allowed_hosts": [
         "www.kcti.re.kr"
@@ -81,6 +81,16 @@
             "miv_pageNo": "1",
             "miv_pageSize": "10",
             "report_start_year": "{previous_year}"
+          }
+        },
+        {
+          "url": "https://www.kcti.re.kr/web/board/boardContentsList.do",
+          "form": {
+            "board_id": "2",
+            "cate_id": "160bcb16c21d471a9509cf3a41cb70e0",
+            "miv_pageNo": "1",
+            "miv_pageSize": "10",
+            "report_start_year": "{two_years_ago}"
           }
         }
       ],
@@ -321,13 +331,77 @@
         "detail": "Official homepage/catalog links examined",
         "method": "robots-aware HTTPS; no binary downloads or access bypass"
       }
+    },
+    {
+      "id": "oecd",
+      "name": "OECD",
+      "region": "해외",
+      "homepage": "https://www.oecd.org/",
+      "catalog_urls": [
+        "https://www.oecd.org/en/publications/serials/oecd-tourism-trends-and-policies_g1ghbe02.html"
+      ],
+      "adapter": "oecd",
+      "enabled": true,
+      "interval_days": 7,
+      "lookback_months": 36,
+      "max_catalog_pages": 1,
+      "max_details": 3,
+      "allowed_hosts": [
+        "www.oecd.org"
+      ],
+      "publication": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.oecd.org/en/about/terms-conditions.html",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Official OECD tourism report series only. Terms sections 1/3/6 allow attributed use of OECD-owned written/data material and links; explicit citation_title/author/publisher/date/DOI and visible publication date crosschecked. Only factual bibliographic title/date/link indexing; no abstracts, chapters, PDFs or covers. Ordinary public requests allowed by robots, no automated prohibition found. No third-party content copied."
+      },
+      "investigation": {
+        "checked_on": "2026-11-02",
+        "homepage_access": "ok",
+        "detail": "Official public catalog, date labels and applicable terms inspected over robots-aware verified HTTPS; no file downloads"
+      }
+    },
+    {
+      "id": "koti",
+      "name": "한국교통연구원",
+      "region": "국내",
+      "homepage": "https://www.koti.re.kr/",
+      "catalog_urls": [
+        "https://www.koti.re.kr/user/bbs/bassRsrchReprtList.do?stype=title&skey=%ED%95%AD%EA%B3%B5",
+        "https://www.koti.re.kr/user/bbs/bassRsrchReprtList.do?stype=title&skey=%EA%B3%B5%ED%95%AD",
+        "https://www.koti.re.kr/user/bbs/anytmRsrchReprtList.do?stype=title&skey=%ED%95%AD%EA%B3%B5",
+        "https://www.koti.re.kr/user/bbs/anytmRsrchReprtList.do?stype=title&skey=%EA%B3%B5%ED%95%AD"
+      ],
+      "adapter": "koti",
+      "enabled": true,
+      "interval_days": 7,
+      "lookback_months": 36,
+      "max_catalog_pages": 4,
+      "max_details": 60,
+      "allowed_hosts": [
+        "www.koti.re.kr"
+      ],
+      "publication": {
+        "status": "approved",
+        "scope": "bibliographic_metadata_only",
+        "terms_url": "https://www.koti.re.kr/user/cms/homecopyrightList.do",
+        "checked_on": "2026-11-02",
+        "noncommercial_only": true,
+        "body_pdf_images": "not_authorized",
+        "basis": "Public official basic/ad-hoc research reports searched by the provided title form. Require per-record KOGL and named authors; policy permits attributed noncommercial unchanged material under stated KOGL conditions. Titles and bibliographic facts only; no report text, previews, PDF or images. Airline/passenger/airport topics only, standalone cargo/general road studies excluded."
+      },
+      "investigation": {
+        "checked_on": "2026-11-02",
+        "homepage_access": "ok",
+        "detail": "Official public catalog, date labels and applicable terms inspected over robots-aware verified HTTPS; no file downloads"
+      },
+      "requires_kogl": true
     }
   ],
   "phase2_candidates": [
-    {
-      "id": "oecd",
-      "name": "OECD — Tourism Trends and Policies"
-    },
     {
       "id": "icca",
       "name": "ICCA — MICE statistics"

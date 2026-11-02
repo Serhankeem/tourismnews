@@ -22,7 +22,7 @@ const fs=require('node:fs');
    page.on('pageerror',e=>errors.push(e.message));
    for(const route of ['overview','news','research','briefing','macro','weather','about']){
     await page.goto(base+'/#'+route);await page.waitForFunction(()=>!newsLoading&&window.ResearchLibrary?.database.reports.length>0&&window.MacroMonitor?.database?.indicators.length>0);
-    if(route==='about')await page.waitForFunction(()=>document.querySelectorAll('#about-research-sources .source-status-row').length===9);
+    if(route==='about')await page.waitForFunction(()=>document.querySelectorAll('#about-research-sources .source-status-row').length===Object.keys(ResearchLibrary.database.publishers).length);
     assert.equal(await page.locator('#page-'+route).isVisible(),true);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`${width}/${route}: horizontal overflow`);
     const logo=await page.locator('#brand-logo').evaluate(i=>({loaded:i.naturalWidth>0,ratio:i.getBoundingClientRect().width/i.getBoundingClientRect().height,natural:i.naturalWidth/i.naturalHeight}));assert.ok(logo.loaded);assert.ok(Math.abs(logo.ratio-logo.natural)<.01);
