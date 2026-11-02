@@ -1,8 +1,4 @@
-/* UI 2.0: presentation only. Official logo bytes and data engines are untouched. */
-.header-inner{grid-template-columns:150px 1fr;gap:28px}.header-caption{display:none}
-.primary-navigation{gap:clamp(18px,2.5vw,36px)}
-.primary-navigation a{font-size:16px;font-weight:700;padding:22px 0}
-.primary-navigation a.active{color:#173B73}.primary-navigation a.active:after{height:3px;border-radius:3px;background:#F47735}
+
 .footer-logo{display:block;width:120px;height:auto;object-fit:contain}
 .site-footer>a{display:block;flex-shrink:0}.site-footer{align-items:center}
 .kakao-banner{position:fixed;right:18px;bottom:18px;z-index:48}
@@ -27,7 +23,7 @@
 .weather-icon,.icon-big{filter:drop-shadow(0 4px 8px #173B7315)}
 .weather-result .pill{background:white;color:var(--weather-ink);border:1px solid var(--weather-line)}
 .news-page-button{min-width:36px;min-height:36px}.news-page-button[aria-label]{font-size:18px;padding:4px 10px}
-@media(max-width:1080px){.header-inner{display:flex}.primary-navigation{gap:4px}.primary-navigation a{font-size:16px;padding:15px 12px}.primary-navigation a.active{border-left:3px solid #F47735}}
+
 @media(max-width:650px){.site-footer{align-items:flex-start;flex-wrap:wrap;gap:22px}.site-footer p{width:100%;margin:0;text-align:left}.footer-logo{width:104px}.sources-table th,.sources-table td{padding:12px}.sources-table{font-size:12px}.kakao-banner{right:12px;bottom:12px}}
 @media(prefers-reduced-motion:reduce){.weather-panel,.weather-result{transition:none}}
 .weather-result .score small{color:var(--weather-ink);opacity:.85}
@@ -44,6 +40,6 @@
 /* Market Weather v2: measured demand surfaces never receive scenario colors. */
 .market-home-card{border:1px solid #DFE8F3;border-radius:16px;background:#fff;overflow:hidden;min-width:0}
 #home-market-observation{padding:24px;color:#173B73}.home-observed-value{line-height:1.8;margin:14px 0 5px}.home-observed-value strong{font-size:25px;display:block}.market-withheld{font-size:12px;font-weight:700;background:#F3F6FA;border-radius:7px;padding:10px;line-height:1.7}
-.market-home-card .scenario-preview{border:0;border-top:1px solid var(--weather-line);border-radius:0;padding:20px;min-height:0;position:relative}.scenario-preview .icon-big{margin:8px 0;font-size:26px}.scenario-preview h2{font-size:22px;margin:6px 0}.scenario-preview .home-weather-score{margin:10px 0}.scenario-preview .home-weather-score b{font-size:26px}.scenario-preview .weather-footer{margin-top:12px}.scenario-preview p{font-size:11px}
+.market-home-card .scenario-preview{border:0;border-bottom:1px solid var(--weather-line);border-radius:0;padding:20px;min-height:0;position:relative}.scenario-preview .icon-big{margin:8px 0;font-size:26px}.scenario-preview h2{font-size:22px;margin:6px 0}.scenario-preview .home-weather-score{margin:10px 0}.scenario-preview .home-weather-score b{font-size:26px}.scenario-preview .weather-footer{margin-top:12px}.scenario-preview p{font-size:11px}
 .market-observation-section,.scenario-section{margin-top:30px}.scenario-section{padding:24px;background:#F8F9FB;border:1px dashed #CAD5E3;border-radius:16px}.scenario-section>h2,.market-observation-section>h2{font-size:23px;color:#173B73}.observation-notice{margin-bottom:18px}.market-demand-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.market-country-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.market-observation-card{background:white;color:#173B73}.market-observation-card h4{margin:0 0 14px;font-size:15px}.observed-value{font-size:27px;font-weight:750;overflow-wrap:anywhere}.observed-value small{font-size:13px}.market-observation-card dl{font-size:12px;line-height:1.8;color:#52647A}.market-observation-card dl>div{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:6px 0;border-bottom:1px solid #EDF1F6}.market-observation-card dd{margin:0;font-weight:700}.market-observation-card .tiny{overflow-wrap:anywhere;line-height:1.9}.market-mismatch{font-size:12px;color:#8A4E18}.market-history{margin-top:20px}.market-chart-controls{display:flex;gap:20px;flex-wrap:wrap;margin-top:16px}.market-chart-controls label{font-size:12px;color:#52647A;display:grid;gap:6px}.market-chart-controls select{min-height:44px;max-width:100%;border:1px solid #DFE8F3;background:white;border-radius:7px;padding:10px;color:#173B73}.scenario-formula summary{min-height:44px;cursor:pointer;color:#173B73;padding:14px 0;font-size:13px;font-weight:700}.model-guide{margin-top:20px;color:#52647A;line-height:1.9}.model-guide h3{color:#173B73}
 @media(max-width:650px){.market-demand-grid{grid-template-columns:1fr}.market-country-grid{grid-template-columns:1fr}.scenario-section{padding:15px}.market-chart-controls{gap:12px}.market-chart-controls label{width:100%}.market-chart-controls select{width:100%}}
