@@ -1,192 +1,30 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-02T15:09:32+09:00",
+  "checked_at": "2026-11-02T16:39:09+09:00",
   "scope": "successful_sources_this_run",
   "items": [
-    {
-      "id": "c6832375378efed6a3",
-      "title": "한국과 베트남, 문화산업 분야 협력 강화 논의",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22817",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d5a102a7725e2fbd3e",
-      "title": "‘제61회 잡지의 날’ 기념, 잡지문화 발전 유공자 14명 포상",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22816",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "560da3268887853d60",
-      "title": "‘11월 저작권 주간’ 운영, 저작권 가치와 존중 문화 확산",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22815",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c40c78c4bca534481a",
-      "title": "도서관에서 피어난 문화예술, 주민들의 무대와 작품으로 만난다",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22814",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "31692a985a25e6457b",
-      "title": "정부혁신 국내 최고 사례 선정 발판 삼아, ‘꿈의 예술단 2.0’으로 아동·청소년의 예술적 성장을 한 단계 더 높인다",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22813",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "3e8a311c8de6f3e11a",
-      "title": "고(故) 최불암 배우 금관문화훈장 추서",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22812",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "4a1a88ee3668d658e5",
-      "title": "시각 예술 전문가와 2027년 정부 예산안 논의",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22811",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "02a29abafbae1b0322",
-      "title": "’27년 문학 분야 정부 예산안 논의, 한국문학의 지속 가능한 성장 기반 강화",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22810",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "7f0fdd8b0c72e99e88",
-      "title": "‘케이-콘텐츠’ 지식재산, 유럽·중국에서 해외 진출 기반 넓혀",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22809",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "934eecaab5fda3a764",
-      "title": "‘케이-컬처’ 전진기지 확대, 말레이시아에 한국문화원 개원",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22808",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
     {
       "id": "47468255ede18c948e",
       "title": "'펀스테이션' 9호점 신목동역에 오픈! 러너지원공간·스크린 파크골프장",
       "url": "https://mediahub.seoul.go.kr/archives/2019897",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "cf8cea50961bb13507",
+      "title": "꽃꽂이부터 허브솔트 만들기까지! '서울 정원문화힐링센터' 가드닝 체험",
+      "url": "https://mediahub.seoul.go.kr/archives/2019902",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -223,6 +61,24 @@
       "id": "fc7f9e03404d829de1",
       "title": "노을빛 윤슬부터 마천루 야경까지…선유도·양화한강변 저녁 산책 코스",
       "url": "https://mediahub.seoul.go.kr/archives/2019846",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6d9240e5b1c8996360",
+      "title": "서울은 처음이지? 독일인 친구와 걸은 광화문~종로3가 여정",
+      "url": "https://mediahub.seoul.go.kr/archives/2019856",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -328,24 +184,6 @@
       "decision": "exclude"
     },
     {
-      "id": "db244a6b755ae991dc",
-      "title": "조명 따라 정원 산책…퇴근 후 가을밤 '서울숲' 걸어볼까?",
-      "url": "https://mediahub.seoul.go.kr/archives/2019859",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
       "id": "92f9bc794fc5ce3a7a",
       "title": "숲과 예술이 만나 건네는 위로…서울창포원 '평화의 잔상' 전시",
       "url": "https://mediahub.seoul.go.kr/archives/2019855",
@@ -362,6 +200,24 @@
         "signals": [],
         "impact_targets": [],
         "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "db244a6b755ae991dc",
+      "title": "조명 따라 정원 산책…퇴근 후 가을밤 '서울숲' 걸어볼까?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019859",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
@@ -512,44 +368,6 @@
         "signals": [],
         "impact_targets": [],
         "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "cf8fa32b9e47e1afc4",
-      "title": "산책하러 왔다가 예술을 만났다! 서울창포원에 찾아온 공공미술",
-      "url": "https://mediahub.seoul.go.kr/archives/2019862",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ead29d23fe9b182af4",
-      "title": "셰프 요리 맛보고, 미식어워즈 참관까지! 맛있는 '서울미식주간' 현장",
-      "url": "https://mediahub.seoul.go.kr/archives/2019860",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
@@ -3008,9 +2826,9 @@
       "decision": "exclude"
     },
     {
-      "id": "b5b9e06878a6adcd79",
-      "title": "나이아가라 관광청 방한, \"경유지서 체류지로 관광 트렌드 재편\"",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157555",
+      "id": "0c4d76525af4250937",
+      "title": "SK증권, 연금저축 순입금 고객에 최대 100만원 캐시백 프로모션",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157927",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -3026,819 +2844,9 @@
       "decision": "exclude"
     },
     {
-      "id": "e782a887194b74cbb2",
-      "title": "세종대 산업대학원 부동산AI융합학과, ‘데이터로 읽는 2027 상업용 부동산 투자 전략’ 개최",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157538",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ab801d23b7288caf88",
-      "title": "세종대 산업대학원, 한국비엘과 산학협력 협약 체결·발전기금 전달",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157539",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "7cc6e959007af5c03f",
-      "title": "바이낸스 64억 달러 해킹 배후에 北 조직...온체인 증거 확보",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157537",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "02d44f1f75c93db4d6",
-      "title": "청라 로봇타워서 청소년 로봇대회 개최… 협력 배우는 청소년 미래 공학자들",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157536",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "4521ae8b275e3c584b",
-      "title": "카카오뱅크, 서울경찰청·토스뱅크와 청소년 사이버도박 예방 업무협약",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157183",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9a873d0deedd80702d",
-      "title": "골프존·스릭슨 'ZXi RKT 롱 드라이브 매치' 성료… 최형민 최종 우승",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157515",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "e2c4ac2986f5fb7b1b",
-      "title": "랭함 호스피탈리티 그룹, 서울서 브랜드 행사 개최... 160년 헤리티지·글로벌 확장 전략 소개",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3156874",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "b79646debde245d13b",
-      "title": "고양특례시, 1000억원 규모 ‘같이 성장 펀드’ 출범… 민간 투자 마중물",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157456",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c72061497db28cbee6",
-      "title": "SK텔레콤, ‘AX 혁신 2.0’ 발표… 조직 업무·협업 방식 AI 중심 재설계",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157518",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5a2a54d45d0bc5f6e9",
-      "title": "NH농협은행, ‘NEO-CREW’ 연간 활동 우수직원 시상식 개최",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157524",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9a61cbc0684976315c",
-      "title": "하나금융그룹, ‘2026 오티즘 레이스’ 참여… 자폐성 장애 인식 개선 캠페인 동참",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157465",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "e03ff022ab882a24a0",
-      "title": "2027학년도 수능 서울 응시자 11만3454명",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157523",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "eca89fb539a64fded3",
-      "title": "LG유플러스, 교육부·티오리한국과 청소년 정보보안 인재 육성 협약",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157509",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "bce03101f37e8c2370",
-      "title": "경기도교육청, ‘2026 경기 과학·수학 한마당’ 개최…75개 부스 운영",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157497",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d180c5695e56fc34c0",
-      "title": "\"로봇 엔지니어를 해결사로\"… HD현대, 美 팔란티어 'AIP' 협력",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157531",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "787951a47e02ad678c",
-      "title": "포항시, 자매도시 중국 장자강시 방문… 미래산업·관광 교류 확대 모색",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157532",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5177718e9b07afa8ab",
-      "title": "포항시, ‘2026 대한민국 철강포럼’ 개최…저탄소·디지털 전환 논의",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157533",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "f195ce0a41539482a9",
-      "title": "포항시지속가능발전협의회, ‘2026년 위원 워크숍’ 개최… 소통과 치유로 지속가능한 공동체 가치 확산",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157534",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ef8aa6ea1ec027b8c0",
-      "title": "[인터뷰] 리무산 하이난골프관광협회 회장, 녹색 카펫 위 30년 ... “하이난 골프의 새 지평을 열다”",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157467",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "b60de604f638694865",
-      "title": "활력 넘치는 자유무역항 '하이난', 서울서 '2026 하이난(서울) 관광문화 홍보교류행사' 개최 ... \"관광·의료 협력 새 지평을 열다\"",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157466",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a84c6e6ea4a082b746",
-      "title": "마드리드 지방 정부·상공회의소, 부산서 관광 설명회 개최",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157436",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "70c2a736a63cf81769",
-      "title": "효성중공업, 독일 지멘스와 디지털 전력망·AI 데이터센터 협력 협약",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157326",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "acf4dc6b7167b5c3c9",
-      "title": "동아에스티, 지속가능경영 유공 종합 ESG 분야 산업통상부 장관 표창",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157355",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c2c00b1741bf19f3be",
-      "title": "코웨이, ‘룰루 더매너 비데’ 출시… 프리미엄 비데 라인업 확대",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157311",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "2dcb4178f287306e37",
-      "title": "\"천국을 여행합니다\" 타히티 폴고갱크루즈 연합상품 등장… 항공·숙박·기항지 투어 아우른 '올인클루시브'",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157152",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "83cc83c2413e23dd85",
-      "title": "정부, '국민 배우' 故 최불암에게 국가 최고 예우 ‘금관문화훈장’ 추서",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157435",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "39e883de997ee3f968",
-      "title": "골프존 GDR아카데미, 피지컬·스윙 결합 프로그램 ‘GDR퍼포먼스’ 출시",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157155",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9a83d45f15a39114b6",
-      "title": "에뛰드, 신제품 ‘글로이 구미 밤’ 11월 1일 올리브영 출시",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157177",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "97a1c2e22b18d518f5",
-      "title": "유한양행·한국베링거인겔하임, 헬스케어 혁신 위한 전략적 업무협약 체결",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157159",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "60e956869f161f0eae",
-      "title": "다이닝브랜즈그룹, ‘2026 서울형 상생 프랜차이즈’ 우수 가맹본부 선정",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157166",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "7301cd3a8ceb2c8b6c",
-      "title": "세종대 이은미 교수 연구팀, 투자자 관심과 기관 거래행태 분석 논문 게재",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157323",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "8516d77073281d2f74",
-      "title": "[인사] SK하이닉스, 안현·차선용·윤풍영 사장급 인사 단행",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157188",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "68c53af2b83a56d23b",
-      "title": "SK이노베이션, 2027년 사장단 인사 단행",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157178",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "03dfdb76c5e4c4d0b8",
-      "title": "IBK기업은행, 기술보증기금과 2000억원 규모 청년 창업기업 금융지원 협약",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157312",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "febb3319dd7df95e6f",
-      "title": "세종뮤지엄갤러리 2관, 황성준 개인전 ‘사이-숨 : 떠있는 시간, 떠도는 공간’ 개최",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157405",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d3ce68d6a9a5984b47",
-      "title": "서울특별시교육청·대한민국교육감협의회·조국혁신당, 교육재정 안정화 간담회",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157330",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c687c0ccb48be3297a",
-      "title": "배틀그라운드, 넷플릭스 실사 시리즈 제작 확정",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157173",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "47b61cfa7263fbfbaa",
-      "title": "한화투자증권, 체인링크와 글로벌 디지털자산 플랫폼 구축 파트너십 체결",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157164",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "88e046d50abd9a91af",
-      "title": "NH농협은행, 주택청약종합저축 신규가입 고객 대상 이벤트 실시",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157218",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "936fce1d2d9f499893",
-      "title": "하이트진로음료, ‘블랙보리’ 패키지 디자인 리뉴얼·4종 라인업 출시",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157193",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "14f4c65ee251a6844e",
-      "title": "KB라이프, 나눔아카데미 기부금 4084만원 재단 전달",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157291",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c3247620eb73497fb3",
-      "title": "영주시, 외국인 계절근로자 107명 8개월 영농활동 마치고 첫 단체 귀국",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157301",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "100c47fc258934734c",
-      "title": "전국한우협회, ‘한우의 날’ 첫 공식 기념식 개최… 한우산업 새 100년 다짐",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157281",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "90257e13cbe5d4e677",
-      "title": "대한항공·아시아나 제4회 세이프티 데이 개최…통합 안전 문화 구축 가속",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157305",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "72d984e690050106ee",
-      "title": "KB국민은행, 청각장애인 고객 위한 ‘모바일 화상 수어상담’ 도입",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157309",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "075aacbe4cb6ff7433",
-      "title": "영주교육지원청 2026 미래교육 어울림 축제…학교와 지역 사회 결속",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157317",
+      "id": "ef1ccfd616b0c5e014",
+      "title": "한국주택금융공사, 11월 9일부터 보금자리론 금리 0.10%포인트 인상",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157916",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -3856,9 +2864,9 @@
       "decision": "exclude"
     },
     {
-      "id": "428f6f44eedf697614",
-      "title": "롯데, 롯데렌탈 지분 61.2% TPG 매각 완료…총 매각대금 1조3105억원 확보",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157356",
+      "id": "7c29e10149093908d1",
+      "title": "국악인 조수황, 서울 국제교류의 날에서 판소리 '사철가'로 한국 전통음악의 매력 전해",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157644",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -3874,9 +2882,29 @@
       "decision": "exclude"
     },
     {
-      "id": "ccdce1e1592046ba8c",
-      "title": "제이브이엠 3분기 영업익 99억원 기록…역대 3분기 최고 실적 달성",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157328",
+      "id": "2dfccd202df2b85a86",
+      "title": "부룬디 이방가 클럽, 서울 국제교류의 날에서 전통 북 공연으로 관객 감동",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157553",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4ef83c8847aa1fb228",
+      "title": "인터내셔널월드인코리아, '2026 서울 국제교류의 날 및 시상식' 성황리에 개최",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157541",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -3892,9 +2920,819 @@
       "decision": "exclude"
     },
     {
-      "id": "2a1101386cd2c65e48",
-      "title": "DL이앤씨 3분기 누적 영업익 4241억원… 북미 SMR·데이터센터 신사업 가속",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157366",
+      "id": "b30c27bb268332796e",
+      "title": "쿠언 폰 러따낙 주한 캄보디아 대사, IWIK 국제교류공헌상 수상",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157552",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "8cf6a0984ba8949818",
+      "title": "다국적 합창단 프리메로 보이스, 서울 국제교류의 날에서 국경 넘은 하모니 선사",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157735",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3f8a0852aaa6bfc7bf",
+      "title": "부안군, 국가 통계행정 역량 입증 대통령 표창 ‘최고 영예’",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157955",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "800eac74c78671a1f8",
+      "title": "희망브리지, 영양 산불 피해 주민에게 쏟은 온정 ... “잿더미 속 두 번째 겨울도 홀로 두지 않는다”",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157954",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "eb0e6a396203a62f5e",
+      "title": "교원투어 여행이지, 창립 41주년 ‘고객 감사제’ 진행… 특가·경품 혜택 마련",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157770",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "492ae97350eb34984f",
+      "title": "신한투자증권, AI 조건검색 서비스 ‘신한 Premier AI Finder’ 출시",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157767",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "9d64fac0dd90233276",
+      "title": "신용보증기금, KDI와 교육·홍보 협력 및 데이터 기반 공동연구 업무협약 체결",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157692",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "62703a0f919d4d2446",
+      "title": "하나투어, '26-27 하나투어 겨울여행 페스타’ 진행… 쿠폰·특가 혜택 제공",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157786",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b41fba25c22d00e141",
+      "title": "NH농협은행, 올라핀테크와 소상공인 전용 ‘NH바로정산 서비스’ 출시",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157783",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6a0cd3101195b2b941",
+      "title": "신용보증기금, NH농협은행과 비대면 금융상품 공동개발 업무협약",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157709",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f8a209b7716719c2c1",
+      "title": "GS건설, 용도별 스틸 모듈러 표준평면 20종 개발... BIM 결합 견적 시스템 연계",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157771",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "292d4e33661019db1b",
+      "title": "에어아스타나, A321LR 항공기에 고속 위성 Wi-Fi 도입… 승객 편의성 강화",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157787",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ac9133328b0acea357",
+      "title": "서울특별시교육청, ‘2026 서울학생 예술몽땅 페스티벌’ 개최… 27개 팀 본선 진출",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157886",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "23333909c39ad796e2",
+      "title": "SBI저축은행, 11월 1일부터 ‘교보SBI저축은행’으로 사명 변경",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157885",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ac1af76f8b2aa34d54",
+      "title": "아성다이소, FITI시험연구원 내 상품안전센터 운영... 상품 안전관리 강화",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157820",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5d3b109f73a6636176",
+      "title": "신용회복위원회·서민금융진흥원, 서해 서민금융통합지원센터 개소",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157830",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "51bc804bfcb751643f",
+      "title": "bhc, 직영점 11곳서 한국시리즈 전 경기 공식 중계… 야구팬 응원 공간 조성",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157865",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2a9e3498496a4b5cde",
+      "title": "위기 딛고 일어서는 회복탄력성... 행복재테크가 제시한 자존감과 절약 공식",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157877",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "8d70867325b0599e1a",
+      "title": "코오롱 호텔 앤 리조트, 소상공인·자영업자 패키지 ‘사장님의 휴일’ 출시",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157838",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1c6d835862cc8e60a3",
+      "title": "라이나생명, 대면영업부문 부사장에 오영택·CISO본부 상무에 김재홍 선임",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157874",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a28200c51c56888330",
+      "title": "대우건설, 체코 신규 원전 시공 계약 협상 종료에 재협상 중재 요청",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157888",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7a7fba73d6e5223c1b",
+      "title": "[장익경 기자가 만난 4인의 대한민국 감정평가사 시리즈] 세상의 모든 가치 ④",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157855",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "489caea9a0dd693202",
+      "title": "[인사] HD현대, 임원 인사 실시… 부사장 7명·전무 23명 승진",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157883",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6d26db09e5f49bb418",
+      "title": "네이버클라우드, 육군 군수사령부와 ‘실전형 AI 군수’ 체계 구축 협약",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157811",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ad19c63485df491f58",
+      "title": "교보증권, 연말정산 맞아 ‘연금저축 이벤트’ 12월 말까지 진행",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157837",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "746b6e02daec415d8f",
+      "title": "고흥군, 친환경자동차 215대 보급... 탄소중립 실천 노력",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157854",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "74c404cff95b84c1c5",
+      "title": "부산 해운대 소형 공급 가뭄 속 중소형 259가구 분양 시장 진입",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157686",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "d8acce49e6b6b9524c",
+      "title": "임실군, 반려동물 관광 콘텐츠 잇단 흥행…반려동물친화도시 경쟁력 입증",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157740",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광콘텐츠"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "e4bb7aed147f6158f9",
+      "title": "델타항공, 아시아·태평양 노선 무료 와이파이 확대 및 한국어 앱 출시",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157822",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6bb1ed5a04d8880fc8",
+      "title": "넥스트증권, 김승연 대표이사 연임 결정… 새 임기 10월 29일 시작",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157823",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1f12cf0a4982d35687",
+      "title": "[인사] IBK신용정보, 백상현 신임 대표이사 임명",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157825",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5d293e5dcb65b0e7bd",
+      "title": "호텔스닷컴ㆍ대한항공, 숙박 결제 시 스카이패스 동시 적립 프로모션 전개",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3156058",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4f004eea6c0f250b5d",
+      "title": "순창군, 겨울철 폭설 대비 교통소통대책 훈련 실시",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157853",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "574fa2a80388e7db5a",
+      "title": "한국콜마, 지속가능경영·생산성 향상 유공 대통령표창",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157702",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "31860dea0d830f6c6c",
+      "title": "서울관광재단·남대문시장, 상생 MOU 체결 ... “광화문 겨울 축제에 ‘600년 전통’ 남대문 시장을 통째로 품는다”",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157738",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "9d67e63d438be046d0",
+      "title": "현대자동차, 운행·점검 데이터 활용 현대인증중고차 신규 서비스 시작",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157707",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "04a111449b6acb7813",
+      "title": "신용보증기금, 농협은행·KDI와 잇따라 업무협약",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157731",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f928d0bbf1b9add195",
+      "title": "현대건설, FANCO와 SMR 개발 기술 자문 포함 기본 계약 체결",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157723",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "e5059987dc5ad6a5b3",
+      "title": "삼성자산운용, ‘KODEX 미국10년국채액티브(H)’ 순자산 2041억원 달성",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157713",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b71a120a531efc1340",
+      "title": "크루즈 찍고 야간 육상 투어로… 썬그룹, 하롱베이 지역 복합 레저 관광지로 변모",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157737",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3094a65edf84d68fa6",
+      "title": "롯데웰푸드, 빼빼로데이 맞아 도심 순회 팝업·관광지 마케팅 진행",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157716",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a2332b16c7161c606d",
+      "title": "우아한형제들, 코리아 그랜드 페스티벌서 장보기·쇼핑 최대 60% 할인",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157693",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "372801b44e164a7507",
+      "title": "빗썸, 버추얼 유튜버 누눙지와 ‘가상자산훈련소’ 론칭",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157668",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "12878b1e45214cf25c",
+      "title": "가스공사, 인천기지서 현장 이사회… 배관심의위는 가스배관위원회로 업무 이관",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157734",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "becba18237da731458",
+      "title": "하나은행, 모바일 앱 ‘하나원큐’서 골드바 선물·구매 서비스 시행",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3157690",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",

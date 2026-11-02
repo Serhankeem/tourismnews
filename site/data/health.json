@@ -1,29 +1,15 @@
 {
-  "checked_at": "2026-11-02T15:09:32+09:00",
-  "last_successful_fetch": "2026-11-02T15:09:32+09:00",
+  "checked_at": "2026-11-02T16:39:09+09:00",
+  "last_successful_fetch": "2026-11-02T16:39:09+09:00",
   "status": "partial",
   "sources": [
     {
       "id": "mcst_press",
       "name": "문화체육관광부 보도자료",
       "url": "https://www.mcst.go.kr/common/rss/press.jsp",
-      "status": "ok",
-      "rss_items": 10,
-      "matched": 0,
-      "held": 0,
-      "relevance_counts": {
-        "Direct": 0,
-        "Indirect": 0,
-        "Irrelevant": 10
-      },
-      "category_published": {
-        "관광정책": 0,
-        "인바운드": 0,
-        "여행산업": 0,
-        "항공·숙박": 0,
-        "문화·트렌드": 0,
-        "경제·시장": 0
-      }
+      "status": "error",
+      "error_kind": "transport_error",
+      "error": "OSError: robots_unverified:transport_error"
     },
     {
       "id": "kosis_recent",
@@ -31,7 +17,7 @@
       "url": "https://kosis.kr/rss/themes_rss.jsp",
       "status": "error",
       "error_kind": "transport_error",
-      "error": "OSError: https_public_endpoint_required"
+      "error": "OSError: robots_unverified:transport_error"
     },
     {
       "id": "seoul_culture",
@@ -257,25 +243,25 @@
       "url": "https://www.ttlnews.com/rss/allArticle.xml",
       "status": "ok",
       "rss_items": 50,
-      "matched": 0,
+      "matched": 1,
       "held": 0,
       "relevance_counts": {
-        "Direct": 0,
+        "Direct": 1,
         "Indirect": 0,
-        "Irrelevant": 50
+        "Irrelevant": 49
       },
       "category_published": {
         "관광정책": 0,
         "인바운드": 0,
         "여행산업": 0,
         "항공·숙박": 0,
-        "문화·트렌드": 0,
+        "문화·트렌드": 1,
         "경제·시장": 0
       }
     }
   ],
   "source_count": 18,
-  "successful_sources": 9,
+  "successful_sources": 8,
   "schema_version": 2,
   "rule_version": "0.2",
   "category_counts": {
@@ -283,25 +269,25 @@
     "인바운드": 9,
     "여행산업": 6,
     "항공·숙박": 10,
-    "문화·트렌드": 11,
+    "문화·트렌드": 12,
     "경제·시장": 0
   },
   "review_queue_count": 1,
   "discovery": {
     "schema_version": 3,
-    "checked_at": "2026-11-02T15:09:32+09:00",
+    "checked_at": "2026-11-02T16:39:09+09:00",
     "publication_result": "partial",
     "discovery_status": "partial",
-    "received": 570,
-    "new_discoveries": 14,
-    "duplicate_observations": 359,
-    "new_auto_published": 0,
-    "total_published": 43,
-    "total_archived": 43,
-    "newsroom_count": 39,
+    "received": 560,
+    "new_discoveries": 84,
+    "duplicate_observations": 279,
+    "new_auto_published": 1,
+    "total_published": 44,
+    "total_archived": 44,
+    "newsroom_count": 40,
     "filings_count": 0,
     "other_research_count": 3,
-    "new_newsroom_items": 0,
+    "new_newsroom_items": 1,
     "new_filings": 0,
     "newsroom_korea_direct_count": 19,
     "newsroom_korea_direct_last7d": 14,
@@ -337,10 +323,10 @@
         "new_this_run": 0
       },
       "ttlnews": {
-        "count": 7,
-        "originally_published_last7d": 7,
+        "count": 8,
+        "originally_published_last7d": 8,
         "korea_direct": 4,
-        "new_this_run": 0
+        "new_this_run": 1
       }
     },
     "newsroom_category_counts": {
@@ -348,20 +334,20 @@
       "인바운드": 9,
       "여행산업": 6,
       "항공·숙박": 10,
-      "문화·트렌드": 11,
+      "문화·트렌드": 12,
       "경제·시장": 0
     },
     "newsroom_tier_counts": {
       "korea_direct": 19,
       "global_major": 0,
-      "reference": 20
+      "reference": 21
     },
-    "newsroom_originally_published_last24h": 3,
-    "newsroom_originally_published_last7d": 27,
-    "newsroom_newly_added_last24h": 3,
+    "newsroom_originally_published_last24h": 4,
+    "newsroom_originally_published_last7d": 28,
+    "newsroom_newly_added_last24h": 4,
     "new_backfilled": 0,
     "record_type_counts": {
-      "news": 40,
+      "news": 41,
       "regulatory_filing": 0,
       "statistical_release": 3,
       "government_notice": 0
@@ -371,24 +357,24 @@
       "인바운드": 9,
       "여행산업": 7,
       "항공·숙박": 10,
-      "문화·트렌드": 11,
+      "문화·트렌드": 12,
       "경제·시장": 0
     },
-    "discovered_last24h": 229,
-    "discovered_last7d": 1598,
-    "auto_published_last24h": 3,
-    "auto_published_last7d": 34,
-    "originally_published_last24h": 3,
-    "originally_published_last7d": 27,
+    "discovered_last24h": 295,
+    "discovered_last7d": 1682,
+    "auto_published_last24h": 4,
+    "auto_published_last7d": 35,
+    "originally_published_last24h": 4,
+    "originally_published_last7d": 28,
     "sources": [
       {
         "id": "mcst_press",
         "name": "문화체육관광부 보도자료",
         "url": "https://www.mcst.go.kr/common/rss/press.jsp",
         "group": "public",
-        "received": 10,
+        "received": 0,
         "new_discoveries": 0,
-        "duplicates": 10,
+        "duplicates": 0,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -396,7 +382,7 @@
         "classifications": {
           "Direct": 0,
           "Indirect": 0,
-          "Irrelevant": 10
+          "Irrelevant": 0
         },
         "publication_policy": {
           "status": "approved",
@@ -410,11 +396,13 @@
           "max_days": 90,
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
-        "status": "ok",
-        "success_rate": 0.9871794871794872,
+        "status": "error",
+        "error_kind": "access_policy",
+        "error": "robots_unverified:transport_error",
+        "success_rate": 0.9746835443037974,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "no_new_candidate"
+        "outcome": "fetch_failed"
       },
       {
         "id": "korea_net_travel",
@@ -484,7 +472,7 @@
         },
         "status": "error",
         "error_kind": "access_policy",
-        "error": "https_public_endpoint_required",
+        "error": "robots_unverified:transport_error",
         "success_rate": 0.0,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
@@ -496,8 +484,8 @@
         "url": "https://mediahub.seoul.go.kr/news/rss/06",
         "group": "public",
         "received": 20,
-        "new_discoveries": 1,
-        "duplicates": 19,
+        "new_discoveries": 2,
+        "duplicates": 18,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -520,7 +508,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9743589743589743,
+        "success_rate": 0.9746835443037974,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "discovered_not_publishable"
@@ -531,8 +519,8 @@
         "url": "https://mediahub.seoul.go.kr/news/rss/04",
         "group": "public",
         "received": 20,
-        "new_discoveries": 1,
-        "duplicates": 19,
+        "new_discoveries": 0,
+        "duplicates": 20,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -555,10 +543,10 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9615384615384616,
+        "success_rate": 0.9620253164556962,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "discovered_not_publishable"
+        "outcome": "no_new_candidate"
       },
       {
         "id": "seoul_transport",
@@ -590,7 +578,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.7435897435897436,
+        "success_rate": 0.7468354430379747,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -627,7 +615,7 @@
         "status": "error",
         "error_kind": "transport_error",
         "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-        "success_rate": 0.47435897435897434,
+        "success_rate": 0.46835443037974683,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "fetch_failed"
@@ -1148,8 +1136,8 @@
         "url": "https://www.yna.co.kr/rss/economy.xml",
         "group": "media",
         "received": 120,
-        "new_discoveries": 12,
-        "duplicates": 108,
+        "new_discoveries": 32,
+        "duplicates": 88,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -1267,16 +1255,16 @@
         "url": "https://www.ttlnews.com/rss/allArticle.xml",
         "group": "media",
         "received": 50,
-        "new_discoveries": 0,
-        "duplicates": 50,
+        "new_discoveries": 50,
+        "duplicates": 0,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
         "outside_window": 0,
         "classifications": {
-          "Direct": 0,
+          "Direct": 1,
           "Indirect": 0,
-          "Irrelevant": 50
+          "Irrelevant": 49
         },
         "publication_policy": {
           "status": "approved",
@@ -1299,21 +1287,21 @@
         },
         "status": "ok",
         "success_rate": 1.0,
-        "new_auto_published": 0,
-        "new_newsroom_items": 0,
-        "outcome": "no_new_candidate"
+        "new_auto_published": 1,
+        "new_newsroom_items": 1,
+        "outcome": "auto_published"
       }
     ],
     "briefing": {
       "status": "ok",
-      "checked_at": "2026-11-02T15:09:32+09:00",
+      "checked_at": "2026-11-02T16:39:09+09:00",
       "selection_status": "candidates_ready"
     },
-    "outcome": "no_new_publications_with_source_errors"
+    "outcome": "new_newsroom_news"
   },
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-02T15:09:32+09:00",
+    "checked_at": "2026-11-02T16:39:09+09:00",
     "selection_status": "candidates_ready"
   }
 }
