@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-02T07:46:37+09:00",
+  "checked_at": "2026-11-02T10:20:19+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
-  "received": 570,
-  "new_discoveries": 9,
-  "duplicate_observations": 365,
+  "received": 590,
+  "new_discoveries": 74,
+  "duplicate_observations": 320,
   "new_auto_published": 0,
   "total_published": 43,
   "total_archived": 43,
@@ -85,8 +85,8 @@
     "문화·트렌드": 11,
     "경제·시장": 0
   },
-  "discovered_last24h": 108,
-  "discovered_last7d": 1435,
+  "discovered_last24h": 182,
+  "discovered_last7d": 1509,
   "auto_published_last24h": 3,
   "auto_published_last7d": 34,
   "originally_published_last24h": 3,
@@ -98,16 +98,16 @@
       "url": "https://www.mcst.go.kr/common/rss/press.jsp",
       "group": "public",
       "received": 10,
-      "new_discoveries": 0,
-      "duplicates": 10,
+      "new_discoveries": 3,
+      "duplicates": 7,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
       "outside_window": 0,
       "classifications": {
-        "Direct": 1,
+        "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 9
+        "Irrelevant": 10
       },
       "publication_policy": {
         "status": "approved",
@@ -122,10 +122,10 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9859154929577465,
+      "success_rate": 0.9861111111111112,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "discovered_not_publishable"
     },
     {
       "id": "korea_net_travel",
@@ -231,7 +231,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.971830985915493,
+      "success_rate": 0.9722222222222222,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -266,7 +266,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.971830985915493,
+      "success_rate": 0.9722222222222222,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -276,9 +276,9 @@
       "name": "서울시 내 손안에 서울 교통",
       "url": "https://mediahub.seoul.go.kr/news/rss/01",
       "group": "public",
-      "received": 0,
+      "received": 20,
       "new_discoveries": 0,
-      "duplicates": 0,
+      "duplicates": 20,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -286,7 +286,7 @@
       "classifications": {
         "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 0
+        "Irrelevant": 20
       },
       "publication_policy": {
         "status": "approved",
@@ -300,13 +300,11 @@
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
-      "status": "error",
-      "error_kind": "transport_error",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-      "success_rate": 0.7183098591549296,
+      "status": "ok",
+      "success_rate": 0.7222222222222222,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "fetch_failed"
+      "outcome": "no_new_candidate"
     },
     {
       "id": "seoul_environment",
@@ -338,7 +336,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.4788732394366197,
+      "success_rate": 0.4861111111111111,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -717,16 +715,16 @@
       "url": "https://news.koreanair.com/feed/",
       "group": "company",
       "received": 10,
-      "new_discoveries": 0,
-      "duplicates": 10,
-      "rights_holds": 1,
+      "new_discoveries": 1,
+      "duplicates": 9,
+      "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
       "outside_window": 0,
       "classifications": {
-        "Direct": 1,
+        "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 9
+        "Irrelevant": 10
       },
       "publication_policy": {
         "status": "review",
@@ -744,7 +742,7 @@
       "success_rate": 1.0,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "discovered_not_publishable"
     },
     {
       "id": "tripcom_news",
@@ -859,8 +857,8 @@
       "url": "https://www.yna.co.kr/rss/economy.xml",
       "group": "media",
       "received": 120,
-      "new_discoveries": 9,
-      "duplicates": 111,
+      "new_discoveries": 70,
+      "duplicates": 50,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
