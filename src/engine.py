@@ -199,6 +199,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
         news = c.read_json(stage / 'news.json', original)
         stage_health = c.read_json(stage / 'health.json', {})
     articles = news.get('articles', [])
+    briefing_health = None
     # Never stamp first_seen/published timestamps onto old records on every run.
     if result['status'] != 'failed':
         selected_ids = {a['id'] for a in articles}
@@ -233,7 +234,15 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                            'generated_at': news.get('generated_at'), 'last_successful_fetch': news.get('last_successful_fetch'),
                            'count': len(items), 'public_fields': list(public_record(items[0])) if items else ['title', 'source', 'published_at', 'url', 'category', 'keywords'],
                            'articles': [public_record(a) for a in items]})
-        save_briefing(newsroom, data_dir, state_dir, at, news.get('last_successful_fetch'), news.get('mode','live_rss'))
+        try:
+            current_briefing = save_briefing(newsroom, data_dir, state_dir, at, news.get('last_successful_fetch'),
+                                             news.get('mode','live_rss'), collection={'sources': health})
+            briefing_health = {'status': 'ok', 'checked_at': c.iso(at), 'selection_status': current_briefing['status']}
+        except (OSError, ValueError, TypeError, KeyError):
+            # Do not confuse a failed generator/write with an empty candidate set.
+            # No exception payload (which can contain credentials) is public.
+            briefing_health = {'status': 'failed', 'checked_at': c.iso(at),
+                               'error_kind': 'generation_or_write_failed', 'previous_data_preserved': True}
         if legacy_archive.exists():
             legacy_archive.unlink()  # full original is preserved outside the Pages directory
     # Failure keeps public projections byte-for-byte; metrics still use the
@@ -278,6 +287,8 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                'originally_published_last24h': sum(a.get('publication_time_verified_for_news') is not False and a.get('date_precision') != 'date' and at - dt.timedelta(days=1) <= c.timestamp(a['published_at']) <= at for a in articles),
                'originally_published_last7d': sum(a.get('publication_time_verified_for_news') is not False and at - dt.timedelta(days=7) <= c.timestamp(a['published_at']) <= at for a in articles),
                'sources': health}
+    if briefing_health is not None:
+        summary['briefing'] = briefing_health
     summary['outcome'] = ('all_fetches_failed' if summary['discovery_status'] == 'failed' else
                           'publication_blocked_by_rights' if not approved_sources else
                           'publication_sources_failed' if result['status'] == 'failed' else
@@ -301,6 +312,8 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     c.write_atomic(state_dir / 'run_summary.json', summary)
     health_doc = stage_health
     health_doc['discovery'] = summary
+    if briefing_health is not None:
+        health_doc['briefing'] = briefing_health
     c.write_atomic(data_dir / 'health.json', health_doc)
     return summary
 
@@ -319,7 +332,7 @@ def main():
     reviews = c.read_json(Path(args.reviews), {}).get('approvals', {})
     summary = execute(sources, data, state, reviews, days=args.backfill_days)
     print(json.dumps({k: v for k, v in summary.items() if k != 'sources'}, ensure_ascii=False))
-    return 1 if summary['publication_result'] == 'failed' else 0
+    return 1 if summary['publication_result'] == 'failed' or summary.get('briefing', {}).get('status') == 'failed' else 0
 
 
 if __name__ == '__main__':

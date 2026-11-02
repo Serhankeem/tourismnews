@@ -72,11 +72,11 @@ class EditorialTests(unittest.TestCase):
     def test_negated_korea_connection_is_not_promoted(self):
         self.assertEqual(exposure(article('Hotel revenue increase unrelated to South Korea'))['tier'],'reference')
 
-    def test_core_rank_precedes_newer_foreign_reference(self):
+    def test_publication_date_precedes_editorial_rank(self):
         core=article('방한객 증가');core['published_at']=(AT-dt.timedelta(days=3)).isoformat()
         foreign=article('UK airline revenue increases')
         _,news,_=project([foreign,core])
-        self.assertEqual(news[0]['title'],core['title'])
+        self.assertEqual(news[0]['title'],foreign['title'])
 
     def test_ambiguous_worldwide_company_is_not_industry_scope(self):
         self.assertEqual(exposure(article('Marriott global company revenue increases 5%'))['tier'],'reference')

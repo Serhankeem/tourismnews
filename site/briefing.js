@@ -10,9 +10,12 @@
   CURRENT_BRIEFING=edition;
   if(!edition){el('briefing-state').textContent='데이터 확인 불가';el('briefing-news-list').textContent='검증된 브리핑을 불러오지 못했습니다.';return;}
   const age=Date.now()-Date.parse(edition.generated_at),past=key!=='current';
-  el('briefing-state').textContent=(lastError||collectionFailed?'수집/갱신 실패 · 이전 기록 유지 · ':'')+(past?'과거 브리프':age>86400000?'이전 생성 후보 · 최신 수집 확인 필요':edition.items.length?'주요 뉴스 후보':'최근 24시간 신규 뉴스 없음');
+  const empty=edition.status==='no_eligible_recent_articles'?'최근 발행 뉴스는 있으나 브리핑 선정 기준 미충족':edition.status==='no_recent_articles'?'최근 24시간 신규 뉴스 없음':'선정 내역 확인 필요';
+  const generationFailed=lastError||collectionHealth?.briefing?.status==='failed';
+  const partial=collectionHealth?.status==='partial'||edition.collection?.status==='partial';
+  el('briefing-state').textContent=(generationFailed?'브리핑 생성/갱신 실패 · 이전 기록 유지 · ':'')+(collectionFailed?'뉴스 수집 실패 · 후보 확보 불완전 · ':partial?'일부 출처 수집 실패 · 후보 확보 불완전 · ':'')+(past?'과거 브리프':age>86400000?'이전 생성 후보 · 최신 수집 확인 필요':edition.items.length?'주요 뉴스 후보':empty);
   el('briefing-dates').textContent=`생성 ${edition.generated_at} · 마지막 수집 성공 ${edition.last_successful_fetch||'기존 기록에 미기재'} · 뉴스 DB 최근 수집 성공 ${collectionHealth?.last_successful_fetch||'미확인'} · 실제 발송 안 함`;
-  el('briefing-news-list').innerHTML=edition.items.length?edition.items.map((n,i)=>`<article class="news-item"><div class="news-meta"><span class="category">${esc(n.category)}</span><span>${esc(n.source)}</span><time datetime="${esc(n.published_at)}">발행 ${esc(n.published_at)}</time></div><h2 class="news-title"><span class="briefing-number">${i+1}.</span> <a href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)} ↗</a></h2><p class="tiny">${(n.keywords||[]).map(esc).join(' · ')}</p></article>`).join(''):`<p class="briefing-empty">생성 시점의 최근 24시간 내 적합한 신규 뉴스가 없습니다. ${history.length?'지난 브리프는 날짜 메뉴에서 확인할 수 있습니다.':'아직 보관된 지난 브리프가 없습니다. 보관 시작 이후의 기록만 표시합니다.'}</p>`;
+  el('briefing-news-list').innerHTML=edition.items.length?edition.items.map((n,i)=>`<article class="news-item"><div class="news-meta"><span class="category">${esc(n.category)}</span><span>${esc(n.source)}</span><time datetime="${esc(n.published_at)}">발행 ${esc(n.published_at)}</time></div><h2 class="news-title"><span class="briefing-number">${i+1}.</span> <a href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">${esc(n.title)} ↗</a></h2><p class="tiny">${(n.keywords||[]).map(esc).join(' · ')}</p></article>`).join(''):`<p class="briefing-empty">${past?'이 날짜의 확정 브리프는 비어 있습니다. 이후 적격 기사는 현재 후보에서 확인하세요.':empty+'.'} ${history.length?'지난 브리프는 날짜 메뉴에서 확인할 수 있습니다.':'아직 보관된 지난 브리프가 없습니다. 보관 시작 이후의 기록만 표시합니다.'}</p>`;
  }
  async function load(){
   try{const r=await fetch('./data/briefing.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();current=checked(await r.json());lastError=false;}catch(_){lastError=true;}

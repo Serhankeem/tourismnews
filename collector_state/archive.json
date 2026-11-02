@@ -206,12 +206,18 @@
       "first_published_by_engine_at": "2026-11-01T22:00:22+09:00",
       "editorial": {
         "version": "0.3-editorial-1",
-        "tier": "reference",
-        "rank": 2,
-        "label": "참고용 해외 산업 자료",
-        "korea_connection": "not_established",
-        "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "문광연,",
+            "rule": "named_korean_tourism_institution_activity"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
       }
     },
     {

@@ -5,6 +5,7 @@ mentions tourism, or was written by a Korean publisher. Filing records are
 preserved for research but never part of the default Newsroom or briefing.
 """
 import re
+import datetime as dt
 
 TIERS = {'korea_direct': (0, '한국 관광산업 직접 관련'),
          'global_major': (1, '글로벌 관광산업 주요 변화'),
@@ -63,6 +64,12 @@ def exposure(article):
         if ('quantified_tourism_demand_headline' in article.get('relevance_evidence', {}).get('rules', []) and '한국인' in title):
             evidence.append({'field': 'title', 'value': '한국인 관광소비 의향',
                              'rule': 'explicit_korean_consumer_demand'})
+        # A named Korean research institution + tourism-development activity
+        # proves a domestic subject; the publisher's country alone never does.
+        agency = re.search(r'(?:한국문화관광연구원|문광연)(?:[은는이가,·\s]|$)', title)
+        if agency and re.search(r'지역관광개발.*워크숍', title):
+            evidence.append({'field': 'title', 'value': agency.group().strip(),
+                             'rule': 'named_korean_tourism_institution_activity'})
         if article.get('source_id', '').startswith('seoul_'):
             place = re.search(r'서울|동대문|남산|봉은사|제주|철원|부산|인천', title)
             foreign = re.search(r'영국|미국|일본|중국|런던|tokyo|london|united kingdom|united states', text)
@@ -92,6 +99,26 @@ def exposure(article):
             'evidence': evidence, 'reason': reason}
 
 
+def publication_order(article):
+    """UTC instants, deterministic URL/id ties; never rewrite source precision.
+
+    Date-only records use their day lower bound in KST for ordering only, and
+    remain ineligible for a rolling-hour briefing. Invalid/unverified dates last.
+    """
+    raw = article.get('published_at', '')
+    try:
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', raw):
+            stamp = dt.datetime.fromisoformat(raw).replace(tzinfo=dt.timezone(dt.timedelta(hours=9)))
+        elif re.search(r'T\d{2}:\d{2}', raw) and re.search(r'(Z|[+-]\d{2}:?\d{2})$', raw):
+            stamp = dt.datetime.fromisoformat(raw.replace('Z', '+00:00'))
+        else:
+            raise ValueError('unverified_publication_date')
+        value = stamp.timestamp() if article.get('publication_time_verified_for_news') is not False else float('-inf')
+    except (ValueError, TypeError, OverflowError):
+        value = float('-inf')
+    return (-value, article.get('url', ''), article.get('id', ''))
+
+
 def project(articles):
     """Annotate copies; never delete/change the canonical stored record list."""
     stored = []
@@ -113,6 +140,5 @@ def project(articles):
         stored.append(record)
     newsroom = [a for a in stored if a['record_type'] == 'news' and not a.get('archived_only', False)]
     filings = [a for a in stored if a['record_type'] == 'regulatory_filing']
-    newsroom.sort(key=lambda a: a['published_at'], reverse=True)
-    newsroom.sort(key=lambda a: a['editorial']['rank'])
+    newsroom.sort(key=publication_order)
     return stored, newsroom, filings
