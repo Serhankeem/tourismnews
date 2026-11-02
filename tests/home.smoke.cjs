@@ -75,7 +75,8 @@ const crypto=require('node:crypto');
   const mobile=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});mobile.on('pageerror',e=>errors.push(e.message));
   await mobile.goto(base);await mobile.waitForFunction(()=>!newsLoading&&NEWS.length>0);
   await mobile.locator('#brand-logo').waitFor({state:'visible'});await checkLogoRatio(mobile);
-  assert.equal(await mobile.locator('.primary-navigation').isVisible(),true);
+  assert.equal(await mobile.locator('.primary-navigation').isVisible(),false);
+  await mobile.locator('#header-menu-toggle').click();
   const toggle=mobile.locator('#news-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');
   await mobile.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await toggle.evaluate(el=>document.activeElement===el),true);
   for(const route of ['weather','news','briefing','research','macro','about']){

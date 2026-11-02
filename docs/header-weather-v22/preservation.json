@@ -1,0 +1,34 @@
+{
+  "base_commit": "f46fbc280a09aefdfe48896a6a1fc9d5b76b1264",
+  "groups": {
+    "engines": {
+      "files": 24,
+      "sha256": "786dbc8ae6a8d5131ef449319bb7b30eb8c59aa0aecf075b607ea880ef159f78",
+      "unchanged": true
+    },
+    "public_data": {
+      "files": 11,
+      "sha256": "178a191f0d3f38d90a32458b61ab9e6fedb8d3084a65cf06892fcbdb2a5bff54",
+      "unchanged": true
+    },
+    "private_state": {
+      "files": 17,
+      "sha256": "46fe326ea990a4bfb377e73b2c0eea1d8864e846eb2b3d4aff223d426f93c277",
+      "unchanged": true
+    },
+    "automation": {
+      "files": 3,
+      "sha256": "3e247759f6299c0e299fad8095b0dc279a35a1a064c5a389285ac40ac3229b12",
+      "unchanged": true
+    },
+    "gates_and_sources": {
+      "files": 5,
+      "sha256": "439d381efecc35e94913ae6ace59f700d23115062280454db002d043c457eb73",
+      "unchanged": true
+    }
+  },
+  "weather_function_sha256": "5091d7c5751cb44c1dd324f4bb55e35778f22206a4912b66db09063e5bd35754",
+  "logo_sha256": "7f92affea61c57197f2b015576cb7bcaf604defb0ac270894157d8e94d070b7f",
+  "news_sort_and_banner_code_unchanged": true,
+  "research_reports": 135
+}

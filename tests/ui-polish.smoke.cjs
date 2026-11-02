@@ -61,6 +61,7 @@ const fs=require('node:fs');
    await page.locator('#research-search').fill(longest.title);assert.equal(await page.locator('#research-results h3').count(),1);assert.equal((await page.locator('#research-results h3').textContent()).trim(),longest.title);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Long English title must wrap');
    if(width<=1024){
+    if(await page.locator('#header-menu-toggle').isVisible())await page.locator('#header-menu-toggle').click();
     const toggle=page.locator('#news-menu-toggle');await toggle.click();assert.equal(await toggle.getAttribute('aria-expanded'),'true');await page.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await toggle.evaluate(n=>document.activeElement===n),true);
     await toggle.click();await clickNav(page,'about');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
     await page.locator('#brand-logo').click();assert.equal(await page.locator('#page-overview').isVisible(),true);

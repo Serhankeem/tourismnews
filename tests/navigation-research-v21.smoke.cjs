@@ -7,7 +7,8 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
    const page=await browser.newPage({viewport:{width,height:1100}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
    await page.goto(base);await page.waitForFunction(()=>!newsLoading&&ResearchLibrary?.database.reports.length>0);
    const top=page.locator('.primary-navigation>a,.primary-navigation>.news-nav>button'),toggle=page.locator('#news-menu-toggle');
-   assert.deepEqual((await top.allTextContents()).map(t=>t.trim()),['오늘의 관광 날씨는?','뉴스 ▾','관광지표','소개']);assert.equal(await page.locator('#menu-toggle').count(),0);
+   assert.deepEqual((await top.allTextContents()).map(t=>t.trim()),['오늘의 관광 날씨는?','뉴스 ▾','관광지표','소개']);const compact=await page.locator('#header-menu-toggle').isVisible();
+   if(compact){assert.equal(await page.locator('.primary-navigation').isVisible(),false);await page.locator('#header-menu-toggle').click();}
    for(const n of await top.all()){assert.ok(await n.isVisible());const r=await n.boundingBox();assert.ok(r.height>=44&&r.x>=0&&r.x+r.width<=width);}
    assert.equal(await toggle.getAttribute('aria-controls'),'news-submenu');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
    if([390,1440].includes(width))await page.screenshot({path:`${dir}/navigation-closed-${width}.png`});
@@ -16,7 +17,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
    if([390,1440].includes(width))await page.screenshot({path:`${dir}/navigation-open-${width}.png`});
    const box=await page.locator('#news-submenu').boundingBox();assert.ok(box.x>=0&&box.x+box.width<=width);for(const link of await page.locator('#news-submenu a').all())assert.ok(await link.evaluate(n=>{const r=n.getBoundingClientRect();return n.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));}),'All dropdown links must be above content and unclipped');
    await page.keyboard.press('Tab');assert.equal(await page.locator('#news-submenu a').first().evaluate(e=>e===document.activeElement),true);await page.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.ok(await toggle.evaluate(e=>e===document.activeElement));
-   await page.keyboard.press('Enter');await page.locator('#page-overview h1').click({position:{x:5,y:5}});assert.equal(await toggle.getAttribute('aria-expanded'),'false');
+   await page.keyboard.press('Enter');await page.locator('.brand-home').click();assert.equal(await toggle.getAttribute('aria-expanded'),'false');
    for(const route of ['weather','news','briefing','research','macro','about']){
     await clickNav(page,route);assert.equal(await page.locator('#page-'+route).isVisible(),true);assert.equal(await toggle.getAttribute('aria-expanded'),'false');assert.equal(await page.locator(`[data-nav="${route}"]`).getAttribute('aria-current'),'page');
     if(['news','briefing','research'].includes(route))assert.ok(await toggle.evaluate(e=>e.classList.contains('active')));
@@ -47,6 +48,6 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
    await page.locator('.site-footer [data-goto="sources"]').click();const target=await page.locator('#data-sources').boundingBox(),header=await page.locator('.site-header').boundingBox();assert.ok(target.y>=header.height,'Sticky header must not obscure anchor');
    assert.deepEqual(errors,[]);await page.close();
   }
-  console.log('PASS nav/research v2.1: 4 always-visible menus, disclosure/keyboard/history/hash, 5 widths, compound filters/counts/persistence/reset/pagination, stats/anchors; no JS errors');
+  console.log('PASS nav/research v2.1: 4 top-level menus with content-fit compact disclosure, disclosure/keyboard/history/hash, 5 widths, compound filters/counts/persistence/reset/pagination, stats/anchors; no JS errors');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
