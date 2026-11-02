@@ -106,3 +106,7 @@ SEC의 과거 `robots_unverified:http_403`은 robots 응답을 확인할 수 없
 | 수정 후 홈 | [1440px](screenshots/after-overview-1440.png) | [390px](screenshots/after-overview-390.png) |
 | 수정 전 뉴스룸 | [1440px](screenshots/before-news-1440.png) | [390px](screenshots/before-news-390.png) |
 | 수정 후 뉴스룸 | [1440px](screenshots/after-news-1440.png) | [390px](screenshots/after-news-390.png) |
+
+## PR 생성 후 main 자동 갱신 반영
+
+PR 생성 직후 main에 `ae69426` 자동 수집 데이터 커밋이 추가되어 PR 브랜치로 병합했습니다(main으로 병합한 것이 아님). 그 최신 운영 데이터·원장·발행 및 수집 시각을 보존한 상태에서 동일 39건의 정렬과 현재 후보를 재투영했습니다. 이전 확정 아카이브·Research 135건은 그대로이며 Python·브라우저 전체 회귀와 화면 캡처를 최신 데이터로 다시 확인했습니다. 위 조사표는 첫 재현 시점과 읽기 전용 재검증의 이력으로 유지합니다.

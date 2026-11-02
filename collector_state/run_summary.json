@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-02T14:09:42+09:00",
+  "checked_at": "2026-11-02T14:13:13+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
   "received": 570,
-  "new_discoveries": 21,
-  "duplicate_observations": 352,
+  "new_discoveries": 1,
+  "duplicate_observations": 372,
   "new_auto_published": 0,
   "total_published": 43,
   "total_archived": 43,
@@ -85,8 +85,8 @@
     "문화·트렌드": 11,
     "경제·시장": 0
   },
-  "discovered_last24h": 207,
-  "discovered_last7d": 1576,
+  "discovered_last24h": 208,
+  "discovered_last7d": 1577,
   "auto_published_last24h": 3,
   "auto_published_last7d": 34,
   "originally_published_last24h": 3,
@@ -98,8 +98,8 @@
       "url": "https://www.mcst.go.kr/common/rss/press.jsp",
       "group": "public",
       "received": 10,
-      "new_discoveries": 1,
-      "duplicates": 9,
+      "new_discoveries": 0,
+      "duplicates": 10,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -122,10 +122,10 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9866666666666667,
+      "success_rate": 0.9868421052631579,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "discovered_not_publishable"
+      "outcome": "no_new_candidate"
     },
     {
       "id": "korea_net_travel",
@@ -207,8 +207,8 @@
       "url": "https://mediahub.seoul.go.kr/news/rss/06",
       "group": "public",
       "received": 20,
-      "new_discoveries": 2,
-      "duplicates": 18,
+      "new_discoveries": 0,
+      "duplicates": 20,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -231,19 +231,19 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9733333333333334,
+      "success_rate": 0.9736842105263158,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "discovered_not_publishable"
+      "outcome": "no_new_candidate"
     },
     {
       "id": "seoul_economy",
       "name": "서울시 내 손안에 서울 경제",
       "url": "https://mediahub.seoul.go.kr/news/rss/04",
       "group": "public",
-      "received": 0,
-      "new_discoveries": 0,
-      "duplicates": 0,
+      "received": 20,
+      "new_discoveries": 1,
+      "duplicates": 19,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -251,7 +251,7 @@
       "classifications": {
         "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 0
+        "Irrelevant": 20
       },
       "publication_policy": {
         "status": "approved",
@@ -265,13 +265,11 @@
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
-      "status": "error",
-      "error_kind": "transport_error",
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-      "success_rate": 0.96,
+      "status": "ok",
+      "success_rate": 0.9605263157894737,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "fetch_failed"
+      "outcome": "discovered_not_publishable"
     },
     {
       "id": "seoul_transport",
@@ -303,7 +301,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.7333333333333333,
+      "success_rate": 0.7368421052631579,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -313,9 +311,9 @@
       "name": "서울시 내 손안에 서울 환경",
       "url": "https://mediahub.seoul.go.kr/news/rss/05",
       "group": "public",
-      "received": 20,
+      "received": 0,
       "new_discoveries": 0,
-      "duplicates": 20,
+      "duplicates": 0,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -323,7 +321,7 @@
       "classifications": {
         "Direct": 0,
         "Indirect": 0,
-        "Irrelevant": 20
+        "Irrelevant": 0
       },
       "publication_policy": {
         "status": "approved",
@@ -337,11 +335,13 @@
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
-      "status": "ok",
-      "success_rate": 0.48,
+      "status": "error",
+      "error_kind": "transport_error",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+      "success_rate": 0.47368421052631576,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "fetch_failed"
     },
     {
       "id": "sec_booking",
@@ -859,8 +859,8 @@
       "url": "https://www.yna.co.kr/rss/economy.xml",
       "group": "media",
       "received": 120,
-      "new_discoveries": 18,
-      "duplicates": 102,
+      "new_discoveries": 0,
+      "duplicates": 120,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -886,7 +886,7 @@
       "success_rate": 1.0,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "discovered_not_publishable"
+      "outcome": "no_new_candidate"
     },
     {
       "id": "traveltimes",
