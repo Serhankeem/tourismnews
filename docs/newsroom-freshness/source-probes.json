@@ -1,0 +1,131 @@
+{
+  "method": "read_only_existing_robots_aware_loader_verified_tls_no_article_fetch_no_publication",
+  "observations": [
+    {
+      "id": "mcst_press",
+      "name": "문화체육관광부 보도자료",
+      "checked_at": "2026-11-02T05:14:23.840997+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503"
+    },
+    {
+      "id": "kosis_recent",
+      "name": "KOSIS 최근수록자료",
+      "checked_at": "2026-11-02T05:14:33.530952+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503"
+    },
+    {
+      "id": "seoul_culture",
+      "name": "서울시 내 손안에 서울 문화",
+      "checked_at": "2026-11-02T05:14:39.783249+00:00",
+      "status": "ok",
+      "received": 20
+    },
+    {
+      "id": "seoul_economy",
+      "name": "서울시 내 손안에 서울 경제",
+      "checked_at": "2026-11-02T05:14:46.610392+00:00",
+      "status": "ok",
+      "received": 20
+    },
+    {
+      "id": "seoul_transport",
+      "name": "서울시 내 손안에 서울 교통",
+      "checked_at": "2026-11-02T05:14:48.780353+00:00",
+      "status": "ok",
+      "received": 20
+    },
+    {
+      "id": "seoul_environment",
+      "name": "서울시 내 손안에 서울 환경",
+      "checked_at": "2026-11-02T05:14:51.147653+00:00",
+      "status": "ok",
+      "received": 20
+    },
+    {
+      "id": "sec_booking",
+      "name": "SEC EDGAR · Booking Holdings",
+      "checked_at": "2026-11-02T05:14:53.162343+00:00",
+      "status": "ok",
+      "received": 47
+    },
+    {
+      "id": "sec_expedia",
+      "name": "SEC EDGAR · Expedia Group",
+      "checked_at": "2026-11-02T05:14:53.646801+00:00",
+      "status": "ok",
+      "received": 38
+    },
+    {
+      "id": "sec_marriott",
+      "name": "SEC EDGAR · Marriott International",
+      "checked_at": "2026-11-02T05:14:53.771403+00:00",
+      "status": "ok",
+      "received": 34
+    },
+    {
+      "id": "sec_hilton",
+      "name": "SEC EDGAR · Hilton Worldwide",
+      "checked_at": "2026-11-02T05:14:53.864199+00:00",
+      "status": "ok",
+      "received": 46
+    },
+    {
+      "id": "sec_delta",
+      "name": "SEC EDGAR · Delta Air Lines",
+      "checked_at": "2026-11-02T05:14:54.112802+00:00",
+      "status": "ok",
+      "received": 40
+    },
+    {
+      "id": "sec_united",
+      "name": "SEC EDGAR · United Airlines",
+      "checked_at": "2026-11-02T05:14:54.179483+00:00",
+      "status": "ok",
+      "received": 38
+    },
+    {
+      "id": "sec_tripcom",
+      "name": "SEC EDGAR · Trip.com Group",
+      "checked_at": "2026-11-02T05:14:54.311375+00:00",
+      "status": "ok",
+      "received": 23
+    },
+    {
+      "id": "govuk_tourism",
+      "name": "GOV.UK · tourism",
+      "checked_at": "2026-11-02T05:14:54.757401+00:00",
+      "status": "ok",
+      "received": 100
+    },
+    {
+      "id": "govuk_aviation",
+      "name": "GOV.UK · aviation",
+      "checked_at": "2026-11-02T05:14:55.127807+00:00",
+      "status": "ok",
+      "received": 100
+    },
+    {
+      "id": "traveltimes",
+      "name": "여행신문",
+      "checked_at": "2026-11-02T05:15:02.780094+00:00",
+      "status": "ok",
+      "received": 50
+    },
+    {
+      "id": "traveldaily",
+      "name": "트래블데일리",
+      "checked_at": "2026-11-02T05:15:06.560771+00:00",
+      "status": "ok",
+      "received": 50
+    },
+    {
+      "id": "ttlnews",
+      "name": "퍼블릭뉴스통신(TTL)",
+      "checked_at": "2026-11-02T05:15:09.411851+00:00",
+      "status": "ok",
+      "received": 50
+    }
+  ]
+}

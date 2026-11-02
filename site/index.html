@@ -242,8 +242,8 @@ async function loadLiveNews(){
   if(!response.ok)throw new Error('새 뉴스 DB가 아직 생성되지 않았습니다.');
   const db=await response.json();
   const visible=db.articles.filter(a=>(a.record_type||'news')==='news'&&!a.archived_only&&a.source_id!=='kosis_recent'&&!/^KOSIS(?:\s|$)/i.test(a.source||''));
-  // Six-field views arrive in server editorial order; legacy payloads retain their old sort.
-  if(visible.some(a=>a.editorial)){visible.sort((a,b)=>String(b.published_at).localeCompare(String(a.published_at)));visible.sort((a,b)=>(a.editorial?.rank??2)-(b.editorial?.rank??2));}
+  // Always sort six-field public records by the original publication instant.
+  visible.sort(compareNewsPublication);
   db.count=visible.length;
   if(db.mode==='fixture_demo'){
    status.textContent='TEST DATA';

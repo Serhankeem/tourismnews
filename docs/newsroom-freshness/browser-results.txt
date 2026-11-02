@@ -1,0 +1,21 @@
+newsroom-freshness.smoke.cjs 0 PASS: real Nov 2 first, home three, reversed six-field browser payload, exact original dates, time-zone ties, partial coverage and three empty/failure reasons at PC/mobile widths
+
+newsroom.smoke.cjs 0 PASS: live articles, search, detail, stable bookmark, partial/all-failure status, preservation, briefing and legacy fallback, six-field link curation, all-page pagination/link coverage, filing/statistics exclusion and internal archive isolation; no JS errors
+
+macro.smoke.cjs 0 PASS: real official monthly history, home/Macro exact values, 4 widths, definitions/pending financial metrics, ranges/gaps/missing growth, source-date/finality, refresh/all-failure preservation, empty initial state, private archive isolation and unchanged weather simulation
+
+home.smoke.cjs 0 PASS: real home metadata/order/freshness, desktop/mobile four-group navigation, home logo link, keyboard menu, deep links/history, About dynamic source status, chart, weather/reset, Research preservation; no JS errors
+
+reports.smoke.cjs 0 PASS: 135 real reports; full-DB search, combined filters, 10/20 pagination/reset, sort, original links, no images/bodies, preservation, Newsroom pagination, PC/mobile layout
+
+ui-2.smoke.cjs 0 PASS UI 2.0: four widths, 4 weather states, logos, banner persistence/dialog, sources table, both pagers, routes; no JS errors
+
+navigation-research-v21.smoke.cjs 0 PASS nav/research v2.1: 4 always-visible menus, disclosure/keyboard/history/hash, 5 widths, compound filters/counts/persistence/reset/pagination, stats/anchors; no JS errors
+
+ui-polish.smoke.cjs 0 PASS: 28 page/width combinations; layout, original logo, 40px+ controls, keyboard/focus, readable real chart labels, long real report title, unchanged weather calculation, reduced motion
+
+research-v05.smoke.cjs 0 PASS Research v0.5: real new publishers, MICE/aviation/hotel filters, original links/dates/attribution, no images, desktop/mobile and Weather preservation
+
+briefing-observation.smoke.cjs 0 PASS: briefing archive/date/copy/empty/failure preservation; official observations/updates/failure/financial exclusion; four widths
+
+market-weather-v2.smoke.cjs 0 PASS Weather v2: shared official values/source/month, 12-month chart/missing/comparisons, corrections/delay/failures/financial exclusion, scenario isolation/colors/keyboard/reset, four widths

@@ -1,0 +1,201 @@
+{
+  "snapshot_at": "2026-11-02T11:59:00+09:00",
+  "articles": [
+    {
+      "title": "학생이 떠난 캠퍼스, 관광지가 될 수 있을까 [고성호의 관광 개발 이야기]",
+      "source": "여행신문",
+      "published_at": "2026-11-02T00:05:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500619",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광개발"
+      ],
+      "id": "cfe7d8d571100240f8",
+      "source_id": "traveltimes",
+      "record_type": "news",
+      "date_precision": "timestamp",
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광개발"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "title": "9월 인바운드 21.1% 아웃바운드 1.5% 성장",
+      "source": "트래블데일리",
+      "published_at": "2026-11-01T21:10:26+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72497",
+      "category": "인바운드",
+      "keywords": [
+        "인바운드"
+      ],
+      "id": "3e6d6f8870d11a4051",
+      "source_id": "traveldaily",
+      "record_type": "news",
+      "date_precision": "timestamp",
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "인바운드"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "title": "문광연, ‘지역관광개발 하반기 워크숍’ 개최",
+      "source": "트래블데일리",
+      "published_at": "2026-11-01T21:09:15+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72530",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광개발",
+        "지역관광"
+      ],
+      "id": "a5e75ec5a3de345669",
+      "source_id": "traveldaily",
+      "record_type": "news",
+      "date_precision": "timestamp",
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 10,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "지역관광",
+              "관광개발"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "title": "문화체육관광부·한국관광공사, 티맵과 ‘로컬 드라이브 캠페인’ 진행",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-10-29T10:41:59+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3156555",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광공사"
+      ],
+      "id": "eae734d07b707a7f23",
+      "source_id": "ttlnews",
+      "record_type": "news",
+      "date_precision": "timestamp",
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "tourism_organization_market_action"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광공사",
+              "캠페인",
+              "진행"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "관광 전담기관의 구체적인 시장 유치·홍보 사업과 실행이 제목에 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "한국관광",
+            "rule": "explicit_korean_market"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    }
+  ],
+  "original_dates": [
+    "2026-11-02T00:05:00+09:00",
+    "2026-11-01T21:10:26+09:00",
+    "2026-11-01T21:09:15+09:00",
+    "2026-10-29T10:41:59+09:00"
+  ]
+}

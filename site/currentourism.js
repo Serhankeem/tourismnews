@@ -1,10 +1,23 @@
 /* UI only: reads the existing public Newsroom and Research views; no collector writes. */
+function newsPublicationTime(n){
+ const raw=n.published_at||'';
+ if(n.publication_time_verified_for_news===false)return -Infinity;
+ const value=/^\d{4}-\d{2}-\d{2}$/.test(raw)?Date.parse(raw+'T00:00:00+09:00'):
+  /T\d{2}:\d{2}.*(?:Z|[+-]\d{2}:?\d{2})$/.test(raw)?Date.parse(raw):NaN;
+ return Number.isFinite(value)?value:-Infinity;
+}
+function compareNewsPublication(a,b){
+ const x=newsPublicationTime(a),y=newsPublicationTime(b);
+ if(x!==y)return x>y?-1:1;
+ const left=a.url||'',right=b.url||'';
+ return left<right?-1:left>right?1:0;
+}
 function renderHomeNews(){
  const now=Date.now(),recent=NEWS.filter(n=>{const age=now-Date.parse(n.published_at);return Number.isFinite(age)&&age>=0&&age<=86400000;});
  const label=document.getElementById('home-news-freshness');
- // Keep the server's rights/relevance/editorial order. Never infer Korea relevance from a keyword.
- label.textContent=NEWS.length?(recent.length?`최근 24시간 발행 ${recent.length}건 · 국내 관련성 우선의 편집 순서`:'최근 24시간 발행 뉴스가 없습니다. 아래는 수록된 최근 기사이며 오늘 발행한 뉴스가 아닙니다.'):'게시 가능한 뉴스 데이터가 없습니다. 수집 상태를 확인해 주세요.';
- document.getElementById('overview-news').innerHTML=NEWS.length?NEWS.slice(0,3).map(n=>`<article class="home-news-item"><div class="news-meta"><span class="category">${escapeHtml(n.category)}</span><span>${escapeHtml(n.source)}</span><time datetime="${escapeHtml(n.published_at)}">${escapeHtml(n.date)}</time></div><h3><a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a></h3><p class="news-keywords">${n.keywords.map(escapeHtml).join(' · ')}</p></article>`).join(''):'<div class="empty">실제 수집 결과가 아직 없습니다.</div>';
+ const ordered=[...NEWS].sort(compareNewsPublication);
+ label.textContent=NEWS.length?(recent.length?`최근 24시간 발행 ${recent.length}건 · 원문 발행일 최신순`:'최근 24시간 발행 뉴스가 없습니다. 아래는 수록된 최근 기사이며 오늘 발행한 뉴스가 아닙니다.'):'게시 가능한 뉴스 데이터가 없습니다. 수집 상태를 확인해 주세요.';
+ document.getElementById('overview-news').innerHTML=NEWS.length?ordered.slice(0,3).map(n=>`<article class="home-news-item"><div class="news-meta"><span class="category">${escapeHtml(n.category)}</span><span>${escapeHtml(n.source)}</span><time datetime="${escapeHtml(n.published_at)}">${escapeHtml(n.date)}</time></div><h3><a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a></h3><p class="news-keywords">${n.keywords.map(escapeHtml).join(' · ')}</p></article>`).join(''):'<div class="empty">실제 수집 결과가 아직 없습니다.</div>';
 }
 function syncHomeWeather(){
  const title=document.getElementById('weather-title').textContent;

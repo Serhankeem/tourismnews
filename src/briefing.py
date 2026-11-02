@@ -16,6 +16,21 @@ else:
     from publication import public_record
 
 
+def recent_news(newsroom, at):
+    """Count verified publication instants independently of editorial tier."""
+    rows = []
+    for a in newsroom:
+        raw = a.get('published_at', '')
+        if (a.get('record_type', 'news') != 'news' or a.get('archived_only')
+                or a.get('date_precision') == 'date' or a.get('publication_time_verified_for_news') is False
+                or not re.search(r'T\d{2}:\d{2}', raw)
+                or not re.search(r'(Z|[+-]\d{2}:?\d{2})$', raw)):
+            continue
+        if at-dt.timedelta(hours=24) <= c.timestamp(raw, dt.datetime.min.replace(tzinfo=c.KST)) <= at:
+            rows.append(a)
+    return rows
+
+
 def select(newsroom, at):
     eligible=[]; decisions=[]
     for a in newsroom:
@@ -44,10 +59,23 @@ def select(newsroom, at):
     return chosen,decisions
 
 
-def save(newsroom, data_dir, state_dir, at, last_success, mode='live_rss'):
+def save(newsroom, data_dir, state_dir, at, last_success, mode='live_rss', collection=None):
     selected,decisions=select(newsroom,at)
+    recent=recent_news(newsroom,at)
+    selection_status='candidates_ready' if selected else 'no_eligible_recent_articles' if recent else 'no_recent_articles'
+    sources=(collection or {}).get('sources', [])
+    failed=sum(row.get('status') != 'ok' for row in sources)
+    coverage={'status': 'partial' if failed and failed < len(sources) else 'failed' if failed else 'complete' if sources else 'unknown',
+              'successful_sources': len(sources)-failed, 'source_count': len(sources), 'failed_sources': failed}
+    # Rejection evidence stays internal; public article records retain six fields.
+    selected_ids={a.get('id') for a in selected}
+    for a in recent:
+        if a.get('id') not in selected_ids and a.get('editorial',{}).get('tier') not in ('korea_direct','global_major'):
+            decisions.append({'article_id': a.get('id'), 'decision': 'editorial_ineligible',
+                              'tier': a.get('editorial',{}).get('tier'), 'published_at': a['published_at']})
     current=dict(schema_version=5,generated_at=c.iso(at),briefing_date=at.astimezone(c.KST).date().isoformat(),
-                 last_successful_fetch=last_success,status='candidates_ready' if selected else 'no_recent_articles',
+                 last_successful_fetch=last_success,status=selection_status,
+                 recent_news_count=len(recent), selected_count=len(selected), collection=coverage,
                  mode=mode,title='관광산업 주요 뉴스 브리핑 후보',items=[public_record(a) for a in selected],
                  notice='메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다.')
     path=data_dir/'briefing_archive.json'

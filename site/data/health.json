@@ -303,8 +303,8 @@
     "other_research_count": 3,
     "new_newsroom_items": 0,
     "new_filings": 0,
-    "newsroom_korea_direct_count": 18,
-    "newsroom_korea_direct_last7d": 13,
+    "newsroom_korea_direct_count": 19,
+    "newsroom_korea_direct_last7d": 14,
     "newsroom_by_source": {
       "govuk_aviation": {
         "count": 3,
@@ -327,7 +327,7 @@
       "traveldaily": {
         "count": 10,
         "originally_published_last7d": 8,
-        "korea_direct": 4,
+        "korea_direct": 5,
         "new_this_run": 0
       },
       "traveltimes": {
@@ -352,9 +352,9 @@
       "경제·시장": 0
     },
     "newsroom_tier_counts": {
-      "korea_direct": 18,
+      "korea_direct": 19,
       "global_major": 0,
-      "reference": 21
+      "reference": 20
     },
     "newsroom_originally_published_last24h": 3,
     "newsroom_originally_published_last7d": 27,
@@ -1305,5 +1305,11 @@
       }
     ],
     "outcome": "no_new_publications_with_source_errors"
+  },
+  "briefing": {
+    "status": "ok",
+    "checked_at": "2026-11-02T14:16:14+09:00",
+    "selection_status": "candidates_ready",
+    "operation": "existing_authorized_metadata_reprojection_no_new_fetch"
   }
 }

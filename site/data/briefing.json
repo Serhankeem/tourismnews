@@ -1,11 +1,31 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-02T14:09:42+09:00",
+  "generated_at": "2026-11-02T14:16:14+09:00",
   "briefing_date": "2026-11-02",
   "last_successful_fetch": "2026-11-02T14:09:42+09:00",
-  "status": "no_recent_articles",
+  "status": "candidates_ready",
+  "recent_news_count": 3,
+  "selected_count": 1,
+  "collection": {
+    "status": "partial",
+    "successful_sources": 9,
+    "source_count": 18,
+    "failed_sources": 9
+  },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
-  "items": [],
+  "items": [
+    {
+      "title": "문광연, ‘지역관광개발 하반기 워크숍’ 개최",
+      "source": "트래블데일리",
+      "published_at": "2026-11-01T21:09:15+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72530",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광개발",
+        "지역관광"
+      ]
+    }
+  ],
   "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
 }
