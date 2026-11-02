@@ -47,4 +47,3 @@ Automatic and manual entries are counted separately. Year/month precision is pre
 - UN Tourism: blocked — robots request HTTP 403; source content not requested. Official publication/archive route and rights not verified.
 - IATA: blocked — Economics terms explicitly say no data scraping; no automatic catalog harvesting. Manual bibliographic use requires scope/attribution clarification, not counted as automatic supply.
 - WTTC: blocked — Site terms limit content/database use to personal noncommercial scope unless permission granted. A public professional library is not assumed to be personal use; platform metadata scope needs clarification.
-
