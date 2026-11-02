@@ -1,16 +1,16 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-03T04:08:25+09:00",
+  "generated_at": "2026-11-03T05:54:54+09:00",
   "briefing_date": "2026-11-03",
-  "last_successful_fetch": "2026-11-03T04:08:25+09:00",
+  "last_successful_fetch": "2026-11-03T05:54:54+09:00",
   "status": "candidates_ready",
   "recent_news_count": 6,
   "selected_count": 3,
   "collection": {
     "status": "partial",
-    "successful_sources": 14,
+    "successful_sources": 13,
     "source_count": 24,
-    "failed_sources": 10
+    "failed_sources": 11
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
