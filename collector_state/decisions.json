@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-02T11:20:47+09:00",
+  "checked_at": "2026-11-02T11:59:57+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -2051,24 +2051,6 @@
       "id": "af122f6ff692541277",
       "title": "“하이퐁, 베트남의 새로운 골프 여행지로 키울 것”",
       "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500562",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "bfa78b0f009d3ec1ab",
-      "title": "바다에 뜨지도 못하던 내가, 팔라우에 빠졌다",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500606",
       "source_id": "traveltimes",
       "relevance_evidence": {
         "rule_version": "0.2",

@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-02T11:20:47+09:00",
-  "last_successful_fetch": "2026-11-02T11:20:47+09:00",
+  "checked_at": "2026-11-02T11:59:57+09:00",
+  "last_successful_fetch": "2026-11-02T11:59:57+09:00",
   "status": "partial",
   "sources": [
     {
@@ -212,13 +212,13 @@
       "name": "여행신문",
       "url": "https://www.traveltimes.co.kr/rss/allArticle.xml",
       "status": "ok",
-      "rss_items": 34,
+      "rss_items": 33,
       "matched": 9,
       "held": 0,
       "relevance_counts": {
         "Direct": 9,
         "Indirect": 0,
-        "Irrelevant": 25
+        "Irrelevant": 24
       },
       "category_published": {
         "관광정책": 0,
@@ -289,12 +289,12 @@
   "review_queue_count": 1,
   "discovery": {
     "schema_version": 3,
-    "checked_at": "2026-11-02T11:20:47+09:00",
+    "checked_at": "2026-11-02T11:59:57+09:00",
     "publication_result": "partial",
     "discovery_status": "partial",
     "received": 570,
-    "new_discoveries": 36,
-    "duplicate_observations": 338,
+    "new_discoveries": 10,
+    "duplicate_observations": 363,
     "new_auto_published": 0,
     "total_published": 43,
     "total_archived": 43,
@@ -374,8 +374,8 @@
       "문화·트렌드": 11,
       "경제·시장": 0
     },
-    "discovered_last24h": 195,
-    "discovered_last7d": 1545,
+    "discovered_last24h": 199,
+    "discovered_last7d": 1555,
     "auto_published_last24h": 3,
     "auto_published_last7d": 34,
     "originally_published_last24h": 3,
@@ -387,8 +387,8 @@
         "url": "https://www.mcst.go.kr/common/rss/press.jsp",
         "group": "public",
         "received": 10,
-        "new_discoveries": 1,
-        "duplicates": 9,
+        "new_discoveries": 0,
+        "duplicates": 10,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -411,10 +411,10 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9863013698630136,
+        "success_rate": 0.9864864864864865,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
-        "outcome": "discovered_not_publishable"
+        "outcome": "no_new_candidate"
       },
       {
         "id": "korea_net_travel",
@@ -520,7 +520,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9726027397260274,
+        "success_rate": 0.972972972972973,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -555,7 +555,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.9726027397260274,
+        "success_rate": 0.972972972972973,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -590,7 +590,7 @@
           "limitation": "Only items currently returned by the official feed. No article or archive crawling."
         },
         "status": "ok",
-        "success_rate": 0.726027397260274,
+        "success_rate": 0.7297297297297297,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "no_new_candidate"
@@ -627,7 +627,7 @@
         "status": "error",
         "error_kind": "transport_error",
         "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-        "success_rate": 0.4794520547945205,
+        "success_rate": 0.47297297297297297,
         "new_auto_published": 0,
         "new_newsroom_items": 0,
         "outcome": "fetch_failed"
@@ -1148,8 +1148,8 @@
         "url": "https://www.yna.co.kr/rss/economy.xml",
         "group": "media",
         "received": 120,
-        "new_discoveries": 35,
-        "duplicates": 85,
+        "new_discoveries": 10,
+        "duplicates": 110,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
@@ -1184,15 +1184,15 @@
         "group": "media",
         "received": 50,
         "new_discoveries": 0,
-        "duplicates": 34,
+        "duplicates": 33,
         "rights_holds": 0,
         "date_holds": 0,
         "invalid_metadata": 0,
-        "outside_window": 16,
+        "outside_window": 17,
         "classifications": {
           "Direct": 9,
           "Indirect": 0,
-          "Irrelevant": 25
+          "Irrelevant": 24
         },
         "publication_policy": {
           "status": "approved",
