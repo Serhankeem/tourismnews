@@ -1,21 +1,21 @@
 {
   "version": "0.5",
-  "checked_at": "2026-11-02T13:24:45+09:00",
-  "status": "partial",
+  "checked_at": "2026-11-02T14:11:20+09:00",
+  "status": "no_due_sources",
   "target_sources": 11,
   "source_coverage": 11,
   "connected_sources": 6,
   "publishing_sources": 5,
   "candidate_reports": 232,
-  "candidates_this_run": 43,
-  "verified_candidates_this_run": 43,
-  "verified_this_run": 43,
+  "candidates_this_run": 0,
+  "verified_candidates_this_run": 0,
+  "verified_this_run": 0,
   "verified_reports": 175,
   "verified_automatic_reports": 175,
   "verified_manual_reports": 0,
-  "excluded_this_run": 37,
+  "excluded_this_run": 0,
   "duplicate_reports": 0,
-  "duplicate_observations": 43,
+  "duplicate_observations": 0,
   "published_reports": 135,
   "archived_reports": 135,
   "new_reports_this_run": 0,
@@ -153,13 +153,12 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "not_selected_for_this_run",
-      "last_successful_at": null
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     {
       "id": "kcti",
       "publisher": "한국문화관광연구원",
-      "status": "error",
+      "status": "not_due",
       "candidate_reports": 0,
       "access_verified_candidates": 0,
       "rights_reviewed_candidates": 0,
@@ -173,9 +172,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "error": "HTTP Error 403: Forbidden",
-      "last_successful_at": "2026-11-02T13:18:04+09:00",
-      "success_rate": 0.8
+      "last_attempt_at": "2026-11-02T13:24:45+09:00"
     },
     {
       "id": "kto",
@@ -194,8 +191,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "Official root redirects through a non-HTTPS route; corporate root robots unavailable. No bypass; permitted catalog/API and metadata scope unverified.",
-      "last_successful_at": null
+      "reason": "Official root redirects through a non-HTTPS route; corporate root robots unavailable. No bypass; permitted catalog/API and metadata scope unverified."
     },
     {
       "id": "mckinsey",
@@ -214,8 +210,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "Travel insights collection verified; tested terms candidate 404, applicable automatic metadata use terms unconfirmed. No guessed API integration.",
-      "last_successful_at": null
+      "reason": "Travel insights collection verified; tested terms candidate 404, applicable automatic metadata use terms unconfirmed. No guessed API integration."
     },
     {
       "id": "phocuswright",
@@ -234,8 +229,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "not_selected_for_this_run",
-      "last_successful_at": null
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     {
       "id": "untourism",
@@ -254,8 +248,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "robots request HTTP 403; source content not requested. Official publication/archive route and rights not verified.",
-      "last_successful_at": null
+      "reason": "robots request HTTP 403; source content not requested. Official publication/archive route and rights not verified."
     },
     {
       "id": "iata",
@@ -274,8 +267,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "Economics terms explicitly say no data scraping; no automatic catalog harvesting. Manual bibliographic use requires scope/attribution clarification, not counted as automatic supply.",
-      "last_successful_at": null
+      "reason": "Economics terms explicitly say no data scraping; no automatic catalog harvesting. Manual bibliographic use requires scope/attribution clarification, not counted as automatic supply."
     },
     {
       "id": "etc",
@@ -294,8 +286,7 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "not_selected_for_this_run",
-      "last_successful_at": null
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
     },
     {
       "id": "wttc",
@@ -314,247 +305,53 @@
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "reason": "Site terms limit content/database use to personal noncommercial scope unless permission granted. A public professional library is not assumed to be personal use; platform metadata scope needs clarification.",
-      "last_successful_at": null
+      "reason": "Site terms limit content/database use to personal noncommercial scope unless permission granted. A public professional library is not assumed to be personal use; platform metadata scope needs clarification."
     },
     {
       "id": "oecd",
       "publisher": "OECD",
-      "status": "ok",
-      "candidate_reports": 3,
-      "access_verified_candidates": 3,
-      "rights_reviewed_candidates": 3,
-      "verified_reports": 3,
-      "verified_candidates": 3,
-      "catalog_entries": 9,
-      "excluded_reports": 1,
-      "duplicate_observations": 3,
+      "status": "not_due",
+      "candidate_reports": 0,
+      "access_verified_candidates": 0,
+      "rights_reviewed_candidates": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
       "duplicate_editions_merged": 0,
       "new_reports": 0,
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "deferred_candidates": 6,
-      "last_successful_at": "2026-11-02T13:24:45+09:00",
-      "success_rate": 1.0
+      "last_attempt_at": "2026-11-02T13:24:45+09:00"
     },
     {
       "id": "koti",
       "publisher": "한국교통연구원",
-      "status": "ok",
-      "candidate_reports": 40,
-      "access_verified_candidates": 40,
-      "rights_reviewed_candidates": 40,
-      "verified_reports": 40,
-      "verified_candidates": 40,
-      "catalog_entries": 40,
-      "excluded_reports": 36,
-      "duplicate_observations": 40,
+      "status": "not_due",
+      "candidate_reports": 0,
+      "access_verified_candidates": 0,
+      "rights_reviewed_candidates": 0,
+      "verified_reports": 0,
+      "verified_candidates": 0,
+      "catalog_entries": 0,
+      "excluded_reports": 0,
+      "duplicate_observations": 0,
       "duplicate_editions_merged": 0,
       "new_reports": 0,
       "detail_errors": 0,
       "date_holds": 0,
       "rights_holds": 0,
-      "last_successful_at": "2026-11-02T13:24:45+09:00",
-      "success_rate": 1.0
+      "last_attempt_at": "2026-11-02T13:24:45+09:00"
     }
   ],
-  "errors": [
-    {
-      "source_id": "kcti",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "oecd",
-      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2022_a8dd3019-en.html",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=65273",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=63553",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=714",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=697",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=696",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=677",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=676",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=659",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=606",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=65272",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=660",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=616",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=582",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=561",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=542",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=38",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=61",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/bassRsrchReprtView.do?bbs_no=89",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=62479",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=62146",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1167",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1137",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1108",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1074",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1055",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1004",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=722",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=725",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1181",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1179",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1173",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1163",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1122",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1110",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1100",
-      "error": "outside_or_uncertain_initial_date_window"
-    },
-    {
-      "source_id": "koti",
-      "url": "https://www.koti.re.kr/user/bbs/anytmRsrchReprtView.do?bbs_no=1073",
-      "error": "outside_or_uncertain_initial_date_window"
-    }
-  ],
+  "errors": [],
   "stage_counts_this_run": {
-    "candidate": 43,
-    "access_verified": 43,
-    "metadata_verified": 43,
-    "rights_reviewed": 43,
+    "candidate": 0,
+    "access_verified": 0,
+    "metadata_verified": 0,
+    "rights_reviewed": 0,
     "newly_published": 0
   }
 }
