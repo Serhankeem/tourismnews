@@ -10,14 +10,15 @@
       "feed_url": "https://www.hospitalitynet.org/rss/news.xml",
       "terms_url": "https://www.hospitalitynet.org/rss",
       "access": "수신 20",
-      "rights": "공식 안내의 제한된 RSS 메타데이터 색인 범위만 자체 검토; 별도 기관 회신·계약 없음",
+      "rights": "지정 RSS 안내에 근거한 로컬 제한적 색인 판단. 서면 승인/포괄적 콘텐츠 이용허락 아님.",
       "coverage": "관광산업 제목 기반 관련성 필터 적용; 일반 홍보·개인 여행/할인 제외",
       "date": "RSS 원 발행일/시간대 확인",
       "reliability": "이번 1회 응답 검증; 연속 운영 관측은 병합 후 필요",
       "result": "연동",
       "reason": "공식 RSS 안내가 웹사이트 통합을 명시. Terms 4.3/6.2의 일반 무단 봇·대량 재사용 금지를 유지하며 지정 RSS 제목·출처·날짜·링크만 제공. 일반 How-to 1건 제외.",
       "recent7_direct_candidates": 3,
-      "new_auto_publishable": 3
+      "new_auto_publishable": 3,
+      "general_terms_url": "https://www.hospitalitynet.org/terms-conditions"
     },
     {
       "source": "Hotel News Resource",
@@ -26,14 +27,15 @@
       "feed_url": "https://www.hotelnewsresource.com/feeds/latest.xml",
       "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
       "access": "수신 20",
-      "rights": "공식 안내의 제한된 RSS 메타데이터 색인 범위만 자체 검토; 별도 기관 회신·계약 없음",
+      "rights": "일반 이용약관 12조와 XML 색인 안내의 공개 재사용 범위 관계가 불명확. 외부 승인 미취득.",
       "coverage": "관광산업 제목 기반 관련성 필터 적용; 일반 홍보·개인 여행/할인 제외",
       "date": "RSS 원 발행일/시간대 확인",
       "reliability": "이번 1회 응답 검증; 연속 운영 관측은 병합 후 필요",
-      "result": "연동",
-      "reason": "공식 가이드가 indexing/research/content discovery 용도 XML 제공을 명시. 현재 피드의 선별된 메타데이터 색인만 연결.",
+      "result": "보류 — 신규 자동 게시 중단, 기존 검증 3건 보존",
+      "reason": "최종 재검토에서 개인정보 페이지가 연결한 실제 일반 약관 Info-legal.html을 추가 확인. service guidelines 편입(1조)과 권리 유보/서비스 제공만으로 이용허락이 아님(12조)을 함께 검토. 신규 공개 자동 게이트는 review.",
       "recent7_direct_candidates": 3,
-      "new_auto_publishable": 3
+      "new_auto_publishable": 0,
+      "general_terms_url": "https://www.hotelnewsresource.com/Info-legal.html"
     },
     {
       "source": "투어코리아",

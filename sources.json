@@ -712,10 +712,23 @@
         "additional_terms": [
           "https://www.hospitalitynet.org/terms-conditions"
         ],
-        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "basis": "Official designated RSS guide expressly describes integration on external websites. Local review permits selective six-field feed metadata indexing only, interpreted as permission for this designated RSS interface. General Terms sections 5.2 and 6.2 still prohibit unauthorized automation and reproduction/bulk reuse; the guide does not explicitly discuss its priority over those clauses. No separate written licence or blanket website/body reuse approval has been obtained.",
         "checked_at": "2026-11-03",
         "body_reuse": "not_authorized",
-        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+        "approval_authority": "repository_scope_review_not_publisher_certificate",
+        "publisher_written_permission_obtained": false,
+        "rights_review": {
+          "result": "limited_designated_feed_interpretation",
+          "guide_url": "https://www.hospitalitynet.org/rss",
+          "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+          "general_terms_sections": [
+            "5.2",
+            "6.2"
+          ],
+          "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+          "checked_on": "2026-11-03"
+        }
       },
       "backfill": {
         "mode": "provided_feed_only",
@@ -736,23 +749,37 @@
       ],
       "reuse_excerpt": false,
       "publication": {
-        "status": "approved",
+        "status": "review",
         "scope": "metadata_only",
         "noncommercial_only": true,
         "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
         "additional_terms": [
+          "https://www.hotelnewsresource.com/Info-legal.html",
           "https://www.hotelnewsresource.com/legal-privacy.html"
         ],
-        "basis": "Official feed guide states these provided XML feeds are intended for indexing, research and content discovery. Limited to a selective metadata/link index of the returned current feed; not permission for full-text, image, summary reuse, mass archive extraction or AI processing. Original headline, publisher attribution, date and direct link retained.",
+        "basis": "XML guide states indexing/research/content discovery, but does not expressly authorize public metadata redistribution. Actual general Terms of Use, linked from the privacy page, section 1 incorporates service guidelines while section 12 reserves rights and disclaims implied/express licences merely from providing a service. Their application to this public link index is unresolved. Hold NEW automatic publications pending publisher clarification; do not treat the earlier local interpretation as external approval.",
         "checked_at": "2026-11-03",
         "body_reuse": "not_authorized",
-        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+        "approval_authority": "repository_scope_review_not_publisher_certificate",
+        "publisher_written_permission_obtained": false,
+        "rights_review": {
+          "result": "public_indexing_scope_unresolved_new_publication_hold",
+          "guide_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+          "general_terms_url": "https://www.hotelnewsresource.com/Info-legal.html",
+          "general_terms_sections": [
+            "1",
+            "12"
+          ],
+          "remaining_uncertainty": "Whether feed indexing guidance permits a public noncommercial six-field index notwithstanding the general rights reservation. Publisher clarification required.",
+          "checked_on": "2026-11-03"
+        }
       },
       "backfill": {
         "mode": "provided_feed_only",
         "max_days": 90
       },
-      "notes": "Official linked XML feed tested with verified HTTPS and robots. Scope excludes appointment/promotion/generic advice without industry change. Foreign stories are not promoted to Korea-related."
+      "notes": "Existing RSS adapter remains discovery-only. NEW publication held by the existing review gate. Preserve the three previously collected records for this PR review; no body/images/excerpts. Public redistribution permission is not confirmed."
     }
   ],
   "engine": {

@@ -1,5 +1,7 @@
 # News Engine v0.4 — 출처 확대 결과
 
+> **병합 전 최종 검수 반영:** 신규 6건의 영문 키워드를 보완했습니다. Hotel News Resource의 실제 일반 이용약관을 추가 확인한 결과 공개 색인 범위가 불명확하여 **신규 자동 게시를 review 게이트로 보류**했습니다. 기존 50건·해당 출처 3건은 보존합니다. 아래 2개 출처/6건 및 20개 게시 승인 대상 수치는 최초 실증 시점의 기록이며 현재 승인 상태와 구별해야 합니다. Hospitality Net은 지정 RSS 범위의 로컬 판단이며 별도 서면 승인 완료가 아닙니다. [최종 검수 보고](PR17-final-review.md)
+
 기준: 최신 main `7926c71`(PR #16 병합 포함)을 pull한 `feat/newsroom-source-expansion-v04`. 본문·사진·RSS 설명문·AI 요약을 수집/게시 대상으로 추가하지 않았습니다. 공개 기사는 기존 6필드만 제공합니다.
 
 ## 결론과 미달 목표
@@ -74,7 +76,7 @@ Loader는 HTTP 500/502/503/504에만 최대 1회 제한 재시도하며 기존 c
 
 | 출처 | 유형 | 수집 경로 또는 공식 홈페이지 | 접근 결과 | 최종 판단과 근거 |
 |---|---|---|---|---|
-| Hospitality Net | 글로벌 | https://www.hospitalitynet.org/rss/news.xml | 수신 20 | 연동 — 공식 RSS 안내가 웹사이트 통합을 명시. Terms 4.3/6.2의 일반 무단 봇·대량 재사용 금지를 유지하며 지정 RSS 제목·출처·날짜·링크만 제공. 일반 How-to 1건 제외. |
+| Hospitality Net | 글로벌 | https://www.hospitalitynet.org/rss/news.xml | 수신 20 | 연동 — 공식 RSS 안내가 웹사이트 통합을 명시. Terms 5.2/6.2의 일반 무단 봇·대량 재사용 금지를 유지하며 지정 RSS 제목·출처·날짜·링크만 제공. 일반 How-to 1건 제외. |
 | Hotel News Resource | 글로벌 | https://www.hotelnewsresource.com/feeds/latest.xml | 수신 20 | 연동 — 공식 가이드가 indexing/research/content discovery 용도 XML 제공을 명시. 현재 피드의 선별된 메타데이터 색인만 연결. |
 | 투어코리아 | 국내 전문 | https://cdn.tournews21.com/rss/gn_rss_allArticle.xml | 수신 50 | 보류 — 공식 홈페이지 RSS 링크 확인. 저작권정책/약관은 사전 승낙 없는 재배포 금지, 별도 외부 제목·링크 게시 허용 미확인. 현재 50건 중 엄격한 산업 Direct 후보 0건. |
 | 호텔앤레스토랑 | 국내 전문 | https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml | 수신 50 | 보류 — 최근 7일 피드 항목 24건 중 Direct 후보 3건이나 일반 저작권정책/약관 외 공개 제목·링크 색인 허용 미확인. 허락 확인 전 게시 0건. |

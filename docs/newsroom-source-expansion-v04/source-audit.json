@@ -875,7 +875,18 @@
         "error": null
       },
       "published_news": 3,
-      "news_issued_last7d": 3
+      "news_issued_last7d": 3,
+      "current_rights_review": {
+        "result": "limited_designated_feed_interpretation",
+        "guide_url": "https://www.hospitalitynet.org/rss",
+        "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+        "general_terms_sections": [
+          "5.2",
+          "6.2"
+        ],
+        "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+        "checked_on": "2026-11-03"
+      }
     },
     {
       "id": "hotelnewsresource",
@@ -910,7 +921,19 @@
         "error": null
       },
       "published_news": 3,
-      "news_issued_last7d": 3
+      "news_issued_last7d": 3,
+      "current_rights_review": {
+        "result": "public_indexing_scope_unresolved_new_publication_hold",
+        "guide_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "general_terms_url": "https://www.hotelnewsresource.com/Info-legal.html",
+        "general_terms_sections": [
+          "1",
+          "12"
+        ],
+        "remaining_uncertainty": "Whether feed indexing guidance permits a public noncommercial six-field index notwithstanding the general rights reservation. Publisher clarification required.",
+        "checked_on": "2026-11-03"
+      }
     }
-  ]
+  ],
+  "capture_notice": "Execution metrics are the earlier real-response capture. For current gate changes see review-final.json and sources.json."
 }

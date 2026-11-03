@@ -1,0 +1,174 @@
+{
+  "reviewed_at": "2026-11-03T14:07:50+09:00",
+  "existing_44_preserved": 44,
+  "total_news": 50,
+  "korean_keywords_exactly_preserved": 42,
+  "existing_english_keyword_updates": [
+    {
+      "url": "https://www.gov.uk/government/news/stronger-safeguards-for-wheelchair-users-and-better-trained-staff-to-support-disabled-air-passengers",
+      "old": [],
+      "new": [
+        "air passengers"
+      ]
+    }
+  ],
+  "new_six": [
+    {
+      "metadata": {
+        "title": "Global Air Passenger Demand Falls 0.5% in September",
+        "source": "Hotel News Resource",
+        "published_at": "2026-11-03T04:32:14+09:00",
+        "url": "https://www.hotelnewsresource.com/article143592.html",
+        "category": "항공·숙박",
+        "keywords": [
+          "Air Passenger Demand"
+        ]
+      },
+      "relevance_label": "Direct",
+      "editorial_tier": "global_major"
+    },
+    {
+      "metadata": {
+        "title": "IHG Opens Kimpton Al Rowda Doha Hotel in Qatar",
+        "source": "Hotel News Resource",
+        "published_at": "2026-11-03T00:15:17+09:00",
+        "url": "https://www.hotelnewsresource.com/article143583.html",
+        "category": "항공·숙박",
+        "keywords": [
+          "Kimpton",
+          "Hotel",
+          "IHG"
+        ]
+      },
+      "relevance_label": "Direct",
+      "editorial_tier": "reference"
+    },
+    {
+      "metadata": {
+        "title": "Grand Hyatt The Red Sea Opens on Shura Island",
+        "source": "Hotel News Resource",
+        "published_at": "2026-11-03T00:12:21+09:00",
+        "url": "https://www.hotelnewsresource.com/article143582.html",
+        "category": "항공·숙박",
+        "keywords": [
+          "Grand Hyatt"
+        ]
+      },
+      "relevance_label": "Direct",
+      "editorial_tier": "reference"
+    },
+    {
+      "metadata": {
+        "title": "IDS Next Launches Pomolabs, New AI-Native Intelligence Platform for Hospitality Operations",
+        "source": "Hospitality Net",
+        "published_at": "2026-11-02T23:00:00+09:00",
+        "url": "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations",
+        "category": "항공·숙박",
+        "keywords": [
+          "Hospitality Operations"
+        ]
+      },
+      "relevance_label": "Direct",
+      "editorial_tier": "reference"
+    },
+    {
+      "metadata": {
+        "title": "Accor & Corinthia Group launch strategic collaboration to bring Verdi Hotels to Handwritten Collection",
+        "source": "Hospitality Net",
+        "published_at": "2026-11-02T22:59:36+09:00",
+        "url": "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection",
+        "category": "항공·숙박",
+        "keywords": [
+          "Corinthia Group",
+          "Hotels",
+          "Accor"
+        ]
+      },
+      "relevance_label": "Direct",
+      "editorial_tier": "reference"
+    },
+    {
+      "metadata": {
+        "title": "Hyatt Introduces Enhanced Hyatt Leverage Platform for Small-and-Midsize Business Travel",
+        "source": "Hospitality Net",
+        "published_at": "2026-11-02T20:35:09+09:00",
+        "url": "https://www.hospitalitynet.org/news/4135216/hyatt-introduces-enhanced-hyatt-leverage-platform-for-small-and-midsize-business-travel",
+        "category": "항공·숙박",
+        "keywords": [
+          "Business Travel",
+          "Hyatt"
+        ]
+      },
+      "relevance_label": "Direct",
+      "editorial_tier": "reference"
+    }
+  ],
+  "rights_review": {
+    "hospitalitynet": {
+      "status": "approved",
+      "scope": "metadata_only",
+      "noncommercial_only": true,
+      "terms_url": "https://www.hospitalitynet.org/rss",
+      "additional_terms": [
+        "https://www.hospitalitynet.org/terms-conditions"
+      ],
+      "basis": "Official designated RSS guide expressly describes integration on external websites. Local review permits selective six-field feed metadata indexing only, interpreted as permission for this designated RSS interface. General Terms sections 5.2 and 6.2 still prohibit unauthorized automation and reproduction/bulk reuse; the guide does not explicitly discuss its priority over those clauses. No separate written licence or blanket website/body reuse approval has been obtained.",
+      "checked_at": "2026-11-03",
+      "body_reuse": "not_authorized",
+      "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+      "approval_authority": "repository_scope_review_not_publisher_certificate",
+      "publisher_written_permission_obtained": false,
+      "rights_review": {
+        "result": "limited_designated_feed_interpretation",
+        "guide_url": "https://www.hospitalitynet.org/rss",
+        "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+        "general_terms_sections": [
+          "5.2",
+          "6.2"
+        ],
+        "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+        "checked_on": "2026-11-03"
+      }
+    },
+    "hotelnewsresource": {
+      "status": "review",
+      "scope": "metadata_only",
+      "noncommercial_only": true,
+      "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+      "additional_terms": [
+        "https://www.hotelnewsresource.com/Info-legal.html",
+        "https://www.hotelnewsresource.com/legal-privacy.html"
+      ],
+      "basis": "XML guide states indexing/research/content discovery, but does not expressly authorize public metadata redistribution. Actual general Terms of Use, linked from the privacy page, section 1 incorporates service guidelines while section 12 reserves rights and disclaims implied/express licences merely from providing a service. Their application to this public link index is unresolved. Hold NEW automatic publications pending publisher clarification; do not treat the earlier local interpretation as external approval.",
+      "checked_at": "2026-11-03",
+      "body_reuse": "not_authorized",
+      "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+      "approval_authority": "repository_scope_review_not_publisher_certificate",
+      "publisher_written_permission_obtained": false,
+      "rights_review": {
+        "result": "public_indexing_scope_unresolved_new_publication_hold",
+        "guide_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "general_terms_url": "https://www.hotelnewsresource.com/Info-legal.html",
+        "general_terms_sections": [
+          "1",
+          "12"
+        ],
+        "remaining_uncertainty": "Whether feed indexing guidance permits a public noncommercial six-field index notwithstanding the general rights reservation. Publisher clarification required.",
+        "checked_on": "2026-11-03"
+      }
+    }
+  },
+  "preserved_sha256": {
+    "site/data/briefing_archive.json": "88e42e51126eb8ddfdfc5f40958b4a44dd3dadbfe5d7032d39fd2e0f1bc72528",
+    "collector_state/briefing_selection.json": "42cdb57e9cf433ecab8fa7852d64fbe06da4b166aec2717c543866e2bfbe906e",
+    "site/data/reports.json": "238c6adf43fe88579add5d671c8e743550ff6836a9ff4e48474572c6c488b5d4",
+    "site/data/reports_health.json": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+    "site/data/macro.json": "e77391d0e1aac06e5646e6f3a51cba63d8729c4495ee6c3f88553bcb6d1ef645",
+    "site/data/macro_health.json": "ced5db6800f75be1e9fdf2aad0fe41181aa42ec96eea25b9f4182b7a6bce2e54",
+    "collector_state/archive.json": "0ed30176da49b8b6a4b0dd245219cfecf5c3972ca49aae283b7d467f17db4306",
+    "site/index.html": "54ff63d133fb0ec940ec085c71f45d401bd33f4afc4f963ecd278e7cc0bfd60d",
+    "site/currentourism.js": "770bab6557e0afaa315eb47f2dcf8f55521e7083cc5b4af5a597707ed7936803",
+    "site/market-observation.js": "54bbfe8e1f24296de778f740a2f6a2de2a8f37aa5855bf3076a504d3c3753db9",
+    "site/ui-2.css": "814754f590a0f63af79c8470b37b7807abdd768151f9543e5a08fbc3e9aa7455"
+  }
+}
