@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-03T15:02:18+09:00",
+  "checked_at": "2026-11-03T16:25:44+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -198,6 +198,26 @@
         "signals": [],
         "impact_targets": [],
         "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "fc72d7b0888f103f3e",
+      "title": "골목마다 예술이 깃들다! 연희동에서 만난 문학·건축·미술",
+      "url": "https://mediahub.seoul.go.kr/archives/2019891",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
       },
       "decision": "exclude"
     },
@@ -530,22 +550,20 @@
       "decision": "exclude"
     },
     {
-      "id": "25376e311bf2740a0f",
-      "title": "족욕하며 차 마시고, '티 오마카세'까지…차에 빠진 MZ세대",
-      "url": "https://mediahub.seoul.go.kr/archives/2019825",
-      "source_id": "seoul_culture",
+      "id": "dcfdae883cab1c08c8",
+      "title": "기대 만발! '서울별빛명소' 탄생할 10곳…어디어디?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019922",
+      "source_id": "seoul_economy",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
         "decision": "exclude",
         "category": null,
         "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
+        "rules": [],
         "signals": [],
         "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
@@ -881,24 +899,6 @@
       "id": "09b443639897ca49b4",
       "title": "가을 한강 나들이 필수 팁! 서울배달+땡겨요 배달 할인, 상품권 환급까지",
       "url": "https://mediahub.seoul.go.kr/archives/2019606",
-      "source_id": "seoul_economy",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "cf89706945db2b2237",
-      "title": "매년 봐도 놀랍다! AI가 바꾸는 서울의 일상 '스마트라이프위크'",
-      "url": "https://mediahub.seoul.go.kr/archives/2019609",
       "source_id": "seoul_economy",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -1332,6 +1332,24 @@
         "evidence_status": "industry_subject_in_feed"
       },
       "decision": "publish"
+    },
+    {
+      "id": "6070cf01ce3b34aa95",
+      "title": "외국인도 교통카드 없이 버스·지하철 이용하게 될까",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500660",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
     },
     {
       "id": "8d930721a52a1daafe",
