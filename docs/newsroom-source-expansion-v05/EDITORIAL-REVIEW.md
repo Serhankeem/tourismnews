@@ -31,4 +31,4 @@
 
 ## 회귀 검증
 
-새 테스트 5개 메서드: 실제 세 제목의 출판사 독립 판정, 해외·일반 세제/예산 반례 10건, OTA AI/B2B 증거 구분, 중립 reference 설명, 실제 기록의 시간창·KPI·rights gate·확정 아카이브 보존. 전체 Python **269개**, 브라우저 **15개 suite**가 통과했다. GitHub CI 최종 결과는 test-results.json 및 동일 PR #18 Checks에서 확인한다.
+새 테스트 5개 메서드: 실제 세 제목의 출판사 독립 판정, 해외·일반 세제/예산 반례 10건, OTA AI/B2B 증거 구분, 중립 reference 설명, 실제 기록의 시간창·KPI·rights gate·확정 아카이브 보존. 전체 Python **269개**, 브라우저 **15개 suite**가 통과했다. 보완 구현 커밋 `ce1ffc9`의 GitHub CI **3개 test job 성공**(News/Research/Macro), collect-and-publish는 PR의 main 제한에 따라 정상 SKIPPED다. 정확한 링크는 test-results.json 및 동일 PR #18 Checks에서 확인한다.

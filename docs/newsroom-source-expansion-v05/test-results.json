@@ -88,7 +88,47 @@
   "preserved_legacy_ids_dates_links": 60,
   "filings_and_statistics_records_unchanged": true,
   "github_ci": {
-    "status": "pending_editorial_review_commit"
+    "status": "passed",
+    "implementation_commit": "ce1ffc905a823055d5f65ddedfe78ad54c80def8",
+    "checked_at": "2026-11-03T16:21:21+09:00",
+    "checks": [
+      {
+        "workflow": "Macro Monitor official statistics",
+        "name": "test",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41595659238/job/125782291359"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "name": "test",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41595659407/job/125782292350"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "name": "test",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41595659105/job/125782291580"
+      },
+      {
+        "workflow": "Macro Monitor official statistics",
+        "name": "collect-and-publish",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41595659238/job/125782361473"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "name": "collect-and-publish",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41595659407/job/125782358624"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "name": "collect-and-publish",
+        "conclusion": "SKIPPED",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41595659105/job/125782366009"
+      }
+    ]
   },
   "production_actions_and_pages": "not_run_on_feature_branch; unchanged_configuration; verify_after_merge",
   "initial_pr_github_ci": {
