@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-03T07:52:37+09:00",
+  "checked_at": "2026-11-03T10:17:36+09:00",
   "publication_result": "partial",
   "discovery_status": "partial",
   "received": 570,
-  "new_discoveries": 14,
-  "duplicate_observations": 358,
+  "new_discoveries": 102,
+  "duplicate_observations": 270,
   "new_auto_published": 0,
   "total_published": 49,
   "total_archived": 49,
@@ -85,8 +85,8 @@
     "문화·트렌드": 15,
     "경제·시장": 1
   },
-  "discovered_last24h": 357,
-  "discovered_last7d": 1792,
+  "discovered_last24h": 459,
+  "discovered_last7d": 1894,
   "auto_published_last24h": 6,
   "auto_published_last7d": 40,
   "originally_published_last24h": 6,
@@ -98,8 +98,8 @@
       "url": "https://www.mcst.go.kr/common/rss/press.jsp",
       "group": "public",
       "received": 10,
-      "new_discoveries": 0,
-      "duplicates": 10,
+      "new_discoveries": 3,
+      "duplicates": 7,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -122,10 +122,10 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9770114942528736,
+      "success_rate": 0.9772727272727273,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "discovered_not_publishable"
     },
     {
       "id": "korea_net_travel",
@@ -231,7 +231,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9770114942528736,
+      "success_rate": 0.9772727272727273,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -266,7 +266,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.9655172413793104,
+      "success_rate": 0.9659090909090909,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -303,7 +303,7 @@
       "status": "error",
       "error_kind": "transport_error",
       "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
-      "success_rate": 0.7471264367816092,
+      "success_rate": 0.7386363636363636,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "fetch_failed"
@@ -338,7 +338,7 @@
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
       "status": "ok",
-      "success_rate": 0.47126436781609193,
+      "success_rate": 0.4772727272727273,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
       "outcome": "no_new_candidate"
@@ -824,8 +824,8 @@
       "url": "https://skift.com/feed/",
       "group": "media",
       "received": 10,
-      "new_discoveries": 1,
-      "duplicates": 9,
+      "new_discoveries": 2,
+      "duplicates": 8,
       "rights_holds": 1,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -859,8 +859,8 @@
       "url": "https://www.yna.co.kr/rss/economy.xml",
       "group": "media",
       "received": 120,
-      "new_discoveries": 13,
-      "duplicates": 107,
+      "new_discoveries": 72,
+      "duplicates": 48,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -978,8 +978,8 @@
       "url": "https://www.ttlnews.com/rss/allArticle.xml",
       "group": "media",
       "received": 50,
-      "new_discoveries": 0,
-      "duplicates": 50,
+      "new_discoveries": 25,
+      "duplicates": 25,
       "rights_holds": 0,
       "date_holds": 0,
       "invalid_metadata": 0,
@@ -1012,12 +1012,12 @@
       "success_rate": 1.0,
       "new_auto_published": 0,
       "new_newsroom_items": 0,
-      "outcome": "no_new_candidate"
+      "outcome": "discovered_not_publishable"
     }
   ],
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-03T07:52:37+09:00",
+    "checked_at": "2026-11-03T10:17:36+09:00",
     "selection_status": "candidates_ready"
   },
   "outcome": "no_new_publications_with_source_errors"
