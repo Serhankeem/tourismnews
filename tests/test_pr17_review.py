@@ -35,7 +35,8 @@ class ReviewTests(unittest.TestCase):
    old=sorted(set(matches(a['title'],TERMS)),key=lambda s:(-len(s),s))[:8]
    self.assertEqual(keywords(a['title']),old,a['title'])
  def test_real_six_tiers_unchanged_and_direct_not_equal_to_global_major(self):
-  records=[a for a in ARCHIVE if a.get('source_id') in ['hospitalitynet','hotelnewsresource']]
+  original_urls={a['url'] for a in SIX}
+  records=[a for a in ARCHIVE if a['url'] in original_urls]
   self.assertEqual(len(records),6)
   for a in records:
    tier=exposure(a)['tier'];self.assertEqual(tier,a['editorial']['tier'])
