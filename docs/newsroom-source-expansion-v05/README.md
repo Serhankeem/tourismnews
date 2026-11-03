@@ -140,7 +140,7 @@ PR #17의 [후보 검토](../newsroom-source-expansion-v04/candidate-review.json
 - 기존 공개 **47건의 여섯 필드 전체** 보존, 내부 ID **60개** 보존. 기존 발행일·링크 보존. HNR 3건은 현재 review로 계속 숨김, 내부 원장/상태 전환 이력 유지.
 - 확정 브리핑 원본 SHA-256 유지. 현재 후보만 현행 정책으로 갱신하며 선정 기준·아카이브 정책을 바꾸지 않았다.
 - UI·로고·Research DB·공식 통계·TOURGO 승인 게이트·GitHub Actions 등 **27개 보호 파일 바이트 동일**. [보존 해시](preservation.json). 뉴스 엔진의 통계 투영 research.json/filings.json은 수집시각 봉투만 갱신되며 본문 records는 동일하다. Research Library 자료 DB와 구분한다.
-- GitHub PR CI 결과는 아래 검증 파일 및 PR Checks에서 확인한다. main 수집·Pages 배포는 **이번 브랜치에서 실행/배포하지 않았다**. 2시간 및 KST 10:30 스케줄·권한·배포 방식 변경 없음. 병합 후 운영 연속 수집과 Pages 공개 반영은 별도 확인 대상이다.
+- GitHub PR CI 3개 test job이 구현 커밋 `c3b9250`에서 성공했다: [News](https://github.com/Serhankeem/tourismnews/actions/runs/41590053756), [Research](https://github.com/Serhankeem/tourismnews/actions/runs/41590053764), [Macro](https://github.com/Serhankeem/tourismnews/actions/runs/41590053901). PR의 collect-and-publish는 main 제한에 따라 정상 SKIPPED다. CI는 Python 회귀이며 브라우저 15개는 로컬 Chromium 검증이다. main 수집·Pages 배포는 **이번 브랜치에서 실행/배포하지 않았다**. 2시간 및 KST 10:30 스케줄·권한·배포 방식 변경 없음. 병합 후 운영 연속 수집과 Pages 공개 반영은 별도 확인 대상이다.
 
 ## User Action Required
 

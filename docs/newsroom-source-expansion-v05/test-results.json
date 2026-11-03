@@ -88,7 +88,29 @@
   "preserved_legacy_ids_dates_links": 60,
   "filings_and_statistics_records_unchanged": true,
   "github_ci": {
-    "status": "pending_pr_creation"
+    "status": "passed",
+    "implementation_commit": "c3b92508fa2ee07506d2c2a0cdec5014cf3ae822",
+    "checked_at": "2026-11-03T06:29:00Z",
+    "checks": [
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "test": "SUCCESS",
+        "collect-and-publish": "SKIPPED_expected_on_PR",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41590053756"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "test": "SUCCESS",
+        "collect-and-publish": "SKIPPED_expected_on_PR",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41590053764"
+      },
+      {
+        "workflow": "Macro Monitor official statistics",
+        "test": "SUCCESS",
+        "collect-and-publish": "SKIPPED_expected_on_PR",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41590053901"
+      }
+    ]
   },
   "production_actions_and_pages": "not_run_on_feature_branch; unchanged_configuration; verify_after_merge"
 }
