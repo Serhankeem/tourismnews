@@ -114,7 +114,7 @@ def korean_company_change(title):
 
 
 def korean_industry_change(title):
-    """Narrow title evidence for missed policy, capacity and B2B news.
+    """Narrow title evidence for policy, capacity and operating technology.
 
     A Korean publisher/brand alone supplies no evidence. Each rule needs a
     concrete industry object AND change; product promotions remain excluded.
@@ -132,7 +132,7 @@ def korean_industry_change(title):
          ('의료친화숙박시설',), ('선정', '지정'), ('개소',)),
         ('air_route_capacity_change', '항공·숙박',
          ('항공', '운항'), ('증편', '감편', '운항확대'), ('인천', '제주', '부산', '국제선', '탑승률')),
-        ('ota_b2b_technology_change', '여행산업',
+        ('ota_operating_technology_change', '여행산업',
          ('야놀자', '놀유니버스', '아고다', '하나투어', '모두투어', '여기어때'),
          ('b2b플랫폼', 'b2b서비스', 'ai어시스턴트'), ('도입', '출시', '개시')),
     )
@@ -143,7 +143,9 @@ def korean_industry_change(title):
                     'score': 7, 'rules': [rule],
                     'signals': [{'field': 'title', 'terms': [term for group in evidence for term in group]}],
                     'impact_targets': ['관광기업'], 'evidence_status': 'industry_subject_in_feed',
-                    'reason': '제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.'}
+                    'reason': ('제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.'
+                               if rule == 'ota_operating_technology_change' else
+                               '제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.')}
     return None
 
 

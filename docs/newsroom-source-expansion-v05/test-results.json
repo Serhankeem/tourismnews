@@ -1,7 +1,7 @@
 {
   "python": {
     "command": "python -m unittest discover -s tests -q",
-    "passed": 264,
+    "passed": 269,
     "failed": 0
   },
   "browser": {
@@ -88,6 +88,10 @@
   "preserved_legacy_ids_dates_links": 60,
   "filings_and_statistics_records_unchanged": true,
   "github_ci": {
+    "status": "pending_editorial_review_commit"
+  },
+  "production_actions_and_pages": "not_run_on_feature_branch; unchanged_configuration; verify_after_merge",
+  "initial_pr_github_ci": {
     "status": "passed",
     "implementation_commit": "c3b92508fa2ee07506d2c2a0cdec5014cf3ae822",
     "checked_at": "2026-11-03T06:29:00Z",
@@ -112,5 +116,15 @@
       }
     ]
   },
-  "production_actions_and_pages": "not_run_on_feature_branch; unchanged_configuration; verify_after_merge"
+  "editorial_review": {
+    "checked_at": "2026-11-03T16:20:13+09:00",
+    "policy_positive_titles": 3,
+    "policy_counterexamples": 10,
+    "new_test_methods": 5,
+    "public_news": 54,
+    "preserved_internal_records": 67,
+    "public_newsroom_bytes_unchanged": true,
+    "confirmed_briefing_bytes_unchanged": true,
+    "no_network_collection_or_new_sources": true
+  }
 }

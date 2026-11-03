@@ -2253,14 +2253,20 @@
       "relevance_label": "Irrelevant",
       "editorial": {
         "version": "0.3-editorial-1",
-        "tier": "reference",
-        "rank": 2,
-        "label": "참고용 해외 산업 자료",
-        "korea_connection": "not_established",
-        "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title+source_id",
+            "value": "동대문",
+            "rule": "official_local_tourism_report"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
       },
-      "korea_priority": false
+      "korea_priority": true
     },
     "f0e37c0774165c5fb0": {
       "id": "f0e37c0774165c5fb0",
@@ -4182,10 +4188,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -4295,10 +4301,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -4612,10 +4618,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -12720,10 +12726,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -13524,10 +13530,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -13591,10 +13597,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -13829,10 +13835,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -14240,10 +14246,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -14424,10 +14430,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -14740,10 +14746,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -29852,10 +29858,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -36107,10 +36113,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -38142,10 +38148,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -42319,10 +42325,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -49067,14 +49073,20 @@
       "relevance_label": "Direct",
       "editorial": {
         "version": "0.3-editorial-1",
-        "tier": "reference",
-        "rank": 2,
-        "label": "참고용 해외 산업 자료",
-        "korea_connection": "not_established",
-        "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "가업상속공제·관광업종 대상·업계 대응",
+            "rule": "korean_statutory_tourism_sector_policy"
+          }
+        ],
+        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
       },
-      "korea_priority": false
+      "korea_priority": true
     },
     "f22c6e7a25d91f8466": {
       "id": "f22c6e7a25d91f8466",
@@ -49862,10 +49874,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -50442,10 +50454,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -52781,10 +52793,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -52848,10 +52860,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -75523,10 +75535,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -75593,14 +75605,20 @@
       "relevance_label": "Direct",
       "editorial": {
         "version": "0.3-editorial-1",
-        "tier": "reference",
-        "rank": 2,
-        "label": "참고용 해외 산업 자료",
-        "korea_connection": "not_established",
-        "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "가업상속공제·관광업종 대상·업계 대응",
+            "rule": "korean_statutory_tourism_sector_policy"
+          }
+        ],
+        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
       },
-      "korea_priority": false
+      "korea_priority": true
     },
     "5b81a985c68e05dd67": {
       "id": "5b81a985c68e05dd67",
@@ -75685,7 +75703,7 @@
         "category": "여행산업",
         "score": 7,
         "rules": [
-          "ota_b2b_technology_change"
+          "ota_operating_technology_change"
         ],
         "signals": [
           {
@@ -75700,7 +75718,7 @@
         "impact_targets": [
           "관광기업"
         ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
+        "reason": "제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.",
         "evidence_status": "industry_subject_in_feed"
       },
       "publication_status": "published",
@@ -75723,10 +75741,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -76953,14 +76971,20 @@
       "relevance_label": "Direct",
       "editorial": {
         "version": "0.3-editorial-1",
-        "tier": "reference",
-        "rank": 2,
-        "label": "참고용 해외 산업 자료",
-        "korea_connection": "not_established",
-        "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "국회·업계·MICE 예산/투자 대응",
+            "rule": "korean_legislative_tourism_budget_action"
+          }
+        ],
+        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
       },
-      "korea_priority": false
+      "korea_priority": true
     },
     "e82e25899129dfed29": {
       "id": "e82e25899129dfed29",
@@ -77309,10 +77333,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -90104,10 +90128,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -93660,10 +93684,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -95201,10 +95225,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -106308,10 +106332,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -106369,10 +106393,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -106430,10 +106454,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -106491,10 +106515,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -106552,10 +106576,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -107780,10 +107804,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -107860,10 +107884,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -108354,10 +108378,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -109294,10 +109318,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },
@@ -109361,10 +109385,10 @@
         "version": "0.3-editorial-1",
         "tier": "reference",
         "rank": 2,
-        "label": "참고용 해외 산업 자료",
+        "label": "산업 참고 자료",
         "korea_connection": "not_established",
         "evidence": [],
-        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
       },
       "korea_priority": false
     },

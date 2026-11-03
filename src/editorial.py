@@ -9,9 +9,35 @@ import datetime as dt
 
 TIERS = {'korea_direct': (0, '한국 관광산업 직접 관련'),
          'global_major': (1, '글로벌 관광산업 주요 변화'),
-         'reference': (2, '참고용 해외 산업 자료')}
+         'reference': (2, '산업 참고 자료')}
 KOREAN_COMPANIES = ('대한항공', '아시아나항공', '제주항공', '진에어', '티웨이', '에어부산',
                     '호텔신라', '호텔롯데', '하나투어', '모두투어', '야놀자', '여기어때', '노랑풍선')
+
+
+def korean_tourism_policy(title):
+    """Title-only jurisdiction evidence, independent of publisher nationality.
+
+    가업상속공제 is the Korean statutory deduction, not generic inheritance
+    tax. Unqualified 국회 plus an industry's budget/investment action supplies
+    legislative context. Explicit foreign/comparative context stays unproven.
+    """
+    text = re.sub(r'\s+', '', title.casefold())
+    foreign = re.search(
+        r'해외|외국|외신|각국|외국법|외국제도|세계|글로벌|일본|미국|영국|중국|'
+        r'프랑스|독일|유럽|대만|홍콩|싱가포르|베트남|태국|호주|캐나다|인도|'
+        r'러시아|뉴질랜드|북한|스페인|이탈리아|해외사례|foreign|japan|unitedstates|unitedkingdom', text)
+    if foreign:
+        return None
+    if (re.search(r'가업상속공제', text) and re.search(r'관광업계|관광업종', text)
+            and re.search(r'축소|유지|촉구|대응', text)):
+        return {'field': 'title', 'value': '가업상속공제·관광업종 대상·업계 대응',
+                'rule': 'korean_statutory_tourism_sector_policy'}
+    if (re.search(r'(?<![a-z])mice(?![a-z])|마이스산업', text)
+            and '국회' in text and '업계' in text
+            and re.search(r'예산|투자', text) and re.search(r'줄어|축소|촉구|확대', text)):
+        return {'field': 'title', 'value': '국회·업계·MICE 예산/투자 대응',
+                'rule': 'korean_legislative_tourism_budget_action'}
+    return None
 
 
 def is_statistical(record):
@@ -40,6 +66,9 @@ def exposure(article):
                 (article.get('relevance_label') == 'Indirect' and
                  article.get('relevance_evidence', {}).get('review_status') == 'approved'))
     if relevant and not negative:
+        policy = korean_tourism_policy(title)
+        if policy:
+            evidence.append(policy)
         korea_text = re.sub(r'\bnorth korean?\b', 'unverified foreign market', text)
         match = re.search(r'(?:서울|부산|제주|경북|경남|전남|전북|강원|인천)\s*(?:관광|여행업|호텔시장|항공노선)|방한|한국\s*(?:관광|여행|호텔|항공|시장)|국내\s*(?:관광|여행|숙박)|\bsouth korea\b|\brepublic of korea\b|\bkorean (?:tourism|travel|hotel|aviation)\b|\b(?:to|from|in) (?:seoul|incheon|busan|jeju)\b', korea_text)
         if match:
@@ -86,7 +115,8 @@ def exposure(article):
                 evidence.append({'field': 'title+source_id', 'value': place.group(), 'rule': 'official_local_tourism_report'})
     if evidence:
         tier = 'korea_direct'
-        reason = '제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다.'
+        reason = ('제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다.'
+                  if policy else '제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다.')
     else:
         # Major means an explicitly industry-wide, quantified global change.
         # A local UK rule/runway, famous company, or generic English term does
@@ -101,7 +131,7 @@ def exposure(article):
             reason = '세계 산업 전체의 범위와 정량적 변화가 제목에 명시되어 있습니다. 한국 시장 영향은 별도로 입증되지 않았습니다.'
         else:
             tier = 'reference'
-            reason = '한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다.'
+            reason = '한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다.'
     rank, label = TIERS[tier]
     return {'version': '0.3-editorial-1', 'tier': tier, 'rank': rank, 'label': label,
             'korea_connection': 'explicit' if tier == 'korea_direct' else 'not_established',

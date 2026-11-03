@@ -15,8 +15,8 @@
   "other_research_count": 3,
   "new_newsroom_items": 7,
   "new_filings": 0,
-  "newsroom_korea_direct_count": 25,
-  "newsroom_korea_direct_last7d": 18,
+  "newsroom_korea_direct_count": 28,
+  "newsroom_korea_direct_last7d": 20,
   "newsroom_by_source": {
     "govuk_aviation": {
       "count": 2,
@@ -32,7 +32,7 @@
     },
     "mcst_press": {
       "count": 4,
-      "originally_published_last7d": 3,
+      "originally_published_last7d": 2,
       "korea_direct": 3,
       "new_this_run": 0
     },
@@ -45,13 +45,13 @@
     "traveldaily": {
       "count": 16,
       "originally_published_last7d": 14,
-      "korea_direct": 8,
+      "korea_direct": 9,
       "new_this_run": 3
     },
     "traveltimes": {
       "count": 17,
       "originally_published_last7d": 11,
-      "korea_direct": 7,
+      "korea_direct": 9,
       "new_this_run": 3
     },
     "ttlnews": {
@@ -70,12 +70,12 @@
     "경제·시장": 1
   },
   "newsroom_tier_counts": {
-    "korea_direct": 25,
+    "korea_direct": 28,
     "global_major": 0,
-    "reference": 29
+    "reference": 26
   },
   "newsroom_originally_published_last24h": 10,
-  "newsroom_originally_published_last7d": 41,
+  "newsroom_originally_published_last7d": 40,
   "newsroom_newly_added_last24h": 16,
   "new_backfilled": 0,
   "record_type_counts": {
@@ -1280,7 +1280,7 @@
     "new_news_articles": 7,
     "published_news_articles": 54,
     "originally_published_last24h": 10,
-    "originally_published_last7d": 41,
+    "originally_published_last7d": 40,
     "evaluated_news_classifications": {
       "Direct": 37,
       "Indirect": 0,
@@ -1311,7 +1311,7 @@
       "hotelnewsresource": 3
     },
     "public_record_count": 62,
-    "public_metrics_as_of": "2026-11-03T15:13:02+09:00",
+    "public_metrics_as_of": "2026-11-03T16:16:10+09:00",
     "stored_news_count": 59,
     "failed_sources": [
       {
@@ -1493,10 +1493,10 @@
       "domestic_publishing_sources": 5,
       "new_domestic_publishing_sources": [],
       "domestic_publisher_news_count": 49,
-      "domestic_publisher_news_last7d": 38,
-      "domestic_korea_direct_news_count": 25,
-      "domestic_korea_direct_news_last7d": 18,
-      "korea_direct_news_all_publishers": 25,
+      "domestic_publisher_news_last7d": 37,
+      "domestic_korea_direct_news_count": 28,
+      "domestic_korea_direct_news_last7d": 20,
+      "korea_direct_news_all_publishers": 28,
       "domestic_top3_source_share": 0.8775510204081632,
       "domestic_news_by_source": {
         "mcst_press": 4,
@@ -1535,8 +1535,14 @@
   },
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-03T15:13:02+09:00",
+    "checked_at": "2026-11-03T16:16:10+09:00",
     "selection_status": "candidates_ready"
   },
-  "outcome": "new_newsroom_news"
+  "outcome": "new_newsroom_news",
+  "editorial_reprojection": {
+    "checked_at": "2026-11-03T16:16:10+09:00",
+    "mode": "stored_metadata_only_no_network_fetch",
+    "newsroom_metrics_as_of": "2026-11-03T16:16:10+09:00",
+    "last_fetch_unchanged": true
+  }
 }

@@ -22,6 +22,7 @@ const proof=require('../docs/newsroom-source-expansion-v05/comparison.json');
   const domestic=health.discovery.quality.domestic_coverage;
   assert.equal(domestic.domestic_publishing_sources,5);assert.deepEqual(domestic.new_domestic_publishing_sources,[]);
   assert.ok(domestic.domestic_korea_direct_news_count<domestic.domestic_publisher_news_count);
+  assert.ok(domestic.domestic_korea_direct_news_count>=28,'include the three title-proven Korean policy stories');
   assert.equal(domestic.domestic_news_by_media_type.general_economy,0);
   assert.equal(domestic.domestic_news_by_media_type.corporate,0);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
