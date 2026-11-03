@@ -165,10 +165,23 @@
     "site/data/reports_health.json": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
     "site/data/macro.json": "e77391d0e1aac06e5646e6f3a51cba63d8729c4495ee6c3f88553bcb6d1ef645",
     "site/data/macro_health.json": "ced5db6800f75be1e9fdf2aad0fe41181aa42ec96eea25b9f4182b7a6bce2e54",
-    "collector_state/archive.json": "0ed30176da49b8b6a4b0dd245219cfecf5c3972ca49aae283b7d467f17db4306",
     "site/index.html": "54ff63d133fb0ec940ec085c71f45d401bd33f4afc4f963ecd278e7cc0bfd60d",
     "site/currentourism.js": "770bab6557e0afaa315eb47f2dcf8f55521e7083cc5b4af5a597707ed7936803",
     "site/market-observation.js": "54bbfe8e1f24296de778f740a2f6a2de2a8f37aa5855bf3076a504d3c3753db9",
     "site/ui-2.css": "814754f590a0f63af79c8470b37b7807abdd768151f9543e5a08fbc3e9aa7455"
-  }
+  },
+  "latest_main_merged": "7e6322a",
+  "review_context": {
+    "operation": "review_conflict_resolution_without_network_collection",
+    "latest_main_commit": "7e6322a",
+    "latest_main_transport_checked_at": "2026-11-03T14:04:58+09:00",
+    "expansion_snapshot_checked_at": "2026-11-03T13:36:40+09:00",
+    "projection_reviewed_at": "2026-11-03T14:21:12+09:00",
+    "notice": "Transport observations are the latest main run (24 sources). Current DB retains the six earlier expansion articles; new source rights gates reflect this review. Initial 26-source experiment remains documented in comparison.json."
+  },
+  "archive_record_array_preserved_from_review_commit": true,
+  "archive_file_header_updated_from_latest_main": true,
+  "archive_record_array_sha256": "045f91ab9f7c6766b86bc3d1d92bc13adb96f4ce3cef0c5c597dc3cf540f650c",
+  "current_briefing_projection_generated_at": "2026-11-03T14:21:12+09:00",
+  "current_briefing_selection_preserved": true
 }

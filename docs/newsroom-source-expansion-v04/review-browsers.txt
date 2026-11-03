@@ -4,7 +4,7 @@ newsroom-freshness.smoke.cjs 0 PASS: real publication order (Nov 2 before Oct 29
 
 macro.smoke.cjs 0 PASS: real official monthly history, home/Macro exact values, 4 widths, definitions/pending financial metrics, ranges/gaps/missing growth, source-date/finality, refresh/all-failure preservation, empty initial state, private archive isolation and unchanged weather simulation
 
-pr17-review.smoke.cjs 0 PASS PR17 review: real six literal keywords in Newsroom, unchanged five fields, 50 records, six public fields, current briefing global keyword and single-hotel exclusion, 390/1440px
+pr17-review.smoke.cjs 0 PASS PR17 review: real six literal keywords in Newsroom, unchanged five fields, public count, six public fields, current briefing global keyword and single-hotel exclusion, 390/1440px
 
 home.smoke.cjs 0 PASS: real home metadata/order/freshness, desktop/mobile four-group navigation, home logo link, keyboard menu, deep links/history, About dynamic source status, chart, weather/reset, Research preservation; no JS errors
 
