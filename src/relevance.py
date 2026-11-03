@@ -118,6 +118,9 @@ def assess(title, description=''):
     result = {'rule_version': RULE_VERSION, 'label': 'Irrelevant', 'decision': 'exclude',
               'category': None, 'score': 0, 'rules': [], 'signals': [],
               'impact_targets': [], 'reason': '관광산업에 대한 구체적 대상·영향 근거가 없습니다.'}
+    if re.search(r'^how to\b', title.strip(), re.I):
+        return {**result, 'rules': ['general_industry_howto_not_operating_news'],
+                'reason': '일반적인 방법 안내 제목은 실제 산업 변화 뉴스로 간주하지 않습니다.'}
     if matches(fields['title'], PERSONAL):
         return {**result, 'rules': ['personal_or_generic_travel'], 'reason': '개인 여행·일반 여가 정보는 산업 뉴스에서 제외합니다.'}
     if matches(fields['title'], ('할인쿠폰', '최저가', '추천숙소', '호텔추천')) and not matches(fields['title'], ('시장', '실적', '매출', '정책', '공급', '수요')):
@@ -189,6 +192,10 @@ def assess(title, description=''):
             for context in contexts:
                 text = compact(context)
                 hits = matches(text, terms)
+                # The broad English sector name alone is not an industry change.
+                # Concrete operational headlines already pass english_industry().
+                if hits == ['hospitality']:
+                    continue
                 if not hits or matches(text, NEGATIVE):
                     continue
                 actions = matches(text, ACTIONS)

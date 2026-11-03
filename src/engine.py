@@ -68,6 +68,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
             continue
         sid = source['id']
         row = {'id': sid, 'name': source['name'], 'url': source['url'], 'group': source.get('group', 'public'),
+               'fetch_attempted': False, 'news_classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
                'received': 0, 'new_discoveries': 0, 'duplicates': 0, 'rights_holds': 0, 'date_holds': 0, 'invalid_metadata': 0, 'outside_window': 0,
                'classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
                'publication_policy': source.get('publication', {'status': 'review'}),
@@ -75,6 +76,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
         try:
             if not source.get('discovery_allowed', True):
                 raise AccessBlocked('discovery_not_authorized')
+            row['fetch_attempted'] = True
             payload = loader(source['url'])
             items = list(items_from(source, payload))
             source_days = min(days, source.get('backfill', {}).get('max_days', days))
@@ -125,6 +127,8 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                     continue
                 if assessment['label'] in row['classifications']:
                     row['classifications'][assessment['label']] += 1
+                    if not is_statistical(source) and item.get('record_type', 'news') == 'news':
+                        row['news_classifications'][assessment['label']] += 1
                 else:
                     row['statistical_records'] = row.get('statistical_records', 0) + 1
                 first_seen = ledger.get(aid, {}).get('first_discovered_at', c.iso(at))
@@ -287,6 +291,30 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                'originally_published_last24h': sum(a.get('publication_time_verified_for_news') is not False and a.get('date_precision') != 'date' and at - dt.timedelta(days=1) <= c.timestamp(a['published_at']) <= at for a in articles),
                'originally_published_last7d': sum(a.get('publication_time_verified_for_news') is not False and at - dt.timedelta(days=7) <= c.timestamp(a['published_at']) <= at for a in articles),
                'sources': health}
+    source_counts = {sid: sum(a['source_id'] == sid for a in newsroom) for sid in sorted({a['source_id'] for a in newsroom})}
+    news_classifications = {label: sum(row['news_classifications'][label] for row in health) for label in ('Direct', 'Indirect', 'Irrelevant')}
+    evaluated = sum(news_classifications.values())
+    observed = summary['new_discoveries'] + summary['duplicate_observations']
+    old_news_sources = {a.get('source_id') for a in old_articles if a.get('record_type', 'news') == 'news' and not a.get('archived_only')}
+    summary['quality'] = {
+        'configured_sources': len(sources), 'enabled_sources': sum(s.get('enabled', True) for s in sources),
+        'attempted_sources': sum(row['fetch_attempted'] for row in health),
+        'successful_sources': sum(row['status'] == 'ok' for row in health),
+        'publication_approved_sources': len(approved_sources), 'publishing_sources': len(source_counts),
+        'new_publishing_sources': sorted(set(source_counts) - old_news_sources),
+        'new_news_articles': summary['new_newsroom_items'], 'published_news_articles': len(newsroom),
+        'originally_published_last24h': summary['newsroom_originally_published_last24h'],
+        'originally_published_last7d': summary['newsroom_originally_published_last7d'],
+        'evaluated_news_classifications': news_classifications,
+        'direct_ratio': news_classifications['Direct'] / evaluated if evaluated else None,
+        'direct_ratio_denominator': 'classified_news_feed_observations_within_window_excluding_filings_and_statistics',
+        'top3_source_share': sum(sorted(source_counts.values(), reverse=True)[:3]) / len(newsroom) if newsroom else None,
+        'duplicate_ratio': summary['duplicate_observations'] / observed if observed else None,
+        'duplicate_ratio_denominator': 'valid_discovery_observations_new_plus_previously_seen_not_removed_independent_reports',
+        'news_by_source': source_counts,
+        'failed_sources': [{'id': row['id'], 'error_kind': row.get('error_kind'), 'error': row.get('error')} for row in health if row['status'] != 'ok'],
+        'source_gates': [{'id': s['id'], 'enabled': s.get('enabled', True),
+                          'discovery_allowed': s.get('discovery_allowed', True), 'publication_approved': permission(s)} for s in sources]}
     if briefing_health is not None:
         summary['briefing'] = briefing_health
     summary['outcome'] = ('all_fetches_failed' if summary['discovery_status'] == 'failed' else

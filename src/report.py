@@ -11,6 +11,15 @@ def render(data):
                 'total_published', 'new_backfilled', 'auto_published_last24h', 'auto_published_last7d',
                 'originally_published_last24h', 'originally_published_last7d'):
         rows.append(f'| {key} | {data.get(key, 0)} |')
+    quality = data.get('quality', {})
+    if quality:
+        rows += ['', '### News coverage quality (discovery vs publication)', '', '| Metric | Value |', '| --- | ---: |']
+        for key in ('configured_sources', 'attempted_sources', 'successful_sources', 'publication_approved_sources',
+                    'publishing_sources', 'new_news_articles', 'published_news_articles', 'originally_published_last24h',
+                    'originally_published_last7d', 'direct_ratio', 'top3_source_share', 'duplicate_ratio'):
+            rows.append(f'| {key} | {quality.get(key)} |')
+        rows += ['', 'Direct ratio: ' + quality['direct_ratio_denominator'],
+                 'Duplicate ratio: ' + quality['duplicate_ratio_denominator']]
     rows += ['', 'Outcome: ' + data.get('outcome', 'unknown'), '',
              '| Source | Status | Received | New | Archive added | Newsroom added | Rights holds | Error |',
              '| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |']

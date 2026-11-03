@@ -691,6 +691,68 @@
         "limitation": "Only currently returned RSS metadata; no archive pagination, body retrieval or complete 7-day volume claim."
       },
       "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review."
+    },
+    {
+      "id": "hospitalitynet",
+      "name": "Hospitality Net",
+      "url": "https://www.hospitalitynet.org/rss/news.xml",
+      "enabled": true,
+      "group": "global",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "reuse_excerpt": false,
+      "publication": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hospitalitynet.org/rss",
+        "additional_terms": [
+          "https://www.hospitalitynet.org/terms-conditions"
+        ],
+        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90
+      },
+      "notes": "Official linked XML feed tested with verified HTTPS and robots. Scope excludes appointment/promotion/generic advice without industry change. Foreign stories are not promoted to Korea-related."
+    },
+    {
+      "id": "hotelnewsresource",
+      "name": "Hotel News Resource",
+      "url": "https://www.hotelnewsresource.com/feeds/latest.xml",
+      "enabled": true,
+      "group": "global",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "reuse_excerpt": false,
+      "publication": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "additional_terms": [
+          "https://www.hotelnewsresource.com/legal-privacy.html"
+        ],
+        "basis": "Official feed guide states these provided XML feeds are intended for indexing, research and content discovery. Limited to a selective metadata/link index of the returned current feed; not permission for full-text, image, summary reuse, mass archive extraction or AI processing. Original headline, publisher attribution, date and direct link retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90
+      },
+      "notes": "Official linked XML feed tested with verified HTTPS and robots. Scope excludes appointment/promotion/generic advice without industry change. Foreign stories are not promoted to Korea-related."
     }
   ],
   "engine": {

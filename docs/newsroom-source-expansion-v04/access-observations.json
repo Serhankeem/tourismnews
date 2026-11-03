@@ -1,0 +1,391 @@
+{
+  "checked_on": "2026-11-03",
+  "scope": "official_homepages_guides_policies_and_publisher_linked_feeds_only_no_article_body_requests",
+  "observations": [
+    {
+      "url": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+      "status": "ok",
+      "size": 418865
+    },
+    {
+      "url": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+      "status": "ok",
+      "size": 288240
+    },
+    {
+      "url": "https://company.segye.com/service/userTerms",
+      "status": "ok",
+      "size": 31776
+    },
+    {
+      "url": "https://id.hankyung.com/user/selectAuthAgree.do",
+      "status": "ok",
+      "size": 62608
+    },
+    {
+      "url": "https://investors.trip.com/",
+      "status": "ok",
+      "size": 39812
+    },
+    {
+      "url": "https://investors.trip.com/rss-subscription-links",
+      "status": "ok",
+      "size": 21274
+    },
+    {
+      "url": "https://investors.trip.com/rss/news-releases.xml?items=15",
+      "status": "ok",
+      "size": 7911
+    },
+    {
+      "url": "https://news.airbnb.com/",
+      "status": "ok",
+      "size": 193694
+    },
+    {
+      "url": "https://news.booking.com/",
+      "status": "ok",
+      "size": 106681
+    },
+    {
+      "url": "https://news.koreanair.com/",
+      "status": "ok",
+      "size": 99719
+    },
+    {
+      "url": "https://newsroom.yanolja.com/",
+      "status": "error",
+      "error": "robots_unverified:transport_error"
+    },
+    {
+      "url": "https://travelinfo.co.kr/main/main.html",
+      "status": "ok",
+      "size": 30464
+    },
+    {
+      "url": "https://www.airport.kr/",
+      "status": "error",
+      "error": "robots_disallowed"
+    },
+    {
+      "url": "https://www.asiae.co.kr/",
+      "status": "error",
+      "error": "robots_disallowed"
+    },
+    {
+      "url": "https://www.bok.or.kr/",
+      "status": "error",
+      "error": "robots_disallowed"
+    },
+    {
+      "url": "https://www.bookingholdings.com/",
+      "status": "error",
+      "error": "crawl_delay_requires_deferred_fetch"
+    },
+    {
+      "url": "https://www.businesswire.com/",
+      "status": "ok",
+      "size": 512533
+    },
+    {
+      "url": "https://www.discoverynews.kr/",
+      "status": "ok",
+      "size": 123432
+    },
+    {
+      "url": "https://www.donga.com/",
+      "status": "error",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.edaily.co.kr/",
+      "status": "error",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "url": "https://www.expediagroup.com/",
+      "status": "ok",
+      "size": 72247
+    },
+    {
+      "url": "https://www.hankyung.com/",
+      "status": "ok",
+      "size": 163792
+    },
+    {
+      "url": "https://www.hankyung.com/feed",
+      "status": "ok",
+      "size": 22761
+    },
+    {
+      "url": "https://www.hospitalitynet.org/",
+      "status": "ok",
+      "size": 401426
+    },
+    {
+      "url": "https://www.hospitalitynet.org/rss",
+      "status": "ok",
+      "size": 129268
+    },
+    {
+      "url": "https://www.hospitalitynet.org/rss/news.xml",
+      "status": "ok",
+      "size": 15622
+    },
+    {
+      "url": "https://www.hospitalitynet.org/terms-conditions",
+      "status": "ok",
+      "size": 197999
+    },
+    {
+      "url": "https://www.hotelnewsresource.com/",
+      "status": "ok",
+      "size": 75908
+    },
+    {
+      "url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+      "status": "ok",
+      "size": 29746
+    },
+    {
+      "url": "https://www.hotelnewsresource.com/feeds/latest.xml",
+      "status": "ok",
+      "size": 17420
+    },
+    {
+      "url": "https://www.hotelnewsresource.com/legal-privacy.html",
+      "status": "ok",
+      "size": 25697
+    },
+    {
+      "url": "https://www.hotelrestaurant.co.kr/",
+      "status": "ok",
+      "size": 192569
+    },
+    {
+      "url": "https://www.hotelrestaurant.co.kr/com/copyright.html",
+      "status": "ok",
+      "size": 15171
+    },
+    {
+      "url": "https://www.hotelrestaurant.co.kr/com/service.html",
+      "status": "ok",
+      "size": 17765
+    },
+    {
+      "url": "https://www.iata.org/",
+      "status": "ok",
+      "size": 136558
+    },
+    {
+      "url": "https://www.iata.org/api/rss/pressrelease",
+      "status": "ok",
+      "size": 22978
+    },
+    {
+      "url": "https://www.iata.org/en/terms/",
+      "status": "ok",
+      "size": 114546
+    },
+    {
+      "url": "https://www.kata.or.kr/",
+      "status": "ok",
+      "size": 742
+    },
+    {
+      "url": "https://www.kkday.com/",
+      "status": "ok",
+      "size": 450945
+    },
+    {
+      "url": "https://www.klook.com/newsroom/",
+      "status": "ok",
+      "size": 142082
+    },
+    {
+      "url": "https://www.knto.or.kr/",
+      "status": "error",
+      "error": "robots_unverified:transport_error"
+    },
+    {
+      "url": "https://www.korea.kr/",
+      "status": "error",
+      "error": "robots_unverified:http_503"
+    },
+    {
+      "url": "https://www.koreamice.or.kr/",
+      "status": "error",
+      "error": "robots_unverified:transport_error"
+    },
+    {
+      "url": "https://www.mk.co.kr/",
+      "status": "ok",
+      "size": 290825
+    },
+    {
+      "url": "https://www.mk.co.kr/rss",
+      "status": "ok",
+      "size": 96007
+    },
+    {
+      "url": "https://www.molit.go.kr/",
+      "status": "error",
+      "error": "robots_unverified:http_503"
+    },
+    {
+      "url": "https://www.news1.kr/",
+      "status": "ok",
+      "size": 957390
+    },
+    {
+      "url": "https://www.newsis.com/",
+      "status": "ok",
+      "size": 199849
+    },
+    {
+      "url": "https://www.newsis.com/RSS/",
+      "status": "ok",
+      "size": 34882
+    },
+    {
+      "url": "https://www.newswire.co.kr/",
+      "status": "ok",
+      "size": 126266
+    },
+    {
+      "url": "https://www.newswire.co.kr/?md=A31",
+      "status": "ok",
+      "size": 179156
+    },
+    {
+      "url": "https://www.newswire.co.kr/coalition",
+      "status": "ok",
+      "size": 14085
+    },
+    {
+      "url": "https://www.newswire.co.kr/coalition/policyterms",
+      "status": "ok",
+      "size": 16714
+    },
+    {
+      "url": "https://www.phocuswire.com/",
+      "status": "ok",
+      "size": 130249
+    },
+    {
+      "url": "https://www.phocuswire.com/RSS/All-News",
+      "status": "ok",
+      "size": 76450
+    },
+    {
+      "url": "https://www.phocuswire.com/Terms-Conditions",
+      "status": "ok",
+      "size": 31353
+    },
+    {
+      "url": "https://www.prnewswire.com/",
+      "status": "ok",
+      "size": 210104
+    },
+    {
+      "url": "https://www.prnewswire.com/rss/",
+      "status": "ok",
+      "size": 156695
+    },
+    {
+      "url": "https://www.prnewswire.com/terms-of-use/",
+      "status": "ok",
+      "size": 199129
+    },
+    {
+      "url": "https://www.sedaily.com/",
+      "status": "ok",
+      "size": 215222
+    },
+    {
+      "url": "https://www.sedaily.com/rss",
+      "status": "ok",
+      "size": 36920
+    },
+    {
+      "url": "https://www.segye.com/",
+      "status": "ok",
+      "size": 159227
+    },
+    {
+      "url": "https://www.segye.com/rssInfo",
+      "status": "ok",
+      "size": 68268
+    },
+    {
+      "url": "https://www.tournews21.com/",
+      "status": "ok",
+      "size": 158891
+    },
+    {
+      "url": "https://www.tournews21.com/com/copyright.html",
+      "status": "ok",
+      "size": 15906
+    },
+    {
+      "url": "https://www.tournews21.com/com/service.html",
+      "status": "ok",
+      "size": 18527
+    },
+    {
+      "url": "https://www.travelandtourworld.com/",
+      "status": "ok",
+      "size": 1317468
+    },
+    {
+      "url": "https://www.traveldailynews.com/",
+      "status": "ok",
+      "size": 1023630
+    },
+    {
+      "url": "https://www.traveldailynews.com/editorial-policy/",
+      "status": "ok",
+      "size": 738807
+    },
+    {
+      "url": "https://www.traveldailynews.com/terms-of-sale/",
+      "status": "ok",
+      "size": 732820
+    },
+    {
+      "url": "https://www.travelinfo.co.kr/",
+      "status": "ok",
+      "size": 610
+    },
+    {
+      "url": "https://www.travelnbike.com/",
+      "status": "error",
+      "error": "robots_unverified:http_503"
+    },
+    {
+      "url": "https://www.travelweekly.com/",
+      "status": "ok",
+      "size": 706984
+    },
+    {
+      "url": "https://www.tvchosun.com/",
+      "status": "error",
+      "error": "robots_unverified:transport_error"
+    },
+    {
+      "url": "https://www.wttc.org/",
+      "status": "ok",
+      "size": 103004
+    },
+    {
+      "url": "https://www.yanolja.com/",
+      "status": "ok",
+      "size": 968522
+    },
+    {
+      "url": "https://www.yeogi.com/",
+      "status": "ok",
+      "size": 388017
+    }
+  ]
+}

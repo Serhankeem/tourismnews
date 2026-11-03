@@ -31,13 +31,29 @@ class Loader:
         self.robot_errors = {}
         self.opener = urllib.request.build_opener(NoRedirect)
 
+    def _open(self, req, redirects=False, retry_delay=0.5):
+        """One bounded transient retry. Never retry denial/robots/cert errors.
+
+        A longer server Retry-After is deferred to the next scheduled run.
+        """
+        for attempt in range(2):
+            try:
+                return (urllib.request.urlopen if redirects else self.opener.open)(req, timeout=self.timeout)
+            except urllib.error.HTTPError as exc:
+                if attempt or exc.code not in (500, 502, 503, 504):
+                    raise
+                raw = exc.headers.get('Retry-After') if exc.headers else None
+                if raw is not None and (not raw.isdigit() or int(raw) > 2):
+                    raise AccessBlocked('retry_after_requires_deferred_fetch') from exc
+                time.sleep(max(retry_delay, int(raw) if raw is not None else 0.5))
+
     def _rules(self, url):
         parts = urllib.parse.urlsplit(url)
         base = parts.scheme + '://' + parts.netloc
         if base not in self.rules:
             try:
                 req = urllib.request.Request(base + '/robots.txt', headers={'User-Agent': USER_AGENT})
-                with urllib.request.urlopen(req, timeout=self.timeout) as response:
+                with self._open(req, redirects=True) as response:
                     body = response.read(200001)
                 if len(body) > 200000:
                     raise AccessBlocked('robots_too_large')
@@ -82,7 +98,7 @@ class Loader:
             req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT, 'Accept': 'application/json, application/rss+xml, application/atom+xml, application/xml, text/xml'})
             self.last_request[base] = time.monotonic()
             try:
-                with self.opener.open(req, timeout=self.timeout) as response:
+                with self._open(req, retry_delay=delay) as response:
                     data = response.read(2 * 1024 * 1024 + 1)
                 if len(data) > 2 * 1024 * 1024:
                     raise ValueError('metadata_response_too_large')
