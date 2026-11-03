@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-03T14:04:58+09:00",
-  "last_successful_fetch": "2026-11-03T14:04:58+09:00",
+  "generated_at": "2026-11-03T15:02:18+09:00",
+  "last_successful_fetch": "2026-11-03T15:02:18+09:00",
   "count": 60,
   "mode": "live_rss",
   "articles": [
@@ -581,10 +581,23 @@
         "additional_terms": [
           "https://www.hospitalitynet.org/terms-conditions"
         ],
-        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "basis": "Official designated RSS guide expressly describes integration on external websites. Local review permits selective six-field feed metadata indexing only, interpreted as permission for this designated RSS interface. General Terms sections 5.2 and 6.2 still prohibit unauthorized automation and reproduction/bulk reuse; the guide does not explicitly discuss its priority over those clauses. No separate written licence or blanket website/body reuse approval has been obtained.",
         "checked_at": "2026-11-03",
         "body_reuse": "not_authorized",
-        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+        "approval_authority": "repository_scope_review_not_publisher_certificate",
+        "publisher_written_permission_obtained": false,
+        "rights_review": {
+          "result": "limited_designated_feed_interpretation",
+          "guide_url": "https://www.hospitalitynet.org/rss",
+          "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+          "general_terms_sections": [
+            "5.2",
+            "6.2"
+          ],
+          "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+          "checked_on": "2026-11-03"
+        }
       },
       "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
       "editorial": {
@@ -650,10 +663,23 @@
         "additional_terms": [
           "https://www.hospitalitynet.org/terms-conditions"
         ],
-        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "basis": "Official designated RSS guide expressly describes integration on external websites. Local review permits selective six-field feed metadata indexing only, interpreted as permission for this designated RSS interface. General Terms sections 5.2 and 6.2 still prohibit unauthorized automation and reproduction/bulk reuse; the guide does not explicitly discuss its priority over those clauses. No separate written licence or blanket website/body reuse approval has been obtained.",
         "checked_at": "2026-11-03",
         "body_reuse": "not_authorized",
-        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+        "approval_authority": "repository_scope_review_not_publisher_certificate",
+        "publisher_written_permission_obtained": false,
+        "rights_review": {
+          "result": "limited_designated_feed_interpretation",
+          "guide_url": "https://www.hospitalitynet.org/rss",
+          "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+          "general_terms_sections": [
+            "5.2",
+            "6.2"
+          ],
+          "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+          "checked_on": "2026-11-03"
+        }
       },
       "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
       "editorial": {
@@ -719,10 +745,23 @@
         "additional_terms": [
           "https://www.hospitalitynet.org/terms-conditions"
         ],
-        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "basis": "Official designated RSS guide expressly describes integration on external websites. Local review permits selective six-field feed metadata indexing only, interpreted as permission for this designated RSS interface. General Terms sections 5.2 and 6.2 still prohibit unauthorized automation and reproduction/bulk reuse; the guide does not explicitly discuss its priority over those clauses. No separate written licence or blanket website/body reuse approval has been obtained.",
         "checked_at": "2026-11-03",
         "body_reuse": "not_authorized",
-        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling",
+        "approval_authority": "repository_scope_review_not_publisher_certificate",
+        "publisher_written_permission_obtained": false,
+        "rights_review": {
+          "result": "limited_designated_feed_interpretation",
+          "guide_url": "https://www.hospitalitynet.org/rss",
+          "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+          "general_terms_sections": [
+            "5.2",
+            "6.2"
+          ],
+          "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+          "checked_on": "2026-11-03"
+        }
       },
       "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
       "editorial": {
@@ -4134,5 +4173,5 @@
       }
     }
   ],
-  "records_scope": "all_authorized_records_including_filings"
+  "records_scope": "all_stored_records_including_rights_holds_and_filings"
 }
