@@ -1,0 +1,94 @@
+{
+  "python": {
+    "command": "python -m unittest discover -s tests -q",
+    "passed": 264,
+    "failed": 0
+  },
+  "browser": {
+    "suites": [
+      {
+        "suite": "newsroom-freshness.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: real publication order (Nov 2 before Oct 29), home three, reversed six-field browser payload, exact original dates, time-zone ties, partial coverage and three empty/failure reasons at PC/mobile widths"
+      },
+      {
+        "suite": "newsroom.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: live articles, search, detail, stable bookmark, partial/all-failure status, preservation, briefing and legacy fallback, six-field link curation, all-page pagination/link coverage, filing/statistics exclusion and internal archive isolation; no JS errors"
+      },
+      {
+        "suite": "macro.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: real official monthly history, home/Macro exact values, 4 widths, definitions/pending financial metrics, ranges/gaps/missing growth, source-date/finality, refresh/all-failure preservation, empty initial state, private archive isolation and unchanged weather simulation"
+      },
+      {
+        "suite": "korea-coverage-v05.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS v0.5: 7 real domestic-publisher additions, six fields, original dates/links, search, rights exclusion, honest domestic coverage, 390/1440px"
+      },
+      {
+        "suite": "publication-visibility.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS visibility gate: real 3 held URLs absent from public views/fallback, preserved approved keywords, historical display/copy filtered, immutable file, cached-data failure closed, approved restoration, 390/1440px"
+      },
+      {
+        "suite": "pr17-review.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS PR17 review: approved literal keywords and held-source exclusion, unchanged five fields, public count, six public fields, current briefing rights exclusion, 390/1440px"
+      },
+      {
+        "suite": "header-weather-v22.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS header/weather v2.2: 6 widths, measured fit/text scaling, compact menu/native keys/ARIA/external/Escape, all routes/history, DOM order, scenario first on hash/home entry, sliders/reset/shared values, retained real charts/country cards"
+      },
+      {
+        "suite": "reports.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: 135 real reports; full-DB search, combined filters, 10/20 pagination/reset, sort, original links, no images/bodies, preservation, Newsroom pagination, PC/mobile layout"
+      },
+      {
+        "suite": "home.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: real home metadata/order/freshness, desktop/mobile four-group navigation, home logo link, keyboard menu, deep links/history, About dynamic source status, chart, weather/reset, Research preservation; no JS errors"
+      },
+      {
+        "suite": "ui-2.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS UI 2.0: four widths, 4 weather states, logos, banner persistence/dialog, sources table, both pagers, routes; no JS errors"
+      },
+      {
+        "suite": "navigation-research-v21.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS nav/research v2.1: 4 top-level menus with content-fit compact disclosure, disclosure/keyboard/history/hash, 5 widths, compound filters/counts/persistence/reset/pagination, stats/anchors; no JS errors"
+      },
+      {
+        "suite": "research-v05.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS Research v0.5: real new publishers, MICE/aviation/hotel filters, original links/dates/attribution, no images, desktop/mobile and Weather preservation"
+      },
+      {
+        "suite": "ui-polish.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: 28 page/width combinations; layout, original logo, 40px+ controls, keyboard/focus, readable real chart labels, long real report title, unchanged weather calculation, reduced motion"
+      },
+      {
+        "suite": "briefing-observation.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: briefing archive/date/copy/empty/failure preservation; official observations/updates/failure/financial exclusion; four widths"
+      },
+      {
+        "suite": "market-weather-v2.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS Weather v2: shared official values/source/month, 12-month chart/missing/comparisons, corrections/delay/failures/financial exclusion, scenario isolation/colors/keyboard/reset, four widths"
+      }
+    ],
+    "passed": 15,
+    "failed": 0
+  },
+  "preserved_legacy_ids_dates_links": 60,
+  "filings_and_statistics_records_unchanged": true,
+  "github_ci": {
+    "status": "pending_pr_creation"
+  },
+  "production_actions_and_pages": "not_run_on_feature_branch; unchanged_configuration; verify_after_merge"
+}

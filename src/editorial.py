@@ -70,6 +70,15 @@ def exposure(article):
         if agency and re.search(r'지역관광개발.*워크숍', title):
             evidence.append({'field': 'title', 'value': agency.group().strip(),
                              'rule': 'named_korean_tourism_institution_activity'})
+        rules = article.get('relevance_evidence', {}).get('rules', [])
+        if ('medical_tourism_lodging_designation' in rules and
+                re.search(r'서울시.*의료친화\s*숙박시설', title)):
+            evidence.append({'field': 'title', 'value': '서울시 의료친화 숙박시설 지정',
+                             'rule': 'explicit_korean_lodging_policy'})
+        route = re.search(r'(?:인천|제주|부산)\s*[-~∼–↔]\s*[가-힣]+', title)
+        if 'air_route_capacity_change' in rules and route:
+            evidence.append({'field': 'title', 'value': route.group(),
+                             'rule': 'explicit_korean_air_route_capacity'})
         if article.get('source_id', '').startswith('seoul_'):
             place = re.search(r'서울|동대문|남산|봉은사|제주|철원|부산|인천', title)
             foreign = re.search(r'영국|미국|일본|중국|런던|tokyo|london|united kingdom|united states', text)

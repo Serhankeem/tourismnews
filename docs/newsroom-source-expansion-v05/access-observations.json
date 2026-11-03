@@ -1,0 +1,194 @@
+[
+  {
+    "url": "https://www.culture.go.kr/",
+    "key": "5c6b6a39c19c",
+    "status": "ok",
+    "size": 230,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.tournews21.com/com/copyright.html",
+    "key": "dd48777414fc",
+    "status": "ok",
+    "size": 15906,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.hotelrestaurant.co.kr/com/copyright.html",
+    "key": "368393e3d245",
+    "status": "ok",
+    "size": 15171,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.data.go.kr/data/15105015/openapi.do",
+    "key": "3d6d9de8fabb",
+    "status": "error",
+    "error": "robots_unverified:http_503",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.korea.kr/",
+    "key": "ea36955b8933",
+    "status": "error",
+    "error": "robots_unverified:http_503",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.travelnbike.com/",
+    "key": "fd3b9f49d5c8",
+    "status": "error",
+    "error": "robots_unverified:http_503",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.newswire.co.kr/coalition/document",
+    "key": "84ea2e24bdfe",
+    "status": "ok",
+    "size": 50218,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.travelinfo.co.kr/",
+    "key": "ce6f1af9002f",
+    "status": "ok",
+    "size": 610,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.culture.go.kr/portal/main/main.do",
+    "key": "13595b696664",
+    "status": "ok",
+    "size": 284602,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.discoverynews.kr/",
+    "key": "99a4ac87a483",
+    "status": "ok",
+    "size": 122822,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.newswire.co.kr/coalition",
+    "key": "b4ec48df9896",
+    "status": "ok",
+    "size": 14085,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.newswire.co.kr/coalition/policyterms",
+    "key": "b0ea295ca8da",
+    "status": "ok",
+    "size": 16714,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://culture.go.kr/data/main/main.do",
+    "key": "dd869fb690c5",
+    "status": "error",
+    "error": "HTTP Error 503: Service Unavailable",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.kata.or.kr/",
+    "key": "97118badf4a5",
+    "status": "ok",
+    "size": 742,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.knto.or.kr/",
+    "key": "6ccc16ad8ba8",
+    "status": "error",
+    "error": "robots_unverified:transport_error",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.koreamice.or.kr/",
+    "key": "03ef4e2d6d7e",
+    "status": "error",
+    "error": "robots_unverified:transport_error",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.travelinfo.co.kr/main/main.html",
+    "key": "fcda9ef65f77",
+    "status": "ok",
+    "size": 30468,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.culture.go.kr/data/info/noticeListDtlView.do?blbmId=BLBM0000000000003719",
+    "key": "5c20421c5f9d",
+    "status": "error",
+    "error": "HTTP Error 503: Service Unavailable",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://newsroom.yanolja.com/",
+    "key": "45c919328b1c",
+    "status": "error",
+    "error": "robots_unverified:transport_error",
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": false
+  },
+  {
+    "url": "https://www.yeogi.com/",
+    "key": "1eaca2171efc",
+    "status": "ok",
+    "size": 388149,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.yanolja.com/",
+    "key": "c303be8cfc60",
+    "status": "ok",
+    "size": 971646,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://www.newswire.co.kr/?md=A31",
+    "key": "eaa3080f2d93",
+    "status": "ok",
+    "size": 179156,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+    "key": "e95b478686af",
+    "status": "ok",
+    "size": 276213,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  },
+  {
+    "url": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+    "key": "6bdbdedbd8cc",
+    "status": "ok",
+    "size": 418865,
+    "observed_on": "2026-11-03",
+    "robots_and_tls_verified": true
+  }
+]

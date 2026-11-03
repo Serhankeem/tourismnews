@@ -11,7 +11,8 @@ TERMS = tuple(dict.fromkeys(term for terms in SUBJECTS.values() for term in term
     '방한관광객', '대한항공', '아시아나항공', '제주항공', '진에어', '티웨이', '이스타항공',
     '하나투어', '모두투어', '야놀자', '여기어때', '아고다', '에어비앤비', 'OTA', 'GDS',
     '세이버', '호텔', '크루즈', '인바운드', '취항', '증편', '감편', '발권', '인수', '매출',
-    '영업이익', '관광재단', '관광공사', '관광청', 'Korean Air', 'Booking', 'Expedia', 'Trip.com')
+    '영업이익', '관광재단', '관광공사', '관광청', 'Korean Air', 'Booking', 'Expedia', 'Trip.com',
+    'MICE', '가업상속공제', '의료친화 숙박시설', '탑승률')
 
 
 # Literal industry phrases and identified tourism businesses only. No inferred
@@ -32,13 +33,16 @@ ENGLISH_TERMS = tuple(dict.fromkeys(
 
 
 def keywords(title):
-    """Keep Korean output identical; match English literal phrases with boundaries.
+    """Preserve legacy Korean terms; add literal MICE and coverage vocabulary.
 
     Longest overlapping phrase wins. Preserve the headline's spelling/case and
     never derive a keyword from source, category, description or editorial tier.
     """
     if re.search(r'[가-힣]', title):
-        return sorted(set(matches(title, TERMS)), key=lambda s: (-len(s), s))[:8]
+        # The legacy matcher expects folded input; changing it globally would
+        # alter existing OTA/GDS tags. Match this new acronym literally instead.
+        terms = matches(title, TERMS) + re.findall(r'(?<!\w)MICE(?!\w)', title)
+        return sorted(set(terms), key=lambda s: (-len(s), s))[:8]
     candidates = []
     for term in ENGLISH_TERMS:
         pattern = r'(?<!\w)' + r'\s+'.join(re.escape(w) for w in term.split()) + r'(?!\w)'

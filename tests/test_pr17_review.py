@@ -28,11 +28,11 @@ class ReviewTests(unittest.TestCase):
   self.assertEqual(keywords('Hotelier Chairman: new AI platform drives revenue and growth'),[])
   self.assertEqual(keywords('An independent booking decision and ExpediaGroupish name'),[])
   self.assertEqual(keywords('Grand Hyatt opens; HYATT expands'),['Grand Hyatt','HYATT'])
- def test_korean_headlines_unchanged_against_previous_extractor(self):
+ def test_korean_legacy_terms_with_explicit_v05_mice_addition(self):
   rows=[a for a in ARCHIVE if re.search('[가-힣]',a['title'])]
   self.assertGreaterEqual(len(rows),40)
   for a in rows:
-   old=sorted(set(matches(a['title'],TERMS)),key=lambda s:(-len(s),s))[:8]
+   old=sorted(set(matches(a['title'],TERMS)+re.findall(r'(?<!\w)MICE(?!\w)',a['title'])),key=lambda s:(-len(s),s))[:8]
    self.assertEqual(keywords(a['title']),old,a['title'])
  def test_real_six_tiers_unchanged_and_direct_not_equal_to_global_major(self):
   original_urls={a['url'] for a in SIX}

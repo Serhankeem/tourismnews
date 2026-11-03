@@ -1,16 +1,16 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-03T15:02:18+09:00",
+  "generated_at": "2026-11-03T15:13:02+09:00",
   "briefing_date": "2026-11-03",
-  "last_successful_fetch": "2026-11-03T15:02:18+09:00",
+  "last_successful_fetch": "2026-11-03T15:13:02+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 8,
-  "selected_count": 3,
+  "recent_news_count": 10,
+  "selected_count": 5,
   "collection": {
     "status": "partial",
-    "successful_sources": 15,
+    "successful_sources": 23,
     "source_count": 26,
-    "failed_sources": 11
+    "failed_sources": 3
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
@@ -23,6 +23,16 @@
       "category": "여행산업",
       "keywords": [
         "여행업"
+      ]
+    },
+    {
+      "title": "서울시, ‘의료친화 숙박시설’ 19개소 선정",
+      "source": "트래블데일리",
+      "published_at": "2026-11-02T23:50:43+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72548",
+      "category": "항공·숙박",
+      "keywords": [
+        "의료친화 숙박시설"
       ]
     },
     {
@@ -44,6 +54,16 @@
       "category": "문화·트렌드",
       "keywords": [
         "관광활성화"
+      ]
+    },
+    {
+      "title": "창립 85주년 맞은 필리핀항공, 인천~마닐라 주 17회 증편… 차세대 A350-1000 투입",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-11-02T19:44:51+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3158051",
+      "category": "항공·숙박",
+      "keywords": [
+        "증편"
       ]
     }
   ],
