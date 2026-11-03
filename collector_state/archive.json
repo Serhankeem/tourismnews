@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-03T22:17:42+09:00",
-  "last_successful_fetch": "2026-11-03T22:17:42+09:00",
+  "generated_at": "2026-11-04T00:00:45+09:00",
+  "last_successful_fetch": "2026-11-04T00:00:45+09:00",
   "count": 63,
   "mode": "live_rss",
   "articles": [
@@ -4264,7 +4264,9 @@
         "korea_connection": "not_established",
         "evidence": [],
         "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
-      }
+      },
+      "archived_only": true,
+      "archive_reason": "not_selected_by_current_publication_window_or_rules"
     },
     {
       "id": "03cb03a7fbe76e3568",
