@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-04T00:00:45+09:00",
+  "checked_at": "2026-11-04T02:08:41+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -1698,6 +1698,170 @@
       "decision": "publish"
     },
     {
+      "id": "c9c956388ac64b73a0",
+      "title": "유럽 시위 확산에 여행심리 ‘먹구름’…신규 모객 걱정",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500657",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2ef658daec53bd25ee",
+      "title": "토파스도 아시아나 발권…양대 GDS 교차 발권 시대",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500665",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6f12240eba3b7dd3df",
+      "title": "환율 하락에 숨통 트이나…3분기 흑자 전환한 LCC",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500664",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1131143b92e128addf",
+      "title": "부산 첫 장거리 노선에 깃발 꽂을 항공사는?",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500661",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "fc1a0d29734aca27c5",
+      "title": "폭포 보고 끝? 나이아가라 폭포에서 하룻밤을 보낼 이유",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500652",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "e7e7b5ec8f59f0b425",
+      "title": "“MICE 경제효과 과소평가”…행사 이후 성과까지 따져야",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500647",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "81c8d658ba0bae3f6d",
+      "title": "감천문화마을 아쉬움 [김기헌의 관광 시론]",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500638",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c9a25a908917080784",
+      "title": "원전으로 가까워진 체코 비소치나, 한국 관광 시장 공략 본격화",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500628",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "759eec4777bfa718c4",
+      "title": "AI가 여행을 설계하는 시대…관광의 답은 결국 ‘사람’",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500609",
+      "source_id": "traveltimes",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "6070cf01ce3b34aa95",
       "title": "외국인도 교통카드 없이 버스·지하철 이용하게 될까",
       "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500660",
@@ -2267,108 +2431,6 @@
       "id": "af4e1837b23aa94654",
       "title": "혈세 낭비형 국제행사, 이대로 방치할 것인가",
       "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500624",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "e6d6cd9ebbe92541fc",
-      "title": "일본·중국만 웃는 동계 항공시장…증편 속 감편의 역설",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500620",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "bd278fe1b4ec903ed7",
-      "title": "“릴스 찍으러 식당 간다?”…아시아 관광업계가 주목한 미식 여행의 변화",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500605",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d0d5316cf14f316be3",
-      "title": "청소비 냈는데 설거지까지? 에어비앤비 퇴실 규정 바뀐다",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500612",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "여행산업",
-        "score": 6,
-        "rules": [
-          "ota_operating_policy_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "에어비앤비",
-              "퇴실규정",
-              "바뀐다"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "OTA의 구체적인 운영·정산·예약 조건과 실제 변경이 제목에 함께 명시되어 있습니다. 한국 시장 적용 여부는 별도입니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "c13c8227da32c85250",
-      "title": "“2027년 한국인 4만 명 유치 목표”…이스라엘, 관광 회복 시동",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500588",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "1b9164ba9b458e05d2",
-      "title": "“‘도쿄 바나나’처럼…한국에선 간장게장 사 가는 문화 만들고 싶어”",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500580",
       "source_id": "traveltimes",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -4274,6 +4336,71 @@
       "decision": "exclude"
     },
     {
+      "id": "cebedf6da46591fafc",
+      "title": "RoomPriceGenie launches Portfolio Calendar to give hotel groups clearer control of revenue performance",
+      "url": "https://www.hospitalitynet.org/news/4135249/roompricegenie-launches-portfolio-calendar-to-give-hotel-groups-clearer-control-of-revenue-performance",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hotel",
+              "launch"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "78bd28b3203b87406c",
+      "title": "Have Hospitality Trade Shows Gone the Way of the Dodo?, Hotels Choose a Role in Guest Wellbeing, GEO and the Restaurant That Isn't Recommended",
+      "url": "https://www.hospitalitynet.org/editorial/4135248/have-hospitality-trade-shows-gone-the-way-of-the-dodo-hotels-choose-a-role-in-guest-wellbeing-geo-and-the-restaurant-that-isnt-recommended",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "027917fe665a179175",
+      "title": "VDA Telkonet and Cloudbeds Announce Strategic Partnership to Connect Smart Room Automation with Cloud Hospitality Management",
+      "url": "https://www.hospitalitynet.org/news/4135247/vda-telkonet-and-cloudbeds-announce-strategic-partnership-to-connect-smart-room-automation-with-cloud-hospitality-management",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "6736e569c3a0db70bb",
       "title": "Beyond the Summits: The Lasting Power of IHG’s Owners Assn.",
       "url": "https://www.hospitalitynet.org/opinion/4135246/beyond-the-summits-the-lasting-power-of-ihgs-owners-assn",
@@ -4573,63 +4700,9 @@
       "decision": "exclude"
     },
     {
-      "id": "e1c696122899882b09",
-      "title": "How the InterContinental Sydney Coogee Beach Used Canary to Level Up Their Guest Experience",
-      "url": "https://www.hospitalitynet.org/casestudy/4135191/how-the-intercontinental-sydney-coogee-beach-used-canary-to-level-up-their-guest-experience",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
       "id": "757058bf7a0ccebeba",
       "title": "Wyndham Grand Orlando Resort Bonnet Creek",
       "url": "https://www.hospitalitynet.org/casestudy/4135229/wyndham-grand-orlando-resort-bonnet-creek",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5d3116c36fb093ed56",
-      "title": "Emerging Travel Group Expands ETG Marketing Hub with Hundreds of Advertising Channels",
-      "url": "https://www.hospitalitynet.org/news/4135228/emerging-travel-group-expands-etg-marketing-hub-with-hundreds-of-advertising-channels",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "fdbb0c375e664bb694",
-      "title": "Better Hotel Reviews Start Before the Guest Checks Out.",
-      "url": "https://www.hospitalitynet.org/opinion/4135227/better-hotel-reviews-start-before-the-guest-checks-out",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",

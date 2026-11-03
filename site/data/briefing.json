@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-04T00:00:45+09:00",
+  "generated_at": "2026-11-04T02:08:41+09:00",
   "briefing_date": "2026-11-04",
-  "last_successful_fetch": "2026-11-04T00:00:45+09:00",
+  "last_successful_fetch": "2026-11-04T02:08:41+09:00",
   "status": "candidates_ready",
   "recent_news_count": 4,
-  "selected_count": 2,
+  "selected_count": 1,
   "collection": {
     "status": "partial",
     "successful_sources": 16,
@@ -24,16 +24,6 @@
       "keywords": [
         "영업이익",
         "제주항공"
-      ]
-    },
-    {
-      "title": "후쿠시마, 한국인 여행지 될 수 있을까…한국 여행업계가 짚은 과제",
-      "source": "여행신문",
-      "published_at": "2026-11-03T00:15:00+09:00",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500626",
-      "category": "여행산업",
-      "keywords": [
-        "여행업"
       ]
     }
   ],
