@@ -44,6 +44,11 @@ class ReviewTests(unittest.TestCase):
    self.assertEqual(tier,'global_major' if 'Global Air Passenger Demand' in a['title'] else 'reference')
   at=c.timestamp(PROOF['comparison_at']);chosen,_=select(records,at)
   self.assertEqual(len(chosen),1);self.assertIn('Global Air Passenger Demand',chosen[0]['title'])
+  from src.visibility import PublicationGate
+  sources=json.loads((ROOT/'sources.json').read_text())['sources']
+  gate=PublicationGate(sources,permission,ROOT/'site/data')
+  _,permitted,_,_=gate.views(records)
+  self.assertEqual(select(permitted,at)[0],[])
  def test_company_scale_or_local_opening_does_not_prove_worldwide_change(self):
   for title in ['Hilton Worldwide opens a hotel in Doha','Marriott global company revenue increases 5%','Hyatt hotel revenue increases 20%','IHG opens 100 hotels in Qatar']:
    self.assertEqual(exposure({'title':title,'relevance_label':'Direct'})['tier'],'reference')
@@ -61,4 +66,5 @@ class ReviewTests(unittest.TestCase):
    held=source(publication={'status':'review'})
    result=execute([held],p/'data',p/'state',at=AT,loader=lambda _:feed('호텔업 매출 증가 발표',link='https://example.org/new-held'))
    self.assertEqual(result['new_newsroom_items'],0)
-   self.assertEqual(json.loads((p/'data/newsroom.json').read_text())['articles'],before)
+   self.assertEqual(json.loads((p/'data/newsroom.json').read_text())['articles'],[])
+   self.assertTrue(any(a['url']==before[0]['url'] for a in json.loads((p/'state/archive.json').read_text())['articles']))

@@ -15,7 +15,7 @@ def render(data):
     if quality:
         rows += ['', '### News coverage quality (discovery vs publication)', '', '| Metric | Value |', '| --- | ---: |']
         for key in ('configured_sources', 'attempted_sources', 'successful_sources', 'publication_approved_sources',
-                    'publishing_sources', 'new_news_articles', 'published_news_articles', 'originally_published_last24h',
+                    'publishing_sources', 'new_news_articles', 'published_news_articles', 'rights_held_news_count', 'public_news_direct_ratio', 'originally_published_last24h',
                     'originally_published_last7d', 'direct_ratio', 'top3_source_share', 'duplicate_ratio'):
             rows.append(f'| {key} | {quality.get(key)} |')
         rows += ['', 'Direct ratio: ' + quality['direct_ratio_denominator'],

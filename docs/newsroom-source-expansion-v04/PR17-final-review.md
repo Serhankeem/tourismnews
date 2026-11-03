@@ -1,5 +1,7 @@
 # PR #17 병합 전 최종 검수
 
+> 이후 재검수에 따라 기존 HRN 3건도 공개 대상에서 제외했습니다. 이 문서는 이전 검수 이력이며, 현재 상태(공개 47건/브리핑 3건)는 [PUBLICATION-GATE.md](PUBLICATION-GATE.md)를 확인하세요.
+
 기존 PR 브랜치 `feat/newsroom-source-expansion-v04`에서만 수정했습니다. 새 PR·main 병합·신규 수집원 발굴·기사 추가 수집은 하지 않았습니다.
 
 ## 1. 영문 키워드

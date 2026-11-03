@@ -932,8 +932,11 @@
         ],
         "remaining_uncertainty": "Whether feed indexing guidance permits a public noncommercial six-field index notwithstanding the general rights reservation. Publisher clarification required.",
         "checked_on": "2026-11-03"
-      }
+      },
+      "current_public_news": 0,
+      "retained_historical_news": 3
     }
   ],
-  "capture_notice": "Execution metrics are the earlier real-response capture. For current gate changes see review-final.json and sources.json."
+  "capture_notice": "Execution metrics are the earlier real-response capture. For current gate changes see review-final.json and sources.json.",
+  "current_publication_view_notice": "See publication-gate-final.json: HRN historical records retained but current public contribution is zero."
 }

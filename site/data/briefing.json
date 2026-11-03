@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-03T14:21:12+09:00",
+  "generated_at": "2026-11-03T14:42:14+09:00",
   "briefing_date": "2026-11-03",
   "last_successful_fetch": "2026-11-03T14:04:58+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 11,
-  "selected_count": 4,
+  "recent_news_count": 8,
+  "selected_count": 3,
   "collection": {
     "status": "partial",
     "successful_sources": 9,
@@ -44,16 +44,6 @@
       "category": "문화·트렌드",
       "keywords": [
         "관광활성화"
-      ]
-    },
-    {
-      "title": "Global Air Passenger Demand Falls 0.5% in September",
-      "source": "Hotel News Resource",
-      "published_at": "2026-11-03T04:32:14+09:00",
-      "url": "https://www.hotelnewsresource.com/article143592.html",
-      "category": "항공·숙박",
-      "keywords": [
-        "Air Passenger Demand"
       ]
     }
   ],

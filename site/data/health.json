@@ -281,8 +281,8 @@
   "category_counts": {
     "관광정책": 3,
     "인바운드": 9,
-    "여행산업": 7,
-    "항공·숙박": 9,
+    "여행산업": 8,
+    "항공·숙박": 16,
     "문화·트렌드": 15,
     "경제·시장": 1
   },
@@ -296,9 +296,9 @@
     "new_discoveries": 14,
     "duplicate_observations": 359,
     "new_auto_published": 0,
-    "total_published": 60,
+    "total_published": 55,
     "total_archived": 60,
-    "newsroom_count": 50,
+    "newsroom_count": 47,
     "filings_count": 5,
     "other_research_count": 3,
     "new_newsroom_items": 0,
@@ -313,12 +313,6 @@
         "new_this_run": 0
       },
       "hospitalitynet": {
-        "count": 3,
-        "originally_published_last7d": 3,
-        "korea_direct": 0,
-        "new_this_run": 0
-      },
-      "hotelnewsresource": {
         "count": 3,
         "originally_published_last7d": 3,
         "korea_direct": 0,
@@ -359,18 +353,18 @@
       "관광정책": 3,
       "인바운드": 9,
       "여행산업": 7,
-      "항공·숙박": 15,
+      "항공·숙박": 12,
       "문화·트렌드": 15,
       "경제·시장": 1
     },
     "newsroom_tier_counts": {
       "korea_direct": 22,
-      "global_major": 1,
-      "reference": 27
+      "global_major": 0,
+      "reference": 25
     },
-    "newsroom_originally_published_last24h": 11,
-    "newsroom_originally_published_last7d": 37,
-    "newsroom_newly_added_last24h": 12,
+    "newsroom_originally_published_last24h": 8,
+    "newsroom_originally_published_last7d": 34,
+    "newsroom_newly_added_last24h": 9,
     "new_backfilled": 0,
     "record_type_counts": {
       "news": 52,
@@ -381,8 +375,8 @@
     "category_counts": {
       "관광정책": 3,
       "인바운드": 9,
-      "여행산업": 9,
-      "항공·숙박": 20,
+      "여행산업": 8,
+      "항공·숙박": 16,
       "문화·트렌드": 15,
       "경제·시장": 1
     },
@@ -1318,8 +1312,9 @@
     ],
     "briefing": {
       "status": "ok",
-      "checked_at": "2026-11-03T14:04:58+09:00",
-      "selection_status": "candidates_ready"
+      "checked_at": "2026-11-03T14:42:14+09:00",
+      "selection_status": "candidates_ready",
+      "operation": "current_source_rights_reprojection_without_fetch"
     },
     "outcome": "no_new_publications_with_source_errors",
     "quality": {
@@ -1328,12 +1323,12 @@
       "attempted_sources": 24,
       "successful_sources": 13,
       "publication_approved_sources": 19,
-      "publishing_sources": 8,
+      "publishing_sources": 7,
       "new_publishing_sources": [],
       "new_news_articles": 0,
-      "published_news_articles": 50,
-      "originally_published_last24h": 11,
-      "originally_published_last7d": 37,
+      "published_news_articles": 47,
+      "originally_published_last24h": 8,
+      "originally_published_last7d": 34,
       "evaluated_news_classifications": {
         "Direct": 22,
         "Indirect": 0,
@@ -1341,18 +1336,17 @@
       },
       "direct_ratio": 0.058981233243967826,
       "direct_ratio_denominator": "classified_news_feed_observations_within_window_excluding_filings_and_statistics",
-      "top3_source_share": 0.72,
+      "top3_source_share": 0.7659574468085106,
       "duplicate_ratio": 0.9624664879356568,
       "duplicate_ratio_denominator": "valid_discovery_observations_new_plus_previously_seen_not_removed_independent_reports",
       "news_by_source": {
-        "hotelnewsresource": 3,
-        "traveltimes": 14,
-        "traveldaily": 13,
+        "govuk_aviation": 2,
         "hospitalitynet": 3,
-        "ttlnews": 9,
         "mcst_press": 4,
         "seoul_culture": 2,
-        "govuk_aviation": 2
+        "traveldaily": 13,
+        "traveltimes": 14,
+        "ttlnews": 9
       },
       "failed_sources": [
         {
@@ -1569,7 +1563,20 @@
           "publication_approved": false
         }
       ],
-      "scope": "latest_actual_main_transport_snapshot_and_current_merged_DB_no_new_fetch"
+      "scope": "latest_actual_main_transport_snapshot_and_current_merged_DB_no_new_fetch",
+      "rights_held_news_count": 3,
+      "public_record_count": 55,
+      "stored_news_count": 52,
+      "public_news_relevance_counts": {
+        "Direct": 47,
+        "Indirect": 0,
+        "Irrelevant": 0
+      },
+      "public_news_direct_ratio": 1.0,
+      "public_metrics_as_of": "2026-11-03T14:49:09+09:00",
+      "rights_held_news_by_source": {
+        "hotelnewsresource": 3
+      }
     },
     "review_context": {
       "operation": "review_conflict_resolution_without_network_collection",
@@ -1578,13 +1585,22 @@
       "expansion_snapshot_checked_at": "2026-11-03T13:36:40+09:00",
       "projection_reviewed_at": "2026-11-03T14:21:12+09:00",
       "notice": "Transport observations are the latest main run (24 sources). Current DB retains the six earlier expansion articles; new source rights gates reflect this review. Initial 26-source experiment remains documented in comparison.json."
-    }
+    },
+    "publication_visibility": {
+      "status": "ok",
+      "rights_held_news_count": 3,
+      "hidden_this_run": 3,
+      "restored_this_run": 0,
+      "public_news_count": 47,
+      "policy_reprojection": true
+    },
+    "total_published_scope": "current_public_views_all_record_types"
   },
   "briefing": {
     "status": "ok",
-    "checked_at": "2026-11-03T14:21:12+09:00",
+    "checked_at": "2026-11-03T14:42:14+09:00",
     "selection_status": "candidates_ready",
-    "operation": "metadata_review_reprojection_no_new_fetch"
+    "operation": "current_source_rights_reprojection_without_fetch"
   },
   "review_context": {
     "operation": "review_conflict_resolution_without_network_collection",
@@ -1592,6 +1608,16 @@
     "latest_main_transport_checked_at": "2026-11-03T14:04:58+09:00",
     "expansion_snapshot_checked_at": "2026-11-03T13:36:40+09:00",
     "projection_reviewed_at": "2026-11-03T14:21:12+09:00",
-    "notice": "Transport observations are the latest main run (24 sources). Current DB retains the six earlier expansion articles; new source rights gates reflect this review. Initial 26-source experiment remains documented in comparison.json."
+    "notice": "Transport observations are the latest main run (24 sources). Current DB retains the six earlier expansion articles; new source rights gates reflect this review. Initial 26-source experiment remains documented in comparison.json.",
+    "rights_gate_reprojected_at": "2026-11-03T14:42:14+09:00",
+    "rights_gate_operation": "No new collection; current source policy hides existing HRN articles and current briefing candidates. Immutable confirmed history retained."
+  },
+  "publication_visibility": {
+    "status": "ok",
+    "rights_held_news_count": 3,
+    "hidden_this_run": 3,
+    "restored_this_run": 0,
+    "public_news_count": 47,
+    "policy_reprojection": true
   }
 }

@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-03T14:42:14+09:00",
+  "before_news": 50,
+  "public_news": 47,
+  "stored_records": 60,
+  "public_record_count": 55,
+  "publishing_sources": 7,
+  "news_by_source": {
+    "govuk_aviation": 2,
+    "hospitalitynet": 3,
+    "mcst_press": 4,
+    "seoul_culture": 2,
+    "traveldaily": 13,
+    "traveltimes": 14,
+    "ttlnews": 9
+  },
+  "briefing_candidates": 3,
+  "rights_held_ids": [
+    "04c6aa1d7ac436bbff",
+    "2a627dcb89d093be92",
+    "65173583a32484d500"
+  ],
+  "rights_held_count": 3,
+  "top3_share": 0.7659574468085106,
+  "public_news_relevance_counts": {
+    "Direct": 47,
+    "Indirect": 0,
+    "Irrelevant": 0
+  },
+  "canonical_archive_sha256": "555d4a85c1932f7ab487d5d9547c5a15e04edd1b63247b2213f03c390b63a45c",
+  "new_network_fetches": 0,
+  "public_metrics_as_of": "2026-11-03T14:49:09+09:00",
+  "last24h_public_news": 8,
+  "last7d_public_news": 34,
+  "protected_sha256": {
+    "collector_state/archive.json": "555d4a85c1932f7ab487d5d9547c5a15e04edd1b63247b2213f03c390b63a45c",
+    "collector_state/briefing_selection.json": "42cdb57e9cf433ecab8fa7852d64fbe06da4b166aec2717c543866e2bfbe906e",
+    "site/data/briefing_archive.json": "88e42e51126eb8ddfdfc5f40958b4a44dd3dadbfe5d7032d39fd2e0f1bc72528",
+    "site/data/reports.json": "238c6adf43fe88579add5d671c8e743550ff6836a9ff4e48474572c6c488b5d4",
+    "site/data/reports_health.json": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+    "site/data/macro.json": "e77391d0e1aac06e5646e6f3a51cba63d8729c4495ee6c3f88553bcb6d1ef645",
+    "site/data/macro_health.json": "ced5db6800f75be1e9fdf2aad0fe41181aa42ec96eea25b9f4182b7a6bce2e54",
+    "site/currentourism.js": "770bab6557e0afaa315eb47f2dcf8f55521e7083cc5b4af5a597707ed7936803",
+    "site/index.html": "54ff63d133fb0ec940ec085c71f45d401bd33f4afc4f963ecd278e7cc0bfd60d",
+    "site/assets/currentourism-new-airplane-logo.png": "7f92affea61c57197f2b015576cb7bcaf604defb0ac270894157d8e94d070b7f"
+  },
+  "approved_public_records_exactly_preserved": 47,
+  "held_source_public_contribution": 0,
+  "held_state_history_count": 3
+}

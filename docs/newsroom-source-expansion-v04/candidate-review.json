@@ -31,8 +31,8 @@
       "coverage": "관광산업 제목 기반 관련성 필터 적용; 일반 홍보·개인 여행/할인 제외",
       "date": "RSS 원 발행일/시간대 확인",
       "reliability": "이번 1회 응답 검증; 연속 운영 관측은 병합 후 필요",
-      "result": "보류 — 신규 자동 게시 중단, 기존 검증 3건 보존",
-      "reason": "최종 재검토에서 개인정보 페이지가 연결한 실제 일반 약관 Info-legal.html을 추가 확인. service guidelines 편입(1조)과 권리 유보/서비스 제공만으로 이용허락이 아님(12조)을 함께 검토. 신규 공개 자동 게이트는 review.",
+      "result": "공개 전체 보류 — 기존 3건 원장 보존, Newsroom·현재 브리핑 표시 제외",
+      "reason": "최종 재검토에서 개인정보 페이지가 연결한 실제 일반 약관 Info-legal.html을 추가 확인. service guidelines 편입(1조)과 권리 유보/서비스 제공만으로 이용허락이 아님(12조)을 함께 검토. 신규 공개 자동 게이트는 review. 현재 source 권리 게이트를 과거 레코드에도 적용하며 승인 후 같은 ID/발행일로 복구 가능.",
       "recent7_direct_candidates": 3,
       "new_auto_publishable": 0,
       "general_terms_url": "https://www.hotelnewsresource.com/Info-legal.html"
