@@ -3,7 +3,7 @@
   "mode": "live_rss",
   "generated_at": "2026-11-03T14:04:58+09:00",
   "last_successful_fetch": "2026-11-03T14:04:58+09:00",
-  "count": 44,
+  "count": 47,
   "public_fields": [
     "title",
     "source",
@@ -53,6 +53,39 @@
       "category": "문화·트렌드",
       "keywords": [
         "관광활성화"
+      ]
+    },
+    {
+      "title": "IDS Next Launches Pomolabs, New AI-Native Intelligence Platform for Hospitality Operations",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-02T23:00:00+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hospitality Operations"
+      ]
+    },
+    {
+      "title": "Accor & Corinthia Group launch strategic collaboration to bring Verdi Hotels to Handwritten Collection",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-02T22:59:36+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection",
+      "category": "항공·숙박",
+      "keywords": [
+        "Corinthia Group",
+        "Hotels",
+        "Accor"
+      ]
+    },
+    {
+      "title": "Hyatt Introduces Enhanced Hyatt Leverage Platform for Small-and-Midsize Business Travel",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-02T20:35:09+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135216/hyatt-introduces-enhanced-hyatt-leverage-platform-for-small-and-midsize-business-travel",
+      "category": "항공·숙박",
+      "keywords": [
+        "Business Travel",
+        "Hyatt"
       ]
     },
     {
@@ -452,7 +485,9 @@
       "published_at": "2026-10-19T18:00:04+09:00",
       "url": "https://www.gov.uk/government/news/stronger-safeguards-for-wheelchair-users-and-better-trained-staff-to-support-disabled-air-passengers",
       "category": "항공·숙박",
-      "keywords": []
+      "keywords": [
+        "air passengers"
+      ]
     },
     {
       "title": "Take off for passengers as government scraps extra charges when flying",

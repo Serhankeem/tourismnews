@@ -12,12 +12,14 @@ if __package__:
     from .briefing import save as save_briefing
     from .discovery import Loader, AccessBlocked, items_from, feed_bytes
     from .publication import public_record
+    from .visibility import PublicationGate
     from .editorial import project, exposure, is_statistical, statistical_assessment
 else:
     import collector as c
     from briefing import save as save_briefing
     from discovery import Loader, AccessBlocked, items_from, feed_bytes
     from publication import public_record
+    from visibility import PublicationGate
     from editorial import project, exposure, is_statistical, statistical_assessment
 
 
@@ -56,6 +58,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     old_articles = original.get('articles', []) if original.get('mode') != 'fixture_demo' else []
     if any('id' not in a for a in old_articles):
         raise ValueError('public_projection_requires_internal_archive')
+    gate = PublicationGate(sources, permission, data_dir)
     old_ids = {a['id'] for a in old_articles}
     ledger = c.read_json(state_dir / 'discovery.json', {}).get('candidates', {})
     previous_ids = set(ledger)
@@ -68,6 +71,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
             continue
         sid = source['id']
         row = {'id': sid, 'name': source['name'], 'url': source['url'], 'group': source.get('group', 'public'),
+               'fetch_attempted': False, 'news_classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
                'received': 0, 'new_discoveries': 0, 'duplicates': 0, 'rights_holds': 0, 'date_holds': 0, 'invalid_metadata': 0, 'outside_window': 0,
                'classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
                'publication_policy': source.get('publication', {'status': 'review'}),
@@ -75,6 +79,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
         try:
             if not source.get('discovery_allowed', True):
                 raise AccessBlocked('discovery_not_authorized')
+            row['fetch_attempted'] = True
             payload = loader(source['url'])
             items = list(items_from(source, payload))
             source_days = min(days, source.get('backfill', {}).get('max_days', days))
@@ -125,6 +130,8 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                     continue
                 if assessment['label'] in row['classifications']:
                     row['classifications'][assessment['label']] += 1
+                    if not is_statistical(source) and item.get('record_type', 'news') == 'news':
+                        row['news_classifications'][assessment['label']] += 1
                 else:
                     row['statistical_records'] = row.get('statistical_records', 0) + 1
                 first_seen = ledger.get(aid, {}).get('first_discovered_at', c.iso(at))
@@ -221,15 +228,19 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                 if candidate['publication_policy'].get('attribution'):
                     article['desc'] = '원문 링크에서 공식 자료를 확인하세요. ' + candidate['publication_policy']['attribution']
                 ledger[article['id']]['publication_status'] = 'published'
-        articles, newsroom, filings = project(articles)
+        articles, newsroom, filings, other_views = gate.views(articles)
         news['articles'] = articles
         news['count'] = len(articles)
-        news['records_scope'] = 'all_authorized_records_including_filings'
+        news['records_scope'] = 'all_stored_records_including_rights_holds_and_filings'
         news['schema_version'] = 3
         # Persist the complete archive before replacing a legacy mixed news.json.
         c.write_atomic(archive_path, news)
+    policy_reprojection = gate.needs_reprojection(articles, state_dir)
+    gate.write_manifest(articles, data_dir, at)
+    if result['status'] != 'failed' or policy_reprojection:
+        _, newsroom, filings, other_views = gate.views(articles)
         for name, items in (('news', newsroom), ('newsroom', newsroom), ('filings', filings),
-                            ('research', [a for a in articles if a['record_type'] not in ('news', 'regulatory_filing')])):
+                            ('research', other_views)):
             c.write_atomic(data_dir / (name + '.json'), {'schema_version': 4, 'mode': news.get('mode', 'live_rss'),
                            'generated_at': news.get('generated_at'), 'last_successful_fetch': news.get('last_successful_fetch'),
                            'count': len(items), 'public_fields': list(public_record(items[0])) if items else ['title', 'source', 'published_at', 'url', 'category', 'keywords'],
@@ -243,12 +254,17 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
             # No exception payload (which can contain credentials) is public.
             briefing_health = {'status': 'failed', 'checked_at': c.iso(at),
                                'error_kind': 'generation_or_write_failed', 'previous_data_preserved': True}
-        if legacy_archive.exists():
+        if result['status'] != 'failed' and legacy_archive.exists():
             legacy_archive.unlink()  # full original is preserved outside the Pages directory
-    # Failure keeps public projections byte-for-byte; metrics still use the
-    # same deterministic editorial policy without rewriting failed-run data.
-    metric_articles, newsroom, filings = project(articles)
-    published_ids = {a['id'] for a in articles}
+    # A network failure preserves stored records. An explicit rights change
+    # still removes/restores public views without inventing a successful fetch.
+    metric_articles, newsroom, filings, other_views = gate.views(articles)
+    try:
+        visibility_health = gate.write_history(articles, state_dir, at)
+    except (OSError, ValueError, KeyError, TypeError):
+        visibility_health = {'status': 'failed', 'error_kind': 'visibility_history_write_failed'}
+    public_records = newsroom + filings + other_views
+    published_ids = {a['id'] for a in public_records}
     new_published = published_ids - old_ids
     for row in health:
         row['new_auto_published'] = sum(a['id'] in new_published and a['source_id'] == row['id'] for a in articles)
@@ -261,9 +277,10 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                'received': sum(h['received'] for h in health),
                'new_discoveries': sum(h['new_discoveries'] for h in health),
                'duplicate_observations': sum(h['duplicates'] for h in health),
-               'new_auto_published': len(new_published), 'total_published': len(articles),
+               'new_auto_published': len(new_published), 'total_published': len(public_records),
+               'total_published_scope': 'current_public_views_all_record_types',
                'total_archived': len(articles), 'newsroom_count': len(newsroom), 'filings_count': len(filings),
-               'other_research_count': sum(a['record_type'] not in ('news', 'regulatory_filing') for a in metric_articles),
+               'other_research_count': len(other_views),
                'new_newsroom_items': sum(a['id'] in new_published for a in newsroom),
                'new_filings': sum(a['id'] in new_published for a in filings),
                'newsroom_korea_direct_count': sum(a['editorial']['tier'] == 'korea_direct' for a in newsroom),
@@ -279,7 +296,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                'newsroom_newly_added_last24h': sum(bool(a.get('first_published_by_engine_at')) and c.timestamp(a['first_published_by_engine_at']) >= at - dt.timedelta(days=1) for a in newsroom),
                'new_backfilled': sum(a['id'] in new_published and a.get('is_backfill', False) for a in articles),
                'record_type_counts': {kind: sum(a.get('record_type', 'news') == kind for a in metric_articles) for kind in ('news', 'regulatory_filing', 'statistical_release', 'government_notice')},
-               'category_counts': {k: sum(a['category'] == k for a in metric_articles) for k in c.CATEGORIES},
+               'category_counts': {k: sum(a['category'] == k for a in public_records) for k in c.CATEGORIES},
                'discovered_last24h': sum(c.timestamp(a['first_discovered_at']) >= at - dt.timedelta(days=1) for a in ledger.values()),
                'discovered_last7d': sum(c.timestamp(a['first_discovered_at']) >= at - dt.timedelta(days=7) for a in ledger.values()),
                'auto_published_last24h': sum(bool(a.get('first_published_by_engine_at')) and c.timestamp(a['first_published_by_engine_at']) >= at - dt.timedelta(days=1) for a in articles),
@@ -287,6 +304,39 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                'originally_published_last24h': sum(a.get('publication_time_verified_for_news') is not False and a.get('date_precision') != 'date' and at - dt.timedelta(days=1) <= c.timestamp(a['published_at']) <= at for a in articles),
                'originally_published_last7d': sum(a.get('publication_time_verified_for_news') is not False and at - dt.timedelta(days=7) <= c.timestamp(a['published_at']) <= at for a in articles),
                'sources': health}
+    source_counts = {sid: sum(a['source_id'] == sid for a in newsroom) for sid in sorted({a['source_id'] for a in newsroom})}
+    news_classifications = {label: sum(row['news_classifications'][label] for row in health) for label in ('Direct', 'Indirect', 'Irrelevant')}
+    evaluated = sum(news_classifications.values())
+    observed = summary['new_discoveries'] + summary['duplicate_observations']
+    old_news_sources = {a.get('source_id') for a in old_articles if a.get('record_type', 'news') == 'news' and not a.get('archived_only')}
+    public_labels = {label: sum(a.get('relevance_label') == label for a in newsroom) for label in ('Direct', 'Indirect', 'Irrelevant')}
+    summary['quality'] = {
+        'configured_sources': len(sources), 'enabled_sources': sum(s.get('enabled', True) for s in sources),
+        'attempted_sources': sum(row['fetch_attempted'] for row in health),
+        'successful_sources': sum(row['status'] == 'ok' for row in health),
+        'publication_approved_sources': len(approved_sources), 'publishing_sources': len(source_counts),
+        'new_publishing_sources': sorted(set(source_counts) - old_news_sources),
+        'new_news_articles': summary['new_newsroom_items'], 'published_news_articles': len(newsroom),
+        'originally_published_last24h': summary['newsroom_originally_published_last24h'],
+        'originally_published_last7d': summary['newsroom_originally_published_last7d'],
+        'evaluated_news_classifications': news_classifications,
+        'direct_ratio': news_classifications['Direct'] / evaluated if evaluated else None,
+        'direct_ratio_denominator': 'classified_news_feed_observations_within_window_excluding_filings_and_statistics',
+        'top3_source_share': sum(sorted(source_counts.values(), reverse=True)[:3]) / len(newsroom) if newsroom else None,
+        'duplicate_ratio': summary['duplicate_observations'] / observed if observed else None,
+        'duplicate_ratio_denominator': 'valid_discovery_observations_new_plus_previously_seen_not_removed_independent_reports',
+        'news_by_source': source_counts,
+        'public_news_relevance_counts': public_labels,
+        'public_news_direct_ratio': public_labels['Direct'] / len(newsroom) if newsroom else None,
+        'rights_held_news_count': sum(a['record_type']=='news' and not gate.allows(a) for a in metric_articles),
+        'rights_held_news_by_source': {sid: sum(a['record_type']=='news' and (a.get('source_id') or 'unregistered')==sid for a in metric_articles) for sid in sorted({a.get('source_id') or 'unregistered' for a in metric_articles if a['record_type']=='news' and not gate.allows(a)})},
+        'public_record_count': len(public_records),
+        'public_metrics_as_of': c.iso(at),
+        'stored_news_count': sum(a['record_type']=='news' for a in metric_articles),
+        'failed_sources': [{'id': row['id'], 'error_kind': row.get('error_kind'), 'error': row.get('error')} for row in health if row['status'] != 'ok'],
+        'source_gates': [{'id': s['id'], 'enabled': s.get('enabled', True),
+                          'discovery_allowed': s.get('discovery_allowed', True), 'publication_approved': permission(s)} for s in sources]}
+    summary['publication_visibility'] = {**visibility_health, 'policy_reprojection': policy_reprojection}
     if briefing_health is not None:
         summary['briefing'] = briefing_health
     summary['outcome'] = ('all_fetches_failed' if summary['discovery_status'] == 'failed' else
@@ -312,6 +362,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     c.write_atomic(state_dir / 'run_summary.json', summary)
     health_doc = stage_health
     health_doc['discovery'] = summary
+    health_doc['publication_visibility'] = summary['publication_visibility']
     if briefing_health is not None:
         health_doc['briefing'] = briefing_health
     c.write_atomic(data_dir / 'health.json', health_doc)
@@ -332,7 +383,7 @@ def main():
     reviews = c.read_json(Path(args.reviews), {}).get('approvals', {})
     summary = execute(sources, data, state, reviews, days=args.backfill_days)
     print(json.dumps({k: v for k, v in summary.items() if k != 'sources'}, ensure_ascii=False))
-    return 1 if summary['publication_result'] == 'failed' or summary.get('briefing', {}).get('status') == 'failed' else 0
+    return 1 if summary['publication_result'] == 'failed' or summary.get('briefing', {}).get('status') == 'failed' or summary.get('publication_visibility', {}).get('status') == 'failed' else 0
 
 
 if __name__ == '__main__':

@@ -3,9 +3,168 @@
   "rule_version": "0.2",
   "generated_at": "2026-11-03T14:04:58+09:00",
   "last_successful_fetch": "2026-11-03T14:04:58+09:00",
-  "count": 49,
+  "count": 60,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "04c6aa1d7ac436bbff",
+      "published_at": "2026-11-03T04:32:14+09:00",
+      "date": "2026.11.03",
+      "category": "항공·숙박",
+      "source": "Hotel News Resource",
+      "source_id": "hotelnewsresource",
+      "title": "Global Air Passenger Demand Falls 0.5% in September",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.hotelnewsresource.com/article143592.html",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "air passenger",
+              "demand"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "Hotel News Resource"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "additional_terms": [
+          "https://www.hotelnewsresource.com/legal-privacy.html"
+        ],
+        "basis": "Official feed guide states these provided XML feeds are intended for indexing, research and content discovery. Limited to a selective metadata/link index of the returned current feed; not permission for full-text, image, summary reuse, mass archive extraction or AI processing. Original headline, publisher attribution, date and direct link retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "global_major",
+        "rank": 1,
+        "label": "글로벌 관광산업 주요 변화",
+        "korea_connection": "not_established",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "global air passenger",
+            "rule": "quantified_worldwide_industry_change"
+          },
+          {
+            "field": "title",
+            "value": "air passenger",
+            "rule": "quantified_worldwide_industry_change"
+          },
+          {
+            "field": "title",
+            "value": "0.5%",
+            "rule": "quantified_worldwide_industry_change"
+          },
+          {
+            "field": "title",
+            "value": "demand",
+            "rule": "quantified_worldwide_industry_change"
+          }
+        ],
+        "reason": "세계 산업 전체의 범위와 정량적 변화가 제목에 명시되어 있습니다. 한국 시장 영향은 별도로 입증되지 않았습니다."
+      }
+    },
+    {
+      "id": "2a627dcb89d093be92",
+      "published_at": "2026-11-03T00:15:17+09:00",
+      "date": "2026.11.03",
+      "category": "항공·숙박",
+      "source": "Hotel News Resource",
+      "source_id": "hotelnewsresource",
+      "title": "IHG Opens Kimpton Al Rowda Doha Hotel in Qatar",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.hotelnewsresource.com/article143583.html",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hotel",
+              "opens"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "Hotel News Resource"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "additional_terms": [
+          "https://www.hotelnewsresource.com/legal-privacy.html"
+        ],
+        "basis": "Official feed guide states these provided XML feeds are intended for indexing, research and content discovery. Limited to a selective metadata/link index of the returned current feed; not permission for full-text, image, summary reuse, mass archive extraction or AI processing. Original headline, publisher attribution, date and direct link retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
     {
       "id": "d143830c9801b23dbf",
       "published_at": "2026-11-03T00:15:00+09:00",
@@ -79,6 +238,75 @@
           }
         ],
         "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
+    {
+      "id": "65173583a32484d500",
+      "published_at": "2026-11-03T00:12:21+09:00",
+      "date": "2026.11.03",
+      "category": "항공·숙박",
+      "source": "Hotel News Resource",
+      "source_id": "hotelnewsresource",
+      "title": "Grand Hyatt The Red Sea Opens on Shura Island",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.hotelnewsresource.com/article143582.html",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hyatt",
+              "opens"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "Hotel News Resource"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "additional_terms": [
+          "https://www.hotelnewsresource.com/legal-privacy.html"
+        ],
+        "basis": "Official feed guide states these provided XML feeds are intended for indexing, research and content discovery. Limited to a selective metadata/link index of the returned current feed; not permission for full-text, image, summary reuse, mass archive extraction or AI processing. Original headline, publisher attribution, date and direct link retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
       }
     },
     {
@@ -301,6 +529,213 @@
       }
     },
     {
+      "id": "fed36cf012a3177f79",
+      "published_at": "2026-11-02T23:00:00+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "Hospitality Net",
+      "source_id": "hospitalitynet",
+      "title": "IDS Next Launches Pomolabs, New AI-Native Intelligence Platform for Hospitality Operations",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hospitality",
+              "launch"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "Hospitality Net"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hospitalitynet.org/rss",
+        "additional_terms": [
+          "https://www.hospitalitynet.org/terms-conditions"
+        ],
+        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "id": "d9207278a092dfa983",
+      "published_at": "2026-11-02T22:59:36+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "Hospitality Net",
+      "source_id": "hospitalitynet",
+      "title": "Accor & Corinthia Group launch strategic collaboration to bring Verdi Hotels to Handwritten Collection",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "accor",
+              "launch"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "Hospitality Net"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hospitalitynet.org/rss",
+        "additional_terms": [
+          "https://www.hospitalitynet.org/terms-conditions"
+        ],
+        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "id": "083db88ee55d828535",
+      "published_at": "2026-11-02T20:35:09+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "Hospitality Net",
+      "source_id": "hospitalitynet",
+      "title": "Hyatt Introduces Enhanced Hyatt Leverage Platform for Small-and-Midsize Business Travel",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.hospitalitynet.org/news/4135216/hyatt-introduces-enhanced-hyatt-leverage-platform-for-small-and-midsize-business-travel",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hyatt",
+              "introduc"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "Hospitality Net"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.hospitalitynet.org/rss",
+        "additional_terms": [
+          "https://www.hospitalitynet.org/terms-conditions"
+        ],
+        "basis": "Official RSS guide explicitly allows integrating feed content on a website. This is permission for the designated RSS interface, not generic automated site scraping; general Terms 4.3/6.2 prohibit unauthorized automation/bulk content reuse. Limited to original headline/source/date/direct link indexing, no descriptions, excerpts, images, framing, body downloads or AI processing. Attribution and original links retained.",
+        "checked_at": "2026-11-03",
+        "body_reuse": "not_authorized",
+        "database_scope": "Selective returned-feed headline/link index only; no article/archive crawling"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
       "id": "aedd9354f733196945",
       "published_at": "2026-11-02T17:43:59+09:00",
       "date": "2026.11.02",
@@ -497,6 +932,69 @@
         "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
       },
       "first_published_by_engine_at": "2026-11-02T01:48:15+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "id": "45cdacc9b03a0af253",
+      "published_at": "2026-11-02T00:00:00+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "SEC EDGAR · Marriott International",
+      "source_id": "sec_marriott",
+      "title": "MARRIOTT INTERNATIONAL INC /MD/ — 10-Q financial filing (2026-11-02)",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.sec.gov/Archives/edgar/data/1048286/000104828626000043/mar-20260930.htm",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "marriott",
+              "financial filing"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "SEC EDGAR · Marriott International"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "SEC_filingDate",
+      "date_precision": "date",
+      "record_type": "regulatory_filing",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "basis": "All Government-created content on sec.gov and EDGAR public filing content are free to access and reuse. Only corporate filing index facts are used; no filing body/photos/personnel records.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
       "editorial": {
         "version": "0.3-editorial-1",
         "tier": "reference",
@@ -2525,6 +3023,69 @@
       }
     },
     {
+      "id": "801e5b87a0a836e406",
+      "published_at": "2026-10-27T00:00:00+09:00",
+      "date": "2026.10.27",
+      "category": "항공·숙박",
+      "source": "SEC EDGAR · Hilton Worldwide",
+      "source_id": "sec_hilton",
+      "title": "Hilton Worldwide Holdings Inc. — 10-Q financial filing (2026-10-27)",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.sec.gov/Archives/edgar/data/1585689/000158568926000054/hlt-20260930.htm",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hilton",
+              "financial filing"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "SEC EDGAR · Hilton Worldwide"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "SEC_filingDate",
+      "date_precision": "date",
+      "record_type": "regulatory_filing",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "basis": "All Government-created content on sec.gov and EDGAR public filing content are free to access and reuse. Only corporate filing index facts are used; no filing body/photos/personnel records.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
       "id": "f5cf971b3bd8c37a11",
       "published_at": "2026-10-26T00:10:00+09:00",
       "date": "2026.10.26",
@@ -3121,6 +3682,69 @@
       }
     },
     {
+      "id": "3996ef8ef6c72c5618",
+      "published_at": "2026-10-21T00:00:00+09:00",
+      "date": "2026.10.21",
+      "category": "항공·숙박",
+      "source": "SEC EDGAR · United Airlines",
+      "source_id": "sec_united",
+      "title": "United Airlines Holdings, Inc. — 10-Q financial filing (2026-10-21)",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000186/ual-20260930.htm",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "united airlines",
+              "financial filing"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "SEC EDGAR · United Airlines"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "SEC_filingDate",
+      "date_precision": "date",
+      "record_type": "regulatory_filing",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "basis": "All Government-created content on sec.gov and EDGAR public filing content are free to access and reuse. Only corporate filing index facts are used; no filing body/photos/personnel records.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
       "id": "d6d5d7ba72fef3c855",
       "published_at": "2026-10-19T18:00:04+09:00",
       "date": "2026.10.19",
@@ -3185,6 +3809,69 @@
       }
     },
     {
+      "id": "89defd412d186501a5",
+      "published_at": "2026-10-09T00:00:00+09:00",
+      "date": "2026.10.09",
+      "category": "항공·숙박",
+      "source": "SEC EDGAR · Delta Air Lines",
+      "source_id": "sec_delta",
+      "title": "DELTA AIR LINES, INC. — 10-Q financial filing (2026-10-09)",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000038/dal-20260930.htm",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "delta air lines",
+              "financial filing"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "SEC EDGAR · Delta Air Lines"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "SEC_filingDate",
+      "date_precision": "date",
+      "record_type": "regulatory_filing",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "basis": "All Government-created content on sec.gov and EDGAR public filing content are free to access and reuse. Only corporate filing index facts are used; no filing body/photos/personnel records.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
       "id": "d49192124f719d5882",
       "published_at": "2026-10-02T06:30:00+09:00",
       "date": "2026.10.02",
@@ -3238,6 +3925,69 @@
         "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. GOV.UK: https://www.gov.uk/help/terms-conditions"
       },
       "first_published_by_engine_at": "2026-10-28T17:22:18+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "참고용 해외 산업 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장과의 직접 연계 또는 세계 산업 전체의 주요 변화라는 근거가 없어 참고 자료로 관리합니다."
+      }
+    },
+    {
+      "id": "640ad9821c752b15a7",
+      "published_at": "2026-08-06T00:00:00+09:00",
+      "date": "2026.08.06",
+      "category": "여행산업",
+      "source": "SEC EDGAR · Expedia Group",
+      "source_id": "sec_expedia",
+      "title": "Expedia Group, Inc. — 10-Q financial filing (2026-08-06)",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000053/expe-20260630.htm",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "여행산업",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "expedia group",
+              "financial filing"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "SEC EDGAR · Expedia Group"
+      ],
+      "first_discovered_at": "2026-11-03T13:36:40+09:00",
+      "publication_date_basis": "SEC_filingDate",
+      "date_precision": "date",
+      "record_type": "regulatory_filing",
+      "korea_priority": false,
+      "is_backfill": true,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "basis": "All Government-created content on sec.gov and EDGAR public filing content are free to access and reuse. Only corporate filing index facts are used; no filing body/photos/personnel records.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-03T13:36:40+09:00",
       "editorial": {
         "version": "0.3-editorial-1",
         "tier": "reference",

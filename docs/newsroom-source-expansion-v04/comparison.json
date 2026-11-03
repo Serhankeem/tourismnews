@@ -1,0 +1,295 @@
+{
+  "comparison_at": "2026-11-03T13:36:40+09:00",
+  "base_commit": "7926c7139a19431825d9748b1c8f9eea3c768857",
+  "before": {
+    "checked_at": "2026-11-03T12:00:20+09:00",
+    "configured_sources": 24,
+    "discovery_attempted_sources": 24,
+    "discovery_successful_sources": 13,
+    "publication_approved_sources": 18,
+    "publication_successful_sources": 9,
+    "publishing_sources": 6,
+    "news_count": 44,
+    "recent24h_as_reported": 6,
+    "recent24h_at_comparison_time": 5,
+    "recent7d_at_comparison_time": 31,
+    "top3_source_share": 0.8181818181818182
+  },
+  "after": {
+    "configured_sources": 26,
+    "enabled_sources": 26,
+    "attempted_sources": 26,
+    "successful_sources": 23,
+    "publication_approved_sources": 20,
+    "publishing_sources": 8,
+    "new_publishing_sources": [
+      "hospitalitynet",
+      "hotelnewsresource"
+    ],
+    "new_news_articles": 6,
+    "published_news_articles": 50,
+    "originally_published_last24h": 11,
+    "originally_published_last7d": 37,
+    "evaluated_news_classifications": {
+      "Direct": 30,
+      "Indirect": 0,
+      "Irrelevant": 395
+    },
+    "direct_ratio": 0.07058823529411765,
+    "direct_ratio_denominator": "classified_news_feed_observations_within_window_excluding_filings_and_statistics",
+    "top3_source_share": 0.72,
+    "duplicate_ratio": 0.8697674418604651,
+    "duplicate_ratio_denominator": "valid_discovery_observations_new_plus_previously_seen_not_removed_independent_reports",
+    "news_by_source": {
+      "govuk_aviation": 2,
+      "hospitalitynet": 3,
+      "hotelnewsresource": 3,
+      "mcst_press": 4,
+      "seoul_culture": 2,
+      "traveldaily": 13,
+      "traveltimes": 14,
+      "ttlnews": 9
+    },
+    "failed_sources": [
+      {
+        "id": "mcst_press",
+        "error_kind": "access_policy",
+        "error": "robots_unverified:http_503"
+      },
+      {
+        "id": "korea_net_travel",
+        "error_kind": "access_policy",
+        "error": "redirect_loop"
+      },
+      {
+        "id": "kosis_recent",
+        "error_kind": "access_policy",
+        "error": "robots_unverified:http_503"
+      }
+    ],
+    "source_gates": [
+      {
+        "id": "mcst_press",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "korea_net_travel",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "kosis_recent",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_culture",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_economy",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_transport",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_environment",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_booking",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_expedia",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_marriott",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_hilton",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_delta",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_united",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_tripcom",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "govuk_tourism",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "govuk_aviation",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "koreanair",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "tripcom_news",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "hilton_news",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "skift",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "yonhap",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "traveltimes",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "traveldaily",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "ttlnews",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "hospitalitynet",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "hotelnewsresource",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      }
+    ]
+  },
+  "new_articles": [
+    {
+      "title": "Global Air Passenger Demand Falls 0.5% in September",
+      "source": "Hotel News Resource",
+      "published_at": "2026-11-03T04:32:14+09:00",
+      "url": "https://www.hotelnewsresource.com/article143592.html",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "IHG Opens Kimpton Al Rowda Doha Hotel in Qatar",
+      "source": "Hotel News Resource",
+      "published_at": "2026-11-03T00:15:17+09:00",
+      "url": "https://www.hotelnewsresource.com/article143583.html",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "Grand Hyatt The Red Sea Opens on Shura Island",
+      "source": "Hotel News Resource",
+      "published_at": "2026-11-03T00:12:21+09:00",
+      "url": "https://www.hotelnewsresource.com/article143582.html",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "IDS Next Launches Pomolabs, New AI-Native Intelligence Platform for Hospitality Operations",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-02T23:00:00+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "Accor & Corinthia Group launch strategic collaboration to bring Verdi Hotels to Handwritten Collection",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-02T22:59:36+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "Hyatt Introduces Enhanced Hyatt Leverage Platform for Small-and-Midsize Business Travel",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-02T20:35:09+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135216/hyatt-introduces-enhanced-hyatt-leverage-platform-for-small-and-midsize-business-travel",
+      "category": "항공·숙박",
+      "keywords": []
+    }
+  ],
+  "new_filings_separate": 5,
+  "preserved_public_news_records": 44,
+  "preserved_internal_ids": 49,
+  "preservation_sha256": {
+    "site/data/reports.json": "238c6adf43fe88579add5d671c8e743550ff6836a9ff4e48474572c6c488b5d4",
+    "site/data/reports_health.json": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+    "site/data/macro.json": "e77391d0e1aac06e5646e6f3a51cba63d8729c4495ee6c3f88553bcb6d1ef645",
+    "site/data/macro_health.json": "ced5db6800f75be1e9fdf2aad0fe41181aa42ec96eea25b9f4182b7a6bce2e54",
+    "site/data/briefing_archive.json": "88e42e51126eb8ddfdfc5f40958b4a44dd3dadbfe5d7032d39fd2e0f1bc72528",
+    "collector_state/briefing_selection.json": "42cdb57e9cf433ecab8fa7852d64fbe06da4b166aec2717c543866e2bfbe906e",
+    "site/index.html": "54ff63d133fb0ec940ec085c71f45d401bd33f4afc4f963ecd278e7cc0bfd60d",
+    "site/currentourism.js": "770bab6557e0afaa315eb47f2dcf8f55521e7083cc5b4af5a597707ed7936803",
+    "site/market-observation.js": "54bbfe8e1f24296de778f740a2f6a2de2a8f37aa5855bf3076a504d3c3753db9",
+    "site/macro.js": "9671bea082be1de4aa1c1c3b175ea6daa2ec9930a4385f3cbd90c82cd2470f9a",
+    "site/assets/currentourism-new-airplane-logo.png": "7f92affea61c57197f2b015576cb7bcaf604defb0ac270894157d8e94d070b7f"
+  }
+}

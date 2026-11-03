@@ -3,7 +3,7 @@
   "mode": "live_rss",
   "generated_at": "2026-11-03T14:04:58+09:00",
   "last_successful_fetch": "2026-11-03T14:04:58+09:00",
-  "count": 0,
+  "count": 5,
   "public_fields": [
     "title",
     "source",
@@ -12,5 +12,52 @@
     "category",
     "keywords"
   ],
-  "articles": []
+  "articles": [
+    {
+      "title": "MARRIOTT INTERNATIONAL INC /MD/ — 10-Q financial filing (2026-11-02)",
+      "source": "SEC EDGAR · Marriott International",
+      "published_at": "2026-11-02T00:00:00+09:00",
+      "url": "https://www.sec.gov/Archives/edgar/data/1048286/000104828626000043/mar-20260930.htm",
+      "category": "항공·숙박",
+      "keywords": [
+        "MARRIOTT"
+      ]
+    },
+    {
+      "title": "Hilton Worldwide Holdings Inc. — 10-Q financial filing (2026-10-27)",
+      "source": "SEC EDGAR · Hilton Worldwide",
+      "published_at": "2026-10-27T00:00:00+09:00",
+      "url": "https://www.sec.gov/Archives/edgar/data/1585689/000158568926000054/hlt-20260930.htm",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hilton"
+      ]
+    },
+    {
+      "title": "United Airlines Holdings, Inc. — 10-Q financial filing (2026-10-21)",
+      "source": "SEC EDGAR · United Airlines",
+      "published_at": "2026-10-21T00:00:00+09:00",
+      "url": "https://www.sec.gov/Archives/edgar/data/100517/000010051726000186/ual-20260930.htm",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "DELTA AIR LINES, INC. — 10-Q financial filing (2026-10-09)",
+      "source": "SEC EDGAR · Delta Air Lines",
+      "published_at": "2026-10-09T00:00:00+09:00",
+      "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790426000038/dal-20260930.htm",
+      "category": "항공·숙박",
+      "keywords": []
+    },
+    {
+      "title": "Expedia Group, Inc. — 10-Q financial filing (2026-08-06)",
+      "source": "SEC EDGAR · Expedia Group",
+      "published_at": "2026-08-06T00:00:00+09:00",
+      "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000053/expe-20260630.htm",
+      "category": "여행산업",
+      "keywords": [
+        "Expedia Group"
+      ]
+    }
+  ]
 }

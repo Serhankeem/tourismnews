@@ -1,4 +1,6 @@
 """Six-field link curation. No excerpt, generated prose, image or internal evidence."""
+import re
+
 if __package__:
     from .relevance import matches, SUBJECTS
 else:
@@ -12,7 +14,47 @@ TERMS = tuple(dict.fromkeys(term for terms in SUBJECTS.values() for term in term
     '영업이익', '관광재단', '관광공사', '관광청', 'Korean Air', 'Booking', 'Expedia', 'Trip.com')
 
 
+# Literal industry phrases and identified tourism businesses only. No inferred
+# locations, translated topics, generic financial verbs, product names or AI tags.
+ENGLISH_TERMS = (
+    'Air Passenger Demand', 'Air Passengers', 'Airline Routes', 'Business Travel',
+    'Travel Technology', 'Hospitality Operations', 'Hotel Industry', 'Hotel Market',
+    'Hotel Technology', 'Hospitality', 'Hotels', 'Hotel',
+    'Booking Holdings', 'Expedia Group', 'Trip.com Group', 'Korean Air', 'Asiana Airlines',
+    'Grand Hyatt', 'Hyatt', 'IHG', 'Kimpton', 'Accor', 'Corinthia Group', 'Hilton', 'Marriott',
+)
+
+# Retain the existing English industry vocabulary with proper matching. The
+# standalone word 'Booking' is ambiguous; require the identified company name.
+ENGLISH_TERMS = tuple(dict.fromkeys(
+    [term for term in TERMS if re.fullmatch(r'[A-Za-z][A-Za-z .-]*', term) and term != 'Booking']
+    + list(ENGLISH_TERMS)))
+
+
+def keywords(title):
+    """Keep Korean output identical; match English literal phrases with boundaries.
+
+    Longest overlapping phrase wins. Preserve the headline's spelling/case and
+    never derive a keyword from source, category, description or editorial tier.
+    """
+    if re.search(r'[가-힣]', title):
+        return sorted(set(matches(title, TERMS)), key=lambda s: (-len(s), s))[:8]
+    candidates = []
+    for term in ENGLISH_TERMS:
+        pattern = r'(?<!\w)' + r'\s+'.join(re.escape(w) for w in term.split()) + r'(?!\w)'
+        candidates.extend(re.finditer(pattern, title, re.I))
+    selected = []
+    for match in sorted(candidates, key=lambda m: (-(m.end()-m.start()), m.start())):
+        if not any(match.start() < old.end() and old.start() < match.end() for old in selected):
+            selected.append(match)
+    unique = {}
+    for match in selected:
+        value = match.group()
+        unique.setdefault(value.casefold(), value)
+    return sorted(unique.values(), key=lambda s: (-len(s), s))[:8]
+
+
 def public_record(record):
     """Allowlist, never copy arbitrary source fields (including old desc/insight)."""
     return {**{key: record[key] for key in PUBLIC_FIELDS if key != 'keywords'},
-            'keywords': sorted(set(matches(record['title'], TERMS)), key=lambda s: (-len(s), s))[:8]}
+            'keywords': keywords(record['title'])}

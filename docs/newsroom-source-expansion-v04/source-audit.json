@@ -1,0 +1,942 @@
+{
+  "checked_at": "2026-11-03T13:36:40+09:00",
+  "method": "verified_TLS_robots_aware_live_responses_replayed_once_through_full_engine_no_fixtures",
+  "sources": [
+    {
+      "id": "mcst_press",
+      "name": "문화체육관광부 보도자료",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.mcst.go.kr/common/rss/press.jsp",
+      "publication": "approved",
+      "terms_url": "https://www.mcst.go.kr/site/s_etc/rss/rssService.jsp",
+      "execution": {
+        "status": "error",
+        "fetch_attempted": true,
+        "received": 0,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": "access_policy",
+        "error": "robots_unverified:http_503"
+      },
+      "published_news": 4,
+      "news_issued_last7d": 3
+    },
+    {
+      "id": "korea_net_travel",
+      "name": "Korea.net Food/Travel",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.korea.net/koreanet/rss/news/8",
+      "publication": "review",
+      "terms_url": "https://www.korea.net/Others/Subscribe-to-Koreanet/RSS-Service",
+      "execution": {
+        "status": "error",
+        "fetch_attempted": true,
+        "received": 0,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": "access_policy",
+        "error": "redirect_loop"
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "kosis_recent",
+      "name": "KOSIS 최근수록자료",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://kosis.kr/rss/themes_rss.jsp",
+      "publication": "approved",
+      "terms_url": "https://kosis.kr/serviceInfo/rssGuide.do",
+      "execution": {
+        "status": "error",
+        "fetch_attempted": true,
+        "received": 0,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": "access_policy",
+        "error": "robots_unverified:http_503"
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "seoul_culture",
+      "name": "서울시 내 손안에 서울 문화",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://mediahub.seoul.go.kr/news/rss/06",
+      "publication": "approved",
+      "terms_url": "https://mediahub.seoul.go.kr/staticpage/rss.do",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 20,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 2,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "seoul_economy",
+      "name": "서울시 내 손안에 서울 경제",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://mediahub.seoul.go.kr/news/rss/04",
+      "publication": "approved",
+      "terms_url": "https://www.seoul.go.kr/helper/copyright.do",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 20,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "seoul_transport",
+      "name": "서울시 내 손안에 서울 교통",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://mediahub.seoul.go.kr/news/rss/01",
+      "publication": "approved",
+      "terms_url": "https://www.seoul.go.kr/helper/copyright.do",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 20,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "seoul_environment",
+      "name": "서울시 내 손안에 서울 환경",
+      "group": "public",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://mediahub.seoul.go.kr/news/rss/05",
+      "publication": "approved",
+      "terms_url": "https://www.seoul.go.kr/helper/copyright.do",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 20,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 20
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_booking",
+      "name": "SEC EDGAR · Booking Holdings",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0001075531.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 47,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 47,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_expedia",
+      "name": "SEC EDGAR · Expedia Group",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0001324424.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 38,
+        "classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 37,
+        "new_auto_published": 1,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_marriott",
+      "name": "SEC EDGAR · Marriott International",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0001048286.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 35,
+        "classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 34,
+        "new_auto_published": 1,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_hilton",
+      "name": "SEC EDGAR · Hilton Worldwide",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0001585689.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 46,
+        "classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 45,
+        "new_auto_published": 1,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_delta",
+      "name": "SEC EDGAR · Delta Air Lines",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0000027904.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 40,
+        "classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 39,
+        "new_auto_published": 1,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_united",
+      "name": "SEC EDGAR · United Airlines",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0000100517.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 38,
+        "classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 37,
+        "new_auto_published": 1,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "sec_tripcom",
+      "name": "SEC EDGAR · Trip.com Group",
+      "group": "company",
+      "adapter": "sec_submissions",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://data.sec.gov/submissions/CIK0001269238.json",
+      "publication": "approved",
+      "terms_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 23,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 23,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "govuk_tourism",
+      "name": "GOV.UK · tourism",
+      "group": "global",
+      "adapter": "govuk_search",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.gov.uk/api/search.json?q=tourism&filter_format=press_release&count=100&fields=title%2Clink%2Cpublic_timestamp%2Cformat&order=-public_timestamp",
+      "publication": "approved",
+      "terms_url": "https://www.gov.uk/help/terms-conditions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 100,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 10
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 10
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 90,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "govuk_aviation",
+      "name": "GOV.UK · aviation",
+      "group": "global",
+      "adapter": "govuk_search",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.gov.uk/api/search.json?q=aviation&filter_format=press_release&count=100&fields=title%2Clink%2Cpublic_timestamp%2Cformat&order=-public_timestamp",
+      "publication": "approved",
+      "terms_url": "https://www.gov.uk/help/terms-conditions",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 100,
+        "classifications": {
+          "Direct": 2,
+          "Indirect": 0,
+          "Irrelevant": 7
+        },
+        "news_classifications": {
+          "Direct": 2,
+          "Indirect": 0,
+          "Irrelevant": 7
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 91,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 2,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "koreanair",
+      "name": "대한항공 뉴스룸",
+      "group": "company",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://news.koreanair.com/feed/",
+      "publication": "review",
+      "terms_url": "https://news.koreanair.com/대한항공-뉴스룸-운영정책/",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 10,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 10
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 10
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "tripcom_news",
+      "name": "Trip.com Group IR",
+      "group": "company",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://investors.trip.com/rss/news-releases.xml",
+      "publication": "review",
+      "terms_url": "https://investors.trip.com/rss/news-releases.xml",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 10,
+        "classifications": {
+          "Direct": 2,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "news_classifications": {
+          "Direct": 2,
+          "Indirect": 0,
+          "Irrelevant": 0
+        },
+        "rights_holds": 2,
+        "date_holds": 0,
+        "outside_window": 8,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "hilton_news",
+      "name": "Hilton Stories",
+      "group": "company",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://stories.hilton.com/feed",
+      "publication": "review",
+      "terms_url": "https://stories.hilton.com/feed",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 10,
+        "classifications": {
+          "Direct": 5,
+          "Indirect": 0,
+          "Irrelevant": 5
+        },
+        "news_classifications": {
+          "Direct": 5,
+          "Indirect": 0,
+          "Irrelevant": 5
+        },
+        "rights_holds": 5,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "skift",
+      "name": "Skift",
+      "group": "media",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://skift.com/feed/",
+      "publication": "review",
+      "terms_url": "https://skift.com/feed/",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 10,
+        "classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 9
+        },
+        "news_classifications": {
+          "Direct": 1,
+          "Indirect": 0,
+          "Irrelevant": 9
+        },
+        "rights_holds": 1,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "yonhap",
+      "name": "연합뉴스 경제",
+      "group": "media",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.yna.co.kr/rss/economy.xml",
+      "publication": "review",
+      "terms_url": "https://www.yna.co.kr/rss/economy.xml",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 120,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 120
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 120
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 0,
+      "news_issued_last7d": 0
+    },
+    {
+      "id": "traveltimes",
+      "name": "여행신문",
+      "group": "media",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.traveltimes.co.kr/rss/allArticle.xml",
+      "publication": "approved",
+      "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 50,
+        "classifications": {
+          "Direct": 8,
+          "Indirect": 0,
+          "Irrelevant": 26
+        },
+        "news_classifications": {
+          "Direct": 8,
+          "Indirect": 0,
+          "Irrelevant": 26
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 16,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 14,
+      "news_issued_last7d": 8
+    },
+    {
+      "id": "traveldaily",
+      "name": "트래블데일리",
+      "group": "media",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.traveldaily.co.kr/rss/allArticle.xml",
+      "publication": "approved",
+      "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 50,
+        "classifications": {
+          "Direct": 6,
+          "Indirect": 0,
+          "Irrelevant": 44
+        },
+        "news_classifications": {
+          "Direct": 6,
+          "Indirect": 0,
+          "Irrelevant": 44
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 13,
+      "news_issued_last7d": 11
+    },
+    {
+      "id": "ttlnews",
+      "name": "퍼블릭뉴스통신(TTL)",
+      "group": "media",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.ttlnews.com/rss/allArticle.xml",
+      "publication": "approved",
+      "terms_url": "https://www.ttlnews.com/rssIndex.html",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 50,
+        "classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 50
+        },
+        "news_classifications": {
+          "Direct": 0,
+          "Indirect": 0,
+          "Irrelevant": 50
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 0,
+        "new_newsroom_items": 0,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 9,
+      "news_issued_last7d": 9
+    },
+    {
+      "id": "hospitalitynet",
+      "name": "Hospitality Net",
+      "group": "global",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.hospitalitynet.org/rss/news.xml",
+      "publication": "approved",
+      "terms_url": "https://www.hospitalitynet.org/rss",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 20,
+        "classifications": {
+          "Direct": 3,
+          "Indirect": 0,
+          "Irrelevant": 17
+        },
+        "news_classifications": {
+          "Direct": 3,
+          "Indirect": 0,
+          "Irrelevant": 17
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 3,
+        "new_newsroom_items": 3,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 3,
+      "news_issued_last7d": 3,
+      "current_rights_review": {
+        "result": "limited_designated_feed_interpretation",
+        "guide_url": "https://www.hospitalitynet.org/rss",
+        "general_terms_url": "https://www.hospitalitynet.org/terms-conditions",
+        "general_terms_sections": [
+          "5.2",
+          "6.2"
+        ],
+        "remaining_uncertainty": "No explicit RSS carve-out/precedence clause or publisher written confirmation. Limited interface guidance only; no broad content licence.",
+        "checked_on": "2026-11-03"
+      }
+    },
+    {
+      "id": "hotelnewsresource",
+      "name": "Hotel News Resource",
+      "group": "global",
+      "adapter": "rss",
+      "enabled": true,
+      "discovery_allowed": true,
+      "url": "https://www.hotelnewsresource.com/feeds/latest.xml",
+      "publication": "approved",
+      "terms_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+      "execution": {
+        "status": "ok",
+        "fetch_attempted": true,
+        "received": 20,
+        "classifications": {
+          "Direct": 3,
+          "Indirect": 0,
+          "Irrelevant": 17
+        },
+        "news_classifications": {
+          "Direct": 3,
+          "Indirect": 0,
+          "Irrelevant": 17
+        },
+        "rights_holds": 0,
+        "date_holds": 0,
+        "outside_window": 0,
+        "new_auto_published": 3,
+        "new_newsroom_items": 3,
+        "error_kind": null,
+        "error": null
+      },
+      "published_news": 3,
+      "news_issued_last7d": 3,
+      "current_rights_review": {
+        "result": "public_indexing_scope_unresolved_new_publication_hold",
+        "guide_url": "https://www.hotelnewsresource.com/Info-Newsfeeds.html",
+        "general_terms_url": "https://www.hotelnewsresource.com/Info-legal.html",
+        "general_terms_sections": [
+          "1",
+          "12"
+        ],
+        "remaining_uncertainty": "Whether feed indexing guidance permits a public noncommercial six-field index notwithstanding the general rights reservation. Publisher clarification required.",
+        "checked_on": "2026-11-03"
+      },
+      "current_public_news": 0,
+      "retained_historical_news": 3
+    }
+  ],
+  "capture_notice": "Execution metrics are the earlier real-response capture. For current gate changes see review-final.json and sources.json.",
+  "current_publication_view_notice": "See publication-gate-final.json: HRN historical records retained but current public contribution is zero."
+}

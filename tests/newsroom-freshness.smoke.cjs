@@ -7,7 +7,9 @@ for(const width of [320,390,1440]){
  await page.goto(base);await page.waitForFunction(()=>!newsLoading&&window.BriefingUI?.edition);
  const snapshot=await(await page.request.get(base+'/data/newsroom.json')).json();
  const chronological=[...snapshot.articles].sort((a,b)=>Date.parse(b.published_at)-Date.parse(a.published_at)||(a.url<b.url?-1:a.url>b.url?1:0));
- assert.deepEqual(snapshot.articles,chronological);assert.match(chronological[0].published_at,/2026-11-02/);
+ assert.deepEqual(snapshot.articles,chronological);const nov2=chronological.findIndex(a=>a.published_at.startsWith('2026-11-02'));
+ const oct29=chronological.findIndex(a=>a.published_at.startsWith('2026-10-29'));
+ assert.ok(nov2>=0&&oct29>nov2,'Nov 2 must precede Oct 29 even after newer real publications arrive');
  assert.deepEqual(await page.locator('#overview-news h3 a').allTextContents(),chronological.slice(0,3).map(a=>a.title));
  // Unordered six-field payload must still sort in the browser; no editorial fields.
  await page.route('**/data/newsroom.json?*',r=>r.fulfill({json:{...snapshot,articles:[...snapshot.articles].reverse()}}));
@@ -31,5 +33,5 @@ for(const width of [320,390,1440]){
  const sorted=await page.evaluate(()=>[{url:'b',published_at:'2026-11-02T01:00:00+09:00'},{url:'a',published_at:'2026-11-01T16:00:00Z'},{url:'c',published_at:'2026-11-02'}].sort(compareNewsPublication).map(a=>a.url));
  assert.deepEqual(sorted,['a','b','c']);assert.deepEqual(errors,[]);await page.close();
 }
-console.log('PASS: real Nov 2 first, home three, reversed six-field browser payload, exact original dates, time-zone ties, partial coverage and three empty/failure reasons at PC/mobile widths');
+console.log('PASS: real publication order (Nov 2 before Oct 29), home three, reversed six-field browser payload, exact original dates, time-zone ties, partial coverage and three empty/failure reasons at PC/mobile widths');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

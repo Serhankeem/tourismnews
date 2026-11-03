@@ -183,7 +183,8 @@ def deduplicate(items):
     out = []
     for article in sorted(items, key=lambda a: a['published_at'], reverse=True):
         match = next((old for old in out if (old['url'] == article['url']) or
-            (similarity(old['title'], article['title']) >= .92 and
+            (old.get('source_id', old['source']) == article.get('source_id', article['source']) and
+             similarity(old['title'], article['title']) >= .92 and
              [n.replace(',', '') for n in re.findall(r'\d+(?:[.,]\d+)*', old['title'])] ==
              [n.replace(',', '') for n in re.findall(r'\d+(?:[.,]\d+)*', article['title'])] and
              abs((timestamp(old['published_at']) - timestamp(article['published_at'])).total_seconds()) < 72 * 3600)), None)
