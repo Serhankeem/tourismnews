@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-03T20:04:48+09:00",
+  "checked_at": "2026-11-03T22:17:42+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -218,6 +218,24 @@
         "signals": [],
         "impact_targets": [],
         "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a2d18db49a43cb41a5",
+      "title": "힙지로에 숨은 초록 쉼표! '정원문화힐링센터'에서 즐기는 정원 체험",
+      "url": "https://mediahub.seoul.go.kr/archives/2019903",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
@@ -517,24 +535,6 @@
       "id": "0c8281525ab9f7000f",
       "title": "산길이 이렇게 편하다고? 유아차도 가기 좋은 '용왕산 스카이워크'",
       "url": "https://mediahub.seoul.go.kr/archives/2019854",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "3db892b107cd5702c6",
-      "title": "빛조각 감상하고 고구마라떼 한 잔! '노원달빛산책'과 함께한 특별한 가을밤",
-      "url": "https://mediahub.seoul.go.kr/archives/2019861",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -2022,6 +2022,309 @@
       "decision": "exclude"
     },
     {
+      "id": "45b5925e85d91124ef",
+      "title": "대한항공, 미국행 에볼라 서약서 제출 의무화",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72566",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "06fe4446905586f965",
+      "title": "‘내일투어’ 본사 이전",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72564",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "43283c3cc3c48c6b01",
+      "title": "나이아가라 폭포, 한국 시장 본격 공략",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72563",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3d86b0260d6a554937",
+      "title": "‘2026 관광업 AX 세미나’ 참가자 모집",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72562",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c0388e509a0146d520",
+      "title": "‘AGTC 2027’ 한국 골프업계 참가 혜택 발표",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72561",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "580d80636327cfffcd",
+      "title": "예술을 따라 걷는 겨울 ‘필라델피아’",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72560",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "fd27ed3058acd44ba2",
+      "title": "두바이에서 러닝하는 기분은 어떤 느낌?",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72559",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a24f778f4918787f27",
+      "title": "KLM, 기내 무료 와이파이 제공",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72558",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "30968462d879db29dd",
+      "title": "제주항공, 3Q 영업이익 549억 달성",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72557",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "named_company_operating_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "제주항공",
+              "영업이익"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "관광기업의 이름과 구체적인 운영·매출·노선 변화가 제목에 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "9d20af14cdc422955a",
+      "title": "수능 끝, 합격운 채우러 코타키나발루로!",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72556",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "499cebbfd65a5c1e5a",
+      "title": "에미레이트 항공, ‘트래블 스토어’ 오픈",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72555",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6f320fbb23bae51e63",
+      "title": "에어부산, 부산~광저우 프로모션 실시",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72554",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7c10df18f71242a375",
+      "title": "트리니티항공, 더블 혜택 프로모션",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72553",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f02043036b8a83af2c",
+      "title": "제주, 글로벌 YOUTH 앰버서더 선발",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72552",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "abbead9267b9c210cd",
+      "title": "[여행단신] 모두투어·교원투어·제주관광공사",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72551",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c0e0fc6355ba6e727f",
+      "title": "한국 여행객 ‘최저가’보다 ‘실용적 혜택’",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72565",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "consumer_promotion"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "일반 예약·할인 정보는 산업 뉴스에서 제외합니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "bd2be1f86ea9ca079e",
       "title": "문체부-국토부 관광교통 칸막이 허문다",
       "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72550",
@@ -2672,309 +2975,6 @@
       "id": "82e39f983cccfb9801",
       "title": "제주항공, 노브랜드 버거로 특별한 착륙",
       "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72519",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c057d080d7915b0f00",
-      "title": "제주항공, 신조기 도입 고유가 부담 완화",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72501",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a6988bd54699f713ed",
-      "title": "에어비앤비, 모든 숙박 예약 수익 일부 기부",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72517",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "45de984c325a352843",
-      "title": "‘제주 여행멤버십 나우다’확 달라졌다",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72476",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a81ea2c45258c86a9a",
-      "title": "에어프레미아, 블랙프라이데이 할인 프로모션",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72518",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9a67c2200070fc70a0",
-      "title": "[주말판] 미국 철도 200년 역사 따라 떠나는 여행 제안",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72516",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "41386de56645afab5c",
-      "title": "1위 프랑스 “이상없다”",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72515",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "56e25410cfb8cd72c2",
-      "title": "호텔패스, ‘CES 2027’ 호텔 예약 기획전 오픈",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72514",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9e55dfe32a8c69f967",
-      "title": "지역관광개발, 예산만 따내면 끝?",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72513",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "문화·트렌드",
-        "score": 10,
-        "rules": [
-          "explicit_industry_subject"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "지역관광",
-              "관광개발"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "eabaf1b3fea4c150da",
-      "title": "1년 간격으로 다시 찾는 한국",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72512",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9f38675cb2aabdb406",
-      "title": "하나투어, 중국 최북단 ‘모허’ 신상품 출시",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72511",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "cab945ba726812c6d8",
-      "title": "올가을, 부산 여행 인기 급상승",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72510",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d4f5812364e9e2e88d",
-      "title": "트립비토즈, 앱 내 ‘메시지’ 기능 출시",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72509",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ef59d8ede27d08c6e0",
-      "title": "튀르키예, B2B 워크숍 성료",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72508",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "964eece73476313729",
-      "title": "요모, 여행 준비 나눠 맡는 '여행방' 출시",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72507",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "115f939c818a024384",
-      "title": "서울에서 만나는 ‘말레이시아’",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72498",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "2a1d2c91d4b3f0a675",
-      "title": "캐세이, 창립 80주년 기념 게임 이벤트",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72506",
       "source_id": "traveldaily",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -3912,6 +3912,161 @@
       "decision": "exclude"
     },
     {
+      "id": "aac295bbf3d4260d22",
+      "title": "Coming 5 November: Tokenomics in Hospitality, a free Pertlink playbook, published in partnership with Hospitality Net",
+      "url": "https://www.hospitalitynet.org/news/4135244/coming-5-november-tokenomics-in-hospitality-a-free-pertlink-playbook-published-in-partnership-with-hospitality-net",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "592e6e788cab33e203",
+      "title": "Proof, not promises: Updated guide helps tourism and events industry navigate new EU greenwashing rules",
+      "url": "https://www.hospitalitynet.org/news/4135243/proof-not-promises-updated-guide-helps-tourism-and-events-industry-navigate-new-eu-greenwashing-rules",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "8f7f48db6f447f2a2e",
+      "title": "American Hotel & Lodging Association Names 2026 General Managers of the Year at The Hospitality Show",
+      "url": "https://www.hospitalitynet.org/news/4135242/american-hotel-lodging-association-names-2026-general-managers-of-the-year-at-the-hospitality-show",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "739bcbc41d249a0b57",
+      "title": "Mandarin Oriental Introduces Restaurants, Bars & Experiences",
+      "url": "https://www.hospitalitynet.org/news/4135241/mandarin-oriental-introduces-restaurants-bars-experiences",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "379586d9956d920640",
+      "title": "Have Hospitality Trade Shows Gone the Way of the Dodo?",
+      "url": "https://www.hospitalitynet.org/opinion/4135232/have-hospitality-trade-shows-gone-the-way-of-the-dodo",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "cf1f8dd40672437f91",
+      "title": "Wyndham Expands Global Luxury Portfolio Through Strategic Partnership with HotelREZ Hotels & Resorts",
+      "url": "https://www.hospitalitynet.org/news/4135240/wyndham-expands-global-luxury-portfolio-through-strategic-partnership-with-hotelrez-hotels-resorts",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hotels",
+              "expand"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "1c2d4bfd45496adf87",
+      "title": "Waterford Hotel Group Adds Three Hotels to Growing Portfolio",
+      "url": "https://www.hospitalitynet.org/news/4135239/waterford-hotel-group-adds-three-hotels-to-growing-portfolio",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "0dd162187e49258c6f",
+      "title": "Placemakr Launches Second Arizona Property in Tempe",
+      "url": "https://www.hospitalitynet.org/news/4135238/placemakr-launches-second-arizona-property-in-tempe",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "cb451b210be7880906",
       "title": "Realtime Reservation appoints Ricky Castoldi as Chief Sales Officer",
       "url": "https://www.hospitalitynet.org/news/4135237/realtime-reservation-appoints-ricky-castoldi-as-chief-sales-officer",
@@ -3987,24 +4142,6 @@
       "id": "a5264891388b2883e4",
       "title": "HVS Europe Hotel Transactions Bulletin - Week Ending 30 October 2026",
       "url": "https://www.hospitalitynet.org/news/4135233/hvs-europe-hotel-transactions-bulletin-week-ending-30-october-2026",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "379586d9956d920640",
-      "title": "Have Hospitality Trade Shows Gone the Way of the Dodo?",
-      "url": "https://www.hospitalitynet.org/opinion/4135232/have-hospitality-trade-shows-gone-the-way-of-the-dodo",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -4131,154 +4268,6 @@
       "id": "6cf242dc0f54198722",
       "title": "Front Desk Manning v2.0",
       "url": "https://www.hospitalitynet.org/opinion/4135225/front-desk-manning-v20",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d6136cad8eb2561cff",
-      "title": "Raffles launches its first e-commerce platform",
-      "url": "https://www.hospitalitynet.org/news/4135224/raffles-launches-its-first-e-commerce-platform",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "fed36cf012a3177f79",
-      "title": "IDS Next Launches Pomolabs, New AI-Native Intelligence Platform for Hospitality Operations",
-      "url": "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hospitality",
-              "launch"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "d9207278a092dfa983",
-      "title": "Accor & Corinthia Group launch strategic collaboration to bring Verdi Hotels to Handwritten Collection",
-      "url": "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "accor",
-              "launch"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "d372dfb27aa5a1745f",
-      "title": "dormakaba closes Alliants deal, bringing integrated hotel technology to The Hospitality Show 2026",
-      "url": "https://www.hospitalitynet.org/news/4135222/dormakaba-closes-alliants-deal-bringing-integrated-hotel-technology-to-the-hospitality-show-2026",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9d9ecfe17662f96732",
-      "title": "Behind the moments: Our biggest lessons in hospitality",
-      "url": "https://www.hospitalitynet.org/podcast/4135221/behind-the-moments-our-biggest-lessons-in-hospitality",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0e146347c31da2b22e",
-      "title": "The Longevity Brand Roadmap: Earning the Word in Luxury Hospitality",
-      "url": "https://www.hospitalitynet.org/opinion/4135220/the-longevity-brand-roadmap-earning-the-word-in-luxury-hospitality",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "7c7b5befcb8bb43d50",
-      "title": "Patient Journey: What the Hospitality Industry Can Teach Hospitals",
-      "url": "https://www.hospitalitynet.org/opinion/4135219/patient-journey-what-the-hospitality-industry-can-teach-hospitals",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",

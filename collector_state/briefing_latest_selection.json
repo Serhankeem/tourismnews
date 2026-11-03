@@ -1,14 +1,29 @@
 {
-  "generated_at": "2026-11-03T20:04:48+09:00",
+  "generated_at": "2026-11-03T22:17:42+09:00",
   "mode": "live_rss",
   "decisions": [
+    {
+      "article_id": "30968462d879db29dd",
+      "decision": "selected",
+      "tier": "korea_direct",
+      "category": "항공·숙박",
+      "new_category": true,
+      "age_hours": 0.28,
+      "published_at": "2026-11-03T22:01:01+09:00",
+      "basis": [
+        "authorized_newsroom",
+        "verified_timestamp_last24h",
+        "korea_priority_then_category_diversity",
+        "conservative_title_similarity"
+      ]
+    },
     {
       "article_id": "d143830c9801b23dbf",
       "decision": "selected",
       "tier": "korea_direct",
       "category": "여행산업",
       "new_category": true,
-      "age_hours": 19.83,
+      "age_hours": 22.05,
       "published_at": "2026-11-03T00:15:00+09:00",
       "basis": [
         "authorized_newsroom",
@@ -23,7 +38,7 @@
       "tier": "korea_direct",
       "category": "경제·시장",
       "new_category": true,
-      "age_hours": 20.24,
+      "age_hours": 22.45,
       "published_at": "2026-11-02T23:50:31+09:00",
       "basis": [
         "authorized_newsroom",
@@ -38,7 +53,7 @@
       "tier": "korea_direct",
       "category": "문화·트렌드",
       "new_category": true,
-      "age_hours": 20.24,
+      "age_hours": 22.46,
       "published_at": "2026-11-02T23:50:24+09:00",
       "basis": [
         "authorized_newsroom",
@@ -46,6 +61,12 @@
         "korea_priority_then_category_diversity",
         "conservative_title_similarity"
       ]
+    },
+    {
+      "article_id": "cf1f8dd40672437f91",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-03T20:32:19+09:00"
     },
     {
       "article_id": "f4f5fa114e1470cca1",
@@ -70,12 +91,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-02T22:59:36+09:00"
-    },
-    {
-      "article_id": "083db88ee55d828535",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-02T20:35:09+09:00"
     }
   ]
 }
