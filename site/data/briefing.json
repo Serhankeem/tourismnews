@@ -1,29 +1,28 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-04T20:26:53+09:00",
+  "generated_at": "2026-11-04T22:20:37+09:00",
   "briefing_date": "2026-11-04",
-  "last_successful_fetch": "2026-11-04T20:26:53+09:00",
+  "last_successful_fetch": "2026-11-04T22:20:37+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 5,
+  "recent_news_count": 4,
   "selected_count": 1,
   "collection": {
     "status": "partial",
-    "successful_sources": 16,
+    "successful_sources": 15,
     "source_count": 26,
-    "failed_sources": 10
+    "failed_sources": 11
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
   "items": [
     {
-      "title": "제주항공, 3Q 영업이익 549억 달성",
+      "title": "에어부산, 3분기 흑자 전환…매출 41% 급증",
       "source": "트래블데일리",
-      "published_at": "2026-11-03T22:01:01+09:00",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72557",
+      "published_at": "2026-11-04T21:12:16+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72573",
       "category": "항공·숙박",
       "keywords": [
-        "영업이익",
-        "제주항공"
+        "매출"
       ]
     }
   ],
