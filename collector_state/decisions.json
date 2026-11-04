@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-05T02:07:29+09:00",
+  "checked_at": "2026-11-05T04:12:40+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -4079,6 +4079,42 @@
       "decision": "exclude"
     },
     {
+      "id": "7738290558e87546ed",
+      "title": "How Casa Faena Delights Guests and Drives 55% More Upsells With Canary",
+      "url": "https://www.hospitalitynet.org/casestudy/4135193/how-casa-faena-delights-guests-and-drives-55-more-upsells-with-canary",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c9027991bc7bc4f54a",
+      "title": "What It Costs to Build a Feeling",
+      "url": "https://www.hospitalitynet.org/opinion/4135279/what-it-costs-to-build-a-feeling",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "f735146171ca5c285f",
       "title": "Scandic Hotels Group Completes Acquisition of Dalata’s Hotel Operations",
       "url": "https://www.hospitalitynet.org/news/4135277/scandic-hotels-group-completes-acquisition-of-dalatas-hotel-operations",
@@ -4403,42 +4439,6 @@
       "id": "40f523a72d505588c6",
       "title": "Kenan Simmons of Small Luxury Hotels of the World on Independent Spirit, the Hilton Partnership, and the Resurgence of Boutique Luxury",
       "url": "https://www.hospitalitynet.org/podcast/4135205/kenan-simmons-of-small-luxury-hotels-of-the-world-on-independent-spirit-the-hilton-partnership-and-the-resurgence-of-boutique-luxury",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "034133dbd47b0e13df",
-      "title": "Hotel Equities Named Top-Performing Hotel Management Company Participating in the Dignity of Work Pledge Created by Procure Impact in Partnership with the American Hotel & Lodging Association (AHLA)",
-      "url": "https://www.hospitalitynet.org/news/4135253/hotel-equities-named-top-performing-hotel-management-company-participating-in-the-dignity-of-work-pledge-created-by-procure-impact-in-partnership-with-the-american-hotel-lodging-association-ahla",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "95815bcf1daa806aa2",
-      "title": "IHG brings global Holiday Inn brand strength to regional Australia with two new hotel signings",
-      "url": "https://www.hospitalitynet.org/news/4135252/ihg-brings-global-holiday-inn-brand-strength-to-regional-australia-with-two-new-hotel-signings",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
