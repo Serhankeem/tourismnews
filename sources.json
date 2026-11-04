@@ -24,6 +24,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "문화체육관광부 보도자료",
+        "supply_route": "mcst_press"
       }
     },
     {
@@ -50,6 +56,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "Korea.net Food/Travel",
+        "supply_route": "korea_net_travel"
       }
     },
     {
@@ -77,7 +89,13 @@
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
       },
-      "record_type": "statistical_release"
+      "record_type": "statistical_release",
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "KOSIS 최근수록자료",
+        "supply_route": "kosis_recent"
+      }
     },
     {
       "id": "seoul_culture",
@@ -103,6 +121,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "서울특별시",
+        "supply_route": "seoul_culture"
       }
     },
     {
@@ -132,6 +156,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "서울특별시",
+        "supply_route": "seoul_economy"
       }
     },
     {
@@ -161,6 +191,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "서울특별시",
+        "supply_route": "seoul_transport"
       }
     },
     {
@@ -190,6 +226,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "Only items currently returned by the official feed. No article or archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "서울특별시",
+        "supply_route": "seoul_environment"
       }
     },
     {
@@ -488,6 +530,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "No pagination or article fetching without explicit archive/reuse permission."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "corporate",
+        "publisher": "대한항공 뉴스룸",
+        "supply_route": "koreanair"
       }
     },
     {
@@ -588,6 +636,12 @@
         "mode": "provided_feed_only",
         "max_days": 90,
         "limitation": "No pagination or article fetching without explicit archive/reuse permission."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_economy",
+        "publisher": "연합뉴스 경제",
+        "supply_route": "yonhap"
       }
     },
     {
@@ -622,7 +676,13 @@
         "max_days": 7,
         "limitation": "Only currently returned RSS metadata; no archive pagination, body retrieval or complete 7-day volume claim."
       },
-      "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review."
+      "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review.",
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "tourism_specialist",
+        "publisher": "여행신문",
+        "supply_route": "traveltimes"
+      }
     },
     {
       "id": "traveldaily",
@@ -656,7 +716,13 @@
         "max_days": 7,
         "limitation": "Only currently returned RSS metadata; no archive pagination, body retrieval or complete 7-day volume claim."
       },
-      "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review."
+      "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review.",
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "tourism_specialist",
+        "publisher": "트래블데일리",
+        "supply_route": "traveldaily"
+      }
     },
     {
       "id": "ttlnews",
@@ -690,7 +756,13 @@
         "max_days": 7,
         "limitation": "Only currently returned RSS metadata; no archive pagination, body retrieval or complete 7-day volume claim."
       },
-      "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review."
+      "notes": "6-field title/link curation only, noncommercial model required; source terms changes require re-review.",
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "tourism_specialist",
+        "publisher": "퍼블릭뉴스통신(TTL)",
+        "supply_route": "ttlnews"
+      }
     },
     {
       "id": "hospitalitynet",

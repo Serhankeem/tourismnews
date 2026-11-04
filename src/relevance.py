@@ -113,6 +113,42 @@ def korean_company_change(title):
     return None
 
 
+def korean_industry_change(title):
+    """Narrow title evidence for policy, capacity and operating technology.
+
+    A Korean publisher/brand alone supplies no evidence. Each rule needs a
+    concrete industry object AND change; product promotions remain excluded.
+    """
+    text = compact(title)
+    # Preserve the existing cross-sector approval path and consumer exclusions.
+    if matches(text, SECTORS['항공·숙박']) or matches(text, ('할인쿠폰', '특가', '여행상품', '기획전')):
+        return None
+    rules = (
+        ('tourism_sector_tax_policy', '관광정책',
+         ('관광업계', '관광업종'), ('가업상속공제',), ('축소', '유지', '촉구', '대응')),
+        ('mice_industry_investment', '여행산업',
+         ('mice', '마이스산업'), ('예산', '투자'), ('축소', '줄어', '촉구', '확대')),
+        ('medical_tourism_lodging_designation', '항공·숙박',
+         ('의료친화숙박시설',), ('선정', '지정'), ('개소',)),
+        ('air_route_capacity_change', '항공·숙박',
+         ('항공', '운항'), ('증편', '감편', '운항확대'), ('인천', '제주', '부산', '국제선', '탑승률')),
+        ('ota_operating_technology_change', '여행산업',
+         ('야놀자', '놀유니버스', '아고다', '하나투어', '모두투어', '여기어때'),
+         ('b2b플랫폼', 'b2b서비스', 'ai어시스턴트'), ('도입', '출시', '개시')),
+    )
+    for rule, category, *groups in rules:
+        evidence = [matches(text, group) for group in groups]
+        if all(evidence):
+            return {'label': 'Direct', 'decision': 'publish', 'category': category,
+                    'score': 7, 'rules': [rule],
+                    'signals': [{'field': 'title', 'terms': [term for group in evidence for term in group]}],
+                    'impact_targets': ['관광기업'], 'evidence_status': 'industry_subject_in_feed',
+                    'reason': ('제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.'
+                               if rule == 'ota_operating_technology_change' else
+                               '제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.')}
+    return None
+
+
 def assess(title, description=''):
     fields = {'title': compact(title), 'description': compact(description)}
     result = {'rule_version': RULE_VERSION, 'label': 'Irrelevant', 'decision': 'exclude',
@@ -125,6 +161,9 @@ def assess(title, description=''):
         return {**result, 'rules': ['personal_or_generic_travel'], 'reason': '개인 여행·일반 여가 정보는 산업 뉴스에서 제외합니다.'}
     if matches(fields['title'], ('할인쿠폰', '최저가', '추천숙소', '호텔추천')) and not matches(fields['title'], ('시장', '실적', '매출', '정책', '공급', '수요')):
         return {**result, 'rules': ['consumer_promotion'], 'reason': '일반 예약·할인 정보는 산업 뉴스에서 제외합니다.'}
+    domestic = korean_industry_change(title)
+    if domestic:
+        return {**result, **domestic}
     # A quantified intent/sales survey is industry demand metadata, not a
     # recommendation for an individual trip. Preserve the original headline.
     if (re.search(r'\d+(?:\.\d+)?\s*%', fields['title']) and

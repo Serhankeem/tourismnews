@@ -20,6 +20,18 @@ def render(data):
             rows.append(f'| {key} | {quality.get(key)} |')
         rows += ['', 'Direct ratio: ' + quality['direct_ratio_denominator'],
                  'Duplicate ratio: ' + quality['duplicate_ratio_denominator']]
+        domestic = quality.get('domestic_coverage')
+        if domestic:
+            rows += ['', '### Domestic coverage (current public news only)', '',
+                     '| Metric | Value |', '| --- | ---: |']
+            for key in ('domestic_publishing_sources', 'new_domestic_publishing_sources',
+                        'domestic_publisher_news_count', 'domestic_publisher_news_last7d',
+                        'domestic_korea_direct_news_count', 'domestic_korea_direct_news_last7d',
+                        'domestic_top3_source_share', 'domestic_supply_routes', 'domestic_identified_publishers'):
+                rows.append(f'| {key} | {domestic[key]} |')
+            rows += ['', 'Publisher country is not evidence of Korean-market relevance.', '',
+                     '| Domestic media type | Public news |', '| --- | ---: |']
+            rows += [f'| {kind} | {count} |' for kind, count in domestic['domestic_news_by_media_type'].items()]
     rows += ['', 'Outcome: ' + data.get('outcome', 'unknown'), '',
              '| Source | Status | Received | New | Archive added | Newsroom added | Rights holds | Error |',
              '| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |']

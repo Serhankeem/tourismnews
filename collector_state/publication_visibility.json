@@ -529,6 +529,118 @@
           "reason": "current_source_permission"
         }
       ]
+    },
+    "2de0ecd1b5c5a55004": {
+      "source_id": "traveldaily",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
+    },
+    "44c330fcfd17f5e351": {
+      "source_id": "traveltimes",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
+    },
+    "69a53632b4588db2f4": {
+      "source_id": "traveltimes",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
+    },
+    "9848b20cd87d345ce9": {
+      "source_id": "traveltimes",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
+    },
+    "afc9a57fd5ac9e1cc1": {
+      "source_id": "traveldaily",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
+    },
+    "f56a9db4fbfc717107": {
+      "source_id": "ttlnews",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
+    },
+    "f618dc8699f4a7557e": {
+      "source_id": "traveldaily",
+      "status": "public",
+      "policy_status": "approved",
+      "last_evaluated_at": "2026-11-03T15:13:02+09:00",
+      "transitions": [
+        {
+          "at": "2026-11-03T15:13:02+09:00",
+          "from": "untracked",
+          "to": "public",
+          "policy_status": "approved",
+          "source_enabled": true,
+          "reason": "current_source_permission"
+        }
+      ]
     }
   },
   "checked_at": "2026-11-04T12:00:25+09:00"

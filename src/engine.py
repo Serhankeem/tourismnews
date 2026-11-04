@@ -13,6 +13,7 @@ if __package__:
     from .discovery import Loader, AccessBlocked, items_from, feed_bytes
     from .publication import public_record
     from .visibility import PublicationGate
+    from .coverage import coverage
     from .editorial import project, exposure, is_statistical, statistical_assessment
 else:
     import collector as c
@@ -20,6 +21,7 @@ else:
     from discovery import Loader, AccessBlocked, items_from, feed_bytes
     from publication import public_record
     from visibility import PublicationGate
+    from coverage import coverage
     from editorial import project, exposure, is_statistical, statistical_assessment
 
 
@@ -59,6 +61,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     if any('id' not in a for a in old_articles):
         raise ValueError('public_projection_requires_internal_archive')
     gate = PublicationGate(sources, permission, data_dir)
+    previous_newsroom = gate.views(old_articles)[1]
     old_ids = {a['id'] for a in old_articles}
     ledger = c.read_json(state_dir / 'discovery.json', {}).get('candidates', {})
     previous_ids = set(ledger)
@@ -337,6 +340,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
         'source_gates': [{'id': s['id'], 'enabled': s.get('enabled', True),
                           'discovery_allowed': s.get('discovery_allowed', True), 'publication_approved': permission(s)} for s in sources]}
     summary['publication_visibility'] = {**visibility_health, 'policy_reprojection': policy_reprojection}
+    summary['quality']['domestic_coverage'] = coverage(newsroom, sources, at, previous_newsroom)
     if briefing_health is not None:
         summary['briefing'] = briefing_health
     summary['outcome'] = ('all_fetches_failed' if summary['discovery_status'] == 'failed' else

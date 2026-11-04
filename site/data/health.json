@@ -318,16 +318,16 @@
     "new_discoveries": 8,
     "duplicate_observations": 409,
     "new_auto_published": 0,
-    "total_published": 59,
+    "total_published": 66,
     "total_published_scope": "current_public_views_all_record_types",
-    "total_archived": 64,
-    "newsroom_count": 51,
+    "total_archived": 71,
+    "newsroom_count": 58,
     "filings_count": 5,
     "other_research_count": 3,
     "new_newsroom_items": 0,
     "new_filings": 0,
-    "newsroom_korea_direct_count": 23,
-    "newsroom_korea_direct_last7d": 11,
+    "newsroom_korea_direct_count": 29,
+    "newsroom_korea_direct_last7d": 17,
     "newsroom_by_source": {
       "govuk_aviation": {
         "count": 2,
@@ -354,61 +354,61 @@
         "new_this_run": 0
       },
       "traveldaily": {
-        "count": 14,
-        "originally_published_last7d": 8,
-        "korea_direct": 8,
+        "count": 17,
+        "originally_published_last7d": 11,
+        "korea_direct": 10,
         "new_this_run": 0
       },
       "traveltimes": {
-        "count": 14,
-        "originally_published_last7d": 6,
-        "korea_direct": 6,
+        "count": 17,
+        "originally_published_last7d": 9,
+        "korea_direct": 9,
         "new_this_run": 0
       },
       "ttlnews": {
-        "count": 10,
-        "originally_published_last7d": 9,
-        "korea_direct": 4,
+        "count": 11,
+        "originally_published_last7d": 10,
+        "korea_direct": 5,
         "new_this_run": 0
       }
     },
     "newsroom_category_counts": {
-      "관광정책": 3,
+      "관광정책": 5,
       "인바운드": 9,
-      "여행산업": 7,
-      "항공·숙박": 15,
+      "여행산업": 9,
+      "항공·숙박": 18,
       "문화·트렌드": 16,
       "경제·시장": 1
     },
     "newsroom_tier_counts": {
-      "korea_direct": 23,
+      "korea_direct": 29,
       "global_major": 0,
-      "reference": 28
+      "reference": 29
     },
     "newsroom_originally_published_last24h": 4,
-    "newsroom_originally_published_last7d": 30,
-    "newsroom_newly_added_last24h": 7,
+    "newsroom_originally_published_last7d": 37,
+    "newsroom_newly_added_last24h": 14,
     "new_backfilled": 0,
     "record_type_counts": {
-      "news": 56,
+      "news": 63,
       "regulatory_filing": 5,
       "statistical_release": 3,
       "government_notice": 0
     },
     "category_counts": {
-      "관광정책": 3,
+      "관광정책": 5,
       "인바운드": 9,
-      "여행산업": 8,
-      "항공·숙박": 19,
+      "여행산업": 10,
+      "항공·숙박": 22,
       "문화·트렌드": 16,
       "경제·시장": 1
     },
     "discovered_last24h": 391,
     "discovered_last7d": 2351,
-    "auto_published_last24h": 15,
-    "auto_published_last7d": 55,
+    "auto_published_last24h": 22,
+    "auto_published_last7d": 62,
     "originally_published_last24h": 4,
-    "originally_published_last7d": 34,
+    "originally_published_last7d": 40,
     "sources": [
       {
         "id": "mcst_press",
@@ -1605,9 +1605,9 @@
       "publishing_sources": 7,
       "new_publishing_sources": [],
       "new_news_articles": 0,
-      "published_news_articles": 51,
+      "published_news_articles": 58,
       "originally_published_last24h": 4,
-      "originally_published_last7d": 30,
+      "originally_published_last7d": 37,
       "evaluated_news_classifications": {
         "Direct": 28,
         "Indirect": 0,
@@ -1615,7 +1615,7 @@
       },
       "direct_ratio": 0.0671462829736211,
       "direct_ratio_denominator": "classified_news_feed_observations_within_window_excluding_filings_and_statistics",
-      "top3_source_share": 0.7450980392156863,
+      "top3_source_share": 0.7758620689655172,
       "duplicate_ratio": 0.9808153477218226,
       "duplicate_ratio_denominator": "valid_discovery_observations_new_plus_previously_seen_not_removed_independent_reports",
       "news_by_source": {
@@ -1623,12 +1623,12 @@
         "hospitalitynet": 5,
         "mcst_press": 4,
         "seoul_culture": 2,
-        "traveldaily": 14,
-        "traveltimes": 14,
-        "ttlnews": 10
+        "traveldaily": 17,
+        "traveltimes": 17,
+        "ttlnews": 11
       },
       "public_news_relevance_counts": {
-        "Direct": 51,
+        "Direct": 58,
         "Indirect": 0,
         "Irrelevant": 0
       },
@@ -1637,9 +1637,9 @@
       "rights_held_news_by_source": {
         "hotelnewsresource": 3
       },
-      "public_record_count": 59,
+      "public_record_count": 66,
       "public_metrics_as_of": "2026-11-04T12:00:25+09:00",
-      "stored_news_count": 56,
+      "stored_news_count": 63,
       "failed_sources": [
         {
           "id": "korea_net_travel",
@@ -1854,14 +1854,50 @@
           "discovery_allowed": true,
           "publication_approved": false
         }
-      ]
+      ],
+      "domestic_coverage": {
+        "definition": "domestic_publisher=explicit_KR_configuration; korean_market=editorial_korea_direct; counts=current_public_news_only",
+        "domestic_publishing_sources": 5,
+        "new_domestic_publishing_sources": [],
+        "domestic_publisher_news_count": 51,
+        "domestic_publisher_news_last7d": 32,
+        "domestic_korea_direct_news_count": 29,
+        "domestic_korea_direct_news_last7d": 17,
+        "korea_direct_news_all_publishers": 29,
+        "domestic_top3_source_share": 0.8823529411764706,
+        "domestic_news_by_source": {
+          "mcst_press": 4,
+          "seoul_culture": 2,
+          "traveldaily": 17,
+          "traveltimes": 17,
+          "ttlnews": 11
+        },
+        "domestic_news_by_media_type": {
+          "tourism_specialist": 45,
+          "general_economy": 0,
+          "corporate": 0,
+          "public": 6,
+          "unknown": 0
+        },
+        "domestic_news_by_category": {
+          "관광정책": 5,
+          "인바운드": 9,
+          "여행산업": 9,
+          "항공·숙박": 11,
+          "문화·트렌드": 16,
+          "경제·시장": 1
+        },
+        "domestic_supply_routes": 5,
+        "domestic_identified_publishers": 5,
+        "unclassified_publisher_news_count": 7
+      }
     },
     "publication_visibility": {
       "status": "ok",
       "rights_held_news_count": 3,
       "hidden_this_run": 0,
       "restored_this_run": 0,
-      "public_news_count": 51,
+      "public_news_count": 58,
       "policy_reprojection": false
     },
     "briefing": {
@@ -1869,14 +1905,22 @@
       "checked_at": "2026-11-04T12:00:25+09:00",
       "selection_status": "candidates_ready"
     },
-    "outcome": "no_new_publications_with_source_errors"
+    "outcome": "no_new_publications_with_source_errors",
+    "merge_projection": {
+      "main_commit": "0357b30",
+      "pr_commit": "fa913562",
+      "publication_metrics_as_of": "2026-11-04T12:00:25+09:00",
+      "new_network_fetch": false,
+      "pr_admissions_preserved": 7,
+      "latest_run_diagnostics_unchanged": true
+    }
   },
   "publication_visibility": {
     "status": "ok",
     "rights_held_news_count": 3,
     "hidden_this_run": 0,
     "restored_this_run": 0,
-    "public_news_count": 51,
+    "public_news_count": 58,
     "policy_reprojection": false
   },
   "briefing": {

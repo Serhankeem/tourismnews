@@ -1,0 +1,464 @@
+{
+  "base_commit": "54117f6",
+  "captured_responses_completed_at": "2026-11-03T15:13:02+09:00",
+  "validation_mode": "actual_HTTP_responses_captured_once_then_replayed_identically; no_fixture_publication",
+  "before": {
+    "public_news": 47,
+    "definition": "domestic_publisher=explicit_KR_configuration; korean_market=editorial_korea_direct; counts=current_public_news_only",
+    "domestic_publishing_sources": 5,
+    "new_domestic_publishing_sources": [],
+    "domestic_publisher_news_count": 42,
+    "domestic_publisher_news_last7d": 31,
+    "domestic_korea_direct_news_count": 22,
+    "domestic_korea_direct_news_last7d": 15,
+    "korea_direct_news_all_publishers": 22,
+    "domestic_top3_source_share": 0.8571428571428571,
+    "domestic_news_by_source": {
+      "mcst_press": 4,
+      "seoul_culture": 2,
+      "traveldaily": 13,
+      "traveltimes": 14,
+      "ttlnews": 9
+    },
+    "domestic_news_by_media_type": {
+      "tourism_specialist": 36,
+      "general_economy": 0,
+      "corporate": 0,
+      "public": 6,
+      "unknown": 0
+    },
+    "domestic_news_by_category": {
+      "관광정책": 3,
+      "인바운드": 9,
+      "여행산업": 7,
+      "항공·숙박": 7,
+      "문화·트렌드": 15,
+      "경제·시장": 1
+    },
+    "domestic_supply_routes": 5,
+    "domestic_identified_publishers": 5,
+    "unclassified_publisher_news_count": 5
+  },
+  "after": {
+    "public_news": 54,
+    "definition": "domestic_publisher=explicit_KR_configuration; korean_market=editorial_korea_direct; counts=current_public_news_only",
+    "domestic_publishing_sources": 5,
+    "new_domestic_publishing_sources": [],
+    "domestic_publisher_news_count": 49,
+    "domestic_publisher_news_last7d": 38,
+    "domestic_korea_direct_news_count": 25,
+    "domestic_korea_direct_news_last7d": 18,
+    "korea_direct_news_all_publishers": 25,
+    "domestic_top3_source_share": 0.8775510204081632,
+    "domestic_news_by_source": {
+      "mcst_press": 4,
+      "seoul_culture": 2,
+      "traveldaily": 16,
+      "traveltimes": 17,
+      "ttlnews": 10
+    },
+    "domestic_news_by_media_type": {
+      "tourism_specialist": 43,
+      "general_economy": 0,
+      "corporate": 0,
+      "public": 6,
+      "unknown": 0
+    },
+    "domestic_news_by_category": {
+      "관광정책": 5,
+      "인바운드": 9,
+      "여행산업": 9,
+      "항공·숙박": 10,
+      "문화·트렌드": 15,
+      "경제·시장": 1
+    },
+    "domestic_supply_routes": 5,
+    "domestic_identified_publishers": 5,
+    "unclassified_publisher_news_count": 5
+  },
+  "new_articles": [
+    {
+      "title": "서울시, ‘의료친화 숙박시설’ 19개소 선정",
+      "source": "트래블데일리",
+      "published_at": "2026-11-02T23:50:43+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72548",
+      "category": "항공·숙박",
+      "keywords": [
+        "의료친화 숙박시설"
+      ]
+    },
+    {
+      "title": "창립 85주년 맞은 필리핀항공, 인천~마닐라 주 17회 증편… 차세대 A350-1000 투입",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-11-02T19:44:51+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3158051",
+      "category": "항공·숙박",
+      "keywords": [
+        "증편"
+      ]
+    },
+    {
+      "title": "“MICE 예산 줄어드는데”…국회·업계, 지속적 투자 촉구",
+      "source": "여행신문",
+      "published_at": "2026-11-02T00:10:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500645",
+      "category": "여행산업",
+      "keywords": [
+        "MICE"
+      ]
+    },
+    {
+      "title": "제주-싱가포르, 운항 확대에도 탑승률 85%대 진입",
+      "source": "여행신문",
+      "published_at": "2026-11-02T00:00:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500641",
+      "category": "항공·숙박",
+      "keywords": [
+        "탑승률"
+      ]
+    },
+    {
+      "title": "중앙회, 가업상속공제 대상 관광업종 유지 촉구",
+      "source": "트래블데일리",
+      "published_at": "2026-11-01T21:09:53+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72534",
+      "category": "관광정책",
+      "keywords": [
+        "가업상속공제"
+      ]
+    },
+    {
+      "title": "아고다, AI 어시스턴트 도입",
+      "source": "트래블데일리",
+      "published_at": "2026-11-01T21:09:32+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72533",
+      "category": "여행산업",
+      "keywords": [
+        "아고다"
+      ]
+    },
+    {
+      "title": "가업상속공제 축소 우려에 관광업계 12개 단체 공동 대응",
+      "source": "여행신문",
+      "published_at": "2026-10-29T18:30:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500639",
+      "category": "관광정책",
+      "keywords": [
+        "가업상속공제"
+      ]
+    }
+  ],
+  "quality": {
+    "configured_sources": 26,
+    "enabled_sources": 26,
+    "attempted_sources": 26,
+    "successful_sources": 23,
+    "publication_approved_sources": 19,
+    "publishing_sources": 7,
+    "new_publishing_sources": [],
+    "new_news_articles": 7,
+    "published_news_articles": 54,
+    "originally_published_last24h": 10,
+    "originally_published_last7d": 41,
+    "evaluated_news_classifications": {
+      "Direct": 37,
+      "Indirect": 0,
+      "Irrelevant": 388
+    },
+    "direct_ratio": 0.08705882352941176,
+    "direct_ratio_denominator": "classified_news_feed_observations_within_window_excluding_filings_and_statistics",
+    "top3_source_share": 0.7962962962962963,
+    "duplicate_ratio": 0.9930232558139535,
+    "duplicate_ratio_denominator": "valid_discovery_observations_new_plus_previously_seen_not_removed_independent_reports",
+    "news_by_source": {
+      "govuk_aviation": 2,
+      "hospitalitynet": 3,
+      "mcst_press": 4,
+      "seoul_culture": 2,
+      "traveldaily": 16,
+      "traveltimes": 17,
+      "ttlnews": 10
+    },
+    "public_news_relevance_counts": {
+      "Direct": 54,
+      "Indirect": 0,
+      "Irrelevant": 0
+    },
+    "public_news_direct_ratio": 1.0,
+    "rights_held_news_count": 3,
+    "rights_held_news_by_source": {
+      "hotelnewsresource": 3
+    },
+    "public_record_count": 62,
+    "public_metrics_as_of": "2026-11-03T15:13:02+09:00",
+    "stored_news_count": 59,
+    "failed_sources": [
+      {
+        "id": "mcst_press",
+        "error_kind": "access_policy",
+        "error": "robots_unverified:http_503"
+      },
+      {
+        "id": "korea_net_travel",
+        "error_kind": "access_policy",
+        "error": "redirect_loop"
+      },
+      {
+        "id": "kosis_recent",
+        "error_kind": "access_policy",
+        "error": "robots_unverified:http_503"
+      }
+    ],
+    "source_gates": [
+      {
+        "id": "mcst_press",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "korea_net_travel",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "kosis_recent",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_culture",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_economy",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_transport",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "seoul_environment",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_booking",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_expedia",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_marriott",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_hilton",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_delta",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_united",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "sec_tripcom",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "govuk_tourism",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "govuk_aviation",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "koreanair",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "tripcom_news",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "hilton_news",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "skift",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "yonhap",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      },
+      {
+        "id": "traveltimes",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "traveldaily",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "ttlnews",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "hospitalitynet",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": true
+      },
+      {
+        "id": "hotelnewsresource",
+        "enabled": true,
+        "discovery_allowed": true,
+        "publication_approved": false
+      }
+    ],
+    "domestic_coverage": {
+      "definition": "domestic_publisher=explicit_KR_configuration; korean_market=editorial_korea_direct; counts=current_public_news_only",
+      "domestic_publishing_sources": 5,
+      "new_domestic_publishing_sources": [],
+      "domestic_publisher_news_count": 49,
+      "domestic_publisher_news_last7d": 38,
+      "domestic_korea_direct_news_count": 25,
+      "domestic_korea_direct_news_last7d": 18,
+      "korea_direct_news_all_publishers": 25,
+      "domestic_top3_source_share": 0.8775510204081632,
+      "domestic_news_by_source": {
+        "mcst_press": 4,
+        "seoul_culture": 2,
+        "traveldaily": 16,
+        "traveltimes": 17,
+        "ttlnews": 10
+      },
+      "domestic_news_by_media_type": {
+        "tourism_specialist": 43,
+        "general_economy": 0,
+        "corporate": 0,
+        "public": 6,
+        "unknown": 0
+      },
+      "domestic_news_by_category": {
+        "관광정책": 5,
+        "인바운드": 9,
+        "여행산업": 9,
+        "항공·숙박": 10,
+        "문화·트렌드": 15,
+        "경제·시장": 1
+      },
+      "domestic_supply_routes": 5,
+      "domestic_identified_publishers": 5,
+      "unclassified_publisher_news_count": 5
+    }
+  },
+  "repeat": {
+    "new_newsroom_items": 0,
+    "duplicate_observations": 430,
+    "new_discoveries": 0
+  },
+  "preserved_baseline_public_records": 47,
+  "preserved_baseline_ids": 60,
+  "confirmed_archive_sha256": "88e42e51126eb8ddfdfc5f40958b4a44dd3dadbfe5d7032d39fd2e0f1bc72528",
+  "baseline_public_six_field_sha256": {
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500626": "8faeae87dc70e9a329d93692e297933ff56e4934e507ca99f81a7ca6f3ca326d",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72546": "6c0666bb2d30341d6f09b623463e82a594385176f2b176cbaad8cb477ae7604e",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72540": "90918d3681ee32eba79c4823a44a7ce36829ad0649cde5fd4b8776d8d6fc811b",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72535": "14ba2e6bb00d90a56841f3c081ff54b57c46760aa95ff89f1e6241ee2751c443",
+    "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations": "0f96da716cf32016b2e448cc92c0812bd4c90673f305a9fc3708990f575bbc95",
+    "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection": "a5cb71efdc848cb3bf2fba4aa9bd608463184b7df1e5236549daf4cb4ecfb136",
+    "https://www.hospitalitynet.org/news/4135216/hyatt-introduces-enhanced-hyatt-leverage-platform-for-small-and-midsize-business-travel": "473ed067c706b8dad0dda5203742cab838ef48c0e6c776fc421e5fcc80dcdcb7",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3157965": "88438d14c490f439f380016820d86d62434d560781583501f06f2641040dede8",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3157740": "f1d8718a9f4bd97d9556e65837adb5a85053c2509f7289b4ebcb75e0e43edb88",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500619": "95668f37075746b825a786386f4675b103a0147eb37b2b07ca19d06b57da2b6b",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72497": "6cc5d6af04c214e639d5660b6014884a37b7e07f0c435316cf0df7d6b4ec085a",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72530": "cff55e359f152d8c5891a760c7b7634cb456c95af5b9e93d20595e8b28530f77",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500633": "944f2cb6d3736a93661aa32a4cb48e00af002d7f1f063e52cdca8200343e59f3",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500637": "8e99ecca571bacdd2b777c0f957a28206d9bd8c77eb650271ff12eff6ff92f60",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72513": "06be2dc0dbf52bf9aa3c774c75262c6f028dcb90c72de808e851bf96b30c0148",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72504": "cb97870f2929d1f0acbbab6c609797bfe80247a6e9ce24db42aeae12b1b179ad",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156515": "dd5e2c638a2b8b3b6770986f81baf0a9197466f0d019c97c8f3482f3fd06dfb2",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156574": "512a36e882184533a3a6fbd5e6d34d8352ff911add53f9e9c4dbae5630be691b",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156555": "b0346076820e7ea4c5876f1e03a50a4f103c72e12c9630f55b53376d142ad170",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156639": "16a48ca88048c26312e520f891c2d313b2c07af92673bf9831ed4c5874a2399c",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156602": "3e7a84a50f8bb5989d56e2d0c746d73bffd68aa4b1604bf55020a488357b3b9d",
+    "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22804": "3a7135e4790f52626db6c059d6a148c09a93847f494fb1ab64ce4946911b9f2f",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500631": "56bac4240cf1e8ba4785fd376ab962ec3a9afda76bea539afb921e43dde01ff4",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500625": "14fc4b191af3b563ea91af6aac7527db740ee20dcea96d54f0aec4e9136c923d",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156237": "3395b555fdc00a2484f95b062cf9fc158e35560eaa1bcd1db108da857b466e2c",
+    "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22802": "7fe534258404037f9449a9c7bf39c25943178f33d596402b174e03404dabe064",
+    "http://www.ttlnews.com/news/articleView.html?idxno=3156140": "bbd9a039f1c801f621f29f348f97839c26add9ae367fc36bea50a1641b09e4f8",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500612": "558a0ed82dd5803e7b83796094cf75dbcbcc46435fa988e47c39830ac78204f0",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72475": "3ce1e705b4048aff50c2fbd22d63599cd523875444ff4820735dd68afb8a64ac",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72472": "d17cb353479a68fcbfe2f8f570065b351e7ee0c1d52612264ec4ca59a475d6fd",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72470": "1f0c9cf2ae81ae5a59f85581237cdcc491ed6a79fb56732d5a826703df2e009f",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72465": "b73004ac13c602c1b125894702ed07b110079a52a4705657ff798f0c6254e825",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500616": "7513c896af73ed3f2e7bd1450c7d87da8fe2f46bb5416c7ed8b45f92375117d3",
+    "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22799": "9c6edcbdebfd00f43f4557639f9f9c47083df7b15cee4f987284d6e4ee233b21",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500603": "f3ce8a2917083b7284feed382f95745daba67c66c4d4c76d71e5e984347f2acc",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500608": "1f98f21d1b07d0f8cf39181b5936719c47680e03e8cf2b4eecc28e3e1355d791",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500589": "f66eedd7438b0b13e822ac64f5c36ed8a098f3e69c89237c6d09088ec847e871",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500596": "074b694714990ad6d24dbed4af68bdf48b37db90433a9c29cb9780779c8af296",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500575": "83f06888e02a552cea413d069979fb2cb189281243087d220fc39aa366051495",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72444": "8c77762dc5ad18698b457171467435f3629328ef9e7df64bea9213511b8c85d8",
+    "https://www.traveldaily.co.kr/news/articleView.html?idxno=72440": "9f9b1112cdb9e3b17c5c21f355c115a97af23c976b1af3b272be0957845404e5",
+    "https://mediahub.seoul.go.kr/archives/2019815": "b68caf7cc4a91336d7c16aa57b374ee77ade3ddf7af587ab6b1c70eb82fd2295",
+    "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22790": "40c81a0f9ffd0cb779e43943ae3f711f2606513b4e4d694226467403a1be93e6",
+    "https://www.traveltimes.co.kr/news/articleView.html?idxno=500584": "e380cb5321a60c090f96a5ed3d621525a0dc9d2395a98699086c2d49be61e3ee",
+    "https://mediahub.seoul.go.kr/archives/2019810": "c8b59a58f855481480e466b0bab3bcf57ac4725bf6fd265e95a9cc6402ea1d3b",
+    "https://www.gov.uk/government/news/stronger-safeguards-for-wheelchair-users-and-better-trained-staff-to-support-disabled-air-passengers": "5f5de8b2b58ba7403221636f7296e0a949499966dd3c032643676715c50f61da",
+    "https://www.gov.uk/government/news/take-off-for-passengers-as-government-scraps-extra-charges-when-flying": "9c8341c357e678ce1c986bb5dc331da6f6b4acf79a86bed1e2da7d7cf057438c"
+  }
+}

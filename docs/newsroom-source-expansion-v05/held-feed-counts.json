@@ -1,0 +1,26 @@
+[
+  {
+    "source": "호텔앤레스토랑",
+    "url": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+    "received": 50,
+    "originally_published_last7d": 22,
+    "recent7_direct_before": 3,
+    "recent7_direct_after": 5,
+    "auto_publishable": 0,
+    "publication_status": "review",
+    "reason": "existing rights hold unchanged; no publisher approval obtained",
+    "response_sha256": "92f0bb33793669f10c1bcb5f50afc3e558f7af073e20f6e0dcc4ced5b2cfe52f"
+  },
+  {
+    "source": "투어코리아",
+    "url": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+    "received": 50,
+    "originally_published_last7d": 50,
+    "recent7_direct_before": 0,
+    "recent7_direct_after": 0,
+    "auto_publishable": 0,
+    "publication_status": "review",
+    "reason": "existing rights hold unchanged; no publisher approval obtained",
+    "response_sha256": "08534dbf1b5f3d29929d814457e4448464c34f9d54a8bc96461d101838b459a1"
+  }
+]

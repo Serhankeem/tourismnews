@@ -12,7 +12,7 @@ const proof=require('../docs/newsroom-source-expansion-v04/comparison.json');
   const data=await(await page.request.get(base+'/data/'+file+'.json')).json();
   for(const row of data.articles||data.items)assert.ok(!blocked.some(b=>b.url===row.url));
  }
- const db=await(await page.request.get(base+'/data/newsroom.json')).json();assert.equal(db.count,47);
+ const db=await(await page.request.get(base+'/data/newsroom.json')).json();assert.equal(db.count,db.articles.length);assert.ok(db.count>=47,'preserve baseline while permitting verified new news');
  const allowed=db.articles.find(a=>a.source==='Hospitality Net');assert.ok(allowed?.keywords.length);
  await page.route('**/data/newsroom.json?*',r=>r.fulfill({status:404}));await page.evaluate(()=>loadLiveNews());
  assert.ok(await page.evaluate(urls=>NEWS.every(n=>!urls.includes(n.url)),blocked.map(a=>a.url)));
