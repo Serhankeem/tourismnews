@@ -101,7 +101,74 @@
   },
   "operational_data_branch": "not_created_or_modified",
   "operational_pages": "not_deployed",
-  "github_ci": "pending_policy_day_guard_commit",
+  "github_ci": {
+    "status": "passed",
+    "implementation_commit": "67980c557c0c7695982c36d67472dee30b2b0426",
+    "checked_at": "2026-11-04T14:05:39+09:00",
+    "checks": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T05:03:12Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41776726954/job/126398697407",
+        "name": "test",
+        "startedAt": "2026-11-04T05:01:58Z",
+        "status": "COMPLETED",
+        "workflowName": "Macro Monitor official statistics"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T05:03:03Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41776727147/job/126398697575",
+        "name": "test",
+        "startedAt": "2026-11-04T05:01:58Z",
+        "status": "COMPLETED",
+        "workflowName": "Research Library weekly collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T05:03:15Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41776727118/job/126398697533",
+        "name": "test",
+        "startedAt": "2026-11-04T05:01:59Z",
+        "status": "COMPLETED",
+        "workflowName": "Tourism Pulse RSS collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T05:03:12Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41776726954/job/126399109314",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T05:03:12Z",
+        "status": "COMPLETED",
+        "workflowName": "Macro Monitor official statistics"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T05:03:03Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41776727147/job/126399060436",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T05:03:03Z",
+        "status": "COMPLETED",
+        "workflowName": "Research Library weekly collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T05:03:15Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41776727118/job/126399124143",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T05:03:15Z",
+        "status": "COMPLETED",
+        "workflowName": "Tourism Pulse RSS collector"
+      }
+    ],
+    "production_jobs": "skipped_on_PR_by_design"
+  },
   "actionlint": {
     "version": "1.7.12",
     "result": "no other findings; documented queue:max warning excluded because tool schema lags GitHub official docs"

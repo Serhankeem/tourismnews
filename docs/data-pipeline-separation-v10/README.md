@@ -65,7 +65,7 @@ flowchart LR
 
 공통 job 잠금은 `tourism-pulse-publish`, **`cancel-in-progress: false`, `queue: max`**다. [GitHub 공식 문서](https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/control-the-concurrency-of-workflows-and-jobs)를 실제 확인했다. 현재 max는 **최대 100개 pending**을 허용한다. 기본 single은 이전 pending을 교체하므로 사용하지 않았다. 대기 시작 시각의 FIFO이며 workflow dispatch 시각 순서를 보장하지 않는다. 100개 초과 작업·사용자가 취소한 작업·플랫폼 장애까지 보존된다고 보장하지 않는다. [확인 기록](concurrency-evidence.json).
 
-추가로 매 실행에서 `control.completed_slots`와 **도래한 정기 slot**을 대조해 놓친 News/Research/Macro를 함께 처리한다. 실패한 엔진의 slot은 완료로 기록하지 않으므로 다음 실행에서 다시 확인한다. 이는 누락된 실행의 과거 시각을 가짜 수집 시각으로 재현하는 것이 아니라 최신 자료를 복구 수집하는 방식이다. 수동 force 요청이 취소/한도 초과로 사라지면 사용자가 해당 workflow_dispatch를 다시 실행해야 한다. 무한·영구 작업 큐를 주장하지 않는다.
+추가로 매 실행에서 `control.completed_slots`와 **도래한 정기 slot**을 대조해 놓친 News/Research/Macro를 함께 처리한다. 실패한 엔진의 slot은 완료로 기록하지 않으므로 다음 실행에서 다시 확인한다. 재확인은 강제 요청이 아니며 기존 엔진의 source별 interval/last_attempt 정책을 존중한다. 내부 엔진이 not_due를 반환하면 그 정상 정책을 따르며, 실패 후 즉시 재수신이 필요하면 해당 수동 입력 force로 재실행한다. 이는 누락된 실행의 과거 시각을 가짜 수집 시각으로 재현하는 것이 아니라 최신 자료를 복구 수집하는 방식이다. 수동 force 요청이 취소/한도 초과로 사라지면 사용자가 해당 workflow_dispatch를 다시 실행해야 한다. 무한·영구 작업 큐를 주장하지 않는다.
 
 각 엔진은 별도 프로세스에서 News 15분 / Research 20분 / Macro 10분으로 제한하고 공통 job은 55분이다. 한 엔진의 타임아웃·비정상 종료는 stage를 복원하고 나머지를 계속 처리한다. 저장 전에 main SHA가 달라지면 오래된 코드/정책으로 커밋하지 않고 실패한다. 다음 main push 또는 기존 workflow 수동 재실행에서 최신 코드로 재처리한다. 저장 후 코드/데이터 head가 바뀐 경우에도 배포를 중단한다. 수집이 끝난 시각으로 권리를 다시 평가하고, 업로드/배포 전에 한국 날짜가 바뀌면 유효기간을 재검증하도록 배포를 거부한다.
 
@@ -112,7 +112,7 @@ Research는 기존 canonical 보고서/버전을 보존하고 현재 승인한 �
 
 임시 bare 저장소에서 bootstrap/새 checkout 복원, News→Research→Macro 최신 상태 유지, 동일 응답 반복(기존 실제 엔진 + 격리 RSS fixture), 손상/출처 실패, main 코드 변경, 외부 동시 data commit 및 재처리, push 거절, Pages 조립 실패 후 복구, review/승인 복구를 검증했다. 합성 기사는 임시 로컬 Git/테스트 디렉터리에서만 생성하며 실제 repo/Pages에 올리지 않았다.
 
-Python 전체 **287개**, 새 결합 사이트 브라우저 **15개 suite**가 통과했다. 초기 구현의 GitHub test job 3개도 성공했으며 최종 보완 커밋의 결과는 아래 validation.json에 갱신한다.
+Python 전체 **287개**, 새 결합 사이트 브라우저 **15개 suite**가 통과했다. 최종 구현 커밋 `67980c5`의 GitHub test job **3개도 성공**했다. 운영 job은 PR에서 의도대로 SKIPPED이며 실제 이전/배포 검증이 아니다. 정확한 실행 링크는 validation.json에 있다.
 
 기존 테스트 중 **main으로 git push하는 이전 계약**을 검증하던 3개 workflow 테스트는 새 저장·복원·다른 엔진 보존 계약으로 바꿨다. 분류·정책·Research·Macro·브리핑·UI 테스트는 유지했다. 고정 운영 snapshot의 SHA를 매 예약 실행마다 요구하는 테스트는 넣지 않았다. 운영 데이터가 정상 증가해도 main의 테스트가 깨지지 않도록 수량은 테스트 시작 데이터에서 읽는다.
 
