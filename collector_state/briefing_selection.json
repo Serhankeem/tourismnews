@@ -94,6 +94,46 @@
           "published_at": "2026-11-02T12:01:37+09:00"
         }
       ]
+    },
+    {
+      "briefing_date": "2026-11-04",
+      "generated_at": "2026-11-04T11:16:50+09:00",
+      "mode": "live_rss",
+      "decisions": [
+        {
+          "article_id": "30968462d879db29dd",
+          "decision": "selected",
+          "tier": "korea_direct",
+          "category": "항공·숙박",
+          "new_category": true,
+          "age_hours": 13.26,
+          "published_at": "2026-11-03T22:01:01+09:00",
+          "basis": [
+            "authorized_newsroom",
+            "verified_timestamp_last24h",
+            "korea_priority_then_category_diversity",
+            "conservative_title_similarity"
+          ]
+        },
+        {
+          "article_id": "cebedf6da46591fafc",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-04T01:11:25+09:00"
+        },
+        {
+          "article_id": "cf1f8dd40672437f91",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-03T20:32:19+09:00"
+        },
+        {
+          "article_id": "f4f5fa114e1470cca1",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-03T17:17:17+09:00"
+        }
+      ]
     }
   ]
 }
