@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "updated_at": "2026-11-04T14:25:38+09:00",
+  "articles": [
+    {
+      "id": "a3281c08ebf94096cc",
+      "published_at": "2026-10-07T14:37:41+09:00",
+      "date": "2026.10.07",
+      "category": "문화·트렌드",
+      "source": "서울시 내 손안에 서울 경제",
+      "source_id": "seoul_economy",
+      "title": "신흥시장이 더 힙해졌다! 늦은 밤까지 즐기는 ‘전통시장 야간·음식문화 축제’",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://mediahub.seoul.go.kr/archives/2019546",
+      "relevance": 2,
+      "relevance_label": "Indirect",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Indirect",
+        "decision": "hold",
+        "category": "문화·트렌드",
+        "score": 2,
+        "rules": [
+          "cross_sector_unproven"
+        ],
+        "signals": [
+          {
+            "field": "description",
+            "terms": [
+              "축제",
+              "외국인관광객"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광수요"
+        ],
+        "reason": "다른 산업 변화와 관광산업 영향의 근거를 원문에서 검토한 뒤 승인해야 합니다.",
+        "evidence_status": "insufficient"
+      },
+      "related_sources": [
+        "서울시 내 손안에 서울 경제"
+      ]
+    }
+  ]
+}

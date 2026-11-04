@@ -1,0 +1,41 @@
+{
+  "schema_version": 4,
+  "mode": "live_rss",
+  "generated_at": "2026-11-04T14:25:38+09:00",
+  "last_successful_fetch": "2026-11-04T14:25:38+09:00",
+  "count": 3,
+  "public_fields": [
+    "title",
+    "source",
+    "published_at",
+    "url",
+    "category",
+    "keywords"
+  ],
+  "articles": [
+    {
+      "title": "전라남도완도군기본통계 ( 62 )",
+      "source": "KOSIS 최근수록자료",
+      "published_at": "2026-10-28T15:46:16+09:00",
+      "url": "http://kosis.kr/serviceInfo/newContrainDataDetail.do?boardIdx=2007118&boardOrgId=750",
+      "category": "통계자료",
+      "keywords": []
+    },
+    {
+      "title": "경기도양주시기본통계 ( 109 )",
+      "source": "KOSIS 최근수록자료",
+      "published_at": "2026-10-28T13:46:16+09:00",
+      "url": "http://kosis.kr/serviceInfo/newContrainDataDetail.do?boardIdx=2007082&boardOrgId=634",
+      "category": "통계자료",
+      "keywords": []
+    },
+    {
+      "title": "항공통계 ( 8 )",
+      "source": "KOSIS 최근수록자료",
+      "published_at": "2026-10-27T21:46:14+09:00",
+      "url": "http://kosis.kr/serviceInfo/newContrainDataDetail.do?boardIdx=2005006&boardOrgId=381",
+      "category": "통계자료",
+      "keywords": []
+    }
+  ]
+}

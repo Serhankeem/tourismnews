@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "mode": "live_rss",
+  "briefings": [
+    {
+      "schema_version": 5,
+      "generated_at": "2026-10-30T14:51:14+09:00",
+      "briefing_date": "2026-10-30",
+      "last_successful_fetch": "2026-10-30T14:51:14+09:00",
+      "status": "no_recent_articles",
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    },
+    {
+      "schema_version": 5,
+      "generated_at": "2026-10-31T11:14:43+09:00",
+      "briefing_date": "2026-10-31",
+      "last_successful_fetch": "2026-10-31T11:14:43+09:00",
+      "status": "no_recent_articles",
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    },
+    {
+      "schema_version": 5,
+      "generated_at": "2026-11-01T11:17:25+09:00",
+      "briefing_date": "2026-11-01",
+      "last_successful_fetch": "2026-11-01T11:17:25+09:00",
+      "status": "no_recent_articles",
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    },
+    {
+      "schema_version": 5,
+      "generated_at": "2026-11-02T11:20:47+09:00",
+      "briefing_date": "2026-11-02",
+      "last_successful_fetch": "2026-11-02T11:20:47+09:00",
+      "status": "no_recent_articles",
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    },
+    {
+      "schema_version": 5,
+      "generated_at": "2026-11-03T11:18:04+09:00",
+      "briefing_date": "2026-11-03",
+      "last_successful_fetch": "2026-11-03T11:18:04+09:00",
+      "status": "candidates_ready",
+      "recent_news_count": 6,
+      "selected_count": 3,
+      "collection": {
+        "status": "partial",
+        "successful_sources": 14,
+        "source_count": 24,
+        "failed_sources": 10
+      },
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [
+        {
+          "title": "후쿠시마, 한국인 여행지 될 수 있을까…한국 여행업계가 짚은 과제",
+          "source": "여행신문",
+          "published_at": "2026-11-03T00:15:00+09:00",
+          "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500626",
+          "category": "여행산업",
+          "keywords": [
+            "여행업"
+          ]
+        },
+        {
+          "title": "한국관광공사, ‘요즘, 한국관광 데이터 세미나’ 개최",
+          "source": "트래블데일리",
+          "published_at": "2026-11-02T23:50:31+09:00",
+          "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72540",
+          "category": "경제·시장",
+          "keywords": [
+            "관광데이터",
+            "관광공사"
+          ]
+        },
+        {
+          "title": "‘서부산 관광 활성화 자문위원회’ 위원 위촉",
+          "source": "트래블데일리",
+          "published_at": "2026-11-02T23:50:24+09:00",
+          "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72535",
+          "category": "문화·트렌드",
+          "keywords": [
+            "관광활성화"
+          ]
+        }
+      ],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    },
+    {
+      "schema_version": 5,
+      "generated_at": "2026-11-04T11:16:50+09:00",
+      "briefing_date": "2026-11-04",
+      "last_successful_fetch": "2026-11-04T11:16:50+09:00",
+      "status": "candidates_ready",
+      "recent_news_count": 4,
+      "selected_count": 1,
+      "collection": {
+        "status": "partial",
+        "successful_sources": 15,
+        "source_count": 26,
+        "failed_sources": 11
+      },
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [
+        {
+          "title": "제주항공, 3Q 영업이익 549억 달성",
+          "source": "트래블데일리",
+          "published_at": "2026-11-03T22:01:01+09:00",
+          "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72557",
+          "category": "항공·숙박",
+          "keywords": [
+            "영업이익",
+            "제주항공"
+          ]
+        }
+      ],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-04T14:26:07.450658+09:00",
+  "status": "not_due",
+  "sources": [
+    {
+      "id": "kto_monthly_statistics",
+      "name": "한국관광공사 한국관광통계",
+      "status": "not_due",
+      "reason": null,
+      "last_successful_check": "2026-11-04T13:04:46.937340+09:00",
+      "reference_period": "2026-09"
+    },
+    {
+      "id": "ecos_general_travel",
+      "name": "ECOS 일반여행수입·지급",
+      "status": "not_connected",
+      "reason": "인증키와 공식 통계표·항목·단위/정정 상태 확인 전 미연결",
+      "last_successful_check": null,
+      "credential_status": "not_configured"
+    },
+    {
+      "id": "ecos_total_travel",
+      "name": "ECOS 여행수입·지급 전체",
+      "status": "not_connected",
+      "reason": "일반여행과 구분하여 인증·정의·표 코드 확인 전 미연결",
+      "last_successful_check": null,
+      "credential_status": "not_configured"
+    },
+    {
+      "id": "kto_card",
+      "name": "데이터랩 카드 소비",
+      "status": "not_connected",
+      "reason": "회원/제공조건·카드 표본·대상 업종·데이터 변경 검토 필요; 다운로드 이외 조회 API 수집 금지",
+      "last_successful_check": null
+    },
+    {
+      "id": "kosis_tourism",
+      "name": "KOSIS 관광산업조사",
+      "status": "not_connected",
+      "reason": "공식 경로와 robots HTTP 503, 인증·연간 조사표 미검증",
+      "last_successful_check": null,
+      "credential_status": "not_configured"
+    },
+    {
+      "id": "tourgo_tourism_balance",
+      "name": "TOURGO 일반여행 관광수지 (승인 대기)",
+      "status": "not_connected",
+      "reason": "collection_approval_required",
+      "last_successful_check": null
+    }
+  ],
+  "new_observations": 0,
+  "unchanged_observations": 0,
+  "value_corrections": 0,
+  "status_changes": 0,
+  "successful_sources": 0,
+  "attempted_sources": 0,
+  "pending_sources": 5,
+  "connected_indicators": 7,
+  "connected_primary_indicators": 2,
+  "observation_count": 483,
+  "indicators": [
+    {
+      "id": "kto_inbound",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_outbound",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_tourism_receipts",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_tourism_expenditure",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_inbound_cn",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_inbound_jp",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_inbound_tw",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_inbound_us",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "kto_inbound_vn",
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
+      "missing_periods": []
+    },
+    {
+      "id": "bok_travel_credit",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "bok_travel_debit",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "domestic_card_spend",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "tourism_employment",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "tourism_revenue",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    },
+    {
+      "id": "tourism_businesses",
+      "connected": false,
+      "first_period": null,
+      "latest_period": null,
+      "months": 0,
+      "missing_periods": []
+    }
+  ]
+}

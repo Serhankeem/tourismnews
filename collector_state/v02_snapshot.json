@@ -1,0 +1,365 @@
+{
+  "schema_version": 2,
+  "rule_version": "0.2",
+  "generated_at": "2026-10-28T16:09:42+09:00",
+  "last_successful_fetch": "2026-10-28T16:09:42+09:00",
+  "count": 9,
+  "mode": "live_rss",
+  "articles": [
+    {
+      "id": "0540613a2454a61c96",
+      "published_at": "2026-10-28T15:46:16+09:00",
+      "date": "2026.10.28",
+      "category": "인바운드",
+      "source": "KOSIS 최근수록자료",
+      "source_id": "kosis_recent",
+      "title": "전라남도완도군기본통계 ( 62 )",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://kosis.kr/serviceInfo/newContrainDataDetail.do?boardIdx=2007118&boardOrgId=750",
+      "relevance": 4,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 4,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "description",
+            "terms": [
+              "관광객수"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "KOSIS 최근수록자료"
+      ]
+    },
+    {
+      "id": "2eec08948f98cc110d",
+      "published_at": "2026-10-28T13:46:16+09:00",
+      "date": "2026.10.28",
+      "category": "항공·숙박",
+      "source": "KOSIS 최근수록자료",
+      "source_id": "kosis_recent",
+      "title": "경기도양주시기본통계 ( 109 )",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://kosis.kr/serviceInfo/newContrainDataDetail.do?boardIdx=2007082&boardOrgId=634",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "description",
+            "terms": [
+              "관광숙박",
+              "숙박업"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "KOSIS 최근수록자료"
+      ]
+    },
+    {
+      "id": "2651367a7c066f1259",
+      "published_at": "2026-10-28T13:07:15+09:00",
+      "date": "2026.10.28",
+      "category": "인바운드",
+      "source": "문화체육관광부 보도자료",
+      "source_id": "mcst_press",
+      "title": "최휘영 장관, ‘역대 최대 외래관광객 달성’ 성과 및 ‘3천만‧4천만 명 시대 준비’ 역점 과제 공유",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22802",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "외래관광객"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "문화체육관광부 보도자료"
+      ]
+    },
+    {
+      "id": "aaa526a940283e25e0",
+      "published_at": "2026-10-27T21:46:14+09:00",
+      "date": "2026.10.27",
+      "category": "항공·숙박",
+      "source": "KOSIS 최근수록자료",
+      "source_id": "kosis_recent",
+      "title": "항공통계 ( 8 )",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://kosis.kr/serviceInfo/newContrainDataDetail.do?boardIdx=2005006&boardOrgId=381",
+      "relevance": 4,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 4,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "description",
+            "terms": [
+              "국제선"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "KOSIS 최근수록자료"
+      ]
+    },
+    {
+      "id": "8bc7f2380cc82b8067",
+      "published_at": "2026-10-27T16:02:15+09:00",
+      "date": "2026.10.27",
+      "category": "인바운드",
+      "source": "문화체육관광부 보도자료",
+      "source_id": "mcst_press",
+      "title": "방한 외국인 관광객 수, 역대 최고치 기록 두 달 앞당겨 경신",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22799",
+      "relevance": 10,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 10,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "외국인관광객",
+              "관광객수"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "문화체육관광부 보도자료"
+      ]
+    },
+    {
+      "id": "786bec98e769f9c4f5",
+      "published_at": "2026-10-22T15:40:00+09:00",
+      "date": "2026.10.22",
+      "category": "문화·트렌드",
+      "source": "서울시 내 손안에 서울 문화",
+      "source_id": "seoul_culture",
+      "title": "제주·철원의 로컬 메뉴를 서울에서 맛보세요! '로컬트립 가을소풍'",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://mediahub.seoul.go.kr/archives/2019815",
+      "relevance": 4,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 4,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "description",
+            "terms": [
+              "지역관광"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "서울시 내 손안에 서울 문화"
+      ]
+    },
+    {
+      "id": "694c90d46a8da8676d",
+      "published_at": "2026-10-22T08:11:44+09:00",
+      "date": "2026.10.22",
+      "category": "인바운드",
+      "source": "문화체육관광부 보도자료",
+      "source_id": "mcst_press",
+      "title": "’26년 9월 누적 방한객 1,711만 명… 지난해 연간 누적 방한객 1,894만 명 돌파 초읽기",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22790",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "방한객"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "문화체육관광부 보도자료"
+      ],
+      "legacy_category": "수요"
+    },
+    {
+      "id": "63f583b9aa80b9fbe8",
+      "published_at": "2026-10-21T17:32:48+09:00",
+      "date": "2026.10.21",
+      "category": "문화·트렌드",
+      "source": "서울시 내 손안에 서울 문화",
+      "source_id": "seoul_culture",
+      "title": "봉은사 명상부터 한옥 전시까지 '웰니스 트래블 위크'",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://mediahub.seoul.go.kr/archives/2019810",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "웰니스트래블"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "서울시 내 손안에 서울 문화"
+      ],
+      "legacy_category": "지역"
+    },
+    {
+      "id": "a358f780e0ea4accbd",
+      "published_at": "2026-10-12T14:35:00+09:00",
+      "date": "2026.10.12",
+      "category": "여행산업",
+      "source": "서울시 내 손안에 서울 경제",
+      "source_id": "seoul_economy",
+      "title": "동대문 어디까지 가봤니? 'DDP×동대문 슈퍼패스' 헤리티지 코스 탐방",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://mediahub.seoul.go.kr/archives/2019623",
+      "relevance": 4,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "여행산업",
+        "score": 4,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "description",
+            "terms": [
+              "관광플랫폼"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "서울시 내 손안에 서울 경제"
+      ]
+    }
+  ]
+}

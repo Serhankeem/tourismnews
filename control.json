@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "initialized_from_main": "9fa4ac3f648c5a01ae818df5bc8e97bedd9c53a7",
+  "initialized_at": "2026-11-04T14:25:38+09:00",
+  "initial_counts": {
+    "news": 58,
+    "archive": 71,
+    "discovery": 2412,
+    "reports": 135,
+    "macro_observations": 483,
+    "last_news_success": "2026-11-04T14:09:40+09:00",
+    "last_reports_success": "2026-11-02T13:24:45+09:00",
+    "last_macro_success": "2026-11-04T13:04:46.937340+09:00"
+  },
+  "initial_file_sha256": {
+    "site/data/briefing.json": "c2bebb2399ed8a4367680d9c55f9e8903b32cd60514a37eee2430899cfefb058",
+    "site/data/briefing_archive.json": "5330e38a0ddf85c01aa0981be3c6af5f8447d89cbf175917807458b403a45e71",
+    "site/data/filings.json": "4e7f5091be1d8ba92e8387174dd1d9304e1d8c448baa207855667a59f10acc6f",
+    "site/data/health.json": "1b1a17748d0b5b49565dc7824f0f5e5ac7173d26b38c45048c58446750f558c4",
+    "site/data/macro.json": "4c4963d0f38a53f56dc17aa200af3bdb41cf244d03c20ef2191413ab013bdf2a",
+    "site/data/macro_health.json": "b257c71daa7ed217db8efbceb7d2a795a3aede94fb30978fd8b190647a043799",
+    "site/data/news.json": "9e3707bce8056c36699402820bdd2a28fc67c7d4559f7f46915cc84a56463fc6",
+    "site/data/newsroom.json": "9e3707bce8056c36699402820bdd2a28fc67c7d4559f7f46915cc84a56463fc6",
+    "site/data/publication_visibility.json": "9aa9b9797712741d461675b761920a4bd5b479f898549b94bcf5e921d46e322d",
+    "site/data/reports.json": "238c6adf43fe88579add5d671c8e743550ff6836a9ff4e48474572c6c488b5d4",
+    "site/data/reports_health.json": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+    "site/data/research.json": "790156745733ae1e2c701bd2f92a9ca0f99c875748695bf807fac8aceaadf7b2",
+    "collector_state/archive.json": "fdcaf27d9f177b990b3fc71294ce4facfe28343ea7b1c0e04f686594a0b9bc47",
+    "collector_state/briefing_latest_selection.json": "93d0d48f9521af83d5cc1418cf49c747f38edf88de59aeb9e3ac9eeb8ebb2301",
+    "collector_state/briefing_selection.json": "7c52245cf25f3ad4a9f1854fa8656a34cf768a66e355b4a87fd795ffbfeeeb13",
+    "collector_state/decisions.json": "1a8b84286449336d300efed515b90f69f036886f9dc73265ee3004d0e0302038",
+    "collector_state/discovery.json": "1d6eb90cf6cebfa44d686f93d2497f8f8f2334d685322754bcdf2a5a93dac8ee",
+    "collector_state/legacy_archive.json": "68420da519e7f5922855c9d45a58076c997ac83c095870d3dbd4196fc0cb45e7",
+    "collector_state/macro_archive.json": "3a16eb4e3b05e4b7787b1cd333bbbe8218d41aef6bf111131ffed96cf7150e58",
+    "collector_state/macro_legacy.json": "8e82ffe20669309431e4337f579bc4530c74ae75609c75e52f2ca43fd62769bc",
+    "collector_state/macro_run_summary.json": "b257c71daa7ed217db8efbceb7d2a795a3aede94fb30978fd8b190647a043799",
+    "collector_state/publication_visibility.json": "5d7eac5595b88d62e3624775923329d1cf6c9a41223843895382b57b4bd0aa6a",
+    "collector_state/reports_archive.json": "a03ef4b9823041f032be95d64f6290d2cda21df600c461ca7a6beeb1ba75ead8",
+    "collector_state/reports_candidates.json": "13d7eafb19f304704dafb35be751ab77516f896e8adee986caf8278f7200732c",
+    "collector_state/reports_run_summary.json": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+    "collector_state/reports_source_metrics.json": "2720301a37b6d5dbeb5994c7881436efdce8c7d34b7a5146b78bab2440f799bc",
+    "collector_state/review_queue.json": "5b6183f98ec512be0b24551dd9e3faae12ade24f6a73afec504b169b3e03d9a6",
+    "collector_state/run_summary.json": "08d7a893349ef59ed28c860d17bfc2a9bdfb4be4049d8fd64670adaefa835586",
+    "collector_state/source_metrics.json": "3ae4ba7b3d9824be4cb3da5059e2343ed906a06fe3241f59edf79471aa39c839",
+    "collector_state/v02_snapshot.json": "8228b7038490f459976562ffe39f8950643c6dcce0cd520d72880a1c286b55ce"
+  },
+  "completed_slots": {
+    "news": "2026-11-04T04:17:00+00:00",
+    "reports": "2026-11-01T22:40:00+00:00",
+    "macro": "2026-11-04T03:20:00+00:00"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "articles": [
+    {
+      "id": "786bec98e769f9c4f5",
+      "published_at": "2026-10-22T15:40:00+09:00",
+      "date": "2026.10.22",
+      "category": "지역",
+      "source": "서울시 내 손안에 서울 문화",
+      "source_id": "seoul_culture",
+      "title": "제주·철원의 로컬 메뉴를 서울에서 맛보세요! '로컬트립 가을소풍'",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://mediahub.seoul.go.kr/archives/2019815",
+      "relevance": 5,
+      "related_sources": [
+        "서울시 내 손안에 서울 문화"
+      ]
+    },
+    {
+      "id": "694c90d46a8da8676d",
+      "published_at": "2026-10-22T08:11:44+09:00",
+      "date": "2026.10.22",
+      "category": "수요",
+      "source": "문화체육관광부 보도자료",
+      "source_id": "mcst_press",
+      "title": "’26년 9월 누적 방한객 1,711만 명… 지난해 연간 누적 방한객 1,894만 명 돌파 초읽기",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22790",
+      "relevance": 4,
+      "related_sources": [
+        "문화체육관광부 보도자료"
+      ]
+    },
+    {
+      "id": "63f583b9aa80b9fbe8",
+      "published_at": "2026-10-21T17:32:48+09:00",
+      "date": "2026.10.21",
+      "category": "지역",
+      "source": "서울시 내 손안에 서울 문화",
+      "source_id": "seoul_culture",
+      "title": "봉은사 명상부터 한옥 전시까지 '웰니스 트래블 위크'",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://mediahub.seoul.go.kr/archives/2019810",
+      "relevance": 9,
+      "related_sources": [
+        "서울시 내 손안에 서울 문화"
+      ]
+    }
+  ]
+}

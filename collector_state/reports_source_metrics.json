@@ -1,0 +1,72 @@
+{
+  "version": "0.5",
+  "sources": {
+    "yanolja": {
+      "attempts": 3,
+      "successes": 3,
+      "errors": 0,
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
+    },
+    "kcti": {
+      "attempts": 5,
+      "successes": 4,
+      "errors": 1,
+      "last_attempt_at": "2026-11-02T13:24:45+09:00",
+      "last_successful_at": "2026-11-02T13:18:04+09:00",
+      "last_catalog_success_at": "2026-11-02T13:18:04+09:00"
+    },
+    "kto": {
+      "attempts": 0,
+      "successes": 0,
+      "errors": 0
+    },
+    "mckinsey": {
+      "attempts": 0,
+      "successes": 0,
+      "errors": 0
+    },
+    "phocuswright": {
+      "attempts": 3,
+      "successes": 2,
+      "errors": 1,
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
+    },
+    "untourism": {
+      "attempts": 0,
+      "successes": 0,
+      "errors": 0
+    },
+    "iata": {
+      "attempts": 0,
+      "successes": 0,
+      "errors": 0
+    },
+    "etc": {
+      "attempts": 3,
+      "successes": 3,
+      "errors": 0,
+      "last_attempt_at": "2026-11-02T08:08:15+09:00"
+    },
+    "wttc": {
+      "attempts": 0,
+      "successes": 0,
+      "errors": 0
+    },
+    "oecd": {
+      "attempts": 2,
+      "successes": 2,
+      "errors": 0,
+      "last_attempt_at": "2026-11-02T13:24:45+09:00",
+      "last_catalog_success_at": "2026-11-02T13:24:45+09:00",
+      "last_successful_at": "2026-11-02T13:24:45+09:00"
+    },
+    "koti": {
+      "attempts": 2,
+      "successes": 2,
+      "errors": 0,
+      "last_attempt_at": "2026-11-02T13:24:45+09:00",
+      "last_catalog_success_at": "2026-11-02T13:24:45+09:00",
+      "last_successful_at": "2026-11-02T13:24:45+09:00"
+    }
+  }
+}

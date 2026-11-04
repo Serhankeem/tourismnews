@@ -1,0 +1,29 @@
+{
+  "mode": "legacy_static_reference_only",
+  "note": "Former UI snapshots, not imported as verified Macro observations",
+  "monthly_inbound": [
+    {
+      "period": "2026-05",
+      "value": 1945809
+    },
+    {
+      "period": "2026-08",
+      "value": 2245293
+    },
+    {
+      "period": "2026-09",
+      "value": 2060000
+    }
+  ],
+  "annual_forecast": {
+    "period": "2026",
+    "value": 22900000,
+    "publisher": "KCTI",
+    "status": "forecast",
+    "reference_date": "2026-10-22"
+  },
+  "former_cumulative_rounded": {
+    "period": "2026-09",
+    "value": 17110000
+  }
+}
