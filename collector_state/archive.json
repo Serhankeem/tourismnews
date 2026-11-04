@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-04T12:00:25+09:00",
-  "last_successful_fetch": "2026-11-04T12:00:25+09:00",
+  "generated_at": "2026-11-04T13:09:31+09:00",
+  "last_successful_fetch": "2026-11-04T13:09:31+09:00",
   "count": 71,
   "mode": "live_rss",
   "articles": [
@@ -621,6 +621,85 @@
       }
     },
     {
+      "id": "2de0ecd1b5c5a55004",
+      "published_at": "2026-11-02T23:50:43+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "서울시, ‘의료친화 숙박시설’ 19개소 선정",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72548",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 7,
+        "rules": [
+          "medical_tourism_lodging_designation"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "의료친화숙박시설",
+              "선정",
+              "개소"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-03T00:05:03+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "서울시 의료친화 숙박시설 지정",
+            "rule": "explicit_korean_lodging_policy"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
+    {
       "id": "201a99871a43bc150d",
       "published_at": "2026-11-02T23:50:41+09:00",
       "date": "2026.11.02",
@@ -1086,6 +1165,85 @@
       }
     },
     {
+      "id": "f56a9db4fbfc717107",
+      "published_at": "2026-11-02T19:44:51+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "source_id": "ttlnews",
+      "title": "창립 85주년 맞은 필리핀항공, 인천~마닐라 주 17회 증편… 차세대 A350-1000 투입",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3158051",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 7,
+        "rules": [
+          "air_route_capacity_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "항공",
+              "증편",
+              "인천"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "퍼블릭뉴스통신(TTL)"
+      ],
+      "first_discovered_at": "2026-11-03T10:17:36+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.ttlnews.com/rssIndex.html",
+        "additional_terms": [
+          "https://www.ttlnews.com/com/service.html",
+          "https://www.ttlnews.com/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "인천~마닐라",
+            "rule": "explicit_korean_air_route_capacity"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
+    {
       "id": "aedd9354f733196945",
       "published_at": "2026-11-02T17:43:59+09:00",
       "date": "2026.11.02",
@@ -1224,6 +1382,87 @@
       }
     },
     {
+      "id": "69a53632b4588db2f4",
+      "published_at": "2026-11-02T00:10:00+09:00",
+      "date": "2026.11.02",
+      "category": "여행산업",
+      "source": "여행신문",
+      "source_id": "traveltimes",
+      "title": "“MICE 예산 줄어드는데”…국회·업계, 지속적 투자 촉구",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500645",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "여행산업",
+        "score": 7,
+        "rules": [
+          "mice_industry_investment"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "mice",
+              "예산",
+              "투자",
+              "줄어",
+              "촉구"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "여행신문"
+      ],
+      "first_discovered_at": "2026-11-02T01:48:15+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveltimes.co.kr/com/service.html",
+          "https://www.traveltimes.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "국회·업계·MICE 예산/투자 대응",
+            "rule": "korean_legislative_tourism_budget_action"
+          }
+        ],
+        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
+      }
+    },
+    {
       "id": "cfe7d8d571100240f8",
       "published_at": "2026-11-02T00:05:00+09:00",
       "date": "2026.11.02",
@@ -1290,6 +1529,86 @@
         "korea_connection": "not_established",
         "evidence": [],
         "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
+      }
+    },
+    {
+      "id": "9848b20cd87d345ce9",
+      "published_at": "2026-11-02T00:00:00+09:00",
+      "date": "2026.11.02",
+      "category": "항공·숙박",
+      "source": "여행신문",
+      "source_id": "traveltimes",
+      "title": "제주-싱가포르, 운항 확대에도 탑승률 85%대 진입",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500641",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 7,
+        "rules": [
+          "air_route_capacity_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "운항",
+              "운항확대",
+              "제주",
+              "탑승률"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "여행신문"
+      ],
+      "first_discovered_at": "2026-11-02T01:48:15+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveltimes.co.kr/com/service.html",
+          "https://www.traveltimes.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "제주-싱가포르",
+            "rule": "explicit_korean_air_route_capacity"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
       }
     },
     {
@@ -1414,6 +1733,159 @@
         "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
       },
       "first_published_by_engine_at": "2026-11-01T22:00:22+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "산업 참고 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
+      }
+    },
+    {
+      "id": "afc9a57fd5ac9e1cc1",
+      "published_at": "2026-11-01T21:09:53+09:00",
+      "date": "2026.11.01",
+      "category": "관광정책",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "중앙회, 가업상속공제 대상 관광업종 유지 촉구",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72534",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "관광정책",
+        "score": 7,
+        "rules": [
+          "tourism_sector_tax_policy"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광업종",
+              "가업상속공제",
+              "유지",
+              "촉구"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-01T22:00:22+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "가업상속공제·관광업종 대상·업계 대응",
+            "rule": "korean_statutory_tourism_sector_policy"
+          }
+        ],
+        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
+      }
+    },
+    {
+      "id": "f618dc8699f4a7557e",
+      "published_at": "2026-11-01T21:09:32+09:00",
+      "date": "2026.11.01",
+      "category": "여행산업",
+      "source": "트래블데일리",
+      "source_id": "traveldaily",
+      "title": "아고다, AI 어시스턴트 도입",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72533",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "여행산업",
+        "score": 7,
+        "rules": [
+          "ota_operating_technology_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "아고다",
+              "ai어시스턴트",
+              "도입"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "트래블데일리"
+      ],
+      "first_discovered_at": "2026-11-01T22:00:22+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveldaily.co.kr/com/service.html",
+          "https://www.traveldaily.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
       "editorial": {
         "version": "0.3-editorial-1",
         "tier": "reference",
@@ -1775,6 +2247,86 @@
         "korea_connection": "not_established",
         "evidence": [],
         "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
+      }
+    },
+    {
+      "id": "44c330fcfd17f5e351",
+      "published_at": "2026-10-29T18:30:00+09:00",
+      "date": "2026.10.29",
+      "category": "관광정책",
+      "source": "여행신문",
+      "source_id": "traveltimes",
+      "title": "가업상속공제 축소 우려에 관광업계 12개 단체 공동 대응",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500639",
+      "relevance": 7,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "관광정책",
+        "score": 7,
+        "rules": [
+          "tourism_sector_tax_policy"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광업계",
+              "가업상속공제",
+              "축소",
+              "대응"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "여행신문"
+      ],
+      "first_discovered_at": "2026-10-29T19:57:59+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
+        "additional_terms": [
+          "https://www.traveltimes.co.kr/com/service.html",
+          "https://www.traveltimes.co.kr/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "가업상속공제·관광업종 대상·업계 대응",
+            "rule": "korean_statutory_tourism_sector_policy"
+          }
+        ],
+        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
       }
     },
     {
@@ -2467,8 +3019,7 @@
       },
       "publication_time_verified_for_news": false,
       "publication_date_basis": "statistical_provider_timestamp_not_verified_as_news",
-      "timestamp_role": "provider_statistical_timestamp_not_news_publication",
-      "korea_priority": false
+      "timestamp_role": "provider_statistical_timestamp_not_news_publication"
     },
     {
       "record_type": "statistical_release",
@@ -2514,8 +3065,7 @@
       },
       "publication_time_verified_for_news": false,
       "publication_date_basis": "statistical_provider_timestamp_not_verified_as_news",
-      "timestamp_role": "provider_statistical_timestamp_not_news_publication",
-      "korea_priority": false
+      "timestamp_role": "provider_statistical_timestamp_not_news_publication"
     },
     {
       "id": "2651367a7c066f1259",
@@ -2776,8 +3326,7 @@
       },
       "publication_time_verified_for_news": false,
       "publication_date_basis": "statistical_provider_timestamp_not_verified_as_news",
-      "timestamp_role": "provider_statistical_timestamp_not_news_publication",
-      "korea_priority": false
+      "timestamp_role": "provider_statistical_timestamp_not_news_publication"
     },
     {
       "id": "ac2a82ef5fc7318487",
@@ -4466,7 +5015,7 @@
       "publication_date_basis": "feed_publication_date",
       "date_precision": "timestamp",
       "record_type": "news",
-      "korea_priority": true,
+      "korea_priority": false,
       "is_backfill": false,
       "publication_policy": {
         "status": "approved",
@@ -4489,558 +5038,6 @@
           }
         ],
         "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
-      }
-    },
-    {
-      "id": "2de0ecd1b5c5a55004",
-      "published_at": "2026-11-02T23:50:43+09:00",
-      "date": "2026.11.02",
-      "category": "항공·숙박",
-      "source": "트래블데일리",
-      "source_id": "traveldaily",
-      "title": "서울시, ‘의료친화 숙박시설’ 19개소 선정",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72548",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 7,
-        "rules": [
-          "medical_tourism_lodging_designation"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "의료친화숙박시설",
-              "선정",
-              "개소"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "트래블데일리"
-      ],
-      "first_discovered_at": "2026-11-03T00:05:03+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": true,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
-        "additional_terms": [
-          "https://www.traveldaily.co.kr/com/service.html",
-          "https://www.traveldaily.co.kr/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "korea_direct",
-        "rank": 0,
-        "label": "한국 관광산업 직접 관련",
-        "korea_connection": "explicit",
-        "evidence": [
-          {
-            "field": "title",
-            "value": "서울시 의료친화 숙박시설 지정",
-            "rule": "explicit_korean_lodging_policy"
-          }
-        ],
-        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
-      }
-    },
-    {
-      "id": "f56a9db4fbfc717107",
-      "published_at": "2026-11-02T19:44:51+09:00",
-      "date": "2026.11.02",
-      "category": "항공·숙박",
-      "source": "퍼블릭뉴스통신(TTL)",
-      "source_id": "ttlnews",
-      "title": "창립 85주년 맞은 필리핀항공, 인천~마닐라 주 17회 증편… 차세대 A350-1000 투입",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3158051",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 7,
-        "rules": [
-          "air_route_capacity_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "항공",
-              "증편",
-              "인천"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "퍼블릭뉴스통신(TTL)"
-      ],
-      "first_discovered_at": "2026-11-03T10:17:36+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": true,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.ttlnews.com/rssIndex.html",
-        "additional_terms": [
-          "https://www.ttlnews.com/com/service.html",
-          "https://www.ttlnews.com/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "korea_direct",
-        "rank": 0,
-        "label": "한국 관광산업 직접 관련",
-        "korea_connection": "explicit",
-        "evidence": [
-          {
-            "field": "title",
-            "value": "인천~마닐라",
-            "rule": "explicit_korean_air_route_capacity"
-          }
-        ],
-        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
-      }
-    },
-    {
-      "id": "69a53632b4588db2f4",
-      "published_at": "2026-11-02T00:10:00+09:00",
-      "date": "2026.11.02",
-      "category": "여행산업",
-      "source": "여행신문",
-      "source_id": "traveltimes",
-      "title": "“MICE 예산 줄어드는데”…국회·업계, 지속적 투자 촉구",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500645",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "여행산업",
-        "score": 7,
-        "rules": [
-          "mice_industry_investment"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "mice",
-              "예산",
-              "투자",
-              "줄어",
-              "촉구"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "여행신문"
-      ],
-      "first_discovered_at": "2026-11-02T01:48:15+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": true,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
-        "additional_terms": [
-          "https://www.traveltimes.co.kr/com/service.html",
-          "https://www.traveltimes.co.kr/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "korea_direct",
-        "rank": 0,
-        "label": "한국 관광산업 직접 관련",
-        "korea_connection": "explicit",
-        "evidence": [
-          {
-            "field": "title",
-            "value": "국회·업계·MICE 예산/투자 대응",
-            "rule": "korean_legislative_tourism_budget_action"
-          }
-        ],
-        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
-      }
-    },
-    {
-      "id": "9848b20cd87d345ce9",
-      "published_at": "2026-11-02T00:00:00+09:00",
-      "date": "2026.11.02",
-      "category": "항공·숙박",
-      "source": "여행신문",
-      "source_id": "traveltimes",
-      "title": "제주-싱가포르, 운항 확대에도 탑승률 85%대 진입",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500641",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 7,
-        "rules": [
-          "air_route_capacity_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "운항",
-              "운항확대",
-              "제주",
-              "탑승률"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "여행신문"
-      ],
-      "first_discovered_at": "2026-11-02T01:48:15+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": true,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
-        "additional_terms": [
-          "https://www.traveltimes.co.kr/com/service.html",
-          "https://www.traveltimes.co.kr/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "korea_direct",
-        "rank": 0,
-        "label": "한국 관광산업 직접 관련",
-        "korea_connection": "explicit",
-        "evidence": [
-          {
-            "field": "title",
-            "value": "제주-싱가포르",
-            "rule": "explicit_korean_air_route_capacity"
-          }
-        ],
-        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
-      }
-    },
-    {
-      "id": "afc9a57fd5ac9e1cc1",
-      "published_at": "2026-11-01T21:09:53+09:00",
-      "date": "2026.11.01",
-      "category": "관광정책",
-      "source": "트래블데일리",
-      "source_id": "traveldaily",
-      "title": "중앙회, 가업상속공제 대상 관광업종 유지 촉구",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72534",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "관광정책",
-        "score": 7,
-        "rules": [
-          "tourism_sector_tax_policy"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "관광업종",
-              "가업상속공제",
-              "유지",
-              "촉구"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "트래블데일리"
-      ],
-      "first_discovered_at": "2026-11-01T22:00:22+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": true,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
-        "additional_terms": [
-          "https://www.traveldaily.co.kr/com/service.html",
-          "https://www.traveldaily.co.kr/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "korea_direct",
-        "rank": 0,
-        "label": "한국 관광산업 직접 관련",
-        "korea_connection": "explicit",
-        "evidence": [
-          {
-            "field": "title",
-            "value": "가업상속공제·관광업종 대상·업계 대응",
-            "rule": "korean_statutory_tourism_sector_policy"
-          }
-        ],
-        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
-      }
-    },
-    {
-      "id": "f618dc8699f4a7557e",
-      "published_at": "2026-11-01T21:09:32+09:00",
-      "date": "2026.11.01",
-      "category": "여행산업",
-      "source": "트래블데일리",
-      "source_id": "traveldaily",
-      "title": "아고다, AI 어시스턴트 도입",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72533",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "여행산업",
-        "score": 7,
-        "rules": [
-          "ota_operating_technology_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "아고다",
-              "ai어시스턴트",
-              "도입"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "트래블데일리"
-      ],
-      "first_discovered_at": "2026-11-01T22:00:22+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": false,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.traveldaily.co.kr/rssIndex.html",
-        "additional_terms": [
-          "https://www.traveldaily.co.kr/com/service.html",
-          "https://www.traveldaily.co.kr/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "reference",
-        "rank": 2,
-        "label": "산업 참고 자료",
-        "korea_connection": "not_established",
-        "evidence": [],
-        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
-      }
-    },
-    {
-      "id": "44c330fcfd17f5e351",
-      "published_at": "2026-10-29T18:30:00+09:00",
-      "date": "2026.10.29",
-      "category": "관광정책",
-      "source": "여행신문",
-      "source_id": "traveltimes",
-      "title": "가업상속공제 축소 우려에 관광업계 12개 단체 공동 대응",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500639",
-      "relevance": 7,
-      "relevance_label": "Direct",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "관광정책",
-        "score": 7,
-        "rules": [
-          "tourism_sector_tax_policy"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "관광업계",
-              "가업상속공제",
-              "축소",
-              "대응"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정·항공 공급 또는 OTA 운영 기술의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "related_sources": [
-        "여행신문"
-      ],
-      "first_discovered_at": "2026-10-29T19:57:59+09:00",
-      "publication_date_basis": "feed_publication_date",
-      "date_precision": "timestamp",
-      "record_type": "news",
-      "korea_priority": true,
-      "is_backfill": false,
-      "publication_policy": {
-        "status": "approved",
-        "scope": "metadata_only",
-        "noncommercial_only": true,
-        "terms_url": "https://www.traveltimes.co.kr/rssIndex.html",
-        "additional_terms": [
-          "https://www.traveltimes.co.kr/com/service.html",
-          "https://www.traveltimes.co.kr/com/copyright.html"
-        ],
-        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
-        "checked_at": "2026-10-28",
-        "body_reuse": "not_authorized",
-        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
-      },
-      "first_published_by_engine_at": "2026-11-03T15:13:02+09:00",
-      "editorial": {
-        "version": "0.3-editorial-1",
-        "tier": "korea_direct",
-        "rank": 0,
-        "label": "한국 관광산업 직접 관련",
-        "korea_connection": "explicit",
-        "evidence": [
-          {
-            "field": "title",
-            "value": "가업상속공제·관광업종 대상·업계 대응",
-            "rule": "korean_statutory_tourism_sector_policy"
-          }
-        ],
-        "reason": "제목의 한국 법·제도 적용 대상과 관광업계 대응 또는 국회·업계의 MICE 예산·투자 대응 근거를 확인했습니다."
       }
     }
   ],
