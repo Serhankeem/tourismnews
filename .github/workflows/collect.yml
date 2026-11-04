@@ -38,62 +38,14 @@ jobs:
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
   collect-and-publish:
-    concurrency:
-      group: tourism-pulse-publish
-      cancel-in-progress: false
     needs: test
     if: github.ref == 'refs/heads/main'
     permissions:
       contents: write
       pages: write
       id-token: write
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main # Latest main after the shared Newsroom/Research lock.
-          fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Collect real RSS (never demo)
-        id: collect
-        continue-on-error: true
-        env:
-          BACKFILL_DAYS: ${{ inputs.backfill_days || '90' }}
-        run: python src/engine.py --backfill-days "$BACKFILL_DAYS"
-      - name: Save data and failure health records
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A -- site/data
-          if [ -d collector_state ]; then
-            git add collector_state/*.json
-          fi
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update RSS news and collection health'
-            git pull --rebase origin main
-            git push
-          fi
-      - name: Record collection report
-        if: always()
-        run: python src/report.py >> "$GITHUB_STEP_SUMMARY"
-      - name: Keep diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: rss-collection-data
-          path: |
-            site/data/*.json
-            collector_state/*.json
-          if-no-files-found: warn
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - uses: actions/deploy-pages@v4
-      - name: Fail run when all sources failed
-        if: steps.collect.outcome == 'failure'
-        run: exit 1
+    uses: ./.github/workflows/pipeline.yml
+    with:
+      engine: news
+      backfill_days: ${{ fromJSON(inputs.backfill_days || '90') }}
+    secrets: inherit
