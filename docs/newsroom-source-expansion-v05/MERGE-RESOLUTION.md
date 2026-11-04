@@ -45,4 +45,4 @@ main에서 정상적으로 추가된 `site/data/briefing_archive.json`, `collect
 
 재현 가능한 ID/관측 해시, 양쪽 수집 카운터, 최신 실제 source 행, 원 발행일/URL, 양쪽 권리 전환 및 보호 해시는 [MERGE-PRESERVATION.json](MERGE-PRESERVATION.json)에 있다. 특정 병합 스냅샷 검사는 `python docs/newsroom-source-expansion-v05/verify-merge.py`로 실행한다. 향후 정상 수집이 진행되면 시각·카운터가 바뀌는 것이 정상이므로 이 고정 스냅샷 검사는 정기 자동화 테스트에 추가하지 않았다.
 
-Python 전체 **269개**, 병합 스냅샷 감사 **5개**, 브라우저 전체 **15개 suite**가 통과했다. GitHub CI 및 최종 mergeable 상태는 [MERGE-TESTS.json](MERGE-TESTS.json)과 기존 PR #18 Checks에 반영한다. 운영 수집/Pages 배포는 PR에서 실행하지 않는다.
+Python 전체 **269개**, 병합 스냅샷 감사 **5개**, 브라우저 전체 **15개 suite**가 통과했다. 병합 커밋 `dfb270c`의 GitHub CI **3개 test job 성공**, REST API **mergeable=true / clean**을 확인했다. [MERGE-TESTS.json](MERGE-TESTS.json)에 정확한 실행 링크와 base/head를 기록했다. PR의 collect-and-publish는 정상 SKIPPED다. 운영 수집/Pages 배포는 PR에서 실행하지 않는다.

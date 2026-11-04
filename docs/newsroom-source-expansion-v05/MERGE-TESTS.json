@@ -81,5 +81,77 @@
       "result": "PASS Weather v2: shared official values/source/month, 12-month chart/missing/comparisons, corrections/delay/failures/financial exclusion, scenario isolation/colors/keyboard/reset, four widths"
     }
   ],
-  "github_ci": "pending_merge_commit"
+  "github_ci": {
+    "status": "passed",
+    "merge_commit": "dfb270c9c48f383db81eb5edc09948c5b2522da9",
+    "checked_at": "2026-11-04T12:59:50+09:00",
+    "checks": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T03:58:59Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41770364411/job/126378395891",
+        "name": "test",
+        "startedAt": "2026-11-04T03:58:48Z",
+        "status": "COMPLETED",
+        "workflowName": "Macro Monitor official statistics"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T03:58:59Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41770364592/job/126378396711",
+        "name": "test",
+        "startedAt": "2026-11-04T03:58:49Z",
+        "status": "COMPLETED",
+        "workflowName": "Research Library weekly collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T03:58:56Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41770364349/job/126378395602",
+        "name": "test",
+        "startedAt": "2026-11-04T03:58:47Z",
+        "status": "COMPLETED",
+        "workflowName": "Tourism Pulse RSS collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T03:58:59Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41770364411/job/126378464084",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T03:59:00Z",
+        "status": "COMPLETED",
+        "workflowName": "Macro Monitor official statistics"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T03:58:59Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41770364592/job/126378461864",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T03:58:59Z",
+        "status": "COMPLETED",
+        "workflowName": "Research Library weekly collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T03:58:56Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41770364349/job/126378448065",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T03:58:56Z",
+        "status": "COMPLETED",
+        "workflowName": "Tourism Pulse RSS collector"
+      }
+    ]
+  },
+  "mergeable_verified": {
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "head": "dfb270c9c48f383db81eb5edc09948c5b2522da9",
+    "base": "0357b3089477d75a30f4c7802719f52ccca543a7"
+  }
 }
