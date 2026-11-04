@@ -11,7 +11,7 @@ def render(result, deployment):
            '| 요청 자동화 | '+result.get('requested','미확인')+' |',
            '| 최초 데이터 이전 | '+('수행' if result.get('bootstrap') else '기존 상태 복원 또는 미실행')+' |',
            '| 데이터 영속 저장 | '+('확인: '+result['data_commit'] if result.get('data_commit') else '실패 또는 미실행')+' |',
-           '| Pages 배포 | '+({'success':'성공','failure':'실패 — 이전 정상 사이트 유지','skipped':'미실행','cancelled':'취소'}.get(deployment,'미확인'))+' |']
+           '| Pages 배포 | '+({'success':'성공','failure':'실패/미확인 — Pages environment 확인 필요','skipped':'미실행','cancelled':'취소'}.get(deployment,'미확인'))+' |']
     for engine,row in result.get('engines',{}).items():lines.append('| '+engine+' 수집 | '+row['status']+(' / '+row['error_kind']+': '+row['error'] if row.get('error') else '')+' |')
     for engine,count in result.get('new_records',{}).items():lines.append('| '+engine+' 신규 저장 | '+str(count)+' |')
     for key,value in result.get('counts',{}).items():lines.append('| '+key+' | '+str(value)+' |')

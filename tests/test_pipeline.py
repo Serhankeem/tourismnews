@@ -127,6 +127,17 @@ class PipelineTests(PipelineHarness):
   with self.assertRaises(StoreError):Store(self.root/'bad',str(self.remote),cfg)
   with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/pull/19/merge','GITHUB_EVENT_NAME':'pull_request'}):
    with self.assertRaises(StoreError):require_main()
+ def test_policy_is_rechecked_after_collection_and_day_change_blocks_deploy(self):
+  from src.pipeline.runner import main
+  before=c.timestamp('2026-11-04T23:59:00+09:00');after=c.timestamp('2026-11-05T00:01:00+09:00')
+  work=self.root/'midnight'
+  with patch('src.pipeline.runner.now_kst',side_effect=[before,after]):
+   result=transact(self.code,str(self.remote),work,self.root/'pages',collector=lambda *a:True)
+  self.assertEqual(read(work/'deployment.json')['policy_evaluated_on'],'2026-11-05')
+  c.write_atomic(work/'result.json',result)
+  with patch('src.pipeline.runner.ROOT',self.code),patch('src.pipeline.runner.now_kst',return_value=before),patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main','GITHUB_EVENT_NAME':'push'}),patch('sys.argv',['runner','guard','--work',str(work)]):
+   self.assertEqual(main(),1)
+  failed=read(work/'result.json');self.assertEqual(failed['error'],'policy_day_changed_retry_before_deploy');self.assertEqual(failed['data_commit'],result['data_commit']);self.assertFalse(failed['ready'])
  def test_real_engine_fixture_repeat_and_other_engine_failures_preserve_data(self):
   from src.engine import execute
   from src.reports.engine import collect as reports_collect

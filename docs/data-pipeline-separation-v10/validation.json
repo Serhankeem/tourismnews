@@ -1,7 +1,7 @@
 {
   "baseline_commit": "59864d669dc714596b37748c9f95a7966a78148b",
   "python": {
-    "passed": 286,
+    "passed": 287,
     "failed": 0
   },
   "browser": {
@@ -101,9 +101,75 @@
   },
   "operational_data_branch": "not_created_or_modified",
   "operational_pages": "not_deployed",
-  "github_ci": "pending_pr",
+  "github_ci": "pending_policy_day_guard_commit",
   "actionlint": {
     "version": "1.7.12",
     "result": "no other findings; documented queue:max warning excluded because tool schema lags GitHub official docs"
-  }
+  },
+  "initial_github_ci": {
+    "headRefOid": "247e92c851e52417efa5839de060ccf2cef7170d",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T04:54:22Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41775878365/job/126395991537",
+        "name": "test",
+        "startedAt": "2026-11-04T04:53:19Z",
+        "status": "COMPLETED",
+        "workflowName": "Macro Monitor official statistics"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T04:54:36Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41775878373/job/126395991666",
+        "name": "test",
+        "startedAt": "2026-11-04T04:53:19Z",
+        "status": "COMPLETED",
+        "workflowName": "Research Library weekly collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T04:54:16Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41775878367/job/126395991709",
+        "name": "test",
+        "startedAt": "2026-11-04T04:53:19Z",
+        "status": "COMPLETED",
+        "workflowName": "Tourism Pulse RSS collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T04:54:22Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41775878365/job/126396330541",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T04:54:23Z",
+        "status": "COMPLETED",
+        "workflowName": "Macro Monitor official statistics"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T04:54:40Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41775878373/job/126396425022",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T04:54:41Z",
+        "status": "COMPLETED",
+        "workflowName": "Research Library weekly collector"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-04T04:54:17Z",
+        "conclusion": "SKIPPED",
+        "detailsUrl": "https://github.com/Serhankeem/tourismnews/actions/runs/41775878367/job/126396301753",
+        "name": "collect-and-publish",
+        "startedAt": "2026-11-04T04:54:17Z",
+        "status": "COMPLETED",
+        "workflowName": "Tourism Pulse RSS collector"
+      }
+    ]
+  },
+  "policy_day_boundary_test": "post-collection policy evaluated again; day rollover before deployment refused"
 }

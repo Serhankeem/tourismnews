@@ -92,7 +92,8 @@ def transact(code, remote, work, output, requested='none', force=False, days=90,
             if success:control['completed_slots'][engine]=slot
         write_atomic(stage/CONTROL,control)
         result['phase']='validate'
-        project(stage,code,clock)
+        projection_clock=at or now_kst()
+        project(stage,code,projection_clock)
         counts=validate(stage,cfg,before=before);verify_public(stage,code)
         old_ids={a['id'] for a in read(before/'collector_state/archive.json')['articles']}
         old_reports={a['id'] for a in read(before/'collector_state/reports_archive.json')['reports']}
@@ -114,7 +115,7 @@ def transact(code, remote, work, output, requested='none', force=False, days=90,
             raise StoreError('newer_code_or_data_no_stale_deployment')
         result['phase']='assemble'
         public_hashes=compose(code,store.path,output,cfg)
-        write_atomic(work/'deployment.json',{'code_commit':code_commit,'data_commit':data_commit,'public_files':public_hashes})
+        write_atomic(work/'deployment.json',{'code_commit':code_commit,'data_commit':data_commit,'public_files':public_hashes,'policy_evaluated_on':projection_clock.date().isoformat()})
         result.update(phase='ready_for_pages',ready=True,data_commit=data_commit,data_committed=changed,counts=counts)
         result['collection_ok']=all(r['status'] in ('ok','partial','not_due') for r in result['engines'].values())
         return result
@@ -143,6 +144,8 @@ def main():
             if (args.work/'result.json').exists():result=read(args.work/'result.json')
             result['phase']='deployment_guard'
             proof=read(args.work/'deployment.json')
+            if proof['policy_evaluated_on']!=now_kst().date().isoformat():
+                raise StoreError('policy_day_changed_retry_before_deploy')
             tip=git(ROOT,'ls-remote','origin','refs/heads/main','refs/heads/data/live').stdout
             found={line.split()[1]:line.split()[0] for line in tip.splitlines()}
             if found.get('refs/heads/main')!=proof['code_commit'] or found.get('refs/heads/data/live')!=proof['data_commit']:
