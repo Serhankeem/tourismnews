@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-05T00:03:22+09:00",
-  "last_successful_fetch": "2026-11-05T00:03:22+09:00",
-  "count": 62,
+  "generated_at": "2026-11-05T02:07:29+09:00",
+  "last_successful_fetch": "2026-11-05T02:07:29+09:00",
+  "count": 63,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,16 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "문화·체육·관광 예산 20.4%↑…12개 분야 중 증가율 3위",
+      "source": "여행신문",
+      "published_at": "2026-11-05T00:15:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500673",
+      "category": "관광정책",
+      "keywords": [
+        "관광예산"
+      ]
+    },
     {
       "title": "New visitor levy powers to put money back into local communities",
       "source": "GOV.UK · tourism",
