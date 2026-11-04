@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-04T16:30:54+09:00",
+  "checked_at": "2026-11-04T18:09:14+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -238,6 +238,26 @@
       "decision": "exclude"
     },
     {
+      "id": "367d6ce80c931f5502",
+      "title": "자율주행버스 타고 즐기는 서울의 밤! 재즈공연, 청계천, 광장시장까지",
+      "url": "https://mediahub.seoul.go.kr/archives/2019904",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "7190e7fe5e3021ed10",
       "title": "밤에 가도 좋네! 가을빛 짙어진 안국역 인근 산책 명소 3선",
       "url": "https://mediahub.seoul.go.kr/archives/2019905",
@@ -366,9 +386,9 @@
       "decision": "exclude"
     },
     {
-      "id": "47468255ede18c948e",
-      "title": "'펀스테이션' 9호점 신목동역에 오픈! 러너지원공간·스크린 파크골프장",
-      "url": "https://mediahub.seoul.go.kr/archives/2019897",
+      "id": "cf8cea50961bb13507",
+      "title": "꽃꽂이부터 허브솔트 만들기까지! '서울 정원문화힐링센터' 가드닝 체험",
+      "url": "https://mediahub.seoul.go.kr/archives/2019902",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -384,9 +404,9 @@
       "decision": "exclude"
     },
     {
-      "id": "cf8cea50961bb13507",
-      "title": "꽃꽂이부터 허브솔트 만들기까지! '서울 정원문화힐링센터' 가드닝 체험",
-      "url": "https://mediahub.seoul.go.kr/archives/2019902",
+      "id": "47468255ede18c948e",
+      "title": "'펀스테이션' 9호점 신목동역에 오픈! 러너지원공간·스크린 파크골프장",
+      "url": "https://mediahub.seoul.go.kr/archives/2019897",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -513,24 +533,6 @@
       "id": "0a89744adba96fcd81",
       "title": "숏폼의 시대, 느림의 미학을 찾아서…기다림마저 즐거운 '찻집 산책'",
       "url": "https://mediahub.seoul.go.kr/archives/2019882",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "b2de82a258333fa9f5",
-      "title": "서울의 25가지 매력이 한자리에! '서울 문화원 엑스포' 스케치",
-      "url": "https://mediahub.seoul.go.kr/archives/2019883",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -4050,6 +4052,78 @@
       "decision": "exclude"
     },
     {
+      "id": "40f523a72d505588c6",
+      "title": "Kenan Simmons of Small Luxury Hotels of the World on Independent Spirit, the Hilton Partnership, and the Resurgence of Boutique Luxury",
+      "url": "https://www.hospitalitynet.org/podcast/4135205/kenan-simmons-of-small-luxury-hotels-of-the-world-on-independent-spirit-the-hilton-partnership-and-the-resurgence-of-boutique-luxury",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "034133dbd47b0e13df",
+      "title": "Hotel Equities Named Top-Performing Hotel Management Company Participating in the Dignity of Work Pledge Created by Procure Impact in Partnership with the American Hotel & Lodging Association (AHLA)",
+      "url": "https://www.hospitalitynet.org/news/4135253/hotel-equities-named-top-performing-hotel-management-company-participating-in-the-dignity-of-work-pledge-created-by-procure-impact-in-partnership-with-the-american-hotel-lodging-association-ahla",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "95815bcf1daa806aa2",
+      "title": "IHG brings global Holiday Inn brand strength to regional Australia with two new hotel signings",
+      "url": "https://www.hospitalitynet.org/news/4135252/ihg-brings-global-holiday-inn-brand-strength-to-regional-australia-with-two-new-hotel-signings",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "535854e50636aad139",
+      "title": "European Business Travel Spending Forecast to Reach €404 Billion in 2026 As Europe-Originating Trip Volume Reaches 600 Million",
+      "url": "https://www.hospitalitynet.org/news/4135251/european-business-travel-spending-forecast-to-reach-404-billion-in-2026-as-europe-originating-trip-volume-reaches-600-million",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "473144570b7c60fd0c",
       "title": "Fewer Calls, Better Service: Canary AI at The Pines Resort",
       "url": "https://www.hospitalitynet.org/casestudy/4135192/fewer-calls-better-service-canary-ai-at-the-pines-resort",
@@ -4345,78 +4419,6 @@
       "id": "9c801b4d5c5eb19a04",
       "title": "Bespoke Hotels partners with Aven Hospitality to strengthen reservations and distribution across its UK portfolio",
       "url": "https://www.hospitalitynet.org/news/4135236/bespoke-hotels-partners-with-aven-hospitality-to-strengthen-reservations-and-distribution-across-its-uk-portfolio",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ea20b681c2688efe4e",
-      "title": "What Generative Engine Optimization Means for the Restaurant That Isn’t Recommended",
-      "url": "https://www.hospitalitynet.org/opinion/4135235/what-generative-engine-optimization-means-for-the-restaurant-that-isnt-recommended",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "79ff45b88134c1a77f",
-      "title": "Business Travel Programs Take on Broader Responsibilities Even as 62% of Travel Managers Say Their Teams Are Understaffed, New GBTA Research Finds",
-      "url": "https://www.hospitalitynet.org/news/4135234/business-travel-programs-take-on-broader-responsibilities-even-as-62-of-travel-managers-say-their-teams-are-understaffed-new-gbta-research-finds",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a5264891388b2883e4",
-      "title": "HVS Europe Hotel Transactions Bulletin - Week Ending 30 October 2026",
-      "url": "https://www.hospitalitynet.org/news/4135233/hvs-europe-hotel-transactions-bulletin-week-ending-30-october-2026",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "8a1430b30b6a67d7fb",
-      "title": "GCSTIMES Brings Space Identity and Hotel Credential Innovation to EquipHotel Paris 2026",
-      "url": "https://www.hospitalitynet.org/news/4135231/gcstimes-brings-space-identity-and-hotel-credential-innovation-to-equiphotel-paris-2026",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
