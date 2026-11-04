@@ -1,69 +1,29 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-03T16:16:10+09:00",
-  "briefing_date": "2026-11-03",
-  "last_successful_fetch": "2026-11-03T15:13:02+09:00",
+  "generated_at": "2026-11-04T12:00:25+09:00",
+  "briefing_date": "2026-11-04",
+  "last_successful_fetch": "2026-11-04T12:00:25+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 10,
-  "selected_count": 5,
+  "recent_news_count": 4,
+  "selected_count": 1,
   "collection": {
     "status": "partial",
-    "successful_sources": 23,
+    "successful_sources": 15,
     "source_count": 26,
-    "failed_sources": 3
+    "failed_sources": 11
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
   "items": [
     {
-      "title": "후쿠시마, 한국인 여행지 될 수 있을까…한국 여행업계가 짚은 과제",
-      "source": "여행신문",
-      "published_at": "2026-11-03T00:15:00+09:00",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500626",
-      "category": "여행산업",
-      "keywords": [
-        "여행업"
-      ]
-    },
-    {
-      "title": "서울시, ‘의료친화 숙박시설’ 19개소 선정",
+      "title": "제주항공, 3Q 영업이익 549억 달성",
       "source": "트래블데일리",
-      "published_at": "2026-11-02T23:50:43+09:00",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72548",
+      "published_at": "2026-11-03T22:01:01+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72557",
       "category": "항공·숙박",
       "keywords": [
-        "의료친화 숙박시설"
-      ]
-    },
-    {
-      "title": "한국관광공사, ‘요즘, 한국관광 데이터 세미나’ 개최",
-      "source": "트래블데일리",
-      "published_at": "2026-11-02T23:50:31+09:00",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72540",
-      "category": "경제·시장",
-      "keywords": [
-        "관광데이터",
-        "관광공사"
-      ]
-    },
-    {
-      "title": "‘서부산 관광 활성화 자문위원회’ 위원 위촉",
-      "source": "트래블데일리",
-      "published_at": "2026-11-02T23:50:24+09:00",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72535",
-      "category": "문화·트렌드",
-      "keywords": [
-        "관광활성화"
-      ]
-    },
-    {
-      "title": "창립 85주년 맞은 필리핀항공, 인천~마닐라 주 17회 증편… 차세대 A350-1000 투입",
-      "source": "퍼블릭뉴스통신(TTL)",
-      "published_at": "2026-11-02T19:44:51+09:00",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3158051",
-      "category": "항공·숙박",
-      "keywords": [
-        "증편"
+        "영업이익",
+        "제주항공"
       ]
     }
   ],
