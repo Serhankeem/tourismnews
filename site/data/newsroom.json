@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-04T22:20:37+09:00",
-  "last_successful_fetch": "2026-11-04T22:20:37+09:00",
-  "count": 61,
+  "generated_at": "2026-11-05T00:03:22+09:00",
+  "last_successful_fetch": "2026-11-05T00:03:22+09:00",
+  "count": 62,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,14 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "New visitor levy powers to put money back into local communities",
+      "source": "GOV.UK · tourism",
+      "published_at": "2026-11-04T22:23:00+09:00",
+      "url": "https://www.gov.uk/government/news/new-visitor-levy-powers-to-put-money-back-into-local-communities",
+      "category": "관광정책",
+      "keywords": []
+    },
     {
       "title": "에어부산, 3분기 흑자 전환…매출 41% 급증",
       "source": "트래블데일리",
