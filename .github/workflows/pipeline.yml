@@ -1,0 +1,87 @@
+name: Durable data transaction and Pages
+on:
+  workflow_call:
+    inputs:
+      engine:
+        type: string
+        required: true
+      force:
+        type: boolean
+        default: false
+      backfill_days:
+        type: number
+        default: 90
+jobs:
+  transaction:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    concurrency:
+      group: tourism-pulse-publish
+      cancel-in-progress: false
+      queue: max # Official bounded queue: up to 100 pending jobs; no replacement.
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    environment:
+      name: github-pages
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main # Resolve latest code only AFTER acquiring the shared lock.
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore, reconcile due engines, validate and persist data/live
+        id: pipeline
+        continue-on-error: true
+        env:
+          PIPELINE_GITHUB_TOKEN: ${{ github.token }}
+          REQUESTED_ENGINE: ${{ inputs.engine }}
+          FORCE_RECHECK: ${{ inputs.force }}
+          BACKFILL_DAYS: ${{ inputs.backfill_days }}
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+          KOSIS_API_KEY: ${{ secrets.KOSIS_API_KEY }}
+        run: |
+          args=()
+          if [ "$FORCE_RECHECK" = 'true' ]; then args+=(--force); fi
+          python -m src.pipeline.runner run --work "$RUNNER_TEMP/tourism-pipeline" --output "$RUNNER_TEMP/tourism-pages" --requested "$REQUESTED_ENGINE" --days "$BACKFILL_DAYS" "${args[@]}"
+      - name: Verify code and data heads before upload
+        if: steps.pipeline.outputs.ready == 'true'
+        env:
+          PIPELINE_GITHUB_TOKEN: ${{ github.token }}
+        run: python -m src.pipeline.runner guard --work "$RUNNER_TEMP/tourism-pipeline"
+      - uses: actions/configure-pages@v5
+        if: steps.pipeline.outputs.ready == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.pipeline.outputs.ready == 'true'
+        with:
+          path: ${{ runner.temp }}/tourism-pages
+      - name: Verify code and data heads before deployment
+        if: steps.pipeline.outputs.ready == 'true'
+        env:
+          PIPELINE_GITHUB_TOKEN: ${{ github.token }}
+        run: python -m src.pipeline.runner guard --work "$RUNNER_TEMP/tourism-pipeline"
+      - uses: actions/deploy-pages@v4
+        id: deploy
+        if: steps.pipeline.outputs.ready == 'true'
+      - name: Operator summary (storage is distinct from deployment)
+        if: always()
+        env:
+          DEPLOYMENT_OUTCOME: ${{ steps.deploy.outcome }}
+        run: python -m src.pipeline.report --work "$RUNNER_TEMP/tourism-pipeline" --deployment "$DEPLOYMENT_OUTCOME" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pipeline-diagnostics-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/tourism-pipeline/result.json
+            ${{ runner.temp }}/tourism-pipeline/deployment.json
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Mark failed collection after preserving validated data
+        if: steps.pipeline.outcome == 'failure'
+        run: exit 1

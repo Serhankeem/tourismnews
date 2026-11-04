@@ -1,0 +1,37 @@
+{
+  "branch": "data/live",
+  "public_files": [
+    "site/data/briefing.json",
+    "site/data/briefing_archive.json",
+    "site/data/filings.json",
+    "site/data/health.json",
+    "site/data/macro.json",
+    "site/data/macro_health.json",
+    "site/data/news.json",
+    "site/data/newsroom.json",
+    "site/data/publication_visibility.json",
+    "site/data/reports.json",
+    "site/data/reports_health.json",
+    "site/data/research.json"
+  ],
+  "private_files": [
+    "collector_state/archive.json",
+    "collector_state/briefing_latest_selection.json",
+    "collector_state/briefing_selection.json",
+    "collector_state/decisions.json",
+    "collector_state/discovery.json",
+    "collector_state/legacy_archive.json",
+    "collector_state/macro_archive.json",
+    "collector_state/macro_legacy.json",
+    "collector_state/macro_run_summary.json",
+    "collector_state/publication_visibility.json",
+    "collector_state/reports_archive.json",
+    "collector_state/reports_candidates.json",
+    "collector_state/reports_run_summary.json",
+    "collector_state/reports_source_metrics.json",
+    "collector_state/review_queue.json",
+    "collector_state/run_summary.json",
+    "collector_state/source_metrics.json",
+    "collector_state/v02_snapshot.json"
+  ]
+}

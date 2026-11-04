@@ -1,0 +1,175 @@
+{
+  "commit": "59864d669dc714596b37748c9f95a7966a78148b",
+  "files": {
+    "collector_state/archive.json": {
+      "sha256": "fb7a4f8d325f4cdcef8c2d107879ca2469910e48d8581351966e2725735ff43f",
+      "bytes": 219411
+    },
+    "collector_state/briefing_latest_selection.json": {
+      "sha256": "2e4826a2d82378d6520ffaee81b1c08778ead731c566d467441e4a6f44645370",
+      "bytes": 1055
+    },
+    "collector_state/briefing_selection.json": {
+      "sha256": "7c52245cf25f3ad4a9f1854fa8656a34cf768a66e355b4a87fd795ffbfeeeb13",
+      "bytes": 4137
+    },
+    "collector_state/decisions.json": {
+      "sha256": "8d596bd187b51ef8781d665058aab36c065b5ca9e7bb9e19e58fae2ad4ee91b9",
+      "bytes": 153468
+    },
+    "collector_state/discovery.json": {
+      "sha256": "5105916ff822607384dd8853e020b75e9947c080f9d89cfa294e469ad9191367",
+      "bytes": 5642917
+    },
+    "collector_state/legacy_archive.json": {
+      "sha256": "68420da519e7f5922855c9d45a58076c997ac83c095870d3dbd4196fc0cb45e7",
+      "bytes": 2380
+    },
+    "collector_state/macro_archive.json": {
+      "sha256": "3a16eb4e3b05e4b7787b1cd333bbbe8218d41aef6bf111131ffed96cf7150e58",
+      "bytes": 541334
+    },
+    "collector_state/macro_legacy.json": {
+      "sha256": "8e82ffe20669309431e4337f579bc4530c74ae75609c75e52f2ca43fd62769bc",
+      "bytes": 583
+    },
+    "collector_state/macro_run_summary.json": {
+      "sha256": "b257c71daa7ed217db8efbceb7d2a795a3aede94fb30978fd8b190647a043799",
+      "bytes": 5005
+    },
+    "collector_state/publication_visibility.json": {
+      "sha256": "d62f5cfa8ce416325663136788994b23adb874a5cd26d6610fd327f869792986",
+      "bytes": 19059
+    },
+    "collector_state/reports_archive.json": {
+      "sha256": "a03ef4b9823041f032be95d64f6290d2cda21df600c461ca7a6beeb1ba75ead8",
+      "bytes": 316688
+    },
+    "collector_state/reports_candidates.json": {
+      "sha256": "13d7eafb19f304704dafb35be751ab77516f896e8adee986caf8278f7200732c",
+      "bytes": 201766
+    },
+    "collector_state/reports_run_summary.json": {
+      "sha256": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+      "bytes": 10954
+    },
+    "collector_state/reports_source_metrics.json": {
+      "sha256": "2720301a37b6d5dbeb5994c7881436efdce8c7d34b7a5146b78bab2440f799bc",
+      "bytes": 1643
+    },
+    "collector_state/review_queue.json": {
+      "sha256": "68fdf537e28abeaffdc60bf55a1d9dfd5396644d9e919818b432b4eab4f498aa",
+      "bytes": 1599
+    },
+    "collector_state/run_summary.json": {
+      "sha256": "42838cbdb80fa0d91e832d7bf405bdddbf61c6f71371c5e99903216a46625d2a",
+      "bytes": 52465
+    },
+    "collector_state/source_metrics.json": {
+      "sha256": "e46691a83a2ed7f4065f85750d6375bd26a9c47a648b019893de3e5cc20b97eb",
+      "bytes": 4533
+    },
+    "collector_state/v02_snapshot.json": {
+      "sha256": "8228b7038490f459976562ffe39f8950643c6dcce0cd520d72880a1c286b55ce",
+      "bytes": 13175
+    },
+    "site/data/briefing.json": {
+      "sha256": "46f1038cf3f507ef6c6be37339a064867353393060a393e2511cdd1b96a5ba90",
+      "bytes": 944
+    },
+    "site/data/briefing_archive.json": {
+      "sha256": "5330e38a0ddf85c01aa0981be3c6af5f8447d89cbf175917807458b403a45e71",
+      "bytes": 4876
+    },
+    "site/data/filings.json": {
+      "sha256": "e37e1653434a7de927e9492186a0352ea90bd39d6309bf0b6840abded9b0019b",
+      "bytes": 2149
+    },
+    "site/data/health.json": {
+      "sha256": "77a19850c568db37fc7324bcff33ce3e56503423c34ae26efded8d422fac9eb4",
+      "bytes": 64544
+    },
+    "site/data/macro.json": {
+      "sha256": "4c4963d0f38a53f56dc17aa200af3bdb41cf244d03c20ef2191413ab013bdf2a",
+      "bytes": 571702
+    },
+    "site/data/macro_health.json": {
+      "sha256": "b257c71daa7ed217db8efbceb7d2a795a3aede94fb30978fd8b190647a043799",
+      "bytes": 5005
+    },
+    "site/data/news.json": {
+      "sha256": "dedb3a905ef47e5fbaf26cc3212908b97650c9c96857127525442f536551b513",
+      "bytes": 22403
+    },
+    "site/data/newsroom.json": {
+      "sha256": "dedb3a905ef47e5fbaf26cc3212908b97650c9c96857127525442f536551b513",
+      "bytes": 22403
+    },
+    "site/data/publication_visibility.json": {
+      "sha256": "9aa9b9797712741d461675b761920a4bd5b479f898549b94bcf5e921d46e322d",
+      "bytes": 317
+    },
+    "site/data/reports.json": {
+      "sha256": "238c6adf43fe88579add5d671c8e743550ff6836a9ff4e48474572c6c488b5d4",
+      "bytes": 99824
+    },
+    "site/data/reports_health.json": {
+      "sha256": "27f2d0f348e0836ef63da85b8c1f37bcbe78b8593b8d8b5fbc93c268a7750ae8",
+      "bytes": 10954
+    },
+    "site/data/research.json": {
+      "sha256": "230f9b0e2065ab9f2941477b088f229875a2cd581c4614bbffd0e2c0e1e62dec",
+      "bytes": 1245
+    }
+  },
+  "news": 58,
+  "archive": 71,
+  "discovery": 2407,
+  "reports": 135,
+  "macro": {
+    "kto_inbound": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    },
+    "kto_outbound": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    },
+    "kto_inbound_cn": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    },
+    "kto_inbound_jp": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    },
+    "kto_inbound_tw": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    },
+    "kto_inbound_us": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    },
+    "kto_inbound_vn": {
+      "count": 69,
+      "first": "2021-01",
+      "last": "2026-09"
+    }
+  },
+  "news_last_success": "2026-11-04T13:09:31+09:00",
+  "briefing_dates": [
+    "2026-10-30",
+    "2026-10-31",
+    "2026-11-01",
+    "2026-11-02",
+    "2026-11-03",
+    "2026-11-04"
+  ]
+}

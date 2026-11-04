@@ -1,55 +1,16 @@
-"""Offline execution of the real workflow save step against a temporary Git remote."""
-import json
-import subprocess
-import tempfile
-import unittest
+"""Workflow contracts now persist to data/live, never the application branch."""
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-WORKFLOW = (ROOT / '.github/workflows/collect.yml').read_text()
-
-
-class WorkflowContractTests(unittest.TestCase):
-    def test_manual_schedule_and_main_only_deployment_remain(self):
-        self.assertIn('workflow_dispatch:', WORKFLOW)
-        self.assertIn("cron: '17 */2 * * *'", WORKFLOW)
-        self.assertIn("cron: '30 1 * * *'", WORKFLOW)
-        self.assertIn("if: github.ref == 'refs/heads/main'", WORKFLOW)
-        self.assertIn('uses: actions/deploy-pages@v4', WORKFLOW)
-        self.assertIn('          path: site\n', WORKFLOW)
-        self.assertIn("      - 'relevance_reviews.json'", WORKFLOW)
-
-    def test_news_and_review_state_survive_fresh_checkout(self):
-        block = WORKFLOW.split('      - name: Save data and failure health records\n        run: |\n', 1)[1].split('      - name:', 1)[0]
-        script = '\n'.join(line[10:] for line in block.rstrip().splitlines())
-        def git(*args, cwd):
-            return subprocess.run(['git', *args], cwd=cwd, check=True, capture_output=True)
-        with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp)
-            remote, writer, reader = [root / x for x in ('remote.git', 'writer', 'reader')]
-            git('init', '--bare', str(remote), cwd=root)
-            git('init', '-b', 'main', str(writer), cwd=root)
-            git('config', 'user.name', 'Workflow Test', cwd=writer)
-            git('config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com', cwd=writer)
-            (writer / 'site/data').mkdir(parents=True)
-            (writer / 'site/index.html').write_text('TOURISM PULSE')
-            for name in ('news', 'newsroom', 'filings', 'research', 'briefing', 'health'):
-                (writer / f'site/data/{name}.json').write_text(json.dumps({'retained': name}))
-            (writer / 'site/data/archive.json').write_text(json.dumps({'legacy': 'full original'}))
-            git('add', 'site', cwd=writer)
-            git('commit', '-m', 'Seed', cwd=writer)
-            git('remote', 'add', 'origin', str(remote), cwd=writer)
-            git('push', '-u', 'origin', 'main', cwd=writer)
-            (writer / 'collector_state').mkdir()
-            (writer / 'site/data/archive.json').unlink()
-            for name in ('archive', 'review_queue', 'legacy_archive', 'decisions', 'discovery', 'source_metrics', 'run_summary', 'v02_snapshot'):
-                (writer / f'collector_state/{name}.json').write_text(json.dumps({'state': name}))
-            (writer / 'site/data/health.json').write_text(json.dumps({'status': 'failed'}))
-            subprocess.run(['bash', '-e', '-c', script], cwd=writer, check=True, capture_output=True)
-            git('clone', '-b', 'main', str(remote), str(reader), cwd=root)
-            for path in list((writer / 'site').rglob('*')) + list((writer / 'collector_state').glob('*.json')):
-                if path.is_file():
-                    self.assertEqual(path.read_bytes(), (reader / path.relative_to(writer)).read_bytes())
-            self.assertFalse((reader / 'site/collector_state').exists())
-            self.assertFalse((reader / 'site/data/archive.json').exists())
-            self.assertTrue((reader / 'collector_state/archive.json').exists())
+from test_pipeline import PipelineHarness
+ROOT=Path(__file__).resolve().parents[1]
+WORKFLOW=(ROOT/'.github/workflows/collect.yml').read_text()
+PIPELINE=(ROOT/'.github/workflows/pipeline.yml').read_text()
+class WorkflowContractTests(PipelineHarness):
+ def test_manual_schedule_and_main_only_deployment_remain(self):
+  for value in ['workflow_dispatch:',"cron: '17 */2 * * *'","cron: '30 1 * * *'","if: github.ref == 'refs/heads/main'","      - 'relevance_reviews.json'",'uses: ./.github/workflows/pipeline.yml']:self.assertIn(value,WORKFLOW)
+  self.assertIn('uses: actions/deploy-pages@v4',PIPELINE);self.assertIn('path: ${{ runner.temp }}/tourism-pages',PIPELINE)
+  self.assertNotIn('git pull --rebase origin main',WORKFLOW+PIPELINE)
+ def test_news_and_review_state_survive_fresh_checkout(self):
+  self.run_pipeline(self.change);store=self.reader()
+  for name in ['archive','review_queue','legacy_archive','decisions','discovery','source_metrics','run_summary','v02_snapshot']:
+   self.assertEqual((self.code/f'collector_state/{name}.json').read_bytes(),(store.path/f'collector_state/{name}.json').read_bytes())
+  self.assertEqual(store.tip('main'),self.main);self.assertFalse((self.root/'pages/collector_state').exists())

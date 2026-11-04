@@ -31,75 +31,14 @@ jobs:
       - name: Run all regression tests
         run: python -m unittest discover -s tests -v
   collect-and-publish:
-    concurrency:
-      group: tourism-pulse-publish
-      cancel-in-progress: false
     needs: test
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     permissions:
       contents: write
       pages: write
       id-token: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main # Latest main after waiting for the shared concurrency lock.
-          fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Collect official report metadata
-        id: collect
-        continue-on-error: true
-        env:
-          FORCE_RECHECK: ${{ inputs.force || 'false' }}
-        run: |
-          if [ "$FORCE_RECHECK" = 'true' ]; then
-            python -m src.reports.engine --force --progress
-          else
-            python -m src.reports.engine --progress
-          fi
-      - name: Save Research data only
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for research_file in site/data/reports.json site/data/reports_health.json; do
-            if [ -f "$research_file" ]; then
-              git add -- "$research_file"
-            fi
-          done
-          if [ -d collector_state ]; then
-            for research_file in collector_state/reports_*.json; do
-              if [ -f "$research_file" ]; then
-                git add -- "$research_file"
-              fi
-            done
-          fi
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update Research report metadata and collection health'
-            git pull --rebase origin main
-            git push
-          fi
-      - name: Record Research report
-        if: always()
-        run: python -m src.reports.report >> "$GITHUB_STEP_SUMMARY"
-      - name: Keep Research diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: research-collection-metadata
-          path: |
-            site/data/reports*.json
-            collector_state/reports_*.json
-          if-no-files-found: warn
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - uses: actions/deploy-pages@v4
-      - name: Fail when all eligible sources failed
-        if: steps.collect.outcome == 'failure'
-        run: exit 1
+    uses: ./.github/workflows/pipeline.yml
+    with:
+      engine: reports
+      force: ${{ inputs.force || false }}
+    secrets: inherit

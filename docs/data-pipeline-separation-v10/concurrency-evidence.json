@@ -1,0 +1,10 @@
+{
+  "checked_on": "2026-11-04",
+  "official_url": "https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/control-the-concurrency-of-workflows-and-jobs",
+  "queue_max_pending": 100,
+  "cancel_in_progress": false,
+  "default_single_replaces_pending": true,
+  "ordering": "FIFO by wait start, not dispatch order; no dispatch-order guarantee",
+  "overflow": "additional jobs cancelled; scheduled due reconciliation and manual operator retry",
+  "actionlint_note": "Current downloaded actionlint schema lacks queue; only this documented key warning ignored, all other rules checked"
+}

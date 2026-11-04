@@ -160,7 +160,7 @@ class ConfigurationTests(unittest.TestCase):
         rows={i['id']:i for i in CONFIG['indicators']};self.assertNotEqual(rows['kto_tourism_receipts']['definition'],rows['bok_travel_credit']['definition']);self.assertFalse(rows['kto_tourism_receipts']['enabled']);self.assertEqual(rows['tourism_employment']['frequency'],'A');self.assertIsNone(rows['kto_tourism_receipts']['unit'])
     def test_same_publication_lock_and_no_archive_in_pages(self):
         for name in ['collect','reports','macro']:
-            text=(ROOT/f'.github/workflows/{name}.yml').read_text();self.assertIn('group: tourism-pulse-publish',text)
-        text=(ROOT/'.github/workflows/macro.yml').read_text();self.assertIn('workflow_dispatch:',text);self.assertIn("cron: '20 3 * * *'",text);self.assertIn('git pull --rebase origin main',text);self.assertIn('path: site',text);self.assertNotIn('path: collector_state',text)
+            self.assertIn('uses: ./.github/workflows/pipeline.yml',(ROOT/f'.github/workflows/{name}.yml').read_text())
+        text=(ROOT/'.github/workflows/pipeline.yml').read_text();self.assertIn('group: tourism-pulse-publish',text);self.assertIn('path: ${{ runner.temp }}/tourism-pages',text);self.assertNotIn('path: collector_state',text)
 
 if __name__=='__main__':unittest.main()

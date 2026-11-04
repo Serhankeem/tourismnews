@@ -30,72 +30,14 @@ jobs:
       - name: Run all regression tests
         run: python -m unittest discover -s tests -v
   collect-and-publish:
-    concurrency:
-      group: tourism-pulse-publish
-      cancel-in-progress: false
     needs: test
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     permissions:
       contents: write
       pages: write
       id-token: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Collect and validate official statistics
-        id: collect
-        continue-on-error: true
-        env:
-          FORCE_RECHECK: ${{ inputs.force || 'false' }}
-          # Credential presence only until official table/item/unit mappings are verified.
-          # Setting a key does not silently activate an unverified data series.
-          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
-          KOSIS_API_KEY: ${{ secrets.KOSIS_API_KEY }}
-        run: |
-          if [ "$FORCE_RECHECK" = 'true' ]; then
-            python -m src.macro.engine --force
-          else
-            python -m src.macro.engine
-          fi
-      - name: Save Macro data only
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          for macro_file in site/data/macro.json site/data/macro_health.json collector_state/macro_archive.json collector_state/macro_run_summary.json; do
-            if [ -f "$macro_file" ]; then
-              git add -- "$macro_file"
-            fi
-          done
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update official Macro statistics and collection health'
-            git pull --rebase origin main
-            git push
-          fi
-      - name: Record official-statistics results
-        if: always()
-        run: python -m src.macro.report >> "$GITHUB_STEP_SUMMARY"
-      - name: Keep Macro diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: macro-statistics-health
-          path: |
-            site/data/macro*.json
-            collector_state/macro_run_summary.json
-          if-no-files-found: warn
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - uses: actions/deploy-pages@v4
-      - name: Mark failed collection after preserving old data and diagnostics
-        if: steps.collect.outcome == 'failure'
-        run: exit 1
+    uses: ./.github/workflows/pipeline.yml
+    with:
+      engine: macro
+      force: ${{ inputs.force || false }}
+    secrets: inherit

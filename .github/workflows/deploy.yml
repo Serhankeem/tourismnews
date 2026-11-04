@@ -1,0 +1,26 @@
+name: Deploy latest code with durable data
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'src/**'
+      - '*sources.json'
+      - 'pipeline.json'
+      - 'operating_policy.json'
+      - 'relevance_reviews.json'
+      - '.github/workflows/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pipeline.yml
+    with:
+      engine: none
+    secrets: inherit
