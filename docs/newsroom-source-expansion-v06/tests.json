@@ -93,6 +93,26 @@
   },
   "pipeline_validation": "validate(after, before=baseline) passed; immutable ledgers, histories and cross-engine data preserved",
   "github_ci": {
-    "status": "pending_PR_submission"
+    "status": "success",
+    "tested_code_commit": "137a30605dabf61f4ae6781115cc2fb4bab75670",
+    "checks": [
+      {
+        "workflow": "Macro Monitor official statistics",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41970838683/job/127058452825"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41970838680/job/127058452818"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41970838678/job/127058452810"
+      }
+    ],
+    "production_jobs": "collect-and-publish skipped on PR by existing main-only condition",
+    "note": "The following commit only records these results; engine/config/test code remains identical."
   }
 }

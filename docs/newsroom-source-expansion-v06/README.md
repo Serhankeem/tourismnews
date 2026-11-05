@@ -139,7 +139,7 @@
 - PR #19의 `validate(after, before=baseline)` 전체 보존 검증 통과: 뉴스 63, 원장 77, 발견 2809, Research 135, Macro 483개 관측. 기존 모든 뉴스 ID·URL·원 발행일·최초 발견/게시 시각, 발견 이력, 권리 전환 이력, 확정 브리핑, 리서치 개정·Macro 관측/정정 이력 보존.
 - Research 공개/원장, Macro 공개/원장, 확정 브리핑 아카이브/선정 이력은 복사본 비교에서도 **바이트 동일**이다. HNR 3건은 원장 유지·공개 차단. 정책 기반 Pages 재투영·허용 파일 검증을 거쳐 산출물에 내부 원장이 없는지 확인했다.
 - 코드 차이에서 `site/`, `collector_state/`, `.github/workflows/`, `src/pipeline/`, `reports_sources.json`, `macro_sources.json`, 승인 게이트·UI·비행기 로고가 변경되지 않음을 확인한다. `sources.json`은 식별자/도메인/매체 분류만 보완하고 기존 publication/discovery/enabled는 그대로다.
-- GitHub CI: PR 제출 후 결과와 링크를 아래에 기록한다. CI의 기존 Python jobs와 로컬 브라우저 테스트는 구분하며 브라우저가 Actions에서 자동 실행된다고 표시하지 않는다.
+- **GitHub CI: 코드 커밋 `137a3060`의 기존 Python 검사 3개 모두 SUCCESS** — [뉴스](https://github.com/Serhankeem/tourismnews/actions/runs/41970838678), [Research](https://github.com/Serhankeem/tourismnews/actions/runs/41970838680), [Macro](https://github.com/Serhankeem/tourismnews/actions/runs/41970838683). PR의 `collect-and-publish` 3개는 기존 main 전용 조건으로 SKIPPED여서 운영 수집/배포를 하지 않았다. 후속 커밋은 이 결과의 문서 기록뿐이다. 브라우저 16개는 별도 로컬 검증이며 Actions에서 실행됐다고 표시하지 않는다.
 
 재현은 저장소에서 `python -m unittest discover -s tests -v`. 브라우저는 PR #19 방식으로 검증한 데이터 스냅샷과 사이트 코드를 `/tmp`에 합성한 후 `TOURISM_TEST_URL=http://127.0.0.1:<port> node tests/<suite>.smoke.cjs`로 실행한다. 실제 운영 브랜치에 `src.engine`을 직접 실행하지 않는다. 원본 피드 응답은 커밋하지 않았으므로 다른 시점의 실호출은 공급량이 달라질 수 있다.
 
