@@ -18,7 +18,7 @@
   return database.reports.filter(r=>(!state.publisher||r.publisher===state.publisher)&&
    (!state.region||database.publishers[r.publisher]?.region===state.region)&&
    (!state.type||r.report_type===state.type)&&(!state.category||r.category===state.category)&&
-   (!query||[r.title,r.publisher,r.report_type,r.category,...r.keywords].some(s=>s.toLocaleLowerCase().includes(query))))
+   (!query||ContentLocale.searchable(r,'research',query)))
    .sort((a,b)=>(state.sort==='oldest'?1:-1)*a.published_at.localeCompare(b.published_at)||a.title.localeCompare(b.title));
  }
  function card(r){
@@ -27,9 +27,10 @@
   const unknownAccess=r.access_type==='미확인';
   const accessLabel=unknownAccess?'열람 조건 미확인':r.access_type;
   const accessNote=unknownAccess?'<p class="research-access-note">해당 자료의 무료 열람·회원 접근·구매 여부는 원문에서 확인해야 합니다.</p>':'';
-  return `<article class="research-card"><div class="research-meta"><span>${escape(r.publisher)}</span><span>${escape(dateText(r))}</span><span class="research-access">${escape(accessLabel)}</span></div>${accessNote}<h3><a href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">${escape(r.title)}</a></h3><div class="research-meta"><span class="category">${escape(r.category)}</span><span>${escape(r.report_type)}</span></div><p class="research-keywords">${r.keywords.map(escape).join(' · ')}</p><a class="text-link" href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">발행기관 원문 보기 ↗</a>${attribution}</article>`;
+  return `<article class="research-card"><div class="research-meta"><span>${escape(r.publisher)}</span><span>${escape(dateText(r))}</span><span class="research-access">${escape(accessLabel)}</span></div>${accessNote}<h3><a href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">${escape(contentHeading(r,'research').title)}</a></h3>${contentTitleNote(r,'research')}<div class="research-meta"><span class="category">${escape(r.category)}</span><span>${escape(r.report_type)}</span></div><p class="research-keywords">${r.keywords.map(escape).join(' · ')}</p><a class="text-link" href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">발행기관 원문 보기 ↗</a>${attribution}</article>`;
  }
  function render(){
+  section.querySelectorAll('[data-research-region]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.researchRegion===state.region)));
   const count=['query','publisher','region','type','category'].filter(k=>state[k].trim()).length+(state.sort!=='newest'?1:0);
   el('research-filter-count').textContent=`적용 조건 ${count}개`;el('research-filter-summary').textContent=`${count}개 적용`;
   const reports=filtered(),pages=Math.max(1,Math.ceil(reports.length/state.size));
@@ -78,7 +79,7 @@
    const valid=json.reports.filter(r=>['title','publisher','published_at','report_type','category','url','access_type'].every(k=>typeof r[k]==='string')&&Array.isArray(r.keywords)&&r.keywords.every(k=>typeof k==='string')&&external(r.url));
    database={...json,reports:valid};
    try{const hr=await fetch('./data/reports_health.json?v='+Date.now(),{cache:'no-store'});if(hr.ok)health=await hr.json();}catch(_){}
-   summaries();render();
+   await window.ContentLocale?.refresh?.();summaries();render();
   }catch(_){el('research-status').textContent=database.reports.length?'연구자료 갱신을 확인하지 못해 기존 목록을 유지합니다.':'연구자료 수집 결과가 아직 연결되지 않았습니다. 검증되지 않은 자료는 표시하지 않습니다.';render();}
   finally{loading=false;}
  }
@@ -96,6 +97,7 @@
  el('research-page-size').addEventListener('change',e=>{state.size=[10,20].includes(+e.target.value)?+e.target.value:10;state.page=1;render();});
  section.addEventListener('click',e=>{
   const page=e.target.closest('[data-report-page]');if(page&&!page.disabled){state.page=+page.dataset.reportPage;render();}
+  const region=e.target.closest('[data-research-region]');if(region){state.region=region.dataset.researchRegion;el('research-region').value=state.region;state.page=1;render();}
   const publisher=e.target.closest('[data-report-publisher]');if(publisher){state.publisher=publisher.dataset.reportPublisher;el('research-publisher').value=state.publisher;state.page=1;render();}
  });
  window.renderResearch=render;window.ResearchLibrary={load,state,get database(){return database;}};

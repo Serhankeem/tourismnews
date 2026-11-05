@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "news_publishers": [
+    {
+      "name": "문화체육관광부 보도자료",
+      "country": "KR",
+      "source_id": "mcst_press",
+      "domains": [
+        "mcst.go.kr",
+        "www.mcst.go.kr"
+      ]
+    },
+    {
+      "name": "KOSIS 최근수록자료",
+      "country": "KR",
+      "source_id": "kosis_recent",
+      "domains": [
+        "kosis.kr"
+      ]
+    },
+    {
+      "name": "서울시 내 손안에 서울 문화",
+      "country": "KR",
+      "source_id": "seoul_culture",
+      "domains": [
+        "mediahub.seoul.go.kr"
+      ]
+    },
+    {
+      "name": "서울시 내 손안에 서울 경제",
+      "country": "KR",
+      "source_id": "seoul_economy",
+      "domains": [
+        "mediahub.seoul.go.kr"
+      ]
+    },
+    {
+      "name": "서울시 내 손안에 서울 교통",
+      "country": "KR",
+      "source_id": "seoul_transport",
+      "domains": [
+        "mediahub.seoul.go.kr"
+      ]
+    },
+    {
+      "name": "서울시 내 손안에 서울 환경",
+      "country": "KR",
+      "source_id": "seoul_environment",
+      "domains": [
+        "mediahub.seoul.go.kr"
+      ]
+    },
+    {
+      "name": "GOV.UK · tourism",
+      "country": "GB",
+      "source_id": "govuk_tourism",
+      "domains": [
+        "www.gov.uk"
+      ]
+    },
+    {
+      "name": "GOV.UK · aviation",
+      "country": "GB",
+      "source_id": "govuk_aviation",
+      "domains": [
+        "www.gov.uk"
+      ]
+    },
+    {
+      "name": "여행신문",
+      "country": "KR",
+      "source_id": "traveltimes",
+      "domains": [
+        "traveltimes.co.kr",
+        "www.traveltimes.co.kr"
+      ]
+    },
+    {
+      "name": "트래블데일리",
+      "country": "KR",
+      "source_id": "traveldaily",
+      "domains": [
+        "traveldaily.co.kr",
+        "www.traveldaily.co.kr"
+      ]
+    },
+    {
+      "name": "퍼블릭뉴스통신(TTL)",
+      "country": "KR",
+      "source_id": "ttlnews",
+      "domains": [
+        "ttlnews.com",
+        "www.ttlnews.com"
+      ]
+    },
+    {
+      "name": "Hospitality Net",
+      "country": "NL",
+      "source_id": "hospitalitynet",
+      "domains": [
+        "www.hospitalitynet.org"
+      ]
+    }
+  ],
+  "headings": [
+    {
+      "kind": "research",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "publisher": "OECD",
+      "published_at": "2026-06-30",
+      "original_title": "OECD Tourism Trends and Policies 2026",
+      "ko_title": "OECD 관광 보고서 · 2026년",
+      "mode": "independent_factual_label",
+      "note": "발행기관·연도·분야로 작성한 안내이며 원제의 공식 번역이나 연구 내용 요약이 아닙니다.",
+      "attribution": "OECD (2026), OECD Tourism Trends and Policies 2026, https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "status": "approved",
+      "rights_status": "approved",
+      "accuracy_status": "approved",
+      "evidence_url": "https://www.oecd.org/en/about/terms-conditions.html",
+      "preserved_tokens": [
+        "OECD"
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "publisher": "OECD",
+      "published_at": "2024-07-08",
+      "original_title": "OECD Tourism Trends and Policies 2024",
+      "ko_title": "OECD 관광 보고서 · 2024년",
+      "mode": "independent_factual_label",
+      "note": "발행기관·연도·분야로 작성한 안내이며 원제의 공식 번역이나 연구 내용 요약이 아닙니다.",
+      "attribution": "OECD (2024), OECD Tourism Trends and Policies 2024, https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "status": "approved",
+      "rights_status": "approved",
+      "accuracy_status": "approved",
+      "evidence_url": "https://www.oecd.org/en/about/terms-conditions.html",
+      "preserved_tokens": [
+        "OECD"
+      ]
+    }
+  ]
+}

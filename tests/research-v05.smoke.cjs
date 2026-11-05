@@ -14,7 +14,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
     const actual=snapshot.reports.filter(r=>r.publisher===publisher);assert.ok(actual.length>0);
     assert.equal(await page.locator('#research-results .research-card').count(),actual.length);
     const titles=await page.locator('#research-results h3 a').evaluateAll(nodes=>nodes.map(n=>({title:n.textContent,url:n.href})));
-    for(const row of titles)assert.ok(actual.some(r=>r.title===row.title&&r.url===row.url));
+    for(const row of titles){const original=actual.find(r=>r.url===row.url);assert.ok(original);const shown=await page.evaluate(r=>ContentLocale.heading(r,'research'),original);assert.equal(row.title,shown.title);if(shown.localized)assert.ok(await page.locator('.research-card').filter({has:page.locator('a[href="'+row.url+'"]')}).getByText('원제: '+original.title,{exact:true}).count());}
     if(publisher==='한국교통연구원')assert.match(await page.locator('#research-results').textContent(),/공공누리 제4유형.*저자|저자:.*공공누리 제4유형/s);
    }
    await page.locator('#research-reset').click();

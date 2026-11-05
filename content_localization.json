@@ -1,0 +1,1712 @@
+{
+  "schema_version": 1,
+  "policy": "code-owned title-only reviewed overlays; unapproved entries must not contain Korean draft text; no operational JSON migration",
+  "entries": [
+    {
+      "kind": "news",
+      "url": "https://www.gov.uk/government/news/new-visitor-levy-powers-to-put-money-back-into-local-communities",
+      "original_title_sha256": "8fc49d48cd4e1d32b75e8394a9ddd5dc149cedef643c64ca7a928b68d388893b",
+      "publisher": "GOV.UK · tourism",
+      "published_at": "2026-11-04T22:23:00+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "8fc49d48cd4e1d32b75e8394a9ddd5dc149cedef643c64ca7a928b68d388893b"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.hospitalitynet.org/news/4135257/phuket-enters-a-new-era-of-growth-as-billions-in-investment-transform-the-islands-property-hospitality-and-lifestyle-landscape",
+      "original_title_sha256": "f08f8bec065c2b88ae3d217690ec5d63e07be0df42f5f468ade95dbe05907d73",
+      "publisher": "Hospitality Net",
+      "published_at": "2026-11-04T20:21:12+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "f08f8bec065c2b88ae3d217690ec5d63e07be0df42f5f468ade95dbe05907d73"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.hospitalitynet.org/news/4135249/roompricegenie-launches-portfolio-calendar-to-give-hotel-groups-clearer-control-of-revenue-performance",
+      "original_title_sha256": "cf29f5c2bd2185cb54540e20ba9241261f793719005c3934e2445bc83b153fe7",
+      "publisher": "Hospitality Net",
+      "published_at": "2026-11-04T01:11:25+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "cf29f5c2bd2185cb54540e20ba9241261f793719005c3934e2445bc83b153fe7"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.hospitalitynet.org/news/4135240/wyndham-expands-global-luxury-portfolio-through-strategic-partnership-with-hotelrez-hotels-resorts",
+      "original_title_sha256": "103aac6e0e4130a2e845457521e63f247fe5edb951ab6097a8ac0a5a33c76960",
+      "publisher": "Hospitality Net",
+      "published_at": "2026-11-03T20:32:19+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "103aac6e0e4130a2e845457521e63f247fe5edb951ab6097a8ac0a5a33c76960"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.hospitalitynet.org/news/4135132/ids-next-launches-pomolabs-new-ai-native-intelligence-platform-for-hospitality-operations",
+      "original_title_sha256": "948900d7b5209b948fd6d45983b8c74c8caa9782529d4ae98d7443d9fff6ce80",
+      "publisher": "Hospitality Net",
+      "published_at": "2026-11-02T23:00:00+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "948900d7b5209b948fd6d45983b8c74c8caa9782529d4ae98d7443d9fff6ce80"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.hospitalitynet.org/news/4135223/accor-corinthia-group-launch-strategic-collaboration-to-bring-verdi-hotels-to-handwritten-collection",
+      "original_title_sha256": "7da7ac358de2c3753b86a663c78304dff94f8d7187cf593244b1ab7dfcb4b813",
+      "publisher": "Hospitality Net",
+      "published_at": "2026-11-02T22:59:36+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "7da7ac358de2c3753b86a663c78304dff94f8d7187cf593244b1ab7dfcb4b813"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.hospitalitynet.org/news/4135216/hyatt-introduces-enhanced-hyatt-leverage-platform-for-small-and-midsize-business-travel",
+      "original_title_sha256": "c972006420bfa57b544a58836c0422145be2879cd8f473f5f5bc1ae55b7c41ff",
+      "publisher": "Hospitality Net",
+      "published_at": "2026-11-02T20:35:09+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "c972006420bfa57b544a58836c0422145be2879cd8f473f5f5bc1ae55b7c41ff"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.gov.uk/government/news/stronger-safeguards-for-wheelchair-users-and-better-trained-staff-to-support-disabled-air-passengers",
+      "original_title_sha256": "41eb0a41a6dda4b202dc92b6b8792ea10a384e149ae860c0ac49f510c8662033",
+      "publisher": "GOV.UK · aviation",
+      "published_at": "2026-10-19T18:00:04+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "41eb0a41a6dda4b202dc92b6b8792ea10a384e149ae860c0ac49f510c8662033"
+        }
+      ]
+    },
+    {
+      "kind": "news",
+      "url": "https://www.gov.uk/government/news/take-off-for-passengers-as-government-scraps-extra-charges-when-flying",
+      "original_title_sha256": "5610f71311f24b52f8bf3d0a499801cc2dd2c58551a44bf6550daa19e9b6a54b",
+      "publisher": "GOV.UK · aviation",
+      "published_at": "2026-10-02T06:30:00+09:00",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "5610f71311f24b52f8bf3d0a499801cc2dd2c58551a44bf6550daa19e9b6a54b"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/ai-claims-processing-ranks-last-as-a-booking-confidence-driver",
+      "original_title_sha256": "e90929f84e6857265820ff6efa83563f75bbbdc256670dec6fa44e4b1e3ebc70",
+      "publisher": "Phocuswright",
+      "published_at": "2026-10-28",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e90929f84e6857265820ff6efa83563f75bbbdc256670dec6fa44e4b1e3ebc70"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/in-eastern-europe-local-otas-beat-the-giants-by-going-narrow",
+      "original_title_sha256": "cbd4b053edd88f7448d5ea601e8166ae3cf44233d6afa4b21e8eeff236bc4d68",
+      "publisher": "Phocuswright",
+      "published_at": "2026-10-21",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "cbd4b053edd88f7448d5ea601e8166ae3cf44233d6afa4b21e8eeff236bc4d68"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/snow-is-optional-what-moves-winter-sports-travelers-when-the-forecast-fails",
+      "original_title_sha256": "cf54d4c4ed01db5ece74617968977c4638bffaeeeb8313a65e2b73daa77121f2",
+      "publisher": "Phocuswright",
+      "published_at": "2026-10-14",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "cf54d4c4ed01db5ece74617968977c4638bffaeeeb8313a65e2b73daa77121f2"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/long-haul-travel-barometer-3-2026/",
+      "original_title_sha256": "0b3581db97048e436ec3b5cb4ea7d2ddb02d97e48c37ea1fc2150ca9db980a95",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-10-14",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "0b3581db97048e436ec3b5cb4ea7d2ddb02d97e48c37ea1fc2150ca9db980a95"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/travelers-pay-more-to-cancel-58-choose-free-cancellation-over-a-lower-price",
+      "original_title_sha256": "c1b205cadc2e3c86cca18d577ddbf3594b827ccb6fde786eece26e8ed0ec5f2d",
+      "publisher": "Phocuswright",
+      "published_at": "2026-10-07",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "c1b205cadc2e3c86cca18d577ddbf3594b827ccb6fde786eece26e8ed0ec5f2d"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Research-Roundup-3Q26",
+      "original_title_sha256": "4a2b29e261df8adc040d9087a526300617333987d394c250fc001c971b23bb46",
+      "publisher": "Phocuswright",
+      "published_at": "2026-10-01",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "4a2b29e261df8adc040d9087a526300617333987d394c250fc001c971b23bb46"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/indonesia-set-to-overtake-thailand-as-southeast-asias-largest-travel-market",
+      "original_title_sha256": "23cfcc1e1ddcef40228bf7a801bfacaea9ded429aba4958ef3689c5f6ed86873",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-30",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "23cfcc1e1ddcef40228bf7a801bfacaea9ded429aba4958ef3689c5f6ed86873"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Consumer-Trends/Global-Traveler-Trends-2026",
+      "original_title_sha256": "5989a050440c54b0f5a59e9a70f60d71c8c79ca92e8f49049394752023b7b86d",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-29",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "5989a050440c54b0f5a59e9a70f60d71c8c79ca92e8f49049394752023b7b86d"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/indias-travel-market-stalls-in-2025-then-bets-on-a-fare-driven-rebound",
+      "original_title_sha256": "ac67bc275164ab6851811fc36627ba403e372047f7325e9619cd856b4f7eaf93",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "ac67bc275164ab6851811fc36627ba403e372047f7325e9619cd856b4f7eaf93"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/family-first-whats-really-driving-latin-americas-travel-boom",
+      "original_title_sha256": "957649496f8349799c1b171ba41e4eb090338620c432f0d5dd4d099e052df62e",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-15",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "957649496f8349799c1b171ba41e4eb090338620c432f0d5dd4d099e052df62e"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/chinas-otas-face-a-reckoning-as-growth-slows-and-regulators-circle",
+      "original_title_sha256": "e236f6c3f4cad236067955e8e6c300ef20880fad5a8b5ac39222d273c7c63176",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-09",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e236f6c3f4cad236067955e8e6c300ef20880fad5a8b5ac39222d273c7c63176"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Consumer-Trends/The-Latin-American-Experiences-Traveler",
+      "original_title_sha256": "eabfc136eb23c41248ff3514e3fe35f0dd1b289b017447974bf59aba3e910cc2",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-02",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "eabfc136eb23c41248ff3514e3fe35f0dd1b289b017447974bf59aba3e910cc2"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/the-trust-economy-how-european-travelers-decide-who-to-believe",
+      "original_title_sha256": "9f925b9603c760de08286351ad8d09ae1aa914db9a8a8f2926f796fec2d6bf8f",
+      "publisher": "Phocuswright",
+      "published_at": "2026-09-02",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "9f925b9603c760de08286351ad8d09ae1aa914db9a8a8f2926f796fec2d6bf8f"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/ai-isnt-just-for-research-anymore-what-european-travelers-are-actually-doing-with-it",
+      "original_title_sha256": "705b1e9673c39eb5c1313a6e9e7ea4bddbac6a42fc53c5a2d89b953cded2d3aa",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-25",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "705b1e9673c39eb5c1313a6e9e7ea4bddbac6a42fc53c5a2d89b953cded2d3aa"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Technology-Innovation/Mountain-and-Ski-Travel-2026",
+      "original_title_sha256": "cf6e0402263749e359b3de1ee049e87e7cc994ba0024e04e7cb4fd3c16d9aeab",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-21",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "cf6e0402263749e359b3de1ee049e87e7cc994ba0024e04e7cb4fd3c16d9aeab"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/why-one-european-digital-identity-playbook-wont-work-for-three-markets",
+      "original_title_sha256": "2bf06b5983438818c70697b96ab12be3fcc4442de5a88bdd9358f39c0805560c",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-19",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "2bf06b5983438818c70697b96ab12be3fcc4442de5a88bdd9358f39c0805560c"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/China-Travel-Market-Essentials-2026",
+      "original_title_sha256": "afcba1a5bddbf7ae5b28e3e5da207f917cb6e73cb392998a58d18d1796471158",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-18",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "afcba1a5bddbf7ae5b28e3e5da207f917cb6e73cb392998a58d18d1796471158"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Technology-Innovation/In-Europe-Digital-Identity-Wins-on-Trust-Not-Convenience",
+      "original_title_sha256": "ecc530c4d8146fe31320e8e3585c49d525de7d1c837dde38205dfa72fc2e9662",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-12",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "ecc530c4d8146fe31320e8e3585c49d525de7d1c837dde38205dfa72fc2e9662"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/why-the-anz-travel-market-is-contracting-in-2026-and-what-recovers-by-2029",
+      "original_title_sha256": "1da5da4e8812ef88b316691a00d4ed7384ded9b5f381112721d5c858501134c1",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-12",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "1da5da4e8812ef88b316691a00d4ed7384ded9b5f381112721d5c858501134c1"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/shortterm-rentals-enter-a-new-phase-of-scrutiny-and-structural-growth",
+      "original_title_sha256": "b1b8a4e88b6a614353b37eeebd19cc0215ba1a8204ec235de3041fa1a4f4b737",
+      "publisher": "Phocuswright",
+      "published_at": "2026-08-05",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "b1b8a4e88b6a614353b37eeebd19cc0215ba1a8204ec235de3041fa1a4f4b737"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/Global-Short-Term-Rentals-2026",
+      "original_title_sha256": "a1a52e3537843683c6f8170e71b6feaeda7ff8d52cd351f61002aafad205e2f2",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-31",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "a1a52e3537843683c6f8170e71b6feaeda7ff8d52cd351f61002aafad205e2f2"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/tours-and-activities-are-outgrowing-travel-overall",
+      "original_title_sha256": "27664cbbf7c662b44503d333b5398a86031bce92dff308a2616ef3c277920f1d",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-29",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "27664cbbf7c662b44503d333b5398a86031bce92dff308a2616ef3c277920f1d"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/the-number-that-explains-why-otas-need-hotels-to-keep-working",
+      "original_title_sha256": "505113b463825f8a8979bd619c16b16f0f25a7d85a36d5a8e36841b4744a98bf",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-22",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "505113b463825f8a8979bd619c16b16f0f25a7d85a36d5a8e36841b4744a98bf"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/travel-experiences-2026",
+      "original_title_sha256": "f0f32f787f905d63970ece4cd50f1922bcede49658ce627d23dda73aaca13c30",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-21",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "f0f32f787f905d63970ece4cd50f1922bcede49658ce627d23dda73aaca13c30"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/Travel-Experiences-2026-Market-Sizing-Operator-and-Consumer-Behavior-Highlights",
+      "original_title_sha256": "8aa3807f31df731f4d6c905df0de6ef0d3c7f90f503d24acd3b9ba8076714601",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-20",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "8aa3807f31df731f4d6c905df0de6ef0d3c7f90f503d24acd3b9ba8076714601"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/the-ai-sure-hits-its-stride-5-takeaways-for-travel-leaders",
+      "original_title_sha256": "f7f7e762b3c231c57127f18f79f8d533b8ca9497b8bd4ca37cf18f8cd01a5e23",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-15",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "f7f7e762b3c231c57127f18f79f8d533b8ca9497b8bd4ca37cf18f8cd01a5e23"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/US-Online-Travel-Agency-Market-Essentials-2026",
+      "original_title_sha256": "64168d2c2eaef221c047c40219a877380b218ee0e90cc33b7570d638234eb048",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-14",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "64168d2c2eaef221c047c40219a877380b218ee0e90cc33b7570d638234eb048"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Research-Roundup-2Q26",
+      "original_title_sha256": "fd13b6f8b4155f11e31cd73f2dfcc989cebc0d94717b7f8846fdb37ceb4ab826",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-14",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "fd13b6f8b4155f11e31cd73f2dfcc989cebc0d94717b7f8846fdb37ceb4ab826"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-trends-prospects-q2-2026/",
+      "original_title_sha256": "d9e91d41555562e7725ffe1e9755e4a42ea22275eed9c2f65c96d423f8459699",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-07-09",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "d9e91d41555562e7725ffe1e9755e4a42ea22275eed9c2f65c96d423f8459699"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/ten-structural-shifts-redefining-asia-pacific-travel1",
+      "original_title_sha256": "2ecdc8c44bb88677e4bb7decb8c68a0e809caa227280dd7b281ceab782b8c1dc",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-08",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "2ecdc8c44bb88677e4bb7decb8c68a0e809caa227280dd7b281ceab782b8c1dc"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/snapshot-resident-satisfaction-with-tourism/",
+      "original_title_sha256": "892dca8d2af803cff01b3939790dc4085289359e0f0738d32e27f2ac66990a37",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-07-03",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "892dca8d2af803cff01b3939790dc4085289359e0f0738d32e27f2ac66990a37"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/European-travelers-are-changing-the-rules",
+      "original_title_sha256": "7fd24cbc4581ca1c9db4db3ea37d39cdb3d938de3ad705d0a386d779398b2214",
+      "publisher": "Phocuswright",
+      "published_at": "2026-07-02",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "7fd24cbc4581ca1c9db4db3ea37d39cdb3d938de3ad705d0a386d779398b2214"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-summer-autumn-2026/",
+      "original_title_sha256": "9deaf76501e6a250ff2562c117eac40e7a1db960114d7dd6e7b8db92136e5ed2",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-07-02",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "9deaf76501e6a250ff2562c117eac40e7a1db960114d7dd6e7b8db92136e5ed2"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "original_title_sha256": "371506db852f9cd480dcfa0db5b9f0746181fa20486f4d70e23f86cae6808a72",
+      "publisher": "OECD",
+      "published_at": "2026-06-30",
+      "status": "approved",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "371506db852f9cd480dcfa0db5b9f0746181fa20486f4d70e23f86cae6808a72"
+        },
+        {
+          "at": "2026-11-05",
+          "to": "approved",
+          "mode": "independent_factual_label",
+          "ko_title_sha256": "100638ecc04c5a0db46ba64c2607cf52cc15bc5e9df8be0af2c029e484432e4b",
+          "reviewer": "repository_scope_editorial_review"
+        }
+      ],
+      "original_title": "OECD Tourism Trends and Policies 2026",
+      "ko_title": "OECD 관광 보고서 · 2026년",
+      "mode": "independent_factual_label",
+      "rights": {
+        "status": "approved",
+        "basis": "Independent institution/year/topic bibliographic navigation label only; not a translation of expressive wording, not a research summary. Existing approved bibliographic metadata route retained. No blanket full-work translation claim.",
+        "evidence_url": "https://www.oecd.org/en/about/terms-conditions.html",
+        "verified_at": "2026-11-05",
+        "title_only": true
+      },
+      "accuracy": {
+        "status": "approved",
+        "reviewed_at": "2026-11-05",
+        "basis": "OECD name and publication year match title and public bibliographic date; tourism topic matches title/category; no findings added.",
+        "preserved_tokens": [
+          "OECD"
+        ],
+        "numbers": [
+          "2026"
+        ]
+      },
+      "note": "발행기관·연도·분야로 작성한 안내이며 원제의 공식 번역이나 연구 내용 요약이 아닙니다.",
+      "attribution": "OECD (2026), OECD Tourism Trends and Policies 2026, https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html"
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/US-Hotel-and-Lodging-2026-Slow-growth-a-stable-split-and-AI-waiting-at-the-door",
+      "original_title_sha256": "236cf7c2371e9fcf1a0b24060511def9ce8dd4bff349adbe509387f911aefbbb",
+      "publisher": "Phocuswright",
+      "published_at": "2026-06-25",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "236cf7c2371e9fcf1a0b24060511def9ce8dd4bff349adbe509387f911aefbbb"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/OTAs-lead-AI-res-and-traviselers-research-less-New-findings-from-three-key-European-markets",
+      "original_title_sha256": "2bfca845ebde3f3c67527c4301d3793e9d980958626ccb604dc227bb475df297",
+      "publisher": "Phocuswright",
+      "published_at": "2026-06-18",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "2bfca845ebde3f3c67527c4301d3793e9d980958626ccb604dc227bb475df297"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/long-haul-travel-barometer-2-2026/",
+      "original_title_sha256": "fc41f82dd19800f1a8c227f4ca715c5edad7c788651566714ae04986507691a1",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-06-15",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "fc41f82dd19800f1a8c227f4ca715c5edad7c788651566714ae04986507691a1"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Germany-sets-a-travel-spending-record-sustaining-it-wont-be-simple",
+      "original_title_sha256": "e54c017541167a061dc85779856ba4e3a18e9ba529d70431ec77436aa79bdab6",
+      "publisher": "Phocuswright",
+      "published_at": "2026-06-11",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e54c017541167a061dc85779856ba4e3a18e9ba529d70431ec77436aa79bdab6"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/The-US-car-rental-market-is-stabilizing-That-doesnt-mean-smooth",
+      "original_title_sha256": "e399d1924a74398c9df68b8e265bef9bd8ff95c7eb89987fb6341f4457ed5038",
+      "publisher": "Phocuswright",
+      "published_at": "2026-06-04",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e399d1924a74398c9df68b8e265bef9bd8ff95c7eb89987fb6341f4457ed5038"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Japan-inbound-boom-becomes-policy-priority",
+      "original_title_sha256": "e9aaa6983f77f38655dc1f15ae0f0c5cb14b49205eab26a90b0355c90ce97eb5",
+      "publisher": "Phocuswright",
+      "published_at": "2026-05-28",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e9aaa6983f77f38655dc1f15ae0f0c5cb14b49205eab26a90b0355c90ce97eb5"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/Japan-Travel-Market-Essentials-2026",
+      "original_title_sha256": "d97f11cd3f7c98704fc26e5cb0eb9e8246b35834bb789efe43e5599381d39dd1",
+      "publisher": "Phocuswright",
+      "published_at": "2026-05-26",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "d97f11cd3f7c98704fc26e5cb0eb9e8246b35834bb789efe43e5599381d39dd1"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/UK-travel-distribution-has-found-its-equilibrium-Will-it-stay-that-way",
+      "original_title_sha256": "b40b9d03aeb8d5d3a7659ba8651b84cdf19990f2aec3b64ad5627b7f648cc12a",
+      "publisher": "Phocuswright",
+      "published_at": "2026-05-21",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "b40b9d03aeb8d5d3a7659ba8651b84cdf19990f2aec3b64ad5627b7f648cc12a"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Wellness-tourism-hits-894B-and-the-real-growth-is-still-ahead",
+      "original_title_sha256": "78838302e7842dcaa48cb526390098b6cbb5e64d6d94c8006dbef7a9e30ae94d",
+      "publisher": "Phocuswright",
+      "published_at": "2026-05-14",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "78838302e7842dcaa48cb526390098b6cbb5e64d6d94c8006dbef7a9e30ae94d"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/proof-not-promises-a-practical-guide-to-the-eu-empowering-consumers-directive-for-destinations/",
+      "original_title_sha256": "241fe1bd12257701a0f9957d6d5cf12869468e69f661ab819147c945dbf2aba8",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-05-12",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "241fe1bd12257701a0f9957d6d5cf12869468e69f661ab819147c945dbf2aba8"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/US-Travel-Market-Report-2026",
+      "original_title_sha256": "b1eaab4eef73c4ad1cf32b69b89df858e3df01c4c0f58367c01392d0a437dc77",
+      "publisher": "Phocuswright",
+      "published_at": "2026-05-08",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "b1eaab4eef73c4ad1cf32b69b89df858e3df01c4c0f58367c01392d0a437dc77"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Spains-surge-signals-a-structural-shift-in-global-travel-demand",
+      "original_title_sha256": "0e971afed45cf5cb285802ea5c20a0299a3136c0ac4d4c5d29cffbd350b8c092",
+      "publisher": "Phocuswright",
+      "published_at": "2026-05-07",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "0e971afed45cf5cb285802ea5c20a0299a3136c0ac4d4c5d29cffbd350b8c092"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-trends-prospects-q1-2026/",
+      "original_title_sha256": "363f5f28f240e8ebab02ddc0fa95c9cd2768a4ebbaa63acb1a70f3145c5d84cd",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-05-07",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "363f5f28f240e8ebab02ddc0fa95c9cd2768a4ebbaa63acb1a70f3145c5d84cd"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Three-things-to-know-about-the-Italy-travel-market",
+      "original_title_sha256": "d29a2d6113d59bd10009996d7ed6bcc1c4e77ebada96efa980c7b784dd183514",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-30",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "d29a2d6113d59bd10009996d7ed6bcc1c4e77ebada96efa980c7b784dd183514"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Market-Overview-Sizing/Europe-Travel-Market-Report-2026",
+      "original_title_sha256": "936ac7e8fa497e0327d9ff9354ca3334f8ad617062ae1db7b98bb5cd5c3a8420",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "936ac7e8fa497e0327d9ff9354ca3334f8ad617062ae1db7b98bb5cd5c3a8420"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/What-premium-really-means-to-indulgent-travelers",
+      "original_title_sha256": "8ef2957c802d89c5e7e638f461a2ab07989a220118c2e225eac125cec7045b47",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "8ef2957c802d89c5e7e638f461a2ab07989a220118c2e225eac125cec7045b47"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-spring-summer-2026/",
+      "original_title_sha256": "251db13e7ee23c4d86676c7ee4bd3cd3f7cdfc083c83b9cba1715bad8dc2c7ae",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-04-20",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "251db13e7ee23c4d86676c7ee4bd3cd3f7cdfc083c83b9cba1715bad8dc2c7ae"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/South-Africas-tourism-reset-Infrastructure-fintech-and-regional-strength-set-the-stage-for-growth",
+      "original_title_sha256": "0484149d4ab6f1765005aef26cfc2fba6fdb398a82fa3f50fcdb1b95e105a700",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-16",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "0484149d4ab6f1765005aef26cfc2fba6fdb398a82fa3f50fcdb1b95e105a700"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/understanding-european-conscious-traveller-segments/",
+      "original_title_sha256": "098028d016577da28b1aa40c050463d06ed6d13e40d7ac145e9d1b9ad4c715a6",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-04-10",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "098028d016577da28b1aa40c050463d06ed6d13e40d7ac145e9d1b9ad4c715a6"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Research-Roundup-1Q26",
+      "original_title_sha256": "db83d7f175ba443a103a4b31827218020ee8ffcad92fc3923d7df4bc0a92e8e9",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-09",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "db83d7f175ba443a103a4b31827218020ee8ffcad92fc3923d7df4bc0a92e8e9"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Decoding-the-indulgent-explorer-What-drives-today-s-premium-travel-decisions",
+      "original_title_sha256": "1da8248aaab22f95df49108bc64823e3faba6fd217f6ea9c88e50daac5843bcb",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-09",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "1da8248aaab22f95df49108bc64823e3faba6fd217f6ea9c88e50daac5843bcb"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Chinese-OTAs-deploy-AI-for-big-global-push",
+      "original_title_sha256": "dd0cdf0694739d40040ba8f15412410ea6bcbe3cfa311a89adf4be43bb490cc7",
+      "publisher": "Phocuswright",
+      "published_at": "2026-04-02",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "dd0cdf0694739d40040ba8f15412410ea6bcbe3cfa311a89adf4be43bb490cc7"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/The-fastest-shift-in-travel-behavior-just-became-the-default",
+      "original_title_sha256": "ea16a1824a5da28e9b1431c7f722118dc870d8cf2cf31f3cbbc5407af8db88f6",
+      "publisher": "Phocuswright",
+      "published_at": "2026-03-19",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "ea16a1824a5da28e9b1431c7f722118dc870d8cf2cf31f3cbbc5407af8db88f6"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/the-two-operational-priorities-that-define-ai-success",
+      "original_title_sha256": "9ae1189fb0c7c45d7a10491025c7faf62e20f5433b2ec814cdedad0e29fbf34e",
+      "publisher": "Phocuswright",
+      "published_at": "2026-03-11",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "9ae1189fb0c7c45d7a10491025c7faf62e20f5433b2ec814cdedad0e29fbf34e"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/assessment-of-responsible-travel-behaviours-of-long-haul-travellers-to-europe/",
+      "original_title_sha256": "57b963441e37dc72981290e35d6e07c66b7dbbe14a83a3421ec34209d1be45fe",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-03-10",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "57b963441e37dc72981290e35d6e07c66b7dbbe14a83a3421ec34209d1be45fe"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/is-gen-z-really-disloyal",
+      "original_title_sha256": "14db97ec2e740dd0dd41ab671d21a908653e6d910a38a78a200a25fb53289bb4",
+      "publisher": "Phocuswright",
+      "published_at": "2026-03-04",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "14db97ec2e740dd0dd41ab671d21a908653e6d910a38a78a200a25fb53289bb4"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/travels-third-largest-sector-faces-defining-decade",
+      "original_title_sha256": "7c333c932f4d6e32f8606e6e312d7e4ef7cb4f08e31241988604601977c567a4",
+      "publisher": "Phocuswright",
+      "published_at": "2026-02-26",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "7c333c932f4d6e32f8606e6e312d7e4ef7cb4f08e31241988604601977c567a4"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/canadas-travel-advisor-market-holds-steady-as-costs-rise-and-tech-evolves",
+      "original_title_sha256": "75725b9653a3ec980b414dec1c01ddcb2ec04c338b026ce9e1cc43474bf7202f",
+      "publisher": "Phocuswright",
+      "published_at": "2026-02-18",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "75725b9653a3ec980b414dec1c01ddcb2ec04c338b026ce9e1cc43474bf7202f"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-2025-trends-prospects-q4-2025/",
+      "original_title_sha256": "72579f485434fb32516bbc96fbc1de9971613dcb6af3b0d956ce6c5a71616d9d",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-02-18",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "72579f485434fb32516bbc96fbc1de9971613dcb6af3b0d956ce6c5a71616d9d"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Report-Preview-Phocuswrights-Travel-Innovation-and-Technology-Trends-2026",
+      "original_title_sha256": "a9eef58dcce96c595d7502735509551ceddf6442ffd0c126f311719831341d77",
+      "publisher": "Phocuswright",
+      "published_at": "2026-02-11",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "a9eef58dcce96c595d7502735509551ceddf6442ffd0c126f311719831341d77"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/long-haul-travel-barometer-1-2026/",
+      "original_title_sha256": "e725f2936fab70f65b310c6acc433ad8cde2a51dd03fd3386557cff8eb32ee4d",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-02-09",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e725f2936fab70f65b310c6acc433ad8cde2a51dd03fd3386557cff8eb32ee4d"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Technology-Innovation/Travel-Innovation-and-Technology-Trends-2026",
+      "original_title_sha256": "1036956b9d9d189fb9011176f65298540ca652304866635b9aae84cce13d51bc",
+      "publisher": "Phocuswright",
+      "published_at": "2026-02-04",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "1036956b9d9d189fb9011176f65298540ca652304866635b9aae84cce13d51bc"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/61-of-travel-business-surveyed-experimenting-with-or-scaling-agentic-ai",
+      "original_title_sha256": "dd53bb59818c65ff8ce52d73a3ce476e7b6e72dd4752eb04e2d3ca008bb94ce0",
+      "publisher": "Phocuswright",
+      "published_at": "2026-02-04",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "dd53bb59818c65ff8ce52d73a3ce476e7b6e72dd4752eb04e2d3ca008bb94ce0"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/four-signals-from-the-front-lines-of-ai-investment",
+      "original_title_sha256": "839d612e3249e384d213317484d573983428319a84d04c45b094f7e0acd3b565",
+      "publisher": "Phocuswright",
+      "published_at": "2026-01-28",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "839d612e3249e384d213317484d573983428319a84d04c45b094f7e0acd3b565"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Consumer-Trends/Budgets-Barriers-and-the-Race-to-Agentic-AI",
+      "original_title_sha256": "77371908c37f17ee9a538101a8de13f70340a228a76dad1a1ce6c7e6ed715a3b",
+      "publisher": "Phocuswright",
+      "published_at": "2026-01-26",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "77371908c37f17ee9a538101a8de13f70340a228a76dad1a1ce6c7e6ed715a3b"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/travelers-love-points-but-how-bout-brands",
+      "original_title_sha256": "48837e91e2188ebab0c4c3ede14c93634f84e6a4abd6a3d41d402f211073f432",
+      "publisher": "Phocuswright",
+      "published_at": "2026-01-21",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "48837e91e2188ebab0c4c3ede14c93634f84e6a4abd6a3d41d402f211073f432"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/the-advisor-advantage",
+      "original_title_sha256": "d48fcb0521edf6046f374d5c301a361a337f1006bb6327cf8f0baf76e2d0685b",
+      "publisher": "Phocuswright",
+      "published_at": "2026-01-14",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "d48fcb0521edf6046f374d5c301a361a337f1006bb6327cf8f0baf76e2d0685b"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/26-data-driven-insights-to-make-your-organization-smarter",
+      "original_title_sha256": "72f744bd53947205d38354f80fd7b62db8c6ed873d333ec98b008513d8697ed6",
+      "publisher": "Phocuswright",
+      "published_at": "2026-01-08",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "72f744bd53947205d38354f80fd7b62db8c6ed873d333ec98b008513d8697ed6"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/Phocuswright-Research-Roundup-2H25",
+      "original_title_sha256": "eeb12cd646d963db712e1e7bec69d51a0306b5590cc87c35eff4d646efedb922",
+      "publisher": "Phocuswright",
+      "published_at": "2025-12-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "eeb12cd646d963db712e1e7bec69d51a0306b5590cc87c35eff4d646efedb922"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/what-japan-travel-looks-like-after-the-comeback",
+      "original_title_sha256": "56e17ceafe43bb9935d25663a99e7f7a65a1f13f0a6263037de12cb13b2db892",
+      "publisher": "Phocuswright",
+      "published_at": "2025-12-22",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "56e17ceafe43bb9935d25663a99e7f7a65a1f13f0a6263037de12cb13b2db892"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/playing-favorites",
+      "original_title_sha256": "9137aa43a26af66e60928a5a70a60fb1174f3742edf511b58896d465486970b8",
+      "publisher": "Phocuswright",
+      "published_at": "2025-12-17",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "9137aa43a26af66e60928a5a70a60fb1174f3742edf511b58896d465486970b8"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Travel-Forward-Data-Insights-and-Trends-for-2026",
+      "original_title_sha256": "d9eb3138afa17f6acbc1d5fe062b1782a95f5b8b654d9ce50da3db95fb31bbd4",
+      "publisher": "Phocuswright",
+      "published_at": "2025-12-10",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "d9eb3138afa17f6acbc1d5fe062b1782a95f5b8b654d9ce50da3db95fb31bbd4"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/novelty-and-loyalty-at-odds",
+      "original_title_sha256": "1f128cf8e859ea9da6bac8773d01546c503ead27496d1308ba903b2ad11f0c65",
+      "publisher": "Phocuswright",
+      "published_at": "2025-12-10",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "1f128cf8e859ea9da6bac8773d01546c503ead27496d1308ba903b2ad11f0c65"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-2025-trends-prospects-q3-2025/",
+      "original_title_sha256": "8a4f7a08aa8cbdf85631c7cb9fae031d1fa5b2366142817c7fdff139788530b0",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-11-13",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "8a4f7a08aa8cbdf85631c7cb9fae031d1fa5b2366142817c7fdff139788530b0"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.phocuswright.com/Travel-Research/Consumer-Trends/Search-Slips-AI-Surges-Travels-New-Front-Door",
+      "original_title_sha256": "e363ed1d0dba2357004ab00b2846e75d3d37bbf869f2f27c83aadaf4c144a2fc",
+      "publisher": "Phocuswright",
+      "published_at": "2025-11-12",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "e363ed1d0dba2357004ab00b2846e75d3d37bbf869f2f27c83aadaf4c144a2fc"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-autumn-25-winter-2026/",
+      "original_title_sha256": "54ca61f0b0e3ce9dd2bdc11835f05766863110122f8e4f63af1190a348b0d771",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-11-06",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "54ca61f0b0e3ce9dd2bdc11835f05766863110122f8e4f63af1190a348b0d771"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/long-haul-travel-barometer-3-2025/",
+      "original_title_sha256": "2a60680e5f91312fb404379b39334b14e08282ad8656b008d7b1f5735c772687",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-10-09",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "2a60680e5f91312fb404379b39334b14e08282ad8656b008d7b1f5735c772687"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/futureproofing-european-tourism-through-scenario-planning-and-strategic-foresight/",
+      "original_title_sha256": "fb7301ca8a1e5765029903abc338b521c8f99e115922ae70253cf6c992bb0526",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-09-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "fb7301ca8a1e5765029903abc338b521c8f99e115922ae70253cf6c992bb0526"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/artificial-intelligence-ai-in-tourism-assessing-and-supporting-ntos-research-marketing-operations/",
+      "original_title_sha256": "304128707355e277ac24c57bee818176b01f67f509a5ada96c7918e826ede823",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-09-04",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "304128707355e277ac24c57bee818176b01f67f509a5ada96c7918e826ede823"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-summer-autumn-2025/",
+      "original_title_sha256": "5bf75ccb32bba542840074ea3b2034a50654629b6631f9f49f819e1bbc38abe8",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-07-16",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "5bf75ccb32bba542840074ea3b2034a50654629b6631f9f49f819e1bbc38abe8"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-2025-trends-prospects-q2-2025/",
+      "original_title_sha256": "933dcf6550a66765b1f600d26cf21645277d302e866eebcebcfd4ad5e346d2ce",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-07-03",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "933dcf6550a66765b1f600d26cf21645277d302e866eebcebcfd4ad5e346d2ce"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/long-haul-travel-barometer-2-2025/",
+      "original_title_sha256": "0778a7137601ad71a334f7a3ef2d858af0c7a3afe77658375358804f41f4ab51",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-06-10",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "0778a7137601ad71a334f7a3ef2d858af0c7a3afe77658375358804f41f4ab51"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/a-destinations-guide-to-the-new-eu-sustainability-regulations/",
+      "original_title_sha256": "84a2f971a155740468779e1cb07fc92382ef466e1a6b3df1814e65134a01dea7",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-05-22",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "84a2f971a155740468779e1cb07fc92382ef466e1a6b3df1814e65134a01dea7"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-2025-trends-prospects-q1-2025/",
+      "original_title_sha256": "f40a6ad424dcbbbd1f74f6a98a52352b4eb28d99ec5ff23e68297b45dd00a315",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-05-07",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "f40a6ad424dcbbbd1f74f6a98a52352b4eb28d99ec5ff23e68297b45dd00a315"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/monitoring-sentiment-for-intra-european-travel-spring-summer-2025/",
+      "original_title_sha256": "66432c07c56aa753c2b4893ce317477ee88fac5f2d8a601f37cc4df7e7009487",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-04-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "66432c07c56aa753c2b4893ce317477ee88fac5f2d8a601f37cc4df7e7009487"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-2024-trends-prospects-q4-2024/",
+      "original_title_sha256": "bdfa71be627d815148da8c0100f8711c0227e2afc265472b97655683af387365",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-02-18",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "bdfa71be627d815148da8c0100f8711c0227e2afc265472b97655683af387365"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/long-haul-travel-barometer-1-2025/",
+      "original_title_sha256": "1508c953d3b88e67f8dc68db74db4281ea291ac8b745ad74acb47bc7a0dd735e",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-02-03",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "1508c953d3b88e67f8dc68db74db4281ea291ac8b745ad74acb47bc7a0dd735e"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/roadmap-for-national-tourism-organisations-towards-climate-action-in-destinations/",
+      "original_title_sha256": "31aa1eea6554dde804182d290d548c4ca02567900e7a358ac38ad5ea42e55b3f",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2025-01-23",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "31aa1eea6554dde804182d290d548c4ca02567900e7a358ac38ad5ea42e55b3f"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://etc-corporate.org/reports/european-tourism-2024-trends-prospects-q3-2024/",
+      "original_title_sha256": "cb284e436a4a8bb02c0e11c8fbd15b2234a6c52aefab8ac87e44cf6a9c9374ce",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2024-11-07",
+      "status": "review",
+      "reason": "title adaptation/translation permission or factual-label editorial review not completed",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "cb284e436a4a8bb02c0e11c8fbd15b2234a6c52aefab8ac87e44cf6a9c9374ce"
+        }
+      ]
+    },
+    {
+      "kind": "research",
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "original_title_sha256": "9bfb0ca997ab8e3341b68c443a02f0fcbcefb6f82f748c5a50357aa45baa2acf",
+      "publisher": "OECD",
+      "published_at": "2024-07-08",
+      "status": "approved",
+      "history": [
+        {
+          "at": "2026-11-05",
+          "to": "review",
+          "original_title_sha256": "9bfb0ca997ab8e3341b68c443a02f0fcbcefb6f82f748c5a50357aa45baa2acf"
+        },
+        {
+          "at": "2026-11-05",
+          "to": "approved",
+          "mode": "independent_factual_label",
+          "ko_title_sha256": "dfc4f691c59c42ee213759c041ee55f6344eb8f58e8bc8fdbcc0adb17831ac38",
+          "reviewer": "repository_scope_editorial_review"
+        }
+      ],
+      "original_title": "OECD Tourism Trends and Policies 2024",
+      "ko_title": "OECD 관광 보고서 · 2024년",
+      "mode": "independent_factual_label",
+      "rights": {
+        "status": "approved",
+        "basis": "Independent institution/year/topic bibliographic navigation label only; not a translation of expressive wording, not a research summary. Existing approved bibliographic metadata route retained. No blanket full-work translation claim.",
+        "evidence_url": "https://www.oecd.org/en/about/terms-conditions.html",
+        "verified_at": "2026-11-05",
+        "title_only": true
+      },
+      "accuracy": {
+        "status": "approved",
+        "reviewed_at": "2026-11-05",
+        "basis": "OECD name and publication year match title and public bibliographic date; tourism topic matches title/category; no findings added.",
+        "preserved_tokens": [
+          "OECD"
+        ],
+        "numbers": [
+          "2024"
+        ]
+      },
+      "note": "발행기관·연도·분야로 작성한 안내이며 원제의 공식 번역이나 연구 내용 요약이 아닙니다.",
+      "attribution": "OECD (2024), OECD Tourism Trends and Policies 2024, https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html"
+    }
+  ]
+}
