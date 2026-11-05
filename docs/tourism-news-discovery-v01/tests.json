@@ -96,6 +96,26 @@
   },
   "pipeline": "validate(after, before=baseline) passed; operational file inventory remains 30 JSON",
   "github_ci": {
-    "status": "pending_PR_submission"
+    "status": "success",
+    "tested_code_commit": "a86e871f6a5c96eb243f2fbc3c5616d31c26ec08",
+    "checks": [
+      {
+        "workflow": "Macro Monitor official statistics",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41975668662/job/127073806480"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41975668778/job/127073806443"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41975668641/job/127073806207"
+      }
+    ],
+    "production_jobs": "collect-and-publish all skipped in PR",
+    "note": "Following commit records results only; engine/config/test code identical."
   }
 }

@@ -150,7 +150,7 @@ API의 publisher_code는 검증된 publishers 매핑의 source_id/publisher_id�
 - 기존 PR #19 전체 파이프라인 테스트 및 validate(after, before=baseline) 통과. 뉴스 63, 원장 77, 발견 2824, Research 135, Macro 483개 관측. 원 ID·URL·발행일·최초 발견/게시 시각·발견 기록·권리 전환·확정 브리핑·리서치/통계 이력을 보존했다.
 - Research 공개/원장, Macro 공개/원장, 확정 브리핑 아카이브/선정 원장은 **바이트 동일**. 원본 운영 스냅샷 31개 manifest 해시(control 포함)도 그대로다. site/, collector_state/, sources.json, pipeline.json 및 모델/DB/로고는 Git 변경이 없다.
 - 변경한 deploy.yml 단독 actionlint 통과. 전체 lint에서는 기존 actionlint 1.7.12가 기존 pipeline.yml의 신형 concurrency.queue 키를 인식하지 못했다. 해당 기존 큐를 변경하지 않았으며 실제 GitHub CI를 별도로 확인한다.
-- GitHub CI는 PR 제출 후 확인 결과를 아래에 추가한다. 로컬 브라우저 검사와 GitHub Python CI는 구분한다. PR에서 운영 수집/배포는 실행하지 않는다.
+- **GitHub CI: 코드 커밋 `a86e871f`의 Python 검사 3개 모두 SUCCESS** — [뉴스](https://github.com/Serhankeem/tourismnews/actions/runs/41975668641), [Research](https://github.com/Serhankeem/tourismnews/actions/runs/41975668778), [Macro](https://github.com/Serhankeem/tourismnews/actions/runs/41975668662). collect-and-publish 3개는 기존 main 전용 조건으로 SKIPPED다. 후속 커밋은 결과 기록뿐이며, 로컬 브라우저와 GitHub Python CI는 구분한다.
 
 재현: `python -m unittest discover -s tests -v`, 새 계층만 `python -m unittest discover -s tests -p test_news_discovery_v01.py -v`. 브라우저는 PR #19의 격리 Pages 합성 후 `TOURISM_TEST_URL=http://127.0.0.1:<port> node tests/<suite>.smoke.cjs`. 테스트 문서 [tests.json](tests.json) 참고. 실제 기사·API 응답 원본은 커밋하지 않았으므로 다른 시점의 실호출 결과는 달라질 수 있다.
 
@@ -162,3 +162,7 @@ API의 publisher_code는 검증된 publishers 매핑의 source_id/publisher_id�
 4. 현재 **등록해야 할 필수 GitHub Secret은 없다**. 실제 계약 확정 뒤 사용할 제안 이름은 문체부 `TOURISM_MCST_PRESS_API_KEY`, 경기도 `TOURISM_GG_PRESS_API_KEY`, 네이버 `TOURISM_NAVER_CLIENT_ID`/`TOURISM_NAVER_CLIENT_SECRET`, 뉴스와이어 `TOURISM_NEWSWIRE_PARTNER_ID`/`TOURISM_NEWSWIRE_HMAC_SECRET`이다. 인증 방식이 미확인인 공공 API의 이름은 계획값이며 바인딩도 없다. 실제 키를 코드·PR·로그·공개 JSON에 기록하지 않는다.
 5. Secret 등록만으로 동작하지 않는다. 공식 계약별 adapter/auth 바인딩·응답 스키마·다중 발행처 등록/도메인 검증·네 권한 근거를 채우고 격리 실호출을 통과한 뒤, 사용자 승인으로 설정 및 기존 workflow의 필요한 env 바인딩을 연결해야 한다. 이번에는 후보 키를 workflow에 노출시키지 않았다.
 6. 승인된 기관부터 2–3곳의 실제 공급량·공개량을 검증하고, 호출 주기/페이지네이션/수정·삭제 의무를 계약에 맞춰 구현한다. 현재 단계는 **확장 가능한 기술 기반 구현, 실제 공급 확대 미완료**다. 이후 사용자가 병합·운영 전환을 승인한 뒤 운영 수집·data/live 영속 저장·Pages 지속 반영을 별도로 검증해야 한다.
+
+### 검증 중 독립적으로 갱신된 운영 상태
+
+기존 main 자동화가 `data/live`를 `e5e8b4c391008e75ec5c690c688d72d76025ace1`로 갱신한 것을 읽기 전용으로 추가 확인했다. manifest의 policy_code_commit은 main `a1b8f43`이며 PR #21 코드가 아니다. 마지막 뉴스 성공 2026-11-05 14:12:17 KST, 기존 출처 성공 17/26, 공개 뉴스 63, 원장 76, 발견 2818, Research 135, Macro 483개 관측이었다. 원래 기준 스냅샷에 대한 보존 검증도 통과했다. 이 운영 성공 수 17과 격리 실응답 실험의 24를 같은 실행으로 섞지 않는다. 위 Before/After는 최초 고정 스냅샷으로 유지하며, 격리 실험 원장의 77건을 실제 운영 76건으로 잘못 보고하지 않는다. 이번 작업이 운영 커밋/배포를 만든 것은 아니며 지속 성공 검증을 대신하지 않는다. [읽기 전용 관측](latest-operation-observation.json) 참고.
