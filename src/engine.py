@@ -3,6 +3,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import re
 import tempfile
 import urllib.parse
 from pathlib import Path
@@ -14,6 +15,7 @@ if __package__:
     from .publication import public_record
     from .visibility import PublicationGate
     from .coverage import coverage
+    from .diversity import article_domain_allowed
     from .editorial import project, exposure, is_statistical, statistical_assessment
 else:
     import collector as c
@@ -22,6 +24,7 @@ else:
     from publication import public_record
     from visibility import PublicationGate
     from coverage import coverage
+    from diversity import article_domain_allowed
     from editorial import project, exposure, is_statistical, statistical_assessment
 
 
@@ -69,13 +72,15 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     source_metrics = c.read_json(state_dir / 'source_metrics.json', {}).get('sources', {})
     prepared, errors, health, metadata = {}, {}, [], {}
     run_ids = set()
+    cohorts = {}
     for source in sources:
         if not source.get('enabled', True):
             continue
         sid = source['id']
+        cohort = cohorts[sid] = {k: set() for k in ('observed', 'candidates', 'approved', 'rights_held', 'irrelevant')}
         row = {'id': sid, 'name': source['name'], 'url': source['url'], 'group': source.get('group', 'public'),
                'fetch_attempted': False, 'news_classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
-               'received': 0, 'new_discoveries': 0, 'duplicates': 0, 'rights_holds': 0, 'date_holds': 0, 'invalid_metadata': 0, 'outside_window': 0,
+               'received': 0, 'new_discoveries': 0, 'duplicates': 0, 'rights_holds': 0, 'date_holds': 0, 'invalid_metadata': 0, 'outside_window': 0, 'attribution_holds': 0,
                'classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
                'publication_policy': source.get('publication', {'status': 'review'}),
                'backfill': source.get('backfill', {'mode': 'provided_feed_only', 'max_days': days})}
@@ -95,6 +100,11 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                 title, url = c.stripped(item.get('title', '')), c.canonical_url(item.get('link', ''))
                 if not title or not url:
                     row['invalid_metadata'] += 1
+                    continue
+                if not article_domain_allowed(source, url):
+                    # Do not attribute a relay/third-party URL to this publisher.
+                    # Existing stored records remain untouched.
+                    row['attribution_holds'] += 1
                     continue
                 if 'description' not in source.get('analysis_fields', ['title']):
                     item = {k: v for k, v in item.items() if k not in ('description', 'summary')}
@@ -146,6 +156,20 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                     row['rights_holds'] += 1
                 if assessment['label'] != 'Irrelevant' and not published:
                     row['date_holds'] += 1
+                if (published and at - dt.timedelta(days=7) <= published <= at
+                        and item.get('date_precision') != 'date'
+                        and not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(item.get('pubDate') or item.get('published') or '').strip())
+                        and item.get('publication_time_verified_for_news') is not False
+                        and not is_statistical(source) and item.get('record_type', 'news') == 'news'):
+                    cohort['observed'].add(aid)
+                    if assessment['label'] == 'Irrelevant':
+                        cohort['irrelevant'].add(aid)
+                    else:
+                        cohort['candidates'].add(aid)
+                        if not permission(source):
+                            cohort['rights_held'].add(aid)
+                        elif c.article_from_item({**item, 'title': title, 'link': url}, source, at, reviews or {}):
+                            cohort['approved'].add(aid)
                 status = ('exclude' if assessment['decision'] == 'exclude' else
                           'rights_hold' if not permission(source) else
                           'date_hold' if not published else assessment['decision'])
@@ -270,6 +294,20 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     published_ids = {a['id'] for a in public_records}
     new_published = published_ids - old_ids
     for row in health:
+        cohort = cohorts[row['id']]
+        # Compare unique IDs in this run's 7-day cohort, never cumulative stock
+        # against a feed's observation count. An outage is unknown, not zero.
+        public = {a['id'] for a in newsroom if a['source_id'] == row['id']}
+        n, approved = len(cohort['candidates']), len(cohort['approved'])
+        visible = len(cohort['candidates'] & public)
+        row['news_conversion_last7d'] = None if row['status'] != 'ok' else {
+            'observed_unique': len(cohort['observed']), 'industry_candidates': n,
+            'approved_candidates': approved, 'public_observed_candidates': visible,
+            'new_public_candidates': len(cohort['candidates'] & public & new_published),
+            'irrelevant_unique': len(cohort['irrelevant']), 'rights_held_unique': len(cohort['rights_held']),
+            'candidate_to_approved': approved / n if n else None,
+            'candidate_to_public': visible / n if n else None,
+            'definition': 'unique_URL_IDs_in_successful_feed_this_run; verified_publication_in_last7d; approval_includes_Indirect_review; public_count_requires_matching_source_id; new_excludes_existing_archive; non_news_excluded'}
         row['new_auto_published'] = sum(a['id'] in new_published and a['source_id'] == row['id'] for a in articles)
         row['new_newsroom_items'] = sum(a['id'] in new_published and a['source_id'] == row['id'] for a in newsroom)
         row['outcome'] = ('fetch_failed' if row['status'] != 'ok' else 'auto_published' if row['new_auto_published'] else

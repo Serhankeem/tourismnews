@@ -1,0 +1,506 @@
+{
+  "purpose": "research_only_not_read_by_engine; candidates_are_not_registered_or_approved_sources",
+  "checked_date": "2026-11-05",
+  "candidates": [
+    {
+      "name": "투어코리아",
+      "media_type": "tourism_specialist",
+      "official_page": "https://www.tournews21.com/",
+      "official_feed": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+      "terms_url": "https://www.tournews21.com/com/copyright.html",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 RSS 50건 수신. 저작권 정책 제2조 사전 허가 및 승인 요구; 제목·링크 색인 예외 미확인.",
+      "last7d_industry_candidates": 1,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "호텔앤레스토랑",
+      "media_type": "tourism_specialist",
+      "official_page": "https://www.hotelrestaurant.co.kr/",
+      "official_feed": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+      "terms_url": "https://www.hotelrestaurant.co.kr/com/copyright.html",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 RSS 50건 수신. 저작권 정책의 사전 허가와 메타데이터 색인 범위 관계 미확인.",
+      "last7d_industry_candidates": 2,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "한국MICE협회",
+      "media_type": "industry_association",
+      "official_page": "https://www.micekorea.or.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "실제 협회 홈페이지와 /page/press-release 확인. RSS/API 및 외부 제목 색인 허가 미확인. 구 도메인 koreamice.or.kr는 robots 확인 실패.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "한국경제",
+      "media_type": "general_economy",
+      "official_page": "https://www.hankyung.com/feed",
+      "official_feed": "https://www.hankyung.com/feed/economy",
+      "terms_url": "https://id.hankyung.com/user/selectAuthAgree.do",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 RSS 50건 수신. 이용약관 사전 승낙 없는 복제·타인 제공 제한; 공개 플랫폼 색인 허용 미확인.",
+      "last7d_industry_candidates": 0,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "서울경제",
+      "media_type": "general_economy",
+      "official_page": "https://www.sedaily.com/rss",
+      "official_feed": null,
+      "terms_url": "https://www.sedaily.com/rss",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "RSS 안내가 개인 이용자의 비상업적 사용만 허용. 무료 공개 플랫폼을 개인 구독으로 간주하지 않음. 제한 확인 뒤 피드 미호출.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "파이낸셜뉴스",
+      "media_type": "general_economy",
+      "official_page": "https://www.fnnews.com/",
+      "official_feed": null,
+      "terms_url": "https://www.fnnews.com/userinfo/copyright",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 홈·저작권규약·제휴 안내 확인. DB/정보서비스 사전허가 제한 및 콘텐츠 계약 경로. 제목 전용 공개·자동 접근 계약 범위/비용 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "아시아경제",
+      "media_type": "general_economy",
+      "official_page": "https://www.asiae.co.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "robots_disallowed. RSS/API·약관·7일 후보 미확인, 제한 우회 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "이데일리",
+      "media_type": "general_economy",
+      "official_page": "https://www.edaily.co.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "홈 요청 HTTP 406. 거부 원인·공식 RSS/API·공개 조건 미확인. 헤더 위장 등 우회 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "매일경제",
+      "media_type": "general_economy",
+      "official_page": "https://www.mk.co.kr/rss/",
+      "official_feed": "https://www.mk.co.kr/rss/50100032/",
+      "terms_url": "https://www.mk.co.kr/mypage/policy",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 RSS 50건 및 일반 약관 확인. 구독 안내로 공개 재배포 허가를 추정하지 않음. 메타데이터 자동 색인 별도 허가 미확인.",
+      "last7d_industry_candidates": 1,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "뉴스1",
+      "media_type": "general_news",
+      "official_page": "https://www.news1.kr/",
+      "official_feed": null,
+      "terms_url": "https://www.news1.kr/customer/agreement",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "약관에서 로봇·매크로·스파이더·스크래퍼 자동 수집/이용 및 사전 서면 동의 없는 크롤링·스크래핑 금지 확인. 기사·검색·피드 수집 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "뉴시스",
+      "media_type": "general_news",
+      "official_page": "https://www.newsis.com/RSS/",
+      "official_feed": "https://www.newsis.com/RSS/industry.xml",
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 RSS 100건. 저작권 링크가 JS 팝업이며 공개 제목 색인 허가 검증 미완료. RSS 존재만으로 승인하지 않음.",
+      "last7d_industry_candidates": 0,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "연합뉴스",
+      "media_type": "general_news",
+      "official_page": "https://www.yna.co.kr/rss",
+      "official_feed": "https://www.yna.co.kr/rss/economy.xml",
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "안내 URL HTTP 400; 기존 경제 RSS는 이번 실호출 XML 120건 정상. 기존 publication=review 유지, 공개 허가 미확인.",
+      "last7d_industry_candidates": 0,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": "yonhap"
+    },
+    {
+      "name": "동아닷컴",
+      "media_type": "general_news",
+      "official_page": "https://www.donga.com/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "robots.txt HTTP 503으로 확인 불가. 공식 수집 경로·이용 범위·7일 후보 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "세계일보",
+      "media_type": "general_news",
+      "official_page": "https://www.segye.com/rssInfo",
+      "official_feed": "https://www.segye.com/Articles/RSSList/segye_economy.xml",
+      "terms_url": "https://oncompany.segye.com/service/digitalNewsRules",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 RSS 20건 최초 진단 후 디지털뉴스이용규칙 확인. 개인 구독과 무허가 공중 배포 금지 구분. 공개 자동 색인 승인 없음; 이후 미연동.",
+      "last7d_industry_candidates": 0,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "한국관광공사",
+      "media_type": "public",
+      "official_page": "https://www.knto.or.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "robots 확인 중 전송 오류. 공식 홈페이지 이용 조건/API 경로 검증 미완료; 관광지 정보 API를 산업 뉴스로 간주 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "서울관광재단",
+      "media_type": "public",
+      "official_page": "https://www.sto.or.kr/press",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 메뉴 /press 보도자료 확인. Accept에 따라 HTML/서버 모델 JSON 응답. 서버 모델을 공식 뉴스 API로 간주 안 함. 재사용·공공누리·RSS/API 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "인천관광공사",
+      "media_type": "public",
+      "official_page": "https://www.ito.or.kr/main/",
+      "official_feed": null,
+      "terms_url": "https://www.ito.or.kr/main/guidance/copyright.jsp",
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "보도자료 메뉴 /main/board/report.jsp 및 저작권보호정책 확인. RSS/API·개별 자료 공개이용허락 범위 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "부산관광공사",
+      "media_type": "public",
+      "official_page": "https://www.bto.or.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "robots_disallowed. 수집/우회 안 함; 이용조건/후보 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "경기관광공사",
+      "media_type": "public",
+      "official_page": "https://www.gto.or.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "robots.txt HTTP 503; 조건 확인 실패, 피드 추측/우회 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "제주관광공사",
+      "media_type": "public",
+      "official_page": "https://ijto.or.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "홈 HTTP 200. 공식 RSS/API 및 뉴스 메타데이터 공개 조건 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "대한항공 뉴스룸",
+      "media_type": "corporate",
+      "official_page": "https://news.koreanair.com/feed/",
+      "official_feed": "https://news.koreanair.com/feed/",
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "기존 RSS 실제 응답 검증, 기존 review 유지. 공개 재사용 조건 승인하지 않음.",
+      "last7d_industry_candidates": 0,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": "koreanair"
+    },
+    {
+      "name": "야놀자그룹",
+      "media_type": "corporate",
+      "official_page": "https://www.yanoljagroup.com/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 /press_release 및 /news_coverage 메뉴 확인. RSS/API·외부 색인 허가 미확인. 원문 개별 본문 수집 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "하나투어",
+      "media_type": "corporate",
+      "official_page": "https://www.hanatourcompany.com/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "HTTPS 요청 중 HTTP 다운그레이드 리디렉션으로 https_public_endpoint_required. 따라가지 않음; 공식 수집·게시 조건 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "여기어때",
+      "media_type": "corporate",
+      "official_page": "https://www.gccompany.co.kr/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 홈 HTTP 200. 공식 RSS/API·제목 색인 허가 미확인. LinkedIn 등 외부 목록 수집 안 함.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    },
+    {
+      "name": "호텔신라",
+      "media_type": "corporate",
+      "official_page": "https://www.hotelshilla.net/",
+      "official_feed": null,
+      "terms_url": null,
+      "enabled": false,
+      "discovery_allowed": false,
+      "publication": {
+        "status": "review",
+        "approved": false
+      },
+      "decision": "공식 홈 HTTP 200이나 1,880바이트 프레임 진입 화면. 공식 피드/API·제목 공개 허가 미확인.",
+      "last7d_industry_candidates": null,
+      "approved_candidates": 0,
+      "new_public_articles": 0,
+      "automatic_publication_possible": 0,
+      "contract_required": "unconfirmed",
+      "existing_source_id": null
+    }
+  ]
+}

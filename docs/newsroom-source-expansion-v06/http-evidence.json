@@ -1,0 +1,1506 @@
+{
+  "warning": "network verification only, not licensing approval; robots checked before payload; no raw articles or bodies retained in repository",
+  "observations": [
+    {
+      "url": "https://www.ito.or.kr/",
+      "checked_at": "2026-11-05T04:28:43.963568+00:00",
+      "status": "ok",
+      "bytes": 10875,
+      "sha256": "71d73614eec9d37efa81f284fc2ad8c72e04ca8f428ea6a2b906ab809c55a628",
+      "http": [
+        {
+          "url": "https://www.ito.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.ito.or.kr/",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.koreamice.or.kr/",
+      "checked_at": "2026-11-05T04:27:19.000920+00:00",
+      "status": "error",
+      "error": "robots_unverified:transport_error",
+      "http": [
+        {
+          "url": "https://www.koreamice.or.kr/robots.txt",
+          "status": null,
+          "error": "URLError"
+        }
+      ]
+    },
+    {
+      "url": "https://id.hankyung.com/user/selectAuthAgree.do",
+      "checked_at": "2026-11-05T04:28:41.681060+00:00",
+      "status": "ok",
+      "bytes": 62608,
+      "sha256": "994157374ac03c235d3b01ba6d249ddabbd5991947370492a36203e7ea914e82",
+      "http": [
+        {
+          "url": "https://id.hankyung.com/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://id.hankyung.com/user/selectAuthAgree.do",
+          "status": 301,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://www.hankyung.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hankyung.com/help/policy?category=%EC%9D%B4%EC%9A%A9%EC%95%BD%EA%B4%80",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ito.or.kr/main/guidance/copyright.jsp",
+      "checked_at": "2026-11-05T04:32:57.585739+00:00",
+      "status": "ok",
+      "bytes": 46896,
+      "sha256": "c4da0ec4aff359c55debd1cc61222d9651d813d880ff36348b781d95682c7a6a",
+      "http": [
+        {
+          "url": "https://www.ito.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.ito.or.kr/main/guidance/copyright.jsp",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fnnews.com/",
+      "checked_at": "2026-11-05T04:27:12.176506+00:00",
+      "status": "ok",
+      "bytes": 206368,
+      "sha256": "1f2c7d10261124c5cb2f62a5863472d325c6632e76540d242d9068d4c552281f",
+      "http": [
+        {
+          "url": "https://www.fnnews.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.fnnews.com/",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hotelshilla.net/",
+      "checked_at": "2026-11-05T04:48:14.935370+00:00",
+      "status": "ok",
+      "bytes": 1880,
+      "sha256": "e84543c2eafdc703b101df53e5c07884d1556c995deebfde5f4177ee849930fb",
+      "http": [
+        {
+          "url": "https://www.hotelshilla.net/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://www.hotelshilla.net/",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.edaily.co.kr/",
+      "checked_at": "2026-11-05T04:27:13.991995+00:00",
+      "status": "error",
+      "error": "HTTP Error 406: Not Acceptable",
+      "http": [
+        {
+          "url": "https://www.edaily.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.edaily.co.kr/",
+          "status": 406,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.asiae.co.kr/",
+      "checked_at": "2026-11-05T04:27:13.062151+00:00",
+      "status": "error",
+      "error": "robots_disallowed",
+      "http": [
+        {
+          "url": "https://www.asiae.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fnnews.com/userinfo/partner",
+      "checked_at": "2026-11-05T04:28:43.771605+00:00",
+      "status": "ok",
+      "bytes": 40895,
+      "sha256": "73999c491579e16b853f3f3e4ccacd0391ed0b530050501a89b11270bbe382e8",
+      "http": [
+        {
+          "url": "https://www.fnnews.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.fnnews.com/userinfo/partner",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sedaily.com/rss",
+      "checked_at": "2026-11-05T04:27:12.177684+00:00",
+      "status": "ok",
+      "bytes": 36920,
+      "sha256": "0fbb996b662c327d0c9848cb922cc2e08303da2637cf2a095c59743ec03efc71",
+      "http": [
+        {
+          "url": "https://www.sedaily.com/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.sedaily.com/rss",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hanatourcompany.com/",
+      "checked_at": "2026-11-05T04:48:14.934289+00:00",
+      "status": "error",
+      "error": "https_public_endpoint_required",
+      "http": [
+        {
+          "url": "https://www.hanatourcompany.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hanatourcompany.com/",
+          "status": 302,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://ijto.or.kr/",
+      "checked_at": "2026-11-05T04:30:45.354260+00:00",
+      "status": "ok",
+      "bytes": 54340,
+      "sha256": "c104bac4757cd8815a4e144bd66c546dfa2fa7522f1cf065180df6939613276d",
+      "http": [
+        {
+          "url": "https://ijto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://ijto.or.kr/",
+          "status": 302,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://ijto.or.kr/korean/",
+          "status": 200,
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.fnnews.com/userinfo/copyright",
+      "checked_at": "2026-11-05T04:28:41.679697+00:00",
+      "status": "ok",
+      "bytes": 46821,
+      "sha256": "10ec7551617e26835891bb9988344dce41528125911680a5d4376cd10e771717",
+      "http": [
+        {
+          "url": "https://www.fnnews.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.fnnews.com/userinfo/copyright",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hotelrestaurant.co.kr/com/copyright.html",
+      "checked_at": "2026-11-05T04:28:43.075984+00:00",
+      "status": "ok",
+      "bytes": 15171,
+      "sha256": "f0577b03944b031681be26c12fa1374d2707704e7032378f38e9728540c17e87",
+      "http": [
+        {
+          "url": "https://www.hotelrestaurant.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.hotelrestaurant.co.kr/com/copyright.html",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://company.segye.com/service/digitalNewsRules",
+      "checked_at": "2026-11-05T04:30:40.426271+00:00",
+      "status": "ok",
+      "bytes": 28776,
+      "sha256": "d844d95941cb609dbfb33740319e5abc2f9e72f9248bc907d5670008096584cf",
+      "http": [
+        {
+          "url": "https://company.segye.com/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://company.segye.com/service/digitalNewsRules",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mk.co.kr/rss/50100032/",
+      "checked_at": "2026-11-05T04:30:39.026172+00:00",
+      "status": "ok",
+      "bytes": 39944,
+      "sha256": "c38a4621fe366e9fb8695aecd748a8bd63c18f74000f24d0baf1e445df71952c",
+      "http": [
+        {
+          "url": "https://www.mk.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.mk.co.kr/rss/50100032/",
+          "status": 200,
+          "type": "application/xml;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://member.hani.co.kr/help/rules/mypage_help_copyright.hani",
+      "checked_at": "2026-11-05T04:32:10.562890+00:00",
+      "status": "error",
+      "error": "robots_disallowed",
+      "http": [
+        {
+          "url": "https://member.hani.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.yanoljagroup.com/",
+      "checked_at": "2026-11-05T04:48:14.933652+00:00",
+      "status": "ok",
+      "bytes": 47398,
+      "sha256": "1788eb5d820c66f67c83961365e71e090d942d06b17120cb92853e384663631c",
+      "http": [
+        {
+          "url": "https://www.yanoljagroup.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.yanoljagroup.com/",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.segye.com/Articles/RSSList/segye_economy.xml",
+      "checked_at": "2026-11-05T04:30:40.105433+00:00",
+      "status": "ok",
+      "bytes": 20749,
+      "sha256": "7cc9209ad8a4372efdf4f51f648c481488e87e9e5e411613c99d5da644d07cbf",
+      "http": [
+        {
+          "url": "https://www.segye.com/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.segye.com/Articles/RSSList/segye_economy.xml",
+          "status": 200,
+          "type": "application/xml;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+      "checked_at": "2026-11-05T04:30:39.025050+00:00",
+      "status": "ok",
+      "bytes": 450874,
+      "sha256": "ac15443901f72521e9cee684ce97646592104c00a5cfe01cac4e74818b7416a8",
+      "http": [
+        {
+          "url": "https://cdn.hotelrestaurant.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+          "status": 200,
+          "type": "application/xml"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sto.or.kr/",
+      "accept": "text/html",
+      "status": "ok",
+      "bytes": 114664,
+      "sha256": "bae7324c1991bd1780a1ddd1f1412db12704ec038e3487ca12e9f6176eafed8e",
+      "http": [
+        {
+          "url": "https://www.sto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.sto.or.kr/",
+          "status": 302,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://www.sto.or.kr/index",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.knto.or.kr/",
+      "checked_at": "2026-11-05T04:27:19.198800+00:00",
+      "status": "error",
+      "error": "robots_unverified:transport_error",
+      "http": [
+        {
+          "url": "https://www.knto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hani.co.kr/",
+      "checked_at": "2026-11-05T04:30:46.095429+00:00",
+      "status": "ok",
+      "bytes": 201576,
+      "sha256": "f5e97ba98f44603a0808e339c89a676083b43d3681f521f6b85eab0a51dabf94",
+      "http": [
+        {
+          "url": "https://www.hani.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.hani.co.kr/",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hankyung.com/feed/economy",
+      "checked_at": "2026-11-05T04:30:39.025549+00:00",
+      "status": "ok",
+      "bytes": 17908,
+      "sha256": "0b43c2a24b7b3b5b2f3ad10a2fea196e6b2660e376194148db1214b5fda50021",
+      "http": [
+        {
+          "url": "https://www.hankyung.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hankyung.com/feed/economy",
+          "status": 200,
+          "type": "text/xml;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sto.or.kr/",
+      "checked_at": "2026-11-05T04:30:42.216472+00:00",
+      "status": "ok",
+      "bytes": 45488,
+      "sha256": "d61a64379582051184ceb2cd8faf08f4fffbe7ca68964e2e20cff08deedbc595",
+      "http": [
+        {
+          "url": "https://www.sto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.sto.or.kr/",
+          "status": 302,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://www.sto.or.kr/index",
+          "status": 200,
+          "type": "application/json;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.khan.co.kr/help/help_digital.html",
+      "checked_at": "2026-11-05T04:32:12.947310+00:00",
+      "status": "ok",
+      "bytes": 115919,
+      "sha256": "ae92c486d601286cbeabf842ad85e31393ffa6ef18b0d45a815954a62c51ac9e",
+      "http": [
+        {
+          "url": "https://www.khan.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.khan.co.kr/help/help_digital.html",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.news1.kr/customer/agreement",
+      "checked_at": "2026-11-05T04:28:41.680555+00:00",
+      "status": "ok",
+      "bytes": 85609,
+      "sha256": "98ef40527ce74fc59ace9532a41b7767ea7674e9da37f3b4916adc48a184a867",
+      "http": [
+        {
+          "url": "https://www.news1.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.news1.kr/customer/agreement",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tournews21.com/",
+      "checked_at": "2026-11-05T04:27:17.289393+00:00",
+      "status": "ok",
+      "bytes": 159111,
+      "sha256": "1fae2394eed5999c6fa909f6555e939ab3fbf6abcdad217f5e2d5427d961404f",
+      "http": [
+        {
+          "url": "https://www.tournews21.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.tournews21.com/",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mk.co.kr/rss",
+      "checked_at": "2026-11-05T04:27:12.178094+00:00",
+      "status": "ok",
+      "bytes": 95944,
+      "sha256": "8de9aaf31890ad6eaa39a2a2e4c05d70cdb1c8646a7cca72efbd2e52cd86646e",
+      "http": [
+        {
+          "url": "https://www.mk.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.mk.co.kr/rss",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.khan.co.kr/",
+      "checked_at": "2026-11-05T04:30:45.561270+00:00",
+      "status": "ok",
+      "bytes": 326634,
+      "sha256": "18d9e5b5d07c32640ac107d59498cc69e949aad4fd33f1c7ade08e3110a0decb",
+      "http": [
+        {
+          "url": "https://www.khan.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.khan.co.kr/",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sto.or.kr/press",
+      "accept": "text/html",
+      "status": "ok",
+      "bytes": 49716,
+      "sha256": "f0f9422b28cfbb3fb5706539c6e54095b565dd75ded3e2a65f1d879bcf20db8d",
+      "http": [
+        {
+          "url": "https://www.sto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.sto.or.kr/press",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.yanolja-research.com/media/list?lang=kr&sub_type=1",
+      "checked_at": "2026-11-05T04:27:12.175817+00:00",
+      "status": "ok",
+      "bytes": 80970,
+      "sha256": "aba1d3eed3e03dbec21869af4e08c61910aed5d87fc966ce872a472a9351f336",
+      "http": [
+        {
+          "url": "https://www.yanolja-research.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.yanolja-research.com/media/list?lang=kr&sub_type=1",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.yna.co.kr/rss",
+      "checked_at": "2026-11-05T04:27:14.747866+00:00",
+      "status": "error",
+      "error": "HTTP Error 400: Bad Request",
+      "http": [
+        {
+          "url": "https://www.yna.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.yna.co.kr/rss",
+          "status": 400,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ito.or.kr/main/",
+      "checked_at": "2026-11-05T04:32:12.946914+00:00",
+      "status": "ok",
+      "bytes": 69686,
+      "sha256": "67cd02cc99948ea592fd4b39cd6831d56aaba0a4a78a5e92721e356b4e9ec16e",
+      "http": [
+        {
+          "url": "https://www.ito.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.ito.or.kr/main/",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mk.co.kr/mypage/policy",
+      "checked_at": "2026-11-05T04:32:14.135993+00:00",
+      "status": "ok",
+      "bytes": 113883,
+      "sha256": "1b8b4d00ddb700a4dd3abf8a6a55214b9e07eced85db9def7123631beaa7917b",
+      "http": [
+        {
+          "url": "https://www.mk.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.mk.co.kr/mypage/policy",
+          "status": 200,
+          "type": "text/html;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.newsis.com/RSS/",
+      "checked_at": "2026-11-05T04:27:14.600487+00:00",
+      "status": "ok",
+      "bytes": 34701,
+      "sha256": "ba5fb435d6e167e3526797c80fef10e7e53785743fd4c365ab1fbe91e60ecb97",
+      "http": [
+        {
+          "url": "https://www.newsis.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.newsis.com/RSS/",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hankyung.com/feed",
+      "checked_at": "2026-11-05T04:27:12.177058+00:00",
+      "status": "ok",
+      "bytes": 22761,
+      "sha256": "ffeab906fdaf4b43bd9c51f358d60a8edcc6df8e410b5e201777fe3b494015c1",
+      "http": [
+        {
+          "url": "https://www.hankyung.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hankyung.com/feed",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.micekorea.or.kr/",
+      "checked_at": "2026-11-05T04:28:44.755793+00:00",
+      "status": "ok",
+      "bytes": 1124419,
+      "sha256": "9796c9e898b97a2ec3c260aed88f83014b58074bc2eccd3df55d013e0f14de75",
+      "http": [
+        {
+          "url": "https://www.micekorea.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.micekorea.or.kr/",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hotelrestaurant.co.kr/",
+      "checked_at": "2026-11-05T04:27:17.628008+00:00",
+      "status": "ok",
+      "bytes": 192210,
+      "sha256": "741e8a5669df7bc515e617d841faade7a41257d98348cff5e2b196fca671d55b",
+      "http": [
+        {
+          "url": "https://www.hotelrestaurant.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.hotelrestaurant.co.kr/",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.donga.com/",
+      "checked_at": "2026-11-05T04:27:15.273288+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://www.donga.com/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.news1.kr/",
+      "checked_at": "2026-11-05T04:27:14.540135+00:00",
+      "status": "ok",
+      "bytes": 998083,
+      "sha256": "d20fc40ad8f7d19946c3bb751598a91ec2dd7b768e735493b565f842e534a0b2",
+      "http": [
+        {
+          "url": "https://www.news1.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.news1.kr/",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tournews21.com/com/copyright.html",
+      "checked_at": "2026-11-05T04:28:41.681632+00:00",
+      "status": "ok",
+      "bytes": 15906,
+      "sha256": "e64f9bd979dfc6fdc55cfef4e27182d96206f5c863a6b6c7614044f04692e3ba",
+      "http": [
+        {
+          "url": "https://www.tournews21.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.tournews21.com/com/copyright.html",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sto.or.kr/pressRelease",
+      "checked_at": "2026-11-05T04:32:13.428970+00:00",
+      "status": "ok",
+      "bytes": 82071,
+      "sha256": "edbb230d64d0a26a72d63b8e8f17d794634241c45836cf7fc19a1b2c86e7b185",
+      "http": [
+        {
+          "url": "https://www.sto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.sto.or.kr/pressRelease",
+          "status": 200,
+          "type": "application/json;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bto.or.kr/",
+      "checked_at": "2026-11-05T04:28:43.949949+00:00",
+      "status": "error",
+      "error": "robots_disallowed",
+      "http": [
+        {
+          "url": "https://www.bto.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        }
+      ]
+    },
+    {
+      "url": "https://www.micekorea.or.kr/page/press-release",
+      "checked_at": "2026-11-05T04:32:10.563333+00:00",
+      "status": "ok",
+      "bytes": 450301,
+      "sha256": "6a5fe9183bcc5a84392751ec89b7b03f779515e05c01aec202ec0e96679cb60e",
+      "http": [
+        {
+          "url": "https://www.micekorea.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.micekorea.or.kr/page/press-release",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.newsis.com/RSS/industry.xml",
+      "checked_at": "2026-11-05T04:30:39.026677+00:00",
+      "status": "ok",
+      "bytes": 281395,
+      "sha256": "af7165f379d137f2509d26374cb1a70bc3b83c6da1f42869b554e0e10e56e7d8",
+      "http": [
+        {
+          "url": "https://www.newsis.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.newsis.com/RSS/industry.xml",
+          "status": 200,
+          "type": "text/xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+      "checked_at": "2026-11-05T04:30:39.024483+00:00",
+      "status": "ok",
+      "bytes": 259604,
+      "sha256": "2e9fee856767bdb5494fe6344f0a61582d3fe4216a0c937393de0200c9030330",
+      "http": [
+        {
+          "url": "https://cdn.tournews21.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+          "status": 200,
+          "type": "application/xml"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gto.or.kr/",
+      "checked_at": "2026-11-05T04:30:42.408746+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://www.gto.or.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.seoulto.or.kr/",
+      "checked_at": "2026-11-05T04:28:43.771299+00:00",
+      "status": "error",
+      "error": "robots_unverified:transport_error",
+      "http": [
+        {
+          "url": "https://www.seoulto.or.kr/robots.txt",
+          "status": null,
+          "error": "URLError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gccompany.co.kr/",
+      "checked_at": "2026-11-05T04:48:14.934827+00:00",
+      "status": "ok",
+      "bytes": 472101,
+      "sha256": "19c949ec396c948e0c661e502699c7fee528347b9d1df4e611b67f476420e6c8",
+      "http": [
+        {
+          "url": "https://www.gccompany.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.gccompany.co.kr/",
+          "status": 308,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://gccompany.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://gccompany.co.kr/",
+          "status": 200,
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.khan.co.kr/help/help_agreement.html",
+      "checked_at": "2026-11-05T04:32:15.432388+00:00",
+      "status": "ok",
+      "bytes": 146492,
+      "sha256": "b95dfb7919cbb733f5d8be87857aa570ff0f06df4c740f4f08027be203703a94",
+      "http": [
+        {
+          "url": "https://www.khan.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.khan.co.kr/help/help_agreement.html",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.khan.co.kr/help/help_rss.html",
+      "checked_at": "2026-11-05T04:32:10.561771+00:00",
+      "status": "ok",
+      "bytes": 107064,
+      "sha256": "134948088b078aed1689fb3280063a13724899ef84bc9de290065088df5c87b2",
+      "http": [
+        {
+          "url": "https://www.khan.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.khan.co.kr/help/help_rss.html",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.segye.com/rssInfo",
+      "checked_at": "2026-11-05T04:27:16.754954+00:00",
+      "status": "ok",
+      "bytes": 68328,
+      "sha256": "a3037f565c85ee3726e9354fd312d97cd2108bfcdbe8a0a266f1976006cd499e",
+      "http": [
+        {
+          "url": "https://www.segye.com/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.segye.com/rssInfo",
+          "status": 200,
+          "type": "text/html;charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "existing_source_probes": [
+    {
+      "id": "mcst_press",
+      "url": "https://www.mcst.go.kr/common/rss/press.jsp",
+      "checked_at": "2026-11-05T04:44:39.066907+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://www.mcst.go.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "id": "korea_net_travel",
+      "url": "https://www.korea.net/koreanet/rss/news/8",
+      "checked_at": "2026-11-05T04:44:39.067608+00:00",
+      "status": "ok",
+      "bytes": 14548,
+      "sha256": "487ac883a8afe510c18a522186017ce0eeebb952f69be2bffa473fcf91d8c7c9",
+      "http": [
+        {
+          "url": "https://www.korea.net/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://www.korea.net/koreanet/rss/news/8",
+          "status": 200,
+          "type": "text/xml;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "id": "kosis_recent",
+      "url": "https://kosis.kr/rss/themes_rss.jsp",
+      "checked_at": "2026-11-05T04:44:39.068226+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://kosis.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "id": "seoul_culture",
+      "url": "https://mediahub.seoul.go.kr/news/rss/06",
+      "checked_at": "2026-11-05T04:44:39.069156+00:00",
+      "status": "ok",
+      "bytes": 135400,
+      "sha256": "12e962d25cc4818d1ac39aed03beb02c57057800e2985ca510504140ae6123dd",
+      "http": [
+        {
+          "url": "https://mediahub.seoul.go.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://mediahub.seoul.go.kr/news/rss/06",
+          "status": 200,
+          "type": "text/xml;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "id": "seoul_economy",
+      "url": "https://mediahub.seoul.go.kr/news/rss/04",
+      "checked_at": "2026-11-05T04:44:39.069800+00:00",
+      "status": "ok",
+      "bytes": 117819,
+      "sha256": "4fa888cdd7583df3c4e65ad8753cbee43a9364a88c59bde715b9f41d6e78e7bf",
+      "http": [
+        {
+          "url": "https://mediahub.seoul.go.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://mediahub.seoul.go.kr/news/rss/04",
+          "status": 200,
+          "type": "text/xml;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "id": "seoul_transport",
+      "url": "https://mediahub.seoul.go.kr/news/rss/01",
+      "checked_at": "2026-11-05T04:44:41.851982+00:00",
+      "status": "ok",
+      "bytes": 187221,
+      "sha256": "dc4ebe43c5ce25ac0a105f51941c46ee0c83a6020a296a37a608c26d65fccbc0",
+      "http": [
+        {
+          "url": "https://mediahub.seoul.go.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://mediahub.seoul.go.kr/news/rss/01",
+          "status": 200,
+          "type": "text/xml;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "id": "seoul_environment",
+      "url": "https://mediahub.seoul.go.kr/news/rss/05",
+      "checked_at": "2026-11-05T04:44:44.551172+00:00",
+      "status": "ok",
+      "bytes": 93457,
+      "sha256": "358087fcf14203cf39aff11abbc46a8aaacbadf84c12042f8d818d6370ce96af",
+      "http": [
+        {
+          "url": "https://mediahub.seoul.go.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://mediahub.seoul.go.kr/news/rss/05",
+          "status": 200,
+          "type": "text/xml;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "id": "sec_booking",
+      "url": "https://data.sec.gov/submissions/CIK0001075531.json",
+      "checked_at": "2026-11-05T04:44:47.825556+00:00",
+      "status": "ok",
+      "bytes": 158559,
+      "sha256": "497220bf12f752c818ecfd86a27725fb500ad77f261a3fcb95c3457b84c0f4dd",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001075531.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "sec_expedia",
+      "url": "https://data.sec.gov/submissions/CIK0001324424.json",
+      "checked_at": "2026-11-05T04:44:48.415702+00:00",
+      "status": "ok",
+      "bytes": 147546,
+      "sha256": "68247fcd647d23ee73605adc51d3aa97f7328a8320613b3bbd1c805badd20cfc",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001324424.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "sec_marriott",
+      "url": "https://data.sec.gov/submissions/CIK0001048286.json",
+      "checked_at": "2026-11-05T04:44:48.894583+00:00",
+      "status": "ok",
+      "bytes": 149170,
+      "sha256": "f6a66bb8b0e3f28efc5f605ff9f8b7438b25baaba689d85ccc86be7cbb12fa2c",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001048286.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "sec_hilton",
+      "url": "https://data.sec.gov/submissions/CIK0001585689.json",
+      "checked_at": "2026-11-05T04:44:49.127211+00:00",
+      "status": "ok",
+      "bytes": 164229,
+      "sha256": "951351c43b158c82e40ecf00e2de18daa9bf827b89f965c64af505d30789bad2",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001585689.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "sec_delta",
+      "url": "https://data.sec.gov/submissions/CIK0000027904.json",
+      "checked_at": "2026-11-05T04:44:49.353928+00:00",
+      "status": "ok",
+      "bytes": 155863,
+      "sha256": "e2a13e323914899375094704e465c34ca3d405f33344cf787fb6e2b13cfdfcc5",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000027904.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "sec_united",
+      "url": "https://data.sec.gov/submissions/CIK0000100517.json",
+      "checked_at": "2026-11-05T04:44:49.596775+00:00",
+      "status": "ok",
+      "bytes": 163771,
+      "sha256": "daa6bc11f487f89a94d78f2a44c24614ba73ba39ace2e9cc359632f16bcb7789",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000100517.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "sec_tripcom",
+      "url": "https://data.sec.gov/submissions/CIK0001269238.json",
+      "checked_at": "2026-11-05T04:44:49.736944+00:00",
+      "status": "ok",
+      "bytes": 101668,
+      "sha256": "0f8ef95e8d9b71136e0b36cf2e4ea144c5ecf12bb526c935366547809cc8f6a1",
+      "http": [
+        {
+          "url": "https://data.sec.gov/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001269238.json",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "govuk_tourism",
+      "url": "https://www.gov.uk/api/search.json?q=tourism&filter_format=press_release&count=100&fields=title%2Clink%2Cpublic_timestamp%2Cformat&order=-public_timestamp",
+      "checked_at": "2026-11-05T04:44:49.936011+00:00",
+      "status": "ok",
+      "bytes": 44813,
+      "sha256": "40649d873045427415615eb6fd9079324e631a100b31495f8d8d5669372a335d",
+      "http": [
+        {
+          "url": "https://www.gov.uk/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.gov.uk/api/search.json?q=tourism&filter_format=press_release&count=100&fields=title%2Clink%2Cpublic_timestamp%2Cformat&order=-public_timestamp",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "govuk_aviation",
+      "url": "https://www.gov.uk/api/search.json?q=aviation&filter_format=press_release&count=100&fields=title%2Clink%2Cpublic_timestamp%2Cformat&order=-public_timestamp",
+      "checked_at": "2026-11-05T04:44:50.762147+00:00",
+      "status": "ok",
+      "bytes": 45831,
+      "sha256": "e47970d8f3ad190733720050dbfbfd515fffe43254823c304f34adf72d8fb515",
+      "http": [
+        {
+          "url": "https://www.gov.uk/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.gov.uk/api/search.json?q=aviation&filter_format=press_release&count=100&fields=title%2Clink%2Cpublic_timestamp%2Cformat&order=-public_timestamp",
+          "status": 200,
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "id": "koreanair",
+      "url": "https://news.koreanair.com/feed/",
+      "checked_at": "2026-11-05T04:44:51.289526+00:00",
+      "status": "ok",
+      "bytes": 16624,
+      "sha256": "960901331387367617b733dc0865c34b25aa76a63296b96d61e9b56d90de2f6f",
+      "http": [
+        {
+          "url": "https://news.koreanair.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://news.koreanair.com/feed/",
+          "status": 200,
+          "type": "application/rss+xml; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "id": "tripcom_news",
+      "url": "https://investors.trip.com/rss/news-releases.xml",
+      "checked_at": "2026-11-05T04:44:51.812227+00:00",
+      "status": "ok",
+      "bytes": 7911,
+      "sha256": "0a33f34af85b469381ee3da47057dd0940c520a8843674ad23220327b078a6fe",
+      "http": [
+        {
+          "url": "https://investors.trip.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=UTF-8"
+        },
+        {
+          "url": "https://investors.trip.com/rss/news-releases.xml",
+          "status": 200,
+          "type": "application/rss+xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "id": "hilton_news",
+      "url": "https://stories.hilton.com/feed",
+      "checked_at": "2026-11-05T04:44:52.091689+00:00",
+      "status": "ok",
+      "bytes": 295830,
+      "sha256": "ab3d35373059916d3389280c695f1be2ac836236fe95e026c73ddf62c4d0d585",
+      "http": [
+        {
+          "url": "https://stories.hilton.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://stories.hilton.com/feed",
+          "status": 200,
+          "type": "application/rss+xml; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "id": "skift",
+      "url": "https://skift.com/feed/",
+      "checked_at": "2026-11-05T04:44:52.093418+00:00",
+      "status": "ok",
+      "bytes": 22711,
+      "sha256": "8bf1229309b4c63bc541f44cfa71fe942997a7a46d818ff570bc5d0186ee4c43",
+      "http": [
+        {
+          "url": "https://skift.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://skift.com/feed/",
+          "status": 200,
+          "type": "application/rss+xml; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "id": "yonhap",
+      "url": "https://www.yna.co.kr/rss/economy.xml",
+      "checked_at": "2026-11-05T04:44:52.359231+00:00",
+      "status": "ok",
+      "bytes": 94232,
+      "sha256": "16f7d9c3420a2d3e2b4eac74302675d921764e874a2aad48e2593984d980fbec",
+      "http": [
+        {
+          "url": "https://www.yna.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=UTF-8"
+        },
+        {
+          "url": "https://www.yna.co.kr/rss/economy.xml",
+          "status": 200,
+          "type": "application/xml;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "id": "traveltimes",
+      "url": "https://www.traveltimes.co.kr/rss/allArticle.xml",
+      "checked_at": "2026-11-05T04:44:52.646841+00:00",
+      "status": "ok",
+      "bytes": 52693,
+      "sha256": "8429ee4f8165d08aaaca2ec824580bcc48ca7faea0164cca03c06d3c39be5737",
+      "http": [
+        {
+          "url": "https://www.traveltimes.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.traveltimes.co.kr/rss/allArticle.xml",
+          "status": 200,
+          "type": "application/xml"
+        }
+      ]
+    },
+    {
+      "id": "traveldaily",
+      "url": "https://www.traveldaily.co.kr/rss/allArticle.xml",
+      "checked_at": "2026-11-05T04:44:52.800204+00:00",
+      "status": "ok",
+      "bytes": 51253,
+      "sha256": "4767923467ba4698274ffbb4de36fd3da4754194346124f4ae34efbe52f762e0",
+      "http": [
+        {
+          "url": "https://www.traveldaily.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.traveldaily.co.kr/rss/allArticle.xml",
+          "status": 200,
+          "type": "application/xml"
+        }
+      ]
+    },
+    {
+      "id": "ttlnews",
+      "url": "https://www.ttlnews.com/rss/allArticle.xml",
+      "checked_at": "2026-11-05T04:44:53.568874+00:00",
+      "status": "ok",
+      "bytes": 53127,
+      "sha256": "ec9c86edf041651bf3f78685893f16a288e0adc05074044da2b038823a9fe247",
+      "http": [
+        {
+          "url": "https://www.ttlnews.com/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.ttlnews.com/rss/allArticle.xml",
+          "status": 200,
+          "type": "application/xml"
+        }
+      ]
+    },
+    {
+      "id": "hospitalitynet",
+      "url": "https://www.hospitalitynet.org/rss/news.xml",
+      "checked_at": "2026-11-05T04:44:53.867043+00:00",
+      "status": "ok",
+      "bytes": 15647,
+      "sha256": "eb5aa1aec7706f9706f6f94e0018448431dbf10d4b8aeed5af67fe1b7c0f750e",
+      "http": [
+        {
+          "url": "https://www.hospitalitynet.org/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hospitalitynet.org/rss/news.xml",
+          "status": 200,
+          "type": "application/rss+xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "id": "hotelnewsresource",
+      "url": "https://www.hotelnewsresource.com/feeds/latest.xml",
+      "checked_at": "2026-11-05T04:44:54.767519+00:00",
+      "status": "ok",
+      "bytes": 19206,
+      "sha256": "86d815904486a455520f9539bbfc6fac56151dedae1ff52162f5226abe0461f7",
+      "http": [
+        {
+          "url": "https://www.hotelnewsresource.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hotelnewsresource.com/feeds/latest.xml",
+          "status": 200,
+          "type": "application/rss+xml; charset=UTF-8"
+        }
+      ]
+    }
+  ]
+}

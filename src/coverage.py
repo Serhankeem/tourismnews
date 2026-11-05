@@ -8,11 +8,13 @@ from collections import Counter
 if __package__:
     from . import collector as c
     from .editorial import publication_order
+    from .diversity import publisher_diversity
 else:
     import collector as c
     from editorial import publication_order
+    from diversity import publisher_diversity
 
-MEDIA_TYPES = ('tourism_specialist', 'general_economy', 'corporate', 'public', 'unknown')
+MEDIA_TYPES = ('tourism_specialist', 'general_economy', 'general_news', 'corporate', 'public', 'unknown')
 
 
 def coverage(newsroom, sources, at, previous_newsroom=()):
@@ -57,4 +59,5 @@ def coverage(newsroom, sources, at, previous_newsroom=()):
         'domestic_supply_routes': len(routes),
         'domestic_identified_publishers': len(institutions),
         'unclassified_publisher_news_count': sum(not configs.get(a.get('source_id'), {}).get('publisher_jurisdiction') for a in newsroom),
+        'publisher_diversity': publisher_diversity(newsroom, sources, at),
     }

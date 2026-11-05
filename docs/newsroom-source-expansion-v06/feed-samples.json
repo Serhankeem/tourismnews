@@ -1,0 +1,200 @@
+[
+  {
+    "id": "tourkorea",
+    "feed_url": "https://cdn.tournews21.com/rss/gn_rss_allArticle.xml",
+    "observed_at": "2026-11-05T13:44:01.086708+09:00",
+    "received": 50,
+    "last7d_unique": 50,
+    "last7d_industry_candidates": 1,
+    "last7d_korea_direct_candidates": 0,
+    "outside7d_or_no_verified_date_observations": 0,
+    "last7d_irrelevant_unique": 49,
+    "candidate_categories": {
+      "관광정책": 0,
+      "인바운드": 0,
+      "여행산업": 1,
+      "항공·숙박": 0,
+      "문화·트렌드": 0,
+      "경제·시장": 0
+    },
+    "publication_status": "review",
+    "approved": 0,
+    "published": 0,
+    "note": "single provider-returned feed snapshot, not complete seven-day archive; no unapproved headlines or bodies stored here",
+    "metadata_fields_used": [
+      "title",
+      "link",
+      "pubDate_or_published"
+    ],
+    "article_pages_fetched": 0,
+    "article_hosts": {
+      "www.tournews21.com": 50
+    },
+    "url_overlap_with_existing_archive": 0
+  },
+  {
+    "id": "hotelrestaurant",
+    "feed_url": "https://cdn.hotelrestaurant.co.kr/rss/gn_rss_allArticle.xml",
+    "observed_at": "2026-11-05T13:44:01.086708+09:00",
+    "received": 50,
+    "last7d_unique": 26,
+    "last7d_industry_candidates": 2,
+    "last7d_korea_direct_candidates": 2,
+    "outside7d_or_no_verified_date_observations": 24,
+    "last7d_irrelevant_unique": 24,
+    "candidate_categories": {
+      "관광정책": 1,
+      "인바운드": 0,
+      "여행산업": 0,
+      "항공·숙박": 1,
+      "문화·트렌드": 0,
+      "경제·시장": 0
+    },
+    "publication_status": "review",
+    "approved": 0,
+    "published": 0,
+    "note": "single provider-returned feed snapshot, not complete seven-day archive; no unapproved headlines or bodies stored here",
+    "metadata_fields_used": [
+      "title",
+      "link",
+      "pubDate_or_published"
+    ],
+    "article_pages_fetched": 0,
+    "article_hosts": {
+      "www.hotelrestaurant.co.kr": 50
+    },
+    "url_overlap_with_existing_archive": 0
+  },
+  {
+    "id": "hankyung",
+    "feed_url": "https://www.hankyung.com/feed/economy",
+    "observed_at": "2026-11-05T13:44:01.086708+09:00",
+    "received": 50,
+    "last7d_unique": 50,
+    "last7d_industry_candidates": 0,
+    "last7d_korea_direct_candidates": 0,
+    "outside7d_or_no_verified_date_observations": 0,
+    "last7d_irrelevant_unique": 50,
+    "candidate_categories": {
+      "관광정책": 0,
+      "인바운드": 0,
+      "여행산업": 0,
+      "항공·숙박": 0,
+      "문화·트렌드": 0,
+      "경제·시장": 0
+    },
+    "publication_status": "review",
+    "approved": 0,
+    "published": 0,
+    "note": "single provider-returned feed snapshot, not complete seven-day archive; no unapproved headlines or bodies stored here",
+    "metadata_fields_used": [
+      "title",
+      "link",
+      "pubDate_or_published"
+    ],
+    "article_pages_fetched": 0,
+    "article_hosts": {
+      "www.hankyung.com": 50
+    },
+    "url_overlap_with_existing_archive": 0
+  },
+  {
+    "id": "maeil",
+    "feed_url": "https://www.mk.co.kr/rss/50100032/",
+    "observed_at": "2026-11-05T13:44:01.086708+09:00",
+    "received": 50,
+    "last7d_unique": 50,
+    "last7d_industry_candidates": 1,
+    "last7d_korea_direct_candidates": 1,
+    "outside7d_or_no_verified_date_observations": 0,
+    "last7d_irrelevant_unique": 49,
+    "candidate_categories": {
+      "관광정책": 0,
+      "인바운드": 0,
+      "여행산업": 0,
+      "항공·숙박": 1,
+      "문화·트렌드": 0,
+      "경제·시장": 0
+    },
+    "publication_status": "review",
+    "approved": 0,
+    "published": 0,
+    "note": "single provider-returned feed snapshot, not complete seven-day archive; no unapproved headlines or bodies stored here",
+    "metadata_fields_used": [
+      "title",
+      "link",
+      "pubDate_or_published"
+    ],
+    "article_pages_fetched": 0,
+    "article_hosts": {
+      "www.mk.co.kr": 50
+    },
+    "url_overlap_with_existing_archive": 0
+  },
+  {
+    "id": "newsis",
+    "feed_url": "https://www.newsis.com/RSS/industry.xml",
+    "observed_at": "2026-11-05T13:44:01.086708+09:00",
+    "received": 100,
+    "last7d_unique": 100,
+    "last7d_industry_candidates": 0,
+    "last7d_korea_direct_candidates": 0,
+    "outside7d_or_no_verified_date_observations": 0,
+    "last7d_irrelevant_unique": 100,
+    "candidate_categories": {
+      "관광정책": 0,
+      "인바운드": 0,
+      "여행산업": 0,
+      "항공·숙박": 0,
+      "문화·트렌드": 0,
+      "경제·시장": 0
+    },
+    "publication_status": "review",
+    "approved": 0,
+    "published": 0,
+    "note": "single provider-returned feed snapshot, not complete seven-day archive; no unapproved headlines or bodies stored here",
+    "metadata_fields_used": [
+      "title",
+      "link",
+      "pubDate_or_published"
+    ],
+    "article_pages_fetched": 0,
+    "article_hosts": {
+      "www.newsis.com": 100
+    },
+    "url_overlap_with_existing_archive": 0
+  },
+  {
+    "id": "segye",
+    "feed_url": "https://www.segye.com/Articles/RSSList/segye_economy.xml",
+    "observed_at": "2026-11-05T13:44:01.086708+09:00",
+    "received": 20,
+    "last7d_unique": 20,
+    "last7d_industry_candidates": 0,
+    "last7d_korea_direct_candidates": 0,
+    "outside7d_or_no_verified_date_observations": 0,
+    "last7d_irrelevant_unique": 20,
+    "candidate_categories": {
+      "관광정책": 0,
+      "인바운드": 0,
+      "여행산업": 0,
+      "항공·숙박": 0,
+      "문화·트렌드": 0,
+      "경제·시장": 0
+    },
+    "publication_status": "review",
+    "approved": 0,
+    "published": 0,
+    "note": "single provider-returned feed snapshot, not complete seven-day archive; no unapproved headlines or bodies stored here",
+    "metadata_fields_used": [
+      "title",
+      "link",
+      "pubDate_or_published"
+    ],
+    "article_pages_fetched": 0,
+    "article_hosts": {
+      "www.segye.com": 20
+    },
+    "url_overlap_with_existing_archive": 0
+  }
+]

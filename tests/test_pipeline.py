@@ -149,7 +149,7 @@ class PipelineTests(PipelineHarness):
     sources=read(self.code/'sources.json')['sources'];url=next(s['url'] for s in sources if s['id']=='traveltimes')
     def feed(u):
      if u!=url:return offline()
-     return ('<rss><channel><item><title>한국 관광산업 지원 정책 발표</title><link>https://example.invalid/pipeline-fixture-only</link><pubDate>'+self.at.isoformat()+'</pubDate></item></channel></rss>').encode()
+     return ('<rss><channel><item><title>한국 관광산업 지원 정책 발표</title><link>https://www.traveltimes.co.kr/news/pipeline-fixture-only</link><pubDate>'+self.at.isoformat()+'</pubDate></item></channel></rss>').encode()
     result=execute(sources,data,state,at=self.at,loader=feed)
     self.assertEqual(result['newsroom_count'],self.counts['news']+1)
     return result['publication_result']!='failed'
