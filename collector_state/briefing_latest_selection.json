@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T15:33:39+09:00",
+  "generated_at": "2026-11-05T16:32:50+09:00",
   "mode": "live_rss",
   "decisions": [
     {
@@ -8,7 +8,7 @@
       "tier": "korea_direct",
       "category": "항공·숙박",
       "new_category": true,
-      "age_hours": 18.36,
+      "age_hours": 19.34,
       "published_at": "2026-11-04T21:12:16+09:00",
       "basis": [
         "authorized_newsroom",
@@ -34,12 +34,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-04T20:21:12+09:00"
-    },
-    {
-      "article_id": "3cbce4b13f46f399d0",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-04T15:39:03+09:00"
     }
   ]
 }
