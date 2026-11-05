@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-05T17:51:12+09:00",
+  "checked_at": "2026-11-05T18:14:44+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -4074,6 +4074,24 @@
       "decision": "exclude"
     },
     {
+      "id": "e284163e17bb568195",
+      "title": "Out now: Tokenomics in Hospitality, Pertlink’s free playbook on what AI costs a hotel per guest",
+      "url": "https://www.hospitalitynet.org/news/4135254/out-now-tokenomics-in-hospitality-pertlinks-free-playbook-on-what-ai-costs-a-hotel-per-guest",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "d5615a95897eca6b08",
       "title": "AHLA Announces 2026 HTNG TechOvation Award Winners",
       "url": "https://www.hospitalitynet.org/news/4135285/ahla-announces-2026-htng-techovation-award-winners",
@@ -4405,24 +4423,6 @@
       "id": "62b32dfaa0459e82ad",
       "title": "Al Areen Park Hotel W.L.L. Signs MOU with Ennismore to Manage and Operate Rixos Al Areen Hotel",
       "url": "https://www.hospitalitynet.org/news/4135268/al-areen-park-hotel-wll-signs-mou-with-ennismore-to-manage-and-operate-rixos-al-areen-hotel",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "112669f687d5d7165e",
-      "title": "2026 SiteMinder Partner Awards honour the innovators putting AI to work for hotels",
-      "url": "https://www.hospitalitynet.org/news/4135266/2026-siteminder-partner-awards-honour-the-innovators-putting-ai-to-work-for-hotels",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
