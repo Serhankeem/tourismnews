@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-05T12:01:48+09:00",
+  "checked_at": "2026-11-05T14:07:32+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -548,6 +548,24 @@
       "decision": "exclude"
     },
     {
+      "id": "a8d5e782e8fa1304cf",
+      "title": "사당역 달빛야장 푸짐하게 즐긴 비결! 달빛상품권 10% 할인",
+      "url": "https://mediahub.seoul.go.kr/archives/2019926",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "ed8318077a1ea150f7",
       "title": "취업 고민 끝낼 찬스! 일자리박람회·AI 인재 페스티벌",
       "url": "https://mediahub.seoul.go.kr/archives/2019933",
@@ -879,24 +897,6 @@
       "id": "a358f780e0ea4accbd",
       "title": "동대문 어디까지 가봤니? 'DDP×동대문 슈퍼패스' 헤리티지 코스 탐방",
       "url": "https://mediahub.seoul.go.kr/archives/2019623",
-      "source_id": "seoul_economy",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "50b649bdf6f5d69d5d",
-      "title": "AI가 스며든 새로운 서울 풍경 미리보기! '스마트라이프위크 2026' 현장",
-      "url": "https://mediahub.seoul.go.kr/archives/2019637",
       "source_id": "seoul_economy",
       "relevance_evidence": {
         "rule_version": "0.2",
