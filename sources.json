@@ -29,8 +29,13 @@
         "publisher_jurisdiction": "KR",
         "media_type": "public",
         "publisher": "문화체육관광부 보도자료",
-        "supply_route": "mcst_press"
-      }
+        "supply_route": "mcst_press",
+        "publisher_id": "mcst"
+      },
+      "article_domains": [
+        "mcst.go.kr",
+        "www.mcst.go.kr"
+      ]
     },
     {
       "id": "korea_net_travel",
@@ -126,8 +131,12 @@
         "publisher_jurisdiction": "KR",
         "media_type": "public",
         "publisher": "서울특별시",
-        "supply_route": "seoul_culture"
-      }
+        "supply_route": "seoul_culture",
+        "publisher_id": "seoul_metropolitan_government"
+      },
+      "article_domains": [
+        "mediahub.seoul.go.kr"
+      ]
     },
     {
       "id": "seoul_economy",
@@ -161,8 +170,12 @@
         "publisher_jurisdiction": "KR",
         "media_type": "public",
         "publisher": "서울특별시",
-        "supply_route": "seoul_economy"
-      }
+        "supply_route": "seoul_economy",
+        "publisher_id": "seoul_metropolitan_government"
+      },
+      "article_domains": [
+        "mediahub.seoul.go.kr"
+      ]
     },
     {
       "id": "seoul_transport",
@@ -196,8 +209,12 @@
         "publisher_jurisdiction": "KR",
         "media_type": "public",
         "publisher": "서울특별시",
-        "supply_route": "seoul_transport"
-      }
+        "supply_route": "seoul_transport",
+        "publisher_id": "seoul_metropolitan_government"
+      },
+      "article_domains": [
+        "mediahub.seoul.go.kr"
+      ]
     },
     {
       "id": "seoul_environment",
@@ -231,8 +248,12 @@
         "publisher_jurisdiction": "KR",
         "media_type": "public",
         "publisher": "서울특별시",
-        "supply_route": "seoul_environment"
-      }
+        "supply_route": "seoul_environment",
+        "publisher_id": "seoul_metropolitan_government"
+      },
+      "article_domains": [
+        "mediahub.seoul.go.kr"
+      ]
     },
     {
       "id": "sec_booking",
@@ -639,9 +660,10 @@
       },
       "coverage": {
         "publisher_jurisdiction": "KR",
-        "media_type": "general_economy",
+        "media_type": "general_news",
         "publisher": "연합뉴스 경제",
-        "supply_route": "yonhap"
+        "supply_route": "yonhap",
+        "publisher_id": "yonhap"
       }
     },
     {
@@ -681,8 +703,13 @@
         "publisher_jurisdiction": "KR",
         "media_type": "tourism_specialist",
         "publisher": "여행신문",
-        "supply_route": "traveltimes"
-      }
+        "supply_route": "traveltimes",
+        "publisher_id": "traveltimes"
+      },
+      "article_domains": [
+        "traveltimes.co.kr",
+        "www.traveltimes.co.kr"
+      ]
     },
     {
       "id": "traveldaily",
@@ -721,8 +748,13 @@
         "publisher_jurisdiction": "KR",
         "media_type": "tourism_specialist",
         "publisher": "트래블데일리",
-        "supply_route": "traveldaily"
-      }
+        "supply_route": "traveldaily",
+        "publisher_id": "traveldaily"
+      },
+      "article_domains": [
+        "traveldaily.co.kr",
+        "www.traveldaily.co.kr"
+      ]
     },
     {
       "id": "ttlnews",
@@ -761,8 +793,13 @@
         "publisher_jurisdiction": "KR",
         "media_type": "tourism_specialist",
         "publisher": "퍼블릭뉴스통신(TTL)",
-        "supply_route": "ttlnews"
-      }
+        "supply_route": "ttlnews",
+        "publisher_id": "ttlnews"
+      },
+      "article_domains": [
+        "ttlnews.com",
+        "www.ttlnews.com"
+      ]
     },
     {
       "id": "hospitalitynet",
