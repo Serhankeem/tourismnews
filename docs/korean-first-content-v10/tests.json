@@ -100,6 +100,26 @@
     ]
   },
   "github_ci": {
-    "status": "pending_PR_submission"
+    "status": "success",
+    "tested_code_commit": "ab0bd54a233ce6d34322ca04487e05ab6994056e",
+    "checks": [
+      {
+        "workflow": "Macro Monitor official statistics",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41987259399/job/127110831472"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41987259410/job/127110831582"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41987259190/job/127110831060"
+      }
+    ],
+    "production_jobs": "collect-and-publish all skipped in PR",
+    "note": "Following commit only records CI; code, reviewed labels and UI tests are identical."
   }
 }

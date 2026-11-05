@@ -122,7 +122,7 @@ Newsroom의 기본값은 **전체 뉴스 + 국내 발행처 우선**이다. 국�
 - sources.json은 기존 3개 해외 피드의 coverage 국가 정보만 추가했다. 공급원 목록·URL·이름·활성화·발견/게시 정책·주기는 동일하다.
 - PR #21 Discovery Engine·PublicationGate 구현·Macro/Market Observation·Scenario 계산식·GitHub Actions/Pages는 Git 변경이 없다. PR #22의 130px 로고·세그먼트·모바일/키보드·hover/fade·SVG/Reduced Motion·sticky header 검사도 통과했다.
 - API 키/번역 서비스/새 외부 런타임 호출은 없다. 발행처·표제 자산은 같은 사이트의 정적 파일이고 새 JS 타이머는 없다.
-- GitHub CI 결과는 PR 제출 후 링크와 함께 기록한다. 브라우저는 로컬 Chromium 결과로 별도 구분한다.
+- **GitHub CI: 코드 커밋 `ab0bd54a`의 검사 3개 모두 SUCCESS** — [뉴스](https://github.com/Serhankeem/tourismnews/actions/runs/41987259190), [Research](https://github.com/Serhankeem/tourismnews/actions/runs/41987259410), [Macro](https://github.com/Serhankeem/tourismnews/actions/runs/41987259399). 운영 collect-and-publish 3개는 기존 main 전용 조건으로 SKIPPED. 후속 커밋은 결과 기록뿐이며 브라우저 18개는 별도 로컬 Chromium 검사다.
 
 재현: `python -m unittest discover -s tests -v`, `node tests/korean-first.unit.cjs`, 격리 Pages에 `TOURISM_TEST_URL=<local URL> node tests/korean-first.smoke.cjs`. [tests.json](tests.json) 참조.
 
