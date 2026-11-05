@@ -252,3 +252,13 @@ Market Observation은 기존 `MacroMonitor.database`의 읽기 전용 객체를 
 **관광경제 관측** 카드/단일 단위 차트로 받을 수 있다. 방한객과 다른 기준월을 별도로 표시하고
 상호간 결측을 채우지 않는다. 이를 Scenario Lab의 입력·가중치에 연결하지 않는다.
 금액 증가율만으로 시장 호황이나 종합 날씨를 판정하는 기능은 제안 범위에도 포함하지 않는다.
+
+## GitHub CI 최종 기록
+
+[PR #24](https://github.com/Serhankeem/tourismnews/pull/24), 기능 커밋 `738ae4e2928242ab08788b40eaa3ac35f5640650`: **3개 test job 모두 SUCCESS**.
+
+- [Macro Monitor official statistics](https://github.com/Serhankeem/tourismnews/actions/runs/41992999378/job/127129446991): 통과.
+- [Research Library weekly collector](https://github.com/Serhankeem/tourismnews/actions/runs/41992999728/job/127129447942): 통과.
+- [Tourism Pulse RSS collector](https://github.com/Serhankeem/tourismnews/actions/runs/41992999546/job/127129447234): 통과.
+
+3개 `collect-and-publish`는 모두 SKIPPED. 실제 ECOS 금융 API 호출·운영 저장·Pages 배포 검증을 뜻하지 않는다. 후속 문서 커밋은 이 결과만 기록하며 코드·테스트 변경이 없다.

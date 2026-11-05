@@ -108,7 +108,27 @@
     "latest_monetary_smoke": "Rechecked after route-transition animation completed; exact safe-integer display checked"
   },
   "github_ci": {
-    "status": "pending_pr_creation"
+    "status": "success",
+    "tested_code_commit": "738ae4e2928242ab08788b40eaa3ac35f5640650",
+    "checks": [
+      {
+        "workflow": "Macro Monitor official statistics",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41992999378/job/127129446991"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41992999728/job/127129447942"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41992999546/job/127129447234"
+      }
+    ],
+    "production_jobs": "all 3 collect-and-publish skipped",
+    "note": "The follow-up commit only records these CI results; application code/tests unchanged."
   },
   "financial_data": {
     "official_ecos_observations": 0,
