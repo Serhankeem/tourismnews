@@ -108,3 +108,13 @@ workflow는 **pair_candidates_found에서만 성공**, 나머지 판정은 실�
 사용자가 병합·수동 실행한 뒤 인증 결과와 실제 표/항목/단위·수록 기간을 Summary에서 검토한다.
 미확인·실패·추가 차원이 있으면 그대로 보류한다. 확인된 최소 메타데이터만 후속 논의에 사용하고
 raw 로그나 인증키가 포함된 URL을 공유하지 않는다. 이 워크플로로 운영 연결 완료를 선언하지 않는다.
+
+## PR CI 근거
+
+[PR #25](https://github.com/Serhankeem/tourismnews/pull/25), 기능 커밋 `042f0f2e956aea55b6ccb3838f35681b20b9c9ff`: 기존 CI의 Python test 3개 모두 통과.
+
+- [Macro Monitor official statistics](https://github.com/Serhankeem/tourismnews/actions/runs/41996456426/job/127140713683): SUCCESS.
+- [Research Library weekly collector](https://github.com/Serhankeem/tourismnews/actions/runs/41996456312/job/127140713316): SUCCESS.
+- [Tourism Pulse RSS collector](https://github.com/Serhankeem/tourismnews/actions/runs/41996456319/job/127140713236): SUCCESS.
+
+운영 collect-and-publish 3개는 SKIPPED. ECOS Preflight는 수동 전용이므로 PR CI에서 실행되지 않았고 실제 Secret 사용 0회다. 후속 커밋은 이 검사 결과를 기록하는 문서 변경뿐이다.
