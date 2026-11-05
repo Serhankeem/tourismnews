@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-05T20:16:43+09:00",
+  "checked_at": "2026-11-05T22:26:57+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -187,6 +187,24 @@
       "id": "e5c07d94ec46e70afe",
       "title": "단풍도 전망도 놓칠 수 없어! 서남권 단풍 즐기기 좋은 용왕산·우장산",
       "url": "https://mediahub.seoul.go.kr/archives/2019906",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5cbb5c157dc2c136a6",
+      "title": "봄에는 철쭉, 가을에는 국화! 꽃과 나비가 반기는 불암산 힐링타운",
+      "url": "https://mediahub.seoul.go.kr/archives/2019929",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -515,24 +533,6 @@
       "id": "cc98d27f357d494461",
       "title": "러닝도 파크골프도 OK! 신목동역 펀스테이션 개장",
       "url": "https://mediahub.seoul.go.kr/archives/2019894",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5950b82e3e0f812812",
-      "title": "무료 자율주행버스부터 미디어아트까지! 청계천의 밤은 다르다",
-      "url": "https://mediahub.seoul.go.kr/archives/2019881",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -2112,6 +2112,316 @@
       "decision": "exclude"
     },
     {
+      "id": "6cecf337b83adcf5c1",
+      "title": "中 단체관광 쇼핑 수수료 ‘30% 상한’ 추진…업계 논란",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72601",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "cf77bb14496923acc1",
+      "title": "‘콘서트 관광’ 새로운 시장 부상",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72600",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ef608c1b773e2a67cf",
+      "title": "하나투어, '하나팩 2.0' 고도화 고객 만족도 지속 상승",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72596",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b251263d544531bd9f",
+      "title": "‘필리핀 비즈니스 미션 2026’ 성료",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72595",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "634e3fe40711666afe",
+      "title": "홍콩 ‘미식의 달’ 펼쳐진다",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72594",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a2c9ece37a12ce196b",
+      "title": "튀르키예, 1~9월 관광 수입 513억 달러",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72593",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "경제·시장",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광수입"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "495077cd1cfe1a22c4",
+      "title": "전기차로 떠나는 NSW 로드 트립 3선",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72592",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1cf1933b13db7bf72d",
+      "title": "‘D23 아시아: 디즈니 얼티밋 팬 이벤트’ 프로그램 공개",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72591",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f09d6348635cf40e45",
+      "title": "이동 약자에 특별한 국내여행 선물",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72590",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c4aaed85b99a91c965",
+      "title": "대한항공, ‘10베스트 어워즈’ 3관왕 달성",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72589",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2c73840543a796e242",
+      "title": "“쓰레기는 저희에게 주세요!”",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72588",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "0a15476a2cb229080a",
+      "title": "클룩, 외국인 관광객과 부산 잇는다",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72587",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "외국인관광객"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "833424114474484c9d",
+      "title": "부산, ‘최고의 미식 관광 목적지’ 선정",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72586",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4c11a74effd156fa64",
+      "title": "모두투어, ‘프랑스 어워즈’ 관광 발전 기여 부문 수상",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72585",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "027fd0a410debe3079",
+      "title": "인스파이어, 신한카드와 전략적 업무협약 체결",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72584",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "93ab022ac16489f6c0",
+      "title": "[여행단신] 제주관광공사·모두투어·부킹닷컴",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72583",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "0a73a8ea5395a3e471",
       "title": "아고다 분석, 2027년 한국 여행객 트렌드",
       "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72582",
@@ -2774,355 +3084,6 @@
         "evidence_status": "industry_subject_in_feed"
       },
       "decision": "publish"
-    },
-    {
-      "id": "0f65a8db64e96c4b08",
-      "title": "델타항공, 한국 고객 위한 디지털 여행 경험 강화",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72545",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9deb1bf41d44a9ea8a",
-      "title": "“영화 속 그 장면, 이번 여행의 목적지 되다”",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72543",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "cross_sentence_unproven"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "93ee0180b0e25f912c",
-      "title": "에어프레미아, 이코노미 공간 넓혔다",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72542",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "2bc0aa4243a2ca807b",
-      "title": "인천공항공사, AI 기반 수하물 처리 시스템 도입",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72541",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c89c568c2b448ec0af",
-      "title": "한국관광공사, ‘요즘, 한국관광 데이터 세미나’ 개최",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72540",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "경제·시장",
-        "score": 6,
-        "rules": [
-          "explicit_industry_subject"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "관광데이터"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "3de7d3cc47fb8e51b1",
-      "title": "하나투어, ‘겨울여행 페스타’ 오픈",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72539",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5fd150282c1c8e0109",
-      "title": "하와이 관광청, ‘여수세계섬박람회’ 하와이관 참여",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72538",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "97fb2b27251c6c21fd",
-      "title": "모두투어, ‘크루즈 메가 페스타’ 개최",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72537",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "b495e48d8fa411bd43",
-      "title": "라쿠텐 트래블, 벳푸·유후인 온천 숙소 5곳 공개",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72536",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "de36e518cc34415846",
-      "title": "‘서부산 관광 활성화 자문위원회’ 위원 위촉",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72535",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "문화·트렌드",
-        "score": 6,
-        "rules": [
-          "explicit_industry_subject"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "관광활성화"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "0a5bc7a9302f0b7510",
-      "title": "제주항공, 고객 상담 역량 강화 편의성 증대",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72544",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "3e6d6f8870d11a4051",
-      "title": "9월 인바운드 21.1% 아웃바운드 1.5% 성장",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72497",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "인바운드",
-        "score": 6,
-        "rules": [
-          "explicit_industry_subject"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "인바운드"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "afc9a57fd5ac9e1cc1",
-      "title": "중앙회, 가업상속공제 대상 관광업종 유지 촉구",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72534",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "관광정책",
-        "score": 7,
-        "rules": [
-          "tourism_sector_tax_policy"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "관광업종",
-              "가업상속공제",
-              "유지",
-              "촉구"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "5b81a985c68e05dd67",
-      "title": "경제 불안에도 여행의 가치는 여전",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72532",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "f618dc8699f4a7557e",
-      "title": "아고다, AI 어시스턴트 도입",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72533",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "여행산업",
-        "score": 7,
-        "rules": [
-          "ota_operating_technology_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "아고다",
-              "ai어시스턴트",
-              "도입"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "aef77bebd9c43bf94b",
-      "title": "내일투어, '2026 프랑스 어워즈’ 수상",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72531",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
     },
     {
       "id": "594f1896616a16d7ae",
@@ -4041,6 +4002,215 @@
       "decision": "exclude"
     },
     {
+      "id": "04271a9c875e2a9b93",
+      "title": "IDeaS to Convene Third Resorts Revenue Council as Resort Operators Accelerate Commercial Strategy Evolution",
+      "url": "https://www.hospitalitynet.org/news/4135280/ideas-to-convene-third-resorts-revenue-council-as-resort-operators-accelerate-commercial-strategy-evolution",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "53c985c0b83b7f733b",
+      "title": "I think I was wrong about Agents",
+      "url": "https://www.hospitalitynet.org/opinion/4135299/i-think-i-was-wrong-about-agents",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b5c29bf463144a4fac",
+      "title": "GBTA + VDR Europe Conference 2026 in Partnership with ABTA Draws Record Attendance as European Business Travel Spending Grows",
+      "url": "https://www.hospitalitynet.org/news/4135298/gbta-vdr-europe-conference-2026-in-partnership-with-abta-draws-record-attendance-as-european-business-travel-spending-grows",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "701ea31ed78977809b",
+      "title": "HITEC Paris 2026: The Rise of AI Agents and the Value of Being Human",
+      "url": "https://www.hospitalitynet.org/news/4135297/hitec-paris-2026-the-rise-of-ai-agents-and-the-value-of-being-human",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "495956ca7f8c95e205",
+      "title": "HFTP Announces 2026–2027 Global Executive Committee and Board of Directors",
+      "url": "https://www.hospitalitynet.org/news/4135296/hftp-announces-20262027-global-executive-committee-and-board-of-directors",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b3ddf750cde23c71a9",
+      "title": "Crestline Selected to Manage Aloft by Marriott Indianapolis Downtown",
+      "url": "https://www.hospitalitynet.org/news/4135295/crestline-selected-to-manage-aloft-by-marriott-indianapolis-downtown",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1190f29c96d1f0f23c",
+      "title": "New AHLA Report Says AI Is Giving Hotel Teams More Time for What Matters Most: Guests",
+      "url": "https://www.hospitalitynet.org/news/4135294/new-ahla-report-says-ai-is-giving-hotel-teams-more-time-for-what-matters-most-guests",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ed4890b663c81312f9",
+      "title": "AI Questions Every Hotelier Should Be Asking",
+      "url": "https://www.hospitalitynet.org/opinion/4135293/ai-questions-every-hotelier-should-be-asking",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7b8c14924587d80f29",
+      "title": "EU Sustainable Tourism Strategy adopted against background of increasing resilience and reducing seasonality",
+      "url": "https://www.hospitalitynet.org/news/4135292/eu-sustainable-tourism-strategy-adopted-against-background-of-increasing-resilience-and-reducing-seasonality",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "관광정책",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "tourism strategy",
+              "strategy"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "2d18b53d6890b9910a",
+      "title": "Own BFCM: The ultimate holiday preparation guide | a Revinate webinar",
+      "url": "https://www.hospitalitynet.org/podcast/4135291/own-bfcm-the-ultimate-holiday-preparation-guide-a-revinate-webinar",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "df467b1b470d2f8525",
+      "title": "What is GEO? What it means for independent hotels",
+      "url": "https://www.hospitalitynet.org/explainer/4135290/what-is-geo-what-it-means-for-independent-hotels",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "de02eee05917d68067",
       "title": "Record Early Planning and Upscale Growth Drive Asia Pacific, excluding China, Pipeline in Q3 2026",
       "url": "https://www.hospitalitynet.org/news/4135289/record-early-planning-and-upscale-growth-drive-asia-pacific-excluding-china-pipeline-in-q3-2026",
@@ -4199,206 +4369,6 @@
       "id": "71f56c700e85d7a9d2",
       "title": "47 hours back every month for Beaumier’s central reservations team",
       "url": "https://www.hospitalitynet.org/casestudy/4135267/47-hours-back-every-month-for-beaumiers-central-reservations-team",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "65c513936577248bcc",
-      "title": "Historic Hotels of America® Presents Chuck Franz, CEO, French Lick Resort with the 2026 Historic Hotels of America® Lifetime Achievement Award",
-      "url": "https://www.hospitalitynet.org/news/4135283/historic-hotels-of-america-presents-chuck-franz-ceo-french-lick-resort-with-the-2026-historic-hotels-of-america-lifetime-achievement-award",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c13714f37b985a512f",
-      "title": "For-Sight joins Net Affinity and Smarthotel to strengthen guest engagement and create a more personalised hotel booking journey",
-      "url": "https://www.hospitalitynet.org/news/4135282/for-sight-joins-net-affinity-and-smarthotel-to-strengthen-guest-engagement-and-create-a-more-personalised-hotel-booking-journey",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "7738290558e87546ed",
-      "title": "How Casa Faena Delights Guests and Drives 55% More Upsells With Canary",
-      "url": "https://www.hospitalitynet.org/casestudy/4135193/how-casa-faena-delights-guests-and-drives-55-more-upsells-with-canary",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c9027991bc7bc4f54a",
-      "title": "What It Costs to Build a Feeling",
-      "url": "https://www.hospitalitynet.org/opinion/4135279/what-it-costs-to-build-a-feeling",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "f735146171ca5c285f",
-      "title": "Scandic Hotels Group Completes Acquisition of Dalata’s Hotel Operations",
-      "url": "https://www.hospitalitynet.org/news/4135277/scandic-hotels-group-completes-acquisition-of-dalatas-hotel-operations",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "859577c06e6c58feb3",
-      "title": "SLH's Kenan Simmons on the Resurgence of Boutique Luxury, Keeping Customer Service Human, AI Can Only Read the Kitchen You Have Written Down",
-      "url": "https://www.hospitalitynet.org/editorial/4135276/slhs-kenan-simmons-on-the-resurgence-of-boutique-luxury-keeping-customer-service-human-ai-can-only-read-the-kitchen-you-have-written-down",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "fac4dd0afe1314a80d",
-      "title": "AI Can Only Read the Kitchen You Have Written Down",
-      "url": "https://www.hospitalitynet.org/opinion/4135275/ai-can-only-read-the-kitchen-you-have-written-down",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0bba5540a0f1e91f64",
-      "title": "Qatar Tourism Joins PATA to Strengthen Global Tourism Collaboration and Engagement with the Asia Pacific",
-      "url": "https://www.hospitalitynet.org/news/4135274/qatar-tourism-joins-pata-to-strengthen-global-tourism-collaboration-and-engagement-with-the-asia-pacific",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "4e54316301964aa77b",
-      "title": "How to Keep Customer Service Human in an AI-Fueled World",
-      "url": "https://www.hospitalitynet.org/opinion/4135273/how-to-keep-customer-service-human-in-an-ai-fueled-world",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [
-          "general_industry_howto_not_operating_news"
-        ],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "일반적인 방법 안내 제목은 실제 산업 변화 뉴스로 간주하지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c71215e4377a4450f2",
-      "title": "HFTP Announces HITEC 2027 North America Advisory Council",
-      "url": "https://www.hospitalitynet.org/news/4135250/hftp-announces-hitec-2027-north-america-advisory-council",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "4053cd9ed896051393",
-      "title": "Six checks to run before AI decides your hotel's story for you",
-      "url": "https://www.hospitalitynet.org/whitepaper/4135230/six-checks-to-run-before-ai-decides-your-hotels-story-for-you",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",

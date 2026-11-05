@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-05T20:16:43+09:00",
+  "generated_at": "2026-11-05T22:26:57+09:00",
   "briefing_date": "2026-11-05",
-  "last_successful_fetch": "2026-11-05T20:16:43+09:00",
-  "status": "candidates_ready",
+  "last_successful_fetch": "2026-11-05T22:26:57+09:00",
+  "status": "no_eligible_recent_articles",
   "recent_news_count": 6,
-  "selected_count": 1,
+  "selected_count": 0,
   "collection": {
     "status": "partial",
     "successful_sources": 16,
@@ -14,17 +14,6 @@
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
-  "items": [
-    {
-      "title": "에어부산, 3분기 흑자 전환…매출 41% 급증",
-      "source": "트래블데일리",
-      "published_at": "2026-11-04T21:12:16+09:00",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72573",
-      "category": "항공·숙박",
-      "keywords": [
-        "매출"
-      ]
-    }
-  ],
+  "items": [],
   "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
 }

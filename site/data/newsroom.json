@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-05T20:16:43+09:00",
-  "last_successful_fetch": "2026-11-05T20:16:43+09:00",
-  "count": 65,
+  "generated_at": "2026-11-05T22:26:57+09:00",
+  "last_successful_fetch": "2026-11-05T22:26:57+09:00",
+  "count": 68,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,36 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "튀르키예, 1~9월 관광 수입 513억 달러",
+      "source": "트래블데일리",
+      "published_at": "2026-11-05T22:02:09+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72593",
+      "category": "경제·시장",
+      "keywords": [
+        "관광수입"
+      ]
+    },
+    {
+      "title": "클룩, 외국인 관광객과 부산 잇는다",
+      "source": "트래블데일리",
+      "published_at": "2026-11-05T22:01:56+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72587",
+      "category": "인바운드",
+      "keywords": [
+        "외국인관광객"
+      ]
+    },
+    {
+      "title": "EU Sustainable Tourism Strategy adopted against background of increasing resilience and reducing seasonality",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-05T20:32:55+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135292/eu-sustainable-tourism-strategy-adopted-against-background-of-increasing-resilience-and-reducing-seasonality",
+      "category": "관광정책",
+      "keywords": [
+        "Tourism Strategy"
+      ]
+    },
     {
       "title": "Hilton Caribbean Footprint Tops 100 Open and Planned Hotels",
       "source": "Hospitality Net",
