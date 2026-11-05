@@ -26,10 +26,32 @@
       "id": "ecos_general_travel",
       "name": "ECOS 일반여행수입·지급",
       "enabled": false,
-      "method": "official_api_pending_mapping",
+      "method": "official_ecos_api",
       "url": "https://ecos.bok.or.kr/api/",
       "auth_env": "ECOS_API_KEY",
-      "reason": "인증키와 공식 통계표·항목·단위/정정 상태 확인 전 미연결"
+      "reason": "ECOS_API_KEY 및 일반여행 공식 표·항목·단위 실증/교차검증 전 미연동",
+      "start_period": "2021-01",
+      "mapping": {
+        "status": "pending_verification",
+        "evidence_url": null,
+        "verified_at": null,
+        "stat_code": null,
+        "stat_name": null,
+        "frequency": "M",
+        "unit_name": null,
+        "series": {}
+      },
+      "rights_review": {
+        "status": "review",
+        "evidence_url": "https://ecos.bok.or.kr/api/",
+        "verified_at": null,
+        "note": "공식 이용약관의 ECOS 출처표시 의무 확인. 인증 신청·통계정보 이용지침·해당 계열의 조건 확인 전 게시 보류."
+      },
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": null,
+        "verified_at": null
+      }
     },
     {
       "id": "ecos_total_travel",

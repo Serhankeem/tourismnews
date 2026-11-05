@@ -1,0 +1,81 @@
+{
+  "base_main": "8728c169281b9ec4e7741e4afcbafffd28723e54",
+  "data_live_read_only_ref": "37a2c4c911f5337c62db49a3010d9a219d718ee5",
+  "compared_at": "2026-11-05T17:00:12+09:00",
+  "operational_files_compared": 30,
+  "changed_files": [],
+  "hashes": {
+    "site/data/briefing.json": "16f7b6670c2311c9b57e9a52f4971ec8767c13c216343ea95bb36d93c6a1de55",
+    "site/data/briefing_archive.json": "c8f07ff693e8289e609deb55ce3261df04dbc296442f672aad4fd5d5cefd4865",
+    "site/data/filings.json": "344751803667e6959c9a6f562505e977b905c388f868d039530af95f8be2b664",
+    "site/data/health.json": "c32419592743bd8b2a1e130231fa399033bffbba4d1436170b45d2a3a0ad9af5",
+    "site/data/macro.json": "c660bd6429a8c762aab88c9ef3050dcdaf68258210f02bf055b107e7d93464f9",
+    "site/data/macro_health.json": "c89fab4eea1857991efa9e156706bc2e7987b358200713b1a0e4e0ddda9ac675",
+    "site/data/news.json": "eb0d5220bdb00135c8b07cfb1a00a90b72036b0d9e2496f15e6f811c9a72d5dd",
+    "site/data/newsroom.json": "eb0d5220bdb00135c8b07cfb1a00a90b72036b0d9e2496f15e6f811c9a72d5dd",
+    "site/data/publication_visibility.json": "9aa9b9797712741d461675b761920a4bd5b479f898549b94bcf5e921d46e322d",
+    "site/data/reports.json": "238c6adf43fe88579add5d671c8e743550ff6836a9ff4e48474572c6c488b5d4",
+    "site/data/reports_health.json": "9a84929662443c5b84cac1227d0dda06637a7da9e4c6bc4d5db34cb334332361",
+    "site/data/research.json": "812c6518119d4493906226b3725ba17d8ed02fcc2f10c796360b9bcbe4e10c38",
+    "collector_state/archive.json": "d005c13492624f5ffd10c1148256a5bec197d1ad2c71d25251d213ca6a700cca",
+    "collector_state/briefing_latest_selection.json": "f926c31d5fb2a1123d03ece79bc8f8f2030df305fc43fafba8bdfea68512e702",
+    "collector_state/briefing_selection.json": "a5eedc7dfb1028f9da5d1a4e18945eb55b29ff5ed6c0c71a2774f51360f180c6",
+    "collector_state/decisions.json": "f21088276cd2e00b639fcece3f140bda10189e027087c125344476baf81bce7a",
+    "collector_state/discovery.json": "c2b3ee1d6bfcca367a71c44e1f0d9eb5750627200d0982bb66d1b52a2de30aef",
+    "collector_state/legacy_archive.json": "68420da519e7f5922855c9d45a58076c997ac83c095870d3dbd4196fc0cb45e7",
+    "collector_state/macro_archive.json": "8292312f21f3f73d2e487c589506a490a89d61d30d22463786434ebb1052bc8c",
+    "collector_state/macro_legacy.json": "8e82ffe20669309431e4337f579bc4530c74ae75609c75e52f2ca43fd62769bc",
+    "collector_state/macro_run_summary.json": "c89fab4eea1857991efa9e156706bc2e7987b358200713b1a0e4e0ddda9ac675",
+    "collector_state/publication_visibility.json": "97e4af392f43697b9323a5c1c1e0d091fe9992f98a610173c25d6d8aba39a253",
+    "collector_state/reports_archive.json": "a03ef4b9823041f032be95d64f6290d2cda21df600c461ca7a6beeb1ba75ead8",
+    "collector_state/reports_candidates.json": "13d7eafb19f304704dafb35be751ab77516f896e8adee986caf8278f7200732c",
+    "collector_state/reports_run_summary.json": "9a84929662443c5b84cac1227d0dda06637a7da9e4c6bc4d5db34cb334332361",
+    "collector_state/reports_source_metrics.json": "2720301a37b6d5dbeb5994c7881436efdce8c7d34b7a5146b78bab2440f799bc",
+    "collector_state/review_queue.json": "7043919ff3618b7d0dd91f26dfcd749904fd470ef7dba9c7d607494b51c7c9de",
+    "collector_state/run_summary.json": "7504042975fdf72bc4d56fd092c7fb1bd04ed6cace78756a9b8f9ade69c68469",
+    "collector_state/source_metrics.json": "c566ebfd3aa6fdc3cfe59f9eb56f9e2f99ab4fcba05f34322923534c4b66d200",
+    "collector_state/v02_snapshot.json": "8228b7038490f459976562ffe39f8950643c6dcce0cd520d72880a1c286b55ce"
+  },
+  "news_count": 63,
+  "research_count": 135,
+  "macro_connected_indicators": 7,
+  "macro_observations": 483,
+  "macro_periods": {
+    "kto_inbound": [
+      "2021-01",
+      "2026-09"
+    ],
+    "kto_outbound": [
+      "2021-01",
+      "2026-09"
+    ],
+    "kto_inbound_cn": [
+      "2021-01",
+      "2026-09"
+    ],
+    "kto_inbound_jp": [
+      "2021-01",
+      "2026-09"
+    ],
+    "kto_inbound_tw": [
+      "2021-01",
+      "2026-09"
+    ],
+    "kto_inbound_us": [
+      "2021-01",
+      "2026-09"
+    ],
+    "kto_inbound_vn": [
+      "2021-01",
+      "2026-09"
+    ]
+  },
+  "hnr_held_records": 3,
+  "ecos_official_financial_observations": 0,
+  "fixture_financial_series_per_test": 2,
+  "fixture_months_per_series": 13,
+  "hnr_source_ids": {
+    "hotelnewsresource": 3
+  },
+  "hnr_public_count": 0
+}

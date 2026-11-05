@@ -1,0 +1,126 @@
+{
+  "checked_date": "2026-11-05",
+  "ecos_api_key_available_in_execution_environment": false,
+  "github_secret_registration_status": "unknown: listing names denied HTTP 403 Resource not accessible by integration",
+  "authenticated_ecos_financial_requests": 0,
+  "ecos_financial_values_received": 0,
+  "official_general_travel_mapping": "not_verified",
+  "probes": [
+    {
+      "name": "ecos-robots",
+      "url": "https://ecos.bok.or.kr/robots.txt",
+      "http_status": 200,
+      "sha256": "e5ab0d231eeb01b4a982d1c79a6729cac9797ad15a69247e4f28ba6afc149b4c",
+      "bytes": 70
+    },
+    {
+      "name": "ecos-guide",
+      "url": "https://ecos.bok.or.kr/api/",
+      "http_status": 200,
+      "sha256": "e816ac56379793c00985c0371d386ddaa8a6b7a19e805f3b42585d65f504acbf",
+      "bytes": 4436
+    },
+    {
+      "name": "ecos-home",
+      "url": "https://ecos.bok.or.kr/",
+      "http_status": 200,
+      "sha256": "f60b426ddfbd5f1e4abea70b5dd0af27baf774d7af6927e9104a969c0b41bca1",
+      "bytes": 7710
+    },
+    {
+      "name": "bok-robots",
+      "url": "https://www.bok.or.kr/robots.txt",
+      "http_status": 200,
+      "sha256": "6e15010ff3f759cb1b2dd4da283168f2b9a645d72a0c1a32ce4ad313fa0eeb65",
+      "bytes": 231
+    },
+    {
+      "name": "ecos-guide-js",
+      "url": "https://ecos.bok.or.kr/api/static/js/main.8aa29200.chunk.js",
+      "http_status": 200,
+      "bytes": 126751,
+      "sha256": "f9915415b6f993d83cb9ff95375e796323127852283b76f4a42dd1a56f49fbe4"
+    },
+    {
+      "url": "https://ecos.bok.or.kr/api/StatisticTableList/sample/json/kr/1/10/102Y004",
+      "http_status": 200,
+      "sha256": "b0ba4c7b6b2c59a09a1758a8226562b4da37749228df135e128c394990fd20d3",
+      "bytes": 225
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/datalab/portal/main/getMainForm.do",
+      "status": "ok",
+      "bytes": 593218,
+      "sha256": "67450fddd6826fe36d10624d475665f5c52dd4a4fa875b8f7d421ab9e1aa749d"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/View.do?cbIdx=1127&bcIdx=311425&pageIndex=1&cateCont=spt01",
+      "status": "ok",
+      "bytes": 469508,
+      "sha256": "4ccb076854abf68aee9932144966315a03f6c56f6bd5c2d8234d7fbf9ae63df7"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=311425&cbIdx=1127&streFileNm=da20f322-a2a3-4c02-846d-89668abdb7fa.xlsx",
+      "status": "ok",
+      "bytes": 1129744,
+      "sha256": "f2b383757aacea0645e0220488eaf31d65210d478f6f3f0abe414658dc4ef98d"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=311425&cbIdx=1127&streFileNm=5108262d-6de4-467f-90d0-36c43ae4baf7.xlsx",
+      "status": "ok",
+      "bytes": 299198,
+      "sha256": "89faa1ef0141a9a2d024a5b93e2f5c804e8db77e8da138078d6a4d9b9b59bac1"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/datalab/portal/ts/getKorTursmBalcForm.do",
+      "status": "ok",
+      "bytes": 493239,
+      "sha256": "37a56e60d034f31adca2a5659a65dc7763602a41baae437ef763115c1c89d581"
+    }
+  ],
+  "rendered_official_guides": [
+    {
+      "name": "spec-table",
+      "url": "https://ecos.bok.or.kr/api/#/DevGuide/DevSpeciflcation",
+      "sha256": "17f7a252d5baa31e87952944c1b3d4410599996f5cea88140839a62b8d1544dd",
+      "observed_at": "2026-11-05T07:49:13.024945+00:00"
+    },
+    {
+      "name": "spec-item",
+      "url": "https://ecos.bok.or.kr/api/#/DevGuide/DevSpeciflcation",
+      "sha256": "7bc4d94811830a47e5c3959bf8e93d9eb621228874bd3aff76cc7f36779acb26",
+      "observed_at": "2026-11-05T07:49:15.468914+00:00"
+    },
+    {
+      "name": "spec-search",
+      "url": "https://ecos.bok.or.kr/api/#/DevGuide/DevSpeciflcation",
+      "sha256": "977ef007aa27a48ea2cd23259eb5838db96f4b7800affe406a0650884b3910dc",
+      "observed_at": "2026-11-05T07:49:16.700897+00:00"
+    },
+    {
+      "name": "spec-meta",
+      "url": "https://ecos.bok.or.kr/api/#/DevGuide/DevSpeciflcation",
+      "sha256": "2ad1250f83b670119d6579c2540f56bb45ddb64d79ea7e2b4116b8d95a0eb268",
+      "observed_at": "2026-11-05T07:49:17.932881+00:00"
+    },
+    {
+      "name": "terms",
+      "url": "https://ecos.bok.or.kr/api/#/ServiceUse/ServiceUseHow",
+      "sha256": "a45eb87fc42ae7b1e0ad442e365fc62497aaf34b6616069ed6ccce257be6aa66",
+      "observed_at": "2026-11-05T07:48:12.277742+00:00"
+    }
+  ],
+  "public_sample": {
+    "stat_code": "102Y004",
+    "kind": "본원통화 공개 명세 예제, 관광수지 아님",
+    "rows": 1,
+    "monthly_financial_observations": 0
+  },
+  "kto_financial_reference": {
+    "url": "https://datalab.visitkorea.or.kr/datalab/portal/ts/getKorTursmBalcForm.do",
+    "definition": "국제수지 여행수지 중 일반여행만 관광수지로 사용",
+    "notice": "KTO 안내는 2025·2026년 관광수지를 잠정치로 설명. ECOS 개별 관측값의 확정 상태로 전용하지 않음.",
+    "download": "공식 다운로드 외 무단 수집 금지 안내. 해당 CSV/XLSX 미다운로드, 별도 API 직접 호출 없음.",
+    "crosscheck": "not_completed: ECOS general-travel values not obtained"
+  }
+}
