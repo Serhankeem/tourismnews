@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-05T18:14:44+09:00",
-  "last_successful_fetch": "2026-11-05T18:14:44+09:00",
-  "count": 64,
+  "generated_at": "2026-11-05T20:16:43+09:00",
+  "last_successful_fetch": "2026-11-05T20:16:43+09:00",
+  "count": 65,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,17 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "Hilton Caribbean Footprint Tops 100 Open and Planned Hotels",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-05T19:50:35+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135288/hilton-caribbean-footprint-tops-100-open-and-planned-hotels",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hilton",
+        "Hotels"
+      ]
+    },
     {
       "title": "튀르키예, 2026년 3분기 누적 관광 수입 513억 달러…역대 최고치 경신",
       "source": "퍼블릭뉴스통신(TTL)",
