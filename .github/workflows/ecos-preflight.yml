@@ -1,0 +1,47 @@
+name: ECOS Preflight
+on:
+  workflow_dispatch:
+    inputs:
+      max_tables:
+        description: Maximum monthly candidate tables to inspect (no observations or collection)
+        type: choice
+        default: '12'
+        options: ['6', '12', '24']
+permissions:
+  contents: read
+concurrency:
+  group: ecos-metadata-preflight
+  cancel-in-progress: false
+jobs:
+  metadata:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }} # Reviewed main commit selected by manual dispatch.
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect official metadata and write safe Summary
+        id: preflight
+        env:
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+          ECOS_PREFLIGHT_MAX_TABLES: ${{ inputs.max_tables }}
+        run: python -m src.macro.ecos_preflight
+      - name: Record execution outcome
+        if: always()
+        env:
+          PREFLIGHT_OUTCOME: ${{ steps.preflight.outcome }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          outcome=os.environ.get('PREFLIGHT_OUTCOME','')
+          if outcome not in ('success','failure','cancelled','skipped'):outcome='unknown'
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(
+              '## ECOS Preflight execution\n\n- Step: '+outcome+
+              '\n- No production collection, data/live write or Pages deployment.\n')
+          PY
