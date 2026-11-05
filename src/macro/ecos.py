@@ -350,6 +350,18 @@ def crosscheck(values, official, tolerance='0'):
     return result
 
 
+def metadata(client, table_code=None):
+    """Existing metadata-only CLI operation, also reusable without writing raw files."""
+    if table_code is not None and not re.fullmatch(r'\d{3}[A-Z]\d{3}', table_code):
+        raise EcosError('ecos_request_not_allowlisted')
+    tables = client.rows('StatisticTableList', *([table_code] if table_code else []))
+    result = dict(mode='official_ecos_metadata', checked_at=dt.datetime.now(dt.timezone.utc).isoformat(), tables=tables)
+    if table_code:
+        result['items'] = client.rows('StatisticItemList', table_code)
+    result['response_sha256'] = list(client.response_hashes)
+    return result
+
+
 def main():
     """Private preflight only. Does not write/push any operational files."""
     import argparse
@@ -369,11 +381,7 @@ def main():
     try:
         client = Client()
         if args.mode == 'metadata':
-            tables = client.rows('StatisticTableList', *([args.table_code] if args.table_code else []))
-            result = dict(mode='official_ecos_metadata', checked_at=dt.datetime.now(dt.timezone.utc).isoformat(), tables=tables)
-            if args.table_code:
-                result['items'] = client.rows('StatisticItemList', args.table_code)
-            result['response_sha256'] = client.response_hashes
+            result = metadata(client, args.table_code)
         else:
             config = json.loads((root/'macro_sources.json').read_text())
             selected = next(s for s in config['sources'] if s['id'] == 'ecos_general_travel')
