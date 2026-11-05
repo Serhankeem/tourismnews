@@ -24,7 +24,10 @@
  function card(r){
   const note=database.attributions?.[r.url];
   const attribution=note?.kogl_type?`<p class="research-attribution">출처: ${escape(r.publisher)} · ${escape(r.published_at)}${note.authors?' · 저자: '+escape(note.authors):''} · 공공누리 제${escape(note.kogl_type)}유형. 원문 이용조건은 발행기관에서 확인하세요.</p>`:'';
-  return `<article class="research-card"><div class="research-meta"><span>${escape(r.publisher)}</span><span>${escape(dateText(r))}</span><span class="research-access">${escape(r.access_type)}</span></div><h3><a href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">${escape(r.title)}</a></h3><div class="research-meta"><span class="category">${escape(r.category)}</span><span>${escape(r.report_type)}</span></div><p class="research-keywords">${r.keywords.map(escape).join(' · ')}</p><a class="text-link" href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">발행기관 원문 보기 ↗</a>${attribution}</article>`;
+  const unknownAccess=r.access_type==='미확인';
+  const accessLabel=unknownAccess?'열람 조건 미확인':r.access_type;
+  const accessNote=unknownAccess?'<p class="research-access-note">해당 자료의 무료 열람·회원 접근·구매 여부는 원문에서 확인해야 합니다.</p>':'';
+  return `<article class="research-card"><div class="research-meta"><span>${escape(r.publisher)}</span><span>${escape(dateText(r))}</span><span class="research-access">${escape(accessLabel)}</span></div>${accessNote}<h3><a href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">${escape(r.title)}</a></h3><div class="research-meta"><span class="category">${escape(r.category)}</span><span>${escape(r.report_type)}</span></div><p class="research-keywords">${r.keywords.map(escape).join(' · ')}</p><a class="text-link" href="${escape(r.url)}" target="_blank" rel="noopener noreferrer">발행기관 원문 보기 ↗</a>${attribution}</article>`;
  }
  function render(){
   const count=['query','publisher','region','type','category'].filter(k=>state[k].trim()).length+(state.sort!=='newest'?1:0);
