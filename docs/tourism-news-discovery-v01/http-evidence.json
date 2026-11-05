@@ -1,0 +1,296 @@
+{
+  "warning": "Guide/robots/transport observations only. No raw RSS, API response body, article body, titles from unlicensed results, credentials or personal information stored here. HTTP success is not a data or reuse grant.",
+  "observations": [
+    {
+      "url": "https://www.apihub.naver.com/",
+      "checked_at": "2026-11-05T05:18:46.107038+00:00",
+      "status": "error",
+      "error": "robots_unverified:transport_error",
+      "http": [
+        {
+          "url": "https://www.apihub.naver.com/robots.txt",
+          "status": null,
+          "error": "URLError"
+        }
+      ]
+    },
+    {
+      "url": "https://apihub.naver.com/",
+      "checked_at": "2026-11-05T05:20:09.999269+00:00",
+      "status": "error",
+      "error": "robots_unverified:transport_error",
+      "http": [
+        {
+          "url": "https://apihub.naver.com/robots.txt",
+          "status": null,
+          "error": "URLError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.go.kr/data/15105015/openapi.do",
+      "checked_at": "2026-11-05T05:18:46.105117+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://www.data.go.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bigkinds.or.kr/",
+      "accept": "text/html",
+      "status": "ok",
+      "bytes": 632283,
+      "sha256": "55c92cd461cbab4c3f0178d6200d0c19a6dd177b38286f8b13dc1412b060193c",
+      "http": [
+        {
+          "url": "https://www.bigkinds.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.bigkinds.or.kr/",
+          "status": 200,
+          "type": "text/html;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.korea.kr/rss/pressrelease.xml",
+      "checked_at": "2026-11-05T05:20:10.001547+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://www.korea.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bigkinds.or.kr/",
+      "checked_at": "2026-11-05T05:18:46.105968+00:00",
+      "status": "ok",
+      "bytes": 405370,
+      "sha256": "e9438b96534a8604e83907241aacb94fcab63586323e5487775c6d6e29616549",
+      "http": [
+        {
+          "url": "https://www.bigkinds.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.bigkinds.or.kr/",
+          "status": 200,
+          "type": "application/json;charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.naver.com/terms",
+      "checked_at": "2026-11-05T05:20:12.202683+00:00",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found",
+      "http": [
+        {
+          "url": "https://developers.naver.com/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://developers.naver.com/terms",
+          "status": 404,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.newswire.co.kr/coalition/document",
+      "checked_at": "2026-11-05T05:24:39.951633+00:00",
+      "status": "ok",
+      "bytes": 50218,
+      "sha256": "3692fa342d79afba6256eedc089a67492a0b23460a45226a142c2ee74fcd83cb",
+      "http": [
+        {
+          "url": "https://www.newswire.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.newswire.co.kr/coalition/document",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.go.kr/data/15034926/openapi.do",
+      "checked_at": "2026-11-05T05:18:58.498179+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://www.data.go.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://openapi.naver.com/v1/search/news.json?query=%EA%B4%80%EA%B4%91%EC%82%B0%EC%97%85&display=1",
+      "checked_at": "2026-11-05T05:20:10.193212+00:00",
+      "status": "error",
+      "error": "robots_disallowed",
+      "http": [
+        {
+          "url": "https://openapi.naver.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.naver.com/notice",
+      "checked_at": "2026-11-05T05:20:09.999985+00:00",
+      "status": "error",
+      "error": "https_public_endpoint_required",
+      "http": [
+        {
+          "url": "https://developers.naver.com/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://developers.naver.com/notice",
+          "status": 301,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://openapi.gg.go.kr/",
+      "checked_at": "2026-11-05T05:22:14.380097+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://openapi.gg.go.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://api.visitkorea.or.kr/",
+      "checked_at": "2026-11-05T05:22:14.380667+00:00",
+      "status": "ok",
+      "bytes": 5710,
+      "sha256": "05639b62fcf5954e44e6b1c9363cd80171e4e07f92035a517fd8b254e10ca653",
+      "http": [
+        {
+          "url": "https://api.visitkorea.or.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://api.visitkorea.or.kr/",
+          "status": 200,
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.newswire.co.kr/coalition/policyterms",
+      "checked_at": "2026-11-05T05:22:14.381270+00:00",
+      "status": "ok",
+      "bytes": 16714,
+      "sha256": "0759e9e98a7efdd8cfb4f0b1fa2257aa263f80010161dbffbd1b6d4178c78a4f",
+      "http": [
+        {
+          "url": "https://www.newswire.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.newswire.co.kr/coalition/policyterms",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.newswire.co.kr/coalition",
+      "checked_at": "2026-11-05T05:20:11.509292+00:00",
+      "status": "ok",
+      "bytes": 14085,
+      "sha256": "36f2035a9b8b6fc3d4abe054bef08dc8337f25e738ba019cf6615d5a8230cefa",
+      "http": [
+        {
+          "url": "https://www.newswire.co.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.newswire.co.kr/coalition",
+          "status": 200,
+          "type": "text/html; charset=UTF-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.culture.go.kr/data/main/main.do",
+      "checked_at": "2026-11-05T05:20:10.000732+00:00",
+      "status": "error",
+      "error": "HTTP Error 503: Service Unavailable",
+      "http": [
+        {
+          "url": "https://www.culture.go.kr/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.culture.go.kr/data/main/main.do",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://data.gg.go.kr/",
+      "checked_at": "2026-11-05T05:18:46.312722+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_503",
+      "http": [
+        {
+          "url": "https://data.gg.go.kr/robots.txt",
+          "status": 503,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://developers.naver.com/docs/serviceapi/search/news/news.md",
+      "checked_at": "2026-11-05T05:18:46.106428+00:00",
+      "status": "ok",
+      "bytes": 21443,
+      "sha256": "310cba248df8845905eff4c3c4c302064df10ef154b19b1baaf7029bb97aa19a",
+      "http": [
+        {
+          "url": "https://developers.naver.com/robots.txt",
+          "status": 404,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://developers.naver.com/docs/serviceapi/search/news/news.md",
+          "status": 200,
+          "type": "text/html; charset=UTF-8;"
+        }
+      ]
+    }
+  ]
+}

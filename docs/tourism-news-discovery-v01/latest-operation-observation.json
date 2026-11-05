@@ -1,0 +1,18 @@
+{
+  "data_ref": "e5e8b4c391008e75ec5c690c688d72d76025ace1",
+  "counts": {
+    "news": 63,
+    "archive": 76,
+    "discovery": 2818,
+    "reports": 135,
+    "macro_observations": 483,
+    "last_news_success": "2026-11-05T14:12:17+09:00",
+    "last_reports_success": "2026-11-02T13:24:45+09:00",
+    "last_macro_success": "2026-11-05T13:00:16.153029+09:00"
+  },
+  "manifest_verified": true,
+  "comparison_baseline_unchanged": true,
+  "observed_read_only": true,
+  "existing_source_successes": 17,
+  "policy_code_commit": "a1b8f437d14645d54c44d35726dedaeeab4d7763"
+}
