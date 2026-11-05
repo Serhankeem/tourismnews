@@ -30,6 +30,36 @@ SAFE_ERRORS = frozenset({
 })
 
 
+SAFE_FIELDS = frozenset({'unknown','record','catalogue','items','STAT_CODE','P_STAT_CODE',
+    'STAT_NAME','CYCLE','GRP_CODE','ITEM_CODE','ITEM_NAME','P_ITEM_CODE','P_ITEM_NAME',
+    'UNIT_NAME','START_TIME','END_TIME'})
+SAFE_CLASSIFICATIONS = frozenset({'validation_failed','invalid_type','invalid_length',
+    'empty_value','unsafe_content','invalid_code','missing_field','invalid_format',
+    'duplicate_code','invalid_collection','invalid_group','table_mismatch','period_order'})
+
+
+class MetadataValidationError(EcosError):
+    """No raw value in args/attributes. Public diagnostics are fixed enums only."""
+    def __init__(self, field, classification, code='preflight_unsafe_metadata'):
+        super().__init__(code)
+        self.field = field
+        self.classification = classification
+
+
+def diagnostic(exc):
+    if not isinstance(exc, MetadataValidationError):return None
+    field,kind=getattr(exc,'field',None),getattr(exc,'classification',None)
+    if type(field) is str and field in SAFE_FIELDS and type(kind) is str and kind in SAFE_CLASSIFICATIONS:
+        return {'field':field,'classification':kind}
+    return {'field':'unknown','classification':'validation_failed'}
+
+
+def required(row, field):
+    if not isinstance(row,dict):raise MetadataValidationError('record','invalid_type')
+    if field not in row:raise MetadataValidationError(field,'missing_field')
+    return row[field]
+
+
 def safe_error(exc):
     # Even unexpected EcosError objects must not echo arbitrary text/URLs.
     return str(exc) if isinstance(exc, EcosError) and str(exc) in SAFE_ERRORS else 'preflight_failed'
@@ -42,9 +72,10 @@ class Inspector:
             encoded=[base64.b64encode(secret.encode()).decode(),base64.urlsafe_b64encode(secret.encode()).decode()]
             self.tokens += encoded+[value.rstrip('=') for value in encoded]+[secret.encode().hex(),secret.encode().hex().upper()]
 
-    def text(self, raw, limit=200, empty=False):
-        if not isinstance(raw, str) or len(raw) > limit or (not raw.strip() and not empty):
-            raise EcosError('preflight_unsafe_metadata')
+    def text(self, raw, limit=200, empty=False, field='unknown'):
+        if not isinstance(raw,str):raise MetadataValidationError(field,'invalid_type')
+        if len(raw)>limit:raise MetadataValidationError(field,'invalid_length')
+        if not raw.strip() and not empty:raise MetadataValidationError(field,'empty_value')
         decoded = raw
         for _ in range(3):
             decoded = unicodedata.normalize('NFKC', html.unescape(unquote(decoded)))
@@ -52,28 +83,35 @@ class Inspector:
                 or any(t in decoded for t in self.tokens)
                 or any(unicodedata.category(c).startswith('C') for c in decoded)
                 or re.search(r'(?i)://|https?\s*:|www\.|/api/|<[^>]*>', decoded)):
-            raise EcosError('preflight_unsafe_metadata')
+            raise MetadataValidationError(field,'unsafe_content')
         return raw.strip()
 
-    def code(self, raw):
-        value = self.text(raw, 20)
+    def code(self, raw, field='unknown'):
+        value = self.text(raw, 20, field=field)
         if not re.fullmatch(r'[A-Za-z0-9_.-]{1,20}', value):
-            raise EcosError('preflight_unsafe_metadata')
+            raise MetadataValidationError(field,'invalid_code')
         return value
+
+    def catalogue_parent(self, raw):
+        """Only TableList's literal root parent marker; never a real code."""
+        if raw is None or raw=='':return None
+        self.text(raw,20,field='P_STAT_CODE')  # Run all content/Secret guards first.
+        if raw=='*':return None
+        return self.code(raw,field='P_STAT_CODE')
 
     def catalogue(self, rows):
         if not isinstance(rows, list) or len(rows)>5000:
-            raise EcosError('preflight_catalogue_invalid')
+            raise MetadataValidationError('catalogue','invalid_collection','preflight_catalogue_invalid')
         result = {}
         for raw in rows:
-            code = self.code(raw['STAT_CODE'])
+            code = self.code(required(raw,'STAT_CODE'),field='STAT_CODE')
             if code in result:
-                raise EcosError('preflight_catalogue_invalid')
-            cycle = self.text(raw.get('CYCLE') or '', 30, empty=True)
+                raise MetadataValidationError('STAT_CODE','duplicate_code','preflight_catalogue_invalid')
+            cycle = self.text(raw.get('CYCLE') or '', 30, empty=True,field='CYCLE')
             if not re.fullmatch(r'[A-Z,\s]*', cycle):
-                raise EcosError('preflight_catalogue_invalid')
-            result[code] = dict(code=code, name=self.text(raw['STAT_NAME']),
-                parent=self.code(raw['P_STAT_CODE']) if raw.get('P_STAT_CODE') else None,
+                raise MetadataValidationError('CYCLE','invalid_format','preflight_catalogue_invalid')
+            result[code] = dict(code=code, name=self.text(required(raw,'STAT_NAME'),field='STAT_NAME'),
+                parent=self.catalogue_parent(raw.get('P_STAT_CODE')),
                 cycles=[c.strip() for c in cycle.split(',') if c.strip()], searchable=raw.get('SRCH_YN')=='Y')
         return result
 
@@ -88,27 +126,29 @@ class Inspector:
 
     def items(self, table, rows):
         if not isinstance(rows,list) or len(rows)>5000:
-            raise EcosError('preflight_items_invalid')
+            raise MetadataValidationError('items','invalid_collection','preflight_items_invalid')
         lookup = {}
         groups = {}
         for raw in rows:
-            if raw.get('STAT_CODE')!=table['code'] or raw.get('STAT_NAME')!=table['name']:
-                raise EcosError('preflight_table_mismatch')
+            for field in ('STAT_CODE','STAT_NAME'):
+                if required(raw,field)!=table['code' if field=='STAT_CODE' else 'name']:
+                    raise MetadataValidationError(field,'table_mismatch','preflight_table_mismatch')
             if raw.get('CYCLE')!='M':continue
-            group=self.code(raw['GRP_CODE'])
+            group=self.code(required(raw,'GRP_CODE'),field='GRP_CODE')
             if group not in ('Group1','Group2','Group3','Group4'):
-                raise EcosError('preflight_items_invalid')
-            code=self.code(raw['ITEM_CODE']);key=(group,code)
-            if key in lookup:raise EcosError('preflight_duplicate_item')
-            row=dict(group=group,code=code,name=self.text(raw['ITEM_NAME']),
-                parent=self.code(raw['P_ITEM_CODE']) if raw.get('P_ITEM_CODE') else None,
-                parent_name=self.text(raw['P_ITEM_NAME']) if raw.get('P_ITEM_NAME') else None,
-                unit=self.text(raw.get('UNIT_NAME') or '',80,empty=True),
-                start=self.text(raw.get('START_TIME') or '',6,empty=True),
-                end=self.text(raw.get('END_TIME') or '',6,empty=True))
-            for value in (row['start'],row['end']):
-                if value and not re.fullmatch(r'\d{4}(?:0[1-9]|1[0-2])',value):raise EcosError('preflight_items_invalid')
-            if row['start'] and row['end'] and row['start']>row['end']:raise EcosError('preflight_items_invalid')
+                raise MetadataValidationError('GRP_CODE','invalid_group','preflight_items_invalid')
+            code=self.code(required(raw,'ITEM_CODE'),field='ITEM_CODE');key=(group,code)
+            if key in lookup:raise MetadataValidationError('ITEM_CODE','duplicate_code','preflight_duplicate_item')
+            row=dict(group=group,code=code,name=self.text(required(raw,'ITEM_NAME'),field='ITEM_NAME'),
+                parent=self.code(raw['P_ITEM_CODE'],field='P_ITEM_CODE') if raw.get('P_ITEM_CODE') else None,
+                parent_name=self.text(raw['P_ITEM_NAME'],field='P_ITEM_NAME') if raw.get('P_ITEM_NAME') else None,
+                unit=self.text(raw.get('UNIT_NAME') or '',80,empty=True,field='UNIT_NAME'),
+                start=self.text(raw.get('START_TIME') or '',6,empty=True,field='START_TIME'),
+                end=self.text(raw.get('END_TIME') or '',6,empty=True,field='END_TIME'))
+            for field,period_key in (('START_TIME','start'),('END_TIME','end')):
+                value=row[period_key]
+                if value and not re.fullmatch(r'\d{4}(?:0[1-9]|1[0-2])',value):raise MetadataValidationError(field,'invalid_format','preflight_items_invalid')
+            if row['start'] and row['end'] and row['start']>row['end']:raise MetadataValidationError('END_TIME','period_order','preflight_items_invalid')
             lookup[key]=row;groups[group]=groups.get(group,0)+1
         found=[]
         for row in lookup.values():
@@ -155,6 +195,7 @@ def inspect(client, inspector, max_tables=12):
                 report.update(inspector.items(table,detail['items']),status='inspected')
             except Exception as exc:
                 report.update(status='failed',error=safe_error(exc))
+                if diagnostic(exc):report['error_diagnostic']=diagnostic(exc)
             result['tables'].append(report)
             if report.get('error')=='ecos_auth_invalid':result['authentication']='rejected_after_catalogue'
             elif report.get('error')=='ecos_auth_or_access_denied':result['authentication']='access_denied_after_catalogue'
@@ -162,6 +203,7 @@ def inspect(client, inspector, max_tables=12):
         result['status']='inspection_complete' if len(result['tables'])==len(candidates) and all(t['status']=='inspected' for t in result['tables']) else 'partial'
     except Exception as exc:
         result['errors'].append(safe_error(exc));result['status']='failed'
+        if diagnostic(exc):result['error_diagnostic']=diagnostic(exc)
         if isinstance(exc,EcosError) and str(exc)=='ecos_auth_invalid':result['authentication']='rejected'
         elif isinstance(exc,EcosError) and str(exc)=='ecos_auth_or_access_denied':result['authentication']='access_denied'
     return result
@@ -188,6 +230,15 @@ def cell(value):
     return re.sub(r'([\\`*_{}\[\]()#+!|])',r'\\\1',value)
 
 
+def diagnostic_line(value):
+    # Recheck enums at render time; never stringify arbitrary diagnostics.
+    if not isinstance(value,dict):value={}
+    field,kind=value.get('field'),value.get('classification')
+    if type(field) is not str or field not in SAFE_FIELDS or type(kind) is not str or kind not in SAFE_CLASSIFICATIONS:
+        field,kind='unknown','validation_failed'
+    return '- 필드 진단: '+cell(field)+' / '+cell(kind)
+
+
 def summary(result):
     items=[i for t in result['tables'] for i in t.get('items',[])]
     counts={role:sum(i['direction']==role for i in items) for role in ('receipts_candidate','expenditure_candidate','direction_unverified')}
@@ -198,10 +249,14 @@ def summary(result):
         '- 일반여행 항목 후보 '+str(len(items))+'개 / 수입 '+str(counts['receipts_candidate'])+' / 지급 '+str(counts['expenditure_candidate'])+' / 방향 미확인 '+str(counts['direction_unverified']),
         '- 메타데이터만 조회. 수치 조회·수집·매핑 승인·운영 활성화는 수행하지 않았습니다.', '']
     for error in result['errors']:rows.append('- 오류: '+cell(error))
+    if result.get('error_diagnostic'):rows.append(diagnostic_line(result['error_diagnostic']))
     for table in result['tables']:
         rows+=['', '## '+cell(table['code'])+' · '+cell(table['name']),
                '- 주기: '+cell(','.join(table['cycles']))+' / 상태: '+cell(table['status'])]
-        if table.get('error'):rows.append('- 오류: '+cell(table['error']));continue
+        if table.get('error'):
+            rows.append('- 오류: '+cell(table['error']))
+            if table.get('error_diagnostic'):rows.append(diagnostic_line(table['error_diagnostic']))
+            continue
         rows.append('- 월간 항목 그룹/개수: '+cell(', '.join(f'{k}: {v}' for k,v in sorted(table['groups'].items()))))
         if not table['items']:
             rows.append('- 일반여행 항목 미발견. 전체 여행수입·지급으로 대체하지 않습니다.');continue

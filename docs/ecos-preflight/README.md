@@ -118,3 +118,64 @@ raw 로그나 인증키가 포함된 URL을 공유하지 않는다. 이 워크�
 - [Tourism Pulse RSS collector](https://github.com/Serhankeem/tourismnews/actions/runs/41996456319/job/127140713236): SUCCESS.
 
 운영 collect-and-publish 3개는 SKIPPED. ECOS Preflight는 수동 전용이므로 PR CI에서 실행되지 않았고 실제 Secret 사용 0회다. 후속 커밋은 이 검사 결과를 기록하는 문서 변경뿐이다.
+
+## 최상위 부모 표시 수정 — 첫 실제 실행 후속
+
+기준 main `6a0c77d5e2405f037bbc145fb597b3cb34cc5215`,
+브랜치 `fix/ecos-preflight-root-marker`.
+
+[첫 실행 41998049186](https://github.com/Serhankeem/tourismnews/actions/runs/41998049186)은
+main의 workflow_dispatch였고 metadata step이 실패했다. 사용자 제공 Summary는
+`not_verified / failed / catalogue_count=0 / preflight_unsafe_metadata`였다.
+기존 Summary는 실패 필드를 기록하지 않아 이 값만으로 인증 거절 또는 키 미주입을
+판정할 수 없으며, 전체 응답의 다른 실패 필드도 확인할 수 없다.
+
+### 확인한 원인과 공식 표본
+
+`Inspector.catalogue()`가 최상위 부모의 `P_STAT_CODE="*"`를 일반 `code()`로 전달해
+기존 코드 정규식에서 거절했다. 등록 Secret을 가져오지 않고 **공식 문서의 공개 sample
+TableList 10행**만 메모리에서 확인했다. 최상위 부모 `*` 1행이 실제로 존재했고,
+기존 파서는 거절했지만 수정한 파서는 10행 모두 통과하고 해당 부모 1개를 정상화했다.
+이 공개 표본은 전체 인증 목록이나 관광수지 코드 검증 성공을 뜻하지 않는다.
+원본 응답·명칭·Secret·인증 URL은 진단 파일에 보관하지 않았다.
+[값을 제외한 검증 기록](root-marker-validation.json).
+
+### 수정 범위
+
+- `catalogue_parent()`가 **P_STAT_CODE의 리터럴 `*`만** 내부 `None`으로 변환한다.
+  변환 전에 기존 비밀값·URL·인코딩·문자열 안전성 검사도 수행한다.
+- null/빈 부모는 기존처럼 부모 없음, 일반 부모 코드는 기존 코드 검증을 그대로 사용한다.
+- `STAT_CODE`, `ITEM_CODE`, `P_ITEM_CODE`의 검증은 완화하지 않았다. `**`, `*suffix`,
+  공백/Unicode/인코딩 변형을 루트 표시로 받아들이지 않는다.
+- 숫자형 최상위·하위 분류는 계층 탐색 노드다. 실제 요청은 기존대로 TABLE_CODE 형식의
+  검색 가능한 월간 통계표에만 수행한다. 분류 자체를 통계표로 조회하지 않는다.
+
+### 원문 없는 필드 진단
+
+`MetadataValidationError`는 기존 고정 오류 ID와 별개로 **고정 enum의 필드명·오류 분류만**
+전달한다. 기존 `errors[]` 문자열 계약은 유지한다. Summary는 예를 들어
+`P_STAT_CODE / invalid_code`, `STAT_NAME / unsafe_content`, `END_TIME / invalid_format`만
+표시한다. 원래 값, raw 응답, 예외 repr/임의 속성, 값의 길이·해시를 표시하지 않는다.
+
+문자열·코드·필수 필드·표 일치·단위/기간 검사에 진단 위치를 붙였다. 포착 단계와 Summary
+렌더링 단계에서 enum을 각각 재검증하고, 알려지지 않은 필드/분류는
+`unknown / validation_failed`로 대체한다. 비밀값·URL 검사, 값 공개 차단, 잘못된 행 거절,
+부분 실패 처리와 성공 판정 기준은 유지한다. 다른 오류를 무시하고 통과시키지 않는다.
+
+### 회귀와 운영 보존
+
+신규 14개 합성 테스트로 다음을 검증했다.
+
+- `P_STAT_CODE="*"` → 최상위 숫자 분류 → 자식 숫자 분류 → 월간 표의 계층 탐색.
+- 키워드가 없는 월간 자식의 발견 및 분류 노드에 대한 API 호출 부재.
+- 표/항목/항목 부모 코드의 별표·변형 거절과 기존 비밀값 검사 우회 방지.
+- 필수 필드·유형·단위·날짜·인코딩 키·악성 진단 속성 오류의 원문 없는 보고.
+- 실제 entrypoint의 로그·Summary에 비밀값이 없고 Summary 외 파일 쓰기가 없음.
+
+운영 JSON 30개, 기존 workflow 6개(ECOS Preflight 포함), source 승인 설정과 pipeline.json은
+최신 main과 바이트 단위로 동일하다. workflow·수집·운영 데이터·Pages 배포 경로를 변경하지 않았다.
+수정 코드를 사용하는 **실제 Secret 재실행은 수행하지 않았다**. 사용자 병합 후 기존
+`ECOS Preflight`를 main에서 수동 실행하여 전체 목록의 추가 필드 오류와 실제 후보 결과를
+확인해야 한다. 확인되지 않은 다른 필드까지 임의로 허용하지 않았다.
+
+수정 로컬 검사: **Python 전체 413개 통과(기존 399 + 신규 14)**, git diff --check 및 Python compile 통과. GitHub CI 결과는 PR 본문에 기록한다.
