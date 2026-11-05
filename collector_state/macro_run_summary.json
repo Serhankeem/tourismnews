@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-05T13:06:30.052510+09:00",
+  "checked_at": "2026-11-05T17:29:47.529520+09:00",
   "status": "not_due",
   "sources": [
     {
@@ -15,9 +15,10 @@
       "id": "ecos_general_travel",
       "name": "ECOS 일반여행수입·지급",
       "status": "not_connected",
-      "reason": "인증키와 공식 통계표·항목·단위/정정 상태 확인 전 미연결",
+      "reason": "ECOS_API_KEY 및 일반여행 공식 표·항목·단위 실증/교차검증 전 미연동",
       "last_successful_check": null,
-      "credential_status": "not_configured"
+      "collection_state": "mapping_pending",
+      "credential_status": "configured_pending_mapping"
     },
     {
       "id": "ecos_total_travel",
@@ -25,7 +26,7 @@
       "status": "not_connected",
       "reason": "일반여행과 구분하여 인증·정의·표 코드 확인 전 미연결",
       "last_successful_check": null,
-      "credential_status": "not_configured"
+      "credential_status": "configured_pending_mapping"
     },
     {
       "id": "kto_card",
