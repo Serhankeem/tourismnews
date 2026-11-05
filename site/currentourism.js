@@ -1,3 +1,9 @@
+function contentHeading(record,kind,allow=true){return window.ContentLocale?.heading(record,kind,allow)||{title:record.title,localized:false};}
+function contentTitleNote(record,kind,allow=true){
+ const h=contentHeading(record,kind,allow);if(!h.localized)return '';
+ return `<div class="localized-title-note"><span class="locale-badge">한국어 안내 표제</span><p class="original-title" lang="en">원제: ${escapeHtml(record.title)}</p><details><summary>표제 근거·이용 안내</summary><p>${escapeHtml(h.note)}</p><p>${escapeHtml(h.attribution)}</p><a href="${escapeHtml(h.evidence_url)}" target="_blank" rel="noopener noreferrer">이용조건 ↗</a></details></div>`;
+}
+function publisherRegionLabel(n){return ({domestic:'국내 발행처',foreign:'해외 발행처',unknown:'발행처 구분 미확인'})[ContentLocale.newsRegion(n)];}
 /* UI only: reads the existing public Newsroom and Research views; no collector writes. */
 function newsPublicationTime(n){
  const raw=n.published_at||'';
@@ -16,8 +22,8 @@ function renderHomeNews(){
  const now=Date.now(),recent=NEWS.filter(n=>{const age=now-Date.parse(n.published_at);return Number.isFinite(age)&&age>=0&&age<=86400000;});
  const label=document.getElementById('home-news-freshness');
  const ordered=[...NEWS].sort(compareNewsPublication);
- label.textContent=NEWS.length?(recent.length?`최근 24시간 발행 ${recent.length}건 · 원문 발행일 최신순`:'최근 24시간 발행 뉴스가 없습니다. 아래는 수록된 최근 기사이며 오늘 발행한 뉴스가 아닙니다.'):'게시 가능한 뉴스 데이터가 없습니다. 수집 상태를 확인해 주세요.';
- document.getElementById('overview-news').innerHTML=NEWS.length?ordered.slice(0,3).map(n=>`<article class="home-news-item"><div class="news-meta"><span class="category">${escapeHtml(n.category)}</span><span>${escapeHtml(n.source)}</span><time datetime="${escapeHtml(n.published_at)}">${escapeHtml(n.date)}</time></div><h3><a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a></h3><p class="news-keywords">${n.keywords.map(escapeHtml).join(' · ')}</p></article>`).join(''):'<div class="empty">실제 수집 결과가 아직 없습니다.</div>';
+ label.textContent=NEWS.length?(recent.length?`최근 24시간 발행 ${recent.length}건 · 전체 최신순 · 원문 발행일 기준`:'최근 24시간 발행 뉴스가 없습니다. 아래는 수록된 최근 기사이며 오늘 발행한 뉴스가 아닙니다.'):'게시 가능한 뉴스 데이터가 없습니다. 수집 상태를 확인해 주세요.';
+ document.getElementById('overview-news').innerHTML=NEWS.length?ordered.slice(0,3).map(n=>`<article class="home-news-item"><div class="news-meta"><span class="category">${escapeHtml(n.category)}</span><span>${escapeHtml(n.source)}</span><span class="publisher-region">${publisherRegionLabel(n)}</span><time datetime="${escapeHtml(n.published_at)}">${escapeHtml(n.date)}</time></div><h3><a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(contentHeading(n,'news').title)}</a></h3>${contentTitleNote(n,'news')}<p class="news-keywords">${n.keywords.map(escapeHtml).join(' · ')}</p></article>`).join(''):'<div class="empty">실제 수집 결과가 아직 없습니다.</div>';
 }
 // Static vector artwork shared by both Scenario Lab views; no model inputs.
 const WeatherMotion=(()=>{
@@ -104,6 +110,18 @@ document.addEventListener('DOMContentLoaded',()=>{
  const logo=document.getElementById('brand-logo'),fallback=document.getElementById('brand-fallback');
  function showLogo(){if(logo.naturalWidth){logo.hidden=false;fallback.hidden=true;}}
  logo.addEventListener('load',showLogo);logo.addEventListener('error',()=>{logo.hidden=true;fallback.hidden=false;});showLogo();
+ window.addEventListener('content-locale-updated',()=>{
+  if(state.page==='research')window.renderResearch?.();
+  else if(state.page==='news'||state.page==='overview')renderNews();
+  else if(state.page==='briefing')window.BriefingUI?.render();
+  const modal=document.getElementById('modal-layer');
+  if(modal.classList.contains('open')&&modal.dataset.newsId){
+   if(NEWS.some(n=>n.id===modal.dataset.newsId))openDetail(modal.dataset.newsId);
+   else modal.classList.remove('open');
+  }
+ });
+ document.querySelectorAll('[data-news-origin]').forEach(b=>b.addEventListener('click',()=>{state.newsOrigin=b.dataset.newsOrigin;state.newsPage=1;renderNews();}));
+ document.getElementById('news-order').addEventListener('change',e=>{state.newsOrder=e.target.value;state.newsPage=1;renderNews();});
  syncHomeWeather();loadAboutSources();
 });
 async function loadAboutSources(){

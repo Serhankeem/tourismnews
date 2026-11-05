@@ -1,0 +1,235 @@
+{
+  "scope": "official legal/about/catalogue metadata only; no report PDF, article body, paid content or unapproved Korean draft persisted here",
+  "observations": [
+    {
+      "url": "https://www.gov.uk/government/publications/open-government-licence",
+      "checked_at": "2026-11-05T06:46:12.422436+00:00",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found",
+      "http": [
+        {
+          "url": "https://www.gov.uk/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/open-government-licence",
+          "status": 404,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "checked_at": "2026-11-05T06:45:16.104220+00:00",
+      "status": "error",
+      "error": "robots_unverified:http_403",
+      "http": [
+        {
+          "url": "https://www.nationalarchives.gov.uk/robots.txt",
+          "status": 403,
+          "error": "HTTPError"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hospitalitynet.org/terms-conditions",
+      "checked_at": "2026-11-05T06:46:11.852081+00:00",
+      "status": "ok",
+      "bytes": 197998,
+      "sha256": "807d1689e456c89f1c56a6edac66c10bc5393d599eb48e880801e1b5cb8210c6",
+      "http": [
+        {
+          "url": "https://www.hospitalitynet.org/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hospitalitynet.org/terms-conditions",
+          "status": 200,
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.oecd.org/en/about/terms-conditions.html",
+      "checked_at": "2026-11-05T06:46:11.850898+00:00",
+      "status": "ok",
+      "bytes": 1499470,
+      "sha256": "7505818595c5daf006281909268efb18cc526a64e98699b0d0882d93a3f8f5b7",
+      "http": [
+        {
+          "url": "https://www.oecd.org/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://www.oecd.org/en/about/terms-conditions.html",
+          "status": 200,
+          "type": "text/html;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/help/terms-conditions",
+      "checked_at": "2026-11-05T06:46:11.850045+00:00",
+      "status": "ok",
+      "bytes": 80624,
+      "sha256": "31ea6a3e0918df43621bca4d7f984bb7b558abc3025c29f8ec468f2f1a0c079e",
+      "http": [
+        {
+          "url": "https://www.gov.uk/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.gov.uk/help/terms-conditions",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.phocuswright.com/About-Us/Copyright/",
+      "checked_at": "2026-11-05T06:46:11.851391+00:00",
+      "status": "ok",
+      "bytes": 29394,
+      "sha256": "f3873e7d54e66f934775737b27237f745ba4e7f24fd7c02e8bc344f285a08065",
+      "http": [
+        {
+          "url": "https://www.phocuswright.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.phocuswright.com/About-Us/Copyright/",
+          "status": 301,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://www.phocuswright.com/About-Us/Copyright",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+      "checked_at": "2026-11-05T06:47:55.668678+00:00",
+      "status": "ok",
+      "bytes": 1507743,
+      "sha256": "bd60d5fc4c2c0c14b1f7a8e713e917f8eb523b57e9259c2544bb22fe96cacd99",
+      "http": [
+        {
+          "url": "https://www.oecd.org/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2024_80885d8b-en.html",
+          "status": 200,
+          "type": "text/html;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/help/about-govuk",
+      "checked_at": "2026-11-05T06:45:16.103643+00:00",
+      "status": "ok",
+      "bytes": 66043,
+      "sha256": "b89be91e5c122b5bad7dce58dfb6391e386ce0b4a5cdedfd71caa9f94a6b340a",
+      "http": [
+        {
+          "url": "https://www.gov.uk/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://www.gov.uk/help/about-govuk",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.hospitalitynet.org/",
+      "checked_at": "2026-11-05T06:45:16.104864+00:00",
+      "status": "ok",
+      "bytes": 381826,
+      "sha256": "a23f8134bb2f9845d0ba7566afe53d06c39cdf2c5e64c7df2d79375f87a0dd02",
+      "http": [
+        {
+          "url": "https://www.hospitalitynet.org/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.hospitalitynet.org/",
+          "status": 200,
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+      "checked_at": "2026-11-05T06:47:55.151127+00:00",
+      "status": "ok",
+      "bytes": 1520544,
+      "sha256": "6e2549677203679324e98edf0d36605939c5d391d1325ff7bd8cf9b3774db948",
+      "http": [
+        {
+          "url": "https://www.oecd.org/robots.txt",
+          "status": 200,
+          "type": "text/plain;charset=utf-8"
+        },
+        {
+          "url": "https://www.oecd.org/en/publications/oecd-tourism-trends-and-policies-2026_3fd3cd75-en.html",
+          "status": 200,
+          "type": "text/html;charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://www.phocuswright.com/Terms-and-Conditions",
+      "checked_at": "2026-11-05T06:45:16.105500+00:00",
+      "status": "ok",
+      "bytes": 149873,
+      "sha256": "7cdf576750408d1236263b739e62dc19837a44b3bedd9ad7c505eac3a84e6173",
+      "http": [
+        {
+          "url": "https://www.phocuswright.com/robots.txt",
+          "status": 200,
+          "type": "text/plain"
+        },
+        {
+          "url": "https://www.phocuswright.com/Terms-and-Conditions",
+          "status": 302,
+          "error": "HTTPError"
+        },
+        {
+          "url": "https://www.phocuswright.com/",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "url": "https://etc-corporate.org/terms-and-conditions/",
+      "checked_at": "2026-11-05T06:45:16.106420+00:00",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found",
+      "http": [
+        {
+          "url": "https://etc-corporate.org/robots.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8"
+        },
+        {
+          "url": "https://etc-corporate.org/terms-and-conditions/",
+          "status": 404,
+          "error": "HTTPError"
+        }
+      ]
+    }
+  ]
+}

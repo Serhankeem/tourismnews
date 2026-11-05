@@ -498,6 +498,15 @@
         "max_days": 90,
         "max_records": 100,
         "limitation": "Last 100 official press releases per query only; local 90-day gate and verified first_published_at. No article-body crawling or unsupported pagination."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "GB",
+        "media_type": "public",
+        "publisher": "GOV.UK",
+        "publisher_id": "gov_uk",
+        "supply_route": "govuk_tourism",
+        "jurisdiction_evidence_url": "https://www.gov.uk/help/about-govuk",
+        "jurisdiction_checked_on": "2026-11-05"
       }
     },
     {
@@ -526,6 +535,15 @@
         "max_days": 90,
         "max_records": 100,
         "limitation": "Last 100 official press releases per query only; local 90-day gate and verified first_published_at. No article-body crawling or unsupported pagination."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "GB",
+        "media_type": "public",
+        "publisher": "GOV.UK",
+        "publisher_id": "gov_uk",
+        "supply_route": "govuk_aviation",
+        "jurisdiction_evidence_url": "https://www.gov.uk/help/about-govuk",
+        "jurisdiction_checked_on": "2026-11-05"
       }
     },
     {
@@ -843,7 +861,16 @@
         "mode": "provided_feed_only",
         "max_days": 90
       },
-      "notes": "Official linked XML feed tested with verified HTTPS and robots. Scope excludes appointment/promotion/generic advice without industry change. Foreign stories are not promoted to Korea-related."
+      "notes": "Official linked XML feed tested with verified HTTPS and robots. Scope excludes appointment/promotion/generic advice without industry change. Foreign stories are not promoted to Korea-related.",
+      "coverage": {
+        "publisher_jurisdiction": "NL",
+        "media_type": "tourism_specialist",
+        "publisher": "Hospitality Net",
+        "publisher_id": "hospitality_net",
+        "supply_route": "hospitalitynet",
+        "jurisdiction_evidence_url": "https://www.hospitalitynet.org/terms-conditions",
+        "jurisdiction_checked_on": "2026-11-05"
+      }
     },
     {
       "id": "hotelnewsresource",

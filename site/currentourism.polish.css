@@ -396,3 +396,19 @@ input:focus-visible, select:focus-visible { outline-color: var(--primary); }
   .home-news-item:hover, .research-card:hover, .industry-card:hover, .market-home-card:hover, .brief-card:hover { transform: none; }
   .site-header { transition: none; }
 }
+
+/* Korean-first discovery: same public originals, explicit publisher geography. */
+.content-discovery { padding: 18px 20px; margin-bottom: 20px; background: #F2F6FC; border: 1px solid #C8D6E8; border-radius: 12px; }
+.publisher-scope { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.publisher-scope button { min-height: 44px; padding: 10px 16px; border: 1px solid #A6BCDA; border-radius: 8px; background: white; color: #173B73; font-weight: 650; }
+.publisher-scope button[aria-pressed="true"] { background: #173B73; color: white; border-color: #173B73; }
+.publisher-scope button[aria-pressed="true"]::before { content: '✓ '; }
+.publisher-scope button[hidden] { display: none; }
+.news-order-label { display: inline-flex; align-items: center; gap: 12px; color: #173B73; font-weight: 650; }
+.news-order-label select { min-height: 44px; padding: 8px 12px; border: 1px solid #A6BCDA; border-radius: 8px; background: white; color: #173B73; }
+.publisher-region,.locale-badge { display: inline-block; color: #173B73; background: #EDF3FC; border-radius: 5px; padding: 3px 7px; font-size: 11px; }
+.localized-title-note { margin: 8px 0 12px; }
+.original-title { font-size: 13px; line-height: 1.7; color: #52647A; overflow-wrap: anywhere; margin: 8px 0; }
+.localized-title-note details { font-size: 12px; line-height: 1.7; color: #52647A; }
+.localized-title-note summary { cursor: pointer; min-height: 32px; padding: 6px 0; }
+@media(max-width:560px){.content-discovery{padding:14px}.publisher-scope button{flex:1;padding:10px 8px}.publisher-region{white-space:nowrap}}

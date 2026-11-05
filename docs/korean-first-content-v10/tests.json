@@ -1,0 +1,125 @@
+{
+  "python": {
+    "passed": 333,
+    "new_tests": 12,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "browser": {
+    "passed_suites": 18,
+    "results": [
+      {
+        "suite": "briefing-observation.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: briefing archive/date/copy/empty/failure preservation; official observations/updates/failure/financial exclusion; four widths\n"
+      },
+      {
+        "suite": "header-weather-v22.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS header/weather v2.2: 6 widths, measured fit/text scaling, compact menu/native keys/ARIA/external/Escape, all routes/history, DOM order, scenario first on hash/home entry, sliders/reset/shared values, retained real charts/country cards\n"
+      },
+      {
+        "suite": "home.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: real home metadata/order/freshness, desktop/mobile four-group navigation, home logo link, keyboard menu, deep links/history, About dynamic source status, chart, weather/reset, Research preservation; no JS errors\n"
+      },
+      {
+        "suite": "korea-coverage-v05.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS v0.5: 7 real domestic-publisher additions, six fields, original dates/links, search, rights exclusion, honest domestic coverage, 390/1440px\n"
+      },
+      {
+        "suite": "macro.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: real official monthly history, home/Macro exact values, 4 widths, definitions/pending financial metrics, ranges/gaps/missing growth, source-date/finality, refresh/all-failure preservation, empty initial state, private archive isolation and unchanged weather simulation\n"
+      },
+      {
+        "suite": "market-weather-v2.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS Weather v2: shared official values/source/month, 12-month chart/missing/comparisons, corrections/delay/failures/financial exclusion, scenario isolation/colors/keyboard/reset, four widths\n"
+      },
+      {
+        "suite": "navigation-research-v21.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS nav/research v2.1: 4 top-level menus with content-fit compact disclosure, disclosure/keyboard/history/hash, 5 widths, compound filters/counts/persistence/reset/pagination, stats/anchors; no JS errors\n"
+      },
+      {
+        "suite": "newsroom-freshness.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: real publication order (Nov 2 before Oct 29), home three, reversed six-field browser payload, exact original dates, time-zone ties, partial coverage and three empty/failure reasons at PC/mobile widths\n"
+      },
+      {
+        "suite": "newsroom.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: live articles, search, detail, stable bookmark, partial/all-failure status, preservation, briefing and legacy fallback, six-field link curation, all-page pagination/link coverage, filing/statistics exclusion and internal archive isolation; no JS errors\n"
+      },
+      {
+        "suite": "pr17-review.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS PR17 review: approved literal keywords and held-source exclusion, unchanged five fields, public count, six public fields, current briefing rights exclusion, 390/1440px\n"
+      },
+      {
+        "suite": "publication-visibility.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS visibility gate: real 3 held URLs absent from public views/fallback, preserved approved keywords, historical display/copy filtered, immutable file, cached-data failure closed, approved restoration, 390/1440px\n"
+      },
+      {
+        "suite": "reports.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: 135 real reports; full-DB search, combined filters, 10/20 pagination/reset, sort, original links, no images/bodies, preservation, Newsroom pagination, PC/mobile layout\n"
+      },
+      {
+        "suite": "research-v05.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS Research v0.5: real new publishers, MICE/aviation/hotel filters, original links/dates/attribution, no images, desktop/mobile and Weather preservation\n"
+      },
+      {
+        "suite": "ui-2.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS UI 2.0: four widths, 4 weather states, logos, banner persistence/dialog, sources table, both pagers, routes; no JS errors\n"
+      },
+      {
+        "suite": "ui-polish.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS: 28 page/width combinations; layout, original logo, 40px+ controls, keyboard/focus, readable real chart labels, long real report title, unchanged weather calculation, reduced motion\n"
+      },
+      {
+        "suite": "korean-first.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS Korean-first: four widths, verified geography independent of language, domestic/latest ordering, combined search/pagination, bilingual factual labels and original bindings, approval withdrawal/failure, six/eight fields, consistent live displays, unchanged confirmed archive\n"
+      },
+      {
+        "suite": "ui-ux-polish-v10.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS Polish v1.0: five widths, original 130px logo, measured header, segmented links/history/keyboard, four shared SVG states, unchanged scores, hidden/reduced motion pause, 200ms route-only entrance, access-condition label, 44px pagination, no pointer on plain KPI, real data preservation\n"
+      },
+      {
+        "suite": "diversity-v06.smoke.cjs",
+        "exit_code": 0,
+        "result": "PASS v0.6: six public fields, publisher grouping and current-cohort conversion, review/failure distinction, no independent-reporting claim, HNR blocked, Research preserved, 390/1440px\n"
+      }
+    ]
+  },
+  "github_ci": {
+    "status": "success",
+    "tested_code_commit": "ab0bd54a233ce6d34322ca04487e05ab6994056e",
+    "checks": [
+      {
+        "workflow": "Macro Monitor official statistics",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41987259399/job/127110831472"
+      },
+      {
+        "workflow": "Research Library weekly collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41987259410/job/127110831582"
+      },
+      {
+        "workflow": "Tourism Pulse RSS collector",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/Serhankeem/tourismnews/actions/runs/41987259190/job/127110831060"
+      }
+    ],
+    "production_jobs": "collect-and-publish all skipped in PR",
+    "note": "Following commit only records CI; code, reviewed labels and UI tests are identical."
+  }
+}
