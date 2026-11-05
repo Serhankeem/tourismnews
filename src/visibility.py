@@ -8,13 +8,16 @@ import hashlib
 if __package__:
     from . import collector as c
     from .editorial import project
+    from .news_discovery import configuration as provider_configuration, record_allowed
 else:
     import collector as c
     from editorial import project
+    from news_discovery import configuration as provider_configuration, record_allowed
 
 
 class PublicationGate:
-    def __init__(self, sources, permission, data_dir):
+    def __init__(self, sources, permission, data_dir, providers=None):
+        self.providers = provider_configuration() if providers is None else providers
         self.sources = {s['id']: s for s in sources}
         self.authorized = {s['id'] for s in sources if s.get('enabled', True) and permission(s)}
         self.previous_urls = set()
@@ -27,7 +30,8 @@ class PublicationGate:
                 self.previous_urls.update(urls)
 
     def allows(self, record):
-        return record.get('source_id') in self.authorized
+        return (record.get('source_id') in self.authorized
+                and record_allowed(record, self.providers, self.sources))
 
     def views(self, articles):
         stored, news, filings = project(articles)
@@ -71,6 +75,8 @@ class PublicationGate:
             sid = r.get('source_id'); source = self.sources.get(sid, {})
             status = 'rights_hold' if not self.allows(r) else 'public' if r['id'] in public_ids else 'archived'
             policy_status = source.get('publication', {}).get('status', 'policy_missing' if sid in self.sources else 'source_missing')
+            if r.get('discovery_origin'):
+                policy_status += ':provider_' + ('approved' if record_allowed(r, self.providers, self.sources) else 'held')
             old = doc['records'].get(r['id'], {})
             previous = old.get('status', 'public' if r.get('url') in self.previous_urls else 'untracked')
             transitions = list(old.get('transitions', []))

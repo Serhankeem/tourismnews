@@ -7,6 +7,7 @@ on:
       - 'src/**'
       - '*sources.json'
       - 'pipeline.json'
+      - 'discovery_providers.json'
       - 'operating_policy.json'
       - 'relevance_reviews.json'
       - '.github/workflows/**'

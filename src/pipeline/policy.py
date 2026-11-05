@@ -14,6 +14,7 @@ from ..briefing import select
 from ..reports.engine import approved
 from ..reports.model import public as public_report
 from ..coverage import coverage
+from ..news_discovery import configuration as provider_configuration
 from ..macro.engine import public_view
 
 
@@ -31,7 +32,7 @@ def project(root, code, at):
     root,code=Path(root),Path(code)
     data=root/'site/data';state=root/'collector_state'
     sources=read(code/'sources.json')['sources']
-    gate=PublicationGate(sources,current_permission(code),data)
+    gate=PublicationGate(sources,current_permission(code),data,providers=provider_configuration(code))
     archive=read(state/'archive.json')['articles']
     stored,news,filings,other=gate.views(archive)
     changed=False
@@ -86,7 +87,7 @@ def project(root, code, at):
 
 def verify_public(root,code):
     data=Path(root)/'site/data';state=Path(root)/'collector_state'
-    gate=PublicationGate(read(Path(code)/'sources.json')['sources'],current_permission(code),data)
+    gate=PublicationGate(read(Path(code)/'sources.json')['sources'],current_permission(code),data,providers=provider_configuration(code))
     archive=read(state/'archive.json')['articles']
     _,news,filings,other=gate.views(archive)
     for name,rows in [('news',news),('newsroom',news),('filings',filings),('research',other)]:

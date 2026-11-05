@@ -1,0 +1,201 @@
+{
+  "baseline_code_ref": "a1b8f437d14645d54c44d35726dedaeeab4d7763",
+  "baseline_data_ref": "c32bcddd23f69c8047b7f34c5bb9ebdd79216585",
+  "comparison_at": "2026-11-05T14:32:01+09:00",
+  "new_live_connected_providers": 0,
+  "new_confirmed_publishers": 0,
+  "new_publishable_news": 0,
+  "new_api_discovery_candidates": null,
+  "new_api_discovery_candidates_note": "No approved API call succeeded; unknown volume, not an empty successful response.",
+  "operational_data_modified": false,
+  "pages_deployed": false,
+  "before": {
+    "configured_sources": 26,
+    "stored_records": 76,
+    "discovery_records": 2774,
+    "public_news": 63,
+    "domestic_coverage": {
+      "definition": "domestic_publisher=explicit_KR_configuration; korean_market=editorial_korea_direct; counts=current_public_news_only",
+      "domestic_publishing_sources": 5,
+      "new_domestic_publishing_sources": [
+        "mcst_press",
+        "seoul_culture",
+        "traveldaily",
+        "traveltimes",
+        "ttlnews"
+      ],
+      "domestic_publisher_news_count": 54,
+      "domestic_publisher_news_last7d": 25,
+      "domestic_korea_direct_news_count": 30,
+      "domestic_korea_direct_news_last7d": 12,
+      "korea_direct_news_all_publishers": 30,
+      "domestic_top3_source_share": 0.8888888888888888,
+      "domestic_news_by_source": {
+        "mcst_press": 4,
+        "seoul_culture": 2,
+        "traveldaily": 18,
+        "traveltimes": 18,
+        "ttlnews": 12
+      },
+      "domestic_news_by_media_type": {
+        "tourism_specialist": 48,
+        "general_economy": 0,
+        "general_news": 0,
+        "corporate": 0,
+        "public": 6,
+        "unknown": 0
+      },
+      "domestic_news_by_category": {
+        "관광정책": 6,
+        "인바운드": 9,
+        "여행산업": 9,
+        "항공·숙박": 12,
+        "문화·트렌드": 17,
+        "경제·시장": 1
+      },
+      "domestic_supply_routes": 5,
+      "domestic_identified_publishers": 5,
+      "unclassified_publisher_news_count": 9,
+      "publisher_diversity": {
+        "domestic_publishers": 5,
+        "news_by_publisher": {
+          "mcst": 4,
+          "seoul_metropolitan_government": 2,
+          "traveldaily": 18,
+          "traveltimes": 18,
+          "ttlnews": 12
+        },
+        "domestic_top3_publisher_share": 0.8888888888888888,
+        "domestic_news_last7d": 25,
+        "korea_direct_news_last7d": 12,
+        "article_domains": {
+          "mediahub.seoul.go.kr": 2,
+          "www.mcst.go.kr": 4,
+          "www.traveldaily.co.kr": 18,
+          "www.traveltimes.co.kr": 18,
+          "www.ttlnews.com": 12
+        },
+        "provenance": {
+          "declared_distribution_news": 0,
+          "possible_shared_headline_pairs": [],
+          "unknown_origin_news": 54,
+          "independent_reporting_verified": 0,
+          "definition": "title_metadata_signals_only; identical titles are not proof of syndication; distinct titles are not proof of independent reporting; articles are not removed"
+        },
+        "definition": "explicit_KR_publisher_registry; multiple feeds of the same publisher counted once; media plurality is not verified independent reporting"
+      }
+    }
+  },
+  "isolated_after": {
+    "received": 918,
+    "new_discoveries": 50,
+    "duplicates": 406,
+    "news_classifications": {
+      "Direct": 32,
+      "Indirect": 0,
+      "Irrelevant": 419
+    },
+    "public_news": 63,
+    "new_public_news": 0,
+    "new_filings": 1,
+    "successful_sources": 24,
+    "domestic_coverage": {
+      "definition": "domestic_publisher=explicit_KR_configuration; korean_market=editorial_korea_direct; counts=current_public_news_only",
+      "domestic_publishing_sources": 5,
+      "new_domestic_publishing_sources": [],
+      "domestic_publisher_news_count": 54,
+      "domestic_publisher_news_last7d": 25,
+      "domestic_korea_direct_news_count": 30,
+      "domestic_korea_direct_news_last7d": 12,
+      "korea_direct_news_all_publishers": 30,
+      "domestic_top3_source_share": 0.8888888888888888,
+      "domestic_news_by_source": {
+        "mcst_press": 4,
+        "seoul_culture": 2,
+        "traveldaily": 18,
+        "traveltimes": 18,
+        "ttlnews": 12
+      },
+      "domestic_news_by_media_type": {
+        "tourism_specialist": 48,
+        "general_economy": 0,
+        "general_news": 0,
+        "corporate": 0,
+        "public": 6,
+        "unknown": 0
+      },
+      "domestic_news_by_category": {
+        "관광정책": 6,
+        "인바운드": 9,
+        "여행산업": 9,
+        "항공·숙박": 12,
+        "문화·트렌드": 17,
+        "경제·시장": 1
+      },
+      "domestic_supply_routes": 5,
+      "domestic_identified_publishers": 5,
+      "unclassified_publisher_news_count": 9,
+      "publisher_diversity": {
+        "domestic_publishers": 5,
+        "news_by_publisher": {
+          "mcst": 4,
+          "seoul_metropolitan_government": 2,
+          "traveldaily": 18,
+          "traveltimes": 18,
+          "ttlnews": 12
+        },
+        "domestic_top3_publisher_share": 0.8888888888888888,
+        "domestic_news_last7d": 25,
+        "korea_direct_news_last7d": 12,
+        "article_domains": {
+          "mediahub.seoul.go.kr": 2,
+          "www.mcst.go.kr": 4,
+          "www.traveldaily.co.kr": 18,
+          "www.traveltimes.co.kr": 18,
+          "www.ttlnews.com": 12
+        },
+        "provenance": {
+          "declared_distribution_news": 0,
+          "possible_shared_headline_pairs": [],
+          "unknown_origin_news": 54,
+          "independent_reporting_verified": 0,
+          "definition": "title_metadata_signals_only; identical titles are not proof of syndication; distinct titles are not proof of independent reporting; articles are not removed"
+        },
+        "definition": "explicit_KR_publisher_registry; multiple feeds of the same publisher counted once; media plurality is not verified independent reporting"
+      }
+    }
+  },
+  "same_response_old_and_new_code_public_equal": true,
+  "same_response_old_and_new_code_metrics_equal": true,
+  "baseline_public_news_equal": true,
+  "repeat": {
+    "new_discoveries": 0,
+    "new_newsroom_items": 0,
+    "new_filings": 0,
+    "duplicate_observations": 456
+  },
+  "validation": {
+    "news": 63,
+    "archive": 77,
+    "discovery": 2824,
+    "reports": 135,
+    "macro_observations": 483,
+    "last_news_success": "2026-11-05T14:32:01+09:00",
+    "last_reports_success": "2026-11-02T13:24:45+09:00",
+    "last_macro_success": "2026-11-05T13:00:16.153029+09:00"
+  },
+  "protected_data_byte_identical": {
+    "site/data/reports.json": true,
+    "collector_state/reports_archive.json": true,
+    "site/data/macro.json": true,
+    "collector_state/macro_archive.json": true,
+    "site/data/briefing_archive.json": true,
+    "collector_state/briefing_selection.json": true
+  },
+  "operational_manifest_unchanged": true,
+  "synthetic_fixtures_not_real_results": {
+    "verified_issuer_fixture_count": 2,
+    "live_issuer_count": 0,
+    "transport_contracts": "generic JSON/XML/RSS and legacy Naver format; NOT verified MCST/GG contracts"
+  }
+}

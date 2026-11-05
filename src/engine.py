@@ -15,6 +15,7 @@ if __package__:
     from .publication import public_record
     from .visibility import PublicationGate
     from .coverage import coverage
+    from . import news_discovery as nd
     from .diversity import article_domain_allowed
     from .editorial import project, exposure, is_statistical, statistical_assessment
 else:
@@ -24,6 +25,7 @@ else:
     from publication import public_record
     from visibility import PublicationGate
     from coverage import coverage
+    import news_discovery as nd
     from diversity import article_domain_allowed
     from editorial import project, exposure, is_statistical, statistical_assessment
 
@@ -50,7 +52,7 @@ def permission(source):
             and bool(policy.get('terms_url')) and bool(policy.get('basis')))
 
 
-def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, days=90):
+def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, days=90, providers=None, provider_loader=None):
     at = at or c.now_kst()
     loader = loader or Loader()
     data_dir, state_dir = Path(data_dir), Path(state_dir)
@@ -63,13 +65,17 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     old_articles = original.get('articles', []) if original.get('mode') != 'fixture_demo' else []
     if any('id' not in a for a in old_articles):
         raise ValueError('public_projection_requires_internal_archive')
-    gate = PublicationGate(sources, permission, data_dir)
+    gate = PublicationGate(sources, permission, data_dir, providers=nd.configuration() if providers is None else providers)
     previous_newsroom = gate.views(old_articles)[1]
     old_ids = {a['id'] for a in old_articles}
     ledger = c.read_json(state_dir / 'discovery.json', {}).get('candidates', {})
     previous_ids = set(ledger)
     original_by_id = {a['id']: a for a in old_articles}
-    source_metrics = c.read_json(state_dir / 'source_metrics.json', {}).get('sources', {})
+    metrics_doc = c.read_json(state_dir / 'source_metrics.json', {})
+    source_metrics = metrics_doc.get('sources', {})
+    providers = nd.configuration() if providers is None else providers
+    batch = nd.discover(providers, sources, at, metrics_doc.get('discovery_providers', {}),
+                        loader=provider_loader, archive=old_articles, publisher_permission=permission) if any(p.get('enabled') for p in providers) else None
     prepared, errors, health, metadata = {}, {}, [], {}
     run_ids = set()
     cohorts = {}
@@ -88,8 +94,16 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
             if not source.get('discovery_allowed', True):
                 raise AccessBlocked('discovery_not_authorized')
             row['fetch_attempted'] = True
-            payload = loader(source['url'])
-            items = list(items_from(source, payload))
+            try:
+                payload = loader(source['url'])
+                items = list(items_from(source, payload))
+            except (OSError, ValueError, KeyError, TypeError, c.ET.ParseError):
+                if not batch or not batch.by_source.get(sid):
+                    raise
+                items = []
+                row['primary_feed_status'] = 'failed_using_verified_provider_fallback'
+            if batch:
+                items.extend(batch.by_source.get(sid, []))
             source_days = min(days, source.get('backfill', {}).get('max_days', days))
             if source.get('record_type'):
                 items = [{**item, 'record_type': source['record_type']} for item in items]
@@ -109,6 +123,12 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                 if 'description' not in source.get('analysis_fields', ['title']):
                     item = {k: v for k, v in item.items() if k not in ('description', 'summary')}
                 aid = hashlib.sha256(url.encode()).hexdigest()[:18]
+                if (not item.get('discovery_origin')
+                        and original_by_id.get(aid, {}).get('discovery_origin')):
+                    # An RSS echo cannot erase the original API's date, identity
+                    # or rights provenance. Corrections require that contract.
+                    row['duplicates'] += 1
+                    continue
                 assessment = statistical_assessment() if is_statistical(source) else c.assess(title, c.stripped(item.get('description', item.get('summary', ''))))
                 raw_date = item.get('pubDate') or item.get('published')
                 if raw_date:
@@ -187,11 +207,15 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                              'relevance_evidence': assessment, 'publication_status': status,
                              'publication_policy': source.get('publication', {'status': 'review'}),
                              'relevance_label': assessment['label']}
+                if item.get('discovery_origin'):
+                    candidate['discovery_origin'] = item['discovery_origin']
                 candidate['editorial'] = exposure(candidate)
                 candidate['korea_priority'] = candidate['editorial']['tier'] == 'korea_direct'
                 # A discovery-only service cannot overwrite a previously licensed
                 # publisher's validated date/permission for the same URL.
                 prior = ledger.get(aid)
+                if prior and prior.get('discovery_origin') and not candidate.get('discovery_origin'):
+                    candidate['discovery_origin'] = prior['discovery_origin']
                 if prior and prior.get('publication_status') == 'published' and status in ('rights_hold', 'date_hold'):
                     candidate = {**prior, 'last_seen_at': c.iso(at), 'source_ids': candidate['source_ids']}
                 ledger[aid] = candidate
@@ -242,11 +266,16 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                 articles.append({**old_record, 'archived_only': True,
                                  'archive_reason': 'not_selected_by_current_publication_window_or_rules'})
         for article in articles:
+            prior_origin = original_by_id.get(article['id'], {}).get('discovery_origin')
+            if prior_origin and not article.get('discovery_origin'):
+                article['discovery_origin'] = prior_origin
             candidate = metadata.get(article['id'])
             if candidate:
                 for key in ('first_discovered_at', 'publication_date_basis', 'date_precision', 'record_type', 'korea_priority', 'is_backfill'):
                     article[key] = candidate[key]
                 article['publication_policy'] = candidate['publication_policy']
+                if candidate.get('discovery_origin'):
+                    article['discovery_origin'] = candidate['discovery_origin']
                 prior_first = original_by_id.get(article['id'], {}).get('first_published_by_engine_at')
                 if prior_first:
                     article['first_published_by_engine_at'] = prior_first
@@ -254,7 +283,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                     article['first_published_by_engine_at'] = c.iso(at)
                 if candidate['publication_policy'].get('attribution'):
                     article['desc'] = '원문 링크에서 공식 자료를 확인하세요. ' + candidate['publication_policy']['attribution']
-                ledger[article['id']]['publication_status'] = 'published'
+                ledger[article['id']]['publication_status'] = 'published' if gate.allows(article) else 'rights_hold'
         articles, newsroom, filings, other_views = gate.views(articles)
         news['articles'] = articles
         news['count'] = len(articles)
@@ -377,6 +406,16 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
         'failed_sources': [{'id': row['id'], 'error_kind': row.get('error_kind'), 'error': row.get('error')} for row in health if row['status'] != 'ok'],
         'source_gates': [{'id': s['id'], 'enabled': s.get('enabled', True),
                           'discovery_allowed': s.get('discovery_allowed', True), 'publication_approved': permission(s)} for s in sources]}
+    if batch:
+        for pid, metric in batch.metrics.items():
+            metric['persisted_candidate_count'] = sum(a.get('discovery_origin', {}).get('provider_id') == pid for a in ledger.values())
+            metric['new_stored_records'] = sum(a['id'] not in old_ids and a.get('discovery_origin', {}).get('provider_id') == pid for a in articles)
+            metric['new_public_news'] = sum(a['id'] in new_published and a.get('discovery_origin', {}).get('provider_id') == pid for a in newsroom)
+            metric['public_news_count'] = sum(a.get('discovery_origin', {}).get('provider_id') == pid for a in newsroom)
+        summary['discovery_providers'] = batch.metrics
+        if summary['discovery_status'] == 'ok' and (any(r['status'] == 'error' for r in batch.metrics.values()) or any(h.get('primary_feed_status') for h in health)):
+            summary['discovery_status'] = 'partial'
+        metrics_doc['discovery_providers'] = batch.cursors
     summary['publication_visibility'] = {**visibility_health, 'policy_reprojection': policy_reprojection}
     summary['quality']['domestic_coverage'] = coverage(newsroom, sources, at, previous_newsroom)
     if briefing_health is not None:
@@ -400,7 +439,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
             candidate['title'] = None
             candidate['title_storage'] = 'withheld_until_metadata_reuse_approved'
     c.write_atomic(state_dir / 'discovery.json', {'schema_version': 3, 'candidates': ledger})
-    c.write_atomic(state_dir / 'source_metrics.json', {'schema_version': 3, 'sources': source_metrics})
+    c.write_atomic(state_dir / 'source_metrics.json', {**metrics_doc, 'schema_version': 3, 'sources': source_metrics})
     c.write_atomic(state_dir / 'run_summary.json', summary)
     health_doc = stage_health
     health_doc['discovery'] = summary
