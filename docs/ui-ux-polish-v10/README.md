@@ -133,7 +133,7 @@
 
 - **Python 전체 321개 통과**.
 - **브라우저 전체 17개 suite 통과**(기존 16 + 신규 1). JS 오류 없음.
-- GitHub CI는 PR 제출 후 결과와 링크를 기록한다. 브라우저 17개는 로컬 Chromium 검사로 GitHub Python 검사와 구분한다.
+- **GitHub CI: 코드 커밋 `6f57f29d`의 검사 3개 모두 SUCCESS** — [뉴스](https://github.com/Serhankeem/tourismnews/actions/runs/41980132846), [Research](https://github.com/Serhankeem/tourismnews/actions/runs/41980133040), [Macro](https://github.com/Serhankeem/tourismnews/actions/runs/41980132851). 운영 collect-and-publish 3개는 기존 main 전용 조건으로 SKIPPED. 후속 커밋은 CI 기록뿐이며 브라우저 17개는 별도 로컬 Chromium 검사다.
 - main에 병합하지 않았으며 운영 data/live에 쓰거나 실제 Pages 배포를 실행하지 않았다.
 
 남은 UI 과제는 실기기 Safari/Android 및 운영 환경의 접근성·필드 성능 확인, 기존 비동기 데이터 영역의 추가 CLS 축소다. 뉴스 공급 확대·승인·모델 고도화는 이번 UI 범위에 포함하지 않았다.
