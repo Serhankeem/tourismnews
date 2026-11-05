@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-06T02:26:32+09:00",
-  "last_successful_fetch": "2026-11-06T02:26:32+09:00",
-  "count": 70,
+  "generated_at": "2026-11-06T04:10:10+09:00",
+  "last_successful_fetch": "2026-11-06T04:10:10+09:00",
+  "count": 72,
   "public_fields": [
     "title",
     "source",
@@ -21,6 +21,26 @@
       "category": "항공·숙박",
       "keywords": [
         "Hotel"
+      ]
+    },
+    {
+      "title": "승객은 넘쳐도 수익은 글쎄…국제선 1억 명 시대의 그늘",
+      "source": "여행신문",
+      "published_at": "2026-11-06T00:15:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500675",
+      "category": "항공·숙박",
+      "keywords": [
+        "국제선"
+      ]
+    },
+    {
+      "title": "항공·여행업계 서비스 품질 1위는?…최장 10년 연속",
+      "source": "여행신문",
+      "published_at": "2026-11-06T00:10:00+09:00",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500674",
+      "category": "여행산업",
+      "keywords": [
+        "여행업"
       ]
     },
     {
