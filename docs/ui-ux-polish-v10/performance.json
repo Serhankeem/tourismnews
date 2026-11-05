@@ -1,0 +1,137 @@
+{
+  "method": "3 fresh Chromium contexts per variant/width, local HTTP, identical pinned data, no CPU/network throttling, measured before interaction after fonts+400ms; observational, not field Core Web Vitals",
+  "samples": [
+    {
+      "width": 390,
+      "variant": "before",
+      "run": 0,
+      "lcp_ms": 172,
+      "cls": 0,
+      "dom_nodes": 1581,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 390,
+      "variant": "before",
+      "run": 1,
+      "lcp_ms": 116,
+      "cls": 0,
+      "dom_nodes": 1581,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 390,
+      "variant": "before",
+      "run": 2,
+      "lcp_ms": 96,
+      "cls": 0,
+      "dom_nodes": 1581,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 390,
+      "variant": "after",
+      "run": 0,
+      "lcp_ms": 108,
+      "cls": 0,
+      "dom_nodes": 1607,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 390,
+      "variant": "after",
+      "run": 1,
+      "lcp_ms": 120,
+      "cls": 0,
+      "dom_nodes": 1607,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 390,
+      "variant": "after",
+      "run": 2,
+      "lcp_ms": 92,
+      "cls": 0,
+      "dom_nodes": 1607,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 1440,
+      "variant": "before",
+      "run": 0,
+      "lcp_ms": 120,
+      "cls": 0.04778623583929574,
+      "dom_nodes": 1583,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 1440,
+      "variant": "before",
+      "run": 1,
+      "lcp_ms": 124,
+      "cls": 0.043575942804783954,
+      "dom_nodes": 1583,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 1440,
+      "variant": "before",
+      "run": 2,
+      "lcp_ms": 104,
+      "cls": 0.04778623583929574,
+      "dom_nodes": 1583,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 1440,
+      "variant": "after",
+      "run": 0,
+      "lcp_ms": 108,
+      "cls": 0.049781663751227556,
+      "dom_nodes": 1609,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 1440,
+      "variant": "after",
+      "run": 1,
+      "lcp_ms": 120,
+      "cls": 0.04557137071671577,
+      "dom_nodes": 1609,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    },
+    {
+      "width": 1440,
+      "variant": "after",
+      "run": 2,
+      "lcp_ms": 112,
+      "cls": 0.03440731431338121,
+      "dom_nodes": 1609,
+      "js_heap": 10000000,
+      "resources": 30,
+      "local_resources": 30
+    }
+  ]
+}

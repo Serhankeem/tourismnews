@@ -19,12 +19,46 @@ function renderHomeNews(){
  label.textContent=NEWS.length?(recent.length?`최근 24시간 발행 ${recent.length}건 · 원문 발행일 최신순`:'최근 24시간 발행 뉴스가 없습니다. 아래는 수록된 최근 기사이며 오늘 발행한 뉴스가 아닙니다.'):'게시 가능한 뉴스 데이터가 없습니다. 수집 상태를 확인해 주세요.';
  document.getElementById('overview-news').innerHTML=NEWS.length?ordered.slice(0,3).map(n=>`<article class="home-news-item"><div class="news-meta"><span class="category">${escapeHtml(n.category)}</span><span>${escapeHtml(n.source)}</span><time datetime="${escapeHtml(n.published_at)}">${escapeHtml(n.date)}</time></div><h3><a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.title)}</a></h3><p class="news-keywords">${n.keywords.map(escapeHtml).join(' · ')}</p></article>`).join(''):'<div class="empty">실제 수집 결과가 아직 없습니다.</div>';
 }
+// Static vector artwork shared by both Scenario Lab views; no model inputs.
+const WeatherMotion=(()=>{
+ const sun='<g fill="none" stroke="#F47735" stroke-width="3" stroke-linecap="round"><circle class="sun-halo" cx="35" cy="31" r="24" fill="#F47735" stroke="none" opacity=".25"/><g class="sun-rays"><path d="M35 4v6M35 52v6M8 31h6M56 31h6M16 12l4 4M50 46l4 4M16 50l4-4M50 16l4-4"/></g><circle cx="35" cy="31" r="14" fill="#F47735" stroke="none"/></g>';
+ const cloud=(cls,x,y)=>`<g transform="translate(${x} ${y})"><path class="${cls}" d="M25 55h43c16 0 17-23 2-25-1-17-26-20-31-4-15-5-25 10-18 20-9 0-9 9 4 9z" fill="#E1EAF6" stroke="#173B73" stroke-width="2.5"/></g>`;
+ const labels={sunny:'맑음',partly:'구름 조금',cloudy:'흐림',rain:'비'};
+ function render(tone){
+  const art=tone==='sunny'?sun:tone==='partly'?sun+cloud('cloud-drift',0,7):
+   tone==='cloudy'?cloud('cloud-back',-9,-10)+cloud('cloud-drift',4,7):
+   cloud('cloud-drift',0,-3)+'<g stroke="#173B73" stroke-width="3" stroke-linecap="round"><path class="rain-drop" d="M30 60l-3 6"/><path class="rain-drop" d="M49 60l-3 6"/><path class="rain-drop" d="M68 60l-3 6"/></g>';
+  for(const id of ['weather-icon','home-weather-icon']){
+   const node=document.getElementById(id);if(!node)continue;
+   if(node.dataset.iconState!==tone||!node.querySelector('svg')){
+    node.innerHTML=`<svg class="weather-glyph" viewBox="0 0 96 80" aria-hidden="true" focusable="false">${art}</svg>`;
+    node.dataset.iconState=tone;
+   }
+   node.removeAttribute('aria-hidden');node.setAttribute('role','img');node.setAttribute('aria-label',`시나리오 · 가상 실험: ${labels[tone]}`);
+  }
+ }
+ return {render};
+})();
+let pageEntrance;
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+window.polishPageTransition=(page,changed)=>{
+ if(!changed)return;
+ pageEntrance?.cancel();
+ if(!motionPreference.matches)pageEntrance=document.getElementById('page-'+page).animate(
+  [{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],
+  {duration:200,easing:'ease-out'});
+};
+motionPreference.addEventListener('change',()=>{if(motionPreference.matches)pageEntrance?.cancel();});
+const pauseWeatherMotion=()=>document.documentElement.dataset.motionPaused=String(document.hidden);
+document.addEventListener('visibilitychange',pauseWeatherMotion);pauseWeatherMotion();
+
 function syncHomeWeather(){
  const title=document.getElementById('weather-title').textContent;
  const tone=({'비':'rain','흐림':'cloudy','구름 조금':'partly','맑음':'sunny'})[title]||'cloudy';
  document.querySelectorAll('.weather-panel,.weather-result').forEach(card=>card.dataset.weather=tone);
 
- for(const key of ['title','icon','score'])document.getElementById('home-weather-'+key).textContent=document.getElementById('weather-'+key).textContent;
+ WeatherMotion.render(tone);
+ for(const key of ['title','score'])document.getElementById('home-weather-'+key).textContent=document.getElementById('weather-'+key).textContent;
 }
 document.addEventListener('DOMContentLoaded',()=>{
  const button=document.getElementById('news-menu-toggle'),panel=document.getElementById('news-submenu'),group=button.closest('.news-nav');
@@ -63,6 +97,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   document.documentElement.style.setProperty('--site-header-height',header.getBoundingClientRect().height+'px');
  }
+ let scrolled;
+ const scrollHeader=()=>{const next=scrollY>8;if(next!==scrolled){header.classList.toggle('is-scrolled',next);scrolled=next;}};
+ window.addEventListener('scroll',scrollHeader,{passive:true});scrollHeader();
  const headerObserver=new ResizeObserver(sizeHeader);headerObserver.observe(inner);headerObserver.observe(nav);window.addEventListener('resize',sizeHeader);document.fonts.ready.then(sizeHeader);sizeHeader();
  const logo=document.getElementById('brand-logo'),fallback=document.getElementById('brand-fallback');
  function showLogo(){if(logo.naturalWidth){logo.hidden=false;fallback.hidden=true;}}

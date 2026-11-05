@@ -108,9 +108,10 @@ button:disabled { cursor: not-allowed; }
 .home-research-link { border-color: var(--border); border-radius: var(--radius-card); background: var(--surface); margin-top: 28px; padding: 20px 28px; color: var(--muted); font-size: 14px; }
 
 /* News and research share the same list, field, chip and pagination language. */
-.news-subnav { gap: 8px; border: 0; margin-bottom: 32px; padding: 4px; width: fit-content; background: var(--surface); border-radius: var(--radius-control); }
-.news-subnav a { min-width: 88px; min-height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: var(--radius-control); padding: 10px 20px; color: var(--muted); font-size: 14px; }
-.news-subnav a.active { background: var(--primary); color: white; border: 0; }
+.news-subnav { display: flex; gap: 4px; border: 1px solid #C8D6E8; margin-bottom: 32px; padding: 4px; width: fit-content; background: #EDF3FC; border-radius: var(--radius-control); }
+.news-subnav a { min-width: 88px; min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid #A6BCDA; background: white; border-radius: var(--radius-control); padding: 10px 20px; color: var(--primary); font-weight: 700; font-size: 14px; }
+.news-subnav a.active::before { content: '✓'; font-size: 12px; margin-right: 6px; }
+.news-subnav a.active { background: var(--primary); color: white; border-color: var(--primary); }
 .news-layout { grid-template-columns: minmax(0, 2.5fr) minmax(250px, 1fr); gap: 24px; align-items: start; }
 .news-panel { padding: 0; overflow: hidden; }
 .news-toolbar { gap: 8px; padding: 24px; border-color: var(--border); background: #FCFDFE; }
@@ -120,7 +121,7 @@ button:disabled { cursor: not-allowed; }
 .filter:hover { background: var(--surface); border-color: #A7B7CA; }
 .filter.sel { color: white; border-color: var(--primary); background: var(--primary); }
 .news-item, .research-card { padding: 26px 28px; border-color: var(--border); }
-.news-item:hover, .research-card:hover { background: #F8FAFD; }
+@media (hover: hover) and (pointer: fine) { .news-item:hover, .research-card:hover { background: #F8FAFD; } }
 .news-meta, .research-card .research-meta { gap: 8px 12px; font-size: 12px; color: var(--muted); line-height: 1.8; align-items: center; }
 .news-meta span, .research-meta span { overflow-wrap: anywhere; }
 .news-title { display: block; font-size: 19px; line-height: 1.7; letter-spacing: -.025em; margin: 12px 0 8px; font-weight: 700; color: var(--ink); word-break: keep-all; overflow-wrap: anywhere; }
@@ -346,3 +347,52 @@ button:disabled { cursor: not-allowed; }
 }
 /* Pending values remain legible; the literal "연동 예정" and periods are unchanged. */
 #page-macro .kpi .value[style*="color:#98A9BF"] { color: var(--muted) !important; }
+
+/* UI/UX v1.0: interaction state, never a new click target. */
+button:not(:disabled):active, a.text-link:active, .news-subnav a:active { filter: brightness(.94); }
+button:disabled, [aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+.filter, .news-page-button, .chart-tab, #research-reset, #reset-weather, .inline-btn { min-height: 44px; }
+.news-page-button { min-width: 44px; }
+input[type="range"] { min-height: 44px; accent-color: var(--primary); }
+input:focus-visible, select:focus-visible { outline-color: var(--primary); }
+.research-access-note { margin: 6px 0 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.home-news-item, .research-card, .industry-card, .market-home-card, .brief-card, .kpi {
+  transition: transform 180ms ease-out, box-shadow 180ms ease-out, border-color 180ms ease-out;
+}
+.home-news-item, .research-card, .industry-card, .market-home-card, .kpi { cursor: auto; }
+.home-news-item:focus-within, .research-card:focus-within, .industry-card:focus-within, .market-home-card:focus-within {
+  border-color: #A6BCDA; box-shadow: 0 5px 16px #173B7310;
+}
+@media (hover: hover) and (pointer: fine) {
+  .news-subnav a:not(.active):hover { background: #E5EEF9; border-color: var(--primary); }
+  button:not(:disabled):hover { border-color: #A6BCDA; }
+  .home-news-item:hover, .research-card:hover, .industry-card:hover, .market-home-card:hover, .brief-card:hover {
+    transform: translateY(-2px); box-shadow: 0 5px 16px #173B7310;
+  }
+  .kpi:hover { border-color: #A6BCDA; } /* Informational, not clickable. */
+}
+@media (max-width: 560px) {
+  .news-subnav { width: 100%; }
+  .news-subnav a { flex: 1; min-width: 0; }
+}
+/* Fixed-size SVGs: transform/opacity motion, no network or layout work. */
+#weather-icon, #home-weather-icon { box-sizing: border-box; display: grid; place-items: center; width: 98px; height: 78px; }
+.weather-glyph { display: block; width: 72px; height: 60px; overflow: visible; }
+.weather-glyph .sun-rays { transform-origin: 35px 31px; animation: sun-turn 24s linear infinite; }
+.weather-glyph .sun-halo { transform-origin: 35px 31px; animation: sun-glow 5s ease-in-out infinite alternate; }
+.weather-glyph .cloud-drift { animation: cloud-drift 6s ease-in-out infinite alternate; }
+.weather-glyph .cloud-back { animation: cloud-float 7s ease-in-out infinite alternate; }
+.weather-glyph .rain-drop { animation: rain-fall 1.5s linear infinite; }
+.weather-glyph .rain-drop:nth-child(2) { animation-delay: -.5s; }
+.weather-glyph .rain-drop:nth-child(3) { animation-delay: -1s; }
+.page.hide-section .weather-glyph *, html[data-motion-paused="true"] .weather-glyph * { animation-play-state: paused; }
+@keyframes sun-turn { to { transform: rotate(360deg); } }
+@keyframes sun-glow { from { opacity: .2; transform: scale(.96); } to { opacity: .35; transform: scale(1.06); } }
+@keyframes cloud-drift { from { transform: translateX(-2px); } to { transform: translateX(2px); } }
+@keyframes cloud-float { from { transform: translate(-1px,0); } to { transform: translate(1px,-2px); } }
+@keyframes rain-fall { from { transform: translateY(-3px); opacity: .25; } 35% { opacity: .9; } to { transform: translateY(8px); opacity: .2; } }
+@media (prefers-reduced-motion: reduce) {
+  .weather-glyph * { animation: none !important; }
+  .home-news-item:hover, .research-card:hover, .industry-card:hover, .market-home-card:hover, .brief-card:hover { transform: none; }
+  .site-header { transition: none; }
+}
