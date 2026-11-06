@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 from . import kto, ecos
 from .balance import permitted
-from .model import comparisons, months, valid_period
+from .model import comparisons, months, month_before, valid_period
 from .transport import Loader
 from ..collector import write_atomic
 
@@ -22,7 +22,9 @@ def public_view(config,archive,now):
     series=[]
     for item in config['indicators']:
         source=next((s for s in config['sources'] if s['id']==item['source_id']), {})
-        if (source.get('requires_approval') and not permitted(source, 'publication', now.date())) or (source.get('method') == 'official_ecos_api' and not ecos.publishable(source)):
+        if (not item.get('enabled') or not source.get('enabled')
+                or (source.get('requires_approval') and not permitted(source, 'publication', now.date()))
+                or (source.get('method') == 'official_ecos_api' and not ecos.publishable(source))):
             saved={}
         else:
             saved=archive['indicators'].get(item['id'],{})
@@ -84,7 +86,22 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                 raise ValueError('approved_source_transport_not_activated')
             is_ecos=source.get('method')=='official_ecos_api'
             if is_ecos:
-                snapshot=ecos.fetch(source,active,ecos_client,now)
+                # Two independent gates: enabling a source must not bypass the
+                # mapping, rights or KTO comparison review.
+                if not ecos.publishable(source):
+                    raise ecos.EcosError('ecos_publication_approval_required')
+                request_source=copy.deepcopy(source)
+                # Backfill from configured 2021 start only on the first verified
+                # collection. Later refresh the rolling 24 months and any long
+                # collection gap, retaining previously checked older months.
+                if previous.get('last_successful_check') and all(
+                        archive['indicators'].get(i['id'],{}).get('observations') for i in active):
+                    lookback=month_before(now.strftime('%Y-%m'))
+                    for _ in range(23):lookback=month_before(lookback)
+                    previous_period=previous.get('reference_period')
+                    if previous_period:lookback=min(lookback,valid_period(previous_period))
+                    request_source['start_period']=max(source['start_period'],lookback)
+                snapshot=ecos.fetch(request_source,active,ecos_client,now)
             elif source.get('method')=='official_public_xlsx':
                 snapshot=kto.fetch(source,active,loader,now)
             else:
@@ -116,9 +133,15 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                         saved['revisions'].append(dict(period=period,detected_at=now.isoformat(),kind='value_correction' if value_changed else 'finality_change',before=old,after=record.copy()))
                     else:counts['unchanged_observations']+=1
                     saved['observations'][period]=record
-                missing=[p for p in saved['observations'] if p>=source['start_period'] and p<=snapshot['reference_period'] and p not in values]
+                # A rolling ECOS request does not declare older unqueried months
+                # missing. Only compare the returned interval; retain old records.
+                start_checked,end_checked=(snapshot['queried_ranges'][key] if is_ecos
+                    else (source['start_period'],snapshot['reference_period']))
+                missing=[p for p in saved['observations'] if start_checked<=p<=end_checked and p not in values]
                 saved['latest_snapshot_missing_periods']=missing
-                if is_ecos:saved['latest_response_missing_periods']=snapshot['missing_periods'][key]
+                if is_ecos:
+                    saved['latest_response_missing_periods']=snapshot['missing_periods'][key]
+                    saved['latest_checked_range']=[start_checked,end_checked]
             staged['sources'][sid]={k:v for k,v in snapshot.items() if k not in ('values','locations','records')}
             staged['sources'][sid]['last_successful_check']=now.isoformat()
             archive=staged;success+=1
