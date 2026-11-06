@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T20:14:18+09:00",
+  "generated_at": "2026-11-06T22:21:04+09:00",
   "mode": "live_rss",
   "decisions": [
     {
@@ -31,24 +31,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-05T23:00:00+09:00"
-    },
-    {
-      "article_id": "a2c9ece37a12ce196b",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-05T22:02:09+09:00"
-    },
-    {
-      "article_id": "0a15476a2cb229080a",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-05T22:01:56+09:00"
-    },
-    {
-      "article_id": "7b8c14924587d80f29",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-05T20:32:55+09:00"
     }
   ]
 }
