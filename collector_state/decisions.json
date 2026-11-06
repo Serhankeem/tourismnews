@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-06T14:10:41+09:00",
+  "checked_at": "2026-11-06T14:24:13+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -914,10 +914,10 @@
       "decision": "exclude"
     },
     {
-      "id": "a9049937cf5acd9c52",
-      "title": "궁금해서 타봤다! 청계천 자율주행버스 야간 탑승기",
-      "url": "https://mediahub.seoul.go.kr/archives/2019937",
-      "source_id": "seoul_transport",
+      "id": "1cfe30ff8c5bb741f7",
+      "title": "삼청동부터 효자로까지, 단풍이 깊어가는 '경복궁 돌담길'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019918",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -932,10 +932,10 @@
       "decision": "exclude"
     },
     {
-      "id": "7ea818fe9d5be82776",
-      "title": "탄천변 도로 확 바뀐다! 개선 공사로 31일부터 우회도로 운영",
-      "url": "https://mediahub.seoul.go.kr/archives/2019887",
-      "source_id": "seoul_transport",
+      "id": "30a4a4211a925ceb9b",
+      "title": "멀리 갈 필요 없네… 서울 단풍길 110선에서 가을 만끽",
+      "url": "https://mediahub.seoul.go.kr/archives/2019923",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -950,10 +950,10 @@
       "decision": "exclude"
     },
     {
-      "id": "1ff64270f7e6e1a8d5",
-      "title": "국회대로 지하차도 31일 폐쇄…'우회도로 확인하고 가세요'",
-      "url": "https://mediahub.seoul.go.kr/archives/2019870",
-      "source_id": "seoul_transport",
+      "id": "55ddc1c23f0467a135",
+      "title": "아직 늦지 않았어! '노들 글로벌 예술섬'에서 가을 감성에 풍덩~",
+      "url": "https://mediahub.seoul.go.kr/archives/2019844",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -968,10 +968,10 @@
       "decision": "exclude"
     },
     {
-      "id": "34e1ebd1a62fb4e7fc",
-      "title": "지하철 7호선, 의정부·양주를 지나 포천까지! 도봉산-옥정 연장선",
-      "url": "https://mediahub.seoul.go.kr/archives/2019857",
-      "source_id": "seoul_transport",
+      "id": "d84858d054fd299584",
+      "title": "가을 나들이 장소, 여기 저장! 단풍·운동·캠핑 모두 즐기는 한강공원, 어디?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019839",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -986,10 +986,10 @@
       "decision": "exclude"
     },
     {
-      "id": "a42a7f1353d0b9383d",
-      "title": "(카드뉴스) 서울시 체육시설, 안전 괜찮습니다!",
-      "url": "https://mediahub.seoul.go.kr/archives/2019850",
-      "source_id": "seoul_transport",
+      "id": "cd392f4366e15adcec",
+      "title": "이렇게까지 예쁠 일? 하루 피로 싹 풀리는 한강 노을 명소 추천!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019802",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -1004,190 +1004,10 @@
       "decision": "exclude"
     },
     {
-      "id": "708d1d807738f86828",
-      "title": "무료 자율주행버스 타고, 청계천~광장시장 밤나들이 출발!",
-      "url": "https://mediahub.seoul.go.kr/archives/2019836",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "3bdf1e112300a65878",
-      "title": "떴드론~ 날았드론~ '드론 레이싱 월드컵' 열린다! 대회 관람부터 체험까지",
-      "url": "https://mediahub.seoul.go.kr/archives/2019732",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "69fe37b0a07d58be72",
-      "title": "청계천 밤길 달리는 자율주행버스! '청계 A01' 출발",
-      "url": "https://mediahub.seoul.go.kr/archives/2019790",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "2496385e75e8dff1f9",
-      "title": "출퇴근길 더 빠르게! 9호선 급행 확대·급행버스 도입",
-      "url": "https://mediahub.seoul.go.kr/archives/2019693",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5fb4f03be1bd53bbc1",
-      "title": "우리 모임, 한강버스 탈까? 19일부터 온라인으로 단체 예약 가능",
-      "url": "https://mediahub.seoul.go.kr/archives/2019692",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "fd7a1c29d8aa1624d3",
-      "title": "7호선 장암역 한 달간 운행 중단, 무료 셔틀버스 똑똑하게 이용하는 법",
-      "url": "https://mediahub.seoul.go.kr/archives/2019661",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d85ede1a0a55af4681",
-      "title": "환승 불편 덜어준다! 서울의 환승센터, 어디에 더 생기나?",
-      "url": "https://mediahub.seoul.go.kr/archives/2019512",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "bff3aea8146f7b173c",
-      "title": "부르면 찾아오는 마을버스…사당4동 '동작CALL버스' 직접 타보니",
-      "url": "https://mediahub.seoul.go.kr/archives/2019464",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "b052b8b2399787f0de",
-      "title": "기후동행카드 대신 기후동행패스? 직접 교환하고 궁금증 풀었다!",
-      "url": "https://mediahub.seoul.go.kr/archives/2019335",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "78e4067272c6427e11",
-      "title": "20일 오전 '걷자 페스티벌' DDP~광화문광장 교통 통제",
-      "url": "https://mediahub.seoul.go.kr/archives/2019408",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5b32c9a993b4c05990",
-      "title": "60년 전 서울의 철도계획, 지금 어디까지 현실이 됐을까?",
-      "url": "https://mediahub.seoul.go.kr/archives/2019378",
-      "source_id": "seoul_transport",
+      "id": "ac54d16a610876d2bb",
+      "title": "강아지도 신나는 가을 정원으로 초대합니다! '매헌시민의숲' 정원 축제",
+      "url": "https://mediahub.seoul.go.kr/archives/2019713",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -1204,10 +1024,10 @@
       "decision": "exclude"
     },
     {
-      "id": "6c3023b2fe3339c097",
-      "title": "서울 벗어나도 OK, 환급도 알아서!…'기후동행패스' 달라진 점은?",
-      "url": "https://mediahub.seoul.go.kr/archives/2019323",
-      "source_id": "seoul_transport",
+      "id": "8bae74ec59428af51a",
+      "title": "단풍 들면 더 예뻐질 이곳! 낙타의 등을 닮은 '낙산공원' 산책",
+      "url": "https://mediahub.seoul.go.kr/archives/2019768",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -1222,10 +1042,10 @@
       "decision": "exclude"
     },
     {
-      "id": "2757078fe4fad47283",
-      "title": "구룡마을입구~개포3·4단지 잇는 '대모지하차도' 12일 임시 개통",
-      "url": "https://mediahub.seoul.go.kr/archives/2019342",
-      "source_id": "seoul_transport",
+      "id": "b1dc0f5f618a11e68a",
+      "title": "올가을 조용히 걷고 싶다면…대청역 5분, 나만 알고 싶은 메타세쿼이아길",
+      "url": "https://mediahub.seoul.go.kr/archives/2019663",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -1240,10 +1060,10 @@
       "decision": "exclude"
     },
     {
-      "id": "a1456299da049f5b6a",
-      "title": "기후동행카드, '기후동행패스'로 바꾸셨나요? 지하철역 12곳서 무료 교체",
-      "url": "https://mediahub.seoul.go.kr/archives/2019275",
-      "source_id": "seoul_transport",
+      "id": "b6e2d83978af971ac0",
+      "title": "58년 만에 시민 품으로 돌아온 백악산…새롭게 열린 탐방로 걸어보니",
+      "url": "https://mediahub.seoul.go.kr/archives/2019765",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -1258,10 +1078,190 @@
       "decision": "exclude"
     },
     {
-      "id": "731f6257c0f379b9f7",
-      "title": "지하철역에서 '기후동행패스' 새 카드로 무료 교환했어요!",
-      "url": "https://mediahub.seoul.go.kr/archives/2019268",
-      "source_id": "seoul_transport",
+      "id": "091aeabcc35820f250",
+      "title": "백악산 남서자락 탐방로 전면 개방! 새롭게 열린 1.32km 추천 코스",
+      "url": "https://mediahub.seoul.go.kr/archives/2019763",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "eaf617011259e380c7",
+      "title": "허브 향 따라 걸어볼까? 이 계절 걷기 좋은 '일자산 허브천문공원'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019769",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c1901c941588bb0ad4",
+      "title": "도심 속에 이런 코스모스 풍경이? 안양천 농촌테마풍경길",
+      "url": "https://mediahub.seoul.go.kr/archives/2019681",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4cfc651ac5a9347dd9",
+      "title": "요즘 핫한 노들섬이 한눈에! 자연과 예술이 있는 이촌한강공원",
+      "url": "https://mediahub.seoul.go.kr/archives/2019641",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "fa60a0bb300507e514",
+      "title": "디자인도 초록초록! DDP에서 만나는 '그린칩스 서울 페스티벌'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019680",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "d07a268be6c7ee3df0",
+      "title": "번화가 뒤편에 이런 풍경이! 아는 사람만 안다는 신촌 야경 명소, 어디?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019642",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1f42c8a9c8cef739de",
+      "title": "귀여운 애 옆에 귀여운 애! 레서판다 쌍둥이 남매 첫 공개",
+      "url": "https://mediahub.seoul.go.kr/archives/2019636",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1a6760ae129b8de0ff",
+      "title": "이 밤, 이 산, 이 낭만! '남산 나이트 페스티벌' 캠프닉에 단풍산책까지",
+      "url": "https://mediahub.seoul.go.kr/archives/2019615",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f77fd53254167c9cb7",
+      "title": "황화코스모스 한창! '이씨의 다리' 건너 만나는 '안양천 생태초화원'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019589",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6061e16d24f9d1d1ec",
+      "title": "이번엔 매헌시민의숲이다! 서울국제정원박람회에서 만나는 가을정원",
+      "url": "https://mediahub.seoul.go.kr/archives/2019573",
+      "source_id": "seoul_environment",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "60f03c6ea19b1665ed",
+      "title": "도심 속 작은 오름! 무장애숲길로 가볍게 걷기 좋은 '오금오름공원'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019561",
+      "source_id": "seoul_environment",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
