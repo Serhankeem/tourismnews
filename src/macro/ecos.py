@@ -300,12 +300,13 @@ def fetch(source, indicators, client, now):
     items = client.rows('StatisticItemList', m['stat_code'])
     availability = validate_metadata(m, tables, items)
     last_month = (now.replace(day=1) - dt.timedelta(days=1)).strftime('%Y-%m')
-    values, records, missing = {}, {}, {}
+    values, records, missing, queried_ranges = {}, {}, {}, {}
     for key in IDS:
         first, last = availability[key]
         start, end = max(first, valid_period(source['start_period'])), min(last, last_month)
         if start > end:
             raise EcosError('ecos_no_released_months')
+        queried_ranges[key] = [start, end]
         codes = [s['path'][-1]['code'] for s in m['series'][key]['selectors']]
         rows = client.rows('StatisticSearch', m['stat_code'], 'M', start.replace('-', ''), end.replace('-', ''), *codes)
         values[key], records[key], missing[key] = parse_series(rows, m, key, start, end, now)
@@ -316,7 +317,7 @@ def fetch(source, indicators, client, now):
                 source_url=BASE, release_published_at=None, original_publication_at=None,
                 unit='US$', frequency='M', method='official_ecos_api', finality='not_stated',
                 rights=source.get('rights_review', {}), missing_periods=missing,
-                metadata_coverage={k: list(v) for k, v in availability.items()},
+                queried_ranges=queried_ranges, metadata_coverage={k: list(v) for k, v in availability.items()},
                 response_sha256=list(client.response_hashes), stat_code=m['stat_code'])
 
 

@@ -31,6 +31,20 @@
   if(!o)return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value macro-unavailable">미연동</div><div class="note">${esc(failed?'공식 통계 DB 수집 실패':i?.reason||'공식 자료 확인 전')}</div>${link(i?.source_url,'공식 출처')}</article>`;
   return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value" data-value="${o.value}">${number(o.value,i)}<span>${esc(unit(i))}</span></div><div class="macro-period">기준 ${esc(o.period)} · 월간 실적</div>${money(i)?`<div class="tiny">전월 대비 ${pct(o.comparisons.mom_pct)}<br>전년 동월비 ${pct(o.comparisons.yoy_pct)}</div>`:o.comparisons.yoy_pct==null?'':`<span class="delta">전년 동월비 ${pct(o.comparisons.yoy_pct)}</span>`}<div class="note">${esc(finality(o))}${o.revision_status==='revised'?' · 정정 감지':''}<br>${esc(s)}${money(i)?`<br>최근 확인 ${esc(date(o.last_collected_at))}<br>공표일 ${esc(o.release_published_at?date(o.release_published_at):'API 미제공')} · 월별 공표 시차 있음`:''}</div>${link(i.source_url,esc(i.publisher))}</article>`;
  }
+ function tourismBalanceCard(){
+  // Computed balance; no independent ECOS series and no unapproved display.
+  const a=item('kto_tourism_receipts'),b=item('kto_tourism_expenditure');
+  if(!money(a)||!money(b)||!a?.connected||!b?.connected||!a.latest||!b.latest||a.latest.period!==b.latest.period)return '';
+  const period=a.latest.period,r=a.observations.find(o=>o.period===period),p=b.observations.find(o=>o.period===period);
+  if(!r||!p||!Number.isSafeInteger(r.value)||!Number.isSafeInteger(p.value)||r.value<0||p.value<0||r.unit!=='US$'||p.unit!=='US$'||r.verification_status!=='official_api_validated'||p.verification_status!=='official_api_validated'||r.collection_method!=='official_ecos_api'||p.collection_method!=='official_ecos_api'||!Number.isSafeInteger(r.value-p.value))return '';
+  const v=r.value-p.value,display=(v<0?'-':'')+number(Math.abs(v),a);
+  const status=sourceState(a)==='공식 API 연동'&&sourceState(b)==='공식 API 연동'?'공식 API 연동 · 계산값':'이전 검증값 계산 · 갱신 상태 확인 필요';
+  return '<article class="card kpi macro-kpi macro-derived-balance" data-macro-id="derived_tourism_balance">'
+    +'<span class="label">관광수지 (계산값)</span><div class="value">'+display+'<span>백만 US$</span></div>'
+    +'<div class="macro-period">기준 '+esc(period)+' · 관광수입 − 관광지출</div>'
+    +'<div class="note">'+esc(status)+' · 단독 공표 통계가 아닙니다</div>'
+    +link(a.source_url,'한국은행 ECOS')+'</article>';
+ }
  function monthly(start,end){const out=[];let [y,m]=start.split('-').map(Number);while(`${y}-${String(m).padStart(2,'0')}`<=end){out.push(`${y}-${String(m).padStart(2,'0')}`);if(++m>12){m=1;y++;}}return out;}
  function chart(container,i,limit,growthMode=state.chart==='growth'){
   if(!i?.observations.length){container.innerHTML='<div class="empty">검증된 월별 통계가 없습니다.</div>';return;}
@@ -67,7 +81,7 @@
   }
  }
  function render(){
-  const markup=core.map(([id,name])=>card(id,name)).join('');el('home-macro-kpis').innerHTML=markup;el('macro-kpis').innerHTML=markup;
+  const markup=core.map(([id,name])=>card(id,name)).join('');const balanceMarkup=tourismBalanceCard();el('home-macro-kpis').innerHTML=markup+balanceMarkup;el('macro-kpis').innerHTML=markup+balanceMarkup;
   const connected=db?.indicators.filter(i=>i.connected)||[],primary=connected.filter(i=>i.priority===1);
   const warning=failed||healthUnknown||connected.some(i=>!['공식 파일 연동','공식 API 연동'].includes(sourceState(i)));
   const text=connected.length?`핵심 월간 ${primary.length}/4개 연동 · 국적별 ${connected.filter(i=>i.country).length}개 · 기준 ${item('kto_inbound')?.latest_period||'미확인'}${core.slice(2).filter(([id])=>item(id)?.connected).map(([id,name])=>` · ${name} 기준 ${item(id).latest_period}`).join('')} · ${failed?'새 DB 확인 실패, 이전 검증값 보존':healthUnknown?'수집 상태 확인 실패':sourceState(item('kto_inbound'))}`:'검증된 공식 통계 데이터가 없습니다. 미연동 상태이며 정적 예시를 실시간 수치로 표시하지 않습니다.';
