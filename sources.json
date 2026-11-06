@@ -256,6 +256,84 @@
       ]
     },
     {
+      "id": "mss_press",
+      "name": "중소벤처기업부 보도자료",
+      "url": "https://mss.go.kr/rss/smba/board/86.do",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "discovery_url": "https://www.mss.go.kr/site/smba/contents/view.do?menuCd=20905000000002024122902&siteCd=smba",
+      "terms_url": "https://mss.go.kr/site/smba/contents/view.do?menuCd=20903030000002024122906&siteCd=smba",
+      "notes": "PR33: 공식 RSS 안내에 게재된 보도자료 피드. 발견·접근성 관측만 허용; 개별 공공누리 부착 여부/외부 자동 색인 승인 전 공개 금지. 본문·설명·첨부·이미지 사용 불가.",
+      "group": "public",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://mss.go.kr/site/smba/contents/view.do?menuCd=20903030000002024122906&siteCd=smba",
+        "basis": "Official RSS listed, but the copyright policy requires checking KOGL Type 1 on each work before reuse; no feed-wide permission to republish metadata as a public index has been verified.",
+        "checked_at": "2026-11-06"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Feed items only; no article or archive crawling. Discovery-only until rights and dates verified."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "중소벤처기업부",
+        "supply_route": "mss_press",
+        "publisher_id": "ministry_smes_startups"
+      },
+      "article_domains": [
+        "mss.go.kr",
+        "www.mss.go.kr"
+      ]
+    },
+    {
+      "id": "msit_press",
+      "name": "과학기술정보통신부 보도자료",
+      "url": "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "discovery_url": "https://www.msit.go.kr/contents/cont.do?mId=173&mPid=147&sCode=user",
+      "terms_url": "https://www.msit.go.kr/contents/cont.do?mId=161&mPid=147&sCode=user",
+      "notes": "PR33: 공식 RSS 안내에 게재된 보도자료 피드. 발견·접근성 관측만 허용; 개별 KOGL 라이선스 확인 전 자동 공개 금지. 관광·MICE 관련성은 제목만 판정.",
+      "group": "public",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.msit.go.kr/contents/cont.do?mId=161&mPid=147&sCode=user",
+        "basis": "Official RSS listed; ministry copyright policy allows individually KOGL-marked works but requires prior consultation for unmarked material. No blanket rights confirmation for feed-level index.",
+        "checked_at": "2026-11-06"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Feed items only; no article or archive crawling. Discovery-only until rights and dates verified."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "public",
+        "publisher": "과학기술정보통신부",
+        "supply_route": "msit_press",
+        "publisher_id": "ministry_science_ict"
+      },
+      "article_domains": [
+        "msit.go.kr",
+        "www.msit.go.kr"
+      ]
+    },
+    {
       "id": "sec_booking",
       "name": "SEC EDGAR · Booking Holdings",
       "url": "https://data.sec.gov/submissions/CIK0001075531.json",
