@@ -1,0 +1,35 @@
+{
+  "checked_date": "2026-11-05",
+  "base_main": "6a0c77d5e2405f037bbc145fb597b3cb34cc5215",
+  "failed_run": {
+    "id": 41998049186,
+    "event": "workflow_dispatch",
+    "head_sha": "6a0c77d5e2405f037bbc145fb597b3cb34cc5215",
+    "conclusion": "failure"
+  },
+  "public_sample_before": {
+    "probe": "official_documented_public_sample_no_repository_secret",
+    "http_status": 200,
+    "received_rows": 10,
+    "root_parent_marker_rows": 1,
+    "old_parser": "rejected"
+  },
+  "public_sample_after": {
+    "probe": "official_documented_public_sample_no_repository_secret",
+    "http_status": 200,
+    "received_rows": 10,
+    "root_parent_marker_rows": 1,
+    "new_parser": "accepted",
+    "accepted_rows": 10,
+    "root_markers_normalized": 1
+  },
+  "secret_usage": "No Repository Secret read, copied or used. Only documented public sample used outside Actions.",
+  "authenticated_catalogue_rechecked": false,
+  "other_actual_field_failures": "unknown: original failed Summary had no field information",
+  "preservation": {
+    "operational_json_files_unchanged": 30,
+    "existing_workflows_unchanged": 6,
+    "source_approvals_unchanged": true,
+    "pipeline_allowlist_unchanged": true
+  }
+}
