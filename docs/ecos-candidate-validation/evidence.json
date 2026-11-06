@@ -1,0 +1,37 @@
+{
+  "base_main": "8ab39858bb03e145f1b07556feb1c3de278d1795",
+  "provided_preflight_run": 42165343790,
+  "provided_preflight_summary": {
+    "authentication": "verified_catalogue",
+    "status": "inspection_complete",
+    "assessment": "review_required",
+    "catalogue_count": 844,
+    "candidate_tables_inspected": 6,
+    "candidate_pairs": 2
+  },
+  "github_run_conclusion": "failure: existing metadata pair selection guard, not catalogue collection failure",
+  "kto_access": {
+    "source_url": "https://datalab.visitkorea.or.kr/datalab/portal/ts/getKorTursmBalcForm.do",
+    "repository_secret_used": false,
+    "access": "ok",
+    "general_travel_definition": true,
+    "official_download_control": true,
+    "download_only_notice": true,
+    "finance_file_verified": false
+  },
+  "kto_download_ui": {
+    "source": "KTO official tourism balance UI",
+    "download_verified": false,
+    "dialog_requires_login": true,
+    "download_event": false,
+    "login_form_visible": true,
+    "download_survey_visible": false,
+    "public_file_not_automatically_obtained": true
+  },
+  "actual_ecos_statisticsearch_requests_this_development": 0,
+  "actual_financial_values_acquired_this_development": 0,
+  "kto_financial_reference_acquired": false,
+  "operational_json_unchanged": 30,
+  "existing_workflows_unchanged": 6,
+  "macro_mapping_approved": false
+}
