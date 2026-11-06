@@ -35,7 +35,9 @@ SAFE_FIELDS = frozenset({'unknown','record','catalogue','items','STAT_CODE','P_S
     'UNIT_NAME','START_TIME','END_TIME'})
 SAFE_CLASSIFICATIONS = frozenset({'validation_failed','invalid_type','invalid_length',
     'empty_value','unsafe_content','invalid_code','missing_field','invalid_format',
-    'duplicate_code','invalid_collection','invalid_group','table_mismatch','period_order'})
+    'duplicate_code','invalid_collection','invalid_group','table_mismatch','period_order',
+    'forbidden_control_character','encoded_pattern','unsafe_markup',
+    'credential_reflection','forbidden_url_pattern'})
 
 
 class MetadataValidationError(EcosError):
@@ -76,14 +78,37 @@ class Inspector:
         if not isinstance(raw,str):raise MetadataValidationError(field,'invalid_type')
         if len(raw)>limit:raise MetadataValidationError(field,'invalid_length')
         if not raw.strip() and not empty:raise MetadataValidationError(field,'empty_value')
-        decoded = raw
-        for _ in range(3):
-            decoded = unicodedata.normalize('NFKC', html.unescape(unquote(decoded)))
-        if ('\\' in raw or re.search(r'%[0-9a-fA-F]{2}|&(?:#[a-zA-Z0-9]+|[a-zA-Z]+);',raw)
-                or any(t in decoded for t in self.tokens)
-                or any(unicodedata.category(c).startswith('C') for c in decoded)
-                or re.search(r'(?i)://|https?\s*:|www\.|/api/|<[^>]*>', decoded)):
-            raise MetadataValidationError(field,'unsafe_content')
+        # Names are text, not code/URLs: inspect every decoded layer, then
+        # escape the ORIGINAL text at output. No decoding is used as HTML.
+        decoded=raw
+        for depth in range(9):
+            if any(t in decoded for t in self.tokens):
+                raise MetadataValidationError(field,'credential_reflection')
+            if any(unicodedata.category(c).startswith('C') for c in decoded):
+                raise MetadataValidationError(field,'forbidden_control_character')
+            if re.search(r'(?i)://|(?:https?|javascript|data|vbscript|mailto)\s*:|www\.|/api/',decoded):
+                raise MetadataValidationError(field,'forbidden_url_pattern')
+            markup=(r'<\s*(?:/?[A-Za-z][\w:-]*(?=[\s/>]|$)[^<>]*(?:>|$)|!--)' if field=='STAT_NAME' else r'<[^>]*>')
+            if re.search(markup,decoded):raise MetadataValidationError(field,'unsafe_markup')
+            encoded=bool(re.search(r'%[0-9a-fA-F]{2}|&(?:#[a-zA-Z0-9]+|[a-zA-Z]+);|\\[uUx]',decoded))
+            def escape(m):
+                try:return chr(int(next(v for v in m.groups() if v is not None),16))
+                except ValueError:raise MetadataValidationError(field,'encoded_pattern') from None
+            next_text=unicodedata.normalize('NFKC',html.unescape(unquote(decoded)))
+            next_text=re.sub(r'\\(?:u([0-9a-fA-F]{4})|U([0-9a-fA-F]{8})|x([0-9a-fA-F]{2}))',
+                escape,next_text)
+            if field!='STAT_NAME' and ('\\' in raw or encoded):
+                # Still check decoded layers first so key/URL reflection receives
+                # its own fixed reason; never relax code or item validators.
+                if next_text!=decoded:decoded=next_text;continue
+                raise MetadataValidationError(field,'encoded_pattern')
+            if next_text==decoded:break
+            if depth==8:raise MetadataValidationError(field,'encoded_pattern')
+            decoded=next_text
+        if field!='STAT_NAME' and ('\\' in raw or re.search(r'%[0-9a-fA-F]{2}|&(?:#[a-zA-Z0-9]+|[a-zA-Z]+);',raw)):
+            raise MetadataValidationError(field,'encoded_pattern')
+        if re.search(r'\\(?:u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8}|x[0-9a-fA-F]{2})',raw):
+            raise MetadataValidationError(field,'encoded_pattern')
         return raw.strip()
 
     def code(self, raw, field='unknown'):
@@ -251,7 +276,7 @@ def summary(result):
     for error in result['errors']:rows.append('- 오류: '+cell(error))
     if result.get('error_diagnostic'):rows.append(diagnostic_line(result['error_diagnostic']))
     for table in result['tables']:
-        rows+=['', '## '+cell(table['code'])+' · '+cell(table['name']),
+        rows+=['', '## '+cell(table['code']),
                '- 주기: '+cell(','.join(table['cycles']))+' / 상태: '+cell(table['status'])]
         if table.get('error'):
             rows.append('- 오류: '+cell(table['error']))
