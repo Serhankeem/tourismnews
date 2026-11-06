@@ -1,7 +1,7 @@
 /* Only allowlisted validated visitor statistics; no news input or financial values. */
 (()=>{
  const esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
- const fmt=n=>n.toLocaleString('ko-KR'),pct=n=>Number.isFinite(n)?`${n>=0?'+':''}${n.toFixed(2)}%`:'비교 자료 없음';
+ const fmt=n=>n.toLocaleString('ko-KR'),pct=window.PercentageUI.html;
  function render(db,health,failed=false){
   const card=document.getElementById('data-observation');if(!card)return;
   const allowed=new Set(['kto_inbound','kto_outbound','kto_inbound_cn','kto_inbound_jp','kto_inbound_tw','kto_inbound_us','kto_inbound_vn']);

@@ -2,7 +2,7 @@
 (()=>{
  const el=id=>document.getElementById(id),esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
  const ids=['kto_inbound','kto_outbound','kto_inbound_cn','kto_inbound_jp','kto_inbound_tw','kto_inbound_us','kto_inbound_vn'];
- const fmt=n=>n.toLocaleString('ko-KR'),pct=n=>Number.isFinite(n)?`${n>=0?'+':''}${n.toFixed(2)}%`:'비교 자료 없음';
+ const fmt=n=>n.toLocaleString('ko-KR'),pct=window.PercentageUI.html;
  const source=i=>{try{return new URL(i.source_url).protocol==='https:'?`<a class="external" href="${esc(i.source_url)}" target="_blank" rel="noopener noreferrer">${esc(i.publisher)} · 공식 출처 ↗</a>`:'';}catch(_){return '';}};
  let rows=[],status=()=> '수집 상태 미확인';
  const finality=o=>o.finality==='final'?'확정치':o.finality==='provisional'?'잠정치':'확정 여부 미표기';

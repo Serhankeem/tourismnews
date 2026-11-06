@@ -1,0 +1,17 @@
+/* Percentage display only; brand, layout, count values and simulation unchanged. */
+:root {
+  --change-positive: #C8434D;
+  --change-negative: #2864AD;
+  --change-neutral: #718096;
+}
+.percentage-change { display:inline-block;max-width:100%;font-variant-numeric:tabular-nums;white-space:nowrap;vertical-align:baseline; }
+.percentage-change--positive { color:var(--change-positive); }
+.percentage-change--negative { color:var(--change-negative); }
+.percentage-change--neutral { color:var(--change-neutral); }
+.percentage-change--missing { color:inherit; }
+/* Keep the exact specified text colors legible on the existing KPI badge. */
+.macro-kpi .percentage-delta { background:#fff; }
+.percentage-bar--positive { fill:var(--change-positive); }
+.percentage-bar--negative { fill:var(--change-negative); }
+.percentage-bar--neutral { fill:var(--change-neutral); }
+.percentage-sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0; }
