@@ -4,6 +4,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
 const base=process.env.TOURISM_TEST_URL||'http://127.0.0.1:8010';
 for(const width of [320,390,1440]){
  const page=await browser.newPage({viewport:{width,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ // The real snapshot ages independently of this test. Check both states with a fixed clock.
+ const current=await(await page.request.get(base+'/data/briefing.json')).json();
+ await page.clock.setFixedTime(new Date(current.generated_at));
  await page.goto(base);await page.waitForFunction(()=>!newsLoading&&window.BriefingUI?.edition);
  const snapshot=await(await page.request.get(base+'/data/newsroom.json')).json();
  const chronological=[...snapshot.articles].sort((a,b)=>Date.parse(b.published_at)-Date.parse(a.published_at)||(a.url<b.url?-1:a.url>b.url?1:0));
@@ -20,9 +23,11 @@ for(const width of [320,390,1440]){
  assert.match(await page.locator('#briefing-state').textContent(),/주요 뉴스 후보/);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  assert.match(await page.locator('#briefing-state').textContent(),/일부 출처 수집 실패/);
- const current=await(await page.request.get(base+'/data/briefing.json')).json();
+ await page.clock.setFixedTime(new Date(Date.parse(current.generated_at)+25*60*60*1000));
+ await page.evaluate(()=>BriefingUI.render());assert.match(await page.locator('#briefing-state').textContent(),/이전 생성 후보/);
+ await page.clock.setFixedTime(new Date(current.generated_at));
  for(const [status,expected] of [['no_recent_articles',/신규 뉴스 없음/],['no_eligible_recent_articles',/선정 기준 미충족/]]){
-  await page.route('**/data/briefing.json?*',r=>r.fulfill({json:{...current,status,generated_at:new Date().toISOString(),items:[]}}));
+  await page.route('**/data/briefing.json?*',r=>r.fulfill({json:{...current,status,items:[]}}));
   await page.evaluate(()=>BriefingUI.load());assert.match(await page.locator('#briefing-state').textContent(),expected);
  }
  await page.route('**/data/health.json?*',r=>r.fulfill({json:{status:'ok',briefing:{status:'failed'}}}));

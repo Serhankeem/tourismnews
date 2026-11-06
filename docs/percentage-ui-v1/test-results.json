@@ -1,0 +1,28 @@
+{
+  "python": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 481,
+    "failures": 0,
+    "errors": 0
+  },
+  "javascript_unit": {
+    "command": "node tests/percentage.unit.cjs",
+    "status": "passed"
+  },
+  "browser": {
+    "suites": 20,
+    "passed": 20,
+    "percentage_widths": [
+      320,
+      390,
+      768,
+      1440
+    ]
+  },
+  "baseline_freshness_test": {
+    "reproduced_on_unmodified_main": true,
+    "cause": "real snapshot older than 24 hours; existing assertion assumed recent candidates",
+    "test_only_fix": "fixed browser Date to snapshot generation time, then explicitly checked the 25-hour-old state",
+    "production_briefing_changed": false
+  }
+}

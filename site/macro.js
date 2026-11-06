@@ -3,7 +3,7 @@
  const el=id=>document.getElementById(id),esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
  const core=[['kto_inbound','방한 외래관광객 수'],['kto_outbound','국민 해외관광객 수'],['kto_tourism_receipts','관광수입'],['kto_tourism_expenditure','관광지출']];
  let db=null,health=null,loading=false,failed=false,healthUnknown=false,metric='kto_inbound',range=36;
- const fmt=n=>Number(n).toLocaleString('ko-KR'),pct=n=>n==null?'비교 자료 없음':`${n>=0?'+':''}${Number(n).toFixed(2)}%`;
+ const fmt=n=>Number(n).toLocaleString('ko-KR'),pct=window.PercentageUI.html;
  const money=i=>i?.value_kind==='money_nonnegative'&&i?.unit==='US$';
  const number=(value,i)=>{if(!money(i))return fmt(value);const digits=String(value).padStart(7,'0'),fraction=digits.slice(-6).replace(/0+$/,'');return fmt(Number(digits.slice(0,-6)))+(fraction?'.'+fraction:'');};
  const unit=i=>money(i)?'백만 US$':i?.unit||'단위 미검증';
@@ -29,7 +29,7 @@
  function card(id,name){
   const i=item(id),o=i?.latest,s=sourceState(i);
   if(!o)return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value macro-unavailable">미연동</div><div class="note">${esc(failed?'공식 통계 DB 수집 실패':i?.reason||'공식 자료 확인 전')}</div>${link(i?.source_url,'공식 출처')}</article>`;
-  return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value" data-value="${o.value}">${number(o.value,i)}<span>${esc(unit(i))}</span></div><div class="macro-period">기준 ${esc(o.period)} · 월간 실적</div>${money(i)?`<div class="tiny">전월 대비 ${pct(o.comparisons.mom_pct)}<br>전년 동월비 ${pct(o.comparisons.yoy_pct)}</div>`:o.comparisons.yoy_pct==null?'':`<span class="delta">전년 동월비 ${pct(o.comparisons.yoy_pct)}</span>`}<div class="note">${esc(finality(o))}${o.revision_status==='revised'?' · 정정 감지':''}<br>${esc(s)}${money(i)?`<br>최근 확인 ${esc(date(o.last_collected_at))}<br>공표일 ${esc(o.release_published_at?date(o.release_published_at):'API 미제공')} · 월별 공표 시차 있음`:''}</div>${link(i.source_url,esc(i.publisher))}</article>`;
+  return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value" data-value="${o.value}">${number(o.value,i)}<span>${esc(unit(i))}</span></div><div class="macro-period">기준 ${esc(o.period)} · 월간 실적</div>${money(i)?`<div class="tiny">전월 대비 ${pct(o.comparisons.mom_pct)}<br>전년 동월비 ${pct(o.comparisons.yoy_pct)}</div>`:`<span class="delta percentage-delta">전년 동월비 ${pct(o.comparisons.yoy_pct)}</span>`}<div class="note">${esc(finality(o))}${o.revision_status==='revised'?' · 정정 감지':''}<br>${esc(s)}${money(i)?`<br>최근 확인 ${esc(date(o.last_collected_at))}<br>공표일 ${esc(o.release_published_at?date(o.release_published_at):'API 미제공')} · 월별 공표 시차 있음`:''}</div>${link(i.source_url,esc(i.publisher))}</article>`;
  }
  function tourismBalanceCard(){
   // Computed balance; no independent ECOS series and no unapproved display.
@@ -59,7 +59,7 @@
   const ticks=Array.from({length:5},(_,n)=>low+(max-low)*n/4).map(v=>`<line x1="${left}" y1="${y(v)}" x2="${w-right}" y2="${y(v)}" stroke="#DFE5ED" stroke-dasharray="4 5"/><text x="${left-8}" y="${y(v)+4}" text-anchor="end" fill="#52647A" font-size="12">${growth?fmt(Math.round(v))+'%':money(i)?Number(v/1000000).toLocaleString('ko-KR',{maximumFractionDigits:2}):fmt(Math.round(v/10000))+'만'}</text>`).join('');
   const stride=Math.max(1,Math.ceil(rows.length/Math.max(2,Math.floor(pw/64))));
   const bars=rows.map((o,n)=>{const x=left+pw*(n+.5)/rows.length,label=(n%stride===0||n===rows.length-1)&&!(n!==rows.length-1&&rows.length-1-n<stride*.6),year=o.period.slice(2).replace('-','.');
-   const shape=o.value===null?`<text x="${x}" y="${top+ph-8}" font-size="12" text-anchor="middle" class="macro-series-gap">×<title>${esc(o.period)}: ${growth?'전년 비교 자료 없음':'월 자료 누락'}</title></text>`:`<rect data-period="${o.period}" data-value="${o.value}" x="${x-bar/2}" y="${Math.min(y(o.value),baseline)}" width="${bar}" height="${Math.max(.8,Math.abs(y(o.value)-baseline))}" rx="2" fill="${n===rows.length-1?'#F47735':'#173B73'}"><title>${o.period}: ${growth?pct(o.value):number(o.value,i)+' '+unit(i)}</title></rect>`;
+   const shape=o.value===null?`<text x="${x}" y="${top+ph-8}" font-size="12" text-anchor="middle" class="macro-series-gap">×<title>${esc(o.period)}: ${growth?'전년 비교 자료 없음':'월 자료 누락'}</title></text>`:`<rect class="${growth?'percentage-bar--'+window.PercentageUI.describe(o.value).state:''}" data-period="${o.period}" data-value="${o.value}" x="${x-bar/2}" y="${Math.min(y(o.value),baseline)}" width="${bar}" height="${Math.max(.8,Math.abs(y(o.value)-baseline))}" rx="2" fill="${n===rows.length-1?'#F47735':'#173B73'}"><title>${o.period}: ${growth?esc(window.PercentageUI.text(o.value)):number(o.value,i)+' '+unit(i)}</title></rect>`;
    return shape+(label?`<text x="${x}" y="${h-14}" font-size="12" fill="#52647A" text-anchor="middle">${year}</text>`:'');
   }).join('');
   container.innerHTML=`<svg role="img" aria-label="${esc(i.name)} ${chosen[0]}~${chosen.at(-1)} ${growth?'전년 동월비':'월간 실적'}; 누락은 × 표시" viewBox="0 0 ${w} ${h}"><title>${esc(i.name)} · ${growth?'단위 %':money(i)?'단위 백만 US$ (원장 US$)':'단위 명 (축: 만 명)'}</title>${ticks}${bars}</svg>`;
