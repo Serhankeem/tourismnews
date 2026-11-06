@@ -17,8 +17,8 @@ class NameSafetyTests(unittest.TestCase):
     def test_unsafe_categories_independently(self):
         for value,reason in [('https://example.invalid/a','forbidden_url_pattern'),
             ('javascript:alert(1)','forbidden_url_pattern'),('<script>alert(1)</script>','unsafe_markup'),
-            ('&lt;img src=x&gt;','unsafe_markup'),('통계\u200b명','forbidden_control_character'),
-            ('통계\x00명','forbidden_control_character'),('통계\u202e명','forbidden_control_character'),
+            ('&lt;img src=x&gt;','unsafe_markup'),('통계\u200b명','format_control'),
+            ('통계\x00명','other_unicode_control'),('통계\u202e명','format_control'),
             (FAKE,'credential_reflection'),(''.join('%%%02X'%ord(c) for c in FAKE),'credential_reflection'),
             (base64.b64encode(FAKE.encode()).decode(),'credential_reflection'),
             (''.join('\\u%04x'%ord(c) for c in FAKE),'credential_reflection')]:
@@ -41,7 +41,7 @@ class NameSafetyTests(unittest.TestCase):
     def test_diagnostic_and_summary_never_print_bad_or_good_stat_names(self):
         c=Fixture();c.tables[0]['STAT_NAME']='https://private.invalid/'+FAKE
         result=p.inspect(c,self.i);body=p.summary(result)
-        self.assertEqual(result['error_diagnostic'],dict(field='STAT_NAME',classification='credential_reflection'))
+        self.assertEqual(result['error_diagnostic'],dict(field='STAT_NAME',classification='credential_reflection',stage='raw'))
         self.assertNotIn(FAKE,body);self.assertNotIn('private.invalid',body)
         c=Fixture();result=p.inspect(c,self.i)
         self.assertNotIn(c.tables[0]['STAT_NAME'],p.summary(result))
