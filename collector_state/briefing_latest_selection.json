@@ -1,7 +1,13 @@
 {
-  "generated_at": "2026-11-06T18:10:24+09:00",
+  "generated_at": "2026-11-06T20:14:18+09:00",
   "mode": "live_rss",
   "decisions": [
+    {
+      "article_id": "a3e566001dc7acbec0",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-06T19:50:47+09:00"
+    },
     {
       "article_id": "8409703e6f61d9eb1a",
       "decision": "editorial_ineligible",
@@ -43,12 +49,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-05T20:32:55+09:00"
-    },
-    {
-      "article_id": "9881ee1c0fb832a7e1",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-05T19:50:35+09:00"
     }
   ]
 }
