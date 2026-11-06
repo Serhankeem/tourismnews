@@ -37,22 +37,30 @@ SAFE_CLASSIFICATIONS = frozenset({'validation_failed','invalid_type','invalid_le
     'empty_value','unsafe_content','invalid_code','missing_field','invalid_format',
     'duplicate_code','invalid_collection','invalid_group','table_mismatch','period_order',
     'forbidden_control_character','encoded_pattern','unsafe_markup',
-    'credential_reflection','forbidden_url_pattern'})
+    'credential_reflection','forbidden_url_pattern','whitespace_control',
+    'format_control','other_unicode_control','encoded_control'})
+SAFE_STAGES = frozenset({'raw','decoded'})
 
 
 class MetadataValidationError(EcosError):
     """No raw value in args/attributes. Public diagnostics are fixed enums only."""
-    def __init__(self, field, classification, code='preflight_unsafe_metadata'):
+    def __init__(self, field, classification, code='preflight_unsafe_metadata', stage=None):
         super().__init__(code)
         self.field = field
         self.classification = classification
+        self.stage = stage
 
 
 def diagnostic(exc):
     if not isinstance(exc, MetadataValidationError):return None
     field,kind=getattr(exc,'field',None),getattr(exc,'classification',None)
     if type(field) is str and field in SAFE_FIELDS and type(kind) is str and kind in SAFE_CLASSIFICATIONS:
-        return {'field':field,'classification':kind}
+        result={'field':field,'classification':kind}
+        stage=getattr(exc,'stage',None)
+        if stage is not None:
+            if type(stage) is not str or stage not in SAFE_STAGES:return {'field':'unknown','classification':'validation_failed'}
+            result['stage']=stage
+        return result
     return {'field':'unknown','classification':'validation_failed'}
 
 
@@ -74,42 +82,62 @@ class Inspector:
             encoded=[base64.b64encode(secret.encode()).decode(),base64.urlsafe_b64encode(secret.encode()).decode()]
             self.tokens += encoded+[value.rstrip('=') for value in encoded]+[secret.encode().hex(),secret.encode().hex().upper()]
 
+    @staticmethod
+    def normalize_name(raw):
+        # Preserve word boundaries; only ASCII spaces/CR/LF/TAB are collapsed.
+        return re.sub(r'[ \r\n\t]+',' ',raw).strip()
+
+    def _surface(self, value, field, stage, whitespace=False):
+        credential_forms=[value]
+        if field=='STAT_NAME':credential_forms.append(re.sub(r'[ \r\n\t]+','',value))
+        if any(t in form for t in self.tokens for form in credential_forms):
+            raise MetadataValidationError(field,'credential_reflection',stage=stage)
+        for c in value:
+            kind=unicodedata.category(c)
+            if not kind.startswith('C'):continue
+            if whitespace and c in '\r\n\t':continue
+            reason=('encoded_control' if stage=='decoded' else 'whitespace_control' if c in '\r\n\t'
+                    else 'format_control' if kind=='Cf' else 'other_unicode_control')
+            raise MetadataValidationError(field,reason,stage=stage)
+        if re.search(r'(?i)://|(?:https?|javascript|data|vbscript|mailto)\s*:|www\.|/api/',value):
+            raise MetadataValidationError(field,'forbidden_url_pattern',stage=stage)
+        markup=(r'<\s*(?:/?[A-Za-z][\w:-]*(?=[\s/>]|$)[^<>]*(?:>|$)|!--)' if field=='STAT_NAME' else r'<[^>]*>')
+        if re.search(markup,value):raise MetadataValidationError(field,'unsafe_markup',stage=stage)
+
     def text(self, raw, limit=200, empty=False, field='unknown'):
         if not isinstance(raw,str):raise MetadataValidationError(field,'invalid_type')
         if len(raw)>limit:raise MetadataValidationError(field,'invalid_length')
         if not raw.strip() and not empty:raise MetadataValidationError(field,'empty_value')
-        # Names are text, not code/URLs: inspect every decoded layer, then
-        # escape the ORIGINAL text at output. No decoding is used as HTML.
-        decoded=raw
+        name=field=='STAT_NAME'
+        self._surface(raw,field,'raw',whitespace=name)
+        normalized=self.normalize_name(raw) if name else raw.strip()
+        self._surface(normalized,field,'raw')
+        decoded=normalized
         for depth in range(9):
-            if any(t in decoded for t in self.tokens):
-                raise MetadataValidationError(field,'credential_reflection')
-            if any(unicodedata.category(c).startswith('C') for c in decoded):
-                raise MetadataValidationError(field,'forbidden_control_character')
-            if re.search(r'(?i)://|(?:https?|javascript|data|vbscript|mailto)\s*:|www\.|/api/',decoded):
-                raise MetadataValidationError(field,'forbidden_url_pattern')
-            markup=(r'<\s*(?:/?[A-Za-z][\w:-]*(?=[\s/>]|$)[^<>]*(?:>|$)|!--)' if field=='STAT_NAME' else r'<[^>]*>')
-            if re.search(markup,decoded):raise MetadataValidationError(field,'unsafe_markup')
+            self._surface(decoded,field,'raw' if depth==0 else 'decoded')
+            # html.unescape replaces/drops some numeric controls. Inspect them
+            # before decoding so NUL/surrogates cannot disappear from checks.
+            for m in re.finditer(r'&#(?:x([0-9a-fA-F]+)|([0-9]+));?',decoded):
+                n=int(m[1],16) if m[1] else int(m[2])
+                if n>0x10ffff or unicodedata.category(chr(n)).startswith('C'):
+                    raise MetadataValidationError(field,'encoded_control',stage='decoded')
             encoded=bool(re.search(r'%[0-9a-fA-F]{2}|&(?:#[a-zA-Z0-9]+|[a-zA-Z]+);|\\[uUx]',decoded))
             def escape(m):
                 try:return chr(int(next(v for v in m.groups() if v is not None),16))
-                except ValueError:raise MetadataValidationError(field,'encoded_pattern') from None
+                except ValueError:raise MetadataValidationError(field,'encoded_pattern',stage='decoded') from None
             next_text=unicodedata.normalize('NFKC',html.unescape(unquote(decoded)))
-            next_text=re.sub(r'\\(?:u([0-9a-fA-F]{4})|U([0-9a-fA-F]{8})|x([0-9a-fA-F]{2}))',
-                escape,next_text)
-            if field!='STAT_NAME' and ('\\' in raw or encoded):
-                # Still check decoded layers first so key/URL reflection receives
-                # its own fixed reason; never relax code or item validators.
+            next_text=re.sub(r'\\(?:u([0-9a-fA-F]{4})|U([0-9a-fA-F]{8})|x([0-9a-fA-F]{2}))',escape,next_text)
+            if not name and ('\\' in raw or encoded):
                 if next_text!=decoded:decoded=next_text;continue
-                raise MetadataValidationError(field,'encoded_pattern')
+                raise MetadataValidationError(field,'encoded_pattern',stage='raw' if depth==0 else 'decoded')
             if next_text==decoded:break
-            if depth==8:raise MetadataValidationError(field,'encoded_pattern')
+            if depth==8:raise MetadataValidationError(field,'encoded_pattern',stage='decoded')
             decoded=next_text
-        if field!='STAT_NAME' and ('\\' in raw or re.search(r'%[0-9a-fA-F]{2}|&(?:#[a-zA-Z0-9]+|[a-zA-Z]+);',raw)):
-            raise MetadataValidationError(field,'encoded_pattern')
+        if not name and ('\\' in raw or re.search(r'%[0-9a-fA-F]{2}|&(?:#[a-zA-Z0-9]+|[a-zA-Z]+);',raw)):
+            raise MetadataValidationError(field,'encoded_pattern',stage='raw')
         if re.search(r'\\(?:u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8}|x[0-9a-fA-F]{2})',raw):
-            raise MetadataValidationError(field,'encoded_pattern')
-        return raw.strip()
+            raise MetadataValidationError(field,'encoded_pattern',stage='raw')
+        return normalized
 
     def code(self, raw, field='unknown'):
         value = self.text(raw, 20, field=field)
@@ -136,6 +164,7 @@ class Inspector:
             if not re.fullmatch(r'[A-Z,\s]*', cycle):
                 raise MetadataValidationError('CYCLE','invalid_format','preflight_catalogue_invalid')
             result[code] = dict(code=code, name=self.text(required(raw,'STAT_NAME'),field='STAT_NAME'),
+                raw_name=raw['STAT_NAME'],
                 parent=self.catalogue_parent(raw.get('P_STAT_CODE')),
                 cycles=[c.strip() for c in cycle.split(',') if c.strip()], searchable=raw.get('SRCH_YN')=='Y')
         return result
@@ -156,7 +185,9 @@ class Inspector:
         groups = {}
         for raw in rows:
             for field in ('STAT_CODE','STAT_NAME'):
-                if required(raw,field)!=table['code' if field=='STAT_CODE' else 'name']:
+                actual=required(raw,field)
+                if field=='STAT_NAME':actual=self.text(actual,field='STAT_NAME')
+                if actual!=table['code' if field=='STAT_CODE' else 'name']:
                     raise MetadataValidationError(field,'table_mismatch','preflight_table_mismatch')
             if raw.get('CYCLE')!='M':continue
             group=self.code(required(raw,'GRP_CODE'),field='GRP_CODE')
@@ -261,7 +292,10 @@ def diagnostic_line(value):
     field,kind=value.get('field'),value.get('classification')
     if type(field) is not str or field not in SAFE_FIELDS or type(kind) is not str or kind not in SAFE_CLASSIFICATIONS:
         field,kind='unknown','validation_failed'
-    return '- 필드 진단: '+cell(field)+' / '+cell(kind)
+    line='- 필드 진단: '+cell(field)+' / '+cell(kind)
+    stage=value.get('stage')
+    if type(stage) is str and stage in SAFE_STAGES:line+=' / '+cell(stage)
+    return line
 
 
 def summary(result):
