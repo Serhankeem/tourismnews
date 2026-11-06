@@ -1,0 +1,61 @@
+{
+  "schema": "kto_provisional_csv_digest_v1",
+  "source_kind": "user_uploaded_csv_unverified",
+  "source_filename": "20261106143422_관광수지.csv",
+  "source_sha256": "2ed72a99d591d05a952a0824c5ee789478ff2657e53525e1fbebb34f61069773",
+  "source_origin_review": "pending",
+  "reference_claim": "Not an official verified KTO export; original CSV user supplied. Equality is display-precision only.",
+  "unit": "백만달러",
+  "display_decimals": 1,
+  "basis": "2025-10..2026-09",
+  "values_sha256": {
+    "2025-10": {
+      "receipts": "6fcb7e0198ae82983276726cfaed209d6c8b1f3ca051579284471da65eb84f98",
+      "expenditure": "3722ff14e9fd4bb975a5436e3c51f6db122163d5a75ef8558eee6ede6d5b34d0"
+    },
+    "2025-11": {
+      "receipts": "7d8f4b83f3adab04850426231cbe85131aec38ed3ea31dae6ad6937ad7f6f72f",
+      "expenditure": "0b487d6fd782d329ebc8f583ceb54c501f8abb40f4e91d6d21323b72496f9c6b"
+    },
+    "2025-12": {
+      "receipts": "a5f0f3ee5603d65307944e1b1c0edf3491ffa5e73f4f96a8bf2354e234b5611e",
+      "expenditure": "ab7296a96c9eefcc7986deeff6a4ba879226b1b451eaaa24848fece060113962"
+    },
+    "2026-01": {
+      "receipts": "447f2603ce3df5336ccdf559a04057cf87d47251a887c116475a879b13ca2fa3",
+      "expenditure": "db9de0877b4660dd96b9b68638a5b69cb2a1aeafbc57f70cff342e2a250d2d99"
+    },
+    "2026-02": {
+      "receipts": "77fe3c01cd5b4ecb4747bc069d85c86e5c0109c88e403eddf548e0973be217ef",
+      "expenditure": "f4a12d3ec9f12501e8a99968c89312d4a0e6127fa6d8e1c87706743932beaed4"
+    },
+    "2026-03": {
+      "receipts": "b069e98f9386dba4c3fb22e2d483f0f7df382d4f957ab6918b2906efb06de490",
+      "expenditure": "7a53bc22c4eabba916716f8fbc5c45d195ca58c39ccc3e9c92ff410f371a033d"
+    },
+    "2026-04": {
+      "receipts": "44a1650a2a77ee425f58c63a211e295c7af4dfeec55d96c933b1c52dceabe68b",
+      "expenditure": "28d69616f6c16e60a009d96f89916a1df800bfd7853c6437137a2388a9914ac7"
+    },
+    "2026-05": {
+      "receipts": "806ed56f4dac4f8841268ec779a2431fd959c6dfced97c4081ee38a8d467d271",
+      "expenditure": "37478275e26955d306f461932c95d951627fc35b15cc480dbf35d81d06e37815"
+    },
+    "2026-06": {
+      "receipts": "527f3b9c2cee0ff001e62d0fd67c3f6c28466a74677d435364b97305aa36fe69",
+      "expenditure": "8078365fc29e82016a350c97cef8ae627e4fe847716c492bd6dd3765d99ca68d"
+    },
+    "2026-07": {
+      "receipts": "f686452a1178efc5cd9362730c6207313135424cd96eef531483846f3e25165e",
+      "expenditure": "e038670cdc05cb0041b53aa9dcfaa538be43219f5ad200e6a0f09d0bf7dcd5fe"
+    },
+    "2026-08": {
+      "receipts": "7ae7442270e53ebe094cbc0a08562503025cb930c929a2e125049d12bdaa49b1",
+      "expenditure": "ab9b02bedc0b009bdef744080dab563ce9d3566d9dcc1829b214bf4aba517e86"
+    },
+    "2026-09": {
+      "receipts": "2b69ba9b90fc1fccb2a9a2446e73fea923fa07e26b275c10c7c992e22d61eebe",
+      "expenditure": "adb1dd8a902199c2ca8584240df1570d0ae706d7474c17bed7e595d17336b693"
+    }
+  }
+}
