@@ -1,0 +1,25 @@
+name: ECOS Activation Readiness
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ecos-activation-readiness
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify ECOS official metadata and adapter contract (read only)
+        env:
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: python -m src.macro.ecos_activation_review
