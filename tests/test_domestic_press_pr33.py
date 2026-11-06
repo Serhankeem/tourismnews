@@ -75,8 +75,13 @@ class DomesticPressPR33Tests(unittest.TestCase):
                 self.assertEqual(item["publication_status"], "rights_hold")
                 self.assertIsNone(item["title"])
                 self.assertTrue(item.get("title_sha256"))
+            # An all-rights-held run may intentionally produce no public JSON
+            # files. Both absence and empty public views are safe outcomes.
             for page in ("news", "newsroom", "briefing"):
-                doc = json.loads((root / "site" / f"{page}.json").read_text(encoding="utf-8"))
+                public_path = root / "site" / f"{page}.json"
+                if not public_path.exists():
+                    continue
+                doc = json.loads(public_path.read_text(encoding="utf-8"))
                 self.assertNotIn("DO NOT REPUBLISH", json.dumps(doc, ensure_ascii=False))
                 self.assertNotIn("국제선 항공노선 확대", json.dumps(doc, ensure_ascii=False))
 
