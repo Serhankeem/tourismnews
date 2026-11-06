@@ -180,6 +180,67 @@
           "published_at": "2026-11-04T15:39:03+09:00"
         }
       ]
+    },
+    {
+      "briefing_date": "2026-11-06",
+      "generated_at": "2026-11-06T11:28:23+09:00",
+      "mode": "live_rss",
+      "decisions": [
+        {
+          "article_id": "8409703e6f61d9eb1a",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-06T00:36:00+09:00"
+        },
+        {
+          "article_id": "36cdfb289b2f2e69f3",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-06T00:15:00+09:00"
+        },
+        {
+          "article_id": "c14c976a85d25d1a90",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-06T00:10:00+09:00"
+        },
+        {
+          "article_id": "23eac8a39054c3e95f",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-05T23:00:00+09:00"
+        },
+        {
+          "article_id": "a2c9ece37a12ce196b",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-05T22:02:09+09:00"
+        },
+        {
+          "article_id": "0a15476a2cb229080a",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-05T22:01:56+09:00"
+        },
+        {
+          "article_id": "7b8c14924587d80f29",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-05T20:32:55+09:00"
+        },
+        {
+          "article_id": "9881ee1c0fb832a7e1",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-05T19:50:35+09:00"
+        },
+        {
+          "article_id": "b82324a4345aee3894",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-05T16:25:33+09:00"
+        }
+      ]
     }
   ]
 }

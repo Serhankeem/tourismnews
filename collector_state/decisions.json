@@ -1,8 +1,26 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-06T10:25:12+09:00",
+  "checked_at": "2026-11-06T11:28:23+09:00",
   "scope": "successful_sources_this_run",
   "items": [
+    {
+      "id": "3078c8e8aa6b1b43e7",
+      "title": "한국언론진흥재단 신임 이사장에 권태선 씨 임명",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22832",
+      "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
     {
       "id": "91c8a97dff3f6edb6b",
       "title": "‘2026 코리아시즌’, 태국·베트남에서 ‘케이-컬처’ 빛나다",
@@ -168,10 +186,10 @@
       "decision": "exclude"
     },
     {
-      "id": "6e09be218f2e60e4fc",
-      "title": "세계 무대에 나갈 우리 글과 그림, ‘2026 대한민국 그림책상’ 수상작 9편 선정",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22821",
-      "source_id": "mcst_press",
+      "id": "06f385c6edc7787b6a",
+      "title": "가을 막차 타세요! 놓치기 아쉬운 서울 주말 나들이.zip",
+      "url": "https://mediahub.seoul.go.kr/archives/2019942",
+      "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -517,24 +535,6 @@
       "id": "16d982a7f6414c89a3",
       "title": "한강 노을 바라보며 쉬어 가세요! 용양봉저정 문화·야경 탐방 코스",
       "url": "https://mediahub.seoul.go.kr/archives/2019890",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "cc98d27f357d494461",
-      "title": "러닝도 파크골프도 OK! 신목동역 펀스테이션 개장",
-      "url": "https://mediahub.seoul.go.kr/archives/2019894",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
