@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-06T16:30:36+09:00",
+  "checked_at": "2026-11-06T17:34:07+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3996,6 +3996,42 @@
       "decision": "exclude"
     },
     {
+      "id": "0f84a2d74926f03212",
+      "title": "One Platform, Endless Possibilities: Elevating the Modern Guest Experience",
+      "url": "https://www.hospitalitynet.org/opinion/4135035/one-platform-endless-possibilities-elevating-the-modern-guest-experience",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "0adbf18f06a1980daa",
+      "title": "Goodbye, Gatekeeping: How Millennials and Gen Z are Killing Stiff Luxury",
+      "url": "https://www.hospitalitynet.org/opinion/4135278/goodbye-gatekeeping-how-millennials-and-gen-z-are-killing-stiff-luxury",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "2734182552dc7dd542",
       "title": "The Creative Upsells That Made Elements of Byron Over AUD 250,000",
       "url": "https://www.hospitalitynet.org/casestudy/4135194/the-creative-upsells-that-made-elements-of-byron-over-aud-250000",
@@ -4151,6 +4187,35 @@
       "decision": "exclude"
     },
     {
+      "id": "23eac8a39054c3e95f",
+      "title": "Paathz Officially Launches: Hospitality Hiring Infrastructure Goes Live Across Asia and Europe",
+      "url": "https://www.hospitalitynet.org/news/4135300/paathz-officially-launches-hospitality-hiring-infrastructure-goes-live-across-asia-and-europe",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hospitality",
+              "launch"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
       "id": "677d90bed3e57cb92f",
       "title": "Success story: The Coaching Inn Group",
       "url": "https://www.hospitalitynet.org/casestudy/4135264/success-story-the-coaching-inn-group",
@@ -4185,35 +4250,6 @@
         "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
-    },
-    {
-      "id": "23eac8a39054c3e95f",
-      "title": "Paathz Officially Launches: Hospitality Hiring Infrastructure Goes Live Across Asia and Europe",
-      "url": "https://www.hospitalitynet.org/news/4135300/paathz-officially-launches-hospitality-hiring-infrastructure-goes-live-across-asia-and-europe",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hospitality",
-              "launch"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
     },
     {
       "id": "d7f798c93c32a252f5",
@@ -4327,42 +4363,6 @@
       "id": "b3ddf750cde23c71a9",
       "title": "Crestline Selected to Manage Aloft by Marriott Indianapolis Downtown",
       "url": "https://www.hospitalitynet.org/news/4135295/crestline-selected-to-manage-aloft-by-marriott-indianapolis-downtown",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "1190f29c96d1f0f23c",
-      "title": "New AHLA Report Says AI Is Giving Hotel Teams More Time for What Matters Most: Guests",
-      "url": "https://www.hospitalitynet.org/news/4135294/new-ahla-report-says-ai-is-giving-hotel-teams-more-time-for-what-matters-most-guests",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "ed4890b663c81312f9",
-      "title": "AI Questions Every Hotelier Should Be Asking",
-      "url": "https://www.hospitalitynet.org/opinion/4135293/ai-questions-every-hotelier-should-be-asking",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
