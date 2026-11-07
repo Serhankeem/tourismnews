@@ -241,6 +241,19 @@
           "published_at": "2026-11-05T16:25:33+09:00"
         }
       ]
+    },
+    {
+      "briefing_date": "2026-11-07",
+      "generated_at": "2026-11-07T11:16:37+09:00",
+      "mode": "live_rss",
+      "decisions": [
+        {
+          "article_id": "a3e566001dc7acbec0",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-06T19:50:47+09:00"
+        }
+      ]
     }
   ]
 }
