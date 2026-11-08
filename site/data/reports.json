@@ -1,9 +1,22 @@
 {
   "schema_version": 1,
   "mode": "verified_official_metadata",
-  "generated_at": "2026-11-02T13:24:45+09:00",
-  "count": 135,
+  "generated_at": "2026-11-09T07:50:14+09:00",
+  "count": 137,
   "reports": [
+    {
+      "title": "European Tourism – Trends & Prospects (Q3/2026)",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-11-05",
+      "report_type": "정기 시장동향",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "trends",
+        "tourism"
+      ],
+      "url": "https://etc-corporate.org/reports/european-tourism-trends-prospects-q3-2026/",
+      "access_type": "무료 공개"
+    },
     {
       "title": "AI claims processing ranks last as a booking confidence driver",
       "publisher": "Phocuswright",
@@ -63,6 +76,18 @@
         "travel"
       ],
       "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/travelers-pay-more-to-cancel-58-choose-free-cancellation-over-a-lower-price",
+      "access_type": "미확인"
+    },
+    {
+      "title": "Proof, not promises: Updated guide helps tourism and events industry navigate new EU greenwashing rules",
+      "publisher": "European Travel Commission (ETC)",
+      "published_at": "2026-10-02",
+      "report_type": "종합 연구보고서",
+      "category": "관광시장 전망·트렌드",
+      "keywords": [
+        "tourism"
+      ],
+      "url": "https://etc-corporate.org/reports/proof-not-promises-updated-guide-helps-tourism-and-events-industry-navigate-new-eu-greenwashing-rules/",
       "access_type": "미확인"
     },
     {
@@ -544,10 +569,8 @@
       "publisher": "European Travel Commission (ETC)",
       "published_at": "2026-05-12",
       "report_type": "종합 연구보고서",
-      "category": "국내관광·관광소비",
-      "keywords": [
-        "consumer"
-      ],
+      "category": "관광시장 전망·트렌드",
+      "keywords": [],
       "url": "https://etc-corporate.org/reports/proof-not-promises-a-practical-guide-to-the-eu-empowering-consumers-directive-for-destinations/",
       "access_type": "미확인"
     },
@@ -658,9 +681,7 @@
       "published_at": "2026-04-10",
       "report_type": "종합 연구보고서",
       "category": "관광시장 전망·트렌드",
-      "keywords": [
-        "travel"
-      ],
+      "keywords": [],
       "url": "https://etc-corporate.org/reports/understanding-european-conscious-traveller-segments/",
       "access_type": "미확인"
     },
@@ -1041,7 +1062,6 @@
       "category": "OTA·여행기술",
       "keywords": [
         "AI",
-        "market",
         "tourism"
       ],
       "url": "https://etc-corporate.org/reports/artificial-intelligence-ai-in-tourism-assessing-and-supporting-ntos-research-marketing-operations/",
@@ -1726,6 +1746,10 @@
     }
   },
   "date_basis": {
+    "https://etc-corporate.org/reports/european-tourism-trends-prospects-q3-2026/": {
+      "kind": "official_page_first_publication",
+      "precision": "day"
+    },
     "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/ai-claims-processing-ranks-last-as-a-booking-confidence-driver": {
       "kind": "official_page_first_publication",
       "precision": "day"
@@ -1743,6 +1767,10 @@
       "precision": "day"
     },
     "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/travelers-pay-more-to-cancel-58-choose-free-cancellation-over-a-lower-price": {
+      "kind": "official_page_first_publication",
+      "precision": "day"
+    },
+    "https://etc-corporate.org/reports/proof-not-promises-updated-guide-helps-tourism-and-events-industry-navigate-new-eu-greenwashing-rules/": {
       "kind": "official_page_first_publication",
       "precision": "day"
     },
