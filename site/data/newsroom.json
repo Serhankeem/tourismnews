@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-08T19:55:23+09:00",
-  "last_successful_fetch": "2026-11-08T19:55:23+09:00",
-  "count": 73,
+  "generated_at": "2026-11-08T22:05:21+09:00",
+  "last_successful_fetch": "2026-11-08T22:05:21+09:00",
+  "count": 75,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,27 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "지역관광 혁신의 해법 모색하다",
+      "source": "트래블데일리",
+      "published_at": "2026-11-08T21:58:18+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72613",
+      "category": "문화·트렌드",
+      "keywords": [
+        "지역관광"
+      ]
+    },
+    {
+      "title": "한국관광공사, WTM서 방한관광 세일즈 총력",
+      "source": "트래블데일리",
+      "published_at": "2026-11-08T21:58:09+09:00",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72607",
+      "category": "관광정책",
+      "keywords": [
+        "관광공사",
+        "관광세"
+      ]
+    },
     {
       "title": "Domes Resorts announces three new hotel openings for 2027 after becoming the major shareholder in Casa Collective",
       "source": "Hospitality Net",
