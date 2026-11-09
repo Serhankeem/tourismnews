@@ -1,0 +1,110 @@
+{
+  "status": "ok",
+  "reference_period": "2026-09",
+  "observed_before": 483,
+  "observed_after": 483,
+  "values_periods_units_first_collection_preserved": true,
+  "revisions_preserved": true,
+  "new_observations": 0,
+  "unchanged_observations": 483,
+  "value_corrections": 0,
+  "changed_staged_files": [
+    "site/data/macro.json",
+    "site/data/macro_health.json",
+    "collector_state/macro_archive.json",
+    "collector_state/macro_run_summary.json"
+  ],
+  "source": {
+    "id": "kto_monthly_statistics",
+    "name": "한국관광공사 한국관광통계",
+    "status": "ok",
+    "reason": null,
+    "last_successful_check": "2026-11-09T14:59:11.480945+09:00",
+    "reference_period": "2026-09",
+    "release_published_at": "2026-10-28T10:10:00+09:00",
+    "observations": 483,
+    "new_observations": 0,
+    "unchanged_observations": 483,
+    "value_corrections": 0,
+    "status_changes": 0
+  },
+  "requests": [
+    {
+      "url": "https://datalab.visitkorea.or.kr/robots.txt",
+      "status": 200,
+      "content_type": "text/plain; charset=UTF-8"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/datalab/portal/main/getMainForm.do",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/datalab/portal/ts/getEntcnyFrgnCust2Form.do",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/List.do?cbIdx=1603&tgtTypeCd=CATE_CONT&searchKey2=spt01",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/View.do?cbIdx=1603&cbIdx2=1127&bcIdx=311425&pageIndex=1&tgtTypeCd=CATE_CONT&searchKey=&searchKey1=&searchKey2=spt01&searchKey3=&tabFlag=N&subFlag=N&cateCont=spt01",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=311425&cbIdx=1127&streFileNm=da20f322-a2a3-4c02-846d-89668abdb7fa.xlsx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=311425&cbIdx=1127&streFileNm=5108262d-6de4-467f-90d0-36c43ae4baf7.xlsx",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://datalab.visitkorea.or.kr/datalab/portal/main/getMainForm.do",
+      "bytes": 592004,
+      "sha256": "b536f9cd0f63a5b0e01d2bdae6ecb040e12c718159e152a18b9697ff3d7d2578"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/datalab/portal/ts/getEntcnyFrgnCust2Form.do",
+      "bytes": 568328,
+      "sha256": "bd7bb6fe3eaaa2d145ea4f0b24c9678525d523b6079b80397ad6d5943773ca21"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/List.do?cbIdx=1603&tgtTypeCd=CATE_CONT&searchKey2=spt01",
+      "bytes": 487942,
+      "sha256": "96e8619e66de7db4993d3748572fc9b9588544e24f3d88bfa53c9aa11a956e73"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/View.do?cbIdx=1603&cbIdx2=1127&bcIdx=311425&pageIndex=1&tgtTypeCd=CATE_CONT&searchKey=&searchKey1=&searchKey2=spt01&searchKey3=&tabFlag=N&subFlag=N&cateCont=spt01",
+      "bytes": 467151,
+      "sha256": "578bf955cd9d5c9187fa70bb3145003ed8adae6dfe146a36c5f9d6221862d9ca"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=311425&cbIdx=1127&streFileNm=da20f322-a2a3-4c02-846d-89668abdb7fa.xlsx",
+      "bytes": 1129744,
+      "sha256": "f2b383757aacea0645e0220488eaf31d65210d478f6f3f0abe414658dc4ef98d"
+    },
+    {
+      "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=311425&cbIdx=1127&streFileNm=5108262d-6de4-467f-90d0-36c43ae4baf7.xlsx",
+      "bytes": 299198,
+      "sha256": "89faa1ef0141a9a2d024a5b93e2f5c804e8db77e8da138078d6a4d9b9b59bac1"
+    }
+  ],
+  "base_commit": "6e97cf30c12591a4be1ca4cb35a206e58f20fe42",
+  "data_snapshot": "5b4ee80b55b08da057575430b7b7481313be5d74",
+  "production_data_changed": false,
+  "news_count_before": 75,
+  "news_count_after": 75,
+  "research_count_before": 137,
+  "research_count_after": 137,
+  "source_licence": "KOGL-0",
+  "independent_xlsx_crosscheck": "passed",
+  "pr37_changed": false
+}

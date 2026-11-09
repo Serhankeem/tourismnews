@@ -1,0 +1,21 @@
+{
+  "python": {
+    "tests": 495,
+    "passed": 495
+  },
+  "new_kto_tests": 10,
+  "new_pipeline_test": 1,
+  "browser_suites": [
+    {
+      "name": "macro.smoke.cjs",
+      "status": "passed"
+    },
+    {
+      "name": "market-weather-v2.smoke.cjs",
+      "status": "passed"
+    }
+  ],
+  "live_collection": "passed_with_no_new_observations",
+  "baseline_data_ref": "5b4ee80b55b08da057575430b7b7481313be5d74",
+  "production_data_changed": false
+}
