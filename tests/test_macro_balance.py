@@ -23,6 +23,22 @@ def source():
     return dict(approval={a:dict(approved=True,scope='general_travel_monthly',evidence_ref='synthetic-test-only',valid_from='2026-01-01') for a in ('collection','publication')})
 
 class BalanceTests(unittest.TestCase):
+    def test_verify_only_never_creates_private_or_public_files(self):
+        import sys
+        from src.macro import balance_prepare
+        with tempfile.TemporaryDirectory() as root:
+            target=Path(root)/'private'
+            argv=['balance_prepare', '--receipts', str(Path(root)/'in.xls'),
+                  '--expenditure',str(Path(root)/'out.xls'),
+                  '--balance',str(Path(root)/'net.xls'),
+                  '--private-dir',str(target), '--verify-only']
+            with patch.object(sys,'argv',argv), \\
+                 patch.object(balance_prepare,'read_xls',side_effect=lambda path,kind,now:bundle()[kind]), \\
+                 patch.object(balance_prepare,'write_atomic') as write:
+                balance_prepare.main()
+                write.assert_not_called()
+                self.assertFalse(target.exists())
+
     def test_exact_display_conversion(self):
         self.assertEqual(million_usd(123456), Decimal('123.456'))
         self.assertEqual(million_usd(-123456), Decimal('-123.456'))
