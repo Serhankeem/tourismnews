@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-09T20:10:32+09:00",
-  "last_successful_fetch": "2026-11-09T20:10:32+09:00",
-  "count": 76,
+  "generated_at": "2026-11-09T22:29:06+09:00",
+  "last_successful_fetch": "2026-11-09T22:29:06+09:00",
+  "count": 79,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,36 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "Profit leaks hiding in hotel procurement",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-09T21:50:01+09:00",
+      "url": "https://www.hospitalitynet.org/podcast/4135343/profit-leaks-hiding-in-hotel-procurement",
+      "category": "항공·숙박",
+      "keywords": [
+        "hotel"
+      ]
+    },
+    {
+      "title": "Hospitality Net to Launch HospITALY at BTO 2026, Bringing Together 60 Leading Voices in Italian Hospitality",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-09T21:00:00+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135322/hospitality-net-to-launch-hospitaly-at-bto-2026-bringing-together-60-leading-voices-in-italian-hospitality",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hospitality"
+      ]
+    },
+    {
+      "title": "The Spa Revenue Trap: Why Luxury Hotels Need to Rethink Wellness Profitability",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-09T20:40:22+09:00",
+      "url": "https://www.hospitalitynet.org/opinion/4135340/the-spa-revenue-trap-why-luxury-hotels-need-to-rethink-wellness-profitability",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hotels"
+      ]
+    },
     {
       "title": "Charleston’s Expanding Economy Sets the Stage for Hotel Market Growth",
       "source": "Hospitality Net",
