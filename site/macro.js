@@ -13,6 +13,33 @@
  const link=(url,label)=>safeUrl(url)?`<a class="external macro-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`:'';
  const finality=o=>o?.finality==='provisional'?'잠정':o?.finality==='final'?'확정':'공표치 · 확정 여부 미표기';
  const item=id=>db?.indicators.find(i=>i.id===id);
+ const tourgoId='tourgo_tourism_balance',tourgoUrl='https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do';
+ function financialValid(i,o){
+  if(o.unit!=='US$'||i.display_unit!=='백만 US$'||i.display_divisor!==1000000)return false;
+  if(i.source_id==='ecos_general_travel')return o.verification_status==='official_api_validated'&&o.collection_method==='official_ecos_api';
+  const h=o.bundle_sha256_by_kind;
+  return i.source_id===tourgoId&&o.source_id===tourgoId&&o.data_origin==='official_export'
+   &&o.verification_status==='official_tourgo_file_validated'&&o.collection_method==='operator_supplied_official_excel_export'
+   &&o.frequency==='M'&&['not_stated','provisional','final'].includes(o.finality)
+   &&o.source_url===tourgoUrl&&i.source_url===tourgoUrl&&o.source_unit==='천 US$'
+   &&o.kind===(i.id==='kto_tourism_receipts'?'receipts':'expenditure')
+   &&Number.isSafeInteger(o.source_value)&&o.source_value>=0&&Number.isSafeInteger(o.source_value*1000)&&o.source_value*1000===o.value
+   &&h&&Object.keys(h).sort().join(',')==='balance,expenditure,receipts'&&Object.values(h).every(v=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v))
+   &&new Set(Object.values(h)).size===3&&o.file_sha256===h[o.kind]&&Number.isSafeInteger(o.official_balance_value)&&['not_stated','provisional','final'].includes(o.official_balance_finality);
+ }
+ function tourgoPairValid(candidate){
+  const ids=['kto_tourism_receipts','kto_tourism_expenditure'],pair=ids.map(id=>candidate.indicators.find(i=>i.id===id));
+  if(!pair.some(i=>i?.connected&&i.source_id===tourgoId))return !candidate.tourism_balance;
+  const [a,b]=pair,v=candidate.tourism_balance;
+  if(!a?.connected||!b?.connected||pair.some(i=>i.source_id!==tourgoId)||a.latest.period!==b.latest.period||a.observations.length!==b.observations.length||!v||v.source_id!==tourgoId||v.unit!=='US$'||v.source_url!==tourgoUrl||v.official_identity_verified!==true||v.percentage_policy!=='signed_balance_absolute_changes_only'||v.observations?.length!==a.observations.length)return false;
+  return a.observations.every(r=>{
+   const p=b.observations.find(o=>o.period===r.period),official=v.observations.find(o=>o.period===r.period);
+   return p&&official&&['receipts','expenditure','balance'].every(k=>r.bundle_sha256_by_kind[k]===p.bundle_sha256_by_kind[k])
+    &&r.official_balance_value===r.value-p.value&&p.official_balance_value===r.value-p.value&&official.value===r.value-p.value
+    &&['mom_pct','yoy_pct','ytd_yoy_pct'].every(k=>official.comparisons?.[k]===null);
+  })&&v.latest?.period===a.latest.period&&v.latest.value===a.latest.value-b.latest.value
+   &&['finality','mom_change','yoy_change'].every(k=>k==='finality'?v.latest.finality===v.observations.find(o=>o.period===v.latest.period).finality:v.latest.comparisons?.[k]===v.observations.find(o=>o.period===v.latest.period).comparisons?.[k]);
+ }
  function sourceState(i){
   if(!i?.connected)return '미연동';
   if(failed)return '자료 수집 실패 · 이전 검증값 유지';
@@ -24,18 +51,26 @@
   if(!source?.last_successful_check||Date.now()-Date.parse(source.last_successful_check)>48*3600000)return '갱신 지연 · 마지막 검증값';
   const [y,m]=i.latest.period.split('-').map(Number),nextDue=new Date(Date.UTC(y,m+2,0,15));
   if(!money(i)&&Date.now()>=nextDue.getTime())return '최신 공표 미확인 · 갱신 지연';
-  return money(i)?'공식 API 연동':'공식 파일 연동';
+  return money(i)?(i.source_id==='tourgo_tourism_balance'?'공식 파일 수동 입력':'공식 API 연동'):'공식 파일 연동';
  }
  function card(id,name){
   const i=item(id),o=i?.latest,s=sourceState(i);
   if(!o)return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value macro-unavailable">미연동</div><div class="note">${esc(failed?'공식 통계 DB 수집 실패':i?.reason||'공식 자료 확인 전')}</div>${link(i?.source_url,'공식 출처')}</article>`;
-  return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value" data-value="${o.value}">${number(o.value,i)}<span>${esc(unit(i))}</span></div><div class="macro-period">기준 ${esc(o.period)} · 월간 실적</div>${money(i)?`<div class="tiny">전월 대비 ${pct(o.comparisons.mom_pct)}<br>전년 동월비 ${pct(o.comparisons.yoy_pct)}</div>`:`<span class="delta percentage-delta">전년 동월비 ${pct(o.comparisons.yoy_pct)}</span>`}<div class="note">${esc(finality(o))}${o.revision_status==='revised'?' · 정정 감지':''}<br>${esc(s)}${money(i)?`<br>최근 확인 ${esc(date(o.last_collected_at))}<br>공표일 ${esc(o.release_published_at?date(o.release_published_at):'API 미제공')} · 월별 공표 시차 있음`:''}</div>${link(i.source_url,esc(i.publisher))}</article>`;
+  return `<article class="card kpi macro-kpi" data-macro-id="${id}"><span class="label">${esc(name)}</span><div class="value" data-value="${o.value}">${number(o.value,i)}<span>${esc(unit(i))}</span></div><div class="macro-period">기준 ${esc(o.period)} · 월간 실적</div>${money(i)?`<div class="tiny">전월 대비 ${pct(o.comparisons.mom_pct)}<br>전년 동월비 ${pct(o.comparisons.yoy_pct)}</div>`:`<span class="delta percentage-delta">전년 동월비 ${pct(o.comparisons.yoy_pct)}</span>`}<div class="note">${esc(finality(o))}${o.revision_status==='revised'?' · 정정 감지':''}<br>${esc(s)}${money(i)?`<br>최근 확인 ${esc(date(o.last_collected_at))}<br>공표일 ${esc(o.release_published_at?date(o.release_published_at):i.source_id==='tourgo_tourism_balance'?'파일에 미표기':'API 미제공')} · 월별 공표 시차 있음`:''}</div>${link(i.source_url,(i.source_id==='tourgo_tourism_balance'?'자료: ':'')+esc(i.publisher))}</article>`;
  }
  function tourismBalanceCard(){
   // Computed balance; no independent ECOS series and no unapproved display.
   const a=item('kto_tourism_receipts'),b=item('kto_tourism_expenditure');
   if(!money(a)||!money(b)||!a?.connected||!b?.connected||!a.latest||!b.latest||a.latest.period!==b.latest.period)return '';
   const period=a.latest.period,r=a.observations.find(o=>o.period===period),p=b.observations.find(o=>o.period===period);
+  if(a.source_id===tourgoId&&b.source_id===tourgoId){
+   const official=db.tourism_balance?.latest;
+   if(!r||!p||!financialValid(a,r)||!financialValid(b,p)||!official||official.period!==period||official.value!==r.value-p.value)return '';
+   const value=official.value,c=official.comparisons;
+   const amount=n=>(n<0?'-':'')+number(Math.abs(n),a);
+   const change=n=>Number.isSafeInteger(n)?`${number(Math.abs(n),a)}백만 US$ ${n>0?'개선':n<0?'악화':'보합'}`:'—';
+   return `<article class="card kpi macro-kpi macro-derived-balance" data-macro-id="derived_tourism_balance"><span class="label">관광수지 · ${value>0?'흑자':value<0?'적자':'균형'}</span><div class="value">${amount(value)}<span>백만 US$</span></div><div class="macro-period">기준 ${esc(period)} · 관광수입 − 관광지출</div><div class="tiny">전월 대비 ${change(c.mom_change)}<br>전년 동월 대비 ${change(c.yoy_change)}</div><div class="note">TOURGO 공식 관광수지 원본과 차감 계산값 일치 검증<br>${esc(finality(official))} · 일반 증감률 미적용</div>${link(tourgoUrl,'자료: 한국문화관광연구원 관광지식정보시스템(TOURGO)')}</article>`;
+  }
   if(!r||!p||!Number.isSafeInteger(r.value)||!Number.isSafeInteger(p.value)||r.value<0||p.value<0||r.unit!=='US$'||p.unit!=='US$'||r.verification_status!=='official_api_validated'||p.verification_status!=='official_api_validated'||r.collection_method!=='official_ecos_api'||p.collection_method!=='official_ecos_api'||!Number.isSafeInteger(r.value-p.value))return '';
   const v=r.value-p.value,display=(v<0?'-':'')+number(Math.abs(v),a);
   const status=sourceState(a)==='공식 API 연동'&&sourceState(b)==='공식 API 연동'?'공식 API 연동 · 계산값':'이전 검증값 계산 · 갱신 상태 확인 필요';
@@ -77,13 +112,13 @@
    const o=selected.latest,c=o.comparisons;
    el('macro-chart-meta').textContent=`${selected.name} · ${selected.first_period}~${selected.latest_period} · ${selected.months}개월 확보 · ${state.chart==='growth'?'전년 동월비 %':chartUnit(selected)} · ${sourceState(selected)}`;
    el('macro-comparisons').innerHTML=`<div>전월 대비 (${c.mom_base_period})<strong>${pct(c.mom_pct)}</strong></div><div>전년 동월 대비 (${c.yoy_base_period})<strong>${pct(c.yoy_pct)}</strong></div><div>연초 누적 (${c.ytd_range.join('~')})<strong>${c.ytd_value==null?(money(selected)?'검증 가능한 누적 비교 자료 없음':'누락 월로 계산 생략'):number(c.ytd_value,selected)+' '+esc(unit(selected))}</strong></div><div>전년 동기 누적 대비<strong>${pct(c.ytd_yoy_pct)}</strong></div>`;
-   el('macro-chart-foot').innerHTML=`${link(selected.source_url,money(selected)?'ECOS 공식 API 안내':'공식 공표문')}<br>공표 자료 ${esc(o.release_published_at?date(o.release_published_at):'API 공표일 미제공 (조회시각과 구분)')} · 최종 수집 ${esc(date(o.last_collected_at))}<br>${esc(finality(o))} · 조회 범위의 ${state.chart==='growth'?'비교 자료 없음':'누락 월'} ${gaps??0}개 · 0이나 보간값으로 채우지 않습니다.`;
+   el('macro-chart-foot').innerHTML=`${link(selected.source_url,selected.source_id==='tourgo_tourism_balance'?'자료: 한국문화관광연구원 관광지식정보시스템(TOURGO)':money(selected)?'ECOS 공식 API 안내':'공식 공표문')}<br>공표 자료 ${esc(o.release_published_at?date(o.release_published_at):selected.source_id==='tourgo_tourism_balance'?'원본 파일 공표일 미표기 (확인시각과 구분)':'API 공표일 미제공 (조회시각과 구분)')} · 최종 수집 ${esc(date(o.last_collected_at))}<br>${esc(finality(o))} · 조회 범위의 ${state.chart==='growth'?'비교 자료 없음':'누락 월'} ${gaps??0}개 · 0이나 보간값으로 채우지 않습니다.`;
   }
  }
  function render(){
   const markup=core.map(([id,name])=>card(id,name)).join('');const balanceMarkup=tourismBalanceCard();el('home-macro-kpis').innerHTML=markup+balanceMarkup;el('macro-kpis').innerHTML=markup+balanceMarkup;
   const connected=db?.indicators.filter(i=>i.connected)||[],primary=connected.filter(i=>i.priority===1);
-  const warning=failed||healthUnknown||connected.some(i=>!['공식 파일 연동','공식 API 연동'].includes(sourceState(i)));
+  const warning=failed||healthUnknown||connected.some(i=>!['공식 파일 연동','공식 API 연동','공식 파일 수동 입력'].includes(sourceState(i)));
   const text=connected.length?`핵심 월간 ${primary.length}/4개 연동 · 국적별 ${connected.filter(i=>i.country).length}개 · 기준 ${item('kto_inbound')?.latest_period||'미확인'}${core.slice(2).filter(([id])=>item(id)?.connected).map(([id,name])=>` · ${name} 기준 ${item(id).latest_period}`).join('')} · ${failed?'새 DB 확인 실패, 이전 검증값 보존':healthUnknown?'수집 상태 확인 실패':sourceState(item('kto_inbound'))}`:'검증된 공식 통계 데이터가 없습니다. 미연동 상태이며 정적 예시를 실시간 수치로 표시하지 않습니다.';
   for(const id of ['macro-status','home-macro-status']){el(id).textContent=text;el(id).classList.toggle('is-delayed',warning);}
   if(db){
@@ -101,7 +136,8 @@
   if(loading)return;loading=true;
   try{
    const r=await fetch('./data/macro.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('macro_not_available');const candidate=await r.json();
-   if(candidate.schema_version!==1||candidate.mode!=='verified_official_statistics'||!Array.isArray(candidate.indicators)||candidate.indicators.some(i=>!Array.isArray(i.observations)||(i.connected&&(!i.latest?.comparisons||!i.observations.some(o=>o.period===i.latest.period&&o.value===i.latest.value)))||i.observations.some(o=>!Number.isSafeInteger(o.value)||o.value<0||(money(i)?(!['kto_tourism_receipts','kto_tourism_expenditure'].includes(i.id)||i.source_id!=='ecos_general_travel'||o.unit!=='US$'||o.verification_status!=='official_api_validated'||o.collection_method!=='official_ecos_api'||i.display_unit!=='백만 US$'||i.display_divisor!==1000000):(o.verification_status!=='official_file_validated'||i.unit!=='명')))))throw Error('macro_invalid');
+   if(candidate.schema_version!==1||candidate.mode!=='verified_official_statistics'||!Array.isArray(candidate.indicators)||candidate.indicators.some(i=>!Array.isArray(i.observations)||(i.connected&&(!i.latest?.comparisons||!i.observations.some(o=>o.period===i.latest.period&&o.value===i.latest.value)))||i.observations.some(o=>!Number.isSafeInteger(o.value)||o.value<0||(money(i)?(!['kto_tourism_receipts','kto_tourism_expenditure'].includes(i.id)||!financialValid(i,o)):(o.verification_status!=='official_file_validated'||i.unit!=='명')))))throw Error('macro_invalid');
+   if(!tourgoPairValid(candidate))throw Error('tourgo_pair_invalid');
    db=candidate;failed=false;healthUnknown=false;
    try{const h=await fetch('./data/macro_health.json?v='+Date.now(),{cache:'no-store'});if(!h.ok)throw Error();health=await h.json();}catch(_){healthUnknown=true;}
   }catch(_){failed=true;}
