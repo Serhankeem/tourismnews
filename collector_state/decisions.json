@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-09T18:24:43+09:00",
+  "checked_at": "2026-11-09T20:10:32+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3976,6 +3976,107 @@
       "decision": "exclude"
     },
     {
+      "id": "82fda1c197a674ed09",
+      "title": "Accor Group & Hard Rock International Sign Global Strategic Partnership",
+      "url": "https://www.hospitalitynet.org/news/4135336/accor-group-hard-rock-international-sign-global-strategic-partnership",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "fd6ece5bbec9051c3e",
+      "title": "PATA, EATOF, and Gangwon State Join Forces to Strengthen Tourism Destination Resilience",
+      "url": "https://www.hospitalitynet.org/news/4135334/pata-eatof-and-gangwon-state-join-forces-to-strengthen-tourism-destination-resilience",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4af0bc04ed8ba42dc7",
+      "title": "Why Hospitality’s Best Venues Prioritize No-Change Over Reinvention",
+      "url": "https://www.hospitalitynet.org/opinion/4135333/why-hospitalitys-best-venues-prioritize-no-change-over-reinvention",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7eb907c8c540d9cf67",
+      "title": "Charleston’s Expanding Economy Sets the Stage for Hotel Market Growth",
+      "url": "https://www.hospitalitynet.org/report/4135332/charlestons-expanding-economy-sets-the-stage-for-hotel-market-growth",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "hotel",
+              "expand"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "d951dcf94c07cbac08",
+      "title": "Four Seasons Resorts Lanai to Resume Full Management of Sensei Lanai, a Four Seasons Resort",
+      "url": "https://www.hospitalitynet.org/news/4135331/four-seasons-resorts-lanai-to-resume-full-management-of-sensei-lanai-a-four-seasons-resort",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "03ba445941f6bf2692",
       "title": "Mapping the Reality of Regenerative Tourism and Hospitality in 2026",
       "url": "https://www.hospitalitynet.org/opinion/4135330/mapping-the-reality-of-regenerative-tourism-and-hospitality-in-2026",
@@ -4231,107 +4332,6 @@
       "id": "27388ac61d1a710078",
       "title": "Hotel Ratings Are Rising, but Guests Are Becoming Less Positive, Shiji’s Q3 2026 Global Benchmark Finds",
       "url": "https://www.hospitalitynet.org/news/4135316/hotel-ratings-are-rising-but-guests-are-becoming-less-positive-shijis-q3-2026-global-benchmark-finds",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a3e566001dc7acbec0",
-      "title": "Domes Resorts announces three new hotel openings for 2027 after becoming the major shareholder in Casa Collective",
-      "url": "https://www.hospitalitynet.org/news/4135315/domes-resorts-announces-three-new-hotel-openings-for-2027-after-becoming-the-major-shareholder-in-casa-collective",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hotel",
-              "opening"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "d1a428eaaedb584b28",
-      "title": "DarkLight Collection chooses Mews to power a new generation of dark-sky hospitality",
-      "url": "https://www.hospitalitynet.org/news/4135314/darklight-collection-chooses-mews-to-power-a-new-generation-of-dark-sky-hospitality",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5bedf9dab6bdf6416b",
-      "title": "When the Owner Leaves: Buying a Family-Run Hotel in Latin America",
-      "url": "https://www.hospitalitynet.org/opinion/4135313/when-the-owner-leaves-buying-a-family-run-hotel-in-latin-america",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "2ecdb7ed9b0ba7458f",
-      "title": "Sexual Harassment in Today’s Hotel Business: The Laws Changed, But Has the Culture?",
-      "url": "https://www.hospitalitynet.org/opinion/4135311/sexual-harassment-in-todays-hotel-business-the-laws-changed-but-has-the-culture",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0adbf18f06a1980daa",
-      "title": "Goodbye, Gatekeeping: How Millennials and Gen Z are Killing Stiff Luxury",
-      "url": "https://www.hospitalitynet.org/opinion/4135278/goodbye-gatekeeping-how-millennials-and-gen-z-are-killing-stiff-luxury",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",

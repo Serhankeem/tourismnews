@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T18:24:43+09:00",
+  "generated_at": "2026-11-09T20:10:32+09:00",
   "mode": "live_rss",
   "decisions": [
     {
@@ -8,7 +8,7 @@
       "tier": "korea_direct",
       "category": "관광정책",
       "new_category": true,
-      "age_hours": 20.44,
+      "age_hours": 22.21,
       "published_at": "2026-11-08T21:58:09+09:00",
       "basis": [
         "authorized_newsroom",
@@ -16,6 +16,12 @@
         "korea_priority_then_category_diversity",
         "conservative_title_similarity"
       ]
+    },
+    {
+      "article_id": "7eb907c8c540d9cf67",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-09T19:43:50+09:00"
     },
     {
       "article_id": "f8acf151f08e0d8f59",
