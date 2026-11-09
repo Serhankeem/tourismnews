@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-09T14:19:56+09:00",
+  "checked_at": "2026-11-09T15:19:33+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -174,6 +174,42 @@
       "title": "한-아세안, ‘문화 지식재산’으로 지속 가능한 문화협력 모색",
       "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22827",
       "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "0cf1791e7f6b9fe23d",
+      "title": "스탬프로 '야금야금' 즐긴 서울 문화의 밤! 점자명함 만들고 부채춤 보고",
+      "url": "https://mediahub.seoul.go.kr/archives/2019968",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "8cefd3f812277c87ed",
+      "title": "300만 가입한 '손목닥터' 축하하며! '걷다보니 운동회' 다녀왔어요",
+      "url": "https://mediahub.seoul.go.kr/archives/2019961",
+      "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -505,42 +541,6 @@
       "id": "354bfae6c9cdb1baf4",
       "title": "11월 15일까지 고궁 무료 개방! 단풍 절정 즐기는 나들이 코스 추천",
       "url": "https://mediahub.seoul.go.kr/archives/2019908",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "c141e6f460f060d0f1",
-      "title": "예술과 쉼이 있는 로컬 여행을 원한다면? 한남동 웰니스 산책",
-      "url": "https://mediahub.seoul.go.kr/archives/2019899",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9a32476cdddeaffb33",
-      "title": "300만 넘은 '손목닥터'...운동회 개최, 체중관리 기능도",
-      "url": "https://mediahub.seoul.go.kr/archives/2019913",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
