@@ -41,12 +41,23 @@ def million_usd(value):
 
 def parse_rows(rows, kind, now):
     """Strict TOURGO year/month XLS layout; blank cells remain missing."""
-    if kind not in KINDS or not rows or rows[0] != ['연도', '계'] + [f'{m}월' for m in range(1, 13)]:
+    if kind not in KINDS or not rows:
+        raise ValueError('balance_export_header_mismatch')
+
+    def canonical(raw):
+        # TOURGO's 2026-11 XLS export declares an additional formatting-only
+        # column in BIFF. Discard it ONLY when all trailing cells are empty.
+        if len(raw) < 14:
+            raise ValueError('balance_export_shape_mismatch')
+        if any(cell not in ('', None) for cell in raw[14:]):
+            raise ValueError('balance_export_unexpected_trailing_data')
+        return raw[:14]
+
+    if canonical(rows[0]) != ['연도', '계'] + [f'{m}월' for m in range(1, 13)]:
         raise ValueError('balance_export_header_mismatch')
     values = {}
-    for row in rows[1:]:
-        if len(row) != 14:
-            raise ValueError('balance_export_shape_mismatch')
+    for original in rows[1:]:
+        row = canonical(original)
         match = re.fullmatch(r'(20\d{2})년\(1,000 US\$\)', str(row[0]))
         if not match:
             raise ValueError('balance_export_unit_or_year_mismatch')
