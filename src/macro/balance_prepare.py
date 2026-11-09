@@ -17,14 +17,23 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for kind in KINDS:
         parser.add_argument('--'+kind, type=Path, required=True)
-    parser.add_argument('--private-dir', type=Path, required=True,\n                        help='Absolute or relative path outside this repository; output only for imports')\n    parser.add_argument('--verify-only', action='store_true',\n                        help='Read and validate official XLS files without writing any ledger')
+    parser.add_argument('--private-dir', type=Path, required=True,
+                        help='Absolute or relative path outside this repository; output only for imports')
+    parser.add_argument('--verify-only', action='store_true',
+                        help='Read and validate official XLS files without writing any ledger')
     args = parser.parse_args()
     directory = args.private_dir.resolve()
     if directory == ROOT or ROOT in directory.parents:
         parser.error('private-dir must be outside the repository (never site/data or collector_state)')
     now = dt.datetime.now(dt.timezone.utc)
     files = {k:getattr(args,k) for k in KINDS}
-    if len({p.resolve() for p in files.values()}) != len(KINDS):\n        parser.error('three distinct official export files are required')\n    values = {k:read_xls(p,k,now) for k,p in files.items()}\n    latest = validate_bundle(values)\n    if args.verify_only:\n        print(f'Validation PASS: {len(values["receipts"])} matching months, latest {latest}, identity OK. No files written.')\n        return
+    if len({p.resolve() for p in files.values()}) != len(KINDS):
+        parser.error('three distinct official export files are required')
+    values = {k:read_xls(p,k,now) for k,p in files.items()}
+    latest = validate_bundle(values)
+    if args.verify_only:
+        print(f'Validation PASS: {len(values["receipts"])} matching months, latest {latest}, identity OK. No files written.')
+        return
     provenance = dict(data_origin='official_export',unit=UNIT,finality='not_stated',
                       source_url='https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do',
                       collection_method='operator_supplied_official_excel_export',
