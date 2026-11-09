@@ -32,9 +32,9 @@ class BalanceTests(unittest.TestCase):
                   '--expenditure',str(Path(root)/'out.xls'),
                   '--balance',str(Path(root)/'net.xls'),
                   '--private-dir',str(target), '--verify-only']
-            with patch.object(sys,'argv',argv), \\
-                 patch.object(balance_prepare,'read_xls',side_effect=lambda path,kind,now:bundle()[kind]), \\
-                 patch.object(balance_prepare,'write_atomic') as write:
+            with (patch.object(sys,'argv',argv),
+                  patch.object(balance_prepare,'read_xls',side_effect=lambda path,kind,now:bundle()[kind]),
+                  patch.object(balance_prepare,'write_atomic') as write):
                 balance_prepare.main()
                 write.assert_not_called()
                 self.assertFalse(target.exists())
