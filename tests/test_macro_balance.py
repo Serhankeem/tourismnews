@@ -55,6 +55,31 @@ class BalanceTests(unittest.TestCase):
         self.assertEqual(parse_rows([header,row],'receipts',NOW),{'2026-01':10,'2026-02':20})
         for bad in [row[:1]+[31]+row[2:],['2026년(US$)']+row[1:]]:
             with self.assertRaises(ValueError):parse_rows([header,bad],'receipts',NOW)
+    def test_official_xls_trailing_format_column(self):
+        header=['연도','계']+[f'{m}월' for m in range(1,13)]
+        row=['2026년(1,000 US$)',30,10,20]+['']*10
+        self.assertEqual(parse_rows([header+[''],row+['']],'receipts',NOW),
+                         {'2026-01':10,'2026-02':20})
+        self.assertEqual(parse_rows([header+['',None],row+['',None]],'receipts',NOW),
+                         {'2026-01':10,'2026-02':20})
+        for bad in (
+            [header+['기타'], row+['']],
+            [header+[''], row+[1]],
+            [header+[''], row+['0']],
+            [header+[''], row+[' ']],
+            [header[:-1], row+['']],
+            [header+[''], row[:-1]],
+        ):
+            with self.subTest(bad=bad[0][-1] if bad[0] else ''):
+                with self.assertRaises(ValueError):
+                    parse_rows(bad,'receipts',NOW)
+
+    def test_official_xls_trailing_format_balance_negative(self):
+        header=['연도','계']+[f'{m}월' for m in range(1,13)]
+        row=['2026년(1,000 US$)',-5,-10,5]+['']*10
+        self.assertEqual(parse_rows([header+[''],row+['']],'balance',NOW),
+                         {'2026-01':-10,'2026-02':5})
+
     def test_invalid_amounts(self):
         for v in [-1,'NaN','Infinity',1.2,True]:
             with self.assertRaises(ValueError):amount(v)
