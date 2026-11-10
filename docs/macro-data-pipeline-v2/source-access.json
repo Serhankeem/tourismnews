@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
+    "status": 200,
+    "final_url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 53941
+  },
+  {
+    "url": "https://know.tour.go.kr/robots.txt",
+    "status": 200,
+    "final_url": "https://know.tour.go.kr/robots.txt",
+    "content_type": "text/plain; charset=UTF-8",
+    "bytes": 49
+  },
+  {
+    "url": "https://www.data.go.kr/en/data/15111606/openapi.do",
+    "error": "HTTPError",
+    "status": 503
+  },
+  {
+    "url": "https://openapi.tour.go.kr/openapi/service/EdrcntTourismBalnaceService/getTourismBalcList?YM=202609",
+    "error": "HTTPError",
+    "status": 503
+  }
+]

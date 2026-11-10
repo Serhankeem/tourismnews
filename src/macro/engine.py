@@ -22,7 +22,7 @@ def public_view(config,archive,now,operating_policy=None):
     series=[]
     tourgo_source=next((s for s in config['sources'] if s['id']==tourgo.SOURCE),{})
     policy=read(ROOT/'operating_policy.json',{}) if operating_policy is None else operating_policy
-    tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date()) if tourgo.noncommercial(policy) else {}
+    tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date()) if tourgo.terms_confirmed(tourgo_source,policy,now.date()) else {}
     for item in config['indicators']:
         source=next((s for s in config['sources'] if s['id']==item['source_id']), {})
         if (not item.get('enabled') or not source.get('enabled')

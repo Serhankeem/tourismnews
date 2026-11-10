@@ -2,8 +2,13 @@ name: TOURGO initial publication (manual)
 on:
   workflow_dispatch:
     inputs:
+      profile:
+        description: Initial bootstrap or explicitly reviewed correction (existing approvals reused)
+        type: choice
+        options: [initial, update]
+        default: initial
       confirm_reviewed_initial_publication:
-        description: Request protected initial publication AFTER separate activation approval and fresh staging review
+        description: Request protected bootstrap or reviewed correction AFTER separate activation approval and fresh staging review
         type: boolean
         required: true
         default: false
@@ -31,4 +36,5 @@ jobs:
     with:
       engine: macro
       tourgo_release: true
+      tourgo_profile: ${{ inputs.profile }}
     secrets: inherit

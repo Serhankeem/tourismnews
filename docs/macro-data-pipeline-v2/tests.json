@@ -1,0 +1,22 @@
+{
+  "python": 558,
+  "status": "passed",
+  "new_v2_tests": 15,
+  "browser_suites": 23,
+  "browser_status": "passed",
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "new_month_financial_records": 2,
+  "synthetic_initial_months": 69,
+  "synthetic_initial_financial_records": 138,
+  "preserved_kto_records": 483,
+  "real_69_month_original_revalidation": false,
+  "publication_approved": false,
+  "operating_sources_changed": false,
+  "data_live_changed": false,
+  "pages_deployed": false
+}
