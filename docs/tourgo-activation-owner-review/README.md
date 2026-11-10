@@ -15,7 +15,7 @@
 | Approval dates | Proposed **90-day internal review cycle** from the owner's eventual approval date; a finite `valid_until` is mandatory. This is NOT an institutional license expiration date | **TBD, not approved** |
 | Operator conditions | Noncommercial, free, no advertisements, source attribution; if these conditions change, stop using the applicable TOURGO publication gate | Confirm again before activation |
 | Source choice | `tourgo_tourism_balance` with existing `kto_tourism_receipts`/`kto_tourism_expenditure` IDs. Do not enable either ECOS source | Planned, NOT switched in production |
-| Actual publication | Only after private environment setup, fresh official XLS staging, a separate activation configuration PR, explicit owner approval and protected human review | **NOT AUTHORIZED** |
+| Actual publication | Only after private environment setup, fresh official XLS staging, a separate activation configuration PR, explicit owner approval and a verified 10-minute solo-owner Environment wait rule | **NOT AUTHORIZED** |
 
 **Institutional terms are not an operator approval.** Keep an email/PDF copy of the 2026-11-09 response in the owner's private records. Public source control should store a **non-sensitive reference ID**, never sender names, email addresses, tokens, credentials or raw confidential correspondence.
 
@@ -49,7 +49,7 @@ Prior independent staging with PR #39 read actual 3 official files at the pinned
 
 ## 4. Handoff and production hard stops
 
-The site owner handles GitHub protected environment/reviewer/secrets setup and the final workflow execution. See [PROTECTION-RUNBOOK.md](PROTECTION-RUNBOOK.md).
+The site owner handles the GitHub **solo-owner** protection (10-minute timer, no required reviewers, admin bypass off, main-only branch), private input secrets and final execution. A wait timer is not a substitute for independent review. See [PROTECTION-RUNBOOK.md](PROTECTION-RUNBOOK.md).
 
 The following remain **OFF** in this review PR:
 - `tourgo_tourism_balance.enabled=false`;
