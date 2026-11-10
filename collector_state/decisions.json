@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-10T16:37:06+09:00",
+  "checked_at": "2026-11-10T17:07:51+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -193,6 +193,24 @@
       "id": "bfbc4513ec3576d9bb",
       "title": "별 헤는 밤, '서울별빛명소'로 거듭날 10곳…미리 다녀온 정동길·성북천",
       "url": "https://mediahub.seoul.go.kr/archives/2019965",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "19442e0f481650ee38",
+      "title": "단풍과 야경이 만나니 더 환상적! 남산 나이트 페스티벌 참여기",
+      "url": "https://mediahub.seoul.go.kr/archives/2019992",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -538,20 +556,22 @@
       "decision": "exclude"
     },
     {
-      "id": "cce717ada002fba2aa",
-      "title": "짐은 가볍게, 여행은 알차게! 서울역에서 시작하는 반나절 도보 코스",
-      "url": "https://mediahub.seoul.go.kr/archives/2019898",
-      "source_id": "seoul_culture",
+      "id": "989dd2ac5c26b092c9",
+      "title": "여보게~ 셰프의 주막 열린다오! 남대문시장 미식축제",
+      "url": "https://mediahub.seoul.go.kr/archives/2019996",
+      "source_id": "seoul_economy",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
         "decision": "exclude",
         "category": null,
         "score": 0,
-        "rules": [],
+        "rules": [
+          "cross_sentence_unproven"
+        ],
         "signals": [],
         "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
       },
       "decision": "exclude"
     },
@@ -900,10 +920,10 @@
       "decision": "exclude"
     },
     {
-      "id": "307f3efba4c957aa03",
-      "title": "AI와 한 집에 사는 시대, '스마트라이프위크'에서 서울의 미래를 만나다",
-      "url": "https://mediahub.seoul.go.kr/archives/2019595",
-      "source_id": "seoul_economy",
+      "id": "bcb941d6c567f98aed",
+      "title": "그 많던 공유 전동킥보드는 어디 갔을까? 공유 모빌리티의 미래",
+      "url": "https://mediahub.seoul.go.kr/archives/2019990",
+      "source_id": "seoul_transport",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -918,9 +938,9 @@
       "decision": "exclude"
     },
     {
-      "id": "bcb941d6c567f98aed",
-      "title": "그 많던 공유 전동킥보드는 어디 갔을까? 공유 모빌리티의 미래",
-      "url": "https://mediahub.seoul.go.kr/archives/2019990",
+      "id": "af65329ae63eb32a34",
+      "title": "서울역에 내렸다면 짐부터 맡기자! 두 손 가볍게 즐기는 스마트 서울 여행",
+      "url": "https://mediahub.seoul.go.kr/archives/2019938",
       "source_id": "seoul_transport",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -1247,24 +1267,6 @@
       "id": "2757078fe4fad47283",
       "title": "구룡마을입구~개포3·4단지 잇는 '대모지하차도' 12일 임시 개통",
       "url": "https://mediahub.seoul.go.kr/archives/2019342",
-      "source_id": "seoul_transport",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "a1456299da049f5b6a",
-      "title": "기후동행카드, '기후동행패스'로 바꾸셨나요? 지하철역 12곳서 무료 교체",
-      "url": "https://mediahub.seoul.go.kr/archives/2019275",
       "source_id": "seoul_transport",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -3879,6 +3881,24 @@
       "decision": "exclude"
     },
     {
+      "id": "8b45a464c2bffefb25",
+      "title": "84% and 15%: Hotels Are Handing AI to Everyone Except the People Who Touch the Guest",
+      "url": "https://www.hospitalitynet.org/opinion/4135356/84-and-15-hotels-are-handing-ai-to-everyone-except-the-people-who-touch-the-guest",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "e105ae998db2f70099",
       "title": "What Hotel Projects Get Wrong When Sourcing FF&E from Foshan — and How to Fix It Before Production Starts",
       "url": "https://www.hospitalitynet.org/opinion/4135370/what-hotel-projects-get-wrong-when-sourcing-ff-e-from-foshan-and-how-to-fix-it-before-production-starts",
@@ -4252,24 +4272,6 @@
       "id": "3132090b6965080c07",
       "title": "Europeans Seek City Breaks and Culture & Heritage Trips, as Three in Four Plan to Travel this Autumn and Winter",
       "url": "https://www.hospitalitynet.org/news/4135337/europeans-seek-city-breaks-and-culture-heritage-trips-as-three-in-four-plan-to-travel-this-autumn-and-winter",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "82fda1c197a674ed09",
-      "title": "Accor Group & Hard Rock International Sign Global Strategic Partnership",
-      "url": "https://www.hospitalitynet.org/news/4135336/accor-group-hard-rock-international-sign-global-strategic-partnership",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
