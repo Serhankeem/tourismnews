@@ -79,10 +79,10 @@
     },
     {
       "id": "tourgo_tourism_balance",
-      "name": "TOURGO 일반여행 관광수지 (승인 대기)",
+      "name": "TOURGO 일반여행 관광수지 (운영 승인 대기)",
       "enabled": false,
       "requires_approval": true,
-      "method": "official_export_preparation_only",
+      "method": "official_tourgo_xls",
       "url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
       "start_period": "2021-01",
       "approval": {
@@ -101,7 +101,13 @@
           "valid_until": null
         }
       },
-      "reason": "외부 수치 게시·예약 다운로드 허용 범위 확인 전 비활성; 로컬 검증 모듈만 준비"
+      "reason": "비상업적 수치 게시·가공·정기 수집 이용조건 확인; 이번 통합은 수동 XLS 준비 단계, 운영 수집·게시 승인 비활성",
+      "rights_evidence": {
+        "status": "terms_confirmed_not_activated",
+        "confirmed_on": "2026-11-09",
+        "reference": "docs/tourgo-macro-integration-v1/README.md",
+        "scope": "비상업적 이용 및 TOURGO 출처표시; ECOS API와 별개"
+      }
     }
   ],
   "indicators": [

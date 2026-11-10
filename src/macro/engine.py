@@ -5,7 +5,7 @@ import datetime as dt
 import json
 import os
 from pathlib import Path
-from . import kto, ecos
+from . import kto, ecos, tourgo
 from .balance import permitted
 from .model import comparisons, months, month_before, valid_period
 from .transport import Loader
@@ -20,15 +20,22 @@ def read(path,default=None):
 
 def public_view(config,archive,now):
     series=[]
+    tourgo_source=next((s for s in config['sources'] if s['id']==tourgo.SOURCE),{})
+    tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date())
     for item in config['indicators']:
         source=next((s for s in config['sources'] if s['id']==item['source_id']), {})
         if (not item.get('enabled') or not source.get('enabled')
                 or (source.get('requires_approval') and not permitted(source, 'publication', now.date()))
+                or (source.get('id') == tourgo.SOURCE and not tourgo.permitted(source,'publication',now.date()))
                 or (source.get('method') == 'official_ecos_api' and not ecos.publishable(source))):
             saved={}
         else:
             saved=archive['indicators'].get(item['id'],{})
             if source.get('method')=='official_ecos_api':saved=ecos.public_records(source,item,saved)
+            if source.get('id')==tourgo.SOURCE:
+                saved=tourgo_pair.get(item['id'],{})
+                if (saved.get('unit')!=item.get('unit') or saved.get('definition')!=item.get('definition')
+                        or item.get('value_kind')!='money_nonnegative' or item.get('frequency')!='M'):saved={}
         obs=saved.get('observations',{});ordered=[dict(period=p,**o) for p,o in sorted(obs.items())]
         row={k:v for k,v in item.items() if k not in ('sheet','row_label')}
         if item.get('value_kind')=='money_nonnegative' and item.get('unit')=='US$':row.update(display_unit='백만 US$',display_divisor=1000000)
@@ -36,13 +43,16 @@ def public_view(config,archive,now):
         if ordered:
             latest=ordered[-1];row['latest']=dict(latest,comparisons=comparisons(obs,latest['period'],exact=item.get('value_kind')=='money_nonnegative'))
             row['source_url']=latest['source_url']
-            if source.get('method')=='official_ecos_api':row['publisher']=latest['publisher']
+            if source.get('method')=='official_ecos_api' or source.get('id')==tourgo.SOURCE:row['publisher']=latest['publisher']
             row['missing_periods']=[p for p in months(ordered[0]['period'],ordered[-1]['period']) if p not in obs]
             row['first_period']=ordered[0]['period'];row['latest_period']=latest['period'];row['months']=len(ordered)
         series.append(row)
-    return dict(schema_version=1,mode='verified_official_statistics',generated_at=now.isoformat(),indicators=series)
+    result=dict(schema_version=1,mode='verified_official_statistics',generated_at=now.isoformat(),indicators=series)
+    if all(any(i['id']==key and i['source_id']==tourgo.SOURCE and i['connected'] for i in series) for key in tourgo.IDS):
+        result['tourism_balance']=tourgo.balance_view(tourgo_pair)
+    return result
 
-def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_client=None):
+def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_client=None,tourgo_ledger=None,only_sources=None):
     now=(now or dt.datetime.now(KST)).astimezone(KST);loader=loader or Loader()
     data_dir,state_dir=Path(data_dir),Path(state_dir);data_dir.mkdir(parents=True,exist_ok=True);state_dir.mkdir(parents=True,exist_ok=True)
     archive_path=state_dir/'macro_archive.json';public_path=data_dir/'macro.json'
@@ -62,8 +72,13 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         health['error']='archive_invalid_or_missing_existing_data_preserved';write_atomic(data_dir/'macro_health.json',health);return health
     success=0;attempts=0;skipped=0
     for source in config['sources']:
+        if only_sources is not None and source['id'] not in only_sources:continue
         sid=source['id'];previous=archive['sources'].get(sid,{})
         result=dict(id=sid,name=source['name'],status='not_connected',reason=source.get('reason'),last_successful_check=previous.get('last_successful_check'))
+        if sid==tourgo.SOURCE:
+            result['collection_state']='manual_input_required' if tourgo.permitted(source,'collection',now.date()) else 'approval_required'
+            if not tourgo.permitted(source,'collection',now.date()):
+                result.update(reason='collection_approval_required');health['sources'].append(result);continue
         if source.get('requires_approval') and not permitted(source, 'collection', now.date()):
             result.update(status='not_connected', reason='collection_approval_required')
             health['sources'].append(result);continue
@@ -82,10 +97,19 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         attempts+=1
         active=[i for i in config['indicators'] if i.get('enabled') and i['source_id']==sid]
         try:
-            if source.get('requires_approval'):
+            is_tourgo=sid==tourgo.SOURCE
+            if source.get('requires_approval') and not is_tourgo:
                 raise ValueError('approved_source_transport_not_activated')
             is_ecos=source.get('method')=='official_ecos_api'
-            if is_ecos:
+            if is_tourgo or is_ecos:
+                expected=tourgo.COLLECTION if is_tourgo else 'official_ecos_api'
+                if any(o.get('collection_method')!=expected for i in active for o in archive['indicators'].get(i['id'],{}).get('observations',{}).values()):
+                    raise ValueError('financial_source_change_requires_review')
+            if is_tourgo:
+                snapshot=tourgo.fetch(source,active,tourgo_ledger,now)
+                if any(archive['indicators'].get(i['id'],{}).get('observations') for i in active) and not tourgo.public_pair(source,archive,now.date()):
+                    raise ValueError('tourgo_existing_archive_validation_failed')
+            elif is_ecos:
                 # Two independent gates: enabling a source must not bypass the
                 # mapping, rights or KTO comparison review.
                 if not ecos.publishable(source):
@@ -106,7 +130,7 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                 snapshot=kto.fetch(source,active,loader,now)
             else:
                 raise ValueError('unsupported_macro_source_method')
-            if snapshot['reference_period']<previous.get('reference_period','') or (not is_ecos and snapshot['release_published_at']<previous.get('release_published_at','')):
+            if snapshot['reference_period']<previous.get('reference_period','') or (not is_ecos and not is_tourgo and snapshot['release_published_at']<previous.get('release_published_at','')):
                 raise ValueError('older_official_snapshot_rejected')
             staged=copy.deepcopy(archive);counts=dict(new_observations=0,unchanged_observations=0,value_corrections=0,status_changes=0)
             for item in active:
@@ -120,13 +144,18 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                     old=saved['observations'].get(period)
                     finality=snapshot.get('finality','not_stated')
                     if finality not in ('not_stated','provisional','final'):raise ValueError('unverified_finality_status')
-                    if is_ecos:
+                    if is_tourgo:
+                        record=copy.deepcopy(snapshot['records'][key][period])
+                        record.update(first_collected_at=old['first_collected_at'] if old else record['first_collected_at'],
+                                      revision_status=old.get('revision_status','original') if old else 'original')
+                        finality=record['finality']
+                    elif is_ecos:
                         detail=snapshot['records'][key][period]
                         record=dict(**detail,unit=item['unit'],frequency=item['frequency'],publisher='한국은행 ECOS',source_url=snapshot['source_url'],release_published_at=None,original_publication_at=None,last_collected_at=now.isoformat(),first_collected_at=old['first_collected_at'] if old else now.isoformat(),revision_status=old.get('revision_status','original') if old else 'original',collection_method=snapshot['method'],response_sha256=snapshot['response_sha256'],rights=snapshot['rights'])
                     else:
                         record=dict(value=value,unit=item['unit'],frequency=item['frequency'],publisher=item['publisher'],source_url=snapshot['source_url'],release_published_at=snapshot['release_published_at'],original_publication_at=None,last_collected_at=now.isoformat(),first_collected_at=old['first_collected_at'] if old else now.isoformat(),finality=finality,revision_status=old.get('revision_status','original') if old else 'original',verification_status='official_file_validated',latest_crosscheck_period=snapshot['reference_period'],collection_method=snapshot['method'],file_url=snapshot['file_url'],file_sha256=snapshot['file_sha256'],sheet=snapshot['locations'][key]['sheet'],cell=snapshot['locations'][key]['cells'][period],rights=snapshot['rights'])
                     if old is None:counts['new_observations']+=1
-                    elif old['value']!=value or old['finality']!=finality:
+                    elif old['value']!=value or old['finality']!=finality or (is_tourgo and any(old.get(k)!=record[k] for k in ('official_balance_value','official_balance_finality'))):
                         value_changed=old['value']!=value
                         counts['value_corrections' if value_changed else 'status_changes']+=1
                         if value_changed:record['revision_status']='revised'
@@ -152,6 +181,8 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                 gaps={k:v for k,v in snapshot['missing_periods'].items() if v}
                 result.update(collection_state='new_data' if counts['new_observations'] or counts['value_corrections'] or counts['status_changes'] else 'no_new_data', missing_periods=gaps)
                 if gaps:result.update(status='partial',collection_state='partial_missing',reason='일부 월 미수신; 누락은 0으로 채우지 않고 이전 검증값 보존')
+            if is_tourgo:
+                result.update(collection_state='manual_import_validated',automatic_download=False)
             if retained:result.update(status='partial',reason='일부 과거 월이 최신 파일에서 누락되어 이전 검증값 보존',retained_missing_observations=retained)
         except Exception as exc:
             # Never serialize raw request/response text or credential-bearing URLs.
@@ -160,6 +191,8 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
             if source.get('method')=='official_ecos_api':
                 result['collection_state']='authentication_required' if reason in ('ecos_auth_required','ecos_auth_invalid') else 'mapping_pending' if reason=='ecos_mapping_pending' else 'no_data' if reason=='ecos_no_data' else 'failed_retained'
                 result['previous_data_preserved']=bool(any(archive['indicators'].get(i['id'],{}).get('observations') for i in active))
+            if sid==tourgo.SOURCE:
+                result.update(collection_state='failed_retained',previous_data_preserved=bool(any(archive['indicators'].get(i['id'],{}).get('observations') for i in active)))
         health['sources'].append(result)
     health['status']=('partial' if any(s['status'] in ('error','partial') for s in health['sources']) else 'ok') if success else 'not_due' if skipped and not attempts else 'failed'
     health['successful_sources']=success;health['attempted_sources']=attempts;health['pending_sources']=sum(not s.get('enabled') for s in config['sources'])

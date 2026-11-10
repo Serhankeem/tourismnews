@@ -1,0 +1,22 @@
+{
+  "mode": "isolated_offline_preview_not_for_deployment",
+  "data_origin": "official_export",
+  "latest_period": "2026-08",
+  "months": 68,
+  "production_approvals_changed": false,
+  "network_calls": false,
+  "status": "ok",
+  "raw_xls_count": 3,
+  "hashes_matched": 3,
+  "identity_months": 68,
+  "xlrd_version": "2.0.2",
+  "pr36_exact_originals_available": false,
+  "pr36_69_months_verified": false,
+  "manual_xls_cli": "passed",
+  "private_ledger_cli": "passed",
+  "public_amounts_reported": false,
+  "official_page_http": 200,
+  "official_page_definition": "관광수지의 원자료는 한국은행 일반여행수지",
+  "official_page_unit": "1,000 US$",
+  "finality": "not_stated_in_xls; page-specific provisional notice not extrapolated to other months"
+}
