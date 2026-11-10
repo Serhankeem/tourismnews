@@ -1,21 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-10T13:01:55.511741+09:00",
-  "status": "ok",
+  "checked_at": "2026-11-10T13:19:15.981281+09:00",
+  "status": "not_due",
   "sources": [
     {
       "id": "kto_monthly_statistics",
       "name": "한국관광공사 한국관광통계",
-      "status": "ok",
+      "status": "not_due",
       "reason": null,
       "last_successful_check": "2026-11-10T13:01:55.511741+09:00",
-      "reference_period": "2026-09",
-      "release_published_at": "2026-10-28T10:10:00+09:00",
-      "observations": 483,
-      "new_observations": 0,
-      "unchanged_observations": 483,
-      "value_corrections": 0,
-      "status_changes": 0
+      "reference_period": "2026-09"
     },
     {
       "id": "ecos_general_travel",
@@ -51,18 +45,19 @@
     },
     {
       "id": "tourgo_tourism_balance",
-      "name": "TOURGO 일반여행 관광수지 (승인 대기)",
+      "name": "TOURGO 일반여행 관광수지 (운영 승인 대기)",
       "status": "not_connected",
       "reason": "collection_approval_required",
-      "last_successful_check": null
+      "last_successful_check": null,
+      "collection_state": "approval_required"
     }
   ],
   "new_observations": 0,
-  "unchanged_observations": 483,
+  "unchanged_observations": 0,
   "value_corrections": 0,
   "status_changes": 0,
-  "successful_sources": 1,
-  "attempted_sources": 1,
+  "successful_sources": 0,
+  "attempted_sources": 0,
   "pending_sources": 5,
   "connected_indicators": 7,
   "connected_primary_indicators": 2,
