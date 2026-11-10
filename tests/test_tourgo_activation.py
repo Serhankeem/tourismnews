@@ -22,13 +22,13 @@ def approval():
 
 def environment():
     return dict(GITHUB_ACTIONS='true',GITHUB_EVENT_NAME='workflow_dispatch',GITHUB_REF='refs/heads/main',
-        GITHUB_REPOSITORY='Serhankeem/tourismnews',GITHUB_WORKFLOW='TOURGO initial publication (manual)',GITHUB_ACTOR_ID='123',TOURGO_ALLOWED_ACTOR_IDS='123,456')
+        GITHUB_REPOSITORY='Serhankeem/tourismnews',GITHUB_WORKFLOW='TOURGO initial publication (manual)',GITHUB_ACTOR_ID='123',TOURGO_ALLOWED_ACTOR_IDS='123')
 
 
 class FakeAPI:
     def __init__(self):
         self.calls=[]
-        self.rules=dict(can_admins_bypass=False,protection_rules=[dict(type='required_reviewers',prevent_self_review=True,reviewers=[{'type':'User','reviewer':{'id':456}}])],deployment_branch_policy=dict(custom_branch_policies=True))
+        self.rules=dict(can_admins_bypass=False,protection_rules=[dict(type='wait_timer',wait_timer=10)],deployment_branch_policy=dict(custom_branch_policies=True))
         self.branches=dict(total_count=1,branch_policies=[dict(name='main',type='branch')])
         self.raw={name:b'SYNTHETIC PRIVATE INPUT '+name.encode() for name in delivery.NAMES}
         self.raw['receipt.json']=json.dumps(dict(profile='initial')).encode()
@@ -83,10 +83,16 @@ class ProtectedDeliveryTests(unittest.TestCase):
         for key,bad in [('GITHUB_EVENT_NAME','push'),('GITHUB_REF','refs/heads/feature'),('GITHUB_ACTOR_ID','999'),('GITHUB_WORKFLOW','Other workflow')]:
             env=environment();env[key]=bad
             with self.subTest(key=key),self.assertRaises(delivery.DeliveryError):delivery.protected_context(api,env)
-        for mode in ('no_review','self_review','bypass','branch','tag'):
+        not_solo=environment()
+        not_solo['TOURGO_ALLOWED_ACTOR_IDS']='123,456'
+        with self.assertRaisesRegex(delivery.DeliveryError,'authorized_admin_actor_required'):
+            delivery.protected_context(api,not_solo)
+        for mode in ('no_wait','short_wait','wait_string','required_reviewer','bypass','branch','tag'):
             api=FakeAPI()
-            if mode=='no_review':api.rules['protection_rules']=[]
-            if mode=='self_review':api.rules['protection_rules'][0]['prevent_self_review']=False
+            if mode=='no_wait':api.rules['protection_rules']=[]
+            if mode=='short_wait':api.rules['protection_rules'][0]['wait_timer']=9
+            if mode=='wait_string':api.rules['protection_rules'][0]['wait_timer']='10'
+            if mode=='required_reviewer':api.rules['protection_rules'].append(dict(type='required_reviewers',reviewers=[{'type':'User','reviewer':{'id':456}}]))
             if mode=='bypass':api.rules['can_admins_bypass']=True
             if mode=='branch':api.branches['total_count']=2
             if mode=='tag':api.branches['branch_policies'][0]['type']='tag'

@@ -1,0 +1,20 @@
+{
+  "_draft_note": "INTENTIONALLY INVALID: do not use for production. Replace only after the owner explicitly approves TWO operations and reviews dates.",
+  "terms_evidence_ref": "PENDING_TERMS_REFERENCE",
+  "conditions": {
+    "noncommercial": true,
+    "free_access": true,
+    "no_ads": true,
+    "attribution": true
+  },
+  "collection": {
+    "evidence_ref": "PENDING_COLLECTION_APPROVAL",
+    "valid_from": "YYYY-MM-DD",
+    "valid_until": "YYYY-MM-DD"
+  },
+  "publication": {
+    "evidence_ref": "PENDING_PUBLICATION_APPROVAL",
+    "valid_from": "YYYY-MM-DD",
+    "valid_until": "YYYY-MM-DD"
+  }
+}
