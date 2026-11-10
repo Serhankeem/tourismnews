@@ -1,15 +1,21 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-09T15:23:02.063237+09:00",
-  "status": "not_due",
+  "checked_at": "2026-11-10T13:01:55.511741+09:00",
+  "status": "ok",
   "sources": [
     {
       "id": "kto_monthly_statistics",
       "name": "한국관광공사 한국관광통계",
-      "status": "not_due",
+      "status": "ok",
       "reason": null,
-      "last_successful_check": "2026-11-09T15:20:42.524590+09:00",
-      "reference_period": "2026-09"
+      "last_successful_check": "2026-11-10T13:01:55.511741+09:00",
+      "reference_period": "2026-09",
+      "release_published_at": "2026-10-28T10:10:00+09:00",
+      "observations": 483,
+      "new_observations": 0,
+      "unchanged_observations": 483,
+      "value_corrections": 0,
+      "status_changes": 0
     },
     {
       "id": "ecos_general_travel",
@@ -52,11 +58,11 @@
     }
   ],
   "new_observations": 0,
-  "unchanged_observations": 0,
+  "unchanged_observations": 483,
   "value_corrections": 0,
   "status_changes": 0,
-  "successful_sources": 0,
-  "attempted_sources": 0,
+  "successful_sources": 1,
+  "attempted_sources": 1,
   "pending_sources": 5,
   "connected_indicators": 7,
   "connected_primary_indicators": 2,
