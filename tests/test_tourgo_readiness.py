@@ -4,6 +4,8 @@ Known original hash labels exercise the trusted-admin ledger contract only.
 All inputs, approval changes, Git remotes and staging outputs are temporary.
 """
 import copy
+import contextlib
+import io
 import datetime as dt
 import json
 from pathlib import Path
@@ -222,10 +224,8 @@ class PublicationTests(PipelineHarness):
     def test_explicit_import_error_is_failed_even_with_successful_kto(self):
         request=self.prepare()
         with patch('src.macro.tourgo.fetch',side_effect=ValueError('synthetic_manual_import_invalid')):
-            result=self.run_manual(request)
-        self.assertTrue(result['ready']);self.assertFalse(result['collection_ok'])
-        self.assertEqual(result['engines']['macro']['status'],'failed')
-        self.assertEqual(result['counts']['macro_observations'],483)
+            with self.assertRaisesRegex(ValueError,'no_data_committed'):self.run_manual(request)
+        self.assertIsNone(Store(self.root/'failed-reader',str(self.remote),self.cfg).tip())
 
     def test_receipt_or_approval_revocation_blocks_all_remote_writes(self):
         request=self.prepare();cfg=read(self.code/'macro_sources.json');source=next(s for s in cfg['sources'] if s['id']==tourgo.SOURCE)
@@ -238,6 +238,52 @@ class PublicationTests(PipelineHarness):
 
     def test_projection_different_from_review_rolls_back_macro(self):
         request=self.prepare();doc=read(request.receipt_path);doc['financial_projection_sha256']='0'*64;request.receipt_path.write_text(json.dumps(doc));request.receipt_hash=release.digest_file(request.receipt_path)
-        result=self.run_manual(request)
-        self.assertFalse(result['collection_ok']);self.assertEqual(result['engines']['macro']['status'],'failed')
-        self.assertEqual(result['counts']['macro_observations'],483)
+        with self.assertRaisesRegex(ValueError,'no_data_committed'):self.run_manual(request)
+        self.assertIsNone(Store(self.root/'projection-reader',str(self.remote),self.cfg).tip())
+
+
+    def test_original_files_are_revalidated_and_cannot_disagree_with_ledger(self):
+        request=self.prepare();request.originals={k:self.root/(k+'.xls') for k in release.INITIAL_HASHES}
+        for path in request.originals.values():path.write_bytes(b'SYNTHETIC NOT AN OFFICIAL XLS')
+        with self.assertRaisesRegex(ValueError,'approval_invalid'):request.validate(self.code,self.code,NOW)
+        original=synthetic69()
+        def noisy_parser(*args):
+            print('SYNTHETIC-PRIVATE-WORKBOOK-DIAGNOSTIC')
+            return original
+        captured=io.StringIO()
+        with contextlib.redirect_stdout(captured),patch('src.macro.tourgo.from_files',side_effect=noisy_parser):
+            request.validate(self.code,self.code,NOW)
+        self.assertEqual(captured.getvalue(),'')
+        unknown=copy.deepcopy(original)
+        unknown['series']['receipts']['2026-09']['finality']='final'
+        unknown['series']['receipts']['2026-09']['provenance']['finality']='final'
+        with patch('src.macro.tourgo.from_files',return_value=unknown),self.assertRaises(ValueError):
+            request.validate(self.code,self.code,NOW)
+        altered=copy.deepcopy(original)
+        altered['series']['receipts']['2026-09']['value']+=1
+        altered['series']['balance']['2026-09']['value']+=1
+        with patch('src.macro.tourgo.from_files',return_value=altered),self.assertRaises(ValueError):
+            request.validate(self.code,self.code,NOW)
+
+    def test_changed_macro_baseline_blocks_reviewed_receipt_before_remote_writes(self):
+        self.run_pipeline();baseline=self.reader();request=self.prepare(baseline.path)
+        state=baseline.path/'collector_state/macro_archive.json';old=read(state)
+        old['updated_at']=(NOW-dt.timedelta(seconds=1)).isoformat();state.write_text(json.dumps(old))
+        before=baseline.tip()
+        with self.assertRaises(ValueError):request.validate(baseline.path,self.code,NOW)
+        self.assertEqual(self.reader().tip(),before)
+
+    def test_interruption_before_persist_leaves_previous_snapshot_unchanged(self):
+        self.run_pipeline();baseline=self.reader();request=self.prepare(baseline.path);tip=baseline.tip()
+        with patch('src.macro.tourgo.fetch',side_effect=KeyboardInterrupt),self.assertRaises(KeyboardInterrupt):self.run_manual(request)
+        self.assertEqual(self.reader().tip(),tip)
+
+    def test_assembly_failure_keeps_committed_validated_data_without_pages(self):
+        request=self.prepare()
+        with patch('src.pipeline.runner.compose',side_effect=RuntimeError('simulated output failure')):
+            with self.assertRaises(RuntimeError):self.run_manual(request)
+        stored=self.reader()
+        self.assertEqual(sum(len(i['observations']) for i in read(stored.path/'collector_state/macro_archive.json')['indicators'].values()),621)
+        self.assertFalse((self.root/'pages').exists())
+        # Git persistence and Pages deployment are distinct. Never delete a
+        # validated committed vintage to disguise an independent deploy failure.

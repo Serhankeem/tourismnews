@@ -4,6 +4,8 @@ No downloader, standalone push, approval-file edits or Preview promotion.
 Actual publication remains inside the existing main Actions transaction/lock.
 """
 import argparse
+import contextlib
+import io
 import datetime as dt
 import json
 from pathlib import Path
@@ -20,7 +22,8 @@ INITIAL_HASHES=dict(receipts='780465a3e72886e94643dd6da5f2fa03d3f5d0a991200ce293
     balance='c2a3bd7ba225db9117fcb5535c0f8957ff80f0440801c18080080a74a3f2f721')
 IMPLEMENTATION=('src/macro/tourgo_release.py','src/macro/tourgo.py','src/macro/engine.py',
     'src/macro/balance.py','src/macro/model.py','src/pipeline/runner.py','src/pipeline/store.py',
-    'src/pipeline/layout.py','src/pipeline/validation.py','src/pipeline/policy.py','site/macro.js','operating_policy.json')
+    'src/pipeline/layout.py','src/pipeline/validation.py','src/pipeline/policy.py','site/macro.js','operating_policy.json','src/macro/tourgo_activation.py',
+    'src/macro/tourgo_delivery.py','.github/workflows/pipeline.yml','.github/workflows/tourgo-publish.yml')
 
 
 def digest_file(path):return tourgo.digest(Path(path).read_bytes())
@@ -137,11 +140,31 @@ def stage(ledger, baseline, output, expected_hashes, profile, now, code=ROOT):
     return receipt
 
 
+def operating_configuration(config, policy, now):
+    """Actual dated approval, separate from the ephemeral staging candidate."""
+    source=next(s for s in config['sources'] if s['id']==tourgo.SOURCE)
+    if not source.get('enabled') or not all(tourgo.permitted(source,a,now.date()) for a in ('collection','publication')):
+        raise ValueError('production_approval_required')
+    if any(not source['approval'][a].get('valid_until') or str(source['approval'][a].get('evidence_ref','')).startswith(('staging-only','isolated-preview')) for a in ('collection','publication')):
+        raise ValueError('dated_operating_approval_required')
+    if not tourgo.noncommercial(policy):raise ValueError('noncommercial_policy_required')
+    if any(s.get('enabled') for s in config['sources'] if s['id'].startswith('ecos_')):
+        raise ValueError('ecos_must_remain_inactive')
+    expected=activation_candidate(config,now)
+    for key in tourgo.IDS:
+        actual=next(i for i in config['indicators'] if i['id']==key)
+        target=next(i for i in expected['indicators'] if i['id']==key)
+        if any(actual.get(k)!=target.get(k) for k in tourgo.PUBLIC_INDICATOR_FIELDS):
+            raise ValueError('production_mapping_requires_review')
+    return config
+
+
 class ReleaseRequest:
     """Used only by the existing main Actions transaction; never copies staging."""
-    def __init__(self, ledger_path, ledger_hash, receipt_path, receipt_hash):
+    def __init__(self, ledger_path, ledger_hash, receipt_path, receipt_hash, originals=None):
         self.ledger_path,self.ledger_hash=Path(ledger_path),ledger_hash
         self.receipt_path,self.receipt_hash=Path(receipt_path),receipt_hash
+        self.originals=originals
 
     def validate(self, baseline, code, now):
         code=Path(code).resolve()
@@ -159,21 +182,17 @@ class ReleaseRequest:
                     or receipt.get('baseline_macro_sha256')!=digest_file(Path(baseline)/'collector_state/macro_archive.json')):
                 raise ValueError('stale_or_wrong_receipt')
             ledger=tourgo.from_private_ledger(self.ledger_path,self.ledger_hash,now)
+            if self.originals is not None:
+                # XLS libraries may print diagnostics containing workbook text.
+                # Keep even their warning streams out of public Actions logs.
+                with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
+                    originals=tourgo.from_files(self.originals,receipt['expected_original_hashes'],now)
+                if (tourgo.validate_ledger(originals,now)!=tourgo.validate_ledger(ledger,now)
+                        or any(originals['series'][k][p]['finality']!=o['finality']
+                               for k,records in ledger['series'].items() for p,o in records.items())):
+                    raise ValueError('tourgo_original_ledger_mismatch')
             verified_profile(ledger,receipt['expected_original_hashes'],receipt['profile'],read(Path(baseline)/'collector_state/macro_archive.json'),now)
-            config=read(code/'macro_sources.json');source=next(s for s in config['sources'] if s['id']==tourgo.SOURCE)
-            if not source.get('enabled') or not all(tourgo.permitted(source,a,now.date()) for a in ('collection','publication')):
-                raise ValueError('production_approval_required')
-            if any(not source['approval'][a].get('valid_until') or str(source['approval'][a].get('evidence_ref','')).startswith(('staging-only','isolated-preview')) for a in ('collection','publication')):
-                raise ValueError('dated_operating_approval_required')
-            if not tourgo.noncommercial(read(code/'operating_policy.json')):raise ValueError('noncommercial_policy_required')
-            if any(s.get('enabled') for s in config['sources'] if s['id'].startswith('ecos_')):
-                raise ValueError('ecos_must_remain_inactive')
-            expected=activation_candidate(config,now)
-            for key in tourgo.IDS:
-                actual=next(i for i in config['indicators'] if i['id']==key)
-                target=next(i for i in expected['indicators'] if i['id']==key)
-                if any(actual.get(k)!=target.get(k) for k in tourgo.PUBLIC_INDICATOR_FIELDS):
-                    raise ValueError('production_mapping_requires_review')
+            operating_configuration(read(code/'macro_sources.json'),read(code/'operating_policy.json'),now)
             self.receipt=receipt
             return ledger
         except Exception:
