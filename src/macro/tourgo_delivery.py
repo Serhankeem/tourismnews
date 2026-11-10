@@ -71,16 +71,23 @@ def protected_context(api, env):
             or env.get('GITHUB_WORKFLOW')!='TOURGO initial publication (manual)'):
         fail('protected_manual_main_required')
     actors=env.get('TOURGO_ALLOWED_ACTOR_IDS','').split(',')
-    if not actors or any(not re.fullmatch('[1-9][0-9]*',a) for a in actors) or env.get('GITHUB_ACTOR_ID') not in actors:
+    if len(actors)!=1 or any(not re.fullmatch('[1-9][0-9]*',a) for a in actors) or env.get('GITHUB_ACTOR_ID') not in actors:
         fail('authorized_admin_actor_required')
     policy=api.get('repos/Serhankeem/tourismnews/environments/tourgo-production')
     rules=policy.get('protection_rules',[])
-    reviewers=next((r for r in rules if r.get('type')=='required_reviewers'),{})
+    # Solo-owner mode: the protected environment must impose a real cooling-off
+    # period instead of a non-existent second reviewer. The configured wait
+    # timer is enforced using GitHub's live environment API, not input secrets.
+    if not isinstance(rules,list):
+        fail('protected_environment_not_ready')
+    wait_rules=[r for r in rules if isinstance(r,dict) and r.get('type')=='wait_timer']
+    reviewer_rules=[r for r in rules if isinstance(r,dict) and r.get('type')=='required_reviewers']
     branch=policy.get('deployment_branch_policy') or {}
-    if (not reviewers.get('reviewers') or reviewers.get('prevent_self_review') is not True
+    if (len(wait_rules)!=1 or type(wait_rules[0].get('wait_timer')) is not int
+            or wait_rules[0]['wait_timer']<10 or reviewer_rules
             or policy.get('can_admins_bypass') is not False
             or branch.get('custom_branch_policies') is not True):
-        fail('protected_environment_not_ready')
+        fail('protected_solo_environment_not_ready')
     branches=api.get('repos/Serhankeem/tourismnews/environments/tourgo-production/deployment-branch-policies')
     if branches.get('total_count')!=1 or [(r.get('name'),r.get('type')) for r in branches.get('branch_policies',[])]!=[('main','branch')]:
         fail('protected_environment_main_only_required')
