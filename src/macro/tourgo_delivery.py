@@ -64,11 +64,11 @@ class GitHub:
         except Exception:fail('private_input_api_unavailable')
 
 
-def protected_context(api, env):
+def protected_context(api, env, workflow='TOURGO initial publication (manual)'):
     if (env.get('GITHUB_ACTIONS')!='true' or env.get('GITHUB_EVENT_NAME')!='workflow_dispatch'
             or env.get('GITHUB_REF')!='refs/heads/main'
             or env.get('GITHUB_REPOSITORY')!='Serhankeem/tourismnews'
-            or env.get('GITHUB_WORKFLOW')!='TOURGO initial publication (manual)'):
+            or env.get('GITHUB_WORKFLOW')!=workflow):
         fail('protected_manual_main_required')
     actors=env.get('TOURGO_ALLOWED_ACTOR_IDS','').split(',')
     if len(actors)!=1 or any(not re.fullmatch('[1-9][0-9]*',a) for a in actors) or env.get('GITHUB_ACTOR_ID') not in actors:
@@ -93,11 +93,9 @@ def protected_context(api, env):
         fail('protected_environment_main_only_required')
 
 
-def fetch_inputs(api, repository, commit, manifest_hash, output):
+def private_blobs(api,repository,commit,names):
     if (not isinstance(repository,str) or not re.fullmatch('[A-Za-z0-9][A-Za-z0-9-]{0,38}/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}',repository)
-            or repository.lower()=='serhankeem/tourismnews'
-            or not re.fullmatch('[a-f0-9]{40}',commit or '')
-            or not re.fullmatch('[a-f0-9]{64}',manifest_hash or '')):
+            or repository.lower()=='serhankeem/tourismnews' or not re.fullmatch('[a-f0-9]{40}',commit or '')):
         fail('private_input_location_invalid')
     prefix='repos/'+repository
     meta=api.get(prefix)
@@ -108,7 +106,7 @@ def fetch_inputs(api, repository, commit, manifest_hash, output):
     tree=api.get(prefix+'/git/trees/'+tree_sha)
     if tree.get('truncated') or tree.get('sha') is None:fail('private_input_tree_invalid')
     rows=tree.get('tree',[])
-    if len(rows)!=6 or {r.get('path') for r in rows}!={'manifest.json',*NAMES} or any(r.get('type')!='blob' or r.get('mode')!='100644' for r in rows):
+    if len(rows)!=len(names) or {r.get('path') for r in rows}!=set(names) or any(r.get('type')!='blob' or r.get('mode')!='100644' for r in rows):
         fail('private_input_tree_invalid')
     entries={r['path']:r for r in rows}
     def blob(name):
@@ -122,15 +120,25 @@ def fetch_inputs(api, repository, commit, manifest_hash, output):
             return raw
         except DeliveryError:raise
         except Exception:fail('private_input_blob_invalid')
+    return blob
+
+
+def fetch_inputs(api, repository, commit, manifest_hash, output, profile='initial'):
+    if (not isinstance(repository,str) or not re.fullmatch('[A-Za-z0-9][A-Za-z0-9-]{0,38}/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}',repository)
+            or repository.lower()=='serhankeem/tourismnews'
+            or not re.fullmatch('[a-f0-9]{40}',commit or '')
+            or not re.fullmatch('[a-f0-9]{64}',manifest_hash or '')):
+        fail('private_input_location_invalid')
+    blob=private_blobs(api,repository,commit,('manifest.json',*NAMES))
     manifest_raw=blob('manifest.json')
     if tourgo.digest(manifest_raw)!=manifest_hash:fail('private_input_manifest_hash_mismatch')
     manifest=decode_json(manifest_raw)
-    if not isinstance(manifest,dict) or set(manifest)!={'schema_version','profile','files'} or manifest.get('schema_version')!=1 or manifest.get('profile')!='initial':
+    if not isinstance(manifest,dict) or set(manifest)!={'schema_version','profile','files'} or manifest.get('schema_version')!=1 or profile not in ('initial','update') or manifest.get('profile')!=profile:
         fail('private_input_manifest_invalid')
     expected=manifest['files']
     if not isinstance(expected,dict) or set(expected)!=set(NAMES) or any(not isinstance(v,str) or not re.fullmatch('[a-f0-9]{64}',v) for v in expected.values()):
         fail('private_input_manifest_invalid')
-    if any(expected[k+'.xls']!=v for k,v in INITIAL_HASHES.items()):fail('initial_original_hashes_required')
+    if profile=='initial' and any(expected[k+'.xls']!=v for k,v in INITIAL_HASHES.items()):fail('initial_original_hashes_required')
     output=Path(output).resolve()
     if output.exists() or output==ROOT or ROOT in output.parents:fail('new_private_temp_directory_required')
     output.mkdir(mode=0o700,parents=True)
@@ -141,7 +149,7 @@ def fetch_inputs(api, repository, commit, manifest_hash, output):
             target=output/name;target.write_bytes(raw);target.chmod(0o600)
         # The receipt is never re-signed or regenerated during delivery.
         receipt=decode_json((output/'receipt.json').read_bytes())
-        if receipt.get('profile')!='initial':fail('initial_receipt_required')
+        if receipt.get('profile')!=profile:fail('reviewed_receipt_profile_required')
         (output/'manifest.json').write_bytes(manifest_raw);(output/'manifest.json').chmod(0o600)
         return manifest
     except Exception:
@@ -159,7 +167,7 @@ def request(directory, manifest_hash):
         originals={k:directory/(k+'.xls') for k in INITIAL_HASHES})
 
 
-def prepare(output,env=None,now=None):
+def prepare(output,env=None,now=None,profile='initial'):
     env=os.environ if env is None else env
     now=now or dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
     # Do not consume private repository data before checking actual activation.
@@ -172,13 +180,13 @@ def prepare(output,env=None,now=None):
     if plan(config,policy,approval,now)!=config:fail('activation_configuration_requires_review')
     api=GitHub(env.get('TOURGO_INPUT_TOKEN'))
     protected_context(api,env)
-    return fetch_inputs(api,env.get('TOURGO_INPUT_REPOSITORY'),env.get('TOURGO_INPUT_COMMIT'),env.get('TOURGO_MANIFEST_SHA256'),output)
+    return fetch_inputs(api,env.get('TOURGO_INPUT_REPOSITORY'),env.get('TOURGO_INPUT_COMMIT'),env.get('TOURGO_MANIFEST_SHA256'),output,profile=profile)
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);p.add_argument('--profile',choices=['initial','update'],default='initial');args=p.parse_args()
     try:
-        prepare(args.output)
+        prepare(args.output,profile=args.profile)
         print('tourgo_private_input_verified; publication_not_executed')
         return 0
     except Exception as exc:

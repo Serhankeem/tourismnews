@@ -139,6 +139,16 @@ def noncommercial(policy):
             and policy.get('paid_access') is False)
 
 
+def terms_confirmed(source, policy, today):
+    """Institutional terms are independent of operator collection/publication."""
+    evidence=source.get('rights_evidence',{})
+    try:confirmed=dt.date.fromisoformat(evidence.get('confirmed_on',''))<=today
+    except (ValueError,TypeError):return False
+    return (noncommercial(policy) and confirmed
+            and isinstance(evidence.get('reference'),str) and bool(evidence['reference'])
+            and evidence.get('status')=='terms_confirmed_not_activated')
+
+
 def select_source(config):
     """Explicit alternative mapping, still disabled; does NOT grant permissions."""
     result = copy.deepcopy(config)

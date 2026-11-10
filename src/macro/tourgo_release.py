@@ -23,7 +23,8 @@ INITIAL_HASHES=dict(receipts='780465a3e72886e94643dd6da5f2fa03d3f5d0a991200ce293
 IMPLEMENTATION=('src/macro/tourgo_release.py','src/macro/tourgo.py','src/macro/engine.py',
     'src/macro/balance.py','src/macro/model.py','src/pipeline/runner.py','src/pipeline/store.py',
     'src/pipeline/layout.py','src/pipeline/validation.py','src/pipeline/policy.py','site/macro.js','operating_policy.json','src/macro/tourgo_activation.py',
-    'src/macro/tourgo_delivery.py','.github/workflows/pipeline.yml','.github/workflows/tourgo-publish.yml')
+    'src/macro/tourgo_delivery.py','.github/workflows/pipeline.yml','.github/workflows/tourgo-publish.yml','src/macro/tourgo_staging.py',
+    'src/macro/tourgo_update.py','.github/workflows/tourgo-update.yml')
 
 
 def digest_file(path):return tourgo.digest(Path(path).read_bytes())
@@ -147,7 +148,7 @@ def operating_configuration(config, policy, now):
         raise ValueError('production_approval_required')
     if any(not source['approval'][a].get('valid_until') or str(source['approval'][a].get('evidence_ref','')).startswith(('staging-only','isolated-preview')) for a in ('collection','publication')):
         raise ValueError('dated_operating_approval_required')
-    if not tourgo.noncommercial(policy):raise ValueError('noncommercial_policy_required')
+    if not tourgo.terms_confirmed(source,policy,now.date()):raise ValueError('tourgo_terms_or_noncommercial_policy_required')
     if any(s.get('enabled') for s in config['sources'] if s['id'].startswith('ecos_')):
         raise ValueError('ecos_must_remain_inactive')
     expected=activation_candidate(config,now)

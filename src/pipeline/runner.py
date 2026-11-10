@@ -68,6 +68,19 @@ def transact(code, remote, work, output, requested='none', force=False, days=90,
         # Re-read and revalidate the reviewed private input against each freshly
         # restored snapshot, including after a normal fast-forward conflict.
         manual_ledger=tourgo_request.validate(stage,code,clock) if tourgo_request is not None else None
+        quality=getattr(tourgo_request,'outcome',None)
+        if quality is not None:
+            result['tourgo_verification']=quality
+            if quality['status']!='VALID':
+                if store.tip('main')!=code_commit:raise StoreError('main_changed_retry_latest_code')
+                if store.tip()!=store.base:
+                    if attempt+1==max_attempts:raise Conflict('remote_data_changed_retry_collection')
+                    continue
+                result.update(phase='tourgo_staging_evaluated',engines={},attempt=attempt+1,bootstrap=initialized,
+                    data_committed=False,data_commit=store.base,
+                    ready=False,collection_ok=quality['status']=='UNCHANGED',previous_data_preserved=True,
+                    counts=validate(stage,cfg),new_records={'macro_observations':0})
+                return result
         due=pending(control,clock,requested)
         result.update(phase='collect',bootstrap=initialized,engines={},attempt=attempt+1)
         for engine,slot in due.items():
@@ -154,13 +167,19 @@ def main():
     p.add_argument('--tourgo-ledger',type=Path);p.add_argument('--tourgo-ledger-sha256')
     p.add_argument('--tourgo-receipt',type=Path);p.add_argument('--tourgo-receipt-sha256')
     p.add_argument('--tourgo-input-dir',type=Path)
+    p.add_argument('--tourgo-update-input-dir',type=Path)
     args=p.parse_args();args.work.mkdir(parents=True,exist_ok=True)
     result={'phase':'authorization','ready':False,'main_auto_commit':False}
     try:
         require_main()
         manual=(args.tourgo_ledger,args.tourgo_ledger_sha256,args.tourgo_receipt,args.tourgo_receipt_sha256)
         request=None
-        if args.tourgo_input_dir is not None:
+        if args.tourgo_update_input_dir is not None:
+            if args.tourgo_input_dir is not None or any(v is not None for v in manual) or args.operation!='run' or args.requested!='macro':
+                raise DataError('tourgo_manual_import_arguments_invalid')
+            from ..macro.tourgo_update import RecurringRequest
+            request=RecurringRequest(args.tourgo_update_input_dir)
+        elif args.tourgo_input_dir is not None:
             if any(v is not None for v in manual) or args.operation!='run' or args.requested!='macro':
                 raise DataError('tourgo_manual_import_arguments_invalid')
             from ..macro.tourgo_delivery import request as protected_request

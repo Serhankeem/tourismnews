@@ -1,0 +1,31 @@
+name: TOURGO recurring update (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_official_files:
+        description: Request validation of owner-reviewed official files on the private updates branch (existing publication approval still required)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+  validate-and-update:
+    needs: test
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.confirm_official_files == true
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pipeline.yml
+    with:
+      engine: macro
+      tourgo_update: true
+    secrets: inherit
