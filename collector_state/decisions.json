@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-11T00:14:04+09:00",
+  "checked_at": "2026-11-11T02:16:39+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -1883,24 +1883,6 @@
       "decision": "exclude"
     },
     {
-      "id": "c9c956388ac64b73a0",
-      "title": "유럽 시위 확산에 여행심리 ‘먹구름’…신규 모객 걱정",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500657",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
       "id": "41903460c91e5c2fba",
       "title": "美 동부 히든카드 ‘필라델피아’ 상품 개발 본격화",
       "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72648",
@@ -3735,6 +3717,42 @@
       "decision": "exclude"
     },
     {
+      "id": "7e2b601a374a8bc289",
+      "title": "Tambourine Earns Top Honors for Hospitality Website Design at 2026 Travel Weekly Magellan Awards",
+      "url": "https://www.hospitalitynet.org/news/4135392/tambourine-earns-top-honors-for-hospitality-website-design-at-2026-travel-weekly-magellan-awards",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b149396a709866f93d",
+      "title": "Hotels Hand AI to Everyone Except the Frontline, Why AI Agents Aren't Booking Rooms Yet, What Makes a Luxury Stay Worth the Price?",
+      "url": "https://www.hospitalitynet.org/editorial/4135393/hotels-hand-ai-to-everyone-except-the-frontline-why-ai-agents-arent-booking-rooms-yet-what-makes-a-luxury-stay-worth-the-price",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "7892ed7904fe92b9c8",
       "title": "Grevon and Indio Partner to Enable End-to-End AI Bookings for RV Parks and Campgrounds",
       "url": "https://www.hospitalitynet.org/news/4135388/grevon-and-indio-partner-to-enable-end-to-end-ai-bookings-for-rv-parks-and-campgrounds",
@@ -4077,42 +4095,6 @@
       "id": "cacfd0728fb62e5d7b",
       "title": "HVS Europe Hotel Transactions Bulletin - Week Ending 06 November 2026",
       "url": "https://www.hospitalitynet.org/news/4135371/hvs-europe-hotel-transactions-bulletin-week-ending-06-november-2026",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "8b45a464c2bffefb25",
-      "title": "84% and 15%: Hotels Are Handing AI to Everyone Except the People Who Touch the Guest",
-      "url": "https://www.hospitalitynet.org/opinion/4135356/84-and-15-hotels-are-handing-ai-to-everyone-except-the-people-who-touch-the-guest",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "e105ae998db2f70099",
-      "title": "What Hotel Projects Get Wrong When Sourcing FF&E from Foshan — and How to Fix It Before Production Starts",
-      "url": "https://www.hospitalitynet.org/opinion/4135370/what-hotel-projects-get-wrong-when-sourcing-ff-e-from-foshan-and-how-to-fix-it-before-production-starts",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
