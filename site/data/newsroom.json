@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-10T20:13:57+09:00",
-  "last_successful_fetch": "2026-11-10T20:13:57+09:00",
-  "count": 83,
+  "generated_at": "2026-11-10T22:29:27+09:00",
+  "last_successful_fetch": "2026-11-10T22:29:27+09:00",
+  "count": 84,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,17 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "IHG Hotels & Resorts celebrates 50 open voco hotels across Europe",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-10T20:50:54+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135380/ihg-hotels-resorts-celebrates-50-open-voco-hotels-across-europe",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hotels",
+        "IHG"
+      ]
+    },
     {
       "title": "HVS Egypt Hospitality Investment Pulse 2026",
       "source": "Hospitality Net",
