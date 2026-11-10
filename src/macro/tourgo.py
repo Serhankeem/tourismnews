@@ -19,6 +19,11 @@ COLLECTION = 'operator_supplied_official_excel_export'
 VERIFICATION = 'official_tourgo_file_validated'
 IDS = ('kto_tourism_receipts', 'kto_tourism_expenditure')
 MAX_INTEGER = 2**53-1
+PUBLIC_RECORD_FIELDS = frozenset(('value','unit','frequency','publisher','source_url',
+    'verification_status','collection_method','finality','release_published_at',
+    'original_publication_at','first_collected_at','last_collected_at','revision_status'))
+PUBLIC_INDICATOR_FIELDS = frozenset(('id','name','priority','source_id','enabled','unit',
+    'value_kind','frequency','publisher','definition','source_url','definition_url','reason'))
 
 
 def digest(raw):
@@ -127,6 +132,11 @@ def permitted(source, action, today):
     return (source.get('id') == SOURCE and source.get('method') == METHOD
             and source.get('requires_approval') is True
             and balance.permitted(source, action, today))
+
+
+def noncommercial(policy):
+    return (policy.get('mode')=='noncommercial' and policy.get('ads_enabled') is False
+            and policy.get('paid_access') is False)
 
 
 def select_source(config):

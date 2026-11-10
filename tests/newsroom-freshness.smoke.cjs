@@ -17,10 +17,13 @@ for(const width of [320,390,1440]){
  // Unordered six-field payload must still sort in the browser; no editorial fields.
  await page.route('**/data/newsroom.json?*',r=>r.fulfill({json:{...snapshot,articles:[...snapshot.articles].reverse()}}));
  await page.evaluate(()=>loadLiveNews());await page.evaluate(()=>navigate('news'));
+ // The current default is domestic-first; this test exercises all-publication chronology.
+ await page.locator('[data-news-origin="all"]').click();await page.locator('#news-order').selectOption('latest');
  assert.equal(await page.locator('#news-items .news-title').first().textContent(),chronological[0].title);
  assert.deepEqual(await page.evaluate(()=>NEWS.map(a=>a.published_at)),chronological.map(a=>a.published_at));
  await page.evaluate(()=>navigate('briefing'));
- assert.match(await page.locator('#briefing-state').textContent(),/주요 뉴스 후보/);
+ const expected=current.items.length?/주요 뉴스 후보/:current.status==='no_eligible_recent_articles'?/선정 기준 미충족/:/신규 뉴스 없음/;
+ assert.match(await page.locator('#briefing-state').textContent(),expected);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  assert.match(await page.locator('#briefing-state').textContent(),/일부 출처 수집 실패/);
  await page.clock.setFixedTime(new Date(Date.parse(current.generated_at)+25*60*60*1000));

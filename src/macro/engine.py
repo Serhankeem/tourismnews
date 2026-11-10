@@ -18,10 +18,11 @@ def read(path,default=None):
     if not path.exists():return default
     return json.loads(path.read_text())
 
-def public_view(config,archive,now):
+def public_view(config,archive,now,operating_policy=None):
     series=[]
     tourgo_source=next((s for s in config['sources'] if s['id']==tourgo.SOURCE),{})
-    tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date())
+    policy=read(ROOT/'operating_policy.json',{}) if operating_policy is None else operating_policy
+    tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date()) if tourgo.noncommercial(policy) else {}
     for item in config['indicators']:
         source=next((s for s in config['sources'] if s['id']==item['source_id']), {})
         if (not item.get('enabled') or not source.get('enabled')
@@ -36,8 +37,9 @@ def public_view(config,archive,now):
                 saved=tourgo_pair.get(item['id'],{})
                 if (saved.get('unit')!=item.get('unit') or saved.get('definition')!=item.get('definition')
                         or item.get('value_kind')!='money_nonnegative' or item.get('frequency')!='M'):saved={}
-        obs=saved.get('observations',{});ordered=[dict(period=p,**o) for p,o in sorted(obs.items())]
-        row={k:v for k,v in item.items() if k not in ('sheet','row_label')}
+        obs=saved.get('observations',{})
+        ordered=[dict(period=p,**({k:v for k,v in o.items() if k in tourgo.PUBLIC_RECORD_FIELDS} if source.get('id')==tourgo.SOURCE else o)) for p,o in sorted(obs.items())]
+        row={k:v for k,v in item.items() if k not in ('sheet','row_label') and (source.get('id')!=tourgo.SOURCE or k in tourgo.PUBLIC_INDICATOR_FIELDS)}
         if item.get('value_kind')=='money_nonnegative' and item.get('unit')=='US$':row.update(display_unit='백만 US$',display_divisor=1000000)
         row.update(observations=ordered,connected=bool(ordered),latest=None,missing_periods=[],retained_missing_periods=saved.get('latest_snapshot_missing_periods',[]),correction_count=len(saved.get('revisions',[])))
         if ordered:
@@ -52,7 +54,7 @@ def public_view(config,archive,now):
         result['tourism_balance']=tourgo.balance_view(tourgo_pair)
     return result
 
-def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_client=None,tourgo_ledger=None,only_sources=None):
+def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_client=None,tourgo_ledger=None,only_sources=None,operating_policy=None):
     now=(now or dt.datetime.now(KST)).astimezone(KST);loader=loader or Loader()
     data_dir,state_dir=Path(data_dir),Path(state_dir);data_dir.mkdir(parents=True,exist_ok=True);state_dir.mkdir(parents=True,exist_ok=True)
     archive_path=state_dir/'macro_archive.json';public_path=data_dir/'macro.json'
@@ -88,9 +90,15 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
             if source.get('auth_env'):
                 result['credential_status']='configured_pending_mapping' if bool(os.environ.get(source['auth_env'])) else 'not_configured'
             health['sources'].append(result);continue
+        if sid==tourgo.SOURCE and tourgo_ledger is None:
+            # A schedule is not an import request. Do not refresh success times
+            # or turn an approved retained series into a failed daily download.
+            result.update(status='manual_update_pending',collection_state='waiting_for_manual_input',
+                          reason='공식 XLS 수동 갱신 대기; 이전 검증값 유지',reference_period=previous.get('reference_period'))
+            skipped+=1;health['sources'].append(result);continue
         if source.get('method') == 'official_ecos_api' and not os.environ.get('ECOS_API_KEY') and ecos_client is None:
             result.update(credential_status='not_configured', reason='ecos_auth_required');health['sources'].append(result);continue
-        if not force and previous.get('last_successful_check','')[:10]==now.date().isoformat():
+        if sid!=tourgo.SOURCE and not force and previous.get('last_successful_check','')[:10]==now.date().isoformat():
             result.update(status='not_due',reference_period=previous.get('reference_period'))
             if source.get('method')=='official_ecos_api':result['collection_state']='not_due'
             skipped+=1;health['sources'].append(result);continue
@@ -106,6 +114,8 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                 if any(o.get('collection_method')!=expected for i in active for o in archive['indicators'].get(i['id'],{}).get('observations',{}).values()):
                     raise ValueError('financial_source_change_requires_review')
             if is_tourgo:
+                if not tourgo.noncommercial(read(ROOT/'operating_policy.json',{}) if operating_policy is None else operating_policy):
+                    raise ValueError('tourgo_noncommercial_policy_required')
                 snapshot=tourgo.fetch(source,active,tourgo_ledger,now)
                 if any(archive['indicators'].get(i['id'],{}).get('observations') for i in active) and not tourgo.public_pair(source,archive,now.date()):
                     raise ValueError('tourgo_existing_archive_validation_failed')
@@ -159,7 +169,8 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
                         value_changed=old['value']!=value
                         counts['value_corrections' if value_changed else 'status_changes']+=1
                         if value_changed:record['revision_status']='revised'
-                        saved['revisions'].append(dict(period=period,detected_at=now.isoformat(),kind='value_correction' if value_changed else 'finality_change',before=old,after=record.copy()))
+                        kind='value_correction' if value_changed else 'finality_change' if old['finality']!=finality else 'balance_crosscheck_change'
+                        saved['revisions'].append(dict(period=period,detected_at=now.isoformat(),kind=kind,before=old,after=record.copy()))
                     else:counts['unchanged_observations']+=1
                     saved['observations'][period]=record
                 # A rolling ECOS request does not declare older unqueried months
@@ -200,8 +211,8 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         # Save canonical history first. An interrupted public export can be retried;
         # missing/corrupt history is never silently recreated from a public subset.
         archive['updated_at']=now.isoformat();write_atomic(archive_path,archive)
-        write_atomic(public_path,public_view(config,archive,now))
-    view=public_view(config,archive,now)
+        write_atomic(public_path,public_view(config,archive,now,operating_policy))
+    view=public_view(config,archive,now,operating_policy)
     health['connected_indicators']=sum(i['connected'] for i in view['indicators'])
     health['connected_primary_indicators']=sum(i['connected'] and i['priority']==1 for i in view['indicators'])
     health['observation_count']=sum(len(i['observations']) for i in view['indicators'])

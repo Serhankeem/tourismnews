@@ -57,6 +57,9 @@ try{for(const width of [320,390,768,1440]){
 // Synthetic caption only in this isolated browser, using an existing allowed original.
 const page=await browser.newPage();await page.goto(base);await page.waitForFunction(()=>!newsLoading&&window.BriefingUI?.edition);
 const gov=await page.evaluate(()=>NEWS.find(n=>n.source==='GOV.UK · tourism'));
+// Isolate the existing allowed original so newer real news cannot displace this
+// caption fixture from the three-item homepage. The public DB is unchanged.
+await page.evaluate(r=>{const selected=NEWS.filter(n=>n.url===r.url);NEWS.splice(0,NEWS.length,...selected);},gov);
 await page.evaluate(r=>{window.originalLocale=ContentLocale;const h={kind:'news',url:r.url,publisher:r.source,published_at:r.published_at,original_title:r.title,ko_title:'visitor · 격리 검증용 안내',mode:'independent_factual_label',status:'approved',rights_status:'approved',accuracy_status:'approved',evidence_url:'https://example.org/test-only',note:'TEST ONLY',attribution:'TEST ONLY',preserved_tokens:['visitor']};window.ContentLocale=ContentLocale.create({headings:[h]});state.newsOrigin='all';state.newsOrder='latest';state.query='격리 검증용';renderNews();},gov);
 assert.equal(await page.locator('#news-items .news-title').textContent(),'visitor · 격리 검증용 안내');
 await page.evaluate(()=>navigate('news'));await page.locator('#news-items [data-detail]').click();assert.equal(await page.locator('#modal-title').textContent(),'visitor · 격리 검증용 안내');await page.locator('#modal-close').click();

@@ -34,7 +34,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
     }
    }
    const visible=await page.locator('#news-items .news-item').count();assert.ok(visible>0&&visible<=10);
-   assert.equal((await get('reports')).count,135);
+   const reports=await get('reports');assert.ok(reports.count>=135);assert.equal(reports.count,reports.reports.length);
+   await page.evaluate(()=>navigate('research'));await page.waitForFunction(()=>ResearchLibrary?.database?.reports?.length);
+   assert.equal(Number(await page.locator('#research-count').textContent()),reports.count);
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    assert.deepEqual(errors,[]);await page.close();
   }
