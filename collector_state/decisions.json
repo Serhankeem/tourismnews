@@ -1,8 +1,26 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-11T06:09:46+09:00",
+  "checked_at": "2026-11-11T08:07:07+09:00",
   "scope": "successful_sources_this_run",
   "items": [
+    {
+      "id": "e7d9d8c177a829ec5f",
+      "title": "‘제10회 서점의 날’, 책과 사람을 잇는 서점의 가치 되새겨",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22839",
+      "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
     {
       "id": "2afdec879856bdce7e",
       "title": "창립 20주년 한국도핑방지위원회, 새로운 도약 다짐",
@@ -168,24 +186,6 @@
         "signals": [],
         "impact_targets": [],
         "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "479d9ddf934e5ebd2e",
-      "title": "신임 국립장애인도서관 관장에 전영환 씨 임명",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22829",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
