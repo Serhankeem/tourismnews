@@ -30,10 +30,10 @@ def invoke(engine, stage, force, days):
     return result.returncode==0
 
 
-def compose(code, snapshot, output, cfg):
+def compose(code, snapshot, output, cfg, macro_config=None):
     # Code's frozen main data is excluded, even if newer files were added there.
     validate(snapshot,cfg)
-    verify_public(snapshot,code)
+    verify_public(snapshot,code,macro_config=macro_config)
     output=Path(output)
     if output.exists():shutil.rmtree(output)
     shutil.copytree(Path(code)/'site',output,ignore=shutil.ignore_patterns('data','collector_state','*.pyc','__pycache__'))
@@ -48,10 +48,11 @@ def compose(code, snapshot, output, cfg):
     return hashes(snapshot,cfg['public_files'])
 
 
-def transact(code, remote, work, output, requested='none', force=False, days=90, collector=invoke, at=None, max_attempts=3, result=None):
+def transact(code, remote, work, output, requested='none', force=False, days=90, collector=invoke, at=None, max_attempts=3, result=None, tourgo_request=None):
     code,work=Path(code),Path(work);cfg=configuration(code);work.mkdir(parents=True,exist_ok=True)
     code_commit=git(code,'rev-parse','HEAD').stdout.strip()
     if result is None:result={}
+    if tourgo_request is not None and requested!='macro':raise DataError('tourgo_manual_import_requires_macro_transaction')
     result.update(phase='load',main_auto_commit=False,code_commit=code_commit,engines={},ready=False,requested=requested)
     for attempt in range(max_attempts):
         attempt_dir=work/('attempt-'+str(attempt));attempt_dir.mkdir()
@@ -64,6 +65,9 @@ def transact(code, remote, work, output, requested='none', force=False, days=90,
         shutil.copyfile(store.path/CONTROL,stage/CONTROL)
         before=attempt_dir/'before';copy_data(stage,before,cfg)
         clock=at or now_kst();control=read(stage/CONTROL)
+        # Re-read and revalidate the reviewed private input against each freshly
+        # restored snapshot, including after a normal fast-forward conflict.
+        manual_ledger=tourgo_request.validate(stage,code,clock) if tourgo_request is not None else None
         due=pending(control,clock,requested)
         result.update(phase='collect',bootstrap=initialized,engines={},attempt=attempt+1)
         for engine,slot in due.items():
@@ -72,7 +76,17 @@ def transact(code, remote, work, output, requested='none', force=False, days=90,
             result['engines'][engine]={'status':'running'}
             write_atomic(work/'result.json',result)
             try:
-                success=collector(engine,stage,force and engine==requested,days)
+                if engine=='macro' and tourgo_request is not None:
+                    from ..macro.engine import collect as collect_macro
+                    health=collect_macro(read(code/'macro_sources.json'),stage/'site/data',stage/'collector_state',
+                        now=clock,force=force,tourgo_ledger=manual_ledger,operating_policy=read(code/'operating_policy.json'))
+                    # A healthy KTO response must not mask an explicitly failed
+                    # manual TOURGO import as a successful partial collection.
+                    from ..macro.tourgo import SOURCE
+                    success=next((s.get('status')=='ok' for s in health['sources'] if s['id']==SOURCE),False)
+                    if success:tourgo_request.verify_projection(stage)
+                else:
+                    success=collector(engine,stage,force and engine==requested,days)
                 after=hashes(stage,files(cfg))
                 if any(pre[p]!=after[p] and owner(p)!=engine for p in pre):
                     raise ValidationError('engine_wrote_other_dataset')
@@ -135,10 +149,19 @@ def main():
     p.add_argument('--requested',choices=['none','news','reports','macro'],default='none')
     p.add_argument('--force',action='store_true')
     p.add_argument('--days',choices=[30,60,90],type=int,default=90)
+    p.add_argument('--tourgo-ledger',type=Path);p.add_argument('--tourgo-ledger-sha256')
+    p.add_argument('--tourgo-receipt',type=Path);p.add_argument('--tourgo-receipt-sha256')
     args=p.parse_args();args.work.mkdir(parents=True,exist_ok=True)
     result={'phase':'authorization','ready':False,'main_auto_commit':False}
     try:
         require_main()
+        manual=(args.tourgo_ledger,args.tourgo_ledger_sha256,args.tourgo_receipt,args.tourgo_receipt_sha256)
+        request=None
+        if any(v is not None for v in manual):
+            if not all(manual) or args.operation!='run' or args.requested!='macro':
+                raise DataError('tourgo_manual_import_arguments_invalid')
+            from ..macro.tourgo_release import ReleaseRequest
+            request=ReleaseRequest(*manual)
         remote=git(ROOT,'remote','get-url','origin').stdout.strip()
         if args.operation=='guard':
             if (args.work/'result.json').exists():result=read(args.work/'result.json')
@@ -151,7 +174,7 @@ def main():
             if found.get('refs/heads/main')!=proof['code_commit'] or found.get('refs/heads/data/live')!=proof['data_commit']:
                 raise StoreError('newer_snapshot_do_not_deploy_stale_artifact')
             return 0
-        result=transact(ROOT,remote,args.work,args.output,args.requested,args.force,args.days,result=result)
+        result=transact(ROOT,remote,args.work,args.output,args.requested,args.force,args.days,result=result,tourgo_request=request)
         write_atomic(args.work/'result.json',result)
         if result['ready'] and os.environ.get('GITHUB_OUTPUT'):
             with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('ready=true\n')

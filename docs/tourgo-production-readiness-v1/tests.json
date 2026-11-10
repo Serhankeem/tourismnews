@@ -1,0 +1,24 @@
+{
+  "python": {
+    "count": 527,
+    "status": "passed"
+  },
+  "new_readiness_tests": 14,
+  "browser_suites": 22,
+  "browser_status": "passed",
+  "browser_widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "synthetic_financial_observations": 138,
+  "preserved_existing_kto_observations": 483,
+  "synthetic_projected_total": 621,
+  "real_69_month_input_verification": "not_executed_originals_unavailable",
+  "current_news_count": 81,
+  "current_research_count": 137,
+  "production_activation": false,
+  "baseline_browser_assumptions_reproduced_on_main": 4,
+  "runtime_news_research_briefing_logic_changed": false
+}

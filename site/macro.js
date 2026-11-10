@@ -17,15 +17,12 @@
  function financialValid(i,o){
   if(o.unit!=='US$'||i.display_unit!=='백만 US$'||i.display_divisor!==1000000)return false;
   if(i.source_id==='ecos_general_travel')return o.verification_status==='official_api_validated'&&o.collection_method==='official_ecos_api';
-  const h=o.bundle_sha256_by_kind;
-  return i.source_id===tourgoId&&o.source_id===tourgoId&&o.data_origin==='official_export'
+  const publicFields=['period','value','unit','frequency','publisher','source_url','verification_status','collection_method','finality','release_published_at','original_publication_at','first_collected_at','last_collected_at','revision_status','comparisons'];
+  return i.source_id===tourgoId&&Object.keys(o).every(k=>publicFields.includes(k))
    &&o.verification_status==='official_tourgo_file_validated'&&o.collection_method==='operator_supplied_official_excel_export'
    &&o.frequency==='M'&&['not_stated','provisional','final'].includes(o.finality)
-   &&o.source_url===tourgoUrl&&i.source_url===tourgoUrl&&o.source_unit==='천 US$'
-   &&o.kind===(i.id==='kto_tourism_receipts'?'receipts':'expenditure')
-   &&Number.isSafeInteger(o.source_value)&&o.source_value>=0&&Number.isSafeInteger(o.source_value*1000)&&o.source_value*1000===o.value
-   &&h&&Object.keys(h).sort().join(',')==='balance,expenditure,receipts'&&Object.values(h).every(v=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v))
-   &&new Set(Object.values(h)).size===3&&o.file_sha256===h[o.kind]&&Number.isSafeInteger(o.official_balance_value)&&['not_stated','provisional','final'].includes(o.official_balance_finality);
+   &&o.source_url===tourgoUrl&&i.source_url===tourgoUrl&&o.publisher==='한국문화관광연구원 관광지식정보시스템(TOURGO)'
+   &&Number.isSafeInteger(o.value)&&o.value>=0;
  }
  function tourgoPairValid(candidate){
   const ids=['kto_tourism_receipts','kto_tourism_expenditure'],pair=ids.map(id=>candidate.indicators.find(i=>i.id===id));
@@ -34,8 +31,7 @@
   if(!a?.connected||!b?.connected||pair.some(i=>i.source_id!==tourgoId)||a.latest.period!==b.latest.period||a.observations.length!==b.observations.length||!v||v.source_id!==tourgoId||v.unit!=='US$'||v.source_url!==tourgoUrl||v.official_identity_verified!==true||v.percentage_policy!=='signed_balance_absolute_changes_only'||v.observations?.length!==a.observations.length)return false;
   return a.observations.every(r=>{
    const p=b.observations.find(o=>o.period===r.period),official=v.observations.find(o=>o.period===r.period);
-   return p&&official&&['receipts','expenditure','balance'].every(k=>r.bundle_sha256_by_kind[k]===p.bundle_sha256_by_kind[k])
-    &&r.official_balance_value===r.value-p.value&&p.official_balance_value===r.value-p.value&&official.value===r.value-p.value
+   return p&&official&&Number.isSafeInteger(official.value)&&official.value===r.value-p.value
     &&['mom_pct','yoy_pct','ytd_yoy_pct'].every(k=>official.comparisons?.[k]===null);
   })&&v.latest?.period===a.latest.period&&v.latest.value===a.latest.value-b.latest.value
    &&['finality','mom_change','yoy_change'].every(k=>k==='finality'?v.latest.finality===v.observations.find(o=>o.period===v.latest.period).finality:v.latest.comparisons?.[k]===v.observations.find(o=>o.period===v.latest.period).comparisons?.[k]);
@@ -45,6 +41,7 @@
   if(failed)return '자료 수집 실패 · 이전 검증값 유지';
   if(healthUnknown)return '수집 상태 확인 실패 · 기준기간 확인 필요';
   const source=health?.sources?.find(s=>s.id===i.source_id);
+  if(source?.status==='manual_update_pending')return '수동 갱신 대기 · 마지막 검증값';
   if(source?.status==='error'||(health?.status==='failed'&&!source))return '자료 수집 실패 · 이전 검증값 유지';
   if(source?.status==='not_connected')return '자동 수집 미연결 · 이전 검증값';
   if(source?.status==='partial')return '일부 월 누락 · 이전 검증값 유지';
@@ -116,6 +113,9 @@
   }
  }
  function render(){
+  const tourgoConnected=['kto_tourism_receipts','kto_tourism_expenditure'].every(id=>item(id)?.connected&&item(id)?.source_id===tourgoId);
+  if(el('tourgo-source-state'))el('tourgo-source-state').textContent=tourgoConnected?'공식 파일 수동 갱신 · 자동 다운로드 미사용':'이용조건 확인 · 운영 승인 대기 · 수치 미게시';
+  if(el('tourgo-operating-state'))el('tourgo-operating-state').textContent=tourgoConnected?'관광수지 통계는 검증된 공식 파일의 수동 갱신 체계로 제공합니다.':'현재는 수동 공식 파일 통합을 준비하는 단계로 운영 데이터는 미연동이며, 수집·게시 활성화는 별도 검토 후 결정합니다.';
   const markup=core.map(([id,name])=>card(id,name)).join('');const balanceMarkup=tourismBalanceCard();el('home-macro-kpis').innerHTML=markup+balanceMarkup;el('macro-kpis').innerHTML=markup+balanceMarkup;
   const connected=db?.indicators.filter(i=>i.connected)||[],primary=connected.filter(i=>i.priority===1);
   const warning=failed||healthUnknown||connected.some(i=>!['공식 파일 연동','공식 API 연동','공식 파일 수동 입력'].includes(sourceState(i)));

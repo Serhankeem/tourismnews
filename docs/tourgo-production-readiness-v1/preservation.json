@@ -1,0 +1,154 @@
+{
+  "all_30_default_files_identical": true,
+  "files": {
+    "site/data/briefing.json": {
+      "before": "af8347d9cb62395f730b306fadd791f4fc80b0cd2d855c7e3588081abb5cf2d9",
+      "after": "af8347d9cb62395f730b306fadd791f4fc80b0cd2d855c7e3588081abb5cf2d9"
+    },
+    "site/data/briefing_archive.json": {
+      "before": "bb96b45d842d6cbf81db5d56e74e50eb77496818dcc1f402a2fd12643a1c53d5",
+      "after": "bb96b45d842d6cbf81db5d56e74e50eb77496818dcc1f402a2fd12643a1c53d5"
+    },
+    "site/data/filings.json": {
+      "before": "65e8debe1286c35d0d652fe4ad946de1ba9b6c5f41c8279a7c729eb18690892f",
+      "after": "65e8debe1286c35d0d652fe4ad946de1ba9b6c5f41c8279a7c729eb18690892f"
+    },
+    "site/data/health.json": {
+      "before": "01c85c09168b0fc0026c22f0bda29398cde58a79d0096ca8811567f6c087f3f7",
+      "after": "01c85c09168b0fc0026c22f0bda29398cde58a79d0096ca8811567f6c087f3f7"
+    },
+    "site/data/macro.json": {
+      "before": "fb7bfd869e95c6e530b180bb8649b02b245df07a79cbb465ed8216dd4b1bbe22",
+      "after": "fb7bfd869e95c6e530b180bb8649b02b245df07a79cbb465ed8216dd4b1bbe22"
+    },
+    "site/data/macro_health.json": {
+      "before": "92f26956bda66da0623fef840462420ffdac7542870a8f1bfbefd7032bd956b7",
+      "after": "92f26956bda66da0623fef840462420ffdac7542870a8f1bfbefd7032bd956b7"
+    },
+    "site/data/news.json": {
+      "before": "29a6d413c719dd8d88be0fb713ccf660076e9c410062fc340ffb9b115285fe54",
+      "after": "29a6d413c719dd8d88be0fb713ccf660076e9c410062fc340ffb9b115285fe54"
+    },
+    "site/data/newsroom.json": {
+      "before": "29a6d413c719dd8d88be0fb713ccf660076e9c410062fc340ffb9b115285fe54",
+      "after": "29a6d413c719dd8d88be0fb713ccf660076e9c410062fc340ffb9b115285fe54"
+    },
+    "site/data/publication_visibility.json": {
+      "before": "9aa9b9797712741d461675b761920a4bd5b479f898549b94bcf5e921d46e322d",
+      "after": "9aa9b9797712741d461675b761920a4bd5b479f898549b94bcf5e921d46e322d"
+    },
+    "site/data/reports.json": {
+      "before": "a6e224ed9f54885613f3fd5516b55b48e139b8d7b982d98cd5cd80c852e9f7f2",
+      "after": "a6e224ed9f54885613f3fd5516b55b48e139b8d7b982d98cd5cd80c852e9f7f2"
+    },
+    "site/data/reports_health.json": {
+      "before": "3ff36dd4eee0b13bb798efabb4343a79cdcbf61d91ce2d3da3acb895f03d69d4",
+      "after": "3ff36dd4eee0b13bb798efabb4343a79cdcbf61d91ce2d3da3acb895f03d69d4"
+    },
+    "site/data/research.json": {
+      "before": "c35ed83ba1ef6a890cc1ef4946c6dd9e3a02b81465ab8638e2af47c93897213f",
+      "after": "c35ed83ba1ef6a890cc1ef4946c6dd9e3a02b81465ab8638e2af47c93897213f"
+    },
+    "collector_state/archive.json": {
+      "before": "369733cd32a2cbc32234684dfb1f6525dc43022781a97928f65e2737b3290f3a",
+      "after": "369733cd32a2cbc32234684dfb1f6525dc43022781a97928f65e2737b3290f3a"
+    },
+    "collector_state/briefing_latest_selection.json": {
+      "before": "5fcc0f951d5b49eabfa8a1da229dd98da28e9c0c418ee101cce1c602bd089be5",
+      "after": "5fcc0f951d5b49eabfa8a1da229dd98da28e9c0c418ee101cce1c602bd089be5"
+    },
+    "collector_state/briefing_selection.json": {
+      "before": "f96e19165dbdbfd22112644e4e4b3edff1a7303cedf7cbf71ae5bdc66753596f",
+      "after": "f96e19165dbdbfd22112644e4e4b3edff1a7303cedf7cbf71ae5bdc66753596f"
+    },
+    "collector_state/decisions.json": {
+      "before": "61c5cf077a1ca522571adae47048e388a302787ce116cc2fe5e35e51f1eeebab",
+      "after": "61c5cf077a1ca522571adae47048e388a302787ce116cc2fe5e35e51f1eeebab"
+    },
+    "collector_state/discovery.json": {
+      "before": "4631a8949b73052fbf5b7e8bf9bd2383eec7869643d7dd8431d39b692e516169",
+      "after": "4631a8949b73052fbf5b7e8bf9bd2383eec7869643d7dd8431d39b692e516169"
+    },
+    "collector_state/legacy_archive.json": {
+      "before": "68420da519e7f5922855c9d45a58076c997ac83c095870d3dbd4196fc0cb45e7",
+      "after": "68420da519e7f5922855c9d45a58076c997ac83c095870d3dbd4196fc0cb45e7"
+    },
+    "collector_state/macro_archive.json": {
+      "before": "9bd3675dbbf4078e414a73dd81d0b7b23d44f74c92cf9e233a2404c3bff874aa",
+      "after": "9bd3675dbbf4078e414a73dd81d0b7b23d44f74c92cf9e233a2404c3bff874aa"
+    },
+    "collector_state/macro_legacy.json": {
+      "before": "8e82ffe20669309431e4337f579bc4530c74ae75609c75e52f2ca43fd62769bc",
+      "after": "8e82ffe20669309431e4337f579bc4530c74ae75609c75e52f2ca43fd62769bc"
+    },
+    "collector_state/macro_run_summary.json": {
+      "before": "92f26956bda66da0623fef840462420ffdac7542870a8f1bfbefd7032bd956b7",
+      "after": "92f26956bda66da0623fef840462420ffdac7542870a8f1bfbefd7032bd956b7"
+    },
+    "collector_state/publication_visibility.json": {
+      "before": "91278195c877cb8dee8a521b7746580a05760c7657f202eaad569a0334bc8555",
+      "after": "91278195c877cb8dee8a521b7746580a05760c7657f202eaad569a0334bc8555"
+    },
+    "collector_state/reports_archive.json": {
+      "before": "79b0c3ccaf3767ffe0d1fa3ea0794d4206006f6805949b7b3245ff3056684381",
+      "after": "79b0c3ccaf3767ffe0d1fa3ea0794d4206006f6805949b7b3245ff3056684381"
+    },
+    "collector_state/reports_candidates.json": {
+      "before": "c1d7c1c1e18f63cf6e48feba69ec94a6b403ca273d8e982f639ce97bdab48e6a",
+      "after": "c1d7c1c1e18f63cf6e48feba69ec94a6b403ca273d8e982f639ce97bdab48e6a"
+    },
+    "collector_state/reports_run_summary.json": {
+      "before": "3ff36dd4eee0b13bb798efabb4343a79cdcbf61d91ce2d3da3acb895f03d69d4",
+      "after": "3ff36dd4eee0b13bb798efabb4343a79cdcbf61d91ce2d3da3acb895f03d69d4"
+    },
+    "collector_state/reports_source_metrics.json": {
+      "before": "3247baa28f562d3ecda20e018d7698ef45d4c4ba2e9d737fa7ec8528edabd145",
+      "after": "3247baa28f562d3ecda20e018d7698ef45d4c4ba2e9d737fa7ec8528edabd145"
+    },
+    "collector_state/review_queue.json": {
+      "before": "fc8f854d75b444074f6dbe9e036975b0be74d6f35a2f6885c39f1fc7f72a5688",
+      "after": "fc8f854d75b444074f6dbe9e036975b0be74d6f35a2f6885c39f1fc7f72a5688"
+    },
+    "collector_state/run_summary.json": {
+      "before": "dc2fd8ff94987606996c6fb15677dfc9c4ce234b1e6ed9de1742c12b9e1f9e53",
+      "after": "dc2fd8ff94987606996c6fb15677dfc9c4ce234b1e6ed9de1742c12b9e1f9e53"
+    },
+    "collector_state/source_metrics.json": {
+      "before": "f2223bffb4c767e0fea1568fcb21b811253c37cd8c52b4ba4105a0093a60fbfe",
+      "after": "f2223bffb4c767e0fea1568fcb21b811253c37cd8c52b4ba4105a0093a60fbfe"
+    },
+    "collector_state/v02_snapshot.json": {
+      "before": "8228b7038490f459976562ffe39f8950643c6dcce0cd520d72880a1c286b55ce",
+      "after": "8228b7038490f459976562ffe39f8950643c6dcce0cd520d72880a1c286b55ce"
+    }
+  },
+  "operating_source_approval_changed": false,
+  "data_live_written": false,
+  "pages_deployed": false,
+  "protected_files_sha256": {
+    "macro_sources.json": "3fbb1b1a072099864d1346f83c06c38093cb4c00c3fef29ee165c9064648d76d",
+    "operating_policy.json": "959980df3deac84ac9830c8f5f5c2514b7c96f1ba1acd05d2a325afdd5022f00",
+    "pipeline.json": "d9ce9124e8dfb43268abe3f8651f854390fc5a35bd610a7daa48dd5bcbdb0d3b",
+    "sources.json": "1389da6712fff9e898ee9e308a37c162bd0e308beaf3aaec373be39046a535e5",
+    "reports_sources.json": "2dd5fe5224101ae72983c00ecdbfa9b2d55a9f069d937290aca4dfad8ca9be85",
+    "src/macro/kto.py": "c5f17ba6da8a2028be007b19fd2873fb4d171fcc8893c5c449124b3328a71cbd",
+    "src/macro/transport.py": "b9b525435812438d9546920e6925ed1caa46323367fadb82a7cb6831923edf56",
+    "src/macro/ecos.py": "6361743916e3fb965c5f354059e797e5a5cdf63028c4dba275f7cf1acdedd5fc",
+    "src/macro/model.py": "6a16f30cf8ce490c9f4e7da412d8718a696f5beba45d711d895d5d6f576f45ca",
+    "src/macro/balance.py": "b7cb6571dde8983e5aa3bc538908cd8e844ab45efe676a580a5a5ccf04f150ce",
+    "site/percentage.js": "36afa7db5bcd4bc2e7420e3a05015bc3608ff4b81195b873e25cd546b0e83c8b",
+    "site/percentage.css": "fcd9e090bfcf6e1a899adcf3666abc4e54891e36f578db235ecebda859cb1d4c",
+    "site/assets/currentourism-new-airplane-logo.png": "7f92affea61c57197f2b015576cb7bcaf604defb0ac270894157d8e94d070b7f",
+    ".github/workflows/collect.yml": "78621fc468351e6390861430b68df9a8ebcf19c48cc5369df3ebf82ba2c71082",
+    ".github/workflows/macro.yml": "07e7cff097adcf1d4936b23cb33bfcf2f8d4bcb1c7765390b691fe0e42801675",
+    ".github/workflows/reports.yml": "ab954a58ef2b888ec08df1aac040f631747a6f2862240b60aab465329997c5e5",
+    ".github/workflows/ecos-kto-provisional.yml": "ff4cd0d51db18eff731ff3c307eaacf0e5b9dc6543f7df28fc93e8d7e735af92",
+    ".github/workflows/deploy.yml": "392ba1ab142ba954c6d309723bd2cdcb0ce547460887c81ff7c28d2df8811500",
+    ".github/workflows/pipeline.yml": "ea6938431c996a3df8a9f44f68d3fa8c0603aebb588ed7b6155597d7d36bd2f7",
+    ".github/workflows/ecos-compare.yml": "67bf7234bf1ddd99c2a61d2c5710bcd66dc0e8164f902a9ac6373d2be572922d",
+    ".github/workflows/ecos-preflight.yml": "fdddd990a2049e6ea08aacc2a71931e7dc7db71deaf4c83240ad288b63860dcc",
+    ".github/workflows/ecos-activation-readiness.yml": "f0640fdfab1070cd0217a026fa9a670800af942f459e3e0d02f43f1d6d6fd835"
+  },
+  "base_code_commit": "22e4af850ad1425efbd263d4640f260c2cb2f649",
+  "data_snapshot": "4f07619ad8979caac456226243745897f0a2e0af"
+}

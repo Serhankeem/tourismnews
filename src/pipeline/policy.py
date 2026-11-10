@@ -80,12 +80,12 @@ def project(root, code, at):
     visible=[public_report(r) for r in records if r.get('publication_status')=='published' and r.get('source_id') in report_cfg and approved(report_cfg[r['source_id']],model)]
     path=data/'reports.json';doc=read(path)
     if doc['reports']!=visible:write_atomic(path,{**doc,'count':len(visible),'reports':visible})
-    config=read(code/'macro_sources.json');old=read(data/'macro.json');view=public_view(config,read(state/'macro_archive.json'),at)
+    config=read(code/'macro_sources.json');old=read(data/'macro.json');view=public_view(config,read(state/'macro_archive.json'),at,model)
     if old['indicators']!=view['indicators']:write_atomic(data/'macro.json',view)
     return news
 
 
-def verify_public(root,code):
+def verify_public(root,code,macro_config=None):
     data=Path(root)/'site/data';state=Path(root)/'collector_state'
     gate=PublicationGate(read(Path(code)/'sources.json')['sources'],current_permission(code),data,providers=provider_configuration(code))
     archive=read(state/'archive.json')['articles']
@@ -98,3 +98,10 @@ def verify_public(root,code):
         raise ValidationError('historical_display_gate_missing')
     if any(a['url'] not in {r['url'] for r in news} for a in read(data/'briefing.json')['items']):
         raise ValidationError('briefing_rights_gate_mismatch')
+    # Statistics must also be a projection of the private canonical archive and
+    # current source permissions, never a copied Preview/administrator payload.
+    document=read(data/'macro.json')
+    expected=public_view(macro_config if macro_config is not None else read(Path(code)/'macro_sources.json'),
+                         read(state/'macro_archive.json'),timestamp(document['generated_at']),read(Path(code)/'operating_policy.json'))
+    if any(document.get(k)!=expected.get(k) for k in ('indicators','tourism_balance')):
+        raise ValidationError('macro_publication_gate_projection_mismatch')
