@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-10T17:07:51+09:00",
+  "checked_at": "2026-11-10T17:19:20+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -211,6 +211,24 @@
       "id": "19442e0f481650ee38",
       "title": "단풍과 야경이 만나니 더 환상적! 남산 나이트 페스티벌 참여기",
       "url": "https://mediahub.seoul.go.kr/archives/2019992",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "23b8d62a5c0f988f18",
+      "title": "가을엔 동대문 한 바퀴! 흥인지문공원부터 DDP 숨은 명소까지",
+      "url": "https://mediahub.seoul.go.kr/archives/2019974",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -534,24 +552,6 @@
         "signals": [],
         "impact_targets": [],
         "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "7190e7fe5e3021ed10",
-      "title": "밤에 가도 좋네! 가을빛 짙어진 안국역 인근 산책 명소 3선",
-      "url": "https://mediahub.seoul.go.kr/archives/2019905",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
