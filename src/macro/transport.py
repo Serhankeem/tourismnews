@@ -4,23 +4,31 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import urllib.robotparser
+import http.cookiejar
 from ..discovery import NoRedirect
 
 AGENT = 'currentourism-macro/0.5 (+https://github.com/Serhankeem/tourismnews; public statistical downloads)'
 HOST = 'datalab.visitkorea.or.kr'
-PATHS = {'/datalab/portal/main/getMainForm.do', '/site/portal/ex/bbs/View.do', '/common/board/Download.do'}
+PATHS = {'/datalab/portal/main/getMainForm.do', '/site/portal/ex/bbs/View.do', '/common/board/Download.do',
+         '/datalab/portal/ts/getEntcnyFrgnCust2Form.do', '/site/portal/ex/bbs/List.do'}
 
 class AccessError(ValueError): pass
 
 class Loader:
     def __init__(self, timeout=25):
         self.timeout=timeout; self.rules=None; self.last=0
-        self.opener=urllib.request.build_opener(NoRedirect)
+        # Anonymous public navigation needs the session issued by the homepage.
+        # Memory only: no login, cookie export, persisted credentials or JS APIs.
+        self.opener=urllib.request.build_opener(NoRedirect,urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     def __call__(self,url):
         for _ in range(5):
             p=urllib.parse.urlsplit(url)
-            if p.scheme!='https' or p.hostname!=HOST or p.username or p.password or p.port not in (None,443) or p.path not in PATHS:
+            if p.scheme!='https' or p.hostname!=HOST or p.username or p.password or p.port not in (None,443) or p.fragment or p.path not in PATHS:
                 raise AccessError('unapproved_public_statistical_endpoint')
+            if p.path=='/site/portal/ex/bbs/List.do' and urllib.parse.parse_qs(p.query,keep_blank_values=True)!={'cbIdx':['1603'],'tgtTypeCd':['CATE_CONT'],'searchKey2':['spt01']}:
+                raise AccessError('unapproved_public_statistical_catalog')
+            if p.path=='/datalab/portal/ts/getEntcnyFrgnCust2Form.do' and (p.query or p.fragment):
+                raise AccessError('unapproved_public_statistical_catalog')
             if self.rules is None:
                 try:
                     with self.opener.open(urllib.request.Request('https://'+HOST+'/robots.txt',headers={'User-Agent':AGENT}),timeout=self.timeout) as r:body=r.read(200001)

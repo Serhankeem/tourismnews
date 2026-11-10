@@ -67,6 +67,24 @@ class PipelineTests(PipelineHarness):
   def fail(engine,stage,*_):
    h=read(stage/'site/data/health.json');h['status']='failed';c.write_atomic(stage/'site/data/health.json',h);return False
   r=self.run_pipeline(fail,requested='news');self.assertFalse(r['collection_ok']);self.assertTrue(r['ready']);self.assertEqual((self.reader().path/'collector_state/archive.json').read_bytes(),archive)
+ def test_requested_news_records_partial_news_and_due_macro_failure_independently(self):
+  self.run_pipeline();before=self.reader()
+  original_macro=(before.path/'site/data/macro.json').read_bytes();original_archive=(before.path/'collector_state/macro_archive.json').read_bytes()
+  old_slot=read(before.path/CONTROL)['completed_slots']['macro'];self.at+=dt.timedelta(days=1)
+  def collect_due(engine,stage,*_):
+   if engine=='news':
+    p=stage/'site/data/health.json';h=read(p);h.setdefault('discovery',{})['discovery_status']='partial';c.write_atomic(p,h);return True
+   self.assertEqual(engine,'macro')
+   p=stage/'site/data/macro_health.json';h=read(p);h['status']='failed';h['error']='monthly_release_not_advertised_in_public_catalog';c.write_atomic(p,h);return False
+  result=self.run_pipeline(collect_due,requested='news');saved=self.reader()
+  self.assertEqual(result['engines']['news']['status'],'partial');self.assertEqual(result['engines']['macro']['status'],'failed')
+  self.assertTrue(result['ready']);self.assertFalse(result['collection_ok'])
+  self.assertEqual((saved.path/'site/data/macro.json').read_bytes(),original_macro)
+  self.assertEqual((saved.path/'collector_state/macro_archive.json').read_bytes(),original_archive)
+  self.assertEqual((self.root/'pages/data/macro.json').read_bytes(),original_macro)
+  control=read(saved.path/CONTROL);self.assertEqual(control['completed_slots']['macro'],old_slot)
+  self.assertEqual(control['completed_slots']['news'],slots(self.at)['news'])
+  self.assertIn('macro',pending(control,self.at,'news'))
  def test_partial_corruption_and_cross_engine_write_roll_back(self):
   self.run_pipeline();baseline=self.reader();h=hashes(baseline.path,files(self.cfg))
   for corrupt in [False,True]:

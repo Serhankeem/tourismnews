@@ -9,6 +9,33 @@ from .xlsx import workbook
 
 BASE='https://datalab.visitkorea.or.kr'
 TITLE=re.compile(r'(?:\[(?:정정|수정|재공표)\]\s*)?(20\d{2})년\s*(\d{1,2})월\s*한국관광통계\s*(?:공표|재공표)(?:\s*[\(\[]\s*(?:정정|수정|재공표)\s*[\)\]])?')
+STATISTICS_PATH='/datalab/portal/ts/getEntcnyFrgnCust2Form.do'
+CATALOG_PATH='/site/portal/ex/bbs/List.do'
+
+class ReleaseNotAdvertised(ValueError):
+    pass
+
+def public_url(href,base=BASE):
+    # Extract, never execute, the documented public menu goUrl link.
+    if not isinstance(href,str) or not href:raise ValueError('unapproved_release_link')
+    match=re.fullmatch(r"javascript:goUrl\('([^']+)'(?:,'\d+'){0,2}\);?",href)
+    url=urljoin(base,match[1] if match else href)
+    p=urlsplit(url)
+    if p.scheme!='https' or p.hostname!='datalab.visitkorea.or.kr' or p.username or p.password or p.port not in (None,443) or p.fragment:
+        raise ValueError('unapproved_release_link')
+    return url,p,parse_qs(p.query,keep_blank_values=True)
+
+def release_url(href):
+    url,p,q=public_url(href)
+    legacy=q.get('cbIdx')==['1127'] and 'cbIdx2' not in q
+    # The public statistics board wraps the same 1127 posts in umbrella 1603.
+    wrapped=(q.get('cbIdx')==['1603'] and q.get('cbIdx2')==['1127']
+             and q.get('tgtTypeCd')==['CATE_CONT'] and q.get('searchKey2')==['spt01'])
+    if (p.path!='/site/portal/ex/bbs/View.do' or q.get('cateCont')!=['spt01']
+            or not (legacy or wrapped) or len(q.get('bcIdx',[]))!=1 or not re.fullmatch(r'[1-9]\d*',q['bcIdx'][0])
+            or any(len(v)!=1 for v in q.values())):
+        raise ValueError('unapproved_release_link')
+    return url
 
 def compact(value):return re.sub(r'\s+','',value or '')
 def count(value):
@@ -24,15 +51,30 @@ def latest_release(payload,now):
         if not match:continue
         year,month=map(int,match.groups());period=f'{year:04}-{month:02}'
         if not 1<=month<=12 or period>=now.strftime('%Y-%m'):raise ValueError('unreleased_or_future_reference_period')
-        href=a.attrs.get('href','')
-        match=re.search(r"goUrl\('([^']+)'",href)
-        url=urljoin(BASE,match.group(1) if match else href)
-        p=urlsplit(url);q=parse_qs(p.query)
-        if p.scheme!='https' or p.hostname!='datalab.visitkorea.or.kr' or p.path!='/site/portal/ex/bbs/View.do' or q.get('cbIdx')!=['1127'] or q.get('cateCont')!=['spt01']:
-            raise ValueError('unapproved_release_link')
-        rows.append((period,url))
-    if not rows:raise ValueError('monthly_release_not_advertised_in_public_catalog')
+        rows.append((period,release_url(a.attrs.get('href',''))))
+    if not rows:raise ReleaseNotAdvertised('monthly_release_not_advertised_in_public_catalog')
     return max(rows)
+
+def discover_release(source,loader,now):
+    home=loader(source['catalog_url'])
+    try:
+        return (*latest_release(home,now),source['catalog_url'])
+    except ReleaseNotAdvertised:
+        # The homepage's rolling highlights are not a complete release catalogue.
+        # Follow only controls actually advertised by both public HTML pages.
+        stats=[]
+        for a in DOM(home).root.all('a'):
+            if a.text() not in ('방한 외래관광객','한국관광 통계 바로가기','방한 관광객 통계'):continue
+            url,p,q=public_url(a.attrs.get('href',''))
+            if p.path==STATISTICS_PATH and not q:stats.append(url)
+        if not stats:raise ValueError('public_statistics_navigation_unverified')
+        stats_url=stats[0];page=DOM(loader(stats_url))
+        buttons=[a for a in page.root.all('a') if a.attrs.get('id')=='bbsBtn' and a.text()=='통계게시판']
+        if len(buttons)!=1:raise ValueError('public_statistics_catalog_control_unverified')
+        board,p,q=public_url(buttons[0].attrs.get('href',''),stats_url)
+        if p.path!=CATALOG_PATH or q!={'cbIdx':['1603'],'tgtTypeCd':['CATE_CONT'],'searchKey2':['spt01']}:
+            raise ValueError('unapproved_public_statistics_catalog')
+        return (*latest_release(loader(board),now),board)
 
 def release_files(payload,url,period,now):
     doc=DOM(payload)
@@ -120,10 +162,10 @@ def crosscheck(payload,period,values,indicators):
             if all(p in values[item['id']] for p in previous_keys) and (prior_annual is None or count(prior_annual)!=sum(values[item['id']][p] for p in previous_keys)):raise ValueError('prior_year_to_date_tables_disagree')
 
 def fetch(source,indicators,loader,now):
-    reference,url=latest_release(loader(source['catalog_url']),now)
+    reference,url,catalog=discover_release(source,loader,now)
     files,published=release_files(loader(url),url,reference,now)
     primary=loader(files['series']);check=loader(files['crosscheck'])
     values,locations=parse_series(primary,reference,indicators,source['start_period'])
     crosscheck(check,reference,values,indicators)
     return dict(reference_period=reference,source_url=url,release_published_at=published,values=values,locations=locations,
-                file_url=files['series'],file_sha256=hashlib.sha256(primary).hexdigest(),crosscheck_url=files['crosscheck'],crosscheck_sha256=hashlib.sha256(check).hexdigest(),rights='KOGL-0',unit='명',frequency='M',method='official_public_xlsx')
+                file_url=files['series'],file_sha256=hashlib.sha256(primary).hexdigest(),crosscheck_url=files['crosscheck'],crosscheck_sha256=hashlib.sha256(check).hexdigest(),rights='KOGL-0',unit='명',frequency='M',method='official_public_xlsx',discovery_catalog_url=catalog)
