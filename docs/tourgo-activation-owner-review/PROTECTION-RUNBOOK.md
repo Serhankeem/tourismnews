@@ -8,10 +8,11 @@ The manual TOURGO workflow must be unable to publish when the input, operator au
 
 Open `https://github.com/Serhankeem/tourismnews/settings/environments`, create **`tourgo-production`** and set:
 
-1. **Required reviewers**: a trusted independent GitHub reviewer, different from the workflow initiator. Enable **Prevent self-review**. If there is no separate reviewer, **STOP**; do not weaken protection to bypass the gate.
-2. Disable administrator bypass: `can_admins_bypass=false`.
-3. Deployment branches/tags: **selected branch main only**, with no tag exemptions.
-4. Verify these controls actually save and are supported by the repo plan/visibility.
+1. **Solo-owner mode**: leave **Required reviewers** unchecked (no independent reviewer exists); this is **not equivalent** to two-person review.
+2. **Wait timer: at least 10 minutes**, then click **Save protection rules**. GitHub's live Environment API must return exactly one `wait_timer` protection rule with `wait_timer >= 10`; otherwise release fails closed. The timer is a cooling-off control, **not a second approval**.
+3. Disable administrator bypass: `can_admins_bypass=false`.
+4. Deployment branches/tags: **selected branch main only**, with no tag exemptions.
+5. Verify these controls remain after reloading and can be enforced by the current repository visibility/plan; otherwise STOP rather than bypassing validation.
 
 Do not use existing `github-pages` as the protected TOURGO environment.
 
@@ -46,15 +47,15 @@ balance.xls
 | `TOURGO_MANIFEST_SHA256` | Independently reviewed manifest byte SHA-256 |
 | `TOURGO_ALLOWED_ACTOR_IDS` | Authorized numeric GitHub actor IDs, comma-separated |
 
-Verify token permissions and environment API accessibility before attempting a real publication. Never share secret values in this conversation.
+For solo operation, `TOURGO_ALLOWED_ACTOR_IDS` must hold **exactly one numeric GitHub actor ID**. Verify token permissions and environment API access before trying a release; never share secret values in chat.
 
 ## D. Separate configuration and final publishing procedure
 
 1. Owner approves **collection AND publication** separately with distinct references and finite review windows.
 2. Generate review-only activation plan, submit and validate a separate `macro_sources.json` configuration PR, merge only when the owner explicitly authorizes the production configuration.
 3. Recreate official 69-month staging from latest actual XLS + final `main` and `data/live`; verify hashes, identities, preservation, fields, and Pages preview. Regenerate private ledger/receipt if the implementation or Macro archive changes.
-4. Populate the private input repo and five environment secrets; independently confirm configured protections and non-self reviewer.
-5. Only on explicit final go-ahead, run GitHub Actions → **TOURGO initial publication (manual)** on `main`, `confirm_reviewed_initial_publication=true`, obtain independent environment review.
+4. Populate the private input repo and five environment secrets; independently confirm the saved 10-minute wait, no required reviewers, disabled admin bypass and main-only branch rule.
+5. Only on explicit final go-ahead, run GitHub Actions → **TOURGO initial publication (manual)** on `main`, `confirm_reviewed_initial_publication=true`, pass the GitHub-enforced 10-minute wait timer (not independent reviewer approval).
 6. Validate transaction, latest `data/live` and deployed Overview/Macro pages before declaring success. Distinguish successful storage from successful Pages deployment.
 7. On fail: do not force-push or paste a staging public JSON into production. Diagnose/re-stage via existing validation workflow. Existing KTO/News/Research must remain intact.
 
