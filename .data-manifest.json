@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "policy_code_commit": "547a34438e6b084cce54ede9de50ec3c7cb54c6d",
+  "policy_code_commit": "c00a3d7705b708a05065546438d9c0b9f4bf9ba1",
   "files": {
     "site/data/briefing.json": "3e0e8537a4c50e9e0e11c5dfa5c1e6361b75a27e6476f1cc29e972d727b0f459",
     "site/data/briefing_archive.json": "3bc7c76decab99212dbc1a9cffeda1f57d90d06d15e4c0e7caa03f223b6d9d54",
     "site/data/filings.json": "b4d001e62f76ef20191b31485d9a4af81dfcd5ffd0b69cb828f5738201c9c4e7",
     "site/data/health.json": "79abcf40106c26da7d218683e77d998ec6b2ffa3232a9445c3a686d369280bc8",
-    "site/data/macro.json": "9d1194520eba335a47d37b8620fba5d0aa19d03e29b1b6a31ec7fed6dc6d09e7",
+    "site/data/macro.json": "e2105c73560816d5ddfa0b919b85d14ca0cd02b81d7e51e8b33f145e55138e95",
     "site/data/macro_health.json": "28057447c3a2108a082ddf428489c9c9dec2e001407881b5c1273ddb2d84e679",
     "site/data/news.json": "fdd240b848b22ef21099a2674dc86cb0219a01e326192cdfbef471f97df5a36f",
     "site/data/newsroom.json": "fdd240b848b22ef21099a2674dc86cb0219a01e326192cdfbef471f97df5a36f",
