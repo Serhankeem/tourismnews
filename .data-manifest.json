@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "policy_code_commit": "ade778d29c8252bf968059adacd27250ec8ed631",
+  "policy_code_commit": "547a34438e6b084cce54ede9de50ec3c7cb54c6d",
   "files": {
     "site/data/briefing.json": "61653c5cab7238fffe8b66e850dd8183f0fa95293b62a27c21cb1f1fb14552da",
     "site/data/briefing_archive.json": "3bc7c76decab99212dbc1a9cffeda1f57d90d06d15e4c0e7caa03f223b6d9d54",
     "site/data/filings.json": "6b89ce5e1d0cb0a7a53aeb2837422155da411171cc93fc778a6951f4683671c6",
     "site/data/health.json": "70a7f48a7df0655716c76005b500ed5c7a1d4d59d378388d0b6c36e06ca1cfe7",
-    "site/data/macro.json": "fb7bfd869e95c6e530b180bb8649b02b245df07a79cbb465ed8216dd4b1bbe22",
-    "site/data/macro_health.json": "23b332f00c39a35f8a6c30857f18dbe89b60de67a64574254019fc10a47de81a",
+    "site/data/macro.json": "9d1194520eba335a47d37b8620fba5d0aa19d03e29b1b6a31ec7fed6dc6d09e7",
+    "site/data/macro_health.json": "f27aae0545926a586b40d27ffe040813f400824ae60cbb567275d582885576c7",
     "site/data/news.json": "86aa93406ca633b9c0c569e26fefe1eb4ac19ca7fd57aca68bfca50a07b50384",
     "site/data/newsroom.json": "86aa93406ca633b9c0c569e26fefe1eb4ac19ca7fd57aca68bfca50a07b50384",
     "site/data/publication_visibility.json": "9aa9b9797712741d461675b761920a4bd5b479f898549b94bcf5e921d46e322d",
@@ -20,9 +20,9 @@
     "collector_state/decisions.json": "8e34c7c8a1fecb0144bd5bc0215994fe1b72fdeed782d5e24b412b64286cdab4",
     "collector_state/discovery.json": "8a2ee98ca5337bbf8b9428dc3ca7ed85158a67bd79dcf2473c78cdc5779198ff",
     "collector_state/legacy_archive.json": "68420da519e7f5922855c9d45a58076c997ac83c095870d3dbd4196fc0cb45e7",
-    "collector_state/macro_archive.json": "9bd3675dbbf4078e414a73dd81d0b7b23d44f74c92cf9e233a2404c3bff874aa",
+    "collector_state/macro_archive.json": "f07cc6857a1438d04026121f0cb53994414474cb466e4283f6ca4c4f05749ad8",
     "collector_state/macro_legacy.json": "8e82ffe20669309431e4337f579bc4530c74ae75609c75e52f2ca43fd62769bc",
-    "collector_state/macro_run_summary.json": "23b332f00c39a35f8a6c30857f18dbe89b60de67a64574254019fc10a47de81a",
+    "collector_state/macro_run_summary.json": "f27aae0545926a586b40d27ffe040813f400824ae60cbb567275d582885576c7",
     "collector_state/publication_visibility.json": "4f55dcd940abba4e86c3672110c9267c1dc03dcb27fdd8762a8c1051e9c5544e",
     "collector_state/reports_archive.json": "79b0c3ccaf3767ffe0d1fa3ea0794d4206006f6805949b7b3245ff3056684381",
     "collector_state/reports_candidates.json": "c1d7c1c1e18f63cf6e48feba69ec94a6b403ca273d8e982f639ce97bdab48e6a",
@@ -32,6 +32,6 @@
     "collector_state/run_summary.json": "524a7df2ca28e5f0b54a8652958ffbfa908ebeb712d17f00d59b32c787bff369",
     "collector_state/source_metrics.json": "0a0e897909120779f3d46d1bbf9db93375af2f1a859b998f99c5f7d9ffdba9b1",
     "collector_state/v02_snapshot.json": "8228b7038490f459976562ffe39f8950643c6dcce0cd520d72880a1c286b55ce",
-    "control.json": "73e959a0b594179c6f18c3ecdc9863edd59b814bb3660abcef34030095232385"
+    "control.json": "5e2e4e009ce1ba0c9a3d9c3bea7401019cba8e26d3a0f7738a24b15b9ec07de7"
   }
 }
