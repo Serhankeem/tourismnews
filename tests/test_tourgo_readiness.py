@@ -247,7 +247,7 @@ class PublicationTests(PipelineHarness):
         for path in request.originals.values():path.write_bytes(b'SYNTHETIC NOT AN OFFICIAL XLS')
         with self.assertRaisesRegex(ValueError,'approval_invalid'):request.validate(self.code,self.code,NOW)
         original=synthetic69()
-        def noisy_parser(*args):
+        def noisy_parser(*args,**kwargs):
             print('SYNTHETIC-PRIVATE-WORKBOOK-DIAGNOSTIC')
             return original
         captured=io.StringIO()

@@ -1,0 +1,21 @@
+{
+  "python_tests": 573,
+  "python_status": "passed",
+  "new_scope_tests": 15,
+  "browser_suites": 23,
+  "browser_status": "passed",
+  "actual_69_month_ui_widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "actual_original_pins_verified": 3,
+  "preserved_kto_observations": 483,
+  "preserved_financial_observations": 138,
+  "preserved_operating_files": 30,
+  "new_downloads": false,
+  "actions_dispatched": false,
+  "data_live_written": false,
+  "private_package_modified": false
+}

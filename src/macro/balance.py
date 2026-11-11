@@ -145,10 +145,12 @@ def merge_ledger(previous, bundle, provenance, now):
     ledger['latest_period'] = max(ledger.get('latest_period', latest), latest)
     return ledger
 
-def approved_download(source, downloader, today=None):
+def approved_download(source, downloader, today=None, *, requested_range=None):
     """A future transport callback is never called before explicit permission."""
     if not permitted(source, 'collection', today):
         raise ValueError('balance_collection_not_approved')
+    from . import tourgo
+    tourgo.require_range(source,'collection',requested_range)
     return downloader()
 
 def publication_view(source, ledger, today=None):
@@ -156,4 +158,6 @@ def publication_view(source, ledger, today=None):
         raise ValueError('balance_publication_not_approved')
     if ledger.get('data_origin') != 'official_export':
         raise ValueError('synthetic_data_publication_forbidden')
+    from . import tourgo
+    tourgo.require_ledger_scope(source,'publication',ledger)
     return copy.deepcopy(ledger)

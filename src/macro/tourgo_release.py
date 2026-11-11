@@ -17,9 +17,7 @@ from ..pipeline.layout import configuration, copy_data, files, hashes, read, Dat
 from ..pipeline.validation import validate
 
 ROOT=Path(__file__).resolve().parents[2]
-INITIAL_HASHES=dict(receipts='780465a3e72886e94643dd6da5f2fa03d3f5d0a991200ce29313e969eae51f7d',
-    expenditure='c21d857270a37d29251f3f3c0d2314c50b49c1b73259c7fbab50f7eb72e96ff1',
-    balance='c2a3bd7ba225db9117fcb5535c0f8957ff80f0440801c18080080a74a3f2f721')
+INITIAL_HASHES=tourgo.INITIAL_HASHES
 IMPLEMENTATION=('src/macro/tourgo_release.py','src/macro/tourgo.py','src/macro/engine.py',
     'src/macro/balance.py','src/macro/model.py','src/pipeline/runner.py','src/pipeline/store.py',
     'src/pipeline/layout.py','src/pipeline/validation.py','src/pipeline/policy.py','site/macro.js','operating_policy.json','src/macro/tourgo_activation.py',
@@ -37,8 +35,9 @@ def activation_candidate(config, now):
     config=tourgo.select_source(config)
     source=next(s for s in config['sources'] if s['id']==tourgo.SOURCE)
     source['enabled']=True
+    collection_range=tourgo.approved_range(source,'collection')
     for action in ('collection','publication'):
-        source['approval'][action]=dict(approved=True,scope='general_travel_monthly',
+        source['approval'][action]=dict(collection_range,approved=True,scope='general_travel_monthly',
             evidence_ref='staging-only-not-operating-approval',valid_from=now.date().isoformat())
     for i in config['indicators']:
         if i['id'] in tourgo.IDS:
@@ -90,6 +89,8 @@ def stage(ledger, baseline, output, expected_hashes, profile, now, code=ROOT):
     cfg=configuration(code);validate(baseline,cfg)
     if not tourgo.noncommercial(read(code/'operating_policy.json')):raise ValueError('tourgo_noncommercial_policy_required')
     archive=read(baseline/'collector_state/macro_archive.json')
+    actual=next(s for s in read(code/'macro_sources.json')['sources'] if s['id']==tourgo.SOURCE)
+    tourgo.require_ledger_scope(actual,'collection',ledger)
     verified_profile(ledger,expected_hashes,profile,archive,now)
     proposed=activation_candidate(read(code/'macro_sources.json'),now)
     output.mkdir(parents=True,mode=0o700)
@@ -182,12 +183,16 @@ class ReleaseRequest:
                     or receipt.get('input_sha256')!=self.ledger_hash
                     or receipt.get('baseline_macro_sha256')!=digest_file(Path(baseline)/'collector_state/macro_archive.json')):
                 raise ValueError('stale_or_wrong_receipt')
-            ledger=tourgo.from_private_ledger(self.ledger_path,self.ledger_hash,now)
+            source=next(s for s in read(code/'macro_sources.json')['sources'] if s['id']==tourgo.SOURCE)
+            requested=dict(period_from=receipt.get('first_period'),period_through=receipt.get('latest_period'))
+            for action in ('collection','publication'):tourgo.require_range(source,action,requested)
+            ledger=tourgo.from_private_ledger(self.ledger_path,self.ledger_hash,now,source=source,requested_range=requested)
+            for action in ('collection','publication'):tourgo.require_ledger_scope(source,action,ledger,requested)
             if self.originals is not None:
                 # XLS libraries may print diagnostics containing workbook text.
                 # Keep even their warning streams out of public Actions logs.
                 with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
-                    originals=tourgo.from_files(self.originals,receipt['expected_original_hashes'],now)
+                    originals=tourgo.from_files(self.originals,receipt['expected_original_hashes'],now,source=source,requested_range=requested)
                 if (tourgo.validate_ledger(originals,now)!=tourgo.validate_ledger(ledger,now)
                         or any(originals['series'][k][p]['finality']!=o['finality']
                                for k,records in ledger['series'].items() for p,o in records.items())):
@@ -210,6 +215,7 @@ def main():
     p=argparse.ArgumentParser(description='Prepare private TOURGO readiness staging; never push or deploy')
     p.add_argument('--baseline-root',required=True,type=Path);p.add_argument('--output',required=True,type=Path)
     p.add_argument('--profile',choices=['initial','update'],required=True)
+    p.add_argument('--period-from');p.add_argument('--period-through')
     p.add_argument('--ledger',type=Path);p.add_argument('--ledger-sha256')
     for key in INITIAL_HASHES:p.add_argument('--'+key,type=Path)
     p.add_argument('--hash-manifest',type=Path,help='Independently reviewed three original hashes; required for update')
@@ -217,12 +223,14 @@ def main():
     try:
         expected=read(args.hash_manifest) if args.hash_manifest else INITIAL_HASHES
         if args.profile=='update' and not args.hash_manifest:p.error('update requires a reviewed hash-manifest')
+        declared=None if args.period_from is None and args.period_through is None else dict(period_from=args.period_from,period_through=args.period_through)
+        source=next(s for s in read(ROOT/'macro_sources.json')['sources'] if s['id']==tourgo.SOURCE)
         if args.ledger:
             if any(getattr(args,k) for k in INITIAL_HASHES):p.error('choose ledger OR original files')
-            ledger=tourgo.from_private_ledger(args.ledger,args.ledger_sha256,now)
+            ledger=tourgo.from_private_ledger(args.ledger,args.ledger_sha256,now,source=source,requested_range=declared)
         else:
             if not all(getattr(args,k) for k in INITIAL_HASHES):p.error('three original files are required')
-            ledger=tourgo.from_files({k:getattr(args,k) for k in INITIAL_HASHES},expected,now)
+            ledger=tourgo.from_files({k:getattr(args,k) for k in INITIAL_HASHES},expected,now,source=source,requested_range=declared)
         receipt=stage(ledger,args.baseline_root,args.output,expected,args.profile,now)
         print(json.dumps({k:receipt[k] for k in ('operating_approval','first_period','latest_period','financial_observations','existing_nonfinancial_observations','projected_total_observations')},ensure_ascii=False))
         return 0

@@ -26,6 +26,70 @@ PUBLIC_INDICATOR_FIELDS = frozenset(('id','name','priority','source_id','enabled
     'value_kind','frequency','publisher','definition','source_url','definition_url','reason'))
 
 
+INITIAL_PERIOD_RANGE = dict(period_from='2021-01',period_through='2026-09')
+INITIAL_HASHES = dict(receipts='780465a3e72886e94643dd6da5f2fa03d3f5d0a991200ce29313e969eae51f7d',
+    expenditure='c21d857270a37d29251f3f3c0d2314c50b49c1b73259c7fbab50f7eb72e96ff1',
+    balance='c2a3bd7ba225db9117fcb5535c0f8957ff80f0440801c18080080a74a3f2f721')
+
+
+def configured_source():
+    config=json.loads((Path(__file__).resolve().parents[2]/'macro_sources.json').read_text())
+    return next(s for s in config['sources'] if s['id']==SOURCE)
+
+
+def period_range(value):
+    if not isinstance(value,dict) or set(value)!={'period_from','period_through'}:
+        raise ValueError('tourgo_period_scope_unverified')
+    try:
+        first=balance.valid_period(value['period_from']);last=balance.valid_period(value['period_through'])
+        if first>last:raise ValueError()
+    except (ValueError,TypeError):raise ValueError('tourgo_period_scope_unverified') from None
+    return dict(period_from=first,period_through=last)
+
+
+def approved_range(source,action):
+    grant=source.get('approval',{}).get(action,{})
+    return period_range({k:grant.get(k) for k in INITIAL_PERIOD_RANGE})
+
+
+def require_range(source,action,requested):
+    allowed=approved_range(source,action);requested=period_range(requested)
+    if requested['period_from']<allowed['period_from'] or requested['period_through']>allowed['period_through']:
+        raise ValueError('tourgo_period_scope_exceeded')
+    return requested
+
+
+def input_range(expected_hashes,declared=None):
+    # Only the independently verified bootstrap pins prove a legacy file's range
+    # without opening it. Never infer the range from today's date or approval.
+    if declared is not None:return period_range(declared)
+    if expected_hashes==INITIAL_HASHES:return dict(INITIAL_PERIOD_RANGE)
+    raise ValueError('tourgo_period_scope_unverified')
+
+
+def require_periods(source,action,periods,requested=None):
+    periods=list(periods)
+    if not periods:raise ValueError('tourgo_period_scope_unverified')
+    try:
+        for p in periods:balance.valid_period(p)
+        actual=dict(period_from=min(periods),period_through=max(periods))
+    except (ValueError,TypeError):raise ValueError('tourgo_period_scope_unverified') from None
+    require_range(source,action,actual)
+    if requested is not None:
+        requested=require_range(source,action,requested)
+        if actual['period_from']<requested['period_from'] or actual['period_through']>requested['period_through']:
+            raise ValueError('tourgo_period_scope_exceeded')
+    return actual
+
+
+def require_ledger_scope(source,action,ledger,requested=None):
+    # Inspect period keys/labels before monetary values, validation or storage.
+    series=ledger.get('series') if isinstance(ledger,dict) else None
+    if not isinstance(series,dict) or set(series)!=set(balance.KINDS):raise ValueError('tourgo_period_scope_unverified')
+    for rows in series.values():require_periods(source,action,rows,requested)
+    for revision in ledger.get('revisions',[]):require_periods(source,action,[revision['period']],requested)
+
+
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
@@ -90,17 +154,21 @@ def validate_ledger(ledger, now):
     return values
 
 
-def from_files(files, expected_hashes, now, previous=None):
+def from_files(files, expected_hashes, now, previous=None, *, source=None, requested_range=None):
     if set(files) != set(balance.KINDS) or not hashes_valid(expected_hashes):
         raise ValueError('tourgo_expected_hashes_required')
+    source=source if source is not None else configured_source()
+    requested_range=require_range(source,'collection',input_range(expected_hashes,requested_range))
     paths = {k: Path(v) for k, v in files.items()}
     if len({p.resolve() for p in paths.values()}) != 3:
         raise ValueError('tourgo_distinct_originals_required')
     if any(digest(p.read_bytes()) != expected_hashes[k] for k, p in paths.items()):
         raise ValueError('tourgo_original_hash_mismatch')
     if previous:
+        require_ledger_scope(source,'collection',previous)
         validate_ledger(previous, now)
     values = {k: balance.read_xls(p, k, now) for k, p in paths.items()}
+    for rows in values.values():require_periods(source,'collection',rows,requested_range)
     # Detect a file changed during parsing instead of trusting its old digest.
     if any(digest(p.read_bytes()) != expected_hashes[k] for k, p in paths.items()):
         raise ValueError('tourgo_original_hash_mismatch')
@@ -111,7 +179,9 @@ def from_files(files, expected_hashes, now, previous=None):
     return ledger
 
 
-def from_private_ledger(path, expected_hash, now):
+def from_private_ledger(path, expected_hash, now, *, source=None, requested_range=None):
+    source=source if source is not None else configured_source()
+    requested_range=require_range(source,'collection',requested_range)
     raw = Path(path).read_bytes()
     if not isinstance(expected_hash, str) or not re.fullmatch('[a-f0-9]{64}', expected_hash) or digest(raw) != expected_hash:
         raise ValueError('tourgo_private_ledger_hash_mismatch')
@@ -123,12 +193,15 @@ def from_private_ledger(path, expected_hash, now):
             out[k] = v
         return out
     ledger = json.loads(raw, object_pairs_hook=unique)
+    require_ledger_scope(source,'collection',ledger,requested_range)
     validate_ledger(ledger, now)
     return ledger
 
 
 def permitted(source, action, today):
     # Not conditional on requires_approval: toggling that flag cannot bypass this.
+    try:approved_range(source,action)
+    except (ValueError,TypeError):return False
     return (source.get('id') == SOURCE and source.get('method') == METHOD
             and source.get('requires_approval') is True
             and balance.permitted(source, action, today))
@@ -168,6 +241,7 @@ def fetch(source, active, ledger, now):
         raise ValueError('tourgo_collection_or_publication_not_approved')
     if ledger is None:
         raise ValueError('tourgo_manual_input_required')
+    for action in ('collection','publication'):require_ledger_scope(source,action,ledger)
     values = validate_ledger(ledger, now)
     if {i['id'] for i in active} != set(IDS) or len(active) != 2 or any(
             i.get('source_id') != SOURCE or i.get('unit') != 'US$'
@@ -203,8 +277,11 @@ def public_pair(source, archive, today):
         periods = set(saved[IDS[0]]['observations'])
         if not periods or set(saved[IDS[1]]['observations']) != periods:
             return {}
+        scope=approved_range(source,'publication')
+        for period in periods:balance.valid_period(period)
+        periods={p for p in periods if scope['period_from']<=p<=scope['period_through']}
+        if not periods:return {}
         for period in periods:
-            balance.valid_period(period)
             if period>=today.strftime('%Y-%m'):return {}
             pair = [saved[key]['observations'][period] for key in IDS]
             for kind, o in zip(balance.KINDS, pair):
@@ -230,7 +307,7 @@ def public_pair(source, archive, today):
                 'publisher','source_url','verification_status','collection_method','file_sha256',
                 'bundle_sha256_by_kind','official_balance_value','official_balance_finality','finality',
                 'release_published_at','original_publication_at','first_collected_at','last_collected_at','revision_status'}
-        return {key:{**s,'observations':{p:{k:v for k,v in o.items() if k in fields} for p,o in s['observations'].items()}} for key,s in saved.items()}
+        return {key:{**s,'observations':{p:{k:v for k,v in o.items() if k in fields} for p,o in s['observations'].items() if p in periods}} for key,s in saved.items()}
     except (ValueError, TypeError, KeyError):
         return {}
 

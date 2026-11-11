@@ -91,14 +91,18 @@
           "scope": "general_travel_monthly",
           "evidence_ref": "owner-collection-20261110-tourgo69m",
           "valid_from": "2026-11-10",
-          "valid_until": "2027-02-08"
+          "valid_until": "2027-02-08",
+          "period_from": "2021-01",
+          "period_through": "2026-09"
         },
         "publication": {
           "approved": true,
           "scope": "general_travel_monthly",
           "evidence_ref": "owner-publication-20261111-tourgo69m",
           "valid_from": "2026-11-11",
-          "valid_until": "2027-02-08"
+          "valid_until": "2027-02-08",
+          "period_from": "2021-01",
+          "period_through": "2026-09"
         }
       },
       "reason": "운영자 승인된 2021-01~2026-09 공식 XLS 69개월 초기 게시 준비; 자동 다운로드 없음. 최초 게시 별도 보호된 수동 실행 필요.",

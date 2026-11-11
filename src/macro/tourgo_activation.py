@@ -36,7 +36,8 @@ def plan(config, policy, approval, now):
     proposed=activation_candidate(config,now)
     source=next(s for s in proposed['sources'] if s['id']==tourgo.SOURCE)
     for action in ('collection','publication'):
-        source['approval'][action]=dict(copy.deepcopy(approval[action]),approved=True,scope='general_travel_monthly')
+        source['approval'][action]=dict(tourgo.approved_range(next(s for s in config['sources'] if s['id']==tourgo.SOURCE),action),
+            **copy.deepcopy(approval[action]),approved=True,scope='general_travel_monthly')
     source['activation_terms_evidence_ref']=approval['terms_evidence_ref']
     source['activation_conditions']=copy.deepcopy(approval['conditions'])
     operating_configuration(proposed,policy,now)

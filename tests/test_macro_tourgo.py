@@ -41,7 +41,7 @@ def config():
     cfg['indicators']=[i for i in cfg['indicators'] if i['source_id']==tourgo.SOURCE]
     s=cfg['sources'][0];s['enabled']=True
     for action in ('collection','publication'):
-        s['approval'][action]=dict(approved=True,scope='general_travel_monthly',evidence_ref='SYNTHETIC-TEST-ONLY',valid_from='2026-11-01')
+        s['approval'][action].update(approved=True,scope='general_travel_monthly',evidence_ref='SYNTHETIC-TEST-ONLY',valid_from='2026-11-01')
     for i in cfg['indicators']:i['enabled']=True
     return cfg
 
@@ -82,20 +82,20 @@ class TourgoValidationTests(unittest.TestCase):
             for k,p in files.items():p.write_bytes(('SYNTHETIC-'+k).encode())
             hashes={k:tourgo.digest(p.read_bytes()) for k,p in files.items()}
             with patch.object(balance,'read_xls',side_effect=lambda p,k,now:bundle()[k]) as read:
-                result=tourgo.from_files(files,hashes,NOW)
+                result=tourgo.from_files(files,hashes,NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE)
                 self.assertEqual(len(result['series']['balance']),3);self.assertEqual(read.call_count,3)
             hashes['receipts']='0'*64
             with patch.object(balance,'read_xls') as read,self.assertRaisesRegex(ValueError,'hash_mismatch'):
-                tourgo.from_files(files,hashes,NOW)
+                tourgo.from_files(files,hashes,NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE)
             read.assert_not_called()
 
     def test_private_ledger_hash_and_duplicate_month_keys(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'private.json';path.write_text(json.dumps(ledger()))
-            self.assertEqual(tourgo.from_private_ledger(path,tourgo.digest(path.read_bytes()),NOW),ledger())
-            with self.assertRaises(ValueError):tourgo.from_private_ledger(path,'0'*64,NOW)
+            self.assertEqual(tourgo.from_private_ledger(path,tourgo.digest(path.read_bytes()),NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE),ledger())
+            with self.assertRaises(ValueError):tourgo.from_private_ledger(path,'0'*64,NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE)
             raw=path.read_text().replace('"receipts": {','"receipts": {"2026-08": {},',1);path.write_text(raw)
-            with self.assertRaisesRegex(ValueError,'duplicate_json_key'):tourgo.from_private_ledger(path,tourgo.digest(path.read_bytes()),NOW)
+            with self.assertRaisesRegex(ValueError,'duplicate_json_key'):tourgo.from_private_ledger(path,tourgo.digest(path.read_bytes()),NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE)
 
     def test_missing_months_preserved_without_zero_and_revisions(self):
         original=ledger();values=bundle()
@@ -125,7 +125,7 @@ class TourgoValidationTests(unittest.TestCase):
                 if kind=='balance':path.write_bytes(b'CHANGED-SYNTHETIC')
                 return bundle()[kind]
             with patch.object(balance,'read_xls',side_effect=changed),self.assertRaisesRegex(ValueError,'hash_mismatch'):
-                tourgo.from_files(files,hashes,NOW)
+                tourgo.from_files(files,hashes,NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE)
 
     def test_cli_error_does_not_reflect_private_contents(self):
         with tempfile.TemporaryDirectory() as tmp:
