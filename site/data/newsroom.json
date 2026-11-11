@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-12T04:26:09+09:00",
-  "last_successful_fetch": "2026-11-12T04:26:09+09:00",
-  "count": 92,
+  "generated_at": "2026-11-12T08:14:29+09:00",
+  "last_successful_fetch": "2026-11-12T08:14:29+09:00",
+  "count": 93,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,16 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "공개토론회로 「관광진흥법」 시행규칙 개정안 의견 수렴",
+      "source": "문화체육관광부 보도자료",
+      "published_at": "2026-11-12T08:07:24+09:00",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22842",
+      "category": "관광정책",
+      "keywords": [
+        "관광진흥"
+      ]
+    },
     {
       "title": "Lodging Dynamics Expands Florida Presence With Management of AC Hotel Miami Beach",
       "source": "Hospitality Net",

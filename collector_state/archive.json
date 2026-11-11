@@ -1,11 +1,73 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-12T04:26:09+09:00",
-  "last_successful_fetch": "2026-11-12T04:26:09+09:00",
-  "count": 105,
+  "generated_at": "2026-11-12T08:14:29+09:00",
+  "last_successful_fetch": "2026-11-12T08:14:29+09:00",
+  "count": 106,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "e35278c33fd51ab614",
+      "published_at": "2026-11-12T08:07:24+09:00",
+      "date": "2026.11.12",
+      "category": "관광정책",
+      "source": "문화체육관광부 보도자료",
+      "source_id": "mcst_press",
+      "title": "공개토론회로 「관광진흥법」 시행규칙 개정안 의견 수렴",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22842",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "관광정책",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광진흥"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "문화체육관광부 보도자료"
+      ],
+      "first_discovered_at": "2026-11-12T08:14:29+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.mcst.go.kr/site/s_etc/rss/rssService.jsp",
+        "basis": "Existing official RSS service provides titles, dates and original links for metadata indexing; no article/description/image republication.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-12T08:14:29+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "산업 참고 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
+      }
+    },
     {
       "id": "9ffce7ce873cc79c8b",
       "published_at": "2026-11-11T22:28:55+09:00",
