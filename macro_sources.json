@@ -79,8 +79,8 @@
     },
     {
       "id": "tourgo_tourism_balance",
-      "name": "TOURGO 일반여행 관광수지 (운영 승인 대기)",
-      "enabled": false,
+      "name": "TOURGO 일반여행 관광수지",
+      "enabled": true,
       "requires_approval": true,
       "method": "official_tourgo_xls",
       "url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
@@ -94,19 +94,26 @@
           "valid_until": "2027-02-08"
         },
         "publication": {
-          "approved": false,
+          "approved": true,
           "scope": "general_travel_monthly",
-          "evidence_ref": null,
-          "valid_from": null,
-          "valid_until": null
+          "evidence_ref": "owner-publication-20261111-tourgo69m",
+          "valid_from": "2026-11-11",
+          "valid_until": "2027-02-08"
         }
       },
-      "reason": "비상업적 수치 게시·가공·정기 수집 이용조건 확인; 이번 통합은 수동 XLS 준비 단계, 운영 수집·게시 승인 비활성",
+      "reason": "운영자 승인된 2021-01~2026-09 공식 XLS 69개월 초기 게시 준비; 자동 다운로드 없음. 최초 게시 별도 보호된 수동 실행 필요.",
       "rights_evidence": {
         "status": "terms_confirmed_not_activated",
         "confirmed_on": "2026-11-09",
         "reference": "docs/tourgo-macro-integration-v1/README.md",
         "scope": "비상업적 이용 및 TOURGO 출처표시; ECOS API와 별개"
+      },
+      "activation_terms_evidence_ref": "institution-terms-20261109-tourgo",
+      "activation_conditions": {
+        "noncommercial": true,
+        "free_access": true,
+        "no_ads": true,
+        "attribution": true
       }
     }
   ],
@@ -151,29 +158,31 @@
       "id": "kto_tourism_receipts",
       "name": "관광수입",
       "priority": 1,
-      "source_id": "ecos_general_travel",
-      "enabled": false,
-      "unit": null,
+      "source_id": "tourgo_tourism_balance",
+      "enabled": true,
+      "unit": "US$",
       "frequency": "M",
-      "publisher": "한국은행 / 한국관광공사",
-      "definition": "한국관광공사 가이드북상 일반여행수입에 해당. 유학연수수입을 포함하는 국제수지 여행수입 전체와 구분. 실제 API 표/항목/단위는 미검증.",
-      "source_url": "https://ecos.bok.or.kr/api/",
-      "definition_url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/View.do?cbIdx=1603&bcIdx=295706&cateCont=spt01",
-      "reason": "공식 표·항목 코드/단위와 API 인증 검증 필요; 현재 실제 수치 미연결"
+      "publisher": "한국문화관광연구원 관광지식정보시스템(TOURGO)",
+      "definition": "TOURGO 관광수입(일반여행수입); 유학연수를 포함한 전체 여행수지와 구분. 원본 천 US$, Macro 원장 US$.",
+      "source_url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
+      "definition_url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
+      "reason": "공식 XLS 수동 갱신; 자동 다운로드 미사용",
+      "value_kind": "money_nonnegative"
     },
     {
       "id": "kto_tourism_expenditure",
       "name": "관광지출",
       "priority": 1,
-      "source_id": "ecos_general_travel",
-      "enabled": false,
-      "unit": null,
+      "source_id": "tourgo_tourism_balance",
+      "enabled": true,
+      "unit": "US$",
       "frequency": "M",
-      "publisher": "한국은행 / 한국관광공사",
-      "definition": "한국관광공사 가이드북상 일반여행지급에 해당. 유학연수수입/지급을 포함하는 여행수입/지급 전체와 구분. 실제 API 표/항목/단위는 미검증.",
-      "source_url": "https://ecos.bok.or.kr/api/",
-      "definition_url": "https://datalab.visitkorea.or.kr/site/portal/ex/bbs/View.do?cbIdx=1603&bcIdx=295706&cateCont=spt01",
-      "reason": "공식 표·항목 코드/단위와 API 인증 검증 필요; 현재 실제 수치 미연결"
+      "publisher": "한국문화관광연구원 관광지식정보시스템(TOURGO)",
+      "definition": "TOURGO 관광지출(일반여행지급); 유학연수를 포함한 전체 여행수지와 구분. 원본 천 US$, Macro 원장 US$.",
+      "source_url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
+      "definition_url": "https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do",
+      "reason": "공식 XLS 수동 갱신; 자동 다운로드 미사용",
+      "value_kind": "money_nonnegative"
     },
     {
       "id": "kto_inbound_cn",
