@@ -123,13 +123,26 @@ class ApprovedMonthTests(unittest.TestCase):
             for k in tourgo.IDS:self.assertIn('2026-10',archive['indicators'][k]['observations'])
 
     def test_collection_and_publication_ranges_remain_independent(self):
-        s=source();s['approval']['publication']['period_through']='2026-08'
-        tourgo.require_periods(s,'collection',['2026-09'])
-        with self.assertRaises(ValueError):tourgo.require_periods(s,'publication',['2026-09'])
-        planned=release.activation_candidate({**read(ROOT/'macro_sources.json'),'sources':[s]},NOW)
-        self.assertEqual(tourgo.approved_range(s,'publication')['period_through'],'2026-08')
-        # The isolated preview grant is not a production approval.
-        self.assertEqual(tourgo.approved_range(planned['sources'][0],'collection'),tourgo.INITIAL_PERIOD_RANGE)
+        for narrower in ('collection','publication'):
+            with self.subTest(narrower=narrower):
+                s=source()
+                s['approval'][narrower].update(period_from='2022-01',period_through='2026-08',approved=False)
+                config={**read(ROOT/'macro_sources.json'),'sources':[s]};before=copy.deepcopy(config)
+                planned=release.activation_candidate(config,NOW);preview=planned['sources'][0]
+                self.assertEqual(config,before)
+                for action in ('collection','publication'):
+                    self.assertEqual(tourgo.approved_range(preview,action),tourgo.approved_range(s,action))
+                    self.assertTrue(preview['approval'][action]['approved'])
+                    self.assertEqual(preview['approval'][action]['evidence_ref'],'staging-only-not-operating-approval')
+                with self.assertRaisesRegex(ValueError,'scope_exceeded'):
+                    tourgo.require_periods(preview,narrower,['2026-09'])
+                tourgo.require_periods(preview,'publication' if narrower=='collection' else 'collection',['2026-09'])
+                # Ephemeral grants cannot authorize the real operating transaction.
+                with self.assertRaisesRegex(ValueError,'dated_operating_approval_required'):
+                    release.operating_configuration(planned,read(ROOT/'operating_policy.json'),NOW)
+        s=source();del s['approval']['publication']['period_through']
+        with self.assertRaisesRegex(ValueError,'scope_unverified'):
+            release.activation_candidate({**read(ROOT/'macro_sources.json'),'sources':[s]},NOW)
 
     def test_expiry_revocation_and_missing_bounds_block_publication(self):
         with tempfile.TemporaryDirectory() as tmp:

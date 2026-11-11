@@ -35,9 +35,8 @@ def activation_candidate(config, now):
     config=tourgo.select_source(config)
     source=next(s for s in config['sources'] if s['id']==tourgo.SOURCE)
     source['enabled']=True
-    collection_range=tourgo.approved_range(source,'collection')
     for action in ('collection','publication'):
-        source['approval'][action]=dict(collection_range,approved=True,scope='general_travel_monthly',
+        source['approval'][action]=dict(tourgo.approved_range(source,action),approved=True,scope='general_travel_monthly',
             evidence_ref='staging-only-not-operating-approval',valid_from=now.date().isoformat())
     for i in config['indicators']:
         if i['id'] in tourgo.IDS:
