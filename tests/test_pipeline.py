@@ -41,7 +41,15 @@ class PipelineHarness(unittest.TestCase):
 class PipelineTests(PipelineHarness):
  def test_bootstrap_orphan_preserves_hashes_and_main_and_private_boundary(self):
   result=self.run_pipeline();self.assertTrue(result['bootstrap']);self.assertTrue(result['ready'])
-  store=self.reader();self.assertEqual(hashes(store.path,files(self.cfg)),hashes(self.code,files(self.cfg)))
+  store=self.reader()
+  # TOURGO source activation can refresh only the disconnected Macro presentation
+  # and health during bootstrap; no actual XLS data may be imported here.
+  projection={'site/data/macro.json','site/data/macro_health.json','collector_state/macro_run_summary.json'}
+  kept=[p for p in files(self.cfg) if p not in projection]
+  self.assertEqual(hashes(store.path,kept),hashes(self.code,kept))
+  macro=read(store.path/'site/data/macro.json')
+  self.assertFalse(any(x.get('connected') for x in macro['indicators'] if x.get('source_id')=='tourgo_tourism_balance'))
+  self.assertFalse(macro.get('tourism_balance'))
   self.assertEqual(store.tip('main'),self.main)
   names=git(store.path,'ls-tree','-r','--name-only','HEAD').stdout.splitlines();self.assertEqual(set(names),set(files(self.cfg)+['control.json','.data-manifest.json']))
   self.assertNotIn('src/engine.py',names);self.assertFalse((self.root/'pages/collector_state').exists())

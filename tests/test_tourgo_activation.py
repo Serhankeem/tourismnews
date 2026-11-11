@@ -61,7 +61,7 @@ class ActivationPlanTests(unittest.TestCase):
             if i['id'] not in tourgo.IDS:self.assertEqual(i,next(row for row in planned['indicators'] if row['id']==i['id']))
         source=next(s for s in planned['sources'] if s['id']==tourgo.SOURCE)
         self.assertTrue(source['enabled']);self.assertTrue(source['approval']['publication']['approved'])
-        self.assertFalse(next(s for s in config['sources'] if s['id']==tourgo.SOURCE)['enabled'])
+        self.assertTrue(next(s for s in config['sources'] if s['id']==tourgo.SOURCE)['enabled'])
         self.assertFalse(any(s['enabled'] for s in planned['sources'] if s['id'].startswith('ecos_')))
 
     def test_missing_expired_indefinite_or_staging_approval_is_rejected(self):

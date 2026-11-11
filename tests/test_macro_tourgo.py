@@ -145,7 +145,7 @@ class TourgoIntegrationTests(unittest.TestCase):
         selected=tourgo.select_source(raw);self.assertEqual(raw,before)
         self.assertTrue(all(not i['enabled'] for i in selected['indicators'] if i['source_id']==tourgo.SOURCE))
         s=next(s for s in raw['sources'] if s['id']==tourgo.SOURCE)
-        self.assertFalse(s['enabled']);self.assertFalse(balance.permitted(s,'publication',NOW.date()))
+        self.assertTrue(s['enabled']);self.assertFalse(balance.permitted(s,'publication',NOW.date()))  # test clock predates publication grant
 
     def test_full_import_public_view_exact_comparisons_and_signed_balance(self):
         with tempfile.TemporaryDirectory() as tmp:
