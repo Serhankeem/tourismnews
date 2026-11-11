@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-11T22:37:53+09:00",
-  "briefing_date": "2026-11-11",
-  "last_successful_fetch": "2026-11-11T22:37:53+09:00",
-  "status": "no_eligible_recent_articles",
+  "generated_at": "2026-11-12T00:22:18+09:00",
+  "briefing_date": "2026-11-12",
+  "last_successful_fetch": "2026-11-12T00:22:18+09:00",
+  "status": "candidates_ready",
   "recent_news_count": 7,
-  "selected_count": 0,
+  "selected_count": 1,
   "collection": {
     "status": "partial",
     "successful_sources": 19,
@@ -14,6 +14,17 @@
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
-  "items": [],
+  "items": [
+    {
+      "title": "한국관광공사, 감사원과 ‘찾아가는 적극행정지원 설명회’ 개최",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-11-11T21:47:10+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3161396",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광공사"
+      ]
+    }
+  ],
   "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
 }
