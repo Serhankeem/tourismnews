@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-11T15:33:47.634206+09:00",
-  "status": "not_due",
+  "checked_at": "2026-11-11T16:22:53.405729+09:00",
+  "status": "ok",
   "sources": [
     {
       "id": "kto_monthly_statistics",
@@ -46,23 +46,30 @@
     {
       "id": "tourgo_tourism_balance",
       "name": "TOURGO 일반여행 관광수지",
-      "status": "manual_update_pending",
-      "reason": "공식 XLS 수동 갱신 대기; 이전 검증값 유지",
-      "last_successful_check": null,
-      "collection_state": "waiting_for_manual_input",
-      "reference_period": null
+      "status": "ok",
+      "reason": null,
+      "last_successful_check": "2026-11-11T16:22:53.405729+09:00",
+      "collection_state": "manual_import_validated",
+      "reference_period": "2026-09",
+      "release_published_at": null,
+      "observations": 138,
+      "new_observations": 138,
+      "unchanged_observations": 0,
+      "value_corrections": 0,
+      "status_changes": 0,
+      "automatic_download": false
     }
   ],
-  "new_observations": 0,
+  "new_observations": 138,
   "unchanged_observations": 0,
   "value_corrections": 0,
   "status_changes": 0,
-  "successful_sources": 0,
-  "attempted_sources": 0,
+  "successful_sources": 1,
+  "attempted_sources": 1,
   "pending_sources": 4,
-  "connected_indicators": 7,
-  "connected_primary_indicators": 2,
-  "observation_count": 483,
+  "connected_indicators": 9,
+  "connected_primary_indicators": 4,
+  "observation_count": 621,
   "indicators": [
     {
       "id": "kto_inbound",
@@ -82,18 +89,18 @@
     },
     {
       "id": "kto_tourism_receipts",
-      "connected": false,
-      "first_period": null,
-      "latest_period": null,
-      "months": 0,
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
       "missing_periods": []
     },
     {
       "id": "kto_tourism_expenditure",
-      "connected": false,
-      "first_period": null,
-      "latest_period": null,
-      "months": 0,
+      "connected": true,
+      "first_period": "2021-01",
+      "latest_period": "2026-09",
+      "months": 69,
       "missing_periods": []
     },
     {
