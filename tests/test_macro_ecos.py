@@ -73,7 +73,12 @@ class MappingAndParserTests(unittest.TestCase):
         self.assertFalse(s['enabled']); self.assertIsNone(s['mapping']['stat_code'])
         self.assertIsNone(s['mapping']['unit_name']); self.assertFalse(ecos.publishable(s))
         for i in CONFIG['indicators']:
-            if i['id'] in ecos.IDS:self.assertFalse(i['enabled']); self.assertIsNone(i['unit'])
+            if i['source_id']=='ecos_general_travel':
+                self.assertFalse(i['enabled'])
+                self.assertIsNone(i['unit'])
+            elif i['id'] in ecos.IDS:
+                self.assertEqual(i['source_id'],'tourgo_tourism_balance')
+                self.assertTrue(i['enabled'])
     def test_pending_mapping_never_calls_transport(self):
         s=source();s['mapping']['status']='pending_verification';client=Mock()
         with self.assertRaisesRegex(ecos.EcosError,'mapping_pending'):ecos.fetch(s,indicators(),client,NOW)
