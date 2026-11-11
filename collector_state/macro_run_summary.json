@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-11T13:40:07.429090+09:00",
+  "checked_at": "2026-11-11T15:33:47.634206+09:00",
   "status": "not_due",
   "sources": [
     {
@@ -45,11 +45,12 @@
     },
     {
       "id": "tourgo_tourism_balance",
-      "name": "TOURGO 일반여행 관광수지 (운영 승인 대기)",
-      "status": "not_connected",
-      "reason": "비상업적 수치 게시·가공·정기 수집 이용조건 확인; 이번 통합은 수동 XLS 준비 단계, 운영 수집·게시 승인 비활성",
+      "name": "TOURGO 일반여행 관광수지",
+      "status": "manual_update_pending",
+      "reason": "공식 XLS 수동 갱신 대기; 이전 검증값 유지",
       "last_successful_check": null,
-      "collection_state": "manual_input_required"
+      "collection_state": "waiting_for_manual_input",
+      "reference_period": null
     }
   ],
   "new_observations": 0,
@@ -58,7 +59,7 @@
   "status_changes": 0,
   "successful_sources": 0,
   "attempted_sources": 0,
-  "pending_sources": 5,
+  "pending_sources": 4,
   "connected_indicators": 7,
   "connected_primary_indicators": 2,
   "observation_count": 483,
