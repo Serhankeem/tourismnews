@@ -331,6 +331,37 @@
           "published_at": "2026-11-09T19:43:50+09:00"
         }
       ]
+    },
+    {
+      "briefing_date": "2026-11-11",
+      "generated_at": "2026-11-11T10:31:44+09:00",
+      "mode": "live_rss",
+      "decisions": [
+        {
+          "article_id": "b6f601d1fdf6fd721c",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T00:15:00+09:00"
+        },
+        {
+          "article_id": "8b2e2693a0cc0a078d",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-10T20:50:54+09:00"
+        },
+        {
+          "article_id": "5c87cd016d8b46a1e8",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-10T19:08:30+09:00"
+        },
+        {
+          "article_id": "1b82b5c60910447c78",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-10T18:11:12+09:00"
+        }
+      ]
     }
   ]
 }
