@@ -20,11 +20,16 @@ class TourgoOwnerApprovalDraftTests(unittest.TestCase):
         with self.assertRaises((ValueError, TypeError, KeyError)):
             plan(config, policy, draft, now)
 
-    def test_checked_in_tourgo_source_and_publication_approvals_remain_off(self):
+    def test_collection_only_grant_is_finite_and_publication_remains_off(self):
         cfg = read(ROOT / "macro_sources.json")
         src = next(s for s in cfg["sources"] if s["id"] == "tourgo_tourism_balance")
         self.assertFalse(src["enabled"])
-        self.assertFalse(src["approval"]["collection"]["approved"])
+        collection = src["approval"]["collection"]
+        self.assertTrue(collection["approved"])
+        self.assertEqual(collection["scope"], "general_travel_monthly")
+        self.assertEqual(collection["evidence_ref"], "owner-collection-20261110-tourgo69m")
+        self.assertEqual(collection["valid_from"], "2026-11-10")
+        self.assertEqual(collection["valid_until"], "2027-02-08")
         self.assertFalse(src["approval"]["publication"]["approved"])
         for id_ in ("kto_tourism_receipts", "kto_tourism_expenditure"):
             item = next(x for x in cfg["indicators"] if x["id"] == id_)

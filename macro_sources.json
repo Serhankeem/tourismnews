@@ -87,11 +87,11 @@
       "start_period": "2021-01",
       "approval": {
         "collection": {
-          "approved": false,
+          "approved": true,
           "scope": "general_travel_monthly",
-          "evidence_ref": null,
-          "valid_from": null,
-          "valid_until": null
+          "evidence_ref": "owner-collection-20261110-tourgo69m",
+          "valid_from": "2026-11-10",
+          "valid_until": "2027-02-08"
         },
         "publication": {
           "approved": false,

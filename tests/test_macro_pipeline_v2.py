@@ -150,8 +150,15 @@ class RecurringTransportTests(unittest.TestCase):
                         with self.subTest(mode=mode),self.assertRaises(ValueError):update.deliver(root/mode,env,NOW)
                         self.assertFalse((root/mode).exists())
 
-    def test_default_collection_flag_blocks_before_private_api_use(self):
-        with patch.object(delivery,'GitHub',side_effect=AssertionError('no credential use')),self.assertRaises(ValueError):update.deliver('/tmp/no-update-input',environment(),NOW)
+    def test_revoked_collection_flag_blocks_before_private_api_use(self):
+        config=read(ROOT/'macro_sources.json')
+        source=next(s for s in config['sources'] if s['id']==tourgo.SOURCE)
+        self.assertTrue(source['approval']['collection']['approved'])
+        source['approval']['collection']['approved']=False
+        def denied_settings(path):
+            return config if Path(path).name=='macro_sources.json' else read(ROOT/'operating_policy.json')
+        with patch.object(update,'read',side_effect=denied_settings),patch.object(delivery,'GitHub',side_effect=AssertionError('no credential use')),self.assertRaises(ValueError):
+            update.deliver('/tmp/no-update-input',environment(),NOW)
 
 
 class RecurringTransactionTests(PipelineHarness):
