@@ -87,6 +87,9 @@ class AutomaticCollectionTests(unittest.TestCase):
         self.assertNotEqual(s['rights_review']['status'],'verified')
         self.assertNotEqual(s['crosscheck']['status'],'verified')
         self.assertFalse(ecos.publishable(s))
-        self.assertTrue(all(not x['enabled'] for x in c['indicators'] if x['id'] in ecos.IDS))
+        # Shared financial IDs are now mapped to explicitly approved TOURGO,
+        # but no indicator may be activated under unverified ECOS.
+        self.assertTrue(all(not x['enabled'] for x in c['indicators'] if x['source_id']=='ecos_general_travel'))
+        self.assertTrue(all(x['source_id']=='tourgo_tourism_balance' for x in c['indicators'] if x['id'] in ecos.IDS))
 if __name__=='__main__':
     unittest.main()
