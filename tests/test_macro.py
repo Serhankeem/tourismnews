@@ -157,7 +157,14 @@ class EngineTests(unittest.TestCase):
 
 class ConfigurationTests(unittest.TestCase):
     def test_distinct_financial_definitions_and_yearly_surveys(self):
-        rows={i['id']:i for i in CONFIG['indicators']};self.assertNotEqual(rows['kto_tourism_receipts']['definition'],rows['bok_travel_credit']['definition']);self.assertFalse(rows['kto_tourism_receipts']['enabled']);self.assertEqual(rows['tourism_employment']['frequency'],'A');self.assertIsNone(rows['kto_tourism_receipts']['unit'])
+        rows={i['id']:i for i in CONFIG['indicators']};self.assertNotEqual(rows['kto_tourism_receipts']['definition'],rows['bok_travel_credit']['definition']);self.assertTrue(rows['kto_tourism_receipts']['enabled']);self.assertEqual(rows['kto_tourism_receipts']['source_id'],'tourgo_tourism_balance');self.assertEqual(rows['kto_tourism_receipts']['unit'],'US
+    def test_same_publication_lock_and_no_archive_in_pages(self):
+        for name in ['collect','reports','macro']:
+            self.assertIn('uses: ./.github/workflows/pipeline.yml',(ROOT/f'.github/workflows/{name}.yml').read_text())
+        text=(ROOT/'.github/workflows/pipeline.yml').read_text();self.assertIn('group: tourism-pulse-publish',text);self.assertIn('path: ${{ runner.temp }}/tourism-pages',text);self.assertNotIn('path: collector_state',text)
+
+if __name__=='__main__':unittest.main()
+);self.assertTrue(rows['kto_tourism_expenditure']['enabled']);self.assertEqual(rows['tourism_employment']['frequency'],'A')
     def test_same_publication_lock_and_no_archive_in_pages(self):
         for name in ['collect','reports','macro']:
             self.assertIn('uses: ./.github/workflows/pipeline.yml',(ROOT/f'.github/workflows/{name}.yml').read_text())
