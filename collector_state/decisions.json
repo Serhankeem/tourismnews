@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-13T00:20:24+09:00",
+  "checked_at": "2026-11-13T02:33:03+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3854,6 +3854,60 @@
       "decision": "exclude"
     },
     {
+      "id": "9fb411de0b6bfd476d",
+      "title": "Hoteliers, read this before you adopt another AI tool",
+      "url": "https://www.hospitalitynet.org/opinion/4135453/hoteliers-read-this-before-you-adopt-another-ai-tool",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2982f3381617ddc0b6",
+      "title": "Are Hotels Getting Too Dependent on AI? Aviation Already Knows How This Story Ends",
+      "url": "https://www.hospitalitynet.org/opinion/4135452/are-hotels-getting-too-dependent-on-ai-aviation-already-knows-how-this-story-ends",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4be01a93f1c60b01b5",
+      "title": "OpenAI Buys an AI Travel Agent, Hotels Start Choosing Which AI Agents Get In, Should a Hotel Night Carry Its €5 Climate Cost?",
+      "url": "https://www.hospitalitynet.org/editorial/4135451/openai-buys-an-ai-travel-agent-hotels-start-choosing-which-ai-agents-get-in-should-a-hotel-night-carry-its-5-climate-cost",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "ea8bd2622a47a2a2a5",
       "title": "The Glitter Trap: When Luxury Hospitality Confuses Prestige with Performance",
       "url": "https://www.hospitalitynet.org/opinion/4135450/the-glitter-trap-when-luxury-hospitality-confuses-prestige-with-performance",
@@ -4191,60 +4245,6 @@
         "evidence_status": "industry_subject_in_feed"
       },
       "decision": "publish"
-    },
-    {
-      "id": "8dd70ce2a6737e5d9c",
-      "title": "“A Champion of Multilateralism”: UN Tourism Welcomes Secretary-General António Guterres to Madrid",
-      "url": "https://www.hospitalitynet.org/news/4135435/a-champion-of-multilateralism-un-tourism-welcomes-secretary-general-antonio-guterres-to-madrid",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "dbe8eb08d28a1fde48",
-      "title": "Standards are not about control. They are how quality lasts.",
-      "url": "https://www.hospitalitynet.org/opinion/4135434/standards-are-not-about-control-they-are-how-quality-lasts",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "d136fc5ea4baad977a",
-      "title": "The Bouncers Have Arrived: Hotels Start Choosing Which Machines Get In",
-      "url": "https://www.hospitalitynet.org/opinion/4135433/the-bouncers-have-arrived-hotels-start-choosing-which-machines-get-in",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
     }
   ]
 }
