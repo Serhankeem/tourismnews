@@ -1,0 +1,35 @@
+name: Market Weather ECOS Preflight
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Latest 3 published months; fx: FX only; all: FX first, then 8 only if FX passes'
+        type: choice
+        required: true
+        default: fx
+        options: [fx, all]
+permissions:
+  contents: read
+concurrency:
+  group: ecos-market-readonly-preflight
+  cancel-in-progress: false
+jobs:
+  preflight:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run isolated regression tests without the ECOS Secret
+        run: python -m unittest discover -s tests -v
+      - name: Verify official monthly series and write safe Summary
+        env:
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+          ECOS_PREFLIGHT_SCOPE: ${{ inputs.scope }}
+        run: python -m src.macro.ecos_market_preflight
