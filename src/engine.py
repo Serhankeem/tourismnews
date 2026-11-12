@@ -36,7 +36,7 @@ def valid_date(item, at, days):
     if not raw:
         return None
     parsed = c.timestamp(raw, dt.datetime.min.replace(tzinfo=c.KST))
-    return parsed if at - dt.timedelta(days=days) <= parsed <= at + dt.timedelta(minutes=5) else None
+    return parsed if at - dt.timedelta(days=days) <= parsed <= at else None
 
 
 OPERATING_POLICY = c.ROOT / 'operating_policy.json'
@@ -71,6 +71,8 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
     ledger = c.read_json(state_dir / 'discovery.json', {}).get('candidates', {})
     previous_ids = set(ledger)
     original_by_id = {a['id']: a for a in old_articles}
+    known_by_url = {c.url_identity(a['url']): a for a in ledger.values() if a.get('url')}
+    known_by_url.update({c.url_identity(a['url']): a for a in old_articles})
     metrics_doc = c.read_json(state_dir / 'source_metrics.json', {})
     source_metrics = metrics_doc.get('sources', {})
     providers = nd.configuration() if providers is None else providers
@@ -86,7 +88,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
         cohort = cohorts[sid] = {k: set() for k in ('observed', 'candidates', 'approved', 'rights_held', 'irrelevant')}
         row = {'id': sid, 'name': source['name'], 'url': source['url'], 'group': source.get('group', 'public'),
                'fetch_attempted': False, 'news_classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
-               'received': 0, 'new_discoveries': 0, 'duplicates': 0, 'rights_holds': 0, 'date_holds': 0, 'invalid_metadata': 0, 'outside_window': 0, 'attribution_holds': 0,
+               'received': 0, 'new_discoveries': 0, 'duplicates': 0, 'rights_holds': 0, 'date_holds': 0, 'invalid_metadata': 0, 'outside_window': 0, 'future_date_holds': 0, 'attribution_holds': 0,
                'classifications': {k: 0 for k in ('Direct', 'Indirect', 'Irrelevant')},
                'publication_policy': source.get('publication', {'status': 'review'}),
                'backfill': source.get('backfill', {'mode': 'provided_feed_only', 'max_days': days})}
@@ -122,7 +124,11 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                     continue
                 if 'description' not in source.get('analysis_fields', ['title']):
                     item = {k: v for k, v in item.items() if k not in ('description', 'summary')}
-                aid = hashlib.sha256(url.encode()).hexdigest()[:18]
+                # Keep the existing stored identity for HTTP/HTTPS, www and tracking variants.
+                prior_url = known_by_url.get(c.url_identity(url))
+                if prior_url:
+                    url = prior_url['url']
+                aid = prior_url['id'] if prior_url else hashlib.sha256(url.encode()).hexdigest()[:18]
                 if (not item.get('discovery_origin')
                         and original_by_id.get(aid, {}).get('discovery_origin')):
                     # An RSS echo cannot erase the original API's date, identity
@@ -133,8 +139,9 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                 raw_date = item.get('pubDate') or item.get('published')
                 if raw_date:
                     parsed_date = c.timestamp(raw_date, dt.datetime.min.replace(tzinfo=c.KST))
-                    if parsed_date != dt.datetime.min.replace(tzinfo=c.KST) and not at - dt.timedelta(days=source_days) <= parsed_date <= at + dt.timedelta(minutes=5):
+                    if parsed_date != dt.datetime.min.replace(tzinfo=c.KST) and not at - dt.timedelta(days=source_days) <= parsed_date <= at:
                         row['outside_window'] += 1
+                        row['future_date_holds'] += parsed_date > at
                         continue
                 modified = c.timestamp(item.get('modified_at'), dt.datetime.min.replace(tzinfo=c.KST))
                 if source.get('adapter') == 'govuk_search' and modified != dt.datetime.min.replace(tzinfo=c.KST) and modified < at - dt.timedelta(days=source_days):
@@ -158,7 +165,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                             row['date_lookup_error'] = str(exc)[:160]
                 sentinel = dt.datetime.min.replace(tzinfo=c.KST)
                 actual_date = c.timestamp(item.get('pubDate') or item.get('published'), sentinel)
-                if actual_date != sentinel and not at - dt.timedelta(days=source_days) <= actual_date <= at + dt.timedelta(minutes=5):
+                if actual_date != sentinel and not at - dt.timedelta(days=source_days) <= actual_date <= at:
                     row['outside_window'] += 1
                     continue
                 if assessment['label'] in row['classifications']:
@@ -219,6 +226,7 @@ def execute(sources, data_dir, state_dir, reviews=None, at=None, loader=None, da
                 if prior and prior.get('publication_status') == 'published' and status in ('rights_hold', 'date_hold'):
                     candidate = {**prior, 'last_seen_at': c.iso(at), 'source_ids': candidate['source_ids']}
                 ledger[aid] = candidate
+                known_by_url.setdefault(c.url_identity(url), candidate)
                 if permission(source) and published:
                     item = {**item, 'title': title, 'link': url}
                     approved_items.append(item)
