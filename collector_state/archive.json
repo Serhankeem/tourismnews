@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-12T14:25:36+09:00",
-  "last_successful_fetch": "2026-11-12T14:25:36+09:00",
+  "generated_at": "2026-11-12T15:25:18+09:00",
+  "last_successful_fetch": "2026-11-12T15:25:18+09:00",
   "count": 110,
   "mode": "live_rss",
   "articles": [
@@ -93,27 +93,30 @@
       "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
       "summary_type": "metadata_only",
       "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22845",
-      "relevance": 6,
+      "relevance": 7,
       "relevance_label": "Direct",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Direct",
         "decision": "publish",
         "category": "인바운드",
-        "score": 6,
+        "score": 7,
         "rules": [
-          "explicit_industry_subject"
+          "inbound_arrival_record"
         ],
         "signals": [
           {
             "field": "title",
             "terms": [
-              "외국인관광객"
+              "방한외국인",
+              "돌파"
             ]
           }
         ],
-        "impact_targets": [],
-        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "제목에 관광산업의 수요·공급·사업·정책 변화가 함께 명시되어 있습니다.",
         "evidence_status": "industry_subject_in_feed"
       },
       "related_sources": [
