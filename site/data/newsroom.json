@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-12T18:34:13+09:00",
-  "last_successful_fetch": "2026-11-12T18:34:13+09:00",
-  "count": 97,
+  "generated_at": "2026-11-12T20:29:09+09:00",
+  "last_successful_fetch": "2026-11-12T20:29:09+09:00",
+  "count": 98,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,16 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "GBTA Welcomes EU Tourism Strategy’s Vision for Sustainable and Competitive Travel",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-12T20:19:20+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135436/gbta-welcomes-eu-tourism-strategys-vision-for-sustainable-and-competitive-travel",
+      "category": "관광정책",
+      "keywords": [
+        "Tourism Strategy"
+      ]
+    },
     {
       "title": "방한 외국인 관광객 사상 첫 2,000만 명…14년 만에 두 배로",
       "source": "여행신문",

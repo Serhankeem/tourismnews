@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-12T18:34:13+09:00",
+  "checked_at": "2026-11-12T20:29:09+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3908,6 +3908,125 @@
       "decision": "exclude"
     },
     {
+      "id": "df0b421eaa3be2782c",
+      "title": "The Loneliness of Seniority",
+      "url": "https://www.hospitalitynet.org/opinion/4135438/the-loneliness-of-seniority",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ba207a5118dc923250",
+      "title": "The Compounding Cost of Customer Churn",
+      "url": "https://www.hospitalitynet.org/opinion/4135437/the-compounding-cost-of-customer-churn",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "297d3bc4bdf0d7da1d",
+      "title": "GBTA Welcomes EU Tourism Strategy’s Vision for Sustainable and Competitive Travel",
+      "url": "https://www.hospitalitynet.org/news/4135436/gbta-welcomes-eu-tourism-strategys-vision-for-sustainable-and-competitive-travel",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "관광정책",
+        "score": 8,
+        "rules": [
+          "english_industry_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "tourism strategy",
+              "strategy"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "8dd70ce2a6737e5d9c",
+      "title": "“A Champion of Multilateralism”: UN Tourism Welcomes Secretary-General António Guterres to Madrid",
+      "url": "https://www.hospitalitynet.org/news/4135435/a-champion-of-multilateralism-un-tourism-welcomes-secretary-general-antonio-guterres-to-madrid",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "dbe8eb08d28a1fde48",
+      "title": "Standards are not about control. They are how quality lasts.",
+      "url": "https://www.hospitalitynet.org/opinion/4135434/standards-are-not-about-control-they-are-how-quality-lasts",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "d136fc5ea4baad977a",
+      "title": "The Bouncers Have Arrived: Hotels Start Choosing Which Machines Get In",
+      "url": "https://www.hospitalitynet.org/opinion/4135433/the-bouncers-have-arrived-hotels-start-choosing-which-machines-get-in",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "ad2b03fec44e057e52",
       "title": "Knowledge Economic City to Host FHS Saudi Arabia 2027 Madinah Edition",
       "url": "https://www.hospitalitynet.org/news/4135432/knowledge-economic-city-to-host-fhs-saudi-arabia-2027-madinah-edition",
@@ -4145,147 +4264,6 @@
       "id": "17b8c2a057697e36f9",
       "title": "What the Federal Refrigeration Hack Warning Means for Hotels",
       "url": "https://www.hospitalitynet.org/opinion/4135416/what-the-federal-refrigeration-hack-warning-means-for-hotels",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "9ffce7ce873cc79c8b",
-      "title": "Lodging Dynamics Expands Florida Presence With Management of AC Hotel Miami Beach",
-      "url": "https://www.hospitalitynet.org/news/4135415/lodging-dynamics-expands-florida-presence-with-management-of-ac-hotel-miami-beach",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hotel",
-              "expand"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "d5ad70c316252e34e6",
-      "title": "UrVenue Expands Stripe Integration to Bring Modern Payment Technology to Resorts and Hospitality",
-      "url": "https://www.hospitalitynet.org/news/4135414/urvenue-expands-stripe-integration-to-bring-modern-payment-technology-to-resorts-and-hospitality",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hospitality",
-              "expand"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "52d1b32bc4bdc544e3",
-      "title": "The business of belonging: Building guest loyalty in a new era of personalization",
-      "url": "https://www.hospitalitynet.org/podcast/4135413/the-business-of-belonging-building-guest-loyalty-in-a-new-era-of-personalization",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "689aa283d04c3f8786",
-      "title": "WTTC Welcomes EU Sustainable Tourism Strategy and Calls for Stronger Public-Private Collaboration to Deliver Its Ambitions",
-      "url": "https://www.hospitalitynet.org/news/4135411/wttc-welcomes-eu-sustainable-tourism-strategy-and-calls-for-stronger-public-private-collaboration-to-deliver-its-ambitions",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "관광정책",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "tourism strategy",
-              "strategy"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "b459410cf34eca48fb",
-      "title": "Paris broke its monthly ADR record in October",
-      "url": "https://www.hospitalitynet.org/news/4135410/paris-broke-its-monthly-adr-record-in-october",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "81c860ae746c57402d",
-      "title": "Formula 1 drove Singapore hotel performance to all-time high",
-      "url": "https://www.hospitalitynet.org/news/4135409/formula-1-drove-singapore-hotel-performance-to-all-time-high",
       "source_id": "hospitalitynet",
       "relevance_evidence": {
         "rule_version": "0.2",
