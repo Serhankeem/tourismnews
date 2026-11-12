@@ -31,3 +31,32 @@ def comparisons(observations,period,exact=False):
         return None if exact and total>2**53-1 else total
     total,previous=ytd(year),ytd(year-1)
     return dict(mom_pct=rate(value,values.get(month_before(period))),yoy_pct=rate(value,values.get(f'{year-1:04}-{month:02}')),ytd_value=total,ytd_yoy_pct=rate(total,previous),reference_period=period,mom_base_period=month_before(period),yoy_base_period=f'{year-1:04}-{month:02}',ytd_range=[f'{year:04}-01',period])
+
+
+def decimal_value(raw):
+    """Canonical JSON-safe exact decimals; never accept binary floats/exponents."""
+    import re
+    if not isinstance(raw, str) or not re.fullmatch(r'(?:0|[1-9]\d{0,29})(?:\.\d{1,18})?', raw):
+        raise ValueError('decimal_value_invalid')
+    value = Decimal(raw)
+    text = format(value, 'f')
+    return text.rstrip('0').rstrip('.') if '.' in text else text
+
+
+def decimal_comparisons(observations, period):
+    """Exact decimal inputs, percent strings rounded to 6dp; no index/FX YTD sum."""
+    from decimal import localcontext
+    valid_period(period)
+    values = {p: Decimal(decimal_value(o['value'])) for p, o in observations.items()}
+    def rate(base_period):
+        current, base = values.get(period), values.get(base_period)
+        if current is None or base is None or base == 0:
+            return None
+        with localcontext() as context:
+            context.prec = 80
+            return format(((current/base-1)*100).quantize(Decimal('0.000001'), rounding=ROUND_HALF_UP), 'f')
+    prior = f'{int(period[:4])-1:04}-{period[5:]}'
+    return dict(reference_period=period, mom_pct=rate(month_before(period)),
+                yoy_pct=rate(prior), mom_base_period=month_before(period),
+                yoy_base_period=prior, percentage_precision=6,
+                aggregation_policy='no_ytd_sum_for_indices_or_exchange_rates')

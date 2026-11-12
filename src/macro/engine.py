@@ -5,7 +5,7 @@ import datetime as dt
 import json
 import os
 from pathlib import Path
-from . import kto, ecos, tourgo
+from . import kto, ecos, tourgo, ecos_decimal, decimal_series
 from .balance import permitted
 from .model import comparisons, months, month_before, valid_period
 from .transport import Loader
@@ -24,6 +24,8 @@ def public_view(config,archive,now,operating_policy=None):
     policy=read(ROOT/'operating_policy.json',{}) if operating_policy is None else operating_policy
     tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date()) if tourgo.terms_confirmed(tourgo_source,policy,now.date()) else {}
     for item in config['indicators']:
+        # Private decimal series have no public projection, even if flags change.
+        if item.get('value_kind') in decimal_series.KINDS:continue
         source=next((s for s in config['sources'] if s['id']==item['source_id']), {})
         if (not item.get('enabled') or not source.get('enabled')
                 or (source.get('requires_approval') and not permitted(source, 'publication', now.date()))
@@ -65,6 +67,7 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         if not isinstance(archive,dict):raise ValueError('archive_schema_invalid')
         if archive.get('schema_version')!=1 or not isinstance(archive.get('indicators'),dict) or not isinstance(archive.get('sources'),dict):raise ValueError('archive_schema_invalid')
         if any(not isinstance(v,dict) for v in archive['sources'].values()):raise ValueError('archive_sources_invalid')
+        decimal_series.validate_archive(archive)
         for saved in archive['indicators'].values():
             if not isinstance(saved,dict) or not isinstance(saved.get('observations'),dict) or not isinstance(saved.get('revisions'),list):raise ValueError('archive_records_invalid')
             for period,record in saved['observations'].items():
@@ -77,6 +80,33 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         if only_sources is not None and source['id'] not in only_sources:continue
         sid=source['id'];previous=archive['sources'].get(sid,{})
         result=dict(id=sid,name=source['name'],status='not_connected',reason=source.get('reason'),last_successful_check=previous.get('last_successful_check'))
+        if source.get('method') == ecos_decimal.METHOD:
+            previous=archive.get('decimal_sources',{}).get(sid,{})
+            result.update(last_successful_check=previous.get('last_successful_check'),publication_status='blocked')
+            active=[i for i in config['indicators'] if i.get('enabled') and i['source_id']==sid]
+            if not source.get('enabled') or not ecos_decimal.reviewed(source):
+                result.update(collection_state='disabled' if not source.get('enabled') else 'collection_review_required')
+            elif not active:
+                result.update(collection_state='indicators_disabled')
+            elif not force and previous.get('last_successful_check','')[:10]==now.date().isoformat():
+                result.update(status='not_due',collection_state='not_due');skipped+=1
+            else:
+                attempts+=1
+                try:
+                    snapshot=ecos_decimal.fetch(source,active,client=ecos_client,now=now)
+                    staged,counts=decimal_series.merge(archive,source,active,snapshot,now)
+                    archive=staged;success+=1
+                    for k,v in counts.items():health[k]+=v
+                    result.update(status='ok',reason=None,collection_state='private_validated',
+                        reference_period=snapshot['reference_period'],last_successful_check=now.isoformat(),
+                        collection_mode=snapshot['collection_mode'],authentication_verified=snapshot['authentication_verified'],
+                        observations=sum(len(r) for r in snapshot['records'].values()),**counts)
+                except Exception:
+                    # Never echo exception text, provider bodies, URLs, or a reflected key.
+                    result.update(status='error',collection_state='failed_retained',error_kind='decimal_collection_or_validation_failed',
+                        reason='신규 비공개 계열 수집/검증 실패; 기존 검증값 보존',
+                        previous_data_preserved=bool(previous))
+            health['sources'].append(result);continue
         if sid==tourgo.SOURCE:
             result['collection_state']='manual_input_required' if tourgo.permitted(source,'collection',now.date()) else 'approval_required'
             if not tourgo.permitted(source,'collection',now.date()):
