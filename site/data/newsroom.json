@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-12T12:12:45+09:00",
-  "last_successful_fetch": "2026-11-12T12:12:45+09:00",
-  "count": 95,
+  "generated_at": "2026-11-12T13:07:44+09:00",
+  "last_successful_fetch": "2026-11-12T13:07:44+09:00",
+  "count": 96,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,16 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "방한 외국인 관광객 2,000만 명 돌파, 대한민국 관광의 새 역사",
+      "source": "문화체육관광부 보도자료",
+      "published_at": "2026-11-12T13:03:29+09:00",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22845",
+      "category": "인바운드",
+      "keywords": [
+        "외국인관광객"
+      ]
+    },
     {
       "title": "[기획특집] 인구 2만 6000명대로 주저앉은 단양군...소멸위기 앞에 선 관광도시의 경고등",
       "source": "퍼블릭뉴스통신(TTL)",

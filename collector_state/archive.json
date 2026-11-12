@@ -1,11 +1,79 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-12T12:12:45+09:00",
-  "last_successful_fetch": "2026-11-12T12:12:45+09:00",
-  "count": 108,
+  "generated_at": "2026-11-12T13:07:44+09:00",
+  "last_successful_fetch": "2026-11-12T13:07:44+09:00",
+  "count": 109,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "5a38799d1eb973421d",
+      "published_at": "2026-11-12T13:03:29+09:00",
+      "date": "2026.11.12",
+      "category": "인바운드",
+      "source": "문화체육관광부 보도자료",
+      "source_id": "mcst_press",
+      "title": "방한 외국인 관광객 2,000만 명 돌파, 대한민국 관광의 새 역사",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22845",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "외국인관광객"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "문화체육관광부 보도자료"
+      ],
+      "first_discovered_at": "2026-11-12T13:07:44+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "terms_url": "https://www.mcst.go.kr/site/s_etc/rss/rssService.jsp",
+        "basis": "Existing official RSS service provides titles, dates and original links for metadata indexing; no article/description/image republication.",
+        "checked_at": "2026-10-27"
+      },
+      "first_published_by_engine_at": "2026-11-12T13:07:44+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "방한",
+            "rule": "explicit_korean_market"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
     {
       "id": "74e4146a12f8c50e05",
       "published_at": "2026-11-12T09:18:21+09:00",

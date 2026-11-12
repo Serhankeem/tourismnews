@@ -1,8 +1,36 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-12T12:12:45+09:00",
+  "checked_at": "2026-11-12T13:07:44+09:00",
   "scope": "successful_sources_this_run",
   "items": [
+    {
+      "id": "5a38799d1eb973421d",
+      "title": "방한 외국인 관광객 2,000만 명 돌파, 대한민국 관광의 새 역사",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22845",
+      "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "인바운드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "외국인관광객"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
     {
       "id": "f115bc814bad3f5017",
       "title": "대중문화예술 작품 뒤 숨은 주역 10명(팀), 무대 위 주인공으로",
@@ -165,24 +193,6 @@
       "id": "9ddaf9c8dbec6fcdb9",
       "title": "예술인의 세계 무대 도전 지원하는 ‘케이-아츠 온더고’, 2027년도 제1차 공모 시작",
       "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22836",
-      "source_id": "mcst_press",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "26f11bf0f14486e93d",
-      "title": "한국문화를 처음 만난 세계인의 이야기, ‘토크토크 코리아 2026’ 수상작 124편 발표",
-      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22835",
       "source_id": "mcst_press",
       "relevance_evidence": {
         "rule_version": "0.2",

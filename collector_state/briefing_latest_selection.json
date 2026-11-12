@@ -1,14 +1,29 @@
 {
-  "generated_at": "2026-11-12T12:12:45+09:00",
+  "generated_at": "2026-11-12T13:07:44+09:00",
   "mode": "live_rss",
   "decisions": [
+    {
+      "article_id": "5a38799d1eb973421d",
+      "decision": "selected",
+      "tier": "korea_direct",
+      "category": "인바운드",
+      "new_category": true,
+      "age_hours": 0.07,
+      "published_at": "2026-11-12T13:03:29+09:00",
+      "basis": [
+        "authorized_newsroom",
+        "verified_timestamp_last24h",
+        "korea_priority_then_category_diversity",
+        "conservative_title_similarity"
+      ]
+    },
     {
       "article_id": "3d6a671f946fa1d0ed",
       "decision": "selected",
       "tier": "korea_direct",
       "category": "문화·트렌드",
       "new_category": true,
-      "age_hours": 14.43,
+      "age_hours": 15.34,
       "published_at": "2026-11-11T21:47:10+09:00",
       "basis": [
         "authorized_newsroom",

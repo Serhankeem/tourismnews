@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-12T12:12:45+09:00",
+  "generated_at": "2026-11-12T13:07:44+09:00",
   "briefing_date": "2026-11-12",
-  "last_successful_fetch": "2026-11-12T12:12:45+09:00",
+  "last_successful_fetch": "2026-11-12T13:07:44+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 9,
-  "selected_count": 1,
+  "recent_news_count": 10,
+  "selected_count": 2,
   "collection": {
     "status": "partial",
     "successful_sources": 18,
@@ -15,6 +15,16 @@
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
   "items": [
+    {
+      "title": "방한 외국인 관광객 2,000만 명 돌파, 대한민국 관광의 새 역사",
+      "source": "문화체육관광부 보도자료",
+      "published_at": "2026-11-12T13:03:29+09:00",
+      "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22845",
+      "category": "인바운드",
+      "keywords": [
+        "외국인관광객"
+      ]
+    },
     {
       "title": "한국관광공사, 감사원과 ‘찾아가는 적극행정지원 설명회’ 개최",
       "source": "퍼블릭뉴스통신(TTL)",
