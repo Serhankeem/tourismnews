@@ -1,0 +1,241 @@
+{
+  "mode": "offline_original_observation_replay_not_authenticated",
+  "base_commit": "d78d69390773f100e6c6813ae80699b73e9168dd",
+  "original_response_count": 63,
+  "baseline_observations": 628,
+  "baseline_sha256": "d9d5e2df5197be687d2b0f7a423961b9f9fd95dbd9b202c2a374b9af84ee6f84",
+  "fx": {
+    "status": "simulation_only",
+    "authentication": "not_verified",
+    "scope": "fx",
+    "expansion": "not_requested",
+    "series": [
+      {
+        "id": "market_fxavg",
+        "status": "validated",
+        "stat_code": "731Y004",
+        "item_codes": [
+          "0000001",
+          "0000100"
+        ],
+        "unit": "원",
+        "base_year": null,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      }
+    ]
+  },
+  "all": {
+    "status": "simulation_only",
+    "authentication": "not_verified",
+    "scope": "all",
+    "expansion": "fx_gate_passed",
+    "series": [
+      {
+        "id": "market_fxavg",
+        "status": "validated",
+        "stat_code": "731Y004",
+        "item_codes": [
+          "0000001",
+          "0000100"
+        ],
+        "unit": "원",
+        "base_year": null,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      },
+      {
+        "id": "market_lodging",
+        "status": "validated",
+        "stat_code": "901Y038",
+        "item_codes": [
+          "I51ADA",
+          "2"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-07",
+        "latest_period": "2026-09",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 66
+      },
+      {
+        "id": "market_leisure",
+        "status": "validated",
+        "stat_code": "901Y038",
+        "item_codes": [
+          "I51AL",
+          "2"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-07",
+        "latest_period": "2026-09",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 66
+      },
+      {
+        "id": "market_cpilodging",
+        "status": "validated",
+        "stat_code": "901Y009",
+        "item_codes": [
+          "K02"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      },
+      {
+        "id": "market_cpihotel",
+        "status": "validated",
+        "stat_code": "901Y009",
+        "item_codes": [
+          "K02101"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      },
+      {
+        "id": "market_cpiinn",
+        "status": "validated",
+        "stat_code": "901Y009",
+        "item_codes": [
+          "K02102"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      },
+      {
+        "id": "market_cpicondo",
+        "status": "validated",
+        "stat_code": "901Y009",
+        "item_codes": [
+          "K02103"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      },
+      {
+        "id": "market_cpidomestic",
+        "status": "validated",
+        "stat_code": "901Y009",
+        "item_codes": [
+          "I06101"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      },
+      {
+        "id": "market_cpiforeign",
+        "status": "validated",
+        "stat_code": "901Y009",
+        "item_codes": [
+          "I06102"
+        ],
+        "unit": "2020=100",
+        "base_year": 2020,
+        "first_period": "2026-08",
+        "latest_period": "2026-10",
+        "response_count": 3,
+        "missing_count": 0,
+        "duplicate_count": 0,
+        "overlap_count": 3,
+        "matched_count": 3,
+        "correction_candidate_count": 0,
+        "new_period_count": 0,
+        "baseline_unqueried_count": 67
+      }
+    ]
+  },
+  "simulated_correction_candidate_count": 1,
+  "cpi_rebase_error": "baseline_change",
+  "authenticated_queries_run": 0,
+  "actions_executed": false,
+  "operational_flags_changed": false,
+  "operational_data_modified": false,
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "total": 623,
+    "focused": 29,
+    "result": "passed"
+  },
+  "operational_files_byte_identical": 30,
+  "existing_source_and_approval_configuration_unchanged": true
+}
