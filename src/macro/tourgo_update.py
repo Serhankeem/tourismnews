@@ -39,11 +39,14 @@ def deliver(output,env=None,now=None):
         delivery.fail('private_update_signed_owner_commit_required')
     blob=delivery.private_blobs(api,repo,commit,('manifest.json',*staging.SOURCE_FILES))
     manifest_raw=blob('manifest.json');manifest=delivery.decode_json(manifest_raw)
-    if (not isinstance(manifest,dict) or set(manifest)!={'schema_version','profile','files'}
+    if (not isinstance(manifest,dict) or set(manifest) not in ({'schema_version','profile','files'},{'schema_version','profile','files','period_range'})
             or manifest.get('schema_version')!=2 or manifest.get('profile')!='update'
             or not isinstance(manifest.get('files'),dict) or set(manifest['files'])!=set(staging.SOURCE_FILES)
             or any(not isinstance(v,str) or not re.fullmatch('[a-f0-9]{64}',v) for v in manifest['files'].values())):
         delivery.fail('private_update_manifest_invalid')
+    source=next(s for s in read(ROOT/'macro_sources.json')['sources'] if s['id']==tourgo.SOURCE)
+    declared=tourgo.input_range({k:manifest['files'][k+'.xls'] for k in tourgo.balance.KINDS},manifest.get('period_range'))
+    tourgo.require_range(source,'collection',declared)
     target=staging.external_directory(output)
     try:
         for name,expected in manifest['files'].items():
@@ -77,12 +80,15 @@ class RecurringRequest:
             if digest_file(root/'manifest.json')!=self.manifest_hash:raise ValueError('private_input_manifest_hash_mismatch')
             m=delivery.decode_json((root/'manifest.json').read_bytes())
             if set(m['files'])!=set(staging.SOURCE_FILES) or m.get('schema_version')!=2 or m.get('profile')!='update':raise ValueError('private_update_manifest_invalid')
+            source=next(s for s in read(code/'macro_sources.json')['sources'] if s['id']==tourgo.SOURCE)
+            declared=tourgo.input_range({k:m['files'][k+'.xls'] for k in tourgo.balance.KINDS},m.get('period_range'))
+            tourgo.require_range(source,'collection',declared)
             for name,expected in m['files'].items():
                 if (root/name).is_symlink() or digest_file(root/name)!=expected:raise ValueError('private_input_file_hash_mismatch')
             if delivery.decode_json((root/'source.json').read_bytes())!=staging.SOURCE:raise ValueError('tourgo_source_attestation_invalid')
             archive=read(Path(baseline)/'collector_state/macro_archive.json')
             paths={k:root/(k+'.xls') for k in tourgo.balance.KINDS}
-            ledger,expected=staging.OfficialFiles(paths,{k:m['files'][k+'.xls'] for k in tourgo.balance.KINDS}).load(archive,'update',now)
+            ledger,expected=staging.OfficialFiles(paths,{k:m['files'][k+'.xls'] for k in tourgo.balance.KINDS},source=source,requested_range=declared).load(archive,'update',now)
             quality=staging.assess(ledger,archive,'update',now);quality.update(rights);self.outcome=quality
             quality['publication_allowed']=False
             if quality['data_status']!='UNCHANGED':
@@ -103,7 +109,9 @@ class RecurringRequest:
                 'private_input_file_hash_mismatch','private_input_manifest_hash_mismatch','tourgo_source_attestation_invalid',
                 'balance_future_or_duplicate_period','balance_export_unit_or_year_mismatch','balance_identity_mismatch','tourgo_original_hash_mismatch'}
             reason=str(exc) if str(exc) in allowed else 'tourgo_input_validation_failed'
-            report('REJECTED',reason)
+            if str(exc) in ('tourgo_period_scope_exceeded','tourgo_period_scope_unverified'):
+                report('REVIEW_REQUIRED',str(exc))
+            else:report('REJECTED',reason)
             return None
 
     def verify_projection(self,root):return self.release.verify_projection(root)
@@ -115,7 +123,7 @@ def main():
     try:
         deliver(args.output);print('tourgo_update_private_input_verified; not_published');return 0
     except Exception as exc:
-        code=str(exc) if isinstance(exc,delivery.DeliveryError) else 'tourgo_update_delivery_blocked'
+        code=str(exc) if isinstance(exc,delivery.DeliveryError) or str(exc) in ('tourgo_period_scope_exceeded','tourgo_period_scope_unverified') else 'tourgo_update_delivery_blocked'
         print(code)
         if os.environ.get('GITHUB_STEP_SUMMARY'):
             with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write('## TOURGO update\n\nBlocked: `'+code+'`; no publication.\n')

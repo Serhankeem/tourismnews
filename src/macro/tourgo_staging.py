@@ -57,12 +57,17 @@ def saved_ledger(archive, now):
 
 class OfficialFiles:
     """Concrete adapter used by bootstrap AND recurring file-based updates."""
-    def __init__(self, paths, expected_hashes=None):
+    def __init__(self, paths, expected_hashes=None, *, source=None, requested_range=None):
         self.paths={k:Path(p) for k,p in paths.items()}
         self.expected=expected_hashes
+        self.source=source if source is not None else tourgo.configured_source()
+        self.requested_range=requested_range
 
     def load(self, archive, profile, now):
         if profile not in ('initial','update') or set(self.paths)!=set(balance.KINDS):raise ValueError('tourgo_file_profile_invalid')
+        declared=self.requested_range
+        if declared is None and profile=='initial' and (self.expected is None or self.expected==INITIAL_HASHES):declared=tourgo.INITIAL_PERIOD_RANGE
+        declared=tourgo.require_range(self.source,'collection',tourgo.input_range(self.expected,declared))
         for p in self.paths.values():
             if not p.is_file() or p.is_symlink() or p.stat().st_size>4*1024*1024:raise ValueError('tourgo_original_file_invalid')
         hashes={k:digest_file(p) for k,p in self.paths.items()}
@@ -71,7 +76,7 @@ class OfficialFiles:
         previous=saved_ledger(archive,now)
         if (profile=='initial')==bool(previous):raise ValueError('tourgo_initial_update_state_mismatch')
         with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
-            parsed=tourgo.from_files(self.paths,expected,now)
+            parsed=tourgo.from_files(self.paths,expected,now,source=self.source,requested_range=declared)
         periods=set(parsed['series']['receipts'])
         if min(periods)<'2021-01' or periods!=set(months(min(periods),max(periods))):raise ValueError('tourgo_missing_or_out_of_scope_period')
         if profile=='initial' and periods!=set(months('2021-01','2026-09')):raise ValueError('tourgo_initial_69_months_required')
@@ -131,42 +136,53 @@ def external_directory(target):
     return target
 
 
-def manifest(root,names,profile,schema):
+def manifest(root,names,profile,schema,requested_range=None):
     doc=dict(schema_version=schema,profile=profile,files={name:digest_file(root/name) for name in names})
+    if requested_range is not None:doc['period_range']=tourgo.period_range(requested_range)
     write_atomic(root/'manifest.json',doc);(root/'manifest.json').chmod(0o600)
     return doc
 
 
-def source_package(paths,output,reviewed):
+def source_package(paths,output,reviewed,*,source=None,requested_range=None):
     """One upload per month: originals + generated provenance/manifest, no ledger."""
     if reviewed is not True:raise ValueError('tourgo_operator_source_review_required')
+    source=source if source is not None else tourgo.configured_source()
+    requested_range=tourgo.require_range(source,'collection',requested_range)
+    # The owner declares this range BEFORE any original is opened. Check the
+    # actual parsed periods before copying any data into the private package.
+    if set(paths)!=set(balance.KINDS):raise ValueError('tourgo_three_originals_required')
+    for p in paths.values():
+        p=Path(p)
+        if p.is_symlink() or not p.is_file() or p.stat().st_size>4*1024*1024:raise ValueError('tourgo_original_file_invalid')
+    expected={k:digest_file(p) for k,p in paths.items()}
+    with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
+        tourgo.from_files(paths,expected,dt.datetime.now(dt.timezone(dt.timedelta(hours=9))),source=source,requested_range=requested_range)
     target=external_directory(output)
     try:
         if set(paths)!=set(balance.KINDS):raise ValueError('tourgo_three_originals_required')
         for kind,p in paths.items():
-            p=Path(p)
-            if p.is_symlink() or not p.is_file() or p.stat().st_size>4*1024*1024:raise ValueError('tourgo_original_file_invalid')
-            original_hash=digest_file(p)
-            shutil.copyfile(p,target/(kind+'.xls'));(target/(kind+'.xls')).chmod(0o600)
-            if digest_file(p)!=original_hash or digest_file(target/(kind+'.xls'))!=original_hash:
-                raise ValueError('tourgo_original_changed_during_packaging')
+            raw=Path(p).read_bytes()
+            if tourgo.digest(raw)!=expected[kind]:raise ValueError('tourgo_original_changed_during_packaging')
+            (target/(kind+'.xls')).write_bytes(raw);(target/(kind+'.xls')).chmod(0o600)
         write_atomic(target/'source.json',SOURCE);(target/'source.json').chmod(0o600)
-        return manifest(target,SOURCE_FILES,'update',2)
+        return manifest(target,SOURCE_FILES,'update',2,requested_range)
     except Exception:
         shutil.rmtree(target);raise
 
 
-def release_package(paths,baseline,output,profile,now,reviewed,code=ROOT):
+def release_package(paths,baseline,output,profile,now,reviewed,code=ROOT,requested_range=None):
     """Bootstrap/review exception: generate all old 6-file handoff automatically."""
     if reviewed is not True:raise ValueError('tourgo_operator_source_review_required')
     target=external_directory(output)
     try:
-        ledger,expected=OfficialFiles(paths).load(read(Path(baseline)/'collector_state/macro_archive.json'),profile,now)
+        ledger,expected=OfficialFiles(paths,source=next(s for s in read(Path(code)/'macro_sources.json')['sources'] if s['id']==tourgo.SOURCE),requested_range=requested_range).load(read(Path(baseline)/'collector_state/macro_archive.json'),profile,now)
         stage(ledger,baseline,target/'staging',expected,profile,now,code=code)
         package=target/'input';package.mkdir(mode=0o700)
         for name,src in [('ledger.json',target/'staging/validated-input.json'),('receipt.json',target/'staging/readiness.json')]+[(k+'.xls',Path(p)) for k,p in paths.items()]:
-            shutil.copyfile(src,package/name);(package/name).chmod(0o600)
-        return manifest(package,('ledger.json','receipt.json',*ORIGINALS),profile,1)
+            raw=src.read_bytes()
+            if name.endswith('.xls') and tourgo.digest(raw)!=expected[name[:-4]]:raise ValueError('tourgo_original_hash_mismatch')
+            (package/name).write_bytes(raw);(package/name).chmod(0o600)
+        return manifest(package,('ledger.json','receipt.json',*ORIGINALS),profile,1,dict(period_from=min(ledger['series']['receipts']),period_through=ledger['latest_period']))
     except Exception:
         shutil.rmtree(target);raise
 
@@ -177,19 +193,21 @@ def main():
     p.add_argument('--output',type=Path,required=True);p.add_argument('--baseline-root',type=Path)
     p.add_argument('--profile',choices=['initial','update'],default='update');p.add_argument('--official-source-reviewed',action='store_true')
     for kind in balance.KINDS:p.add_argument('--'+kind,type=Path,required=True)
+    p.add_argument('--period-from');p.add_argument('--period-through')
     args=p.parse_args();paths={k:getattr(args,k) for k in balance.KINDS};now=dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
+    declared=None if args.period_from is None and args.period_through is None else dict(period_from=args.period_from,period_through=args.period_through)
     try:
         if args.operation=='source-package':
-            source_package(paths,args.output,args.official_source_reviewed)
+            source_package(paths,args.output,args.official_source_reviewed,requested_range=declared)
             print('tourgo_private_source_package_created; no_publication')
         elif args.operation=='release-package':
             if args.baseline_root is None:raise ValueError('tourgo_baseline_required')
-            release_package(paths,args.baseline_root,args.output,args.profile,now,args.official_source_reviewed)
+            release_package(paths,args.baseline_root,args.output,args.profile,now,args.official_source_reviewed,requested_range=declared)
             print('tourgo_private_release_package_created; review_staging_before_publication')
         else:
             if args.baseline_root is None:raise ValueError('tourgo_baseline_required')
             archive=read(args.baseline_root/'collector_state/macro_archive.json')
-            ledger,_=OfficialFiles(paths).load(archive,args.profile,now)
+            ledger,_=OfficialFiles(paths,requested_range=declared).load(archive,args.profile,now)
             report=assess(ledger,archive,args.profile,now)
             rights=gates(read(ROOT/'macro_sources.json'),read(ROOT/'operating_policy.json'),now);report.update(rights)
             if not rights['collection_allowed'] or not rights['publication_allowed']:
@@ -204,8 +222,9 @@ def main():
             write_atomic(target/'quality.json',report);(target/'quality.json').chmod(0o600)
             print(json.dumps(report,ensure_ascii=False))
         return 0
-    except Exception:
-        print('tourgo_staging_rejected; previous_data_unchanged')
+    except Exception as exc:
+        reason=str(exc) if str(exc) in ('tourgo_period_scope_exceeded','tourgo_period_scope_unverified') else 'input_validation_failed'
+        print('tourgo_staging_rejected: '+reason+'; previous_data_unchanged')
         return 1
 
 

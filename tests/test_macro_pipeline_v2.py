@@ -45,8 +45,9 @@ def originals(root,values):
 def parse_fake(path,kind,now):return balance.parse_rows(json.loads(Path(path).read_text()),kind,now)
 
 
-def delivered(root,paths):
-    staging.source_package(paths,root,True)
+def delivered(root,paths,source):
+    with patch.object(balance,'read_xls',side_effect=parse_fake):
+        staging.source_package(paths,root,True,source=source,requested_range=tourgo.approved_range(source,'collection'))
     (root/'delivery.json').write_text(json.dumps({'schema_version':2,'manifest_sha256':release.digest_file(root/'manifest.json')}))
     return update.RecurringRequest(root)
 
@@ -71,9 +72,10 @@ class AdapterQualityTests(unittest.TestCase):
 
     def test_source_review_is_required_and_no_ledger_receipt_or_manual_hash_needed(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp);paths=originals(root/'source',values70())
+            root=Path(tmp);paths=originals(root/'source',tourgo.validate_ledger(synthetic69(),NOW))
             with self.assertRaises(ValueError):staging.source_package(paths,root/'bad',False)
-            m=staging.source_package(paths,root/'package',True)
+            with patch.object(balance,'read_xls',side_effect=parse_fake):
+                m=staging.source_package(paths,root/'package',True,requested_range=tourgo.INITIAL_PERIOD_RANGE)
             self.assertEqual(m['profile'],'update');self.assertEqual(m['schema_version'],2)
             self.assertEqual(set(m['files']),set(staging.SOURCE_FILES))
             self.assertFalse((root/'package/ledger.json').exists());self.assertFalse((root/'package/receipt.json').exists())
@@ -81,12 +83,12 @@ class AdapterQualityTests(unittest.TestCase):
 
     def test_missing_future_duplicate_month_wrong_unit_and_identity_are_rejected(self):
         for mode in ('gap','future','duplicate','unit','identity'):
-            v=values70()
+            v=tourgo.validate_ledger(synthetic69(),NOW)
             if mode=='gap':
                 for kind in v:del v[kind]['2024-03']
             if mode=='future':
                 for kind in v:v[kind]['2026-11']=1 if kind!='balance' else 0
-            if mode=='identity':v['balance']['2026-10']+=1
+            if mode=='identity':v['balance']['2026-09']+=1
             with tempfile.TemporaryDirectory() as tmp:
                 root=Path(tmp);paths=originals(root/'files',v)
                 if mode=='duplicate':
@@ -95,7 +97,7 @@ class AdapterQualityTests(unittest.TestCase):
                 with patch.object(balance,'read_xls',side_effect=parse_fake),self.assertRaises(ValueError):
                     # Use an empty baseline with update deliberately rejected at
                     # the bootstrap boundary; parse independently to exercise errors.
-                    parsed=tourgo.from_files(paths,{k:release.digest_file(p) for k,p in paths.items()},NOW)
+                    parsed=tourgo.from_files(paths,{k:release.digest_file(p) for k,p in paths.items()},NOW,requested_range=tourgo.INITIAL_PERIOD_RANGE)
                     staging.assess(parsed,read(ROOT/'collector_state/macro_archive.json'),'initial',NOW)
 
     def test_gate_never_promotes_collection_to_publication_or_changes_config(self):
@@ -126,7 +128,9 @@ class UpdateAPI(FakeAPI):
 class RecurringTransportTests(unittest.TestCase):
     def test_only_signed_owner_private_commit_and_real_protection_are_accepted(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp);paths=originals(root/'files',values70());staging.source_package(paths,root/'package',True)
+            root=Path(tmp);paths=originals(root/'files',tourgo.validate_ledger(synthetic69(),NOW))
+            with patch.object(balance,'read_xls',side_effect=parse_fake):
+                staging.source_package(paths,root/'package',True,requested_range=tourgo.INITIAL_PERIOD_RANGE)
             cfg=activation.plan(read(ROOT/'macro_sources.json'),read(ROOT/'operating_policy.json'),approval(),NOW)
             def settings(p):return cfg if Path(p).name=='macro_sources.json' else read(ROOT/'operating_policy.json')
             env=environment();env.update(GITHUB_WORKFLOW=update.WORKFLOW,TOURGO_INPUT_TOKEN='SYNTHETIC',TOURGO_INPUT_REPOSITORY='trusted/private-tourgo')
@@ -167,6 +171,8 @@ class RecurringTransactionTests(PipelineHarness):
         for name in release.IMPLEMENTATION:
             target=self.code/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/name,target)
         self.config=activation.plan(read(self.code/'macro_sources.json'),read(self.code/'operating_policy.json'),approval(),NOW)
+        # Separate synthetic future approval only in the local bare-Git fixture.
+        for grant in next(s for s in self.config['sources'] if s['id']==tourgo.SOURCE)['approval'].values():grant['period_through']='2026-10'
         (self.code/'macro_sources.json').write_text(json.dumps(self.config))
         self.kto=kto_snapshot(read(self.code/'collector_state/macro_archive.json'))
         from src.macro.engine import collect
@@ -176,7 +182,7 @@ class RecurringTransactionTests(PipelineHarness):
 
     def input(self,values=None):
         self.counter+=1;paths=originals(self.root/('originals-'+str(self.counter)),values or values70())
-        return delivered(self.root/('input-'+str(self.counter)),paths)
+        return delivered(self.root/('input-'+str(self.counter)),paths,next(s for s in self.config['sources'] if s['id']==tourgo.SOURCE))
 
     def run_update(self,request):
         work=self.root/('update-'+str(len(list(self.root.glob('update-*')))))
@@ -252,7 +258,7 @@ class RecurringTransactionTests(PipelineHarness):
         v=tourgo.validate_ledger(synthetic69(),NOW);v['receipts']['2024-03']+=4;v['balance']['2024-03']+=4
         paths=originals(self.root/'reviewed-originals',v);baseline=self.reader()
         with patch.object(balance,'read_xls',side_effect=parse_fake):
-            staging.release_package(paths,baseline.path,self.root/'reviewed-release','update',NOW,True,code=self.code)
+            staging.release_package(paths,baseline.path,self.root/'reviewed-release','update',NOW,True,code=self.code,requested_range=tourgo.INITIAL_PERIOD_RANGE)
         p=self.root/'reviewed-release/input';request=delivery.request(p,release.digest_file(p/'manifest.json'))
         r=self.run_update(request);self.assertTrue(r['ready'])
         saved=read(self.reader().path/'collector_state/macro_archive.json');self.assertTrue(saved['indicators'][tourgo.IDS[0]]['revisions'])

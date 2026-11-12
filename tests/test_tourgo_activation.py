@@ -31,6 +31,7 @@ class FakeAPI:
         self.rules=dict(can_admins_bypass=False,protection_rules=[dict(type='wait_timer',wait_timer=10)],deployment_branch_policy=dict(custom_branch_policies=True))
         self.branches=dict(total_count=1,branch_policies=[dict(name='main',type='branch')])
         self.raw={name:b'SYNTHETIC PRIVATE INPUT '+name.encode() for name in delivery.NAMES}
+        self.raw['ledger.json']=json.dumps(synthetic69()).encode()
         self.raw['receipt.json']=json.dumps(dict(profile='initial')).encode()
         self.pins={k:tourgo.digest(self.raw[k+'.xls']) for k in release.INITIAL_HASHES}
         self.raw['manifest.json']=json.dumps(dict(schema_version=1,profile='initial',files={k:tourgo.digest(v) for k,v in self.raw.items()})).encode()

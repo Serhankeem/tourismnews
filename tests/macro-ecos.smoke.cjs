@@ -11,7 +11,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
   const original7=raw.indicators.filter(i=>i.connected);assert.equal(original7.length,7);assert.ok(original7.every(i=>i.unit==='명'));
   const fixture=structuredClone(raw),now=new Date().toISOString(),financial=['kto_tourism_receipts','kto_tourism_expenditure'];
   for(const [n,id] of financial.entries()){
-   const i=fixture.indicators.find(i=>i.id===id);Object.assign(i,{connected:true,enabled:true,value_kind:'money_nonnegative',unit:'US$',display_unit:'백만 US$',display_divisor:1000000,publisher:'한국은행 ECOS',source_url:'https://ecos.bok.or.kr/api/',first_period:'2025-08',latest_period:'2026-08',months:13});
+   const i=fixture.indicators.find(i=>i.id===id);Object.assign(i,{source_id:'ecos_general_travel',connected:true,enabled:true,value_kind:'money_nonnegative',unit:'US$',display_unit:'백만 US$',display_divisor:1000000,publisher:'한국은행 ECOS',source_url:'https://ecos.bok.or.kr/api/',first_period:'2025-08',latest_period:'2026-08',months:13});
    i.observations=Array.from({length:13},(_,index)=>{const date=new Date(Date.UTC(2025,7+index,1)),period=date.toISOString().slice(0,7);return {period,value:(n+1)*1000000+123456+index*100000,unit:'US$',frequency:'M',verification_status:'official_api_validated',collection_method:'official_ecos_api',source_unit:'백만달러',finality:'not_stated',release_published_at:null,original_publication_at:null,first_collected_at:now,last_collected_at:now,revision_status:'original'};});
    i.latest={...i.observations.at(-1),comparisons:{mom_pct:4.5,yoy_pct:10,ytd_value:null,ytd_yoy_pct:null,mom_base_period:'2026-07',yoy_base_period:'2025-08',ytd_range:['2026-01','2026-08']}};
   }

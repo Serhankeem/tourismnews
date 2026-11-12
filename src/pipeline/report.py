@@ -21,7 +21,7 @@ def render(result, deployment):
             value=quality.get(key,0)
             if type(value) is int and value>=0:lines.append('| '+label+' | '+str(value)+' |')
         reasons=quality.get('reasons',[])
-        allowed={'historical_revision_requires_review','large_monthly_change_requires_review','publication_approval_required',
+        allowed={'tourgo_period_scope_exceeded','tourgo_period_scope_unverified','historical_revision_requires_review','large_monthly_change_requires_review','publication_approval_required',
             'operating_mapping_not_activated','collection_approval_required','tourgo_input_validation_failed',
             'tourgo_missing_or_out_of_scope_period','tourgo_original_lost_existing_periods','tourgo_saved_source_or_unit_invalid',
             'private_input_file_hash_mismatch','private_input_manifest_hash_mismatch','tourgo_source_attestation_invalid',

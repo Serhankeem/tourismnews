@@ -1,10 +1,12 @@
 # Macro Monitor v2 — 1인 운영 매뉴얼
 
-**이번 PR은 실제 게시를 실행하지 않습니다. 수집 승인 ≠ 게시 승인입니다.**
+**현재 운영 상태: TOURGO 2021-01~2026-09 최초 69개월은 수집·게시 승인 및 홈페이지 공개가 완료됐습니다. 수집 승인 ≠ 게시 승인이며, 각 action의 기준월 범위는 독립적입니다.**
 
-현재 요청상 TOURGO 수집은 승인됐고 게시 승인은 없습니다. checked-in JSON은 여전히 enabled/collection/publication=false입니다. 이 차이를 임의로 덮어쓰지 않았습니다. 이미 부여한 수집 승인은 별도 설정 검토에서 근거·범위·시작일·종료일로 기록하고, 게시 승인은 소유자가 결정할 때만 추가하십시오. 매달 권한을 새로 만드는 절차가 아닙니다.
+현재 설정은 TOURGO enabled=true, collection/publication approved=true입니다. 이는 승인된 2021-01~2026-09 범위에만 적용됩니다. **2026-10 이후는 수집·게시 모두 미승인**이며, 후속 기준월은 별도 승인과 설정 검토 전까지 요청·수집·저장·게시하지 않습니다. 이번 보완은 기존 승인·공개 데이터를 변경하거나 게시를 실행하지 않습니다.
 
-일상 운영은 **공식 XLS 3개 준비 → 패키지 생성 한 번 → private 업로드 → 수동 실행 한 번**입니다. 정상 새 월은 기존 유효한 승인으로 처리됩니다. 본문/원본 파일을 공개 저장소나 Actions artifact에 올리지 마십시오.
+**Step 1 기간 제한:** collection/publication 승인 기준월은 각각 `2021-01~2026-09`입니다. `valid_until`은 실행 승인 유효일이며 수록월 상한이 아닙니다. 2026-10 이후 파일을 준비·업로드·요청하지 마십시오. 기간을 사전에 확인할 수 없는 입력은 보류됩니다.
+
+승인 범위 내 수동 갱신은 **공식 XLS 3개 준비 → 패키지 생성 한 번 → private 업로드 → 수동 실행 한 번**입니다. 현재 범위 밖의 새 월은 기존 승인으로 처리할 수 없습니다. 본문/원본 파일을 공개 저장소나 Actions artifact에 올리지 마십시오.
 
 ## 0. 최초 한 번 확인할 설정
 
@@ -22,9 +24,9 @@
 
 새 Secrets·쓰기 토큰·유료 저장소를 추가할 필요가 없습니다. 코드에서 Secrets나 환경 설정을 수정하지 않습니다. 이번 API 관측에서 보호 환경의 timer/bypass가 지정 정책과 다르게 반환됐으므로 실제 실행 전 소유자가 Settings와 live API를 확인해야 합니다. 코드 차단 조건을 완화해서 맞추지 마십시오.
 
-## 1. 새로운 통계 최초 등록 (Bootstrap)
+## 1. 새로운 통계 최초 등록 (Bootstrap · 완료된 절차 참고)
 
-**게시 승인 전에는 아래에서 비공개 staging/검토까지만 진행합니다.**
+**기존 69개월의 최초 게시는 완료됐으므로 initial 게시를 재실행하지 않습니다.** 아래는 최초 등록 절차 참고이며, 기존 승인 범위 내 정정은 4절의 update 절차를 사용합니다. 향후 새 대상이 미승인 상태라면 비공개 staging/검토까지만 진행하며, 그 결과는 운영 승인이 아닙니다.
 
 1. 공식 화면 <https://know.tour.go.kr/stat/koreaTourIncomeDis19Re.do>에서 수입·지출·수지 XLS 3개를 관리자가 준비합니다. 최초 대상은 고정 SHA의 2021-01~2026-09 69개월입니다.
 2. 최종 검토된 최신 main을 읽기 전용 작업 checkout으로 사용하고 최신 `data/live`를 별도 안전한 경로에 복원합니다. 예시(관리자 로컬):
@@ -54,9 +56,9 @@ python -m src.macro.tourgo_staging release-package --profile initial \
 
 ## 2. 정상 월별 파일 업데이트
 
-최초 게시가 완료되고 해당 기간의 collection/publication 승인이 유효할 때 사용합니다. 현재 TOURGO 공식 자동 다운로드는 미확인/비활성이므로 원본 준비는 관리자 단계입니다.
+최초 게시가 완료되고 해당 **기준월 범위**의 collection/publication 승인이 유효할 때 사용합니다. 현재는 2026-09까지이며 이후 월은 별도 승인 전 차단합니다. 현재 TOURGO 공식 자동 다운로드는 미확인/비활성이므로 원본 준비는 관리자 단계입니다.
 
-1. 같은 공식 화면에서 **2021-01부터 새 기준월까지 전체 기간**의 XLS 3개를 준비합니다. 같은 기준기간과 원본 천 US$를 확인합니다. 일부 월만 받은 파일로 기존 월을 대체하지 않습니다.
+1. 같은 공식 화면에서 **승인된 2021-01~2026-09 전체 기간**의 XLS 3개를 준비합니다. 같은 기준기간과 원본 천 US$를 확인합니다. 일부 월만 받은 파일로 기존 월을 대체하지 않습니다.
 2. 새 안전한 디렉터리에 한 명령으로 업로드 묶음을 만듭니다.
 
 ```sh
@@ -64,10 +66,11 @@ python -m src.macro.tourgo_staging source-package \
   --receipts /secure/new/receipts.xls \
   --expenditure /secure/new/expenditure.xls \
   --balance /secure/new/balance.xls \
-  --output /secure/monthly-package-new --official-source-reviewed
+  --output /secure/monthly-package-new --official-source-reviewed \
+  --period-from 2021-01 --period-through 2026-09
 ```
 
-`--official-source-reviewed`는 원본을 공식 화면에서 받았음을 소유자가 확인했다는 뜻입니다. 기관/운영 게시 승인을 부여하거나 해시 자체로 공식성을 증명하는 옵션이 아닙니다.
+`--official-source-reviewed`와 두 기간 인자는 소유자가 공식 원본과 그 범위를 확인했다는 뜻입니다. 생성 manifest의 `period_range`는 파일 해시에 묶여 서명된 입력 커밋에서 검증됩니다. 기간 선언은 원본을 읽기 전에 확인하고, 파싱 결과가 다르면 패키지를 저장하지 않습니다. 기존 고정 69개월 해시는 기간을 확인할 수 있는 예외로 계속 지원합니다. 기관/운영 게시 승인을 부여하거나 해시 자체로 공식성을 증명하는 옵션이 아닙니다.
 
 3. GitHub 웹 UI에서 private repo의 **`updates` branch** 루트에 생성된 5파일을 업로드하고 owner 계정으로 commit합니다.
 
@@ -111,7 +114,7 @@ bootstrap 이후 데이터라면 `--profile update`를 사용합니다. `quality
 
 1. 자동 경로는 과거 값/최종 상태 변경 또는 새 월 급변(전월 대비 75% 초과)을 REVIEW_REQUIRED로 남기며 운영 값을 쓰지 않습니다. 원본 손상인지 진짜 공식 정정인지 확인합니다.
 2. 공식 표/정정 안내와 과거 값을 대조합니다. 변경을 정당화할 근거가 없으면 게시하지 않습니다.
-3. 최신 baseline으로 `release-package --profile update`를 실행해 private Preview와 6파일을 자동 생성합니다. 생성 명령은 1절과 같고 profile만 update입니다.
+3. 최신 baseline으로 `release-package --profile update`를 실행해 private Preview와 6파일을 자동 생성합니다. 생성 명령은 1절의 `profile=update`에 `--period-from 2021-01 --period-through 2026-09`를 추가합니다. 허용 범위를 설정값에서 자동 추정하지 않습니다.
 4. 변경 값·기존 원장 보존·정정 이력·공개 투영을 검토합니다. 기존 source 승인을 새로 만들지 않습니다. 범위/기간/조건이 유효한지 재확인합니다.
 5. 검토된 예외 패키지만 기존 pin 방식으로 지정하고 `TOURGO initial publication (manual)`의 **profile=update**를 명시해 실행합니다. 이름은 기존 초기 게시 workflow와 호환을 위해 유지합니다. 이 확인은 특정 정정 데이터에 대한 검토이며 새 데이터 유형에 대한 포괄 승인이 아닙니다.
 

@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def preview(ledger, output, baseline_root, now):
+    tourgo.require_ledger_scope(tourgo.configured_source(),'collection',ledger)
     tourgo.validate_ledger(ledger, now)
     output, baseline_root = Path(output).resolve(), Path(baseline_root).resolve()
     if output == ROOT or ROOT in output.parents or output in ROOT.parents or output.exists():
@@ -25,7 +26,7 @@ def preview(ledger, output, baseline_root, now):
     source = next(s for s in config['sources'] if s['id'] == tourgo.SOURCE)
     source['enabled'] = True
     for action in ('collection','publication'):
-        source['approval'][action] = dict(approved=True, scope='general_travel_monthly',
+        source['approval'][action] = dict(tourgo.approved_range(source,'collection'),approved=True, scope='general_travel_monthly',
             evidence_ref='isolated-preview-only-not-production-approval',valid_from=now.date().isoformat())
     for i in config['indicators']:
         if i['source_id'] == tourgo.SOURCE:i['enabled'] = True
@@ -52,6 +53,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--output', type=Path, required=True, help='New private directory outside repository')
     p.add_argument('--baseline-root', type=Path, default=ROOT, help='Read-only local snapshot containing site/data and collector_state')
+    p.add_argument('--period-from');p.add_argument('--period-through')
     p.add_argument('--ledger', type=Path)
     p.add_argument('--ledger-sha256', help='Independently reviewed private ledger file hash')
     for kind in KINDS:p.add_argument('--'+kind,type=Path)
@@ -59,14 +61,15 @@ def main():
     args = p.parse_args()
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=9)))
     try:
+        declared=None if args.period_from is None and args.period_through is None else dict(period_from=args.period_from,period_through=args.period_through)
         if args.ledger:
             if args.hash_manifest or any(getattr(args,k) for k in KINDS):
                 p.error('choose a private ledger OR three original XLS files')
-            ledger = tourgo.from_private_ledger(args.ledger,args.ledger_sha256,now)
+            ledger = tourgo.from_private_ledger(args.ledger,args.ledger_sha256,now,requested_range=declared)
         else:
             if not args.hash_manifest or not all(getattr(args,k) for k in KINDS) or args.ledger_sha256:
                 p.error('three original XLS files and reviewed hash-manifest are required')
-            ledger = tourgo.from_files({k:getattr(args,k) for k in KINDS},json.loads(args.hash_manifest.read_text()),now)
+            ledger = tourgo.from_files({k:getattr(args,k) for k in KINDS},json.loads(args.hash_manifest.read_text()),now,requested_range=declared)
         manifest = preview(ledger,args.output,args.baseline_root,now)
         print(json.dumps(manifest,ensure_ascii=False))
         return 0

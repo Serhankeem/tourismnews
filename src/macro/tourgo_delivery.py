@@ -123,7 +123,7 @@ def private_blobs(api,repository,commit,names):
     return blob
 
 
-def fetch_inputs(api, repository, commit, manifest_hash, output, profile='initial'):
+def fetch_inputs(api, repository, commit, manifest_hash, output, profile='initial', source=None):
     if (not isinstance(repository,str) or not re.fullmatch('[A-Za-z0-9][A-Za-z0-9-]{0,38}/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}',repository)
             or repository.lower()=='serhankeem/tourismnews'
             or not re.fullmatch('[a-f0-9]{40}',commit or '')
@@ -133,18 +133,34 @@ def fetch_inputs(api, repository, commit, manifest_hash, output, profile='initia
     manifest_raw=blob('manifest.json')
     if tourgo.digest(manifest_raw)!=manifest_hash:fail('private_input_manifest_hash_mismatch')
     manifest=decode_json(manifest_raw)
-    if not isinstance(manifest,dict) or set(manifest)!={'schema_version','profile','files'} or manifest.get('schema_version')!=1 or profile not in ('initial','update') or manifest.get('profile')!=profile:
+    if not isinstance(manifest,dict) or set(manifest) not in ({'schema_version','profile','files'},{'schema_version','profile','files','period_range'}) or manifest.get('schema_version')!=1 or profile not in ('initial','update') or manifest.get('profile')!=profile:
         fail('private_input_manifest_invalid')
     expected=manifest['files']
     if not isinstance(expected,dict) or set(expected)!=set(NAMES) or any(not isinstance(v,str) or not re.fullmatch('[a-f0-9]{64}',v) for v in expected.values()):
         fail('private_input_manifest_invalid')
     if profile=='initial' and any(expected[k+'.xls']!=v for k,v in INITIAL_HASHES.items()):fail('initial_original_hashes_required')
+    source=source if source is not None else tourgo.configured_source()
+    declared=manifest.get('period_range')
+    if declared is None and profile=='initial':declared=tourgo.INITIAL_PERIOD_RANGE
+    # Receipt is metadata, not a monetary dataset; inspect its reviewed bounds
+    # before requesting ledger/XLS blobs. Legacy bootstrap pins remain valid.
+    receipt_raw=blob('receipt.json')
+    if tourgo.digest(receipt_raw)!=expected['receipt.json']:fail('private_input_file_hash_mismatch')
+    receipt=decode_json(receipt_raw)
+    if declared is None:
+        declared=dict(period_from=receipt.get('first_period'),period_through=receipt.get('latest_period'))
+    for action in ('collection','publication'):
+        tourgo.require_range(source,action,declared)
+        if profile=='update' or any(k in receipt for k in ('first_period','latest_period')):
+            tourgo.require_periods(source,action,[receipt.get('first_period'),receipt.get('latest_period')],declared)
     output=Path(output).resolve()
     if output.exists() or output==ROOT or ROOT in output.parents:fail('new_private_temp_directory_required')
     output.mkdir(mode=0o700,parents=True)
     try:
         for name in NAMES:
-            raw=blob(name)
+            raw=receipt_raw if name=='receipt.json' else blob(name)
+            if name=='ledger.json':
+                for action in ('collection','publication'):tourgo.require_ledger_scope(source,action,decode_json(raw),declared)
             if tourgo.digest(raw)!=expected[name]:fail('private_input_file_hash_mismatch')
             target=output/name;target.write_bytes(raw);target.chmod(0o600)
         # The receipt is never re-signed or regenerated during delivery.
@@ -180,7 +196,7 @@ def prepare(output,env=None,now=None,profile='initial'):
     if plan(config,policy,approval,now)!=config:fail('activation_configuration_requires_review')
     api=GitHub(env.get('TOURGO_INPUT_TOKEN'))
     protected_context(api,env)
-    return fetch_inputs(api,env.get('TOURGO_INPUT_REPOSITORY'),env.get('TOURGO_INPUT_COMMIT'),env.get('TOURGO_MANIFEST_SHA256'),output,profile=profile)
+    return fetch_inputs(api,env.get('TOURGO_INPUT_REPOSITORY'),env.get('TOURGO_INPUT_COMMIT'),env.get('TOURGO_MANIFEST_SHA256'),output,profile=profile,source=source)
 
 
 def main():

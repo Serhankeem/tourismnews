@@ -20,7 +20,7 @@ def proof():
     return dict(data_origin='synthetic_test', unit=UNIT, sha256_by_kind={k:'0'*64 for k in KINDS})
 
 def source():
-    return dict(approval={a:dict(approved=True,scope='general_travel_monthly',evidence_ref='synthetic-test-only',valid_from='2026-01-01') for a in ('collection','publication')})
+    return dict(approval={a:dict(approved=True,scope='general_travel_monthly',evidence_ref='synthetic-test-only',valid_from='2026-01-01',period_from='2021-01',period_through='2026-09') for a in ('collection','publication')})
 
 class BalanceTests(unittest.TestCase):
     def test_verify_only_never_creates_private_or_public_files(self):
@@ -31,7 +31,7 @@ class BalanceTests(unittest.TestCase):
             argv=['balance_prepare', '--receipts', str(Path(root)/'in.xls'),
                   '--expenditure',str(Path(root)/'out.xls'),
                   '--balance',str(Path(root)/'net.xls'),
-                  '--private-dir',str(target), '--verify-only']
+                  '--private-dir',str(target), '--period-from','2021-01','--period-through','2026-09','--verify-only']
             with (patch.object(sys,'argv',argv),
                   patch.object(balance_prepare,'read_xls',side_effect=lambda path,kind,now:bundle()[kind]),
                   patch.object(balance_prepare,'write_atomic') as write):
@@ -59,7 +59,7 @@ class BalanceTests(unittest.TestCase):
         f=Mock();s=source();s['approval']['collection']['approved']=False
         with self.assertRaises(ValueError):approved_download(s,f,NOW.date())
         f.assert_not_called()
-        approved_download(source(),f,NOW.date());f.assert_called_once()
+        approved_download(source(),f,NOW.date(),requested_range=dict(period_from='2021-01',period_through='2026-09'));f.assert_called_once()
     def test_separate_publication_permission(self):
         s=source();s['approval']['publication']['approved']=False
         with self.assertRaises(ValueError):publication_view(s,{'data_origin':'official_export'},NOW.date())
