@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-12T20:29:09+09:00",
+  "generated_at": "2026-11-12T22:40:21+09:00",
   "mode": "live_rss",
   "decisions": [
     {
-      "article_id": "e2d0c312de48bd6153",
+      "article_id": "144875a6373b0f9e85",
       "decision": "selected",
       "tier": "korea_direct",
-      "category": "인바운드",
+      "category": "항공·숙박",
       "new_category": true,
-      "age_hours": 6.96,
-      "published_at": "2026-11-12T13:31:40+09:00",
+      "age_hours": 0.99,
+      "published_at": "2026-11-12T21:41:14+09:00",
       "basis": [
         "authorized_newsroom",
         "verified_timestamp_last24h",
@@ -18,13 +18,28 @@
       ]
     },
     {
-      "article_id": "3d6a671f946fa1d0ed",
+      "article_id": "f7619a78038895abae",
       "decision": "selected",
       "tier": "korea_direct",
-      "category": "문화·트렌드",
+      "category": "인바운드",
       "new_category": true,
-      "age_hours": 22.7,
-      "published_at": "2026-11-11T21:47:10+09:00",
+      "age_hours": 0.99,
+      "published_at": "2026-11-12T21:41:12+09:00",
+      "basis": [
+        "authorized_newsroom",
+        "verified_timestamp_last24h",
+        "korea_priority_then_category_diversity",
+        "conservative_title_similarity"
+      ]
+    },
+    {
+      "article_id": "e2d0c312de48bd6153",
+      "decision": "selected",
+      "tier": "korea_direct",
+      "category": "인바운드",
+      "new_category": false,
+      "age_hours": 9.14,
+      "published_at": "2026-11-12T13:31:40+09:00",
       "basis": [
         "authorized_newsroom",
         "verified_timestamp_last24h",
@@ -38,7 +53,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": false,
-      "age_hours": 7.43,
+      "age_hours": 9.61,
       "published_at": "2026-11-12T13:03:29+09:00",
       "basis": [
         "authorized_newsroom",
@@ -46,6 +61,12 @@
         "korea_priority_then_category_diversity",
         "conservative_title_similarity"
       ]
+    },
+    {
+      "article_id": "872496a979b0745835",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-12T21:41:15+09:00"
     },
     {
       "article_id": "297d3bc4bdf0d7da1d",
@@ -64,36 +85,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-12T08:07:24+09:00"
-    },
-    {
-      "article_id": "0b06705e0855067227",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-11T22:40:14+09:00"
-    },
-    {
-      "article_id": "9ffce7ce873cc79c8b",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-11T22:28:55+09:00"
-    },
-    {
-      "article_id": "c3fd1dfd180549c1d8",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-11T21:59:11+09:00"
-    },
-    {
-      "article_id": "d5ad70c316252e34e6",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-11T21:52:42+09:00"
-    },
-    {
-      "article_id": "689aa283d04c3f8786",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-11T21:35:30+09:00"
     }
   ]
 }
