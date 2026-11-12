@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-13T02:33:03+09:00",
+  "checked_at": "2026-11-13T04:22:31+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3854,6 +3854,24 @@
       "decision": "exclude"
     },
     {
+      "id": "19eea5ddbf4679691a",
+      "title": "From Booking to Check-In: How to Make the Most of Travel Tuesday",
+      "url": "https://www.hospitalitynet.org/opinion/4135454/from-booking-to-check-in-how-to-make-the-most-of-travel-tuesday",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "9fb411de0b6bfd476d",
       "title": "Hoteliers, read this before you adopt another AI tool",
       "url": "https://www.hospitalitynet.org/opinion/4135453/hoteliers-read-this-before-you-adopt-another-ai-tool",
@@ -3991,6 +4009,42 @@
       "decision": "exclude"
     },
     {
+      "id": "5d14c09bf9a587c078",
+      "title": "What Neuroscience Can Teach Hotels About Guest Wellness",
+      "url": "https://www.hospitalitynet.org/interview/4134968/what-neuroscience-can-teach-hotels-about-guest-wellness",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "48f148b6c71d969541",
+      "title": "How a Pearl Jam Post Turned a Stranger Into a Hotel Customer",
+      "url": "https://www.hospitalitynet.org/opinion/4135427/how-a-pearl-jam-post-turned-a-stranger-into-a-hotel-customer",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "feb2c9ab96676cc8f4",
       "title": "Inn-Flow Introduces AP Agent, Expanding AI-powered Capabilities Across Hotel Accounting Workflows",
       "url": "https://www.hospitalitynet.org/news/4135429/inn-flow-introduces-ap-agent-expanding-ai-powered-capabilities-across-hotel-accounting-workflows",
@@ -4018,42 +4072,6 @@
         "evidence_status": "industry_subject_in_feed"
       },
       "decision": "publish"
-    },
-    {
-      "id": "48f148b6c71d969541",
-      "title": "How a Pearl Jam Post Turned a Stranger Into a Hotel Customer",
-      "url": "https://www.hospitalitynet.org/opinion/4135427/how-a-pearl-jam-post-turned-a-stranger-into-a-hotel-customer",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "5d14c09bf9a587c078",
-      "title": "What Neuroscience Can Teach Hotels About Guest Wellness",
-      "url": "https://www.hospitalitynet.org/interview/4134968/what-neuroscience-can-teach-hotels-about-guest-wellness",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
     },
     {
       "id": "f04a1f3d45e6f266a5",
@@ -4216,35 +4234,6 @@
         "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
-    },
-    {
-      "id": "297d3bc4bdf0d7da1d",
-      "title": "GBTA Welcomes EU Tourism Strategy’s Vision for Sustainable and Competitive Travel",
-      "url": "https://www.hospitalitynet.org/news/4135436/gbta-welcomes-eu-tourism-strategys-vision-for-sustainable-and-competitive-travel",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "관광정책",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "tourism strategy",
-              "strategy"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
     }
   ]
 }
