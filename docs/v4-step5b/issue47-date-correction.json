@@ -1,0 +1,582 @@
+[
+  {
+    "index": 1,
+    "name": "경향신문",
+    "response_date": "2026-11-12T14:46:09+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 2,
+    "name": "국민일보",
+    "response_date": "2026-11-12T14:46:08+09:00",
+    "items": 100,
+    "recent7": 85,
+    "future": 15,
+    "missing_or_invalid": 0,
+    "previous_recent7": 85
+  },
+  {
+    "index": 3,
+    "name": "동아일보",
+    "response_date": "2026-11-12T14:46:07+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 4,
+    "name": "서울신문",
+    "response_date": "2026-11-12T14:46:11+09:00",
+    "items": 40,
+    "recent7": 40,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 40
+  },
+  {
+    "index": 5,
+    "name": "세계일보",
+    "response_date": "2026-11-12T14:46:10+09:00",
+    "items": 20,
+    "recent7": 20,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 20
+  },
+  {
+    "index": 6,
+    "name": "조선일보",
+    "response_date": "2026-11-12T14:46:10+09:00",
+    "items": 100,
+    "recent7": 100,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 100
+  },
+  {
+    "index": 7,
+    "name": "한겨레",
+    "response_date": "2026-11-12T14:46:12+09:00",
+    "items": 30,
+    "recent7": 0,
+    "future": 0,
+    "missing_or_invalid": 30,
+    "previous_recent7": 0
+  },
+  {
+    "index": 8,
+    "name": "EBN",
+    "response_date": "2026-11-12T14:19:11+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 9,
+    "name": "매일경제",
+    "response_date": "2026-11-12T14:45:58+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 10,
+    "name": "머니투데이",
+    "response_date": "2026-11-12T14:46:12+09:00",
+    "items": 100,
+    "recent7": 100,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 100
+  },
+  {
+    "index": 12,
+    "name": "브릿지경제",
+    "response_date": "2026-11-12T14:46:14+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 13,
+    "name": "서울경제",
+    "response_date": "2026-11-12T14:46:15+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 14,
+    "name": "서울파이낸스",
+    "response_date": "2026-11-12T13:55:07+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 15,
+    "name": "아시아경제",
+    "response_date": "2026-11-12T14:46:18+09:00",
+    "items": 100,
+    "recent7": 100,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 100
+  },
+  {
+    "index": 16,
+    "name": "아주경제",
+    "response_date": "2026-11-12T14:46:17+09:00",
+    "items": 1000,
+    "recent7": 1000,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 1000
+  },
+  {
+    "index": 17,
+    "name": "이데일리",
+    "response_date": "2026-11-12T14:46:22+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 18,
+    "name": "이투데이",
+    "response_date": "2026-11-12T14:46:19+09:00",
+    "items": 309,
+    "recent7": 309,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 309
+  },
+  {
+    "index": 19,
+    "name": "조선비즈",
+    "response_date": "2026-11-12T14:46:21+09:00",
+    "items": 100,
+    "recent7": 100,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 100
+  },
+  {
+    "index": 20,
+    "name": "조세일보",
+    "response_date": "2026-11-12T14:46:21+09:00",
+    "items": 20,
+    "recent7": 20,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 20
+  },
+  {
+    "index": 21,
+    "name": "파이낸셜뉴스",
+    "response_date": "2026-11-12T14:46:21+09:00",
+    "items": 387,
+    "recent7": 387,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 387
+  },
+  {
+    "index": 22,
+    "name": "프라임경제",
+    "response_date": "2026-11-12T14:46:25+09:00",
+    "items": 25,
+    "recent7": 25,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 25
+  },
+  {
+    "index": 23,
+    "name": "한국경제",
+    "response_date": "2026-11-12T14:45:54+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 24,
+    "name": "헤럴드경제",
+    "response_date": "2026-11-12T14:46:23+09:00",
+    "items": 300,
+    "recent7": 300,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 300
+  },
+  {
+    "index": 25,
+    "name": "IT동아",
+    "response_date": "2026-11-12T14:46:24+09:00",
+    "items": 100,
+    "recent7": 63,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 63
+  },
+  {
+    "index": 28,
+    "name": "블로터",
+    "response_date": "2026-11-12T14:12:57+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 29,
+    "name": "아이뉴스24",
+    "response_date": "2026-11-12T14:46:32+09:00",
+    "items": 100,
+    "recent7": 100,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 100
+  },
+  {
+    "index": 30,
+    "name": "전자신문",
+    "response_date": "2026-11-12T14:45:55+09:00",
+    "items": 30,
+    "recent7": 30,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 30
+  },
+  {
+    "index": 31,
+    "name": "지디넷코리아",
+    "response_date": "2026-11-12T14:46:33+09:00",
+    "items": 30,
+    "recent7": 30,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 30
+  },
+  {
+    "index": 32,
+    "name": "코메디닷컴",
+    "response_date": "2026-11-12T14:46:34+09:00",
+    "items": 10,
+    "recent7": 10,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 10
+  },
+  {
+    "index": 33,
+    "name": "테크M",
+    "response_date": "2026-11-12T14:46:36+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 34,
+    "name": "뉴시스",
+    "response_date": "2026-11-12T14:46:35+09:00",
+    "items": 100,
+    "recent7": 100,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 100
+  },
+  {
+    "index": 35,
+    "name": "연합뉴스 (기존 경제 RSS와 발행처 중복 점검)",
+    "response_date": "2026-11-12T14:46:36+09:00",
+    "items": 120,
+    "recent7": 120,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 120
+  },
+  {
+    "index": 36,
+    "name": "JTBC",
+    "response_date": "2026-11-12T14:46:37+09:00",
+    "items": 20,
+    "recent7": 0,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 0
+  },
+  {
+    "index": 37,
+    "name": "MBN",
+    "response_date": "2026-11-12T14:46:38+09:00",
+    "items": 30,
+    "recent7": 30,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 30
+  },
+  {
+    "index": 38,
+    "name": "SBS",
+    "response_date": "2026-11-12T14:46:37+09:00",
+    "items": 101,
+    "recent7": 101,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 101
+  },
+  {
+    "index": 39,
+    "name": "TV조선",
+    "response_date": "2026-11-12T14:46:39+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 40,
+    "name": "연합뉴스TV",
+    "response_date": "2026-11-12T14:46:41+09:00",
+    "items": 11,
+    "recent7": 11,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 11
+  },
+  {
+    "index": 41,
+    "name": "노컷뉴스",
+    "response_date": "2026-11-12T14:46:40+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 42,
+    "name": "데일리NK",
+    "response_date": "2026-11-12T14:46:41+09:00",
+    "items": 10,
+    "recent7": 10,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 10
+  },
+  {
+    "index": 43,
+    "name": "미디어오늘",
+    "response_date": "2026-11-12T14:46:42+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 44,
+    "name": "시사IN",
+    "response_date": "2026-11-12T14:46:43+09:00",
+    "items": 50,
+    "recent7": 0,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 0
+  },
+  {
+    "index": 45,
+    "name": "시사저널",
+    "response_date": "2026-11-12T14:46:43+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 46,
+    "name": "오마이뉴스",
+    "response_date": "2026-11-12T14:46:42+09:00",
+    "items": 20,
+    "recent7": 20,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 20
+  },
+  {
+    "index": 47,
+    "name": "주간경향",
+    "response_date": "2026-11-12T14:46:45+09:00",
+    "items": 50,
+    "recent7": 11,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 11
+  },
+  {
+    "index": 48,
+    "name": "폴리뉴스",
+    "response_date": "2026-11-12T14:46:44+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 49,
+    "name": "프레시안",
+    "response_date": "2026-11-12T14:46:44+09:00",
+    "items": 25,
+    "recent7": 25,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 25
+  },
+  {
+    "index": 50,
+    "name": "한겨레21",
+    "response_date": "2026-11-12T14:46:48+09:00",
+    "items": 30,
+    "recent7": 0,
+    "future": 0,
+    "missing_or_invalid": 30,
+    "previous_recent7": 0
+  },
+  {
+    "index": 51,
+    "name": "강원도민일보",
+    "response_date": "2026-11-12T14:46:46+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 52,
+    "name": "경남도민일보",
+    "response_date": "2026-11-12T14:46:49+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 53,
+    "name": "대전일보",
+    "response_date": "2026-11-12T14:46:49+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 54,
+    "name": "인천일보",
+    "response_date": "2026-11-12T14:46:49+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 55,
+    "name": "전남일보",
+    "response_date": "2026-11-12T13:53:25+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 56,
+    "name": "전북일보",
+    "response_date": "2026-11-12T14:46:51+09:00",
+    "items": 50,
+    "recent7": 49,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 49
+  },
+  {
+    "index": 57,
+    "name": "제주일보",
+    "response_date": "2026-11-12T14:46:50+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 58,
+    "name": "충청투데이",
+    "response_date": "2026-11-12T14:46:52+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 59,
+    "name": "한라일보",
+    "response_date": "2026-11-12T14:46:52+09:00",
+    "items": 30,
+    "recent7": 25,
+    "future": 4,
+    "missing_or_invalid": 0,
+    "previous_recent7": 25
+  },
+  {
+    "index": 60,
+    "name": "The Korea Herald",
+    "response_date": "2026-11-12T14:46:54+09:00",
+    "items": 50,
+    "recent7": 50,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 50
+  },
+  {
+    "index": 61,
+    "name": "The Korea Times",
+    "response_date": "2026-11-12T14:46:54+09:00",
+    "items": 82,
+    "recent7": 82,
+    "future": 0,
+    "missing_or_invalid": 0,
+    "previous_recent7": 82
+  }
+]

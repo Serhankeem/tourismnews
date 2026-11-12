@@ -13,6 +13,10 @@ import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
 
+# Aju's verified ~3.3 MiB current feed exceeds the old 2 MiB ceiling.
+# Keep a hard bound; do not remove response-size protection.
+MAX_METADATA_BYTES = 4 * 1024 * 1024
+
 USER_AGENT = 'TourismNews/0.3 (+https://github.com/Serhankeem/tourismnews; metadata-only)'
 
 
@@ -99,8 +103,8 @@ class Loader:
             self.last_request[base] = time.monotonic()
             try:
                 with self._open(req, retry_delay=delay) as response:
-                    data = response.read(2 * 1024 * 1024 + 1)
-                if len(data) > 2 * 1024 * 1024:
+                    data = response.read(MAX_METADATA_BYTES + 1)
+                if len(data) > MAX_METADATA_BYTES:
                     raise ValueError('metadata_response_too_large')
                 return data
             except urllib.error.HTTPError as exc:

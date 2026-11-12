@@ -994,6 +994,1351 @@
         "max_days": 90
       },
       "notes": "Existing RSS adapter remains discovery-only. NEW publication held by the existing review gate. Preserve the three previously collected records for this PR review; no body/images/excerpts. Public redistribution permission is not confirmed."
+    },
+    {
+      "id": "kr_ajunews",
+      "name": "아주경제",
+      "url": "https://www.ajunews.com/rss/sokbo.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.ajunews.com/rss/sokbo.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "아주경제",
+        "publisher_id": "ajunews",
+        "supply_route": "kr_ajunews"
+      },
+      "article_domains": [
+        "www.ajunews.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.ajunews.com/rss/sokbo.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_fnnews",
+      "name": "파이낸셜뉴스",
+      "url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "파이낸셜뉴스",
+        "publisher_id": "fnnews",
+        "supply_route": "kr_fnnews"
+      },
+      "article_domains": [
+        "www.fnnews.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.fnnews.com/rss/r20/fn_realnews_all.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_herald_economy",
+      "name": "헤럴드경제",
+      "url": "https://biz.heraldcorp.com/rss/google/newsAll",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://biz.heraldcorp.com/rss/google/newsAll",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "헤럴드경제",
+        "publisher_id": "herald_economy",
+        "supply_route": "kr_herald_economy"
+      },
+      "article_domains": [
+        "biz.heraldcorp.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://biz.heraldcorp.com/rss/google/newsAll",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_khan",
+      "name": "경향신문",
+      "url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.khan.co.kr/help/help_rss.html",
+        "basis": "Official RSS guide is for personal subscription and requires prior permission for public distribution. Discovery only; no public metadata approval or content reuse.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "경향신문",
+        "publisher_id": "khan",
+        "supply_route": "kr_khan"
+      },
+      "article_domains": [
+        "www.khan.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.khan.co.kr/rss/rssdata/total_news.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_kmib",
+      "name": "국민일보",
+      "url": "https://www.kmib.co.kr/rss/data/kmibRssAll.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed. Some supplied dates are in the future with an explicit GMT label; respect the supplied zone and hold future dates, never silently reinterpret them as KST.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.kmib.co.kr/rss/data/kmibRssAll.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "국민일보",
+        "publisher_id": "kmib",
+        "supply_route": "kr_kmib"
+      },
+      "article_domains": [
+        "www.kmib.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.kmib.co.kr/rss/data/kmibRssAll.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_donga",
+      "name": "동아일보",
+      "url": "https://rss.donga.com/total.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://rss.donga.com/total.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "동아일보",
+        "publisher_id": "donga",
+        "supply_route": "kr_donga"
+      },
+      "article_domains": [
+        "www.donga.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://rss.donga.com/total.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_seoul",
+      "name": "서울신문",
+      "url": "https://www.seoul.co.kr/xml/rss/google_plan.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.seoul.co.kr/xml/rss/google_plan.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "서울신문",
+        "publisher_id": "seoul",
+        "supply_route": "kr_seoul"
+      },
+      "article_domains": [
+        "www.seoul.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.seoul.co.kr/xml/rss/google_plan.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_ebn",
+      "name": "EBN",
+      "url": "https://cdn.ebn.co.kr/rss/gns_allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://cdn.ebn.co.kr/rss/gns_allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "EBN",
+        "publisher_id": "ebn",
+        "supply_route": "kr_ebn"
+      },
+      "article_domains": [
+        "www.ebn.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://cdn.ebn.co.kr/rss/gns_allArticle.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_mk",
+      "name": "매일경제",
+      "url": "https://www.mk.co.kr/rss/30000001/",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.mk.co.kr/rss/30000001/",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "매일경제",
+        "publisher_id": "mk",
+        "supply_route": "kr_mk"
+      },
+      "article_domains": [
+        "www.mk.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.mk.co.kr/rss/30000001/",
+        "checked_at": "2026-11-12T05:45:54.158917+00:00"
+      }
+    },
+    {
+      "id": "kr_mt",
+      "name": "머니투데이",
+      "url": "https://rss.mt.co.kr/mt_news.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://rss.mt.co.kr/mt_news.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "머니투데이",
+        "publisher_id": "mt",
+        "supply_route": "kr_mt"
+      },
+      "article_domains": [
+        "www.mt.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "http://rss.mt.co.kr/mt_news.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_viva100",
+      "name": "브릿지경제",
+      "url": "https://www.viva100.com/rssAll.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.viva100.com/rssAll.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "브릿지경제",
+        "publisher_id": "viva100",
+        "supply_route": "kr_viva100"
+      },
+      "article_domains": [
+        "www.viva100.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.viva100.com/rssAll.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_asiae",
+      "name": "아시아경제",
+      "url": "https://view.asiae.co.kr/rss/all.htm",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://view.asiae.co.kr/rss/all.htm",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "아시아경제",
+        "publisher_id": "asiae",
+        "supply_route": "kr_asiae"
+      },
+      "article_domains": [
+        "view.asiae.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://view.asiae.co.kr/rss/all.htm",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_etoday",
+      "name": "이투데이",
+      "url": "https://rss.etoday.co.kr/eto/etoday_news_all.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://rss.etoday.co.kr/eto/etoday_news_all.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "이투데이",
+        "publisher_id": "etoday",
+        "supply_route": "kr_etoday"
+      },
+      "article_domains": [
+        "www.etoday.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://rss.etoday.co.kr/eto/etoday_news_all.xml",
+        "checked_at": "2026-11-12T05:46:07.380491+00:00"
+      }
+    },
+    {
+      "id": "kr_hankyung",
+      "name": "한국경제",
+      "url": "https://www.hankyung.com/feed/all-news",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.hankyung.com/feed/all-news",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "economic_news",
+        "publisher": "한국경제",
+        "publisher_id": "hankyung",
+        "supply_route": "kr_hankyung"
+      },
+      "article_domains": [
+        "www.hankyung.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.hankyung.com/feed/all-news",
+        "checked_at": "2026-11-12T05:45:54.158917+00:00"
+      }
+    },
+    {
+      "id": "kr_inews24",
+      "name": "아이뉴스24",
+      "url": "https://www.inews24.com/rss/news_all.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.inews24.com/rss/news_all.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "아이뉴스24",
+        "publisher_id": "inews24",
+        "supply_route": "kr_inews24"
+      },
+      "article_domains": [
+        "www.inews24.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.inews24.com/rss/news_all.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_newsis",
+      "name": "뉴시스",
+      "url": "https://www.newsis.com/RSS/sokbo.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.newsis.com/RSS/sokbo.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "뉴시스",
+        "publisher_id": "newsis",
+        "supply_route": "kr_newsis"
+      },
+      "article_domains": [
+        "www.newsis.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.newsis.com/RSS/sokbo.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_sbs",
+      "name": "SBS",
+      "url": "https://news.sbs.co.kr/news/newsflashRssFeed.do",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://news.sbs.co.kr/news/newsflashRssFeed.do",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "broadcast_news",
+        "publisher": "SBS",
+        "publisher_id": "sbs",
+        "supply_route": "kr_sbs"
+      },
+      "article_domains": [
+        "news.sbs.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://news.sbs.co.kr/news/newsflashRssFeed.do",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_tvchosun",
+      "name": "TV조선",
+      "url": "https://news.tvchosun.com/site/data/rss/rss.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://news.tvchosun.com/site/data/rss/rss.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "broadcast_news",
+        "publisher": "TV조선",
+        "publisher_id": "tvchosun",
+        "supply_route": "kr_tvchosun"
+      },
+      "article_domains": [
+        "news.tvchosun.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://news.tvchosun.com/site/data/rss/rss.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_nocutnews",
+      "name": "노컷뉴스",
+      "url": "https://rss.nocutnews.co.kr/news/news.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://rss.nocutnews.co.kr/news/news.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "노컷뉴스",
+        "publisher_id": "nocutnews",
+        "supply_route": "kr_nocutnews"
+      },
+      "article_domains": [
+        "www.nocutnews.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://rss.nocutnews.co.kr/news/news.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_sisajournal",
+      "name": "시사저널",
+      "url": "https://www.sisajournal.com/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.sisajournal.com/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "시사저널",
+        "publisher_id": "sisajournal",
+        "supply_route": "kr_sisajournal"
+      },
+      "article_domains": [
+        "www.sisajournal.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.sisajournal.com/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_ohmynews",
+      "name": "오마이뉴스",
+      "url": "https://rss.ohmynews.com/rss/ohmynews.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://rss.ohmynews.com/rss/ohmynews.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "오마이뉴스",
+        "publisher_id": "ohmynews",
+        "supply_route": "kr_ohmynews"
+      },
+      "article_domains": [
+        "star.ohmynews.com",
+        "www.ohmynews.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "http://rss.ohmynews.com/rss/ohmynews.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_polinews",
+      "name": "폴리뉴스",
+      "url": "https://www.polinews.co.kr/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.polinews.co.kr/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "폴리뉴스",
+        "publisher_id": "polinews",
+        "supply_route": "kr_polinews"
+      },
+      "article_domains": [
+        "www.polinews.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.polinews.co.kr/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_pressian",
+      "name": "프레시안",
+      "url": "https://www.pressian.com/api/v3/site/rss/news",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.pressian.com/api/v3/site/rss/news",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "프레시안",
+        "publisher_id": "pressian",
+        "supply_route": "kr_pressian"
+      },
+      "article_domains": [
+        "www.pressian.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.pressian.com/api/v3/site/rss/news",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_kado",
+      "name": "강원도민일보",
+      "url": "https://www.kado.net/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.kado.net/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "강원도민일보",
+        "publisher_id": "kado",
+        "supply_route": "kr_kado"
+      },
+      "article_domains": [
+        "www.kado.net"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.kado.net/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_idomin",
+      "name": "경남도민일보",
+      "url": "https://www.idomin.com/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.idomin.com/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "경남도민일보",
+        "publisher_id": "idomin",
+        "supply_route": "kr_idomin"
+      },
+      "article_domains": [
+        "www.idomin.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.idomin.com/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_daejonilbo",
+      "name": "대전일보",
+      "url": "https://www.daejonilbo.com/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.daejonilbo.com/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "대전일보",
+        "publisher_id": "daejonilbo",
+        "supply_route": "kr_daejonilbo"
+      },
+      "article_domains": [
+        "www.daejonilbo.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.daejonilbo.com/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_incheonilbo",
+      "name": "인천일보",
+      "url": "https://www.incheonilbo.com/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.incheonilbo.com/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "인천일보",
+        "publisher_id": "incheonilbo",
+        "supply_route": "kr_incheonilbo"
+      },
+      "article_domains": [
+        "www.incheonilbo.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.incheonilbo.com/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_jejunews",
+      "name": "제주일보",
+      "url": "https://www.jejunews.com/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.jejunews.com/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "제주일보",
+        "publisher_id": "jejunews",
+        "supply_route": "kr_jejunews"
+      },
+      "article_domains": [
+        "www.jejunews.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.jejunews.com/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_cctoday",
+      "name": "충청투데이",
+      "url": "https://www.cctoday.co.kr/rss/allArticle.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.cctoday.co.kr/rss/allArticle.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "충청투데이",
+        "publisher_id": "cctoday",
+        "supply_route": "kr_cctoday"
+      },
+      "article_domains": [
+        "www.cctoday.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.cctoday.co.kr/rss/allArticle.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_ihalla",
+      "name": "한라일보",
+      "url": "https://www.ihalla.com/rss.php?section=73",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed. Some supplied dates are in the future with an explicit GMT label; respect the supplied zone and hold future dates, never silently reinterpret them as KST.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.ihalla.com/rss.php?section=73",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "regional_news",
+        "publisher": "한라일보",
+        "publisher_id": "ihalla",
+        "supply_route": "kr_ihalla"
+      },
+      "article_domains": [
+        "www.ihalla.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.ihalla.com/rss.php?section=73",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_koreaherald",
+      "name": "The Korea Herald",
+      "url": "https://www.koreaherald.com/rss/newsAll",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://www.koreaherald.com/rss/newsAll",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "The Korea Herald",
+        "publisher_id": "koreaherald",
+        "supply_route": "kr_koreaherald"
+      },
+      "article_domains": [
+        "www.koreaherald.com"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://www.koreaherald.com/rss/newsAll",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
+    },
+    {
+      "id": "kr_koreatimes",
+      "name": "The Korea Times",
+      "url": "https://feed.koreatimes.co.kr/k/allnews.xml",
+      "enabled": true,
+      "reuse_excerpt": false,
+      "notes": "V4 Step 5-B: Issue #47 validated candidate; discovery only until publisher rights are confirmed.",
+      "group": "media",
+      "adapter": "rss",
+      "discovery_allowed": true,
+      "analysis_fields": [
+        "title"
+      ],
+      "publication": {
+        "status": "review",
+        "scope": "none",
+        "terms_url": "https://feed.koreatimes.co.kr/k/allnews.xml",
+        "basis": "RSS availability establishes discovery only; public six-field metadata redistribution and automated reuse terms are not confirmed. No article text, excerpts or images may be reused. Keep the publication gate closed pending a source-specific rights review.",
+        "checked_at": "2026-11-12",
+        "body_reuse": "not_authorized"
+      },
+      "backfill": {
+        "mode": "provided_feed_only",
+        "max_days": 90,
+        "limitation": "Only the current publisher-returned RSS; no article/archive crawling."
+      },
+      "coverage": {
+        "publisher_jurisdiction": "KR",
+        "media_type": "general_news",
+        "publisher": "The Korea Times",
+        "publisher_id": "koreatimes",
+        "supply_route": "kr_koreatimes"
+      },
+      "article_domains": [
+        "www.koreatimes.co.kr"
+      ],
+      "validation": {
+        "issue_url": "https://github.com/Serhankeem/tourismnews/issues/47#issuecomment-6815838202",
+        "original_feed_url": "https://feed.koreatimes.co.kr/k/allnews.xml",
+        "checked_at": "2026-11-12T05:46:32.136474+00:00"
+      }
     }
   ],
   "engine": {

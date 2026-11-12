@@ -124,6 +124,22 @@ def korean_industry_change(title):
     if matches(text, SECTORS['항공·숙박']) or matches(text, ('할인쿠폰', '특가', '여행상품', '기획전')):
         return None
     rules = (
+        ('cruise_passenger_market_change', '인바운드',
+         ('크루즈',), ('여객', '방문객', '관광객', '입항', '항차'),
+         ('돌파', '증가', '최대', '확대', '신규')),
+        ('regional_tourism_project_change', '문화·트렌드',
+         ('체류형관광', '관광벨트', '관광섬', '관광시설', '관광인프라'),
+         ('조성', '규제', '투자', '지원', '개발', '완화', '제공', '확대')),
+        ('tourism_distribution_policy_change', '관광정책',
+         ('단체관광', '덤핑관광'), ('수수료', '정부', '문체부'),
+         ('손본다', '조인다', '개편', '규제', '토론회')),
+        ('tourism_venture_investment', '여행산업',
+         ('관광벤처',), ('투자', '데모데이'), ('개최', '지원', '돕는다')),
+        ('tourism_governance_change', '관광정책',
+         ('관광재단',), ('분리', '통합'), ('추진', '개편')),
+        ('inbound_arrival_record', '인바운드',
+         ('k관광', '방한외국인', '방한외래객'),
+         ('돌파', '증가', '감소', '최대', '실적')),
         ('tourism_sector_tax_policy', '관광정책',
          ('관광업계', '관광업종'), ('가업상속공제',), ('축소', '유지', '촉구', '대응')),
         ('mice_industry_investment', '여행산업',
@@ -145,7 +161,7 @@ def korean_industry_change(title):
                     'impact_targets': ['관광기업'], 'evidence_status': 'industry_subject_in_feed',
                     'reason': ('제목에 명명된 OTA와 운영 기술의 실제 도입·출시가 명시되어 있습니다. AI 어시스턴트만으로 B2B 서비스 또는 한국 적용을 추정하지 않습니다.'
                                if rule == 'ota_operating_technology_change' else
-                               '제목에 관광업종의 세제·MICE 투자·숙박 지정 또는 항공 공급의 구체적인 변화가 함께 명시되어 있습니다.')}
+                               '제목에 관광산업의 수요·공급·사업·정책 변화가 함께 명시되어 있습니다.')}
     return None
 
 
@@ -154,6 +170,16 @@ def assess(title, description=''):
     result = {'rule_version': RULE_VERSION, 'label': 'Irrelevant', 'decision': 'exclude',
               'category': None, 'score': 0, 'rules': [], 'signals': [],
               'impact_targets': [], 'reason': '관광산업에 대한 구체적 대상·영향 근거가 없습니다.'}
+    # A venue or airline-team name is not an industry operating subject.
+    if (matches(fields['title'], ('살해', '불법촬영', '집단폭행', '불륜', '성추행'))
+            and not matches(fields['title'], ('안전정책', '안전대책', '영업중단', '운항중단'))):
+        return {**result, 'rules': ['incidental_venue_crime'],
+                'reason': '사건사고의 장소·인물로만 등장한 관광·숙박 용어는 산업 근거가 아닙니다.'}
+    if (matches(fields['title'], ('대한항공',))
+            and matches(fields['title'], ('세트스코어', '연승', '배구', '아라우조'))
+            and not matches(fields['title'], ('국제선', '운항', '항공노선'))):
+        return {**result, 'rules': ['airline_sports_team'],
+                'reason': '항공사와 이름이 같은 스포츠팀 경기 결과는 산업 뉴스에서 제외합니다.'}
     if re.search(r'^how to\b', title.strip(), re.I):
         return {**result, 'rules': ['general_industry_howto_not_operating_news'],
                 'reason': '일반적인 방법 안내 제목은 실제 산업 변화 뉴스로 간주하지 않습니다.'}

@@ -56,13 +56,21 @@ def timestamp(value, fallback=None):
         found = value
     else:
         raw = stripped(value)
+        # Some Korean feeds use RFC dates with an ISO-style numeric offset.
+        # email.utils otherwise silently drops '+09:00' and returns naive time.
+        raw = re.sub(r'([+-]\d{2}):(\d{2})$', r'\1\2', raw) if not re.match(r'^\d{4}-', raw) else raw
+        if re.fullmatch(r'\d{4}\.\d{2}\.\d{2}', raw):
+            raw = raw.replace('.', '-')
         if not raw:
             return fallback
         try:
             found = dt.datetime.fromisoformat(raw.replace('Z', '+00:00'))
         except ValueError:
             try:
-                found = email.utils.parsedate_to_datetime(raw)
+                if re.match(r'^\w+, \d{1,2} \d{2} \d{4} ', raw):
+                    found = dt.datetime.strptime(raw, '%a, %d %m %Y %H:%M:%S %z')
+                else:
+                    found = email.utils.parsedate_to_datetime(raw)
             except (ValueError, TypeError):
                 return fallback
     if found.tzinfo is None:
@@ -81,6 +89,26 @@ def canonical_url(value):
         return urllib.parse.urlunsplit((p.scheme.lower(), p.netloc.lower(), p.path or '/', urllib.parse.urlencode(query), ''))
     except ValueError:
         return ''
+
+
+def url_identity(value):
+    """Compare transport/tracking variants without changing stored article IDs.
+
+    Do not merge independent reporting just because headlines are similar.
+    """
+    safe = canonical_url(value)
+    if not safe:
+        return ''
+    parts = urllib.parse.urlsplit(safe)
+    host = parts.hostname.removeprefix('www.')
+    try:
+        port = parts.port
+    except ValueError:
+        return safe
+    if port and port not in (80, 443):
+        host += ':' + str(port)
+    return urllib.parse.urlunsplit(('', host, parts.path,
+                                   urllib.parse.urlencode(sorted(urllib.parse.parse_qsl(parts.query, keep_blank_values=True))), ''))
 
 
 def normalized_title(value):
@@ -146,7 +174,7 @@ def article_from_item(item, source, at=None, reviews=None, include_held=False, m
         return None  # Unknown publication date must never be labeled as fresh news.
     # Invalid dates must not silently become fresh news.
     published = timestamp(date_value, dt.datetime.min.replace(tzinfo=KST))
-    if published > at + dt.timedelta(minutes=5) or published < at - dt.timedelta(days=max_age_days):
+    if published > at or published < at - dt.timedelta(days=max_age_days):
         return None
     aid = hashlib.sha256(url.encode('utf-8')).hexdigest()[:18]
     assessment = statistical_assessment() if is_statistical(source) else assess(title, description)
@@ -182,7 +210,7 @@ def article_from_item(item, source, at=None, reviews=None, include_held=False, m
 def deduplicate(items):
     out = []
     for article in sorted(items, key=lambda a: a['published_at'], reverse=True):
-        match = next((old for old in out if (old['url'] == article['url']) or
+        match = next((old for old in out if (url_identity(old['url']) == url_identity(article['url'])) or
             (old.get('source_id', old['source']) == article.get('source_id', article['source']) and
              similarity(old['title'], article['title']) >= .92 and
              [n.replace(',', '') for n in re.findall(r'\d+(?:[.,]\d+)*', old['title'])] ==
@@ -258,7 +286,7 @@ def run(sources, fetcher=fetch_feed, at=None, demo=False, data_dir=DATA, reviews
             for item in items:
                 item_url = canonical_url(item.get('link', ''))
                 item_date = timestamp(item.get('pubDate') or item.get('published') or item.get('updated'), dt.datetime.min.replace(tzinfo=KST))
-                if item_url and at - dt.timedelta(days=retention_days) <= item_date <= at + dt.timedelta(minutes=5):
+                if item_url and at - dt.timedelta(days=retention_days) <= item_date <= at:
                     seen_ids.add(hashlib.sha256(item_url.encode()).hexdigest()[:18])
             evaluated = [article_from_item(item, source, at, reviews, include_held=True, max_age_days=retention_days) for item in items]
             news = [a for a in evaluated if a and a['relevance_evidence']['decision'] == 'publish']
