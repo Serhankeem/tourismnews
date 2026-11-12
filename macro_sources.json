@@ -119,6 +119,75 @@
         "no_ads": true,
         "attribution": true
       }
+    },
+    {
+      "id": "ecos_market_production",
+      "name": "ECOS 서비스업 생산지수",
+      "enabled": false,
+      "method": "official_ecos_decimal_api",
+      "url": "https://ecos.bok.or.kr/api/",
+      "auth_env": "ECOS_API_KEY",
+      "start_period": "2021-01",
+      "interval_days": 1,
+      "stat_code": "901Y038",
+      "reason": "Step 4 기술 기반만 구현; 운영 인증·이용조건·원표 교차검증 전 비활성화",
+      "collection_review": {
+        "status": "review",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "verified_at": null
+      },
+      "rights_review": {
+        "status": "review",
+        "evidence_url": "https://ecos.bok.or.kr/api/",
+        "verified_at": null
+      },
+      "publication_status": "blocked"
+    },
+    {
+      "id": "ecos_market_fx",
+      "name": "ECOS 원·달러 월평균 환율",
+      "enabled": false,
+      "method": "official_ecos_decimal_api",
+      "url": "https://ecos.bok.or.kr/api/",
+      "auth_env": "ECOS_API_KEY",
+      "start_period": "2021-01",
+      "interval_days": 1,
+      "stat_code": "731Y004",
+      "reason": "Step 4 기술 기반만 구현; 운영 인증·이용조건·원표 교차검증 전 비활성화",
+      "collection_review": {
+        "status": "review",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "verified_at": null
+      },
+      "rights_review": {
+        "status": "review",
+        "evidence_url": "https://ecos.bok.or.kr/api/",
+        "verified_at": null
+      },
+      "publication_status": "blocked"
+    },
+    {
+      "id": "ecos_market_cpi",
+      "name": "ECOS 숙박·여행 소비자물가지수",
+      "enabled": false,
+      "method": "official_ecos_decimal_api",
+      "url": "https://ecos.bok.or.kr/api/",
+      "auth_env": "ECOS_API_KEY",
+      "start_period": "2021-01",
+      "interval_days": 1,
+      "stat_code": "901Y009",
+      "reason": "Step 4 기술 기반만 구현; 운영 인증·이용조건·원표 교차검증 전 비활성화",
+      "collection_review": {
+        "status": "review",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "verified_at": null
+      },
+      "rights_review": {
+        "status": "review",
+        "evidence_url": "https://ecos.bok.or.kr/api/",
+        "verified_at": null
+      },
+      "publication_status": "blocked"
     }
   ],
   "indicators": [
@@ -355,6 +424,345 @@
       "source_url": "https://kosis.kr/openapi/",
       "definition": "관광산업조사의 조사 기준연도·사업체 범위를 확인할 연간 지표.",
       "reason": "KOSIS 접근/인증 및 연간 조사 정의 검증 필요"
+    },
+    {
+      "id": "market_lodging",
+      "evidence_key": "lodging",
+      "source_id": "ecos_market_production",
+      "name": "숙박업 생산지수",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y038",
+      "item_codes": [
+        "I51ADA",
+        "2"
+      ],
+      "item_names": [
+        "숙박업",
+        "불변지수"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 불변지수; 계절조정·명목지수 제외",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_leisure",
+      "evidence_key": "leisure",
+      "source_id": "ecos_market_production",
+      "name": "예술·스포츠·여가관련 서비스업 생산지수",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y038",
+      "item_codes": [
+        "I51AL",
+        "2"
+      ],
+      "item_names": [
+        "예술, 스포츠 및 여가관련 서비스업",
+        "불변지수"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 불변지수; 계절조정·명목지수 제외",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "partial_levels_9_months",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_fxavg",
+      "evidence_key": "fxavg",
+      "source_id": "ecos_market_fx",
+      "name": "원·달러 월평균 환율",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "원",
+      "base_year": null,
+      "value_kind": "decimal_exchange_rate",
+      "storage": "decimal_string",
+      "stat_code": "731Y004",
+      "item_codes": [
+        "0000001",
+        "0000100"
+      ],
+      "item_names": [
+        "원/미국달러(매매기준율)",
+        "평균자료"
+      ],
+      "publisher": "한국은행",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월평균 매매기준율; 월말자료 제외",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_cpilodging",
+      "evidence_key": "cpilodging",
+      "source_id": "ecos_market_cpi",
+      "name": "숙박 서비스 CPI",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y009",
+      "item_codes": [
+        "K02"
+      ],
+      "item_names": [
+        "숙박 서비스"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 소비자물가지수 세부항목; 숙박 서비스와 하위 항목은 중복 합산하지 않음",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_cpihotel",
+      "evidence_key": "cpihotel",
+      "source_id": "ecos_market_cpi",
+      "name": "호텔숙박료 CPI",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y009",
+      "item_codes": [
+        "K02101"
+      ],
+      "item_names": [
+        "호텔숙박료"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 소비자물가지수 세부항목; 숙박 서비스와 하위 항목은 중복 합산하지 않음",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "partial_rates_only",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_cpiinn",
+      "evidence_key": "cpiinn",
+      "source_id": "ecos_market_cpi",
+      "name": "여관숙박료 CPI",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y009",
+      "item_codes": [
+        "K02102"
+      ],
+      "item_names": [
+        "여관숙박료"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 소비자물가지수 세부항목; 숙박 서비스와 하위 항목은 중복 합산하지 않음",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_cpicondo",
+      "evidence_key": "cpicondo",
+      "source_id": "ecos_market_cpi",
+      "name": "콘도이용료 CPI",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y009",
+      "item_codes": [
+        "K02103"
+      ],
+      "item_names": [
+        "콘도이용료"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 소비자물가지수 세부항목; 숙박 서비스와 하위 항목은 중복 합산하지 않음",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_cpidomestic",
+      "evidence_key": "cpidomestic",
+      "source_id": "ecos_market_cpi",
+      "name": "국내단체여행비 CPI",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y009",
+      "item_codes": [
+        "I06101"
+      ],
+      "item_names": [
+        "국내단체여행비"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 소비자물가지수 세부항목; 숙박 서비스와 하위 항목은 중복 합산하지 않음",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "pending",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
+    },
+    {
+      "id": "market_cpiforeign",
+      "evidence_key": "cpiforeign",
+      "source_id": "ecos_market_cpi",
+      "name": "해외단체여행비 CPI",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "frequency": "M",
+      "start_period": "2021-01",
+      "unit": "2020=100",
+      "base_year": 2020,
+      "value_kind": "decimal_index",
+      "storage": "decimal_string",
+      "stat_code": "901Y009",
+      "item_codes": [
+        "I06102"
+      ],
+      "item_names": [
+        "해외단체여행비"
+      ],
+      "publisher": "국가데이터처",
+      "provider": "한국은행 ECOS",
+      "collection_method": "official_ecos_decimal_api",
+      "source_url": "https://ecos.bok.or.kr/api/",
+      "definition": "월별 소비자물가지수 세부항목; 숙박 서비스와 하위 항목은 중복 합산하지 않음",
+      "role": "auxiliary",
+      "crosscheck": {
+        "status": "partial_rates_only",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49",
+        "note": "Step 3 부분 대조는 전체 원표 교차검증 완료가 아님"
+      },
+      "rights_review": {
+        "status": "review",
+        "verified_at": null
+      }
     }
   ]
 }

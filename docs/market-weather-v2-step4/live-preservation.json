@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "4e7f2f2923773b2d6f4533e9be241e1012cd0768",
+  "production_branch_modified": false,
+  "legacy_macro_ledger_equal": true,
+  "legacy_public_projection_equal": true,
+  "other_data_files_byte_identical": 26,
+  "durable_validation": {
+    "news": 97,
+    "archive": 110,
+    "discovery": 8823,
+    "reports": 137,
+    "macro_observations": 621,
+    "private_decimal_observations": 628,
+    "last_news_success": "2026-11-12T15:38:49+09:00",
+    "last_reports_success": "2026-11-09T07:50:14+09:00",
+    "last_macro_success": "2026-11-12T12:56:52.864837+09:00"
+  }
+}
