@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T06:11:59+09:00",
+  "generated_at": "2026-11-13T08:10:09+09:00",
   "mode": "live_rss",
   "decisions": [
     {
@@ -8,7 +8,7 @@
       "tier": "korea_direct",
       "category": "항공·숙박",
       "new_category": true,
-      "age_hours": 8.51,
+      "age_hours": 10.48,
       "published_at": "2026-11-12T21:41:14+09:00",
       "basis": [
         "authorized_newsroom",
@@ -23,7 +23,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": true,
-      "age_hours": 8.51,
+      "age_hours": 10.48,
       "published_at": "2026-11-12T21:41:12+09:00",
       "basis": [
         "authorized_newsroom",
@@ -38,7 +38,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": false,
-      "age_hours": 16.67,
+      "age_hours": 18.64,
       "published_at": "2026-11-12T13:31:40+09:00",
       "basis": [
         "authorized_newsroom",
@@ -53,7 +53,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": false,
-      "age_hours": 17.14,
+      "age_hours": 19.11,
       "published_at": "2026-11-12T13:03:29+09:00",
       "basis": [
         "authorized_newsroom",
@@ -61,6 +61,24 @@
         "korea_priority_then_category_diversity",
         "conservative_title_similarity"
       ]
+    },
+    {
+      "article_id": "2625ed7fcda8d5f486",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-13T00:10:00+09:00"
+    },
+    {
+      "article_id": "13e3e0982a7c2810f1",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-13T00:10:00+09:00"
+    },
+    {
+      "article_id": "d019bfe84146880eb5",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-13T00:05:00+09:00"
     },
     {
       "article_id": "05e3755e8ca45f98d2",
@@ -97,12 +115,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-12T09:18:21+09:00"
-    },
-    {
-      "article_id": "e35278c33fd51ab614",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-12T08:07:24+09:00"
     }
   ]
 }
