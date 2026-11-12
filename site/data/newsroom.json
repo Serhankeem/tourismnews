@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-12T22:40:21+09:00",
-  "last_successful_fetch": "2026-11-12T22:40:21+09:00",
-  "count": 101,
+  "generated_at": "2026-11-13T00:20:24+09:00",
+  "last_successful_fetch": "2026-11-13T00:20:24+09:00",
+  "count": 104,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,26 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "Commerce Media is Generating Real Revenues for Hotels",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-12T23:26:55+09:00",
+      "url": "https://www.hospitalitynet.org/opinion/4135448/commerce-media-is-generating-real-revenues-for-hotels",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hotels"
+      ]
+    },
+    {
+      "title": "Inn-Flow Introduces AP Agent, Expanding AI-powered Capabilities Across Hotel Accounting Workflows",
+      "source": "Hospitality Net",
+      "published_at": "2026-11-12T23:00:00+09:00",
+      "url": "https://www.hospitalitynet.org/news/4135429/inn-flow-introduces-ap-agent-expanding-ai-powered-capabilities-across-hotel-accounting-workflows",
+      "category": "항공·숙박",
+      "keywords": [
+        "Hotel"
+      ]
+    },
     {
       "title": "‘진에어-에어서울-에어부산’ 합병 인가",
       "source": "트래블데일리",
@@ -52,6 +72,16 @@
       "category": "관광정책",
       "keywords": [
         "Tourism Strategy"
+      ]
+    },
+    {
+      "title": "여행업의 다음 장, 함께 쓴다... 여보새요, ‘2026 알럼나이 플러스 나잇’ 개최",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-11-12T19:15:31+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3161517",
+      "category": "여행산업",
+      "keywords": [
+        "여행업"
       ]
     },
     {

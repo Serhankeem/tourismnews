@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T22:40:21+09:00",
+  "generated_at": "2026-11-13T00:20:24+09:00",
   "mode": "live_rss",
   "decisions": [
     {
@@ -8,7 +8,7 @@
       "tier": "korea_direct",
       "category": "항공·숙박",
       "new_category": true,
-      "age_hours": 0.99,
+      "age_hours": 2.65,
       "published_at": "2026-11-12T21:41:14+09:00",
       "basis": [
         "authorized_newsroom",
@@ -23,7 +23,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": true,
-      "age_hours": 0.99,
+      "age_hours": 2.65,
       "published_at": "2026-11-12T21:41:12+09:00",
       "basis": [
         "authorized_newsroom",
@@ -38,7 +38,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": false,
-      "age_hours": 9.14,
+      "age_hours": 10.81,
       "published_at": "2026-11-12T13:31:40+09:00",
       "basis": [
         "authorized_newsroom",
@@ -53,7 +53,7 @@
       "tier": "korea_direct",
       "category": "인바운드",
       "new_category": false,
-      "age_hours": 9.61,
+      "age_hours": 11.28,
       "published_at": "2026-11-12T13:03:29+09:00",
       "basis": [
         "authorized_newsroom",
@@ -61,6 +61,18 @@
         "korea_priority_then_category_diversity",
         "conservative_title_similarity"
       ]
+    },
+    {
+      "article_id": "05e3755e8ca45f98d2",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-12T23:26:55+09:00"
+    },
+    {
+      "article_id": "feb2c9ab96676cc8f4",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-12T23:00:00+09:00"
     },
     {
       "article_id": "872496a979b0745835",
@@ -73,6 +85,12 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-12T20:19:20+09:00"
+    },
+    {
+      "article_id": "d7b751753da323d1dd",
+      "decision": "editorial_ineligible",
+      "tier": "reference",
+      "published_at": "2026-11-12T19:15:31+09:00"
     },
     {
       "article_id": "74e4146a12f8c50e05",
