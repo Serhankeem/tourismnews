@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-12T13:31:01.991724+09:00",
+  "checked_at": "2026-11-12T17:31:26.000160+09:00",
   "status": "not_due",
   "sources": [
     {
@@ -51,6 +51,33 @@
       "last_successful_check": "2026-11-11T16:22:53.405729+09:00",
       "collection_state": "waiting_for_manual_input",
       "reference_period": "2026-09"
+    },
+    {
+      "id": "ecos_market_production",
+      "name": "ECOS 서비스업 생산지수",
+      "status": "not_connected",
+      "reason": "Step 4 기술 기반만 구현; 운영 인증·이용조건·원표 교차검증 전 비활성화",
+      "last_successful_check": null,
+      "publication_status": "blocked",
+      "collection_state": "disabled"
+    },
+    {
+      "id": "ecos_market_fx",
+      "name": "ECOS 원·달러 월평균 환율",
+      "status": "not_connected",
+      "reason": "Step 4 기술 기반만 구현; 운영 인증·이용조건·원표 교차검증 전 비활성화",
+      "last_successful_check": null,
+      "publication_status": "blocked",
+      "collection_state": "disabled"
+    },
+    {
+      "id": "ecos_market_cpi",
+      "name": "ECOS 숙박·여행 소비자물가지수",
+      "status": "not_connected",
+      "reason": "Step 4 기술 기반만 구현; 운영 인증·이용조건·원표 교차검증 전 비활성화",
+      "last_successful_check": null,
+      "publication_status": "blocked",
+      "collection_state": "disabled"
     }
   ],
   "new_observations": 0,
@@ -59,7 +86,7 @@
   "status_changes": 0,
   "successful_sources": 0,
   "attempted_sources": 0,
-  "pending_sources": 4,
+  "pending_sources": 7,
   "connected_indicators": 9,
   "connected_primary_indicators": 4,
   "observation_count": 621,
