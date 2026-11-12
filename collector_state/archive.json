@@ -1,11 +1,80 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-12T08:14:29+09:00",
-  "last_successful_fetch": "2026-11-12T08:14:29+09:00",
-  "count": 106,
+  "generated_at": "2026-11-12T10:39:37+09:00",
+  "last_successful_fetch": "2026-11-12T10:39:37+09:00",
+  "count": 108,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "74e4146a12f8c50e05",
+      "published_at": "2026-11-12T09:18:21+09:00",
+      "date": "2026.11.12",
+      "category": "문화·트렌드",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "source_id": "ttlnews",
+      "title": "[기획특집] 인구 2만 6000명대로 주저앉은 단양군...소멸위기 앞에 선 관광도시의 경고등",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3161482",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "문화·트렌드",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "관광도시"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "퍼블릭뉴스통신(TTL)"
+      ],
+      "first_discovered_at": "2026-11-12T10:39:37+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.ttlnews.com/rssIndex.html",
+        "additional_terms": [
+          "https://www.ttlnews.com/com/service.html",
+          "https://www.ttlnews.com/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-12T10:39:37+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "산업 참고 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
+      }
+    },
     {
       "id": "e35278c33fd51ab614",
       "published_at": "2026-11-12T08:07:24+09:00",
@@ -58,6 +127,78 @@
         "checked_at": "2026-10-27"
       },
       "first_published_by_engine_at": "2026-11-12T08:14:29+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "reference",
+        "rank": 2,
+        "label": "산업 참고 자료",
+        "korea_connection": "not_established",
+        "evidence": [],
+        "reason": "한국 관광시장 직접 연계 또는 세계 산업 전체의 주요 변화가 충분히 입증되지 않은 산업 참고 자료입니다. 국내·해외 자료 모두 포함할 수 있습니다."
+      }
+    },
+    {
+      "id": "0b06705e0855067227",
+      "published_at": "2026-11-11T22:40:14+09:00",
+      "date": "2026.11.11",
+      "category": "항공·숙박",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "source_id": "ttlnews",
+      "title": "트래블포트 코리아, 11월 2일부터 아시아나항공 국제선 전자항공권 직접 발권",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3161438",
+      "relevance": 8,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "항공·숙박",
+        "score": 8,
+        "rules": [
+          "named_company_operating_change"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "아시아나항공",
+              "국제선"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "관광기업의 이름과 구체적인 운영·매출·노선 변화가 제목에 함께 명시되어 있습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "퍼블릭뉴스통신(TTL)"
+      ],
+      "first_discovered_at": "2026-11-12T10:39:37+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": false,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.ttlnews.com/rssIndex.html",
+        "additional_terms": [
+          "https://www.ttlnews.com/com/service.html",
+          "https://www.ttlnews.com/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-12T10:39:37+09:00",
       "editorial": {
         "version": "0.3-editorial-1",
         "tier": "reference",

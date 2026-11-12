@@ -362,6 +362,82 @@
           "published_at": "2026-11-10T18:11:12+09:00"
         }
       ]
+    },
+    {
+      "briefing_date": "2026-11-12",
+      "generated_at": "2026-11-12T10:39:37+09:00",
+      "mode": "live_rss",
+      "decisions": [
+        {
+          "article_id": "3d6a671f946fa1d0ed",
+          "decision": "selected",
+          "tier": "korea_direct",
+          "category": "문화·트렌드",
+          "new_category": true,
+          "age_hours": 12.87,
+          "published_at": "2026-11-11T21:47:10+09:00",
+          "basis": [
+            "authorized_newsroom",
+            "verified_timestamp_last24h",
+            "korea_priority_then_category_diversity",
+            "conservative_title_similarity"
+          ]
+        },
+        {
+          "article_id": "74e4146a12f8c50e05",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-12T09:18:21+09:00"
+        },
+        {
+          "article_id": "e35278c33fd51ab614",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-12T08:07:24+09:00"
+        },
+        {
+          "article_id": "0b06705e0855067227",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T22:40:14+09:00"
+        },
+        {
+          "article_id": "9ffce7ce873cc79c8b",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T22:28:55+09:00"
+        },
+        {
+          "article_id": "c3fd1dfd180549c1d8",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T21:59:11+09:00"
+        },
+        {
+          "article_id": "d5ad70c316252e34e6",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T21:52:42+09:00"
+        },
+        {
+          "article_id": "689aa283d04c3f8786",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T21:35:30+09:00"
+        },
+        {
+          "article_id": "a89cf5eadfe7d0e842",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T18:00:00+09:00"
+        },
+        {
+          "article_id": "94f6f03cfcc1e4b1bd",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-11T11:57:17+09:00"
+        }
+      ]
     }
   ]
 }
