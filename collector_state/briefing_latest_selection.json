@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T20:24:59+09:00",
+  "generated_at": "2026-11-13T22:37:15+09:00",
   "mode": "live_rss",
   "decisions": [
     {
@@ -8,38 +8,8 @@
       "tier": "korea_direct",
       "category": "문화·트렌드",
       "new_category": true,
-      "age_hours": 5.0,
+      "age_hours": 7.21,
       "published_at": "2026-11-13T15:24:44+09:00",
-      "basis": [
-        "authorized_newsroom",
-        "verified_timestamp_last24h",
-        "korea_priority_then_category_diversity",
-        "conservative_title_similarity"
-      ]
-    },
-    {
-      "article_id": "144875a6373b0f9e85",
-      "decision": "selected",
-      "tier": "korea_direct",
-      "category": "항공·숙박",
-      "new_category": true,
-      "age_hours": 22.73,
-      "published_at": "2026-11-12T21:41:14+09:00",
-      "basis": [
-        "authorized_newsroom",
-        "verified_timestamp_last24h",
-        "korea_priority_then_category_diversity",
-        "conservative_title_similarity"
-      ]
-    },
-    {
-      "article_id": "f7619a78038895abae",
-      "decision": "selected",
-      "tier": "korea_direct",
-      "category": "인바운드",
-      "new_category": true,
-      "age_hours": 22.73,
-      "published_at": "2026-11-12T21:41:12+09:00",
       "basis": [
         "authorized_newsroom",
         "verified_timestamp_last24h",
@@ -82,12 +52,6 @@
       "decision": "editorial_ineligible",
       "tier": "reference",
       "published_at": "2026-11-12T23:00:00+09:00"
-    },
-    {
-      "article_id": "872496a979b0745835",
-      "decision": "editorial_ineligible",
-      "tier": "reference",
-      "published_at": "2026-11-12T21:41:15+09:00"
     }
   ]
 }
