@@ -68,6 +68,15 @@ def validate(root, cfg, before=None):
                          read(Path(before)/'collector_state/macro_archive.json') if before is not None else None)
     except (ValueError, TypeError, KeyError):
         raise ValidationError('decimal_macro_ledger_invalid') from None
+    from ..macro import aviation, aviation_series
+    try:
+        aviation_series.validate_archive(docs['collector_state/macro_archive.json'],
+            read(Path(before)/'collector_state/macro_archive.json') if before is not None else None)
+    except (ValueError, TypeError, KeyError, AttributeError):
+        raise ValidationError('aviation_macro_ledger_invalid') from None
+    if any(i.get('id') in aviation.IDS.values() or i.get('source_id') == aviation.SOURCE
+           or i.get('value_kind') == aviation.KIND for i in docs['site/data/macro.json']['indicators']):
+        raise ValidationError('private_aviation_public_projection_forbidden')
     macro = docs['collector_state/macro_archive.json']['indicators']
     for item in macro.values():
         if not isinstance(item['observations'],dict) or not isinstance(item['revisions'],list):
@@ -129,6 +138,7 @@ def validate(root, cfg, before=None):
             'reports':len(docs['site/data/reports.json']['reports']),
             'macro_observations':sum(len(i['observations']) for i in macro.values()),
             'private_decimal_observations':sum(len(i['observations']) for i in docs['collector_state/macro_archive.json'].get('decimal_indicators',{}).values()),
+            'private_aviation_observations':sum(len(i['observations']) for i in docs['collector_state/macro_archive.json'].get('aviation_indicators',{}).values()),
             'last_news_success':docs['site/data/health.json'].get('last_successful_fetch'),
             'last_reports_success':max(report_dates,key=timestamp) if report_dates else None,
             'last_macro_success':max(macro_dates,key=timestamp) if macro_dates else None}

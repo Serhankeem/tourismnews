@@ -5,7 +5,7 @@ import datetime as dt
 import json
 import os
 from pathlib import Path
-from . import kto, ecos, tourgo, ecos_decimal, decimal_series
+from . import kto, ecos, tourgo, ecos_decimal, decimal_series, aviation, aviation_series
 from .balance import permitted
 from .model import comparisons, months, month_before, valid_period
 from .transport import Loader
@@ -25,7 +25,8 @@ def public_view(config,archive,now,operating_policy=None):
     tourgo_pair=tourgo.public_pair(tourgo_source,archive,now.date()) if tourgo.terms_confirmed(tourgo_source,policy,now.date()) else {}
     for item in config['indicators']:
         # Private decimal series have no public projection, even if flags change.
-        if item.get('value_kind') in decimal_series.KINDS:continue
+        if (item.get('value_kind') in decimal_series.KINDS
+                or item.get('value_kind') == aviation.KIND or item.get('source_id') == aviation.SOURCE):continue
         source=next((s for s in config['sources'] if s['id']==item['source_id']), {})
         if (not item.get('enabled') or not source.get('enabled')
                 or (source.get('requires_approval') and not permitted(source, 'publication', now.date()))
@@ -56,10 +57,12 @@ def public_view(config,archive,now,operating_policy=None):
         result['tourism_balance']=tourgo.balance_view(tourgo_pair)
     return result
 
-def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_client=None,tourgo_ledger=None,only_sources=None,operating_policy=None):
+def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_client=None,tourgo_ledger=None,only_sources=None,operating_policy=None,aviation_bundle=None):
     now=(now or dt.datetime.now(KST)).astimezone(KST);loader=loader or Loader()
     data_dir,state_dir=Path(data_dir),Path(state_dir);data_dir.mkdir(parents=True,exist_ok=True);state_dir.mkdir(parents=True,exist_ok=True)
     archive_path=state_dir/'macro_archive.json';public_path=data_dir/'macro.json'
+    private_only = only_sources is not None and set(only_sources) == {aviation.SOURCE}
+    health_path = state_dir/'macro_run_summary.json' if private_only else data_dir/'macro_health.json'
     health=dict(schema_version=1,checked_at=now.isoformat(),status='failed',sources=[],new_observations=0,unchanged_observations=0,value_corrections=0,status_changes=0)
     try:
         if not archive_path.exists() and public_path.exists() and any(i.get('observations') for i in read(public_path,{}).get('indicators',[])):raise ValueError('archive_missing_with_existing_public_data')
@@ -68,18 +71,48 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         if archive.get('schema_version')!=1 or not isinstance(archive.get('indicators'),dict) or not isinstance(archive.get('sources'),dict):raise ValueError('archive_schema_invalid')
         if any(not isinstance(v,dict) for v in archive['sources'].values()):raise ValueError('archive_sources_invalid')
         decimal_series.validate_archive(archive)
+        aviation_series.validate_archive(archive)
         for saved in archive['indicators'].values():
             if not isinstance(saved,dict) or not isinstance(saved.get('observations'),dict) or not isinstance(saved.get('revisions'),list):raise ValueError('archive_records_invalid')
             for period,record in saved['observations'].items():
                 valid_period(period)
                 if not isinstance(record,dict) or not isinstance(record.get('value'),int) or isinstance(record.get('value'),bool) or record['value']<0 or record['value']>ecos.MAX_INTEGER or not record.get('first_collected_at') or record.get('unit')!=saved.get('unit'):raise ValueError('archive_observation_invalid')
     except (ValueError,TypeError,KeyError,OSError):
-        health['error']='archive_invalid_or_missing_existing_data_preserved';write_atomic(data_dir/'macro_health.json',health);return health
-    success=0;attempts=0;skipped=0
+        health['error']='archive_invalid_or_missing_existing_data_preserved';write_atomic(health_path,health);return health
+    success=0;attempts=0;skipped=0;aviation_success=0
     for source in config['sources']:
         if only_sources is not None and source['id'] not in only_sources:continue
         sid=source['id'];previous=archive['sources'].get(sid,{})
         result=dict(id=sid,name=source['name'],status='not_connected',reason=source.get('reason'),last_successful_check=previous.get('last_successful_check'))
+        if source.get('method') == aviation.METHOD:
+            previous=archive.get('aviation_sources',{}).get(sid,{})
+            result.update(last_successful_check=previous.get('last_successful_check'),
+                          publication_status='blocked',automatic_download=False)
+            active=[i for i in config['indicators'] if i.get('enabled') and i['source_id']==sid]
+            if not source.get('enabled'):
+                result['collection_state']='disabled'
+            elif not aviation.reviewed(source,now):
+                result['collection_state']='collection_review_required'
+            elif len(active)!=2:
+                result['collection_state']='indicators_disabled'
+            elif aviation_bundle is None:
+                result.update(status='manual_update_pending',collection_state='waiting_for_manual_input')
+                skipped+=1
+            else:
+                attempts+=1
+                try:
+                    snapshot=aviation.fetch(source,active,aviation_bundle,now)
+                    staged,counts=aviation_series.merge(archive,source,active,snapshot,now)
+                    archive=staged;success+=1;aviation_success+=1
+                    for k,v in counts.items():health[k]+=v
+                    result.update(status='ok',reason=None,collection_state='private_validated',
+                        reference_period=snapshot['reference_period'],last_successful_check=now.isoformat(),
+                        observations=sum(len(r) for r in snapshot['records'].values()),**counts)
+                except Exception:
+                    result.update(status='error',collection_state='failed_retained',
+                        error_kind='aviation_file_or_validation_failed',
+                        reason='항공 원본/검증 실패; 기존 검증값 보존',previous_data_preserved=bool(previous))
+            health['sources'].append(result);continue
         if source.get('method') == ecos_decimal.METHOD:
             previous=archive.get('decimal_sources',{}).get(sid,{})
             result.update(last_successful_check=previous.get('last_successful_check'),publication_status='blocked')
@@ -241,13 +274,15 @@ def collect(config,data_dir,state_dir,loader=None,now=None,force=False,ecos_clie
         # Save canonical history first. An interrupted public export can be retried;
         # missing/corrupt history is never silently recreated from a public subset.
         archive['updated_at']=now.isoformat();write_atomic(archive_path,archive)
-        write_atomic(public_path,public_view(config,archive,now,operating_policy))
+        if success > aviation_success:
+            write_atomic(public_path,public_view(config,archive,now,operating_policy))
     view=public_view(config,archive,now,operating_policy)
     health['connected_indicators']=sum(i['connected'] for i in view['indicators'])
     health['connected_primary_indicators']=sum(i['connected'] and i['priority']==1 for i in view['indicators'])
     health['observation_count']=sum(len(i['observations']) for i in view['indicators'])
     health['indicators']=[dict(id=i['id'],connected=i['connected'],first_period=i.get('first_period'),latest_period=i.get('latest_period'),months=i.get('months',0),missing_periods=i['missing_periods']) for i in view['indicators']]
-    write_atomic(data_dir/'macro_health.json',health);write_atomic(state_dir/'macro_run_summary.json',health)
+    if not private_only:write_atomic(health_path,health)
+    write_atomic(state_dir/'macro_run_summary.json',health)
     return health
 
 def main():
