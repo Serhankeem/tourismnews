@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-13T12:12:10+09:00",
+  "checked_at": "2026-11-13T13:18:05+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -197,6 +197,42 @@
       "title": "‘제10회 서점의 날’, 책과 사람을 잇는 서점의 가치 되새겨",
       "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22839",
       "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "258ce4e43dfa5e521f",
+      "title": "공원과 실내놀이터를 한곳에서! 서울형 키즈카페 천왕근린공원점 개장",
+      "url": "https://mediahub.seoul.go.kr/archives/2020010",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "92fda50e534622b976",
+      "title": "스탬프 찍으며 걷다 보니, 야금야금 깊어지는 서울의 문화 밤",
+      "url": "https://mediahub.seoul.go.kr/archives/2019988",
+      "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -526,42 +562,6 @@
       "id": "23b8d62a5c0f988f18",
       "title": "가을엔 동대문 한 바퀴! 흥인지문공원부터 DDP 숨은 명소까지",
       "url": "https://mediahub.seoul.go.kr/archives/2019974",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0cf1791e7f6b9fe23d",
-      "title": "스탬프로 '야금야금' 즐긴 서울 문화의 밤! 점자명함 만들고 부채춤 보고",
-      "url": "https://mediahub.seoul.go.kr/archives/2019968",
-      "source_id": "seoul_culture",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "8cefd3f812277c87ed",
-      "title": "300만 가입한 '손목닥터' 축하하며! '걷다보니 운동회' 다녀왔어요",
-      "url": "https://mediahub.seoul.go.kr/archives/2019961",
       "source_id": "seoul_culture",
       "relevance_evidence": {
         "rule_version": "0.2",
@@ -2469,24 +2469,6 @@
       "id": "5a0628a89a2d895aef",
       "title": "“두유 노 미스터 킴?”…팔라우에 남은 23년 전 ‘인간극장’",
       "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500683",
-      "source_id": "traveltimes",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "6a92228299df132a71",
-      "title": "관광·항공업계도 국회로…입법박람회에 88개 기관 참여",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500708",
       "source_id": "traveltimes",
       "relevance_evidence": {
         "rule_version": "0.2",
