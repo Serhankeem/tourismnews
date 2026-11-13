@@ -1,20 +1,30 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-13T14:47:17+09:00",
+  "generated_at": "2026-11-13T16:42:25+09:00",
   "briefing_date": "2026-11-13",
-  "last_successful_fetch": "2026-11-13T14:47:17+09:00",
+  "last_successful_fetch": "2026-11-13T16:42:25+09:00",
   "status": "candidates_ready",
-  "recent_news_count": 10,
-  "selected_count": 2,
+  "recent_news_count": 11,
+  "selected_count": 3,
   "collection": {
     "status": "partial",
-    "successful_sources": 51,
+    "successful_sources": 50,
     "source_count": 60,
-    "failed_sources": 9
+    "failed_sources": 10
   },
   "mode": "live_rss",
   "title": "관광산업 주요 뉴스 브리핑 후보",
   "items": [
+    {
+      "title": "서울관광재단·한국장애인개발원 맞손 ... “서울의 ‘문턱 없는 여행’, 아시아·태평양의 표준 되다”",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-11-13T15:24:44+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162282",
+      "category": "문화·트렌드",
+      "keywords": [
+        "관광재단"
+      ]
+    },
     {
       "title": "대한항공, 인천~뉴어크 내년 5월 취항",
       "source": "트래블데일리",
