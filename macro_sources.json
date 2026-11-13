@@ -188,6 +188,103 @@
         "verified_at": null
       },
       "publication_status": "blocked"
+    },
+    {
+      "id": "kac_airport_monthly",
+      "name": "한국공항공사·인천국제공항공사 공동 항공통계",
+      "enabled": false,
+      "requires_approval": true,
+      "method": "official_airport_xlsx_private",
+      "publication_status": "blocked",
+      "automatic_download": false,
+      "catalog_url": "https://www.airport.co.kr/www/cms/frCon/index.do?MENU_ID=1250",
+      "start_period": "2021-01",
+      "end_period": "2026-10",
+      "scope": {
+        "statistical_approval": "920005",
+        "basis": "airport_statistics_not_molit_transport",
+        "geography": "KR_nationwide_15_airports_including_ICN",
+        "airports": [
+          "GMP",
+          "PUS",
+          "CJU",
+          "CJJ",
+          "TAE",
+          "MWX",
+          "YNY",
+          "KWJ",
+          "USN",
+          "RSU",
+          "KPO",
+          "HIN",
+          "KUV",
+          "WJU",
+          "ICN"
+        ],
+        "route": "international",
+        "direction": "arrivals_plus_departures",
+        "operations": "scheduled_and_nonscheduled",
+        "aircraft": "passenger_and_cargo",
+        "passengers": "revenue_nonrevenue_transfer_excluding_direct_transit"
+      },
+      "reason": "공식 공항통계 원본 검증용 비공개 기반; 권리·자동수집 범위·정정 빈티지·독립 대조 및 운영자 승인 전 비활성",
+      "rights": "KAC/인천 공동 통계 파일별 재사용·재배포 허용 범위 미확정; 수집과 공개 승인은 별도",
+      "terms_urls": [
+        "https://www.airport.co.kr/www/cms/frCon/index.do?MENU_ID=1260",
+        "https://www.airport.kr/ap_ko/1033/subview.do"
+      ],
+      "definition_url": "https://www.airport.co.kr/ajaxa/fileCpnt/fileDown.do?gbn=b03&BOARD_SEQ=126&SITE_NO=2&BBS_SEQ=3551434&FILE_SEQ=1",
+      "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49#issuecomment-6843617291",
+      "approval": {
+        "collection": {
+          "approved": false,
+          "scope": "kac_airport_monthly",
+          "evidence_ref": null,
+          "valid_from": null,
+          "valid_until": null,
+          "period_from": null,
+          "period_through": null
+        },
+        "publication": {
+          "approved": false,
+          "scope": "kac_airport_monthly",
+          "evidence_ref": null,
+          "valid_from": null,
+          "valid_until": null,
+          "period_from": null,
+          "period_through": null
+        }
+      },
+      "collection_review": {
+        "status": "review",
+        "evidence_url": null,
+        "verified_at": null
+      },
+      "rights_review": {
+        "status": "review",
+        "evidence_url": null,
+        "verified_at": null
+      },
+      "automation_review": {
+        "status": "review",
+        "evidence_url": null,
+        "verified_at": null
+      },
+      "vintage_review": {
+        "status": "review",
+        "evidence_url": null,
+        "verified_at": null
+      },
+      "crosscheck": {
+        "status": "partial",
+        "evidence_url": "https://github.com/Serhankeem/tourismnews/issues/49#issuecomment-6843617291",
+        "verified_at": null,
+        "periods": [
+          "2025-09",
+          "2026-09"
+        ],
+        "scope": "ICN component independently compared in Step 7; national 70-month independent comparison incomplete"
+      }
     }
   ],
   "indicators": [
@@ -763,6 +860,100 @@
         "status": "review",
         "verified_at": null
       }
+    },
+    {
+      "id": "market_airport_international_operations",
+      "name": "전국 국제선 공항 운항",
+      "metric": "operations",
+      "source_id": "kac_airport_monthly",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "unit": "편",
+      "frequency": "M",
+      "publisher": "한국공항공사·인천국제공항공사",
+      "provider": "한국공항공사·인천국제공항공사",
+      "value_kind": "airport_activity_count",
+      "storage": "integer",
+      "scope": {
+        "statistical_approval": "920005",
+        "basis": "airport_statistics_not_molit_transport",
+        "geography": "KR_nationwide_15_airports_including_ICN",
+        "airports": [
+          "GMP",
+          "PUS",
+          "CJU",
+          "CJJ",
+          "TAE",
+          "MWX",
+          "YNY",
+          "KWJ",
+          "USN",
+          "RSU",
+          "KPO",
+          "HIN",
+          "KUV",
+          "WJU",
+          "ICN"
+        ],
+        "route": "international",
+        "direction": "arrivals_plus_departures",
+        "operations": "scheduled_and_nonscheduled",
+        "aircraft": "passenger_and_cargo",
+        "passengers": "revenue_nonrevenue_transfer_excluding_direct_transit"
+      },
+      "source_url": "https://www.airport.co.kr/www/cms/frCon/index.do?MENU_ID=1250",
+      "collection_method": "official_airport_xlsx_private",
+      "definition": "승인통계 920005 공항통계 기준 전국 15개 공항(인천 포함) 국제선 출발+도착 운항. 정기+부정기, 여객기+화물기. 국토부 항공수송통계·공급좌석·고유 항공기 수로 대체하지 않음.",
+      "role": "supply_activity_proxy",
+      "status_policy": "관측별 실제 공표일·잠정/확정 미표기 유지; 조회일을 공표일로 대체하지 않음"
+    },
+    {
+      "id": "market_airport_international_passengers",
+      "name": "전국 국제선 공항 여객",
+      "metric": "passengers",
+      "source_id": "kac_airport_monthly",
+      "enabled": false,
+      "publication_status": "blocked",
+      "priority": 2,
+      "unit": "명",
+      "frequency": "M",
+      "publisher": "한국공항공사·인천국제공항공사",
+      "provider": "한국공항공사·인천국제공항공사",
+      "value_kind": "airport_activity_count",
+      "storage": "integer",
+      "scope": {
+        "statistical_approval": "920005",
+        "basis": "airport_statistics_not_molit_transport",
+        "geography": "KR_nationwide_15_airports_including_ICN",
+        "airports": [
+          "GMP",
+          "PUS",
+          "CJU",
+          "CJJ",
+          "TAE",
+          "MWX",
+          "YNY",
+          "KWJ",
+          "USN",
+          "RSU",
+          "KPO",
+          "HIN",
+          "KUV",
+          "WJU",
+          "ICN"
+        ],
+        "route": "international",
+        "direction": "arrivals_plus_departures",
+        "operations": "scheduled_and_nonscheduled",
+        "aircraft": "passenger_and_cargo",
+        "passengers": "revenue_nonrevenue_transfer_excluding_direct_transit"
+      },
+      "source_url": "https://www.airport.co.kr/www/cms/frCon/index.do?MENU_ID=1250",
+      "collection_method": "official_airport_xlsx_private",
+      "definition": "승인통계 920005 공항통계 기준 전국 15개 공항(인천 포함) 국제선 출발+도착 여객. 유임+무임+환승, 통과여객 제외. 정기+부정기, 여객기+화물기. 방한 외래관광객·고유 여행자·국토부 항공수송 여객과 구분.",
+      "role": "airport_demand_activity",
+      "status_policy": "관측별 실제 공표일·잠정/확정 미표기 유지; 조회일을 공표일로 대체하지 않음"
     }
   ]
 }

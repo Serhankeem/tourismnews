@@ -1,0 +1,125 @@
+{
+  "mode": "offline_original_replay_with_test_only_in_memory_grants",
+  "original_statistical_files_integrity_checked": 6,
+  "national_xlsx_parsed": 4,
+  "auxiliary_xls_hash_checked": 2,
+  "auxiliary_xls_values_reparsed": false,
+  "observations": 140,
+  "yoy_observations": 116,
+  "first_period": "2021-01",
+  "latest_period": "2026-10",
+  "yoy_first_period": "2022-01",
+  "yoy_latest_period": "2026-10",
+  "scope": {
+    "statistical_approval": "920005",
+    "basis": "airport_statistics_not_molit_transport",
+    "geography": "KR_nationwide_15_airports_including_ICN",
+    "airports": [
+      "GMP",
+      "PUS",
+      "CJU",
+      "CJJ",
+      "TAE",
+      "MWX",
+      "YNY",
+      "KWJ",
+      "USN",
+      "RSU",
+      "KPO",
+      "HIN",
+      "KUV",
+      "WJU",
+      "ICN"
+    ],
+    "route": "international",
+    "direction": "arrivals_plus_departures",
+    "operations": "scheduled_and_nonscheduled",
+    "aircraft": "passenger_and_cargo",
+    "passengers": "revenue_nonrevenue_transfer_excluding_direct_transit"
+  },
+  "units": {
+    "operations": "편",
+    "passengers": "명"
+  },
+  "raw_files_committed": false,
+  "production_approvals_changed": false,
+  "automatic_download": false,
+  "publication_allowed": false,
+  "independent_full_crosscheck_complete": false,
+  "repeat_idempotent": true,
+  "failed_input_preserves_archive_and_public": true,
+  "legacy_macro_equal": true,
+  "public_files_byte_identical": true,
+  "pipeline_validation": {
+    "news": 107,
+    "archive": 120,
+    "discovery": 15974,
+    "reports": 137,
+    "macro_observations": 621,
+    "private_decimal_observations": 0,
+    "private_aviation_observations": 140,
+    "last_news_success": "2026-11-13T13:18:05+09:00",
+    "last_reports_success": "2026-11-09T07:50:14+09:00",
+    "last_macro_success": "2026-11-13T13:19:57.742021+09:00"
+  },
+  "original_files": [
+    {
+      "path": "kac/history-202101-202610.xlsx",
+      "kind": "national_time_series_original",
+      "bytes": 16293,
+      "sha256": "ea0683d35ba13d8edb154ec92d506037ddd4f7bf5063b591a45dc1914bf35656"
+    },
+    {
+      "path": "kac/history-2021-2025-nov-dec.xlsx",
+      "kind": "national_time_series_original",
+      "bytes": 10544,
+      "sha256": "c1b95eff0afad1fcfe52b5450e7894a07e581bf59b7b48e5f266fe0cb710c82e"
+    },
+    {
+      "path": "kac/202509-공항별 통계_20261113.xlsx",
+      "kind": "national_airport_breakdown_original",
+      "bytes": 9599,
+      "sha256": "55b82fb5fdc674beadf4e6c806545568bd658275039a8adb166dffca35573493"
+    },
+    {
+      "path": "auxiliary/incheon-202509-official.xls",
+      "kind": "incheon_independent_crosscheck_original",
+      "bytes": 5120,
+      "sha256": "1850a876f4bb19a5200a1f4ead335cf8fb52098ff229bcd5a3facad20e001ddd"
+    },
+    {
+      "path": "kac/202609-공항별 통계_20261113.xlsx",
+      "kind": "national_airport_breakdown_original",
+      "bytes": 9528,
+      "sha256": "bead039e532159d46bc5995254cd1d7d8eaf0cdbd687de80dc91f0f608863bbb"
+    },
+    {
+      "path": "auxiliary/incheon-202609-official.xls",
+      "kind": "incheon_independent_crosscheck_original",
+      "bytes": 5120,
+      "sha256": "ee4fb0b57087b0b9b995be75ecf3903b1a570dde9821b888a23dbae5b335a23a"
+    }
+  ],
+  "base_main_commit": "41bf1749268af155ba316725391f259833d89a71",
+  "live_snapshot_commit": "7db0c31a031536ca2d08346418f4592f34d53434",
+  "checked_at": "2026-11-13T04:58:41.532798+00:00",
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 641,
+    "new_aviation_tests": 18,
+    "seconds": 310.564,
+    "full_log_sha256": "f0477ca3fbc3273ebe473f660f2b2a0e0e168f8984286828d8ae2d395f2983d2"
+  },
+  "preservation": {
+    "legacy_macro_observations": 621,
+    "protected_checkout_files_unchanged": 64,
+    "live_baseline_files_unchanged": 32,
+    "existing_source_and_indicator_configuration_equal": true,
+    "existing_tourgo_approvals_equal": true,
+    "operational_actions_run": false,
+    "ui_changed": false,
+    "production_data_live_written": false
+  },
+  "synthetic_test_scope": "Temporary generated XLSX; corrections/invalid inputs are synthetic, not recovered historical official vintages",
+  "crosscheck_limit": "Step 7 independently compared ICN components in 2025-09 and 2026-09; Step 9 hashes auxiliary XLS but reparses only the four national XLSX. National 70-month independent validation remains incomplete."
+}
