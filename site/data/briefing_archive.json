@@ -313,6 +313,67 @@
         }
       ],
       "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
+    },
+    {
+      "schema_version": 5,
+      "generated_at": "2026-11-13T10:35:55+09:00",
+      "briefing_date": "2026-11-13",
+      "last_successful_fetch": "2026-11-13T10:35:55+09:00",
+      "status": "candidates_ready",
+      "recent_news_count": 12,
+      "selected_count": 4,
+      "collection": {
+        "status": "partial",
+        "successful_sources": 45,
+        "source_count": 60,
+        "failed_sources": 15
+      },
+      "mode": "live_rss",
+      "title": "관광산업 주요 뉴스 브리핑 후보",
+      "items": [
+        {
+          "title": "대한항공, 인천~뉴어크 내년 5월 취항",
+          "source": "트래블데일리",
+          "published_at": "2026-11-12T21:41:14+09:00",
+          "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72672",
+          "category": "항공·숙박",
+          "keywords": [
+            "대한항공",
+            "취항"
+          ]
+        },
+        {
+          "title": "방한 외국인 관광객 2000만 돌파",
+          "source": "트래블데일리",
+          "published_at": "2026-11-12T21:41:12+09:00",
+          "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72671",
+          "category": "인바운드",
+          "keywords": [
+            "외국인관광객"
+          ]
+        },
+        {
+          "title": "방한 외국인 관광객 사상 첫 2,000만 명…14년 만에 두 배로",
+          "source": "여행신문",
+          "published_at": "2026-11-12T13:31:40+09:00",
+          "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500712",
+          "category": "인바운드",
+          "keywords": [
+            "외국인관광객"
+          ]
+        },
+        {
+          "title": "방한 외국인 관광객 2,000만 명 돌파, 대한민국 관광의 새 역사",
+          "source": "문화체육관광부 보도자료",
+          "published_at": "2026-11-12T13:03:29+09:00",
+          "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22845",
+          "category": "인바운드",
+          "keywords": [
+            "외국인관광객"
+          ]
+        }
+      ],
+      "notice": "메타데이터 기반 후보 선별 · 본문 요약·실제 발송·구독은 제공하지 않습니다."
     }
   ]
 }
