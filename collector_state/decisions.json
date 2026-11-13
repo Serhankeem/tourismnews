@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-13T22:37:15+09:00",
+  "checked_at": "2026-11-14T00:13:24+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3972,6 +3972,96 @@
       "decision": "exclude"
     },
     {
+      "id": "5e8a2708d778d66487",
+      "title": "Leveraging Authentic Local Destinations and Experiences to Generate Demand",
+      "url": "https://www.hospitalitynet.org/opinion/4135419/leveraging-authentic-local-destinations-and-experiences-to-generate-demand",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "c487faeaf8416d365e",
+      "title": "5 challenges facing the hotel industry and what you can do about them",
+      "url": "https://www.hospitalitynet.org/opinion/4135262/5-challenges-facing-the-hotel-industry-and-what-you-can-do-about-them",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b3e9d04e3b17e50cfb",
+      "title": "Who Is Allowed to Say No to Revenue?",
+      "url": "https://www.hospitalitynet.org/opinion/4134965/who-is-allowed-to-say-no-to-revenue",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "295fe0a6cadb3dde73",
+      "title": "HFTP, HSMAI and AHLA/HTNG Unite to Create Global Hospitality AI Coordinating Council",
+      "url": "https://www.hospitalitynet.org/news/4135455/hftp-hsmai-and-ahlahtng-unite-to-create-global-hospitality-ai-coordinating-council",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5bc0bf0975435abed8",
+      "title": "Booking.com terminates your partner account: what rights do you have?",
+      "url": "https://www.hospitalitynet.org/opinion/4135467/bookingcom-terminates-your-partner-account-what-rights-do-you-have",
+      "source_id": "hospitalitynet",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "1859aaeef85d54d591",
       "title": "How to increase hotel visibility on OTAs without losing money",
       "url": "https://www.hospitalitynet.org/explainer/4135466/how-to-increase-hotel-visibility-on-otas-without-losing-money",
@@ -4253,118 +4343,6 @@
         "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
-    },
-    {
-      "id": "ea8bd2622a47a2a2a5",
-      "title": "The Glitter Trap: When Luxury Hospitality Confuses Prestige with Performance",
-      "url": "https://www.hospitalitynet.org/opinion/4135450/the-glitter-trap-when-luxury-hospitality-confuses-prestige-with-performance",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "1e9280c474e42b9f03",
-      "title": "Behind Every Seamless Hotel Operation: In Conversation with Sirma’s Antonia Teofilova",
-      "url": "https://www.hospitalitynet.org/interview/4135352/behind-every-seamless-hotel-operation-in-conversation-with-sirmas-antonia-teofilova",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "05e3755e8ca45f98d2",
-      "title": "Commerce Media is Generating Real Revenues for Hotels",
-      "url": "https://www.hospitalitynet.org/opinion/4135448/commerce-media-is-generating-real-revenues-for-hotels",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hotels",
-              "revenue"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
-    },
-    {
-      "id": "fb85350e75b8145a3e",
-      "title": "Meyer Jabara Hotels’ Menhaden Earns Third Consecutive MICHELIN Key, Reinforcing Its Reputation for Exceptional Hospitality",
-      "url": "https://www.hospitalitynet.org/news/4135447/meyer-jabara-hotels-menhaden-earns-third-consecutive-michelin-key-reinforcing-its-reputation-for-exceptional-hospitality",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "feb2c9ab96676cc8f4",
-      "title": "Inn-Flow Introduces AP Agent, Expanding AI-powered Capabilities Across Hotel Accounting Workflows",
-      "url": "https://www.hospitalitynet.org/news/4135429/inn-flow-introduces-ap-agent-expanding-ai-powered-capabilities-across-hotel-accounting-workflows",
-      "source_id": "hospitalitynet",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Direct",
-        "decision": "publish",
-        "category": "항공·숙박",
-        "score": 8,
-        "rules": [
-          "english_industry_change"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "hotel",
-              "introduc"
-            ]
-          }
-        ],
-        "impact_targets": [],
-        "reason": "공식 제목에 관광기업·항공·숙박 등 산업 대상과 운영 또는 재무 변화가 함께 명시되어 있습니다.",
-        "evidence_status": "industry_subject_in_feed"
-      },
-      "decision": "publish"
     }
   ]
 }
