@@ -1,21 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-13T13:19:57.742021+09:00",
-  "status": "ok",
+  "checked_at": "2026-11-13T15:00:18.358058+09:00",
+  "status": "not_due",
   "sources": [
     {
       "id": "kto_monthly_statistics",
       "name": "한국관광공사 한국관광통계",
-      "status": "ok",
+      "status": "not_due",
       "reason": null,
       "last_successful_check": "2026-11-13T13:19:57.742021+09:00",
-      "reference_period": "2026-09",
-      "release_published_at": "2026-10-28T10:10:00+09:00",
-      "observations": 483,
-      "new_observations": 0,
-      "unchanged_observations": 483,
-      "value_corrections": 0,
-      "status_changes": 0
+      "reference_period": "2026-09"
     },
     {
       "id": "ecos_general_travel",
@@ -84,15 +78,25 @@
       "last_successful_check": null,
       "publication_status": "blocked",
       "collection_state": "disabled"
+    },
+    {
+      "id": "kac_airport_monthly",
+      "name": "한국공항공사·인천국제공항공사 공동 항공통계",
+      "status": "not_connected",
+      "reason": "공식 공항통계 원본 검증용 비공개 기반; 권리·자동수집 범위·정정 빈티지·독립 대조 및 운영자 승인 전 비활성",
+      "last_successful_check": null,
+      "publication_status": "blocked",
+      "automatic_download": false,
+      "collection_state": "disabled"
     }
   ],
   "new_observations": 0,
-  "unchanged_observations": 483,
+  "unchanged_observations": 0,
   "value_corrections": 0,
   "status_changes": 0,
-  "successful_sources": 1,
-  "attempted_sources": 1,
-  "pending_sources": 7,
+  "successful_sources": 0,
+  "attempted_sources": 0,
+  "pending_sources": 8,
   "connected_indicators": 9,
   "connected_primary_indicators": 4,
   "observation_count": 621,
