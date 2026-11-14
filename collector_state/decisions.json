@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-15T00:06:07+09:00",
+  "checked_at": "2026-11-15T02:05:14+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -197,6 +197,1096 @@
       "title": "인공지능과 저작권의 상생 모델 모색",
       "url": "http://www.mcst.go.kr/web/s_notice/press/pressView.jsp?pMenuCD=0302000000&pSeq=22840",
       "source_id": "mcst_press",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a6e275c67b359737ad",
+      "title": "서울시 민간축제 지원사업과 함께한 'K-트롯 페스티벌', 오늘은 내가 주인공!",
+      "url": "https://mediahub.seoul.go.kr/archives/2020038",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b8aa2669819bbc794c",
+      "title": "책이 고픈 계절, 골라 읽는 서가로 간다! '서울책보고'에서 만난 문학",
+      "url": "https://mediahub.seoul.go.kr/archives/2020053",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7651e542068ad5bd59",
+      "title": "파크골프 시작해 볼까? 새로운 운동 성지 '신목동역 펀스테이션'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019964",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "258ce4e43dfa5e521f",
+      "title": "공원과 실내놀이터를 한곳에서! 서울형 키즈카페 천왕근린공원점 개장",
+      "url": "https://mediahub.seoul.go.kr/archives/2020010",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "92fda50e534622b976",
+      "title": "스탬프 찍으며 걷다 보니, 야금야금 깊어지는 서울의 문화 밤",
+      "url": "https://mediahub.seoul.go.kr/archives/2019988",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3c1683168070f47368",
+      "title": "가을, 끝날 때까지 끝난 게 아니다! 주말 나들이 추천",
+      "url": "https://mediahub.seoul.go.kr/archives/2020044",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "dc769342bf3634f5d6",
+      "title": "밤에는 미디어아트, 낮에는 역사탐험! 광화문광장 '빛모락 스토리투어'",
+      "url": "https://mediahub.seoul.go.kr/archives/2020046",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6071c5a28e09408be7",
+      "title": "'오감'을 넘어 '다감'으로! 감각 깨우는 웰니스 학습 공간 생겼다",
+      "url": "https://mediahub.seoul.go.kr/archives/2020011",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5c48e9b8433c401617",
+      "title": "독립운동 역사도, 노벨문학상의 감동도! 뜻깊은 북촌 코스 제안",
+      "url": "https://mediahub.seoul.go.kr/archives/2019982",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "e1e5287730e4754956",
+      "title": "흥선대원군의 밀객이 되어 옥새를 찾아라! 운현궁 '달빛밀행'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019952",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7005b99a8911e3899c",
+      "title": "놓칠 뻔한 전시, 밤에 챙겨 봤다! '스탬프로 야금야금' 도심 문화투어",
+      "url": "https://mediahub.seoul.go.kr/archives/2019966",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "f0d693cbed89e493de",
+      "title": "스탬프 따라 걷다 보니, 서울의 가을밤이 특별해졌다! '스탬프로 야금야금'",
+      "url": "https://mediahub.seoul.go.kr/archives/2020013",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "8803ae10bb764df794",
+      "title": "'하늘 나는 자동차'에 숨은 기술…팝업스토어 성지 성수동에도 있다?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019983",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3383f45606b83cd1e3",
+      "title": "이 야경이 무료라고요? 시청 주변 야간 전망대 3곳(ft. 별밤서울)",
+      "url": "https://mediahub.seoul.go.kr/archives/2020014",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b1152fbf750f6b8b89",
+      "title": "서울 한복판에서 활시위를 당겨볼까? 황학정 국궁전시관",
+      "url": "https://mediahub.seoul.go.kr/archives/2019967",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "d0e34bdb05ca0c29ab",
+      "title": "이번 가을 어디 갈까? 서울 4대궁 무료 개방부터 단풍·야경까지!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019953",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "cee42acdde579ebc0d",
+      "title": "점자 명함 만들고 거북선에 올라탄 금요일 밤! '스탬프로 야금야금'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019975",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7b26a5e0853d91ea94",
+      "title": "비 오는 밤 더 낭만적인 '석촌호수'…서울별빛명소로 변신 기대!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019987",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "bfbc4513ec3576d9bb",
+      "title": "별 헤는 밤, '서울별빛명소'로 거듭날 10곳…미리 다녀온 정동길·성북천",
+      "url": "https://mediahub.seoul.go.kr/archives/2019965",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "19442e0f481650ee38",
+      "title": "단풍과 야경이 만나니 더 환상적! 남산 나이트 페스티벌 참여기",
+      "url": "https://mediahub.seoul.go.kr/archives/2019992",
+      "source_id": "seoul_culture",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3d206e9b6082724f9a",
+      "title": "일급 오르고 신청 쉬워졌다! 동행일자리 6,500명 모집",
+      "url": "https://mediahub.seoul.go.kr/archives/2020029",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "bc5fbda0394b80cdac",
+      "title": "지하철역에서 농특산물 최대 30% 저렴하게! '서로잇다 로컬마켓'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019989",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "bc23ad1940c68fba7a",
+      "title": "밥값 아끼고 5% 돌려받자! 우리 동네 착한가격업소",
+      "url": "https://mediahub.seoul.go.kr/archives/2019991",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "989dd2ac5c26b092c9",
+      "title": "여보게~ 셰프의 주막 열린다오! 남대문시장 미식축제",
+      "url": "https://mediahub.seoul.go.kr/archives/2019996",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ff767863762f1e6790",
+      "title": "오늘 점심은 여기다! 강남·서초권 6천 원대 가성비 구내식당 탐방",
+      "url": "https://mediahub.seoul.go.kr/archives/2019963",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7684b5a88fdc00e88e",
+      "title": "'땡겨요' 25% 혜택 받자! 서울사랑상품권 페이백 UP!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019980",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3ddd7b947e3210e795",
+      "title": "대기업 협력은 마곡, 콘텐츠 창업은 창동! 창업허브 2곳 입주기업 모집",
+      "url": "https://mediahub.seoul.go.kr/archives/2019977",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "4636464b81c440b4b7",
+      "title": "흙쪽파 한 단 1,100원! 김장철 부담 덜어주는 '농산물 착한가격 프로젝트'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019954",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a8d5e782e8fa1304cf",
+      "title": "사당역 달빛야장 푸짐하게 즐긴 비결! 달빛상품권 10% 할인",
+      "url": "https://mediahub.seoul.go.kr/archives/2019926",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ed8318077a1ea150f7",
+      "title": "취업 고민 끝낼 찬스! 일자리박람회·AI 인재 페스티벌",
+      "url": "https://mediahub.seoul.go.kr/archives/2019933",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "ec4a2c946bdecf4aa2",
+      "title": "착한가격업소 더 알뜰하게! 서울사랑상품권으로 5% 환급",
+      "url": "https://mediahub.seoul.go.kr/archives/2019925",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "dcfdae883cab1c08c8",
+      "title": "기대 만발! '서울별빛명소' 탄생할 10곳…어디어디?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019922",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7ecb9c4193eb7026bc",
+      "title": "서울광장 '소상공인의 날' 10% 할인 마켓…밤 9시까지 활짝!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019911",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "97e1b07c8a4a64be4f",
+      "title": "최대 반값! 김장재료 6종 저렴하게! '농산물 착한가격 프로젝트'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019910",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "072068112f0370825e",
+      "title": "잠자고 있는 지방세 환급금 210억 원…11월에 찾아가세요!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019879",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b64d263ebd9dac118d",
+      "title": "최대 15% 할인! 서울사랑상품권 '코.그.페' 행사",
+      "url": "https://mediahub.seoul.go.kr/archives/2019868",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "081d1271c87e4b946a",
+      "title": "불나면 어쩌지? 전통시장 화재공제로 미리 대비! 공제료 80% 지원",
+      "url": "https://mediahub.seoul.go.kr/archives/2019821",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "9159601e1908bf9dce",
+      "title": "서울의 밤을 채울 새로운 즐거움 '서울 달빛야장'(ft. 달빛상품권)",
+      "url": "https://mediahub.seoul.go.kr/archives/2019785",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2dad00c6e7b732ed7c",
+      "title": "6개 야장 상권에서 10% 할인! '달빛상품권' 발행",
+      "url": "https://mediahub.seoul.go.kr/archives/2019784",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "37a7c25b69c75773dc",
+      "title": "108계단 너머 만난 풍경! 서울의 시간이 켜켜이 쌓인 곳 '해방촌 신흥시장'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019761",
+      "source_id": "seoul_economy",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "bcb941d6c567f98aed",
+      "title": "그 많던 공유 전동킥보드는 어디 갔을까? 공유 모빌리티의 미래",
+      "url": "https://mediahub.seoul.go.kr/archives/2019990",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "af65329ae63eb32a34",
+      "title": "서울역에 내렸다면 짐부터 맡기자! 두 손 가볍게 즐기는 스마트 서울 여행",
+      "url": "https://mediahub.seoul.go.kr/archives/2019938",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a9049937cf5acd9c52",
+      "title": "궁금해서 타봤다! 청계천 자율주행버스 야간 탑승기",
+      "url": "https://mediahub.seoul.go.kr/archives/2019937",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "7ea818fe9d5be82776",
+      "title": "탄천변 도로 확 바뀐다! 개선 공사로 31일부터 우회도로 운영",
+      "url": "https://mediahub.seoul.go.kr/archives/2019887",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "1ff64270f7e6e1a8d5",
+      "title": "국회대로 지하차도 31일 폐쇄…'우회도로 확인하고 가세요'",
+      "url": "https://mediahub.seoul.go.kr/archives/2019870",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "34e1ebd1a62fb4e7fc",
+      "title": "지하철 7호선, 의정부·양주를 지나 포천까지! 도봉산-옥정 연장선",
+      "url": "https://mediahub.seoul.go.kr/archives/2019857",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "a42a7f1353d0b9383d",
+      "title": "(카드뉴스) 서울시 체육시설, 안전 괜찮습니다!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019850",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "708d1d807738f86828",
+      "title": "무료 자율주행버스 타고, 청계천~광장시장 밤나들이 출발!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019836",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "3bdf1e112300a65878",
+      "title": "떴드론~ 날았드론~ '드론 레이싱 월드컵' 열린다! 대회 관람부터 체험까지",
+      "url": "https://mediahub.seoul.go.kr/archives/2019732",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "69fe37b0a07d58be72",
+      "title": "청계천 밤길 달리는 자율주행버스! '청계 A01' 출발",
+      "url": "https://mediahub.seoul.go.kr/archives/2019790",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2496385e75e8dff1f9",
+      "title": "출퇴근길 더 빠르게! 9호선 급행 확대·급행버스 도입",
+      "url": "https://mediahub.seoul.go.kr/archives/2019693",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5fb4f03be1bd53bbc1",
+      "title": "우리 모임, 한강버스 탈까? 19일부터 온라인으로 단체 예약 가능",
+      "url": "https://mediahub.seoul.go.kr/archives/2019692",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "fd7a1c29d8aa1624d3",
+      "title": "7호선 장암역 한 달간 운행 중단, 무료 셔틀버스 똑똑하게 이용하는 법",
+      "url": "https://mediahub.seoul.go.kr/archives/2019661",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "d85ede1a0a55af4681",
+      "title": "환승 불편 덜어준다! 서울의 환승센터, 어디에 더 생기나?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019512",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "bff3aea8146f7b173c",
+      "title": "부르면 찾아오는 마을버스…사당4동 '동작CALL버스' 직접 타보니",
+      "url": "https://mediahub.seoul.go.kr/archives/2019464",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b052b8b2399787f0de",
+      "title": "기후동행카드 대신 기후동행패스? 직접 교환하고 궁금증 풀었다!",
+      "url": "https://mediahub.seoul.go.kr/archives/2019335",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "78e4067272c6427e11",
+      "title": "20일 오전 '걷자 페스티벌' DDP~광화문광장 교통 통제",
+      "url": "https://mediahub.seoul.go.kr/archives/2019408",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5b32c9a993b4c05990",
+      "title": "60년 전 서울의 철도계획, 지금 어디까지 현실이 됐을까?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019378",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "6c3023b2fe3339c097",
+      "title": "서울 벗어나도 OK, 환급도 알아서!…'기후동행패스' 달라진 점은?",
+      "url": "https://mediahub.seoul.go.kr/archives/2019323",
+      "source_id": "seoul_transport",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "2757078fe4fad47283",
+      "title": "구룡마을입구~개포3·4단지 잇는 '대모지하차도' 12일 임시 개통",
+      "url": "https://mediahub.seoul.go.kr/archives/2019342",
+      "source_id": "seoul_transport",
       "relevance_evidence": {
         "rule_version": "0.2",
         "label": "Irrelevant",
@@ -1966,6 +3056,24 @@
       "decision": "exclude"
     },
     {
+      "id": "52d79336dce11f5af5",
+      "title": "[여행르포] 실크로드의 심장, 우즈베키스탄 사마르칸트·부하라를 걷다",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162426",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "a12032c37690a24594",
       "title": "한국여행업협회·서대문구청, 관광 활성화 업무협약 체결",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162360",
@@ -2870,24 +3978,6 @@
         "signals": [],
         "impact_targets": [],
         "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "0299002b4bafe78dde",
-      "title": "제주관광협회, '메가쇼&트래블쇼 2026 시즌2'서 가을·겨울 여행 혜택 및 우수 관광기념품 선보여",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162208",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
       },
       "decision": "exclude"
     },
