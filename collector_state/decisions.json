@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-14T08:07:05+09:00",
+  "checked_at": "2026-11-14T10:28:30+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -2466,6 +2466,26 @@
       "decision": "exclude"
     },
     {
+      "id": "b34ca1e98044bbd0d4",
+      "title": "[주말판] 연말연시 빛낼 미국 홀리데이 축제",
+      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72676",
+      "source_id": "traveldaily",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [
+          "cross_sentence_unproven"
+        ],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "다른 산업 기사에서 관광 키워드만으로 영향 관계를 만들지 않습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "975a736e61ceb8ba4f",
       "title": "[창간 11주년 특집] 음식이 곧 여행 목적지",
       "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72674",
@@ -3385,24 +3405,6 @@
       "id": "4a6615d5d54573e97b",
       "title": "제주항공, 고객 맞춤형 여행 정보 서비스 운영",
       "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72626",
-      "source_id": "traveldaily",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "be84a68d3dab41a4ae",
-      "title": "싱가포르항공, 차세대 기내 좌석 공개",
-      "url": "https://www.traveldaily.co.kr/news/articleView.html?idxno=72625",
       "source_id": "traveldaily",
       "relevance_evidence": {
         "rule_version": "0.2",
