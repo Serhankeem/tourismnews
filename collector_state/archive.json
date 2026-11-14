@@ -1,11 +1,86 @@
 {
   "schema_version": 3,
   "rule_version": "0.2",
-  "generated_at": "2026-11-14T18:12:35+09:00",
-  "last_successful_fetch": "2026-11-14T18:12:35+09:00",
-  "count": 122,
+  "generated_at": "2026-11-14T20:06:34+09:00",
+  "last_successful_fetch": "2026-11-14T20:06:34+09:00",
+  "count": 123,
   "mode": "live_rss",
   "articles": [
+    {
+      "id": "a12032c37690a24594",
+      "published_at": "2026-11-14T18:51:23+09:00",
+      "date": "2026.11.14",
+      "category": "여행산업",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "source_id": "ttlnews",
+      "title": "한국여행업협회·서대문구청, 관광 활성화 업무협약 체결",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162360",
+      "relevance": 6,
+      "relevance_label": "Direct",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "여행산업",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "여행업"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "related_sources": [
+        "퍼블릭뉴스통신(TTL)"
+      ],
+      "first_discovered_at": "2026-11-14T20:06:34+09:00",
+      "publication_date_basis": "feed_publication_date",
+      "date_precision": "timestamp",
+      "record_type": "news",
+      "korea_priority": true,
+      "is_backfill": false,
+      "publication_policy": {
+        "status": "approved",
+        "scope": "metadata_only",
+        "noncommercial_only": true,
+        "terms_url": "https://www.ttlnews.com/rssIndex.html",
+        "additional_terms": [
+          "https://www.ttlnews.com/com/service.html",
+          "https://www.ttlnews.com/com/copyright.html"
+        ],
+        "basis": "Publisher RSS guide explicitly describes external websites collecting and displaying feed titles/links. Limited to owner-confirmed free, ad-free noncommercial link curation of supplied metadata; not article reuse. General copyright/terms reviewed separately; no full text, images, excerpts, framing or AI summaries. No article-list/archive crawling or RSS mirrors combined. Disable before commercial use.",
+        "checked_at": "2026-10-28",
+        "body_reuse": "not_authorized",
+        "database_scope": "Only provider-returned current feed; relevant incremental links; no full database/archive reproduction."
+      },
+      "first_published_by_engine_at": "2026-11-14T20:06:34+09:00",
+      "editorial": {
+        "version": "0.3-editorial-1",
+        "tier": "korea_direct",
+        "rank": 0,
+        "label": "한국 관광산업 직접 관련",
+        "korea_connection": "explicit",
+        "evidence": [
+          {
+            "field": "title",
+            "value": "한국여행",
+            "rule": "explicit_korean_market"
+          }
+        ],
+        "reason": "제목의 한국 시장·국내 관광기업 운영·공식 지역 관광사업 근거를 확인했습니다."
+      }
+    },
     {
       "id": "64a7e085ee40092e60",
       "published_at": "2026-11-13T18:34:53+09:00",

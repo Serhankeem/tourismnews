@@ -2,417 +2,417 @@
   "schema_version": 3,
   "sources": {
     "mcst_press": {
-      "attempts": 285,
-      "successes": 281,
+      "attempts": 286,
+      "successes": 282,
       "errors": {
         "access_policy": 4
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "korea_net_travel": {
-      "attempts": 285,
-      "successes": 163,
+      "attempts": 286,
+      "successes": 164,
       "errors": {
         "access_policy": 122
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kosis_recent": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 0,
       "errors": {
-        "access_policy": 284,
+        "access_policy": 285,
         "transport_error": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "seoul_culture": {
-      "attempts": 285,
-      "successes": 277,
+      "attempts": 286,
+      "successes": 278,
       "errors": {
         "access_policy": 8
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "seoul_economy": {
-      "attempts": 285,
-      "successes": 276,
+      "attempts": 286,
+      "successes": 277,
       "errors": {
         "access_policy": 8,
         "transport_error": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "seoul_transport": {
-      "attempts": 285,
-      "successes": 211,
+      "attempts": 286,
+      "successes": 212,
       "errors": {
         "access_policy": 8,
         "transport_error": 66
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "seoul_environment": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 132,
       "errors": {
         "access_policy": 8,
-        "transport_error": 145
+        "transport_error": 146
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_booking": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_expedia": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_marriott": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_hilton": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_delta": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_united": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "sec_tripcom": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 2,
       "errors": {
-        "access_policy": 283
+        "access_policy": 284
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "govuk_tourism": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "govuk_aviation": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "koreanair": {
-      "attempts": 285,
-      "successes": 284,
+      "attempts": 286,
+      "successes": 285,
       "errors": {
         "access_policy": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "tripcom_news": {
-      "attempts": 285,
+      "attempts": 286,
       "successes": 4,
       "errors": {
-        "access_policy": 281
+        "access_policy": 282
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "hilton_news": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "skift": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "yonhap": {
-      "attempts": 285,
-      "successes": 284,
+      "attempts": 286,
+      "successes": 285,
       "errors": {
         "access_policy": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "traveltimes": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "traveldaily": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "ttlnews": {
-      "attempts": 285,
-      "successes": 285,
+      "attempts": 286,
+      "successes": 286,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "hospitalitynet": {
-      "attempts": 194,
-      "successes": 194,
+      "attempts": 195,
+      "successes": 195,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "hotelnewsresource": {
-      "attempts": 194,
-      "successes": 187,
+      "attempts": 195,
+      "successes": 188,
       "errors": {
         "access_policy": 7
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "mss_press": {
-      "attempts": 132,
-      "successes": 132,
+      "attempts": 133,
+      "successes": 133,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "msit_press": {
-      "attempts": 132,
-      "successes": 132,
+      "attempts": 133,
+      "successes": 133,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_ajunews": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_fnnews": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_herald_economy": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_khan": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_kmib": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_donga": {
-      "attempts": 35,
-      "successes": 32,
+      "attempts": 36,
+      "successes": 33,
       "errors": {
         "access_policy": 2,
         "transport_error": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_seoul": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_ebn": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_mk": {
-      "attempts": 35,
-      "successes": 34,
+      "attempts": 36,
+      "successes": 35,
       "errors": {
         "access_policy": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_mt": {
-      "attempts": 35,
-      "successes": 29,
+      "attempts": 36,
+      "successes": 30,
       "errors": {
         "access_policy": 6
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_viva100": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_asiae": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_etoday": {
-      "attempts": 35,
-      "successes": 34,
+      "attempts": 36,
+      "successes": 35,
       "errors": {
         "access_policy": 1
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_hankyung": {
-      "attempts": 35,
-      "successes": 32,
+      "attempts": 36,
+      "successes": 33,
       "errors": {
         "access_policy": 3
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_inews24": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_newsis": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_sbs": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_tvchosun": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_nocutnews": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_sisajournal": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_ohmynews": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_polinews": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_pressian": {
-      "attempts": 35,
-      "successes": 33,
+      "attempts": 36,
+      "successes": 34,
       "errors": {
         "access_policy": 2
       },
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_kado": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_idomin": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_daejonilbo": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_incheonilbo": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_jejunews": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_cctoday": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_ihalla": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_koreaherald": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     },
     "kr_koreatimes": {
-      "attempts": 35,
-      "successes": 35,
+      "attempts": 36,
+      "successes": 36,
       "errors": {},
-      "last_checked_at": "2026-11-14T18:12:35+09:00"
+      "last_checked_at": "2026-11-14T20:06:34+09:00"
     }
   }
 }

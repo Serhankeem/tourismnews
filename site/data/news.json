@@ -1,9 +1,9 @@
 {
   "schema_version": 4,
   "mode": "live_rss",
-  "generated_at": "2026-11-14T18:12:35+09:00",
-  "last_successful_fetch": "2026-11-14T18:12:35+09:00",
-  "count": 109,
+  "generated_at": "2026-11-14T20:06:34+09:00",
+  "last_successful_fetch": "2026-11-14T20:06:34+09:00",
+  "count": 110,
   "public_fields": [
     "title",
     "source",
@@ -13,6 +13,17 @@
     "keywords"
   ],
   "articles": [
+    {
+      "title": "한국여행업협회·서대문구청, 관광 활성화 업무협약 체결",
+      "source": "퍼블릭뉴스통신(TTL)",
+      "published_at": "2026-11-14T18:51:23+09:00",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162360",
+      "category": "여행산업",
+      "keywords": [
+        "관광활성화",
+        "여행업"
+      ]
+    },
     {
       "title": "Evolution Hospitality expands with the addition of The Brandywine – a new Marriott Tribute Portfolio Hotel in Radnor, Pennsylvania",
       "source": "Hospitality Net",

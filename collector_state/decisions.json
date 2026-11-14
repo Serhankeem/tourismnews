@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "checked_at": "2026-11-14T18:12:35+09:00",
+  "checked_at": "2026-11-14T20:06:34+09:00",
   "scope": "successful_sources_this_run",
   "items": [
     {
@@ -3056,6 +3056,106 @@
       "decision": "exclude"
     },
     {
+      "id": "a12032c37690a24594",
+      "title": "한국여행업협회·서대문구청, 관광 활성화 업무협약 체결",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162360",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Direct",
+        "decision": "publish",
+        "category": "여행산업",
+        "score": 6,
+        "rules": [
+          "explicit_industry_subject"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "여행업"
+            ]
+          }
+        ],
+        "impact_targets": [],
+        "reason": "RSS 제목 또는 설명에서 구체적인 관광산업 대상·사업 신호를 확인했습니다.",
+        "evidence_status": "industry_subject_in_feed"
+      },
+      "decision": "publish"
+    },
+    {
+      "id": "1229c7e68c2c7ba16e",
+      "title": "김상백 도의원, 폐어구 회수체계 실효성 부족 및 어촌계 진입장벽 개선, 공공시설 부실시공 문제 지적",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162358",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "b767060e900d9e9120",
+      "title": "바인그룹, 양구서 ‘사랑의 김장 나눔’ 봉사활동…김장김치 406박스 마련",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162390",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "90d6510f0d436c8eb5",
+      "title": "미래에셋증권, 신임 본부장 11명 임명·본부장 4명 전보",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162398",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
+      "id": "5bec74c93e7dedcd21",
+      "title": "이미연 개인전, ‘MEMENTO 기억을 거닐다’ 개막 ... “한지 위 피어난 순금의 기억”",
+      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162408",
+      "source_id": "ttlnews",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Irrelevant",
+        "decision": "exclude",
+        "category": null,
+        "score": 0,
+        "rules": [],
+        "signals": [],
+        "impact_targets": [],
+        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
+      },
+      "decision": "exclude"
+    },
+    {
       "id": "7b806c7c5086842bd3",
       "title": "경찰 간부 인사조치로 이어진 바르셀로나 초대권 의혹... 초청 명단 신빙성 논란",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162359",
@@ -3867,96 +3967,6 @@
       "id": "0299002b4bafe78dde",
       "title": "제주관광협회, '메가쇼&트래블쇼 2026 시즌2'서 가을·겨울 여행 혜택 및 우수 관광기념품 선보여",
       "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162208",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "3dee45304a40990478",
-      "title": "희망브리지 부서장 18인, 집게 들고 율동공원서 구슬땀 ... “기후재난, 일상 실천으로 막는다”",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162207",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "4193109730fea2b055",
-      "title": "경산시 생활 행정 소식… 낙엽 집중 수거부터 재해보험·의료급여 안내까지",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162206",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "26bf9b69f0325b22fb",
-      "title": "고향의 정으로 하나 된 굿샷… 곡성의 가을, 230여 골프인 화합으로 물들다",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162068",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "091f09d0b706a04191",
-      "title": "고창군, 영농부산물 안전처리 지원...“고춧대·깻대 현장서 파쇄해 드려요”",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162158",
-      "source_id": "ttlnews",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Irrelevant",
-        "decision": "exclude",
-        "category": null,
-        "score": 0,
-        "rules": [],
-        "signals": [],
-        "impact_targets": [],
-        "reason": "관광산업에 대한 구체적 대상·영향 근거가 없습니다."
-      },
-      "decision": "exclude"
-    },
-    {
-      "id": "2920fe891a1d106e7e",
-      "title": "임실군, 농업보조율 최대 50%상향, 농업이 웃는다",
-      "url": "http://www.ttlnews.com/news/articleView.html?idxno=3162160",
       "source_id": "ttlnews",
       "relevance_evidence": {
         "rule_version": "0.2",
