@@ -553,6 +553,34 @@
           "published_at": "2026-11-12T19:15:31+09:00"
         }
       ]
+    },
+    {
+      "briefing_date": "2026-11-14",
+      "generated_at": "2026-11-14T11:32:24+09:00",
+      "mode": "live_rss",
+      "decisions": [
+        {
+          "article_id": "1624c6c537877d1c02",
+          "decision": "selected",
+          "tier": "korea_direct",
+          "category": "문화·트렌드",
+          "new_category": true,
+          "age_hours": 20.13,
+          "published_at": "2026-11-13T15:24:44+09:00",
+          "basis": [
+            "authorized_newsroom",
+            "verified_timestamp_last24h",
+            "korea_priority_then_category_diversity",
+            "conservative_title_similarity"
+          ]
+        },
+        {
+          "article_id": "64a7e085ee40092e60",
+          "decision": "editorial_ineligible",
+          "tier": "reference",
+          "published_at": "2026-11-13T18:34:53+09:00"
+        }
+      ]
     }
   ]
 }
