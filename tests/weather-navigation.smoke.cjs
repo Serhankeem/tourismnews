@@ -1,3 +1,4 @@
+const assertSharedModel=require('./model-ui-helper.cjs');
 // Approved public snapshot only. No actual monthly manuscript or release.
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs');
 const nav=require('./navigation-helper.cjs');
@@ -17,7 +18,7 @@ try{for(const width of [320,390,768,1024,1440]){
  const compact=await menu.isVisible();
  if(compact){await menu.focus();await page.keyboard.press('Enter');}
  assert.match(await weather.textContent(),/한국 관광의 날씨는\?/);
- assert.deepEqual(await page.locator('#weather-submenu a').allTextContents(),['월간 진단','가상 시뮬레이터·공식 관측','Macro Monitor 상세']);
+ assert.deepEqual(await page.locator('#weather-submenu a').allTextContents(),['월간 진단','관광시장 모델 · 공식 관측','Macro Monitor 상세']);
  await weather.focus();await page.keyboard.press('Space');assert.equal(await weather.getAttribute('aria-expanded'),'true');
  await scan(page);
  if([390,1440].includes(width))await page.screenshot({path:out+'/dropdown-'+width+'.png'});
@@ -39,12 +40,10 @@ try{for(const width of [320,390,768,1024,1440]){
   assert.equal(await weather.getAttribute('aria-current'),'true');
   assert.equal(await page.locator('#weather-monthly').isVisible(),route==='weather');
   assert.equal(await page.locator('#weather-legacy').isVisible(),route==='weather-simulator');
-  assert.equal(await screen.locator('h1').textContent(),route==='weather'?'월간 진단':route==='weather-simulator'?'가상 시뮬레이터·공식 관측':'Macro Monitor');
-  if(route==='weather')assert.equal(await page.locator('#monthly-state').textContent(),'아직 발행된 월간 진단 없음');
+  assert.equal(await screen.locator('h1').textContent(),route==='weather'?'월간 진단':route==='weather-simulator'?'관광시장 모델 · 공식 관측':'Macro Monitor');
+  if(route==='weather'){const response=await page.request.get(base+'/data/market_weather_index.json');if(response.ok())await page.locator('.monthly-title').waitFor();else assert.equal(await page.locator('#monthly-state').textContent(),'아직 발행된 월간 진단 없음');}
   if(route==='weather-simulator'){
-   const original=await page.locator('#weather-score').textContent();
-   for(const id of ['s-arrivals','s-spend','s-air']){await page.locator('#'+id).focus();await page.keyboard.press('ArrowRight');}
-   assert.notEqual(await page.locator('#weather-score').textContent(),original);await page.locator('#reset-weather').click();assert.equal(await page.locator('#weather-score').textContent(),original);
+   await assertSharedModel(page);
   }
   if(route==='macro'){
    const db=await page.evaluate(()=>MacroMonitor.database);assert.equal(db.indicators.filter(i=>i.connected).reduce((n,i)=>n+i.observations.length,0),621);
@@ -62,5 +61,5 @@ try{for(const width of [320,390,768,1024,1440]){
  for(const route of ['weather','weather-simulator','macro']){await page.goto(base+'/#'+route);await page.reload();assert.equal(await page.locator('#'+(route==='macro'?'page-macro':route==='weather'?'weather-monthly':'weather-legacy')).isVisible(),true);}
  await nav(page,'news');assert.equal(await weather.getAttribute('aria-current'),null);assert.equal(await news.getAttribute('aria-current'),'true');
  assert.deepEqual(errors,[]);await page.close();
-}console.log('PASS Step 19.5: five widths; both disclosures/native Enter+Space/ArrowDown/Escape/Tab/outside click/mobile; all weather routes/direct/reload/history/active states; unpublished monthly; 621 Macro; unchanged simulator controls/reset; WCAG 2 A/AA+2.1 AA if AXE_PATH supplied');
+}console.log('PASS Step 19.5: five widths; both disclosures/native Enter+Space/ArrowDown/Escape/Tab/outside click/mobile; all weather routes/direct/reload/history/active states; monthly reader; 621 Macro; shared model/no manual controls; WCAG 2 A/AA+2.1 AA if AXE_PATH supplied');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

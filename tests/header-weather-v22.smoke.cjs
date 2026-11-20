@@ -1,3 +1,4 @@
+const assertSharedModel=require('./model-ui-helper.cjs');
 // Layout-only regression. All figures are read from existing public data.
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),nav=require('./navigation-helper.cjs');
 (async()=>{const browser=await chromium.launch({headless:true}),base=process.env.TOURISM_TEST_URL||'http://127.0.0.1:8010';
@@ -36,16 +37,14 @@ try{for(const width of [320,390,768,1024,1280,1440]){
  await nav(page,'news');await nav(page,'research');await page.goBack();assert.ok(await page.locator('#page-news').isVisible());await page.goForward();assert.ok(await page.locator('#page-research').isVisible());
  await page.goto(base+'/#weather-simulator');await page.waitForFunction(()=>MacroMonitor?.database&&document.querySelector('#market-demand-chart svg'));
  assert.equal(await page.evaluate(()=>scrollY),0);
- const sequence=await page.locator('#weather-legacy>section').evaluateAll(ns=>ns.map(n=>n.className));assert.deepEqual(sequence,['scenario-section','market-observation-section']);
- const scenario=await page.locator('.scenario-section').boundingBox(),observation=await page.locator('.market-observation-section').boundingBox();
+ const sequence=await page.locator('#weather-legacy>section').evaluateAll(ns=>ns.map(n=>n.className));assert.deepEqual(sequence,['model-signal-section','market-observation-section']);
+ const scenario=await page.locator('.model-signal-section').boundingBox(),observation=await page.locator('.market-observation-section').boundingBox();
  assert.ok(scenario.y>=header.height);assert.ok(scenario.y+scenario.height<=observation.y);const secondary=await page.locator('#page-weather .weather-modes').boundingBox();assert.ok(scenario.y>=secondary.y+secondary.height&&scenario.y<=secondary.y+secondary.height+50);
- const original=await page.locator('#weather-score').textContent();await page.locator('#s-arrivals').focus();await page.keyboard.press('ArrowRight');
- assert.notEqual(await page.locator('#weather-score').textContent(),original);assert.equal(await page.locator('#home-weather-score').textContent(),await page.locator('#weather-score').textContent());
- await page.locator('#reset-weather').click();assert.equal(await page.locator('#weather-score').textContent(),original);
+ await assertSharedModel(page);
  await page.locator('.brand-home').click();
- assert.deepEqual(await page.locator('.market-home-card').evaluate(n=>[...n.children].map(c=>c.id||c.className)),['weather-panel scenario-preview','home-market-observation']);
- assert.match(await page.locator('.scenario-preview').textContent(),/시뮬레이션 · 실제 관광시장 종합지수 아님/);
- await page.locator('.scenario-preview [data-goto="weather-simulator"]').click();assert.equal(await page.evaluate(()=>scrollY),0);
+ assert.deepEqual(await page.locator('.market-home-card').evaluate(n=>[...n.children].map(c=>c.id||c.className)),['weather-panel model-preview','home-market-observation']);
+ assert.match(await page.locator('.model-preview').textContent(),/공식 관측 기반 부분 시장 신호/);
+ await page.locator('.model-preview [data-goto="weather-simulator"]').click();assert.equal(await page.evaluate(()=>scrollY),0);
  assert.ok(await page.locator('#market-demand-chart svg').count());assert.ok(await page.locator('#market-country-cards .market-observation-card').count());
  if([390,1440].includes(width)){
   await page.screenshot({path:`${dir}/weather-${width}.png`,fullPage:true});
@@ -60,5 +59,5 @@ await page.addStyleTag({content:'.primary-navigation>a,.news-menu-toggle{font-si
 await page.waitForFunction(()=>document.querySelector('.site-header').dataset.compact==='true');assert.ok(await page.locator('#header-menu-toggle').isVisible());
 await page.setViewportSize({width:1440,height:1000});await page.waitForFunction(()=>document.querySelector('.site-header').dataset.compact==='false');
 assert.equal(await page.locator('#header-menu-toggle').getAttribute('aria-expanded'),'false');await page.close();
-console.log('PASS header/weather v2.2: 6 widths, measured fit/text scaling, compact menu/native keys/ARIA/external/Escape, all routes/history, DOM order, scenario first on hash/home entry, sliders/reset/shared values, retained real charts/country cards');
+console.log('PASS header/weather v2.2: 6 widths, measured fit/text scaling, compact menu/native keys/ARIA/external/Escape, all routes/history, DOM order, model first on hash/home entry, shared results/no manual controls, retained real charts/country cards');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

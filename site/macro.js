@@ -1,4 +1,4 @@
-/* Official Macro JSON only. Never imports values into the Market Weather simulator. */
+/* Official Macro JSON only; Model Signal reads this same validated public object. */
 (() => {
  const el=id=>document.getElementById(id),esc=s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
  const core=[['kto_inbound','방한 외래관광객 수'],['kto_outbound','국민 해외관광객 수'],['kto_tourism_receipts','관광수입'],['kto_tourism_expenditure','관광지출']];
@@ -129,6 +129,7 @@
    el('macro-registry').innerHTML=db.indicators.map(i=>`<div class="source-row macro-registry-row"><div class="macro-registry-heading"><b>${esc(i.name)}</b><span class="pill ${i.connected?'':'amber'}">${esc(sourceState(i))}</span></div><p>${esc(i.publisher)} · ${i.frequency==='A'?'연간':'월간'} · ${esc(unit(i))}${money(i)?' (원장 US$)':''}<br>최신 기준 ${esc(i.latest_period||'미연동')} · 최종 수집 ${esc(date(i.latest?.last_collected_at))}</p><details><summary>정의·집계 기준</summary>${esc(i.definition)}${!i.connected?'<p>'+esc(i.reason||'자료 경로 확인 필요')+'</p>':''}</details>${link(i.source_url,'공식 출처')}</div>`).join('');
   }
   renderCharts();
+  window.MarketSignalUI?.render(db,{failed,healthUnknown});
   window.DataObservation?.render(db,health,failed||healthUnknown);
   window.MarketObservation?.render(db, sourceState);
  }

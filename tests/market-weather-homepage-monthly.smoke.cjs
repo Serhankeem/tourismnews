@@ -1,3 +1,4 @@
+const assertSharedModel=require('./model-ui-helper.cjs');
 // SYNTHETIC release only; real r2 is never loaded or publicly staged.
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs');
 const base=process.env.MONTHLY_TEST_URL||'http://127.0.0.1:8060';
@@ -19,7 +20,7 @@ try{
   await page.locator('[data-weather-mode="simulator"]').focus();await page.keyboard.press('Enter');
   assert.equal(await page.locator('#weather-legacy').isVisible(),true);
   assert.equal(await page.locator('#weather-monthly').isVisible(),false);
-  await page.locator('#s-arrivals').focus();await page.keyboard.press('ArrowRight');await page.locator('#reset-weather').click();
+  await assertSharedModel(page);
   await page.goBack();assert.equal(await page.locator('#weather-monthly').isVisible(),true);
   await page.goForward();assert.equal(await page.locator('#weather-legacy').isVisible(),true);
   await page.locator('[data-weather-mode="monthly"]').click();
@@ -50,5 +51,5 @@ try{
   assert.equal(await page.locator('.monthly-title').count(),0);assert.equal(await page.locator('#monthly-article').textContent(),'');
   await page.unrouteAll();
  }
- await page.close();console.log('PASS monthly: Gate-generated synthetic pair; two metrics/five prose sections/source links; four widths; keyboard/history/simulator; no private requests; absent/invalid/expired/extra-field/unapproved-axis/tampered-content blocked; axe WCAG 2 A/AA+2.1 AA if AXE_PATH set');
+ await page.close();console.log('PASS monthly: Gate-generated synthetic pair; two metrics/five prose sections/source links; four widths; keyboard/history/model; no private requests; absent/invalid/expired/extra-field/unapproved-axis/tampered-content blocked; axe WCAG 2 A/AA+2.1 AA if AXE_PATH set');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1});

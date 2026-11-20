@@ -351,7 +351,7 @@ button:disabled { cursor: not-allowed; }
 /* UI/UX v1.0: interaction state, never a new click target. */
 button:not(:disabled):active, a.text-link:active, .news-subnav a:active { filter: brightness(.94); }
 button:disabled, [aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
-.filter, .news-page-button, .chart-tab, #research-reset, #reset-weather, .inline-btn { min-height: 44px; }
+.filter, .news-page-button, .chart-tab, #research-reset, .inline-btn { min-height: 44px; }
 .news-page-button { min-width: 44px; }
 input[type="range"] { min-height: 44px; accent-color: var(--primary); }
 input:focus-visible, select:focus-visible { outline-color: var(--primary); }

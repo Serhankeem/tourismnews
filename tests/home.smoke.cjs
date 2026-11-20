@@ -1,3 +1,4 @@
+const assertSharedModel=require('./model-ui-helper.cjs');
 const clickNav=require('./navigation-helper.cjs');
 // Real public data, UI navigation, truthful freshness, desktop/mobile. No collector mutation.
 const {chromium}=require('playwright');
@@ -35,7 +36,7 @@ const crypto=require('node:crypto');
   for(const a of await page.locator('#overview-news h3 a').evaluateAll(nodes=>nodes.map(a=>({title:a.textContent,url:a.getAttribute('href')}))))assert.ok(news.articles.some(n=>n.title===a.title&&n.url===a.url));
   assert.equal(await page.locator('#overview-news img,#overview-news .news-desc').count(),0);
   const ordered=await page.locator('#page-overview').evaluate(el=>['.overview-hero','.kpi-grid','.dashboard-lower'].map(s=>el.querySelector(s).getBoundingClientRect().top));assert.ok(ordered[0]<ordered[1]&&ordered[1]<ordered[2]);
-  assert.match(await page.locator('.weather-panel').textContent(),/시뮬레이션/);
+  assert.match(await page.locator('.weather-panel').textContent(),/MODEL SIGNAL/);
   await page.screenshot({path:dir+'/home-desktop.png',fullPage:true});
   await page.locator('.brand-home').screenshot({path:dir+'/brand-header.png'});
   for(const route of ['weather','news','briefing','research','macro','about']){
@@ -45,11 +46,7 @@ const crypto=require('node:crypto');
    await page.locator('.brand-home').click();assert.equal(await page.locator('#page-overview').isVisible(),true);
   }
   await page.evaluate(()=>navigate('weather-simulator'));
-  const before=await page.locator('#weather-score').textContent();
-  await page.locator('#s-spend').fill('-30');await page.locator('#s-spend').dispatchEvent('input');
-  assert.notEqual(await page.locator('#weather-score').textContent(),before);
-  assert.equal(await page.locator('#home-weather-score').textContent(),await page.locator('#weather-score').textContent());
-  await page.locator('#reset-weather').click();assert.equal(await page.locator('#weather-score').textContent(),before);
+  await assertSharedModel(page);
   await clickNav(page,'macro');
   await page.locator('#chart-toggle-macro [data-chart="growth"]').click();assert.match(await page.locator('#chart-macro svg').getAttribute('aria-label'),/전년 동월비/);
   await page.locator('#chart-toggle-macro [data-chart="count"]').click();const macro=await page.evaluate(()=>MacroMonitor.database.indicators.find(i=>i.id==='kto_inbound'));const [my,mm]=macro.latest_period.split('-').map(Number);const cutoff=new Date(Date.UTC(my,mm-36,1)).toISOString().slice(0,7);assert.equal(await page.locator('#chart-macro svg rect').count(),macro.observations.filter(o=>o.period>=cutoff).length);
@@ -91,6 +88,6 @@ const crypto=require('node:crypto');
   await mobile.goto(base+'/#about');await mobile.waitForFunction(()=>document.querySelectorAll('#about-research-sources .source-status-row').length===Object.keys(ResearchLibrary.database.publishers).length);
   await mobile.screenshot({path:dir+'/about-mobile.png',fullPage:true});
   assert.deepEqual(errors,[]);
-  console.log('PASS: real home metadata/order/freshness, desktop/mobile four-group navigation, home logo link, keyboard menu, deep links/history, About dynamic source status, chart, weather/reset, Research preservation; no JS errors');
+  console.log('PASS: real home metadata/order/freshness, desktop/mobile four-group navigation, home logo link, keyboard menu, deep links/history, About dynamic source status, chart, shared model, Research preservation; no JS errors');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

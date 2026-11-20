@@ -1,3 +1,4 @@
+const assertSharedModel=require('./model-ui-helper.cjs');
 // Current approved operating data only. No fabricated stats or writes.
 const {chromium}=require('playwright'),assert=require('node:assert/strict');
 (async()=>{
@@ -25,14 +26,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
       assert.deepEqual(await page.locator('#macro-kpis [data-value]').evaluateAll(ns=>ns.map(n=>n.dataset.value)),original);
       assert.match(await page.locator('#macro-status').textContent(),/이전 검증값 보존/);
       await page.unroute('**/data/macro.json?*');await page.evaluate(()=>MacroMonitor.load());
-      await page.evaluate(()=>navigate('weather-simulator'));await page.locator('#s-arrivals').focus();await page.keyboard.press('ArrowRight');
-      assert.notEqual(await page.locator('#weather-score').textContent(),score);
-      await page.locator('#reset-weather').click();assert.equal(await page.locator('#weather-score').textContent(),score);
-      await page.locator('.scenario-formula summary').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('.scenario-formula').evaluate(e=>e.open),true);
+      await page.evaluate(()=>navigate('weather-simulator'));await assertSharedModel(page);
+      await page.locator('.model-details summary').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('.model-details').evaluate(e=>e.open),true);
       assert.equal(await page.locator('.review-bar').count(),0);assert.equal(await page.locator('script[src*="monthly.js"]').count(),0);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);assert.deepEqual(errors,[]);
       await page.close();
     }
-    console.log('PASS: current public Macro 9 connected/621 exact observations; four core cards; financial separation; chart/failure preservation; simulator input/reset/keyboard; four widths; no Preview assets');
+    console.log('PASS: current public Macro 9 connected/621 exact observations; four core cards; financial separation; chart/failure preservation; shared model/no manual controls; four widths; no Preview assets');
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
