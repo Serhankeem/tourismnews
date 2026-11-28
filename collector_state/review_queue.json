@@ -1,49 +1,7 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-28T18:21:26+09:00",
+  "updated_at": "2026-11-28T21:02:48+09:00",
   "articles": [
-    {
-      "id": "65b4c0413dd4a2bf04",
-      "published_at": "2026-11-18T00:10:00+09:00",
-      "date": "2026.11.18",
-      "category": "경제·시장",
-      "source": "여행신문",
-      "source_id": "traveltimes",
-      "title": "환율 하락해 순이익 흑자 낸 항공사…영업 적자는 지속",
-      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
-      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
-      "summary_type": "metadata_only",
-      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500726",
-      "relevance": 2,
-      "relevance_label": "Indirect",
-      "relevance_evidence": {
-        "rule_version": "0.2",
-        "label": "Indirect",
-        "decision": "hold",
-        "category": "경제·시장",
-        "score": 2,
-        "rules": [
-          "cross_sector_unproven"
-        ],
-        "signals": [
-          {
-            "field": "title",
-            "terms": [
-              "환율",
-              "항공사"
-            ]
-          }
-        ],
-        "impact_targets": [
-          "관광기업"
-        ],
-        "reason": "다른 산업 변화와 관광산업 영향의 근거를 원문에서 검토한 뒤 승인해야 합니다.",
-        "evidence_status": "insufficient"
-      },
-      "related_sources": [
-        "여행신문"
-      ]
-    },
     {
       "id": "a3281c08ebf94096cc",
       "published_at": "2026-10-07T14:37:41+09:00",
@@ -84,6 +42,48 @@
       },
       "related_sources": [
         "서울시 내 손안에 서울 경제"
+      ]
+    },
+    {
+      "id": "65b4c0413dd4a2bf04",
+      "published_at": "2026-11-18T00:10:00+09:00",
+      "date": "2026.11.18",
+      "category": "경제·시장",
+      "source": "여행신문",
+      "source_id": "traveltimes",
+      "title": "환율 하락해 순이익 흑자 낸 항공사…영업 적자는 지속",
+      "desc": "원문 링크에서 보도자료 또는 기사 내용을 확인하세요. (본문 자동 분석 전)",
+      "insight": "원문을 확인한 후 산업적 시사점을 판단해 주세요.",
+      "summary_type": "metadata_only",
+      "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=500726",
+      "relevance": 2,
+      "relevance_label": "Indirect",
+      "relevance_evidence": {
+        "rule_version": "0.2",
+        "label": "Indirect",
+        "decision": "hold",
+        "category": "경제·시장",
+        "score": 2,
+        "rules": [
+          "cross_sector_unproven"
+        ],
+        "signals": [
+          {
+            "field": "title",
+            "terms": [
+              "환율",
+              "항공사"
+            ]
+          }
+        ],
+        "impact_targets": [
+          "관광기업"
+        ],
+        "reason": "다른 산업 변화와 관광산업 영향의 근거를 원문에서 검토한 뒤 승인해야 합니다.",
+        "evidence_status": "insufficient"
+      },
+      "related_sources": [
+        "여행신문"
       ]
     }
   ]
